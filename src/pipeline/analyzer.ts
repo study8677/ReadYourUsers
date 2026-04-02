@@ -19,6 +19,8 @@ export interface AnalyzeOptions {
   model?: string;
   concurrency?: number;
   reAnalyze?: boolean;
+  /** Only analyze issues created after this date */
+  since?: string;
 }
 
 export interface AnalyzeResult {
@@ -36,18 +38,25 @@ export async function analyzeIssues(options: AnalyzeOptions): Promise<AnalyzeRes
     model = ANALYSIS_MODEL,
     concurrency = 5,
     reAnalyze = false,
+    since,
   } = options;
 
   const slug = repoSlug(repo);
   const issuesPath = resolve(dataDir, "raw", slug, "issues.json");
   const cachePath = resolve(dataDir, "analyzed", slug, "analyses.json");
 
-  // Load issues
-  const issues = readJSON<RawIssue[]>(issuesPath);
+  // Load issues, optionally filter by date
+  let issues = readJSON<RawIssue[]>(issuesPath);
   if (!issues || issues.length === 0) {
     throw new Error(
       `No issues found at ${issuesPath}. Run 'ryu fetch ${repo}' first.`
     );
+  }
+
+  if (since) {
+    const sinceDate = new Date(since);
+    issues = issues.filter((i) => new Date(i.created_at) >= sinceDate);
+    logger.info(`Filtered to ${issues.length} issues since ${since}`);
   }
 
   // Load existing analyses

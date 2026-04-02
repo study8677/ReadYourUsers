@@ -1,5 +1,6 @@
 import { loadRepoConfigs } from "../config/repos.js";
 import { analyzeIssues } from "../pipeline/analyzer.js";
+import { TREND_WINDOW_DAYS } from "../config/constants.js";
 import { logger } from "../utils/logger.js";
 
 interface AnalyzeCommandOptions {
@@ -8,6 +9,7 @@ interface AnalyzeCommandOptions {
   model?: string;
   concurrency: number;
   reAnalyze?: boolean;
+  since?: string;
 }
 
 export async function analyzeCommand(
@@ -31,6 +33,7 @@ export async function analyzeCommand(
         model: options.model,
         concurrency: options.concurrency,
         reAnalyze: options.reAnalyze,
+        since: options.since ?? new Date(Date.now() - TREND_WINDOW_DAYS * 24 * 60 * 60 * 1000).toISOString(),
       });
       logger.info(
         `✓ ${r}: ${result.totalAnalyzed} analyzed (${result.newAnalyses} new, ${result.skipped} skipped, ${result.errors} errors)`

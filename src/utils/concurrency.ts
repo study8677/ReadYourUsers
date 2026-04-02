@@ -14,8 +14,9 @@ export async function mapWithConcurrency<T, R>(
     }
   }
 
+  const effectiveConcurrency = Math.min(concurrency || 5, items.length);
   const workers = Array.from(
-    { length: Math.min(concurrency, items.length) },
+    { length: effectiveConcurrency },
     () => worker()
   );
   await Promise.all(workers);

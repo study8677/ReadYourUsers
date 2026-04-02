@@ -41,12 +41,14 @@ export async function runCommand(
         `Fetched ${fetchResult.totalFetched} issues (${fetchResult.newIssues} new)`
       );
 
-      // Step 2: Analyze
-      logger.info("\nStep 2/4: Analyzing issues...");
+      // Step 2: Analyze (last 30 days by default for performance)
+      const sinceDate = new Date(Date.now() - 30 * 24 * 60 * 60 * 1000).toISOString();
+      logger.info(`\nStep 2/4: Analyzing issues (since ${sinceDate.slice(0, 10)})...`);
       const analyzeResult = await analyzeIssues({
         repo: r,
         dataDir: options.dataDir,
         concurrency: options.concurrency,
+        since: sinceDate,
       });
       logger.info(
         `Analyzed ${analyzeResult.totalAnalyzed} issues (${analyzeResult.newAnalyses} new, ${analyzeResult.errors} errors)`

@@ -19,32 +19,32 @@ It is built for founders, PMs, open-source maintainers, and anyone who wants a f
 
 ## AI Coding Tools — What Developers Really Want
 
-> **97** issues analyzed from [anthropics/claude-code](https://github.com/anthropics/claude-code) | **16** need clusters | Updated 2026-04-02
+> **326** issues analyzed from [anthropics/claude-code](https://github.com/anthropics/claude-code) | **33** need clusters | Updated 2026-04-02
 
 ### Top 10 Needs
 
 | Rank | Need | Issues | Score | Category | Examples |
 | --- | --- | --- | --- | --- | --- |
-| 1 | Improve Session Management and Input Reliability | 15 | 6.7 | UI/UX | [#42617](https://github.com/anthropics/claude-code/issues/42617), [#42613](https://github.com/anthropics/claude-code/issues/42613), [#42612](https://github.com/anthropics/claude-code/issues/42612) |
-| 2 | Improved Session Stability and Token Management | 18 | 4.2 | Reliability | [#42637](https://github.com/anthropics/claude-code/issues/42637), [#42624](https://github.com/anthropics/claude-code/issues/42624), [#42615](https://github.com/anthropics/claude-code/issues/42615) |
-| 3 | Enhancing MCP Server Connectivity and Diagnostics | 6 | 4.0 | Reliability | [#42632](https://github.com/anthropics/claude-code/issues/42632), [#42627](https://github.com/anthropics/claude-code/issues/42627), [#42599](https://github.com/anthropics/claude-code/issues/42599) |
-| 4 | Optimize Performance and Resource Usage | 4 | 3.0 | Performance | [#42633](https://github.com/anthropics/claude-code/issues/42633), [#42620](https://github.com/anthropics/claude-code/issues/42620), [#42609](https://github.com/anthropics/claude-code/issues/42609) |
-| 5 | Enhancements for Editor Functionality and UI Navigation | 10 | 3.0 | Developer Experience | [#42638](https://github.com/anthropics/claude-code/issues/42638), [#42631](https://github.com/anthropics/claude-code/issues/42631), [#42630](https://github.com/anthropics/claude-code/issues/42630) |
-| 6 | Fix Issues with Tools, Configurations, and Platform Handling | 8 | 3.0 | Developer Experience | [#42635](https://github.com/anthropics/claude-code/issues/42635), [#42614](https://github.com/anthropics/claude-code/issues/42614), [#42611](https://github.com/anthropics/claude-code/issues/42611) |
-| 7 | Enhance Conversation History Configurability and Handling | 4 | 3.0 | Configuration | [#42625](https://github.com/anthropics/claude-code/issues/42625), [#42590](https://github.com/anthropics/claude-code/issues/42590), [#42558](https://github.com/anthropics/claude-code/issues/42558) |
-| 8 | Fix Session Stability and Functional Issues | 3 | 3.0 | Reliability | [#42591](https://github.com/anthropics/claude-code/issues/42591), [#42578](https://github.com/anthropics/claude-code/issues/42578), [#42557](https://github.com/anthropics/claude-code/issues/42557) |
-| 9 | Subscription Plans and Token Management Enhancements | 5 | 2.7 | Configuration | [#42628](https://github.com/anthropics/claude-code/issues/42628), [#42626](https://github.com/anthropics/claude-code/issues/42626), [#42605](https://github.com/anthropics/claude-code/issues/42605) |
-| 10 | Enhance Model Accuracy and Output Consistency | 6 | 2.2 | Developer Experience | [#42636](https://github.com/anthropics/claude-code/issues/42636), [#42634](https://github.com/anthropics/claude-code/issues/42634), [#42629](https://github.com/anthropics/claude-code/issues/42629) |
+| 1 | MCP Server Reliability and Configuration Issues | 33 | 15.4 | Integration | [#42632](https://github.com/anthropics/claude-code/issues/42632), [#42628](https://github.com/anthropics/claude-code/issues/42628), [#42627](https://github.com/anthropics/claude-code/issues/42627) |
+| 2 | TUI Terminal State and Input Handling Fixes | 51 | 13.8 | UI/UX | [#42638](https://github.com/anthropics/claude-code/issues/42638), [#42617](https://github.com/anthropics/claude-code/issues/42617), [#42613](https://github.com/anthropics/claude-code/issues/42613) |
+| 3 | CLI Session Management and UX Improvements | 32 | 7.9 | Developer Experience | [#42637](https://github.com/anthropics/claude-code/issues/42637), [#42624](https://github.com/anthropics/claude-code/issues/42624), [#42607](https://github.com/anthropics/claude-code/issues/42607) |
+| 4 | Plugin System Management and Reliability | 12 | 6.0 | Developer Experience | [#42601](https://github.com/anthropics/claude-code/issues/42601), [#42595](https://github.com/anthropics/claude-code/issues/42595), [#42568](https://github.com/anthropics/claude-code/issues/42568) |
+| 5 | Bug Fixes and Feature Enhancements | 31 | 5.6 | Developer Experience | [#42635](https://github.com/anthropics/claude-code/issues/42635), [#42631](https://github.com/anthropics/claude-code/issues/42631), [#42623](https://github.com/anthropics/claude-code/issues/42623) |
+| 6 | Expand Hook System Functionality and Fix Hook Behaviors | 10 | 4.2 | Integration | [#42597](https://github.com/anthropics/claude-code/issues/42597), [#42581](https://github.com/anthropics/claude-code/issues/42581), [#42489](https://github.com/anthropics/claude-code/issues/42489) |
+| 7 | Authentication and subscription reliability fixes | 10 | 4.2 | Developer Experience | [#42608](https://github.com/anthropics/claude-code/issues/42608), [#42605](https://github.com/anthropics/claude-code/issues/42605), [#42603](https://github.com/anthropics/claude-code/issues/42603) |
+| 8 | Permission System Reliability and Security Fixes | 11 | 4.0 | Security | [#42611](https://github.com/anthropics/claude-code/issues/42611), [#42500](https://github.com/anthropics/claude-code/issues/42500), [#42488](https://github.com/anthropics/claude-code/issues/42488) |
+| 9 | Model Response Quality and Instruction Following | 11 | 3.8 | Reliability | [#42636](https://github.com/anthropics/claude-code/issues/42636), [#42634](https://github.com/anthropics/claude-code/issues/42634), [#42633](https://github.com/anthropics/claude-code/issues/42633) |
+| 10 | Background Agent Lifecycle and Reliability Management | 8 | 3.7 | Developer Experience | [#42621](https://github.com/anthropics/claude-code/issues/42621), [#42545](https://github.com/anthropics/claude-code/issues/42545), [#42541](https://github.com/anthropics/claude-code/issues/42541) |
 
 ### Rising Needs
 
 | Need | Rising Score | This Week | Category |
 | --- | --- | --- | --- |
-| Improved Session Stability and Token Management | 19.0x | 18 | Reliability |
-| Improve Session Management and Input Reliability | 16.0x | 15 | UI/UX |
-| Enhancements for Editor Functionality and UI Navigation | 11.0x | 10 | Developer Experience |
-| Fix Issues with Tools, Configurations, and Platform Handling | 9.0x | 8 | Developer Experience |
-| Enhancing MCP Server Connectivity and Diagnostics | 7.0x | 6 | Reliability |
+| TUI Terminal State and Input Handling Fixes | 52.0x | 51 | UI/UX |
+| MCP Server Reliability and Configuration Issues | 34.0x | 33 | Integration |
+| CLI Session Management and UX Improvements | 33.0x | 32 | Developer Experience |
+| Bug Fixes and Feature Enhancements | 32.0x | 31 | Developer Experience |
+| Configuration and Settings Management Improvements | 18.0x | 17 | Configuration |
 
 [Live site](https://study8677.github.io/ReadYourUsers/) | [Full report](reports/latest/anthropics-claude-code.md) | [中文版](README.zh.md) | *Based on public GitHub issues — signal, not census.*
 

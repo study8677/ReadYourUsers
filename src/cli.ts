@@ -41,6 +41,7 @@ program
   .option("--model <name>", "LLM model to use")
   .option("--concurrency <n>", "Parallel analysis requests", parseInt, 5)
   .option("--re-analyze", "Re-analyze all issues, not just new ones")
+  .option("--since <date>", "Only analyze issues created after this date (ISO 8601)")
   .action(analyzeCommand);
 
 program
