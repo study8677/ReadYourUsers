@@ -13,6 +13,10 @@ on:
         description: 'Max pages to fetch per repo (empty = unlimited)'
         required: false
         default: ''
+      deploy_only:
+        description: 'Skip pipeline and deploy Pages from committed reports only'
+        required: false
+        default: 'false'
 
 permissions:
   contents: write
@@ -35,6 +39,7 @@ jobs:
       - run: npm ci
 
       - name: Run pipeline
+        if: ${{ github.event.inputs.deploy_only != 'true' }}
         env:
           GITHUB_TOKEN: ${{ secrets.READYOURUSERS_GITHUB_TOKEN }}
           READYOURUSERS_GITHUB_TOKEN: ${{ secrets.READYOURUSERS_GITHUB_TOKEN }}
