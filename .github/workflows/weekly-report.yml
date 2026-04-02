@@ -16,6 +16,8 @@ on:
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
 
 jobs:
   generate-report:
@@ -53,11 +55,17 @@ jobs:
             npx tsx src/cli.ts run $ARGS --verbose
           fi
 
+      - name: Build Pages site
+        run: npm run site:build
+
       - name: Commit reports
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add data/aggregated/ reports/ README.md
+          if [ -f README.zh.md ]; then
+            git add README.zh.md
+          fi
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
@@ -65,3 +73,22 @@ jobs:
             git commit -m "chore: weekly report ${WEEK} [skip ci]"
             git push
           fi
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./site
+
+  deploy-pages:
+    needs: generate-report
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

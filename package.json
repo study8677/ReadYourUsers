@@ -9,6 +9,7 @@
   "scripts": {
     "dev": "tsx src/cli.ts",
     "build": "tsc",
+    "site:build": "tsx src/site/build.ts",
     "test": "vitest run",
     "test:watch": "vitest"
   },
