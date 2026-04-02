@@ -51,9 +51,9 @@ const ui = {
     navGitHub: "GitHub",
     footer: "Built from public GitHub issues. Signals, not a full census.",
     heroEyebrow: "Public issue intelligence",
-    heroTitle: "What developers actually want from AI coding tools",
+    heroTitle: "{name} users are shouting about {topDemand}",
     heroCopy:
-      "ReadYourUsers turns GitHub issues into ranked user-demand maps. The homepage focuses on <strong>{name}</strong>, with fast paths to the latest reports and weekly history.",
+      "{topVolume} leads by sheer issue volume, while {topDemand} is the strongest weighted demand signal right now. Read the latest snapshot, grab the full report, or browse the archive.",
     heroPrimary: "Read latest report",
     heroSecondary: "Browse history",
     statsIssues: "Issues analyzed",
@@ -61,6 +61,12 @@ const ui = {
     statsClusters: "Need clusters",
     statsUpdated: "Updated",
     snapshotEyebrow: "Latest snapshot",
+    topFiveTitle: "Top 5 needs right now",
+    insightEyebrow: "Most shareable takeaways",
+    insightTitle: "What stands out immediately",
+    insightTopDemand: "Strongest demand signal",
+    insightTopVolume: "Most discussed by volume",
+    insightTopRising: "Fastest-rising theme",
     risingEyebrow: "Rising now",
     risingTitle: "Fastest-rising needs",
     otherEyebrow: "Other repos",
@@ -83,11 +89,12 @@ const ui = {
     rawMarkdown: "View raw Markdown",
     switchToEnglish: "English",
     switchToChinese: "中文",
+    topFiveIssues: "issues",
+    topFiveScore: "score",
     repoCardIssues: "issues analyzed",
     repoCardClusters: "need clusters",
     clusterIssues: "issues",
     clusterDemand: "demand",
-    languageLabel: "中文",
     rootRedirectTitle: "Redirecting…",
     rootRedirectBody: "Choosing your preferred language…",
     rootRedirectManual: "If you are not redirected automatically, choose a language:",
@@ -103,9 +110,9 @@ const ui = {
     navGitHub: "GitHub",
     footer: "基于公开 GitHub Issues 构建，代表信号而非完整普查。",
     heroEyebrow: "公开 Issue 情报",
-    heroTitle: "开发者真正想要的 AI 编程工具能力",
+    heroTitle: "{name} 用户最强烈的信号：{topDemand}",
     heroCopy:
-      "ReadYourUsers 把 GitHub issue 转成可读、可排序的用户需求地图。首页默认聚焦 <strong>{name}</strong>，并提供最新报告与历史归档入口。",
+      "{topVolume} 在 issue 数量上最突出，而 {topDemand} 是当前权重最高的需求信号。你可以直接看最新快照、打开完整报告，或者继续浏览历史归档。",
     heroPrimary: "查看最新报告",
     heroSecondary: "浏览历史归档",
     statsIssues: "已分析 Issue",
@@ -113,6 +120,12 @@ const ui = {
     statsClusters: "需求簇",
     statsUpdated: "更新时间",
     snapshotEyebrow: "最新快照",
+    topFiveTitle: "当前 Top 5 需求",
+    insightEyebrow: "最适合传播的结论",
+    insightTitle: "第一眼最值得截图的 3 个点",
+    insightTopDemand: "最强需求信号",
+    insightTopVolume: "讨论量最高",
+    insightTopRising: "上升最快",
     risingEyebrow: "正在上升",
     risingTitle: "上升最快的需求",
     otherEyebrow: "其他仓库",
@@ -135,11 +148,12 @@ const ui = {
     rawMarkdown: "查看原始 Markdown",
     switchToEnglish: "English",
     switchToChinese: "中文",
+    topFiveIssues: "条 issue",
+    topFiveScore: "得分",
     repoCardIssues: "条 issue 已分析",
     repoCardClusters: "个需求簇",
     clusterIssues: "条 issue",
     clusterDemand: "需求得分",
-    languageLabel: "English",
     rootRedirectTitle: "正在跳转…",
     rootRedirectBody: "正在为你选择更合适的语言版本…",
     rootRedirectManual: "如果没有自动跳转，请手动选择：",
@@ -357,27 +371,61 @@ function buildClusterCard(cluster: NeedCluster, uiLang: UiLang): string {
   </article>`;
 }
 
+function shortTitle(text: string, max = 52): string {
+  return text.length <= max ? text : `${text.slice(0, max - 1)}…`;
+}
+
+function topFiveRow(cluster: NeedCluster, index: number, uiLang: UiLang): string {
+  const t = ui[uiLang];
+  return `<li class="top-five-item">
+    <div class="top-five-rank">${index + 1}</div>
+    <div class="top-five-body">
+      <div class="top-five-main">
+        <h3>${escapeHtml(cluster.title)}</h3>
+        <span class="pill">${escapeHtml(cluster.category)}</span>
+      </div>
+      <p>${escapeHtml(cluster.summary)}</p>
+      <div class="top-five-meta">
+        <span>${cluster.volume} ${t.topFiveIssues}</span>
+        <span>${cluster.demand_score.toFixed(1)} ${t.topFiveScore}</span>
+      </div>
+    </div>
+  </li>`;
+}
+
 function buildHomePage(uiLang: UiLang, defaultEntry: SiteReportEntry, latestEntries: SiteReportEntry[], archiveWeeks: Map<string, SiteReportEntry[]>): string {
   const t = ui[uiLang];
   const aggregation = defaultEntry.aggregation;
   if (!aggregation) throw new Error("Default homepage aggregation missing");
 
   const topClusters = [...aggregation.clusters].sort((a, b) => b.demand_score - a.demand_score).slice(0, 6);
+  const topFive = topClusters.slice(0, 5);
   const risingClusters = [...aggregation.clusters].filter((c) => c.rising_score > 1).sort((a, b) => b.rising_score - a.rising_score).slice(0, 5);
+  const topByVolume = [...aggregation.clusters].sort((a, b) => b.volume - a.volume).slice(0, 1);
   const recentWeeks = Array.from(archiveWeeks.keys()).sort().reverse().slice(0, 8);
   const otherRepos = latestEntries.filter((entry) => entry.slug !== defaultEntry.slug && entry.reportLang === COPY_BY_UI_LANG[uiLang]);
   const latestReportRoute = `${routeFor(uiLang, `latest/${defaultEntry.slug}.html`)}`;
   const latestMarkdownRoute = `reports/latest/${defaultEntry.slug}${uiLang === "zh" ? ".zh" : ""}.md`;
+  const strongestDemand = topClusters[0];
+  const biggestVolume = topByVolume[0] ?? topClusters[0];
+  const fastestRising = risingClusters[0] ?? topClusters[0];
+  const heroTitle = t.heroTitle
+    .replace("{name}", escapeHtml(defaultEntry.displayName))
+    .replace("{topDemand}", escapeHtml(shortTitle(strongestDemand.title)));
+  const heroCopy = t.heroCopy
+    .replaceAll("{topVolume}", `<strong>${escapeHtml(shortTitle(biggestVolume.title))}</strong>`)
+    .replaceAll("{topDemand}", `<strong>${escapeHtml(shortTitle(strongestDemand.title))}</strong>`);
 
   const body = `
     <section class="hero">
       <div>
         <p class="eyebrow">${t.heroEyebrow}</p>
-        <h1>${t.heroTitle}</h1>
-        <p class="hero-copy">${t.heroCopy.replace("{name}", escapeHtml(defaultEntry.displayName))}</p>
+        <h1>${heroTitle}</h1>
+        <p class="hero-copy">${heroCopy.replace("{name}", escapeHtml(defaultEntry.displayName))}</p>
         <div class="hero-actions">
           <a class="button primary" href="../${latestReportRoute}">${t.heroPrimary}</a>
           <a class="button" href="../${routeFor(uiLang, "archive/index.html")}">${t.heroSecondary}</a>
+          <a class="button" href="../${latestMarkdownRoute}">${t.markdown}</a>
         </div>
       </div>
       <div class="stats-grid">
@@ -388,12 +436,38 @@ function buildHomePage(uiLang: UiLang, defaultEntry: SiteReportEntry, latestEntr
       </div>
     </section>
 
+    <section class="panel insight-panel">
+      <div class="panel-header">
+        <div>
+          <p class="eyebrow">${t.insightEyebrow}</p>
+          <h2>${t.insightTitle}</h2>
+        </div>
+      </div>
+      <div class="insight-grid">
+        <article class="insight-card">
+          <span class="insight-label">${t.insightTopDemand}</span>
+          <h3>${escapeHtml(strongestDemand.title)}</h3>
+          <p>${strongestDemand.demand_score.toFixed(1)} ${t.topFiveScore} · ${strongestDemand.volume} ${t.topFiveIssues} · ${escapeHtml(strongestDemand.category)}</p>
+        </article>
+        <article class="insight-card">
+          <span class="insight-label">${t.insightTopVolume}</span>
+          <h3>${escapeHtml(biggestVolume.title)}</h3>
+          <p>${biggestVolume.volume} ${t.topFiveIssues} · ${biggestVolume.demand_score.toFixed(1)} ${t.topFiveScore} · ${escapeHtml(biggestVolume.category)}</p>
+        </article>
+        <article class="insight-card">
+          <span class="insight-label">${t.insightTopRising}</span>
+          <h3>${escapeHtml(fastestRising.title)}</h3>
+          <p>${fastestRising.rising_score === Infinity ? "NEW" : `${fastestRising.rising_score.toFixed(1)}x`} · ${fastestRising.volume} ${t.topFiveIssues} · ${escapeHtml(fastestRising.category)}</p>
+        </article>
+      </div>
+    </section>
+
     <section class="section-grid">
       <section class="panel">
         <div class="panel-header">
           <div>
             <p class="eyebrow">${t.snapshotEyebrow}</p>
-            <h2>${escapeHtml(defaultEntry.displayName)}</h2>
+            <h2>${t.topFiveTitle}</h2>
           </div>
           <div class="report-links">
             <a href="../${routeFor("en", `latest/${defaultEntry.slug}.html`)}">${t.reportEn}</a>
@@ -401,9 +475,9 @@ function buildHomePage(uiLang: UiLang, defaultEntry: SiteReportEntry, latestEntr
             <a href="../${latestMarkdownRoute}">${t.markdown}</a>
           </div>
         </div>
-        <div class="cluster-grid">
-          ${topClusters.map((cluster) => buildClusterCard(cluster, uiLang)).join("\n")}
-        </div>
+        <ol class="top-five-list">
+          ${topFive.map((cluster, index) => topFiveRow(cluster, index, uiLang)).join("\n")}
+        </ol>
       </section>
 
       <aside class="sidebar-stack">
@@ -450,7 +524,7 @@ function buildHomePage(uiLang: UiLang, defaultEntry: SiteReportEntry, latestEntr
   return pageTemplate({
     uiLang,
     title: t.siteName,
-    description: t.heroTitle,
+    description: heroTitle,
     body,
     depth: 1,
     routePath: routeFor(uiLang, "index.html"),
@@ -614,6 +688,10 @@ a:hover { text-decoration: underline; }
 .lang-switch { padding: 8px 12px; border-radius: 999px; border: 1px solid var(--line); }
 .site-footer { margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--line); color: var(--muted); }
 .hero { display: grid; grid-template-columns: 1.3fr .9fr; gap: 24px; margin-bottom: 28px; }
+.insight-panel { margin-bottom: 24px; }
+.insight-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.insight-card { padding: 18px; border: 1px solid var(--line); border-radius: 18px; background: color-mix(in srgb, var(--panel-soft) 78%, transparent); }
+.insight-label { display: inline-block; margin-bottom: 10px; font-size: .8rem; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); }
 .section-grid { display: grid; grid-template-columns: 1.35fr .75fr; gap: 24px; }
 .sidebar-stack { display: grid; gap: 20px; }
 .panel, .stat-card, .repo-card, .cluster-card { background: color-mix(in srgb, var(--panel) 92%, transparent); border: 1px solid var(--line); border-radius: 20px; box-shadow: var(--shadow); }
@@ -637,6 +715,13 @@ h3 { font-size: 1.05rem; }
 .cluster-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .repo-grid { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
 .cluster-card { padding: 18px; }
+.top-five-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 16px; }
+.top-five-item { display: grid; grid-template-columns: 56px 1fr; gap: 16px; padding: 18px; border: 1px solid var(--line); border-radius: 18px; background: color-mix(in srgb, var(--panel-soft) 72%, transparent); }
+.top-five-rank { width: 56px; height: 56px; border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 1.35rem; font-weight: 800; background: var(--accent); color: white; }
+.top-five-main { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 8px; }
+.top-five-main h3 { margin: 0; }
+.top-five-item p { margin: 0 0 10px; color: var(--muted); }
+.top-five-meta { display: flex; gap: 16px; flex-wrap: wrap; color: var(--muted); font-size: .92rem; }
 .cluster-card p, .repo-card p, .link-list span, .archive-list span { color: var(--muted); }
 .cluster-meta { display: flex; gap: 10px; flex-wrap: wrap; color: var(--muted); font-size: .85rem; margin-bottom: 10px; }
 .pill { display: inline-flex; padding: 4px 10px; border-radius: 999px; background: var(--panel-soft); color: var(--accent-strong); }
@@ -658,11 +743,14 @@ h3 { font-size: 1.05rem; }
 hr { border: none; border-top: 1px solid var(--line); margin: 24px 0; }
 @media (max-width: 980px) {
   .hero, .section-grid { grid-template-columns: 1fr; }
+  .insight-grid,
   .cluster-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 720px) {
   .site-header, .site-footer, .panel-header, .repo-card-head, .archive-list li, .link-list li, .header-actions { flex-direction: column; align-items: flex-start; }
   .hero .stats-grid { grid-template-columns: 1fr 1fr; }
+  .top-five-item { grid-template-columns: 1fr; }
+  .top-five-rank { width: 48px; height: 48px; border-radius: 14px; }
 }
 `;
 }
