@@ -1,0 +1,282 @@
+import { resolve } from "node:path";
+import { readFileSync, writeFileSync, existsSync } from "node:fs";
+import { mkdirSync } from "node:fs";
+import type { RepoAggregation } from "../models/cluster.js";
+import type { WeeklyReport } from "../models/report.js";
+import { readJSON } from "../utils/cache.js";
+import { repoSlug, type RepoConfig } from "../config/repos.js";
+import {
+  generateRankingTable,
+  generateRisingTable,
+  getWeekString,
+} from "../utils/markdown.js";
+import { TOP_N_REPORT } from "../config/constants.js";
+import { logger } from "../utils/logger.js";
+
+export interface GenerateOptions {
+  repo: string;
+  repoConfig: RepoConfig;
+  dataDir: string;
+  outputDir: string;
+}
+
+export interface GenerateResult {
+  repo: string;
+  reportPath: string;
+  readmeUpdated: boolean;
+}
+
+export async function generateReports(
+  options: GenerateOptions
+): Promise<GenerateResult> {
+  const { repo, repoConfig, dataDir, outputDir } = options;
+
+  const slug = repoSlug(repo);
+  const clustersPath = resolve(dataDir, "aggregated", slug, "clusters.json");
+
+  const aggregation = readJSON<RepoAggregation>(clustersPath);
+  if (!aggregation || aggregation.clusters.length === 0) {
+    throw new Error(
+      `No aggregated data found at ${clustersPath}. Run 'ryu aggregate ${repo}' first.`
+    );
+  }
+
+  const week = getWeekString();
+  const now = new Date();
+
+  // Sort clusters for different views
+  const byDemand = [...aggregation.clusters].sort(
+    (a, b) => b.demand_score - a.demand_score
+  );
+  const byRising = [...aggregation.clusters]
+    .filter((c) => c.rising_score > 1)
+    .sort((a, b) => b.rising_score - a.rising_score);
+
+  // Generate weekly report
+  const report = generateWeeklyReportMd(aggregation, repoConfig, byDemand, byRising, week, now);
+
+  // Write report to latest
+  const latestDir = resolve(outputDir, "latest");
+  mkdirSync(latestDir, { recursive: true });
+  const latestPath = resolve(latestDir, `${slug}.md`);
+  writeFileSync(latestPath, report, "utf-8");
+
+  // Write to archive
+  const archiveDir = resolve(outputDir, "archive", week);
+  mkdirSync(archiveDir, { recursive: true });
+  const archivePath = resolve(archiveDir, `${slug}.md`);
+  writeFileSync(archivePath, report, "utf-8");
+
+  logger.info(`Report written to ${latestPath}`);
+
+  // Update README
+  const readmeUpdated = updateReadme(aggregation, byDemand, byRising, now);
+
+  return {
+    repo,
+    reportPath: latestPath,
+    readmeUpdated,
+  };
+}
+
+function generateWeeklyReportMd(
+  aggregation: RepoAggregation,
+  repoConfig: RepoConfig,
+  byDemand: RepoAggregation["clusters"],
+  byRising: RepoAggregation["clusters"],
+  week: string,
+  now: Date
+): string {
+  const lines: string[] = [];
+
+  lines.push(`# ${repoConfig.display_name} — User Demand Report`);
+  lines.push("");
+  lines.push(`**Week:** ${week}`);
+  lines.push(`**Generated:** ${now.toISOString().slice(0, 10)}`);
+  lines.push(
+    `**Issues analyzed:** ${aggregation.total_issues_analyzed} (${aggregation.total_issues_included} included)`
+  );
+  lines.push(`**Need clusters:** ${aggregation.clusters.length}`);
+  lines.push("");
+
+  // Top needs
+  lines.push("## Top 10 User Needs");
+  lines.push("");
+  lines.push(generateRankingTable(byDemand, TOP_N_REPORT));
+  lines.push("");
+
+  // Rising needs
+  if (byRising.length > 0) {
+    lines.push("## Rising Needs");
+    lines.push("");
+    lines.push(generateRisingTable(byRising, 5));
+    lines.push("");
+  }
+
+  // Category breakdown
+  lines.push("## Category Breakdown");
+  lines.push("");
+  const categories = Object.entries(aggregation.category_breakdown)
+    .sort((a, b) => b[1] - a[1]);
+  for (const [cat, count] of categories) {
+    lines.push(`- **${cat}**: ${count} clusters`);
+  }
+  lines.push("");
+
+  // Detailed clusters
+  lines.push("## All Need Clusters");
+  lines.push("");
+  for (let i = 0; i < byDemand.length; i++) {
+    const c = byDemand[i];
+    lines.push(`### ${i + 1}. ${c.title}`);
+    lines.push("");
+    lines.push(c.summary);
+    lines.push("");
+    lines.push(
+      `- **Volume:** ${c.volume} issues (${c.open_count} open, ${c.closed_count} closed)`
+    );
+    lines.push(`- **Demand Score:** ${c.demand_score.toFixed(1)}`);
+    lines.push(`- **Category:** ${c.category}`);
+    lines.push(
+      `- **Avg Reactions:** ${c.avg_reactions} | **Avg Comments:** ${c.avg_comments}`
+    );
+
+    const issueLinks = c.issue_urls
+      .slice(0, 5)
+      .map((url) => {
+        const num = url.split("/").pop();
+        return `[#${num}](${url})`;
+      })
+      .join(", ");
+    lines.push(`- **Example issues:** ${issueLinks}`);
+    lines.push("");
+  }
+
+  // Footer
+  lines.push("---");
+  lines.push("");
+  lines.push(
+    "*This report analyzes public GitHub issues only. It represents a signal from public issue discussions, not the full user base. " +
+    "See [Methods](../methods.md) for details.*"
+  );
+  lines.push("");
+  lines.push("*Generated by [ReadYourUsers](https://github.com/fanjingwen/ReadYourUsers)*");
+
+  return lines.join("\n");
+}
+
+function updateReadme(
+  aggregation: RepoAggregation,
+  byDemand: RepoAggregation["clusters"],
+  byRising: RepoAggregation["clusters"],
+  now: Date
+): boolean {
+  const readmePath = resolve(process.cwd(), "README.md");
+  const marker = {
+    start: "<!-- READYOURUSERS:START -->",
+    end: "<!-- READYOURUSERS:END -->",
+  };
+
+  // Generate the section content
+  const section: string[] = [];
+  section.push(marker.start);
+  section.push("");
+  section.push("## AI Coding Tools — What Developers Really Want");
+  section.push("");
+  section.push(
+    `> Updated: ${now.toISOString().slice(0, 10)} | ` +
+    `${aggregation.total_issues_analyzed} issues analyzed | ` +
+    `${aggregation.clusters.length} need clusters identified`
+  );
+  section.push("");
+  section.push("### Top 10 Needs");
+  section.push("");
+  section.push(generateRankingTable(byDemand, TOP_N_REPORT));
+  section.push("");
+
+  if (byRising.length > 0) {
+    section.push("### Rising Needs");
+    section.push("");
+    section.push(generateRisingTable(byRising, 5));
+    section.push("");
+  }
+
+  section.push(
+    "*Based on public GitHub issues. [View full report](reports/latest/) | [Methodology](site/methods.md)*"
+  );
+  section.push("");
+  section.push(marker.end);
+
+  const sectionContent = section.join("\n");
+
+  if (existsSync(readmePath)) {
+    let readme = readFileSync(readmePath, "utf-8");
+    const startIdx = readme.indexOf(marker.start);
+    const endIdx = readme.indexOf(marker.end);
+
+    if (startIdx !== -1 && endIdx !== -1) {
+      readme =
+        readme.slice(0, startIdx) +
+        sectionContent +
+        readme.slice(endIdx + marker.end.length);
+    } else {
+      readme += "\n\n" + sectionContent;
+    }
+
+    writeFileSync(readmePath, readme, "utf-8");
+  } else {
+    // Create README from scratch
+    const readme = `# ReadYourUsers
+
+> Turn public GitHub issues into readable user demand maps.
+
+ReadYourUsers analyzes public GitHub issues from AI coding tools and generates weekly demand reports — showing what developers actually want, ranked and clustered.
+
+${sectionContent}
+
+## How It Works
+
+1. **Fetch** — Pull public issues from target repositories via GitHub API
+2. **Analyze** — LLM extracts structured need signals from each issue
+3. **Aggregate** — Cluster similar needs, compute demand & rising scores
+4. **Generate** — Produce ranked reports with links back to original issues
+
+## Quick Start
+
+\`\`\`bash
+# Install dependencies
+npm install
+
+# Set up environment
+cp .env.example .env
+# Edit .env with your API keys
+
+# Run the full pipeline
+npx tsx src/cli.ts run anthropics/claude-code
+\`\`\`
+
+## Data Sources
+
+| Repository | Product | Notes |
+| --- | --- | --- |
+| anthropics/claude-code | Claude Code | Anthropic's AI coding CLI |
+| openai/codex | OpenAI Codex CLI | OpenAI's coding agent |
+| getcursor/cursor | Cursor | AI code editor (GitHub is not primary feedback channel) |
+
+## Principles
+
+- **Public data only** — We only analyze public GitHub issues
+- **Traceable conclusions** — Every insight links back to original issues
+- **Signal, not census** — This represents public issue discussions, not all users
+- **No contact scraping** — We never collect or use personal contact information
+
+## License
+
+MIT
+`;
+    writeFileSync(readmePath, readme, "utf-8");
+  }
+
+  logger.info("README updated with latest rankings");
+  return true;
+}

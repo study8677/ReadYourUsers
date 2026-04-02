@@ -1,0 +1,11 @@
+node_modules/
+dist/
+.env
+
+# Raw and analyzed data (regenerable, potentially large)
+data/raw/
+data/analyzed/
+
+# Keep aggregated data and reports
+!data/aggregated/
+!reports/

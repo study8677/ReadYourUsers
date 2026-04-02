@@ -1,0 +1,28 @@
+{
+  "repos": [
+    {
+      "repo": "anthropics/claude-code",
+      "display_name": "Claude Code",
+      "category": "AI Coding Assistant",
+      "include_in_homepage": true,
+      "weight": 1.0,
+      "notes": "Anthropic's official CLI for Claude"
+    },
+    {
+      "repo": "openai/codex",
+      "display_name": "OpenAI Codex CLI",
+      "category": "AI Coding Assistant",
+      "include_in_homepage": true,
+      "weight": 1.0,
+      "notes": "OpenAI's coding agent CLI"
+    },
+    {
+      "repo": "getcursor/cursor",
+      "display_name": "Cursor",
+      "category": "AI Code Editor",
+      "include_in_homepage": true,
+      "weight": 0.8,
+      "notes": "AI-first code editor — GitHub is not primary feedback channel"
+    }
+  ]
+}
