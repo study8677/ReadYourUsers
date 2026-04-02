@@ -1,18 +1,23 @@
 # ReadYourUsers
 
-> 把公开 GitHub Issues 变成可读的**用户需求地图**。
+> 把公开 GitHub Issues 变成可读、可排序、可追溯的用户需求地图。
 
-我们分析 AI 编程工具最活跃仓库中的数千条公开 issue，提炼成带排名、带聚类的周报 — 让你一眼看到开发者真正想要什么。
+ReadYourUsers 是一个 TypeScript CLI + 静态站点工作流，用来把嘈杂的 GitHub issue 流整理成产品团队真正能用的需求信号：
 
-**[English README](README.md)**
+- **有排序的用户需求**
+- **正在上升的趋势**
+- **可以追溯到原始 issue 的证据链**
+- **中英双语报告和双语网站**
+
+**链接：** [在线网页](https://study8677.github.io/ReadYourUsers/) · [English](https://study8677.github.io/ReadYourUsers/en/index.html) · [中文](https://study8677.github.io/ReadYourUsers/zh/index.html) · [English README](README.md)
 
 <!-- READYOURUSERS:START -->
 
-## AI 编程工具 — 开发者真正想要什么
+## 实时快照 — Claude Code
 
-> 从 [anthropics/claude-code](https://github.com/anthropics/claude-code) 分析了 **326** 条 issue | **33** 个需求簇 | 更新于 2026-04-02
+> 基于 [anthropics/claude-code](https://github.com/anthropics/claude-code) 的 326 条 issue · 33 个需求簇 · 更新于 2026-04-02
 
-### Top 10 需求
+### 当前最强需求
 
 | 排名 | 需求 | Issue 数 | 得分 | 分类 | 示例 |
 | --- | --- | --- | --- | --- | --- |
@@ -27,7 +32,7 @@
 | 9 | Model Response Quality and Instruction Following | 11 | 3.8 | Reliability | [#42636](https://github.com/anthropics/claude-code/issues/42636), [#42634](https://github.com/anthropics/claude-code/issues/42634), [#42633](https://github.com/anthropics/claude-code/issues/42633) |
 | 10 | Background Agent Lifecycle and Reliability Management | 8 | 3.7 | Developer Experience | [#42621](https://github.com/anthropics/claude-code/issues/42621), [#42545](https://github.com/anthropics/claude-code/issues/42545), [#42541](https://github.com/anthropics/claude-code/issues/42541) |
 
-### 上升最快的需求
+### 上升最快
 
 | 需求 | 上升倍率 | 本周 | 分类 |
 | --- | --- | --- | --- |
@@ -37,31 +42,80 @@
 | Bug Fixes and Feature Enhancements | 32.0x | 31 | Developer Experience |
 | Configuration and Settings Management Improvements | 18.0x | 17 | Configuration |
 
-[在线网页](https://study8677.github.io/ReadYourUsers/) | [完整报告](reports/latest/anthropics-claude-code.zh.md) | [English](README.md) | *基于公开 GitHub Issues，代表需求信号而非全部用户声音。*
+[在线网页](https://study8677.github.io/ReadYourUsers/) | [English site](https://study8677.github.io/ReadYourUsers/en/index.html) | [中文站点](https://study8677.github.io/ReadYourUsers/zh/index.html) | [完整报告](reports/latest/anthropics-claude-code.zh.md) | [English](README.md) | *基于公开 GitHub Issues，代表需求信号而非全部用户声音。*
 
 <!-- READYOURUSERS:END -->
 
-## 工作原理
+## 为什么值得做
 
-```
-GitHub Issues ──► 抓取 ──► LLM 分析 ──► 聚类 & 排名 ──► 报告
-                  (Octokit)  (逐条分析)   (需求得分)      (Markdown)
-```
+直接看 GitHub issue 不够高效：
 
-1. **抓取** — 通过 GitHub API 拉取目标仓库的公开 issues（分页、etag 缓存、增量更新）
-2. **分析** — LLM 从每条 issue 中提取结构化需求信号（类型、归一需求、模块标签、严重程度）
-3. **聚合** — 按模块聚类相似需求，计算需求分数和上升趋势
-4. **生成** — 产出排行报告，每条结论都链接回原始 issue
+- 标题表达不统一
+- 重复需求分散在多个线程里
+- 紧迫度不容易一眼看出来
+- 最近升温的问题常常埋在长列表里
+
+ReadYourUsers 把这些原始讨论压缩成一张几分钟就能扫完的需求地图。
+
+## 你能得到什么
+
+- **需求排行** — 聚类后的核心用户需求与 demand score
+- **上升趋势** — 最近正在加速出现的问题
+- **可追溯证据** — 每条结论都能回到原始 issue
+- **双语输出** — 英文 / 中文报告与双语站点
+- **可复用工作流** — 抓取、分析、聚合、发布一条龙
 
 ## 快速开始
 
+### 环境要求
+
+- Node.js 18+
+- 用于读取公开 issue 的 GitHub token
+- Anthropic 或 OpenAI 兼容接口的 LLM key
+
+### 安装
+
 ```bash
 npm install
-cp .env.example .env    # 填入你的 API key
+cp .env.example .env
+```
+
+### 跑完整流程
+
+```bash
 npx tsx src/cli.ts run anthropics/claude-code
 ```
 
-## 追踪的仓库
+### 分步执行
+
+```bash
+npx tsx src/cli.ts fetch anthropics/claude-code
+npx tsx src/cli.ts analyze anthropics/claude-code
+npx tsx src/cli.ts aggregate anthropics/claude-code
+npx tsx src/cli.ts generate anthropics/claude-code
+```
+
+## 工作原理
+
+1. **抓取** — 从 GitHub 拉取公开 issue，并做缓存
+2. **分析** — 用 LLM 提取结构化需求信号
+3. **聚合** — 聚类相似需求，计算 demand / rising score
+4. **生成** — 发布 Markdown 报告、站点页面和 README 快照
+
+## 产物
+
+```text
+reports/latest/<repo>.md
+reports/latest/<repo>.zh.md
+reports/archive/<week>/<repo>.md
+reports/archive/<week>/<repo>.zh.md
+site/en/...
+site/zh/...
+README.md
+README.zh.md
+```
+
+## 当前追踪的仓库
 
 | 仓库 | 产品 | 分类 |
 | --- | --- | --- |
@@ -69,18 +123,20 @@ npx tsx src/cli.ts run anthropics/claude-code
 | [openai/codex](https://github.com/openai/codex) | OpenAI Codex CLI | AI 编程 Agent |
 | [getcursor/cursor](https://github.com/getcursor/cursor) | Cursor | AI 代码编辑器 |
 
-## 报告
+## 局限
 
-- [最新英文报告](reports/latest/anthropics-claude-code.md)
-- [最新中文报告](reports/latest/anthropics-claude-code.zh.md)
-- [历史周报归档](reports/archive/)
+- **只看公开数据** — 私有支持渠道不包含在内
+- **信号不是普查** — issue 数量不等于真实总用户数
+- **LLM 总结不是完美的** — 所以必须保留可追溯链接
+- **不同产品的 GitHub 活跃度不同** — 跨产品比较要谨慎
 
-## 原则
+## Development
 
-- **仅公开数据** — 只分析公开 GitHub Issues
-- **可追溯** — 每条洞察都能链接到原始 issue
-- **信号而非普查** — 代表公开讨论，不等于全部用户
-- **不抓取联系方式** — 绝不收集个人信息
+```bash
+npm run build
+npm run site:build
+npm test
+```
 
 ## License
 

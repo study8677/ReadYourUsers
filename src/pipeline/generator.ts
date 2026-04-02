@@ -14,6 +14,8 @@ import { TOP_N_REPORT } from "../config/constants.js";
 import { logger } from "../utils/logger.js";
 
 const PUBLIC_SITE_URL = "https://study8677.github.io/ReadYourUsers/";
+const PUBLIC_SITE_EN_URL = `${PUBLIC_SITE_URL}en/index.html`;
+const PUBLIC_SITE_ZH_URL = `${PUBLIC_SITE_URL}zh/index.html`;
 
 export interface GenerateOptions {
   repo: string;
@@ -287,26 +289,28 @@ function buildEnglishReadme(
   const s: string[] = [];
   s.push("<!-- READYOURUSERS:START -->");
   s.push("");
-  s.push("## AI Coding Tools — What Developers Really Want");
+  s.push(`## Live snapshot — ${repoConfig.display_name}`);
   s.push("");
   s.push(
-    `> **${aggregation.total_issues_analyzed}** issues analyzed from [${repo}](https://github.com/${repo}) | ` +
-    `**${aggregation.clusters.length}** need clusters | ` +
+    `> ${aggregation.total_issues_analyzed} issues analyzed from [${repo}](https://github.com/${repo}) · ` +
+    `${aggregation.clusters.length} need clusters · ` +
     `Updated ${now.toISOString().slice(0, 10)}`
   );
   s.push("");
-  s.push("### Top 10 Needs");
+  s.push("### Top needs right now");
   s.push("");
   s.push(generateRankingTable(byDemand, TOP_N_REPORT, "en"));
   s.push("");
   if (byRising.length > 0) {
-    s.push("### Rising Needs");
+    s.push("### Rising fastest");
     s.push("");
     s.push(generateRisingTable(byRising, 5, "en"));
     s.push("");
   }
   s.push(
     `[Live site](${PUBLIC_SITE_URL}) | ` +
+    `[English site](${PUBLIC_SITE_EN_URL}) | ` +
+    `[中文站点](${PUBLIC_SITE_ZH_URL}) | ` +
     `[Full report](reports/latest/${slug}.md) | ` +
     `[中文版](README.zh.md) | ` +
     `*Based on public GitHub issues — signal, not census.*`
@@ -317,37 +321,89 @@ function buildEnglishReadme(
 
   const fullPage = `# ReadYourUsers
 
-> Turn public GitHub issues into readable **user demand maps**.
+> Understand what users actually want by turning public GitHub issues into ranked demand maps.
 
-We analyze thousands of public issues from the most active AI coding tool repositories and distill them into a ranked, clustered weekly report — so you can see what developers actually want at a glance.
+ReadYourUsers is a TypeScript CLI and static site generator for turning noisy GitHub issue streams into something product teams can actually use:
 
-**[中文版 README](README.zh.md)**
+- ranked user needs
+- rising trends
+- traceable evidence back to the original issues
+- bilingual reports and a bilingual public site
 
-**[Live site](${PUBLIC_SITE_URL})**
+**Links:** [Live site](${PUBLIC_SITE_URL}) · [English](${PUBLIC_SITE_EN_URL}) · [中文](${PUBLIC_SITE_ZH_URL}) · [中文版 README](README.zh.md)
 
 ${section}
 
-## How It Works
+## Why ReadYourUsers
 
-\`\`\`
-GitHub Issues ──► Fetch ──► LLM Analyze ──► Cluster & Rank ──► Report
-                  (Octokit)   (per-issue)    (demand score)     (Markdown)
-\`\`\`
+Reading issues one by one does not scale.
 
-1. **Fetch** — Pull public issues from target repositories via GitHub API (pagination, etag caching, incremental)
-2. **Analyze** — LLM extracts structured need signals from each issue (type, normalized need, module tags, severity)
-3. **Aggregate** — Cluster similar needs by module, compute demand & rising scores
-4. **Generate** — Produce ranked reports with links back to every original issue
+- titles are inconsistent
+- duplicates are spread across many threads
+- urgency is easy to miss
+- recent momentum is buried in a long list of issues
 
-## Quick Start
+ReadYourUsers turns that raw stream into a compact demand map you can scan in minutes.
+
+## What you get
+
+- **Ranked needs** — clustered requests with demand scores
+- **Rising signals** — what is accelerating right now
+- **Traceability** — every insight links back to source issues
+- **Bilingual outputs** — English and Chinese reports plus a bilingual site
+- **Repeatable pipeline** — fetch, analyze, aggregate, publish
+
+## Quick start
+
+### Requirements
+
+- Node.js 18+
+- a GitHub token for reading public issues
+- an LLM key for either Anthropic or OpenAI-compatible APIs
+
+### Install
 
 \`\`\`bash
 npm install
-cp .env.example .env    # add your API keys
+cp .env.example .env
+\`\`\`
+
+### Run the full pipeline
+
+\`\`\`bash
 npx tsx src/cli.ts run anthropics/claude-code
 \`\`\`
 
-## Tracked Repositories
+### Run step by step
+
+\`\`\`bash
+npx tsx src/cli.ts fetch anthropics/claude-code
+npx tsx src/cli.ts analyze anthropics/claude-code
+npx tsx src/cli.ts aggregate anthropics/claude-code
+npx tsx src/cli.ts generate anthropics/claude-code
+\`\`\`
+
+## How it works
+
+1. **Fetch** — pull public issues from GitHub with caching
+2. **Analyze** — use an LLM to extract structured need signals
+3. **Aggregate** — cluster similar needs and compute demand / rising scores
+4. **Generate** — publish Markdown reports, site pages, and README snapshots
+
+## Outputs
+
+\`\`\`text
+reports/latest/<repo>.md
+reports/latest/<repo>.zh.md
+reports/archive/<week>/<repo>.md
+reports/archive/<week>/<repo>.zh.md
+site/en/...
+site/zh/...
+README.md
+README.zh.md
+\`\`\`
+
+## Tracked repositories
 
 | Repository | Product | Category |
 | --- | --- | --- |
@@ -355,19 +411,19 @@ npx tsx src/cli.ts run anthropics/claude-code
 | [openai/codex](https://github.com/openai/codex) | OpenAI Codex CLI | AI Coding Agent |
 | [getcursor/cursor](https://github.com/getcursor/cursor) | Cursor | AI Code Editor |
 
-## Reports
+## Limits
 
-- [Live site](${PUBLIC_SITE_URL})
-- [Latest English report](reports/latest/${slug}.md)
-- [Latest Chinese report](reports/latest/${slug}.zh.md)
-- [Archived weekly reports](reports/archive/)
+- **Public data only** — private support channels are not included
+- **Signal, not census** — issue volume is not the same as total user count
+- **LLM summarization is imperfect** — conclusions stay grounded by linking back to the source issues
+- **Feedback quality varies by product** — some products rely less on GitHub issues than others
 
 ## Principles
 
-- **Public data only** — We only analyze public GitHub issues
-- **Traceable** — Every insight links to original issues
-- **Signal, not census** — Public discussions, not all users
-- **No contact scraping** — We never collect personal information
+- **Public-data only**
+- **Traceable conclusions**
+- **Fast to scan**
+- **Useful for product decisions, not just issue triage**
 
 ## License
 
@@ -388,26 +444,28 @@ function buildChineseReadme(
   const s: string[] = [];
   s.push("<!-- READYOURUSERS:START -->");
   s.push("");
-  s.push("## AI 编程工具 — 开发者真正想要什么");
+  s.push(`## 实时快照 — ${repoConfig.display_name}`);
   s.push("");
   s.push(
-    `> 从 [${repo}](https://github.com/${repo}) 分析了 **${aggregation.total_issues_analyzed}** 条 issue | ` +
-    `**${aggregation.clusters.length}** 个需求簇 | ` +
+    `> 基于 [${repo}](https://github.com/${repo}) 的 ${aggregation.total_issues_analyzed} 条 issue · ` +
+    `${aggregation.clusters.length} 个需求簇 · ` +
     `更新于 ${now.toISOString().slice(0, 10)}`
   );
   s.push("");
-  s.push("### Top 10 需求");
+  s.push("### 当前最强需求");
   s.push("");
   s.push(generateRankingTable(byDemand, TOP_N_REPORT, "zh"));
   s.push("");
   if (byRising.length > 0) {
-    s.push("### 上升最快的需求");
+    s.push("### 上升最快");
     s.push("");
     s.push(generateRisingTable(byRising, 5, "zh"));
     s.push("");
   }
   s.push(
     `[在线网页](${PUBLIC_SITE_URL}) | ` +
+    `[English site](${PUBLIC_SITE_EN_URL}) | ` +
+    `[中文站点](${PUBLIC_SITE_ZH_URL}) | ` +
     `[完整报告](reports/latest/${slug}.zh.md) | ` +
     `[English](README.md) | ` +
     `*基于公开 GitHub Issues，代表需求信号而非全部用户声音。*`
@@ -418,37 +476,89 @@ function buildChineseReadme(
 
   const fullPage = `# ReadYourUsers
 
-> 把公开 GitHub Issues 变成可读的**用户需求地图**。
+> 把公开 GitHub Issues 变成可读、可排序、可追溯的用户需求地图。
 
-我们分析 AI 编程工具最活跃仓库中的数千条公开 issue，提炼成带排名、带聚类的周报 — 让你一眼看到开发者真正想要什么。
+ReadYourUsers 是一个 TypeScript CLI + 静态站点生成器，用来把嘈杂的 GitHub issue 流整理成产品团队真正能用的需求信号：
 
-**[English README](README.md)**
+- 有排序的用户需求
+- 正在上升的趋势
+- 可以追溯到原始 issue 的证据链
+- 中英双语报告和双语网站
 
-**[在线网页](${PUBLIC_SITE_URL})**
+**链接：** [在线网页](${PUBLIC_SITE_URL}) · [English](${PUBLIC_SITE_EN_URL}) · [中文](${PUBLIC_SITE_ZH_URL}) · [English README](README.md)
 
 ${section}
 
-## 工作原理
+## 为什么值得做
 
-\`\`\`
-GitHub Issues ──► 抓取 ──► LLM 分析 ──► 聚类 & 排名 ──► 报告
-                  (Octokit)  (逐条分析)   (需求得分)      (Markdown)
-\`\`\`
+直接看 issue 不够高效：
 
-1. **抓取** — 通过 GitHub API 拉取目标仓库的公开 issues（分页、etag 缓存、增量更新）
-2. **分析** — LLM 从每条 issue 中提取结构化需求信号（类型、归一需求、模块标签、严重程度）
-3. **聚合** — 按模块聚类相似需求，计算需求分数和上升趋势
-4. **生成** — 产出排行报告，每条结论都链接回原始 issue
+- 标题表达不统一
+- 重复需求分散在不同线程
+- 紧迫度不容易一眼看出
+- 最近正在升温的问题常常埋在长列表里
+
+ReadYourUsers 把这些原始讨论压缩成一张几分钟就能扫完的需求地图。
+
+## 你能得到什么
+
+- **需求排行** — 聚类后的核心用户需求与 demand score
+- **上升趋势** — 最近正在加速出现的问题
+- **可追溯证据** — 每条结论都能回到原始 issue
+- **双语输出** — 英文 / 中文报告与双语站点
+- **可复用流水线** — 抓取、分析、聚合、发布一条龙
 
 ## 快速开始
 
+### 环境要求
+
+- Node.js 18+
+- 用于读取公开 issue 的 GitHub token
+- Anthropic 或 OpenAI 兼容接口的 LLM key
+
+### 安装
+
 \`\`\`bash
 npm install
-cp .env.example .env    # 填入你的 API key
+cp .env.example .env
+\`\`\`
+
+### 跑完整流程
+
+\`\`\`bash
 npx tsx src/cli.ts run anthropics/claude-code
 \`\`\`
 
-## 追踪的仓库
+### 分步执行
+
+\`\`\`bash
+npx tsx src/cli.ts fetch anthropics/claude-code
+npx tsx src/cli.ts analyze anthropics/claude-code
+npx tsx src/cli.ts aggregate anthropics/claude-code
+npx tsx src/cli.ts generate anthropics/claude-code
+\`\`\`
+
+## 工作原理
+
+1. **抓取** — 从 GitHub 拉取公开 issue，并做缓存
+2. **分析** — 用 LLM 提取结构化需求信号
+3. **聚合** — 聚类相似需求，计算 demand / rising score
+4. **生成** — 发布 Markdown 报告、站点页面和 README 快照
+
+## 产物
+
+\`\`\`text
+reports/latest/<repo>.md
+reports/latest/<repo>.zh.md
+reports/archive/<week>/<repo>.md
+reports/archive/<week>/<repo>.zh.md
+site/en/...
+site/zh/...
+README.md
+README.zh.md
+\`\`\`
+
+## 当前追踪的仓库
 
 | 仓库 | 产品 | 分类 |
 | --- | --- | --- |
@@ -456,19 +566,19 @@ npx tsx src/cli.ts run anthropics/claude-code
 | [openai/codex](https://github.com/openai/codex) | OpenAI Codex CLI | AI 编程 Agent |
 | [getcursor/cursor](https://github.com/getcursor/cursor) | Cursor | AI 代码编辑器 |
 
-## 报告
+## 局限
 
-- [在线网页](${PUBLIC_SITE_URL})
-- [最新英文报告](reports/latest/${slug}.md)
-- [最新中文报告](reports/latest/${slug}.zh.md)
-- [历史周报归档](reports/archive/)
+- **只看公开数据** — 私有支持渠道不包含在内
+- **信号不是普查** — issue 数量不等于真实总用户数
+- **LLM 总结不是完美的** — 所以必须保留可追溯链接
+- **不同产品的 GitHub 活跃度不同** — 跨产品比较要谨慎
 
 ## 原则
 
-- **仅公开数据** — 只分析公开 GitHub Issues
-- **可追溯** — 每条洞察都能链接到原始 issue
-- **信号而非普查** — 代表公开讨论，不等于全部用户
-- **不抓取联系方式** — 绝不收集个人信息
+- **只用公开数据**
+- **结论必须可追溯**
+- **优先可快速扫描**
+- **服务产品判断，而不只是 issue 整理**
 
 ## License
 
