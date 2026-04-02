@@ -1,0 +1,67 @@
+name: Weekly User Demand Report
+
+on:
+  schedule:
+    - cron: '0 9 * * 1'  # Every Monday 09:00 UTC
+  workflow_dispatch:
+    inputs:
+      repo:
+        description: 'Target repo (e.g. anthropics/claude-code). Leave empty for all.'
+        required: false
+        default: ''
+      max_pages:
+        description: 'Max pages to fetch per repo (empty = unlimited)'
+        required: false
+        default: ''
+
+permissions:
+  contents: write
+
+jobs:
+  generate-report:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      - run: npm ci
+
+      - name: Run pipeline
+        env:
+          GITHUB_TOKEN: ${{ secrets.READYOURUSERS_GITHUB_TOKEN }}
+          READYOURUSERS_GITHUB_TOKEN: ${{ secrets.READYOURUSERS_GITHUB_TOKEN }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_BASE_URL: ${{ secrets.OPENAI_BASE_URL }}
+          LLM_PROVIDER: openai
+          ANALYSIS_MODEL: ${{ vars.ANALYSIS_MODEL || 'gpt-4o-mini' }}
+          AGGREGATION_MODEL: ${{ vars.AGGREGATION_MODEL || 'gpt-4o' }}
+        run: |
+          ARGS="${{ github.event.inputs.repo }}"
+          if [ -n "${{ github.event.inputs.max_pages }}" ]; then
+            # For fetch step, use max_pages; for full run we do steps separately
+            npx tsx src/cli.ts fetch $ARGS --max-pages ${{ github.event.inputs.max_pages }} --verbose
+            npx tsx src/cli.ts analyze $ARGS --verbose
+            npx tsx src/cli.ts aggregate $ARGS --verbose
+            npx tsx src/cli.ts generate $ARGS --verbose
+          else
+            npx tsx src/cli.ts run $ARGS --verbose
+          fi
+
+      - name: Commit reports
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/aggregated/ reports/ README.md
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            WEEK=$(date -u +%Y-W%V)
+            git commit -m "chore: weekly report ${WEEK} [skip ci]"
+            git push
+          fi
