@@ -1,19 +1,30 @@
-import { existsSync, mkdirSync, readdirSync, readFileSync, rmSync, writeFileSync, copyFileSync } from "node:fs";
-import { resolve, basename, extname } from "node:path";
+import {
+  copyFileSync,
+  existsSync,
+  mkdirSync,
+  readFileSync,
+  readdirSync,
+  rmSync,
+  writeFileSync,
+} from "node:fs";
+import { basename, extname, resolve } from "node:path";
 import { loadRepoConfigs, repoSlug, type RepoConfig } from "../config/repos.js";
-import type { RepoAggregation, NeedCluster } from "../models/cluster.js";
+import type { NeedCluster, RepoAggregation } from "../models/cluster.js";
+
+type ReportLang = "en" | "zh";
+type UiLang = "en" | "zh";
 
 interface SiteReportEntry {
   repo: string;
   slug: string;
   displayName: string;
   week?: string;
-  lang: "en" | "zh";
+  reportLang: ReportLang;
   sourcePath: string;
   outputHtmlPath: string;
   outputRawPath: string;
-  webPath: string;
-  rawWebPath: string;
+  routePath: string;
+  rawRoutePath: string;
   aggregation?: RepoAggregation;
 }
 
@@ -22,6 +33,120 @@ const REPORTS_DIR = resolve(ROOT, "reports");
 const DATA_DIR = resolve(ROOT, "data", "aggregated");
 const SITE_DIR = resolve(ROOT, "site");
 const DEFAULT_HOME_SLUG = "anthropics-claude-code";
+const UI_LANGS: UiLang[] = ["en", "zh"];
+const REPORT_LANGS: ReportLang[] = ["en", "zh"];
+
+const COPY_BY_UI_LANG: Record<UiLang, ReportLang> = {
+  en: "en",
+  zh: "zh",
+};
+
+const ui = {
+  en: {
+    htmlLang: "en",
+    siteName: "ReadYourUsers",
+    navHome: "Home",
+    navLatest: "Latest",
+    navArchive: "Archive",
+    navGitHub: "GitHub",
+    footer: "Built from public GitHub issues. Signals, not a full census.",
+    heroEyebrow: "Public issue intelligence",
+    heroTitle: "What developers actually want from AI coding tools",
+    heroCopy:
+      "ReadYourUsers turns GitHub issues into ranked user-demand maps. The homepage focuses on <strong>{name}</strong>, with fast paths to the latest reports and weekly history.",
+    heroPrimary: "Read latest report",
+    heroSecondary: "Browse history",
+    statsIssues: "Issues analyzed",
+    statsIncluded: "Included in ranking",
+    statsClusters: "Need clusters",
+    statsUpdated: "Updated",
+    snapshotEyebrow: "Latest snapshot",
+    risingEyebrow: "Rising now",
+    risingTitle: "Fastest-rising needs",
+    otherEyebrow: "Other repos",
+    otherTitle: "Latest reports",
+    otherEmpty: "No additional repo reports yet.",
+    historyEyebrow: "History",
+    historyTitle: "Recent archive weeks",
+    reportEn: "EN",
+    reportZh: "ZH",
+    markdown: "Markdown",
+    latestIntroEyebrow: "Latest reports",
+    latestIntroTitle: "Current snapshots",
+    latestIntroCopy: "Fresh demand maps generated from the most recent pipeline run.",
+    archiveIntroEyebrow: "Archive",
+    archiveIntroTitle: "Weekly history",
+    archiveIntroCopy: "Browse prior report generations by week.",
+    reportsCount: "reports",
+    reportPageLatest: "Latest report",
+    reportPageArchive: "Archive report",
+    rawMarkdown: "View raw Markdown",
+    switchToEnglish: "English",
+    switchToChinese: "中文",
+    repoCardIssues: "issues analyzed",
+    repoCardClusters: "need clusters",
+    clusterIssues: "issues",
+    clusterDemand: "demand",
+    languageLabel: "中文",
+    rootRedirectTitle: "Redirecting…",
+    rootRedirectBody: "Choosing your preferred language…",
+    rootRedirectManual: "If you are not redirected automatically, choose a language:",
+    rootRedirectEnglish: "English site",
+    rootRedirectChinese: "中文站点",
+  },
+  zh: {
+    htmlLang: "zh-CN",
+    siteName: "ReadYourUsers",
+    navHome: "首页",
+    navLatest: "最新",
+    navArchive: "归档",
+    navGitHub: "GitHub",
+    footer: "基于公开 GitHub Issues 构建，代表信号而非完整普查。",
+    heroEyebrow: "公开 Issue 情报",
+    heroTitle: "开发者真正想要的 AI 编程工具能力",
+    heroCopy:
+      "ReadYourUsers 把 GitHub issue 转成可读、可排序的用户需求地图。首页默认聚焦 <strong>{name}</strong>，并提供最新报告与历史归档入口。",
+    heroPrimary: "查看最新报告",
+    heroSecondary: "浏览历史归档",
+    statsIssues: "已分析 Issue",
+    statsIncluded: "纳入排序",
+    statsClusters: "需求簇",
+    statsUpdated: "更新时间",
+    snapshotEyebrow: "最新快照",
+    risingEyebrow: "正在上升",
+    risingTitle: "上升最快的需求",
+    otherEyebrow: "其他仓库",
+    otherTitle: "最新报告",
+    otherEmpty: "暂时还没有其他仓库报告。",
+    historyEyebrow: "历史",
+    historyTitle: "近期归档周次",
+    reportEn: "英文",
+    reportZh: "中文",
+    markdown: "Markdown",
+    latestIntroEyebrow: "最新报告",
+    latestIntroTitle: "当前快照",
+    latestIntroCopy: "查看最近一次生成的需求地图。",
+    archiveIntroEyebrow: "历史归档",
+    archiveIntroTitle: "周度历史",
+    archiveIntroCopy: "按周浏览过去生成的报告。",
+    reportsCount: "份报告",
+    reportPageLatest: "最新报告",
+    reportPageArchive: "归档报告",
+    rawMarkdown: "查看原始 Markdown",
+    switchToEnglish: "English",
+    switchToChinese: "中文",
+    repoCardIssues: "条 issue 已分析",
+    repoCardClusters: "个需求簇",
+    clusterIssues: "条 issue",
+    clusterDemand: "需求得分",
+    languageLabel: "English",
+    rootRedirectTitle: "正在跳转…",
+    rootRedirectBody: "正在为你选择更合适的语言版本…",
+    rootRedirectManual: "如果没有自动跳转，请手动选择：",
+    rootRedirectEnglish: "English site",
+    rootRedirectChinese: "中文站点",
+  },
+} as const;
 
 function readJson<T>(path: string): T | null {
   if (!existsSync(path)) return null;
@@ -45,12 +170,20 @@ function escapeHtml(input: string): string {
     .replaceAll('"', "&quot;");
 }
 
-function formatDate(value: string): string {
-  return value.slice(0, 10);
+function formatDate(value: string | undefined): string {
+  return value ? value.slice(0, 10) : "";
 }
 
 function prefix(depth: number): string {
   return depth === 0 ? "." : Array.from({ length: depth }, () => "..").join("/");
+}
+
+function routeFor(uiLang: UiLang, path: string): string {
+  return `${uiLang}/${path}`;
+}
+
+function absoluteSitePath(routePath: string): string {
+  return resolve(SITE_DIR, routePath);
 }
 
 function applyInlineMarkdown(text: string): string {
@@ -97,9 +230,13 @@ function markdownToHtml(markdown: string): string {
 
       const rows = tableLines.map((row) => row.slice(1, -1).split("|").map((cell) => applyInlineMarkdown(cell.trim())));
       const [header, , ...body] = rows;
-      out.push("<table><thead><tr>" + header.map((cell) => `<th>${cell}</th>`).join("") + "</tr></thead><tbody>" +
-        body.map((row) => `<tr>${row.map((cell) => `<td>${cell}</td>`).join("")}</tr>`).join("") +
-        "</tbody></table>");
+      out.push(
+        "<table><thead><tr>" +
+          header.map((cell) => `<th>${cell}</th>`).join("") +
+          "</tr></thead><tbody>" +
+          body.map((row) => `<tr>${row.map((cell) => `<td>${cell}</td>`).join("")}</tr>`).join("") +
+          "</tbody></table>"
+      );
       continue;
     }
 
@@ -148,51 +285,64 @@ function markdownToHtml(markdown: string): string {
 }
 
 function pageTemplate(params: {
+  uiLang: UiLang;
   title: string;
   description: string;
   body: string;
   depth: number;
+  routePath: string;
+  alternateRoutePath: string;
 }): string {
-  const { title, description, body, depth } = params;
+  const { uiLang, title, description, body, depth, routePath, alternateRoutePath } = params;
+  const t = ui[uiLang];
   const base = prefix(depth);
   const styleHref = `${base}/assets/style.css`;
-  const homeHref = `${base}/index.html`;
-  const latestHref = `${base}/latest/index.html`;
-  const archiveHref = `${base}/archive/index.html`;
+  const homeHref = `${base}/${routeFor(uiLang, "index.html")}`;
+  const latestHref = `${base}/${routeFor(uiLang, "latest/index.html")}`;
+  const archiveHref = `${base}/${routeFor(uiLang, "archive/index.html")}`;
+  const altHref = `${base}/${alternateRoutePath}`;
 
   return `<!doctype html>
-<html lang="en">
+<html lang="${t.htmlLang}">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>${escapeHtml(title)}</title>
     <meta name="description" content="${escapeHtml(description)}" />
     <link rel="stylesheet" href="${styleHref}" />
+    <link rel="alternate" hreflang="en" href="${uiLang === "en" ? `${base}/${routePath}` : altHref}" />
+    <link rel="alternate" hreflang="zh" href="${uiLang === "zh" ? `${base}/${routePath}` : altHref}" />
+    <link rel="alternate" hreflang="x-default" href="${base}/index.html" />
   </head>
   <body>
     <div class="shell">
       <header class="site-header">
-        <a class="brand" href="${homeHref}">ReadYourUsers</a>
-        <nav class="nav">
-          <a href="${homeHref}">Home</a>
-          <a href="${latestHref}">Latest</a>
-          <a href="${archiveHref}">Archive</a>
-          <a href="https://github.com/fanjingwen/ReadYourUsers">GitHub</a>
-        </nav>
+        <a class="brand" href="${homeHref}">${t.siteName}</a>
+        <div class="header-actions">
+          <nav class="nav">
+            <a href="${homeHref}">${t.navHome}</a>
+            <a href="${latestHref}">${t.navLatest}</a>
+            <a href="${archiveHref}">${t.navArchive}</a>
+            <a href="https://github.com/fanjingwen/ReadYourUsers">${t.navGitHub}</a>
+          </nav>
+          <a class="lang-switch" href="${altHref}">${uiLang === "en" ? t.switchToChinese : t.switchToEnglish}</a>
+        </div>
       </header>
       <main>
         ${body}
       </main>
       <footer class="site-footer">
-        <p>Built from public GitHub issues. Signals, not a full census.</p>
+        <p>${t.footer}</p>
       </footer>
     </div>
   </body>
 </html>`;
 }
 
-function reportCard(cluster: NeedCluster): string {
-  const issues = cluster.issue_urls.slice(0, 3)
+function buildClusterCard(cluster: NeedCluster, uiLang: UiLang): string {
+  const t = ui[uiLang];
+  const issues = cluster.issue_urls
+    .slice(0, 3)
     .map((url) => {
       const id = url.split("/").pop() ?? "issue";
       return `<a href="${url}">#${id}</a>`;
@@ -200,38 +350,41 @@ function reportCard(cluster: NeedCluster): string {
     .join(" · ");
 
   return `<article class="cluster-card">
-    <div class="cluster-meta"><span class="pill">${escapeHtml(cluster.category)}</span><span>${cluster.volume} issues</span><span>${cluster.demand_score.toFixed(1)} demand</span></div>
+    <div class="cluster-meta"><span class="pill">${escapeHtml(cluster.category)}</span><span>${cluster.volume} ${t.clusterIssues}</span><span>${cluster.demand_score.toFixed(1)} ${t.clusterDemand}</span></div>
     <h3>${escapeHtml(cluster.title)}</h3>
     <p>${escapeHtml(cluster.summary)}</p>
     <div class="cluster-links">${issues}</div>
   </article>`;
 }
 
-function buildHomePage(defaultEntry: SiteReportEntry, latestEntries: SiteReportEntry[], archiveWeeks: Map<string, SiteReportEntry[]>): string {
+function buildHomePage(uiLang: UiLang, defaultEntry: SiteReportEntry, latestEntries: SiteReportEntry[], archiveWeeks: Map<string, SiteReportEntry[]>): string {
+  const t = ui[uiLang];
   const aggregation = defaultEntry.aggregation;
   if (!aggregation) throw new Error("Default homepage aggregation missing");
 
   const topClusters = [...aggregation.clusters].sort((a, b) => b.demand_score - a.demand_score).slice(0, 6);
   const risingClusters = [...aggregation.clusters].filter((c) => c.rising_score > 1).sort((a, b) => b.rising_score - a.rising_score).slice(0, 5);
   const recentWeeks = Array.from(archiveWeeks.keys()).sort().reverse().slice(0, 8);
-  const otherRepos = latestEntries.filter((entry) => entry.slug !== defaultEntry.slug && entry.lang === "en");
+  const otherRepos = latestEntries.filter((entry) => entry.slug !== defaultEntry.slug && entry.reportLang === COPY_BY_UI_LANG[uiLang]);
+  const latestReportRoute = `${routeFor(uiLang, `latest/${defaultEntry.slug}.html`)}`;
+  const latestMarkdownRoute = `reports/latest/${defaultEntry.slug}${uiLang === "zh" ? ".zh" : ""}.md`;
 
   const body = `
     <section class="hero">
       <div>
-        <p class="eyebrow">Public issue intelligence</p>
-        <h1>What developers actually want from AI coding tools</h1>
-        <p class="hero-copy">ReadYourUsers turns GitHub issues into ranked user-demand maps. The homepage focuses on <strong>${escapeHtml(defaultEntry.displayName)}</strong>, with fast paths to the latest reports and weekly history.</p>
+        <p class="eyebrow">${t.heroEyebrow}</p>
+        <h1>${t.heroTitle}</h1>
+        <p class="hero-copy">${t.heroCopy.replace("{name}", escapeHtml(defaultEntry.displayName))}</p>
         <div class="hero-actions">
-          <a class="button primary" href="latest/${defaultEntry.slug}.html">Read latest report</a>
-          <a class="button" href="archive/index.html">Browse history</a>
+          <a class="button primary" href="../${latestReportRoute}">${t.heroPrimary}</a>
+          <a class="button" href="../${routeFor(uiLang, "archive/index.html")}">${t.heroSecondary}</a>
         </div>
       </div>
       <div class="stats-grid">
-        <div class="stat-card"><span>Issues analyzed</span><strong>${aggregation.total_issues_analyzed}</strong></div>
-        <div class="stat-card"><span>Included in ranking</span><strong>${aggregation.total_issues_included}</strong></div>
-        <div class="stat-card"><span>Need clusters</span><strong>${aggregation.clusters.length}</strong></div>
-        <div class="stat-card"><span>Updated</span><strong>${formatDate(aggregation.generated_at)}</strong></div>
+        <div class="stat-card"><span>${t.statsIssues}</span><strong>${aggregation.total_issues_analyzed}</strong></div>
+        <div class="stat-card"><span>${t.statsIncluded}</span><strong>${aggregation.total_issues_included}</strong></div>
+        <div class="stat-card"><span>${t.statsClusters}</span><strong>${aggregation.clusters.length}</strong></div>
+        <div class="stat-card"><span>${t.statsUpdated}</span><strong>${formatDate(aggregation.generated_at)}</strong></div>
       </div>
     </section>
 
@@ -239,120 +392,187 @@ function buildHomePage(defaultEntry: SiteReportEntry, latestEntries: SiteReportE
       <section class="panel">
         <div class="panel-header">
           <div>
-            <p class="eyebrow">Latest snapshot</p>
+            <p class="eyebrow">${t.snapshotEyebrow}</p>
             <h2>${escapeHtml(defaultEntry.displayName)}</h2>
           </div>
           <div class="report-links">
-            <a href="latest/${defaultEntry.slug}.html">EN</a>
-            <a href="latest/${defaultEntry.slug}.zh.html">ZH</a>
-            <a href="reports/latest/${defaultEntry.slug}.md">Markdown</a>
+            <a href="../${routeFor("en", `latest/${defaultEntry.slug}.html`)}">${t.reportEn}</a>
+            <a href="../${routeFor("zh", `latest/${defaultEntry.slug}.html`)}">${t.reportZh}</a>
+            <a href="../${latestMarkdownRoute}">${t.markdown}</a>
           </div>
         </div>
         <div class="cluster-grid">
-          ${topClusters.map(reportCard).join("\n")}
+          ${topClusters.map((cluster) => buildClusterCard(cluster, uiLang)).join("\n")}
         </div>
       </section>
 
       <aside class="sidebar-stack">
         <section class="panel compact">
-          <p class="eyebrow">Rising now</p>
-          <h2>Fastest-rising needs</h2>
+          <p class="eyebrow">${t.risingEyebrow}</p>
+          <h2>${t.risingTitle}</h2>
           <ul class="link-list">
-            ${risingClusters.map((cluster) => `<li><strong>${escapeHtml(cluster.title)}</strong><span>${cluster.rising_score === Infinity ? "NEW" : `${cluster.rising_score.toFixed(1)}x`} · ${escapeHtml(cluster.category)}</span></li>`).join("")}
+            ${risingClusters
+              .map(
+                (cluster) => `<li><strong>${escapeHtml(cluster.title)}</strong><span>${cluster.rising_score === Infinity ? "NEW" : `${cluster.rising_score.toFixed(1)}x`} · ${escapeHtml(cluster.category)}</span></li>`
+              )
+              .join("")}
           </ul>
         </section>
 
         <section class="panel compact">
-          <p class="eyebrow">Other repos</p>
-          <h2>Latest reports</h2>
+          <p class="eyebrow">${t.otherEyebrow}</p>
+          <h2>${t.otherTitle}</h2>
           <ul class="link-list">
-            ${otherRepos.length > 0 ? otherRepos.map((entry) => `<li><a href="latest/${entry.slug}.html">${escapeHtml(entry.displayName)}</a><span>${formatDate(entry.aggregation?.generated_at ?? "")}</span></li>`).join("") : '<li><span>No additional repo reports yet.</span></li>'}
+            ${
+              otherRepos.length > 0
+                ? otherRepos
+                    .map(
+                      (entry) => `<li><a href="../${routeFor(uiLang, `latest/${entry.slug}.html`)}">${escapeHtml(entry.displayName)}</a><span>${formatDate(entry.aggregation?.generated_at)}</span></li>`
+                    )
+                    .join("")
+                : `<li><span>${t.otherEmpty}</span></li>`
+            }
           </ul>
         </section>
 
         <section class="panel compact">
-          <p class="eyebrow">History</p>
-          <h2>Recent archive weeks</h2>
+          <p class="eyebrow">${t.historyEyebrow}</p>
+          <h2>${t.historyTitle}</h2>
           <ul class="link-list">
-            ${recentWeeks.map((week) => `<li><a href="archive/index.html#${week}">${week}</a><span>${archiveWeeks.get(week)?.length ?? 0} report files</span></li>`).join("")}
+            ${recentWeeks
+              .map((week) => `<li><a href="../${routeFor(uiLang, `archive/index.html#${week}`)}">${week}</a><span>${archiveWeeks.get(week)?.length ?? 0} ${t.reportsCount}</span></li>`)
+              .join("")}
           </ul>
         </section>
       </aside>
     </section>`;
 
   return pageTemplate({
-    title: "ReadYourUsers",
-    description: "Ranked GitHub issue demand maps with latest and historical report views.",
+    uiLang,
+    title: t.siteName,
+    description: t.heroTitle,
     body,
-    depth: 0,
+    depth: 1,
+    routePath: routeFor(uiLang, "index.html"),
+    alternateRoutePath: routeFor(uiLang === "en" ? "zh" : "en", "index.html"),
   });
 }
 
-function buildLatestIndex(entries: SiteReportEntry[]): string {
+function buildLatestIndex(uiLang: UiLang, entries: SiteReportEntry[]): string {
+  const t = ui[uiLang];
   const cards = entries
-    .filter((entry) => entry.lang === "en")
+    .filter((entry) => entry.reportLang === COPY_BY_UI_LANG[uiLang])
     .sort((a, b) => (b.aggregation?.generated_at ?? "").localeCompare(a.aggregation?.generated_at ?? ""))
-    .map((entry) => `<article class="repo-card">
+    .map(
+      (entry) => `<article class="repo-card">
       <div class="repo-card-head">
-        <h2><a href="${basename(entry.webPath)}">${escapeHtml(entry.displayName)}</a></h2>
-        <span>${formatDate(entry.aggregation?.generated_at ?? "")}</span>
+        <h2><a href="./${entry.slug}.html">${escapeHtml(entry.displayName)}</a></h2>
+        <span>${formatDate(entry.aggregation?.generated_at)}</span>
       </div>
-      <p>${entry.aggregation?.total_issues_analyzed ?? 0} issues analyzed · ${entry.aggregation?.clusters.length ?? 0} need clusters</p>
+      <p>${entry.aggregation?.total_issues_analyzed ?? 0} ${t.repoCardIssues} · ${entry.aggregation?.clusters.length ?? 0} ${t.repoCardClusters}</p>
       <div class="report-links">
-        <a href="${basename(entry.webPath)}">Read EN</a>
-        <a href="${entry.slug}.zh.html">Read ZH</a>
-        <a href="../reports/latest/${entry.slug}.md">Markdown</a>
+        <a href="../../${routeFor("en", `latest/${entry.slug}.html`)}">${t.reportEn}</a>
+        <a href="../../${routeFor("zh", `latest/${entry.slug}.html`)}">${t.reportZh}</a>
+        <a href="../../reports/latest/${entry.slug}${uiLang === "zh" ? ".zh" : ""}.md">${t.markdown}</a>
       </div>
-    </article>`)
+    </article>`
+    )
     .join("\n");
 
   return pageTemplate({
-    title: "Latest reports — ReadYourUsers",
-    description: "Latest generated reports across tracked repositories.",
-    body: `<section class="page-intro"><p class="eyebrow">Latest reports</p><h1>Current snapshots</h1><p>Fresh demand maps generated from the most recent pipeline run.</p></section><section class="repo-grid">${cards}</section>`,
-    depth: 1,
+    uiLang,
+    title: `${t.navLatest} — ${t.siteName}`,
+    description: t.latestIntroTitle,
+    body: `<section class="page-intro"><p class="eyebrow">${t.latestIntroEyebrow}</p><h1>${t.latestIntroTitle}</h1><p>${t.latestIntroCopy}</p></section><section class="repo-grid">${cards}</section>`,
+    depth: 2,
+    routePath: routeFor(uiLang, "latest/index.html"),
+    alternateRoutePath: routeFor(uiLang === "en" ? "zh" : "en", "latest/index.html"),
   });
 }
 
-function buildArchiveIndex(archiveWeeks: Map<string, SiteReportEntry[]>): string {
+function buildArchiveIndex(uiLang: UiLang, archiveWeeks: Map<string, SiteReportEntry[]>): string {
+  const t = ui[uiLang];
   const weeks = Array.from(archiveWeeks.keys()).sort().reverse();
-  const sections = weeks.map((week) => {
-    const entries = (archiveWeeks.get(week) ?? []).filter((entry) => entry.lang === "en");
-    return `<section class="panel archive-panel" id="${week}">
-      <div class="panel-header"><h2>${week}</h2><span>${entries.length} reports</span></div>
+  const sections = weeks
+    .map((week) => {
+      const entries = (archiveWeeks.get(week) ?? []).filter((entry) => entry.reportLang === COPY_BY_UI_LANG[uiLang]);
+      return `<section class="panel archive-panel" id="${week}">
+      <div class="panel-header"><h2>${week}</h2><span>${entries.length} ${t.reportsCount}</span></div>
       <ul class="archive-list">
-        ${entries.map((entry) => `<li><a href="${week}/${entry.slug}.html">${escapeHtml(entry.displayName)}</a><span><a href="${week}/${entry.slug}.zh.html">ZH</a> · <a href="../reports/archive/${week}/${entry.slug}.md">Markdown</a></span></li>`).join("")}
+        ${entries
+          .map(
+            (entry) => `<li><a href="./${week}/${entry.slug}.html">${escapeHtml(entry.displayName)}</a><span><a href="../../${routeFor("en", `archive/${week}/${entry.slug}.html`)}">${t.reportEn}</a> · <a href="../../${routeFor("zh", `archive/${week}/${entry.slug}.html`)}">${t.reportZh}</a> · <a href="../../reports/archive/${week}/${entry.slug}${uiLang === "zh" ? ".zh" : ""}.md">${t.markdown}</a></span></li>`
+          )
+          .join("")}
       </ul>
     </section>`;
-  }).join("\n");
+    })
+    .join("\n");
 
   return pageTemplate({
-    title: "Archive — ReadYourUsers",
-    description: "Historical weekly demand reports.",
-    body: `<section class="page-intro"><p class="eyebrow">Archive</p><h1>Weekly history</h1><p>Browse prior report generations by week.</p></section>${sections}`,
-    depth: 1,
+    uiLang,
+    title: `${t.navArchive} — ${t.siteName}`,
+    description: t.archiveIntroTitle,
+    body: `<section class="page-intro"><p class="eyebrow">${t.archiveIntroEyebrow}</p><h1>${t.archiveIntroTitle}</h1><p>${t.archiveIntroCopy}</p></section>${sections}`,
+    depth: 2,
+    routePath: routeFor(uiLang, "archive/index.html"),
+    alternateRoutePath: routeFor(uiLang === "en" ? "zh" : "en", "archive/index.html"),
   });
 }
 
-function buildReportPage(entry: SiteReportEntry): string {
+function buildReportPage(uiLang: UiLang, entry: SiteReportEntry): string {
+  const t = ui[uiLang];
   const markdown = readFileSync(entry.sourcePath, "utf-8");
   const html = markdownToHtml(markdown);
-  const reportLabel = entry.week ? `${entry.displayName} · ${entry.week}` : `${entry.displayName} · latest`;
-
-  const depth = entry.week ? 2 : 1;
+  const reportLabel = entry.week ? `${entry.displayName} · ${entry.week}` : `${entry.displayName} · ${t.navLatest}`;
+  const depth = entry.week ? 3 : 2;
   const base = prefix(depth);
-  const rawHref = `${base}/${entry.rawWebPath}`;
-  const altLangHref = entry.lang === "en"
-    ? basename(entry.webPath).replace(/\.html$/, ".zh.html")
-    : basename(entry.webPath).replace(/\.zh\.html$/, ".html");
-  const body = `<section class="page-intro narrow"><p class="eyebrow">${entry.week ? "Archive report" : "Latest report"}</p><h1>${escapeHtml(reportLabel)}</h1><div class="report-links"><a href="${rawHref}">View raw Markdown</a><a href="${altLangHref}">${entry.lang === "en" ? "中文" : "English"}</a></div></section><article class="markdown-body">${html}</article>`;
+  const rawHref = `${base}/${entry.rawRoutePath}`;
+  const alternateRoutePath = entry.week
+    ? routeFor(uiLang === "en" ? "zh" : "en", `archive/${entry.week}/${entry.slug}.html`)
+    : routeFor(uiLang === "en" ? "zh" : "en", `latest/${entry.slug}.html`);
+  const alternateHref = `${base}/${alternateRoutePath}`;
+  const currentRoutePath = entry.week
+    ? routeFor(uiLang, `archive/${entry.week}/${entry.slug}.html`)
+    : routeFor(uiLang, `latest/${entry.slug}.html`);
+  const body = `<section class="page-intro narrow"><p class="eyebrow">${entry.week ? t.reportPageArchive : t.reportPageLatest}</p><h1>${escapeHtml(reportLabel)}</h1><div class="report-links"><a href="${rawHref}">${t.rawMarkdown}</a><a href="${alternateHref}">${uiLang === "en" ? t.switchToChinese : t.switchToEnglish}</a></div></section><article class="markdown-body">${html}</article>`;
 
   return pageTemplate({
-    title: `${reportLabel} — ReadYourUsers`,
-    description: `Demand report for ${entry.displayName}.`,
+    uiLang,
+    title: `${reportLabel} — ${t.siteName}`,
+    description: `${entry.displayName} report`,
     body,
     depth,
+    routePath: currentRoutePath,
+    alternateRoutePath,
   });
+}
+
+function rootRedirectPage(): string {
+  return `<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>${ui.en.rootRedirectTitle}</title>
+    <meta name="robots" content="noindex" />
+    <script>
+      const lang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+      const target = lang.startsWith('zh') ? './zh/index.html' : './en/index.html';
+      window.location.replace(target);
+    </script>
+    <style>
+      body { font-family: Inter, system-ui, sans-serif; padding: 48px 20px; max-width: 720px; margin: 0 auto; line-height: 1.6; }
+      a { display: inline-block; margin-right: 16px; }
+    </style>
+  </head>
+  <body>
+    <h1>${ui.en.rootRedirectTitle}</h1>
+    <p>${ui.en.rootRedirectBody}</p>
+    <p>${ui.en.rootRedirectManual}</p>
+    <p><a href="./en/index.html">${ui.en.rootRedirectEnglish}</a><a href="./zh/index.html">${ui.en.rootRedirectChinese}</a></p>
+  </body>
+</html>`;
 }
 
 function siteCss(): string {
@@ -389,7 +609,9 @@ a:hover { text-decoration: underline; }
 .site-header, .site-footer { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
 .site-header { margin-bottom: 32px; }
 .brand { font-weight: 800; font-size: 1.1rem; color: var(--text); }
+.header-actions { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
 .nav { display: flex; gap: 16px; flex-wrap: wrap; }
+.lang-switch { padding: 8px 12px; border-radius: 999px; border: 1px solid var(--line); }
 .site-footer { margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--line); color: var(--muted); }
 .hero { display: grid; grid-template-columns: 1.3fr .9fr; gap: 24px; margin-bottom: 28px; }
 .section-grid { display: grid; grid-template-columns: 1.35fr .75fr; gap: 24px; }
@@ -439,38 +661,38 @@ hr { border: none; border-top: 1px solid var(--line); margin: 24px 0; }
   .cluster-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 720px) {
-  .site-header, .site-footer, .panel-header, .repo-card-head, .archive-list li, .link-list li { flex-direction: column; align-items: flex-start; }
+  .site-header, .site-footer, .panel-header, .repo-card-head, .archive-list li, .link-list li, .header-actions { flex-direction: column; align-items: flex-start; }
   .hero .stats-grid { grid-template-columns: 1fr 1fr; }
 }
 `;
 }
 
 function collectLatestEntries(configs: RepoConfig[]): SiteReportEntry[] {
-  return configs.flatMap((config) => {
-    const slug = repoSlug(config.repo);
-    const aggregation = readJson<RepoAggregation>(resolve(DATA_DIR, slug, "clusters.json")) ?? undefined;
-    const entries: SiteReportEntry[] = [];
+  const entries: SiteReportEntry[] = [];
 
-    for (const lang of ["en", "zh"] as const) {
-      const suffix = lang === "zh" ? ".zh" : "";
+  for (const uiLang of UI_LANGS) {
+    for (const config of configs) {
+      const slug = repoSlug(config.repo);
+      const reportLang = COPY_BY_UI_LANG[uiLang];
+      const suffix = reportLang === "zh" ? ".zh" : "";
       const sourcePath = resolve(REPORTS_DIR, "latest", `${slug}${suffix}.md`);
       if (!existsSync(sourcePath)) continue;
       entries.push({
         repo: config.repo,
         slug,
         displayName: config.display_name,
-        lang,
+        reportLang,
         sourcePath,
-        outputHtmlPath: resolve(SITE_DIR, "latest", `${slug}${suffix}.html`),
-        outputRawPath: resolve(SITE_DIR, "reports", "latest", `${slug}${suffix}.md`),
-        webPath: `latest/${slug}${suffix}.html`,
-        rawWebPath: `reports/latest/${slug}${suffix}.md`,
-        aggregation,
+        outputHtmlPath: absoluteSitePath(routeFor(uiLang, `latest/${slug}.html`)),
+        outputRawPath: absoluteSitePath(`reports/latest/${slug}${suffix}.md`),
+        routePath: routeFor(uiLang, `latest/${slug}.html`),
+        rawRoutePath: `reports/latest/${slug}${suffix}.md`,
+        aggregation: readJson<RepoAggregation>(resolve(DATA_DIR, slug, "clusters.json")) ?? undefined,
       });
     }
+  }
 
-    return entries;
-  });
+  return entries;
 }
 
 function collectArchiveEntries(configs: RepoConfig[]): Map<string, SiteReportEntry[]> {
@@ -479,32 +701,38 @@ function collectArchiveEntries(configs: RepoConfig[]): Map<string, SiteReportEnt
   if (!existsSync(archiveRoot)) return map;
 
   const configBySlug = new Map(configs.map((config) => [repoSlug(config.repo), config]));
-  const weeks = readdirSync(archiveRoot, { withFileTypes: true }).filter((entry) => entry.isDirectory()).map((entry) => entry.name);
+  const weeks = readdirSync(archiveRoot, { withFileTypes: true })
+    .filter((entry) => entry.isDirectory())
+    .map((entry) => entry.name);
 
   for (const week of weeks) {
     const weekDir = resolve(archiveRoot, week);
-    const entries: SiteReportEntry[] = [];
-    const files = readdirSync(weekDir, { withFileTypes: true }).filter((entry) => entry.isFile() && extname(entry.name) === ".md");
+    const weekEntries: SiteReportEntry[] = [];
+    const files = readdirSync(weekDir, { withFileTypes: true })
+      .filter((entry) => entry.isFile() && extname(entry.name) === ".md");
 
-    for (const file of files) {
-      const lang: "en" | "zh" = file.name.endsWith(".zh.md") ? "zh" : "en";
-      const slug = file.name.replace(/\.zh\.md$|\.md$/g, "");
-      const config = configBySlug.get(slug);
-      entries.push({
-        repo: config?.repo ?? slug,
-        slug,
-        displayName: config?.display_name ?? slug,
-        week,
-        lang,
-        sourcePath: resolve(weekDir, file.name),
-        outputHtmlPath: resolve(SITE_DIR, "archive", week, `${slug}${lang === "zh" ? ".zh" : ""}.html`),
-        outputRawPath: resolve(SITE_DIR, "reports", "archive", week, file.name),
-        webPath: `archive/${week}/${slug}${lang === "zh" ? ".zh" : ""}.html`,
-        rawWebPath: `reports/archive/${week}/${file.name}`,
-      });
+    for (const uiLang of UI_LANGS) {
+      for (const file of files) {
+        const fileReportLang: ReportLang = file.name.endsWith(".zh.md") ? "zh" : "en";
+        if (fileReportLang !== COPY_BY_UI_LANG[uiLang]) continue;
+        const slug = file.name.replace(/\.zh\.md$|\.md$/g, "");
+        const config = configBySlug.get(slug);
+        weekEntries.push({
+          repo: config?.repo ?? slug,
+          slug,
+          displayName: config?.display_name ?? slug,
+          week,
+          reportLang: fileReportLang,
+          sourcePath: resolve(weekDir, file.name),
+          outputHtmlPath: absoluteSitePath(routeFor(uiLang, `archive/${week}/${slug}.html`)),
+          outputRawPath: absoluteSitePath(`reports/archive/${week}/${file.name}`),
+          routePath: routeFor(uiLang, `archive/${week}/${slug}.html`),
+          rawRoutePath: `reports/archive/${week}/${file.name}`,
+        });
+      }
     }
 
-    map.set(week, entries.sort((a, b) => a.slug.localeCompare(b.slug) || a.lang.localeCompare(b.lang)));
+    map.set(week, weekEntries.sort((a, b) => a.routePath.localeCompare(b.routePath)));
   }
 
   return map;
@@ -523,33 +751,43 @@ function main(): void {
   ensureDir(resolve(SITE_DIR, "assets"));
   writeText(resolve(SITE_DIR, "assets", "style.css"), siteCss());
   writeText(resolve(SITE_DIR, ".nojekyll"), "");
+  writeText(resolve(SITE_DIR, "index.html"), rootRedirectPage());
 
   for (const entry of latestEntries) {
-    ensureDir(resolve(entry.outputHtmlPath, ".."));
+    writeText(entry.outputHtmlPath, buildReportPage(entry.routePath.startsWith("en/") ? "en" : "zh", entry));
     ensureDir(resolve(entry.outputRawPath, ".."));
-    writeText(entry.outputHtmlPath, buildReportPage(entry));
     copyFileSync(entry.sourcePath, entry.outputRawPath);
   }
 
-  for (const weekEntries of archiveEntries.values()) {
-    for (const entry of weekEntries) {
-      ensureDir(resolve(entry.outputHtmlPath, ".."));
+  for (const entries of archiveEntries.values()) {
+    for (const entry of entries) {
+      writeText(entry.outputHtmlPath, buildReportPage(entry.routePath.startsWith("en/") ? "en" : "zh", entry));
       ensureDir(resolve(entry.outputRawPath, ".."));
-      writeText(entry.outputHtmlPath, buildReportPage(entry));
       copyFileSync(entry.sourcePath, entry.outputRawPath);
     }
   }
 
-  const defaultEntry = latestEntries.find((entry) => entry.slug === DEFAULT_HOME_SLUG && entry.lang === "en")
-    ?? latestEntries.find((entry) => entry.lang === "en");
+  for (const uiLang of UI_LANGS) {
+    const defaultEntry = latestEntries.find((entry) => entry.slug === DEFAULT_HOME_SLUG && entry.routePath.startsWith(`${uiLang}/`))
+      ?? latestEntries.find((entry) => entry.routePath.startsWith(`${uiLang}/`));
 
-  if (!defaultEntry) {
-    throw new Error("No English latest report found for homepage.");
+    if (!defaultEntry) {
+      throw new Error(`No ${uiLang} latest report found for homepage.`);
+    }
+
+    writeText(
+      absoluteSitePath(routeFor(uiLang, "index.html")),
+      buildHomePage(uiLang, defaultEntry, latestEntries.filter((entry) => entry.routePath.startsWith(`${uiLang}/`)), archiveEntries)
+    );
+    writeText(
+      absoluteSitePath(routeFor(uiLang, "latest/index.html")),
+      buildLatestIndex(uiLang, latestEntries.filter((entry) => entry.routePath.startsWith(`${uiLang}/`)))
+    );
+    writeText(
+      absoluteSitePath(routeFor(uiLang, "archive/index.html")),
+      buildArchiveIndex(uiLang, archiveEntries)
+    );
   }
-
-  writeText(resolve(SITE_DIR, "index.html"), buildHomePage(defaultEntry, latestEntries, archiveEntries));
-  writeText(resolve(SITE_DIR, "latest", "index.html"), buildLatestIndex(latestEntries));
-  writeText(resolve(SITE_DIR, "archive", "index.html"), buildArchiveIndex(archiveEntries));
 
   console.log(`Site generated at ${SITE_DIR}`);
 }
