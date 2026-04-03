@@ -38,6 +38,18 @@ export interface GenerateResult {
   readmeUpdated: boolean;
 }
 
+export class MissingAggregatedDataError extends Error {
+  readonly repo: string;
+  readonly clustersPath: string;
+
+  constructor(repo: string, clustersPath: string) {
+    super(`No aggregated data found at ${clustersPath}. Run 'ryu aggregate ${repo}' first.`);
+    this.name = "MissingAggregatedDataError";
+    this.repo = repo;
+    this.clustersPath = clustersPath;
+  }
+}
+
 export function writeCrossProductSummary(
   configs: RepoConfig[],
   dataDir: string,
@@ -75,9 +87,7 @@ export async function generateReports(
 
   const aggregation = readJSON<RepoAggregation>(clustersPath);
   if (!aggregation || aggregation.clusters.length === 0) {
-    throw new Error(
-      `No aggregated data found at ${clustersPath}. Run 'ryu aggregate ${repo}' first.`
-    );
+    throw new MissingAggregatedDataError(repo, clustersPath);
   }
 
   const week = getWeekString();

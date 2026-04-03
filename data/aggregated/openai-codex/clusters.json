@@ -1,0 +1,211 @@
+{
+  "repo": "openai/codex",
+  "display_name": "OpenAI Codex CLI",
+  "generated_at": "2026-04-03T09:51:03.177Z",
+  "window_start": "2026-03-04T09:51:03.177Z",
+  "window_end": "2026-04-03T09:51:03.177Z",
+  "total_issues_analyzed": 29,
+  "total_issues_included": 28,
+  "clusters": [
+    {
+      "cluster_id": "734940976613",
+      "title": "Improve CLI Stability, Error Handling, and Graceful Recovery",
+      "summary": "Users want to resolve CLI instability issues including startup latency, infinite hangs, crashes, and unhandled network errors to ensure uninterrupted workflows. They also request improved error messaging, graceful timeouts, and session-level plugin reloading to minimize context drain and manual restarts. Addressing these pain points will deliver a more robust, predictable, and efficient command-line experience.",
+      "category": "Reliability",
+      "representative_need": "Cap and summarize oversized tool outputs to prevent excessive context growth and quota drain",
+      "issue_numbers": [
+        16675,
+        16671,
+        16664,
+        16657,
+        16655,
+        16653,
+        16652,
+        16650,
+        16649,
+        16647,
+        16639,
+        16637
+      ],
+      "issue_urls": [
+        "https://github.com/openai/codex/issues/16675",
+        "https://github.com/openai/codex/issues/16671",
+        "https://github.com/openai/codex/issues/16664",
+        "https://github.com/openai/codex/issues/16657",
+        "https://github.com/openai/codex/issues/16655",
+        "https://github.com/openai/codex/issues/16653",
+        "https://github.com/openai/codex/issues/16652",
+        "https://github.com/openai/codex/issues/16650",
+        "https://github.com/openai/codex/issues/16649",
+        "https://github.com/openai/codex/issues/16647",
+        "https://github.com/openai/codex/issues/16639",
+        "https://github.com/openai/codex/issues/16637"
+      ],
+      "sample_titles": [
+        "Cap and summarize oversized tool outputs to prevent excessive context growth and quota drain",
+        "Fix CLI indefinite hang and implement graceful timeout or error handling",
+        "Fix CLI repeating previous response instead of processing new input"
+      ],
+      "demand_score": 5.386279701569347,
+      "rising_score": 13,
+      "volume": 12,
+      "open_count": 3,
+      "closed_count": 9,
+      "avg_reactions": 0,
+      "avg_comments": 2.3,
+      "date_first_seen": "2026-04-03T00:32:44.000Z",
+      "date_last_seen": "2026-04-03T08:12:18.000Z",
+      "repos_affected": [
+        "openai/codex"
+      ]
+    },
+    {
+      "cluster_id": "1cc7a07fac81",
+      "title": "Enhance Core Stability, State Management, and Execution Reliability",
+      "summary": "Users are requesting critical fixes for resource leaks, session data loss, platform-specific execution failures, and inaccurate usage tracking, alongside enhancements for conversation search and desktop automation. They require robust API retry logic and proper path resolution to ensure consistent, uninterrupted agent operation. Addressing these issues will prevent disruptive crashes and significantly improve the platform's overall reliability.",
+      "category": "Reliability",
+      "representative_need": "Add native computer use tools for desktop GUI automation",
+      "issue_numbers": [
+        16672,
+        16666,
+        16660,
+        16654,
+        16644,
+        16643,
+        16642,
+        16636
+      ],
+      "issue_urls": [
+        "https://github.com/openai/codex/issues/16672",
+        "https://github.com/openai/codex/issues/16666",
+        "https://github.com/openai/codex/issues/16660",
+        "https://github.com/openai/codex/issues/16654",
+        "https://github.com/openai/codex/issues/16644",
+        "https://github.com/openai/codex/issues/16643",
+        "https://github.com/openai/codex/issues/16642",
+        "https://github.com/openai/codex/issues/16636"
+      ],
+      "sample_titles": [
+        "Add native computer use tools for desktop GUI automation",
+        "Fix inaccurate tracking and consumption of the daily usage limit quota",
+        "Fix intermittent Windows sandbox refresh failures blocking apply_patch execution"
+      ],
+      "demand_score": 3.739662927599286,
+      "rising_score": 9,
+      "volume": 8,
+      "open_count": 4,
+      "closed_count": 4,
+      "avg_reactions": 0,
+      "avg_comments": 1.9,
+      "date_first_seen": "2026-04-03T00:26:23.000Z",
+      "date_last_seen": "2026-04-03T07:57:01.000Z",
+      "repos_affected": [
+        "openai/codex"
+      ]
+    },
+    {
+      "cluster_id": "865df44e0970",
+      "title": "Fix UI Layout Overlaps and Content Rendering Bugs",
+      "summary": "Users are reporting multiple interface display issues, including overlapping search controls, missing thread titles, and broken plugin metadata rendering. Addressing these visual inconsistencies will improve the overall polish, readability, and usability of the application.",
+      "category": "UI/UX",
+      "representative_need": "Fix UI containment and metadata rendering for local plugin skills",
+      "issue_numbers": [
+        16678,
+        16673,
+        16663
+      ],
+      "issue_urls": [
+        "https://github.com/openai/codex/issues/16678",
+        "https://github.com/openai/codex/issues/16673",
+        "https://github.com/openai/codex/issues/16663"
+      ],
+      "sample_titles": [
+        "Fix UI containment and metadata rendering for local plugin skills",
+        "Fix in-app search bar UI overlap with native window controls",
+        "Preserve and display custom thread titles in archived thread lists"
+      ],
+      "demand_score": 2.9974135704267892,
+      "rising_score": 4,
+      "volume": 3,
+      "open_count": 2,
+      "closed_count": 1,
+      "avg_reactions": 0,
+      "avg_comments": 1,
+      "date_first_seen": "2026-04-03T06:34:43.000Z",
+      "date_last_seen": "2026-04-03T09:25:20.000Z",
+      "repos_affected": [
+        "openai/codex"
+      ]
+    },
+    {
+      "cluster_id": "a8fdd2281218",
+      "title": "Cross-platform application stability and interface customization",
+      "summary": "Users are encountering critical execution blocks, launch freezes, and rigid layout constraints across Windows and macOS environments. They need reliable bundled tool execution, stable startup processes, and adjustable chat widths to ensure a smooth and adaptable user experience.",
+      "category": "Platform Support",
+      "representative_need": "Fix bundled ripgrep (rg.exe) execution on Windows due to folder permission restrictions",
+      "issue_numbers": [
+        16676,
+        16669,
+        16651
+      ],
+      "issue_urls": [
+        "https://github.com/openai/codex/issues/16676",
+        "https://github.com/openai/codex/issues/16669",
+        "https://github.com/openai/codex/issues/16651"
+      ],
+      "sample_titles": [
+        "Fix bundled ripgrep (rg.exe) execution on Windows due to folder permission restrictions",
+        "Fix system-wide process hangs and terminal freezes during macOS app launch",
+        "Support adjustable chat content width in the app UI"
+      ],
+      "demand_score": 1.9969312180885535,
+      "rising_score": 4,
+      "volume": 3,
+      "open_count": 2,
+      "closed_count": 1,
+      "avg_reactions": 0,
+      "avg_comments": 0.7,
+      "date_first_seen": "2026-04-03T03:46:38.000Z",
+      "date_last_seen": "2026-04-03T08:14:09.000Z",
+      "repos_affected": [
+        "openai/codex"
+      ]
+    },
+    {
+      "cluster_id": "0249ca2b5d88",
+      "title": "Fix expiration handling and thread pagination display issues",
+      "summary": "Users are requesting fixes for how promotional tips expire and how threads are paginated and sorted. Addressing these bugs will prevent outdated content from persisting and ensure all relevant sessions are accurately displayed without silent omissions.",
+      "category": "UI/UX",
+      "representative_need": "Fix expiration handling for TUI promotional tips",
+      "issue_numbers": [
+        16677,
+        16645
+      ],
+      "issue_urls": [
+        "https://github.com/openai/codex/issues/16677",
+        "https://github.com/openai/codex/issues/16645"
+      ],
+      "sample_titles": [
+        "Fix expiration handling for TUI promotional tips",
+        "Fix thread pagination to prevent silent session omission when sorting by UpdatedAt"
+      ],
+      "demand_score": 0.9981692172713927,
+      "rising_score": 3,
+      "volume": 2,
+      "open_count": 1,
+      "closed_count": 1,
+      "avg_reactions": 0,
+      "avg_comments": 4,
+      "date_first_seen": "2026-04-03T02:27:38.000Z",
+      "date_last_seen": "2026-04-03T09:22:05.000Z",
+      "repos_affected": [
+        "openai/codex"
+      ]
+    }
+  ],
+  "category_breakdown": {
+    "Reliability": 2,
+    "UI/UX": 2,
+    "Platform Support": 1
+  }
+}

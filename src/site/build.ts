@@ -469,6 +469,35 @@ function listOrFallback(items: string[], fallback: string): string {
   return items.length > 0 ? items.map((item) => titleCase(item)).join(", ") : fallback;
 }
 
+function formatCompareProductNames(uiLang: UiLang, products: ProductSummaryCard[]): string {
+  const names = products.map((product) => product.displayName);
+
+  if (names.length <= 1) {
+    return names[0] ?? "";
+  }
+
+  if (uiLang === "zh") {
+    return names.join("、");
+  }
+
+  if (names.length === 2) {
+    return `${names[0]} and ${names[1]}`;
+  }
+
+  return `${names.slice(0, -1).join(", ")}, and ${names.at(-1)}`;
+}
+
+function compareIntroCopy(uiLang: UiLang, products: ProductSummaryCard[]): string {
+  const names = formatCompareProductNames(uiLang, products);
+  if (!names) {
+    return ui[uiLang].compareEmptyCopy;
+  }
+
+  return uiLang === "zh"
+    ? `看看${names}用户这周关注点在哪里重叠、又在哪里分化。`
+    : `See where ${names} users overlap and diverge this week.`;
+}
+
 function buildSignalCard(
   signal: {
     slug: string;
@@ -843,6 +872,7 @@ function buildComparePage(
   visibleProducts: ProductSummaryCard[]
 ): string {
   const t = ui[uiLang];
+  const introCopy = compareIntroCopy(uiLang, visibleProducts);
 
   const productCards = visibleProducts
     .map((product) => {
@@ -883,7 +913,7 @@ function buildComparePage(
     .join("");
 
   const body = summary && visibleProducts.length > 0
-    ? `<section class="page-intro"><p class="eyebrow">${t.compareIntroEyebrow}</p><h1>${t.compareIntroTitle}</h1><p>${t.compareIntroCopy}</p></section>
+    ? `<section class="page-intro"><p class="eyebrow">${t.compareIntroEyebrow}</p><h1>${t.compareIntroTitle}</h1><p>${escapeHtml(introCopy)}</p></section>
       <section class="panel">
         <div class="panel-header"><h2>${t.compareProductsTitle}</h2></div>
         <section class="repo-grid">${productCards}</section>
@@ -909,7 +939,7 @@ function buildComparePage(
   return pageTemplate({
     uiLang,
     title: `${t.navCompare} — ${t.siteName}`,
-    description: t.compareIntroCopy,
+    description: summary && visibleProducts.length > 0 ? introCopy : t.compareEmptyCopy,
     body,
     depth: 2,
     routePath: routeFor(uiLang, "compare/index.html"),

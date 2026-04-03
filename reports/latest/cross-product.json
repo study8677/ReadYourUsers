@@ -1,0 +1,2222 @@
+{
+  "generatedAt": "2026-04-03T09:51:03.177Z",
+  "products": [
+    {
+      "repo": "anthropics/claude-code",
+      "slug": "anthropics-claude-code",
+      "displayName": "Claude Code",
+      "category": "AI Coding Assistant",
+      "generatedAt": "2026-04-02T16:18:12.289Z",
+      "totalIssuesAnalyzed": 326,
+      "totalIssuesIncluded": 313,
+      "totalClusters": 33,
+      "topNeed": {
+        "cluster_id": "9a5cca693960",
+        "title": "MCP Server Reliability and Configuration Issues",
+        "summary": "Users are experiencing multiple reliability issues with MCP (Model Context Protocol) server integration, including connection failures, authentication problems with OAuth callbacks, and context length constraints when many servers are configured. These issues span different execution environments like remote triggers, scheduled agents, and Windows platforms, suggesting systemic gaps in MCP connectivity, error handling, and configuration management that need to be addressed for stable MCP server operations.",
+        "category": "Integration",
+        "representative_need": "Add agent-accessible diagnostic tool for programmatic config validation",
+        "issue_numbers": [
+          42632,
+          42628,
+          42627,
+          42599,
+          42579,
+          42565,
+          42548,
+          42535,
+          42522,
+          42509,
+          42502,
+          42477,
+          42470,
+          42465,
+          42463,
+          42459,
+          42453,
+          42452,
+          42447,
+          42444,
+          42442,
+          42441,
+          42425,
+          42419,
+          42404,
+          42380,
+          42368,
+          42356,
+          42344,
+          42327,
+          42323,
+          42315,
+          42312
+        ],
+        "issue_urls": [
+          "https://github.com/anthropics/claude-code/issues/42632",
+          "https://github.com/anthropics/claude-code/issues/42628",
+          "https://github.com/anthropics/claude-code/issues/42627",
+          "https://github.com/anthropics/claude-code/issues/42599",
+          "https://github.com/anthropics/claude-code/issues/42579",
+          "https://github.com/anthropics/claude-code/issues/42565",
+          "https://github.com/anthropics/claude-code/issues/42548",
+          "https://github.com/anthropics/claude-code/issues/42535",
+          "https://github.com/anthropics/claude-code/issues/42522",
+          "https://github.com/anthropics/claude-code/issues/42509",
+          "https://github.com/anthropics/claude-code/issues/42502",
+          "https://github.com/anthropics/claude-code/issues/42477",
+          "https://github.com/anthropics/claude-code/issues/42470",
+          "https://github.com/anthropics/claude-code/issues/42465",
+          "https://github.com/anthropics/claude-code/issues/42463",
+          "https://github.com/anthropics/claude-code/issues/42459",
+          "https://github.com/anthropics/claude-code/issues/42453",
+          "https://github.com/anthropics/claude-code/issues/42452",
+          "https://github.com/anthropics/claude-code/issues/42447",
+          "https://github.com/anthropics/claude-code/issues/42444",
+          "https://github.com/anthropics/claude-code/issues/42442",
+          "https://github.com/anthropics/claude-code/issues/42441",
+          "https://github.com/anthropics/claude-code/issues/42425",
+          "https://github.com/anthropics/claude-code/issues/42419",
+          "https://github.com/anthropics/claude-code/issues/42404",
+          "https://github.com/anthropics/claude-code/issues/42380",
+          "https://github.com/anthropics/claude-code/issues/42368",
+          "https://github.com/anthropics/claude-code/issues/42356",
+          "https://github.com/anthropics/claude-code/issues/42344",
+          "https://github.com/anthropics/claude-code/issues/42327",
+          "https://github.com/anthropics/claude-code/issues/42323",
+          "https://github.com/anthropics/claude-code/issues/42315",
+          "https://github.com/anthropics/claude-code/issues/42312"
+        ],
+        "sample_titles": [
+          "Add agent-accessible diagnostic tool for programmatic config validation",
+          "Add option to always persist MCP tool results to file regardless of size",
+          "Add option to prevent parent directory .mcp.json config inheritance for isolated MCP server configuration"
+        ],
+        "demand_score": 15.439897948594005,
+        "rising_score": 34,
+        "volume": 33,
+        "open_count": 31,
+        "closed_count": 2,
+        "avg_reactions": 0.1,
+        "avg_comments": 0.9,
+        "date_first_seen": "2026-04-02T00:16:27.000Z",
+        "date_last_seen": "2026-04-02T15:17:27.000Z",
+        "repos_affected": [
+          "anthropics/claude-code"
+        ]
+      },
+      "risingNeed": {
+        "cluster_id": "8848e3033d43",
+        "title": "TUI Terminal State and Input Handling Fixes",
+        "summary": "Users are experiencing various terminal interface issues including state corruption when spawning external editors, unresponsive input during multi-agent execution, improper screen clearing, and missing scrollback/history display. These problems stem from inadequate handling of terminal protocols (kitty keyboard, mouse tracking), escape sequence leaks, and scroll behavior during different interaction phases. Fixing these issues will ensure a more reliable and consistent terminal user experience.",
+        "category": "UI/UX",
+        "representative_need": "Add configurable TUI scrollback buffer size for conversation history",
+        "issue_numbers": [
+          42638,
+          42617,
+          42613,
+          42612,
+          42606,
+          42598,
+          42594,
+          42587,
+          42580,
+          42571,
+          42560,
+          42559,
+          42553,
+          42549,
+          42540,
+          42538,
+          42537,
+          42534,
+          42528,
+          42527,
+          42519,
+          42518,
+          42517,
+          42501,
+          42498,
+          42491,
+          42481,
+          42479,
+          42478,
+          42469,
+          42468,
+          42467,
+          42464,
+          42460,
+          42446,
+          42434,
+          42432,
+          42422,
+          42418,
+          42417,
+          42406,
+          42392,
+          42387,
+          42382,
+          42374,
+          42367,
+          42355,
+          42349,
+          42345,
+          42343,
+          42340
+        ],
+        "issue_urls": [
+          "https://github.com/anthropics/claude-code/issues/42638",
+          "https://github.com/anthropics/claude-code/issues/42617",
+          "https://github.com/anthropics/claude-code/issues/42613",
+          "https://github.com/anthropics/claude-code/issues/42612",
+          "https://github.com/anthropics/claude-code/issues/42606",
+          "https://github.com/anthropics/claude-code/issues/42598",
+          "https://github.com/anthropics/claude-code/issues/42594",
+          "https://github.com/anthropics/claude-code/issues/42587",
+          "https://github.com/anthropics/claude-code/issues/42580",
+          "https://github.com/anthropics/claude-code/issues/42571",
+          "https://github.com/anthropics/claude-code/issues/42560",
+          "https://github.com/anthropics/claude-code/issues/42559",
+          "https://github.com/anthropics/claude-code/issues/42553",
+          "https://github.com/anthropics/claude-code/issues/42549",
+          "https://github.com/anthropics/claude-code/issues/42540",
+          "https://github.com/anthropics/claude-code/issues/42538",
+          "https://github.com/anthropics/claude-code/issues/42537",
+          "https://github.com/anthropics/claude-code/issues/42534",
+          "https://github.com/anthropics/claude-code/issues/42528",
+          "https://github.com/anthropics/claude-code/issues/42527",
+          "https://github.com/anthropics/claude-code/issues/42519",
+          "https://github.com/anthropics/claude-code/issues/42518",
+          "https://github.com/anthropics/claude-code/issues/42517",
+          "https://github.com/anthropics/claude-code/issues/42501",
+          "https://github.com/anthropics/claude-code/issues/42498",
+          "https://github.com/anthropics/claude-code/issues/42491",
+          "https://github.com/anthropics/claude-code/issues/42481",
+          "https://github.com/anthropics/claude-code/issues/42479",
+          "https://github.com/anthropics/claude-code/issues/42478",
+          "https://github.com/anthropics/claude-code/issues/42469",
+          "https://github.com/anthropics/claude-code/issues/42468",
+          "https://github.com/anthropics/claude-code/issues/42467",
+          "https://github.com/anthropics/claude-code/issues/42464",
+          "https://github.com/anthropics/claude-code/issues/42460",
+          "https://github.com/anthropics/claude-code/issues/42446",
+          "https://github.com/anthropics/claude-code/issues/42434",
+          "https://github.com/anthropics/claude-code/issues/42432",
+          "https://github.com/anthropics/claude-code/issues/42422",
+          "https://github.com/anthropics/claude-code/issues/42418",
+          "https://github.com/anthropics/claude-code/issues/42417",
+          "https://github.com/anthropics/claude-code/issues/42406",
+          "https://github.com/anthropics/claude-code/issues/42392",
+          "https://github.com/anthropics/claude-code/issues/42387",
+          "https://github.com/anthropics/claude-code/issues/42382",
+          "https://github.com/anthropics/claude-code/issues/42374",
+          "https://github.com/anthropics/claude-code/issues/42367",
+          "https://github.com/anthropics/claude-code/issues/42355",
+          "https://github.com/anthropics/claude-code/issues/42349",
+          "https://github.com/anthropics/claude-code/issues/42345",
+          "https://github.com/anthropics/claude-code/issues/42343",
+          "https://github.com/anthropics/claude-code/issues/42340"
+        ],
+        "sample_titles": [
+          "Add configurable TUI scrollback buffer size for conversation history",
+          "Add configurable companion settings for bubble duration and language",
+          "Add configuration option to disable Grime companion UI element"
+        ],
+        "demand_score": 13.843334771783027,
+        "rising_score": 52,
+        "volume": 51,
+        "open_count": 43,
+        "closed_count": 8,
+        "avg_reactions": 0.2,
+        "avg_comments": 1.1,
+        "date_first_seen": "2026-04-02T01:51:38.000Z",
+        "date_last_seen": "2026-04-02T15:33:00.000Z",
+        "repos_affected": [
+          "anthropics/claude-code"
+        ]
+      },
+      "dominantCategory": "Developer Experience",
+      "reportPaths": {
+        "en": "reports/latest/anthropics-claude-code.md",
+        "zh": "reports/latest/anthropics-claude-code.zh.md"
+      },
+      "aggregation": {
+        "repo": "anthropics/claude-code",
+        "display_name": "Claude Code",
+        "generated_at": "2026-04-02T16:18:12.289Z",
+        "window_start": "2026-03-03T16:18:12.289Z",
+        "window_end": "2026-04-02T16:18:12.289Z",
+        "total_issues_analyzed": 326,
+        "total_issues_included": 313,
+        "clusters": [
+          {
+            "cluster_id": "9a5cca693960",
+            "title": "MCP Server Reliability and Configuration Issues",
+            "summary": "Users are experiencing multiple reliability issues with MCP (Model Context Protocol) server integration, including connection failures, authentication problems with OAuth callbacks, and context length constraints when many servers are configured. These issues span different execution environments like remote triggers, scheduled agents, and Windows platforms, suggesting systemic gaps in MCP connectivity, error handling, and configuration management that need to be addressed for stable MCP server operations.",
+            "category": "Integration",
+            "representative_need": "Add agent-accessible diagnostic tool for programmatic config validation",
+            "issue_numbers": [
+              42632,
+              42628,
+              42627,
+              42599,
+              42579,
+              42565,
+              42548,
+              42535,
+              42522,
+              42509,
+              42502,
+              42477,
+              42470,
+              42465,
+              42463,
+              42459,
+              42453,
+              42452,
+              42447,
+              42444,
+              42442,
+              42441,
+              42425,
+              42419,
+              42404,
+              42380,
+              42368,
+              42356,
+              42344,
+              42327,
+              42323,
+              42315,
+              42312
+            ],
+            "issue_urls": [
+              "https://github.com/anthropics/claude-code/issues/42632",
+              "https://github.com/anthropics/claude-code/issues/42628",
+              "https://github.com/anthropics/claude-code/issues/42627",
+              "https://github.com/anthropics/claude-code/issues/42599",
+              "https://github.com/anthropics/claude-code/issues/42579",
+              "https://github.com/anthropics/claude-code/issues/42565",
+              "https://github.com/anthropics/claude-code/issues/42548",
+              "https://github.com/anthropics/claude-code/issues/42535",
+              "https://github.com/anthropics/claude-code/issues/42522",
+              "https://github.com/anthropics/claude-code/issues/42509",
+              "https://github.com/anthropics/claude-code/issues/42502",
+              "https://github.com/anthropics/claude-code/issues/42477",
+              "https://github.com/anthropics/claude-code/issues/42470",
+              "https://github.com/anthropics/claude-code/issues/42465",
+              "https://github.com/anthropics/claude-code/issues/42463",
+              "https://github.com/anthropics/claude-code/issues/42459",
+              "https://github.com/anthropics/claude-code/issues/42453",
+              "https://github.com/anthropics/claude-code/issues/42452",
+              "https://github.com/anthropics/claude-code/issues/42447",
+              "https://github.com/anthropics/claude-code/issues/42444",
+              "https://github.com/anthropics/claude-code/issues/42442",
+              "https://github.com/anthropics/claude-code/issues/42441",
+              "https://github.com/anthropics/claude-code/issues/42425",
+              "https://github.com/anthropics/claude-code/issues/42419",
+              "https://github.com/anthropics/claude-code/issues/42404",
+              "https://github.com/anthropics/claude-code/issues/42380",
+              "https://github.com/anthropics/claude-code/issues/42368",
+              "https://github.com/anthropics/claude-code/issues/42356",
+              "https://github.com/anthropics/claude-code/issues/42344",
+              "https://github.com/anthropics/claude-code/issues/42327",
+              "https://github.com/anthropics/claude-code/issues/42323",
+              "https://github.com/anthropics/claude-code/issues/42315",
+              "https://github.com/anthropics/claude-code/issues/42312"
+            ],
+            "sample_titles": [
+              "Add agent-accessible diagnostic tool for programmatic config validation",
+              "Add option to always persist MCP tool results to file regardless of size",
+              "Add option to prevent parent directory .mcp.json config inheritance for isolated MCP server configuration"
+            ],
+            "demand_score": 15.439897948594005,
+            "rising_score": 34,
+            "volume": 33,
+            "open_count": 31,
+            "closed_count": 2,
+            "avg_reactions": 0.1,
+            "avg_comments": 0.9,
+            "date_first_seen": "2026-04-02T00:16:27.000Z",
+            "date_last_seen": "2026-04-02T15:17:27.000Z",
+            "repos_affected": [
+              "anthropics/claude-code"
+            ]
+          },
+          {
+            "cluster_id": "8848e3033d43",
+            "title": "TUI Terminal State and Input Handling Fixes",
+            "summary": "Users are experiencing various terminal interface issues including state corruption when spawning external editors, unresponsive input during multi-agent execution, improper screen clearing, and missing scrollback/history display. These problems stem from inadequate handling of terminal protocols (kitty keyboard, mouse tracking), escape sequence leaks, and scroll behavior during different interaction phases. Fixing these issues will ensure a more reliable and consistent terminal user experience.",
+            "category": "UI/UX",
+            "representative_need": "Add configurable TUI scrollback buffer size for conversation history",
+            "issue_numbers": [
+              42638,
+              42617,
+              42613,
+              42612,
+              42606,
+              42598,
+              42594,
+              42587,
+              42580,
+              42571,
+              42560,
+              42559,
+              42553,
+              42549,
+              42540,
+              42538,
+              42537,
+              42534,
+              42528,
+              42527,
+              42519,
+              42518,
+              42517,
+              42501,
+              42498,
+              42491,
+              42481,
+              42479,
+              42478,
+              42469,
+              42468,
+              42467,
+              42464,
+              42460,
+              42446,
+              42434,
+              42432,
+              42422,
+              42418,
+              42417,
+              42406,
+              42392,
+              42387,
+              42382,
+              42374,
+              42367,
+              42355,
+              42349,
+              42345,
+              42343,
+              42340
+            ],
+            "issue_urls": [
+              "https://github.com/anthropics/claude-code/issues/42638",
+              "https://github.com/anthropics/claude-code/issues/42617",
+              "https://github.com/anthropics/claude-code/issues/42613",
+              "https://github.com/anthropics/claude-code/issues/42612",
+              "https://github.com/anthropics/claude-code/issues/42606",
+              "https://github.com/anthropics/claude-code/issues/42598",
+              "https://github.com/anthropics/claude-code/issues/42594",
+              "https://github.com/anthropics/claude-code/issues/42587",
+              "https://github.com/anthropics/claude-code/issues/42580",
+              "https://github.com/anthropics/claude-code/issues/42571",
+              "https://github.com/anthropics/claude-code/issues/42560",
+              "https://github.com/anthropics/claude-code/issues/42559",
+              "https://github.com/anthropics/claude-code/issues/42553",
+              "https://github.com/anthropics/claude-code/issues/42549",
+              "https://github.com/anthropics/claude-code/issues/42540",
+              "https://github.com/anthropics/claude-code/issues/42538",
+              "https://github.com/anthropics/claude-code/issues/42537",
+              "https://github.com/anthropics/claude-code/issues/42534",
+              "https://github.com/anthropics/claude-code/issues/42528",
+              "https://github.com/anthropics/claude-code/issues/42527",
+              "https://github.com/anthropics/claude-code/issues/42519",
+              "https://github.com/anthropics/claude-code/issues/42518",
+              "https://github.com/anthropics/claude-code/issues/42517",
+              "https://github.com/anthropics/claude-code/issues/42501",
+              "https://github.com/anthropics/claude-code/issues/42498",
+              "https://github.com/anthropics/claude-code/issues/42491",
+              "https://github.com/anthropics/claude-code/issues/42481",
+              "https://github.com/anthropics/claude-code/issues/42479",
+              "https://github.com/anthropics/claude-code/issues/42478",
+              "https://github.com/anthropics/claude-code/issues/42469",
+              "https://github.com/anthropics/claude-code/issues/42468",
+              "https://github.com/anthropics/claude-code/issues/42467",
+              "https://github.com/anthropics/claude-code/issues/42464",
+              "https://github.com/anthropics/claude-code/issues/42460",
+              "https://github.com/anthropics/claude-code/issues/42446",
+              "https://github.com/anthropics/claude-code/issues/42434",
+              "https://github.com/anthropics/claude-code/issues/42432",
+              "https://github.com/anthropics/claude-code/issues/42422",
+              "https://github.com/anthropics/claude-code/issues/42418",
+              "https://github.com/anthropics/claude-code/issues/42417",
+              "https://github.com/anthropics/claude-code/issues/42406",
+              "https://github.com/anthropics/claude-code/issues/42392",
+              "https://github.com/anthropics/claude-code/issues/42387",
+              "https://github.com/anthropics/claude-code/issues/42382",
+              "https://github.com/anthropics/claude-code/issues/42374",
+              "https://github.com/anthropics/claude-code/issues/42367",
+              "https://github.com/anthropics/claude-code/issues/42355",
+              "https://github.com/anthropics/claude-code/issues/42349",
+              "https://github.com/anthropics/claude-code/issues/42345",
+              "https://github.com/anthropics/claude-code/issues/42343",
+              "https://github.com/anthropics/claude-code/issues/42340"
+            ],
+            "sample_titles": [
+              "Add configurable TUI scrollback buffer size for conversation history",
+              "Add configurable companion settings for bubble duration and language",
+              "Add configuration option to disable Grime companion UI element"
+            ],
+            "demand_score": 13.843334771783027,
+            "rising_score": 52,
+            "volume": 51,
+            "open_count": 43,
+            "closed_count": 8,
+            "avg_reactions": 0.2,
+            "avg_comments": 1.1,
+            "date_first_seen": "2026-04-02T01:51:38.000Z",
+            "date_last_seen": "2026-04-02T15:33:00.000Z",
+            "repos_affected": [
+              "anthropics/claude-code"
+            ]
+          },
+          {
+            "cluster_id": "1601b1a73122",
+            "title": "CLI Session Management and UX Improvements",
+            "summary": "These issues request improvements to the CLI experience including better session management (resuming sessions via --resume flag, programmatic session renaming, fixing Remote Control session visibility), enhanced output (immediate status line rendering, streaming plain-text for CI/CD, per-request token reporting), and fixes for common problems like hanging behavior with large files, token limit handling, and command recognition issues. Users want a more reliable and informative CLI that handles edge cases gracefully.",
+            "category": "Developer Experience",
+            "representative_need": "Add --cwd flag support to CLI",
+            "issue_numbers": [
+              42637,
+              42624,
+              42607,
+              42596,
+              42589,
+              42584,
+              42572,
+              42552,
+              42551,
+              42526,
+              42525,
+              42516,
+              42499,
+              42486,
+              42485,
+              42475,
+              42473,
+              42458,
+              42456,
+              42436,
+              42423,
+              42389,
+              42386,
+              42376,
+              42372,
+              42365,
+              42357,
+              42351,
+              42348,
+              42341,
+              42313,
+              42311
+            ],
+            "issue_urls": [
+              "https://github.com/anthropics/claude-code/issues/42637",
+              "https://github.com/anthropics/claude-code/issues/42624",
+              "https://github.com/anthropics/claude-code/issues/42607",
+              "https://github.com/anthropics/claude-code/issues/42596",
+              "https://github.com/anthropics/claude-code/issues/42589",
+              "https://github.com/anthropics/claude-code/issues/42584",
+              "https://github.com/anthropics/claude-code/issues/42572",
+              "https://github.com/anthropics/claude-code/issues/42552",
+              "https://github.com/anthropics/claude-code/issues/42551",
+              "https://github.com/anthropics/claude-code/issues/42526",
+              "https://github.com/anthropics/claude-code/issues/42525",
+              "https://github.com/anthropics/claude-code/issues/42516",
+              "https://github.com/anthropics/claude-code/issues/42499",
+              "https://github.com/anthropics/claude-code/issues/42486",
+              "https://github.com/anthropics/claude-code/issues/42485",
+              "https://github.com/anthropics/claude-code/issues/42475",
+              "https://github.com/anthropics/claude-code/issues/42473",
+              "https://github.com/anthropics/claude-code/issues/42458",
+              "https://github.com/anthropics/claude-code/issues/42456",
+              "https://github.com/anthropics/claude-code/issues/42436",
+              "https://github.com/anthropics/claude-code/issues/42423",
+              "https://github.com/anthropics/claude-code/issues/42389",
+              "https://github.com/anthropics/claude-code/issues/42386",
+              "https://github.com/anthropics/claude-code/issues/42376",
+              "https://github.com/anthropics/claude-code/issues/42372",
+              "https://github.com/anthropics/claude-code/issues/42365",
+              "https://github.com/anthropics/claude-code/issues/42357",
+              "https://github.com/anthropics/claude-code/issues/42351",
+              "https://github.com/anthropics/claude-code/issues/42348",
+              "https://github.com/anthropics/claude-code/issues/42341",
+              "https://github.com/anthropics/claude-code/issues/42313",
+              "https://github.com/anthropics/claude-code/issues/42311"
+            ],
+            "sample_titles": [
+              "Add --cwd flag support to CLI",
+              "Add XP progression and personality evolution to the buddy companion system based on user usage patterns",
+              "Add a flag to auto-accept the development channels confirmation dialog"
+            ],
+            "demand_score": 7.870482796856514,
+            "rising_score": 33,
+            "volume": 32,
+            "open_count": 24,
+            "closed_count": 8,
+            "avg_reactions": 0.2,
+            "avg_comments": 1.1,
+            "date_first_seen": "2026-04-02T00:15:23.000Z",
+            "date_last_seen": "2026-04-02T15:28:16.000Z",
+            "repos_affected": [
+              "anthropics/claude-code"
+            ]
+          },
+          {
+            "cluster_id": "bf70bbfbaece",
+            "title": "Plugin System Management and Reliability",
+            "summary": "Users want a more robust plugin system with proper installation, uninstallation, and update workflows. Key improvements include support for external plugin sources via remote URLs, better configuration for local development overrides, and fixes for plugin hook environment variables, marketplace validation, and skill resolution state after reloading.",
+            "category": "Developer Experience",
+            "representative_need": "Add a way to override managed plugins during local development",
+            "issue_numbers": [
+              42601,
+              42595,
+              42568,
+              42564,
+              42471,
+              42451,
+              42424,
+              42413,
+              42412,
+              42411,
+              42379,
+              42363
+            ],
+            "issue_urls": [
+              "https://github.com/anthropics/claude-code/issues/42601",
+              "https://github.com/anthropics/claude-code/issues/42595",
+              "https://github.com/anthropics/claude-code/issues/42568",
+              "https://github.com/anthropics/claude-code/issues/42564",
+              "https://github.com/anthropics/claude-code/issues/42471",
+              "https://github.com/anthropics/claude-code/issues/42451",
+              "https://github.com/anthropics/claude-code/issues/42424",
+              "https://github.com/anthropics/claude-code/issues/42413",
+              "https://github.com/anthropics/claude-code/issues/42412",
+              "https://github.com/anthropics/claude-code/issues/42411",
+              "https://github.com/anthropics/claude-code/issues/42379",
+              "https://github.com/anthropics/claude-code/issues/42363"
+            ],
+            "sample_titles": [
+              "Add a way to override managed plugins during local development",
+              "Add version column to /plugin list command output",
+              "Ensure CLAUDE_PLUGIN_ROOT environment variable is always set when invoking plugin hooks"
+            ],
+            "demand_score": 5.978379568419304,
+            "rising_score": 13,
+            "volume": 12,
+            "open_count": 12,
+            "closed_count": 0,
+            "avg_reactions": 0,
+            "avg_comments": 0.5,
+            "date_first_seen": "2026-04-02T03:33:50.000Z",
+            "date_last_seen": "2026-04-02T14:18:55.000Z",
+            "repos_affected": [
+              "anthropics/claude-code"
+            ]
+          },
+          {
+            "cluster_id": "1b7ea28720a9",
+            "title": "Bug Fixes and Feature Enhancements",
+            "summary": "Users are reporting various bugs and requesting improvements across multiple areas including error handling reliability, platform-specific fixes for Windows and Android, configuration flexibility, and UI/UX refinements. These issues range from critical problems like silent crashes and connection failures to minor but important enhancements like input focus behavior and navigation improvements.",
+            "category": "Developer Experience",
+            "representative_need": "Add ability to view logs and output for completed remote trigger runs in the web UI",
+            "issue_numbers": [
+              42635,
+              42631,
+              42623,
+              42615,
+              42610,
+              42588,
+              42582,
+              42575,
+              42569,
+              42562,
+              42543,
+              42539,
+              42536,
+              42512,
+              42510,
+              42507,
+              42496,
+              42494,
+              42493,
+              42492,
+              42490,
+              42480,
+              42398,
+              42397,
+              42371,
+              42364,
+              42353,
+              42339,
+              42326,
+              42320,
+              42303
+            ],
+            "issue_urls": [
+              "https://github.com/anthropics/claude-code/issues/42635",
+              "https://github.com/anthropics/claude-code/issues/42631",
+              "https://github.com/anthropics/claude-code/issues/42623",
+              "https://github.com/anthropics/claude-code/issues/42615",
+              "https://github.com/anthropics/claude-code/issues/42610",
+              "https://github.com/anthropics/claude-code/issues/42588",
+              "https://github.com/anthropics/claude-code/issues/42582",
+              "https://github.com/anthropics/claude-code/issues/42575",
+              "https://github.com/anthropics/claude-code/issues/42569",
+              "https://github.com/anthropics/claude-code/issues/42562",
+              "https://github.com/anthropics/claude-code/issues/42543",
+              "https://github.com/anthropics/claude-code/issues/42539",
+              "https://github.com/anthropics/claude-code/issues/42536",
+              "https://github.com/anthropics/claude-code/issues/42512",
+              "https://github.com/anthropics/claude-code/issues/42510",
+              "https://github.com/anthropics/claude-code/issues/42507",
+              "https://github.com/anthropics/claude-code/issues/42496",
+              "https://github.com/anthropics/claude-code/issues/42494",
+              "https://github.com/anthropics/claude-code/issues/42493",
+              "https://github.com/anthropics/claude-code/issues/42492",
+              "https://github.com/anthropics/claude-code/issues/42490",
+              "https://github.com/anthropics/claude-code/issues/42480",
+              "https://github.com/anthropics/claude-code/issues/42398",
+              "https://github.com/anthropics/claude-code/issues/42397",
+              "https://github.com/anthropics/claude-code/issues/42371",
+              "https://github.com/anthropics/claude-code/issues/42364",
+              "https://github.com/anthropics/claude-code/issues/42353",
+              "https://github.com/anthropics/claude-code/issues/42339",
+              "https://github.com/anthropics/claude-code/issues/42326",
+              "https://github.com/anthropics/claude-code/issues/42320",
+              "https://github.com/anthropics/claude-code/issues/42303"
+            ],
+            "sample_titles": [
+              "Add ability to view logs and output for completed remote trigger runs in the web UI",
+              "Add day-view navigation from trip/chat views with easy back button",
+              "Add encoding parameter to Read/Edit tools for handling non-UTF-8 encoded files"
+            ],
+            "demand_score": 5.565433073620723,
+            "rising_score": 32,
+            "volume": 31,
+            "open_count": 26,
+            "closed_count": 5,
+            "avg_reactions": 0.1,
+            "avg_comments": 1,
+            "date_first_seen": "2026-04-02T00:04:01.000Z",
+            "date_last_seen": "2026-04-02T15:25:00.000Z",
+            "repos_affected": [
+              "anthropics/claude-code"
+            ]
+          },
+          {
+            "cluster_id": "4046e9a662fb",
+            "title": "Expand Hook System Functionality and Fix Hook Behaviors",
+            "summary": "Users are requesting expanded hook capabilities including new lifecycle events (TeamCreated/TeamDeleted, companion reactions), improved configuration options for marketplace hooks and Plan Mode notifications, and bash syntax support. Additionally, several bugs need fixing where hooks fail to fire in specific scenarios like Desktop App tool execution and Agent-spawned teammates, plus documentation gaps around format-on-save behavior.",
+            "category": "Integration",
+            "representative_need": "Add TeamCreated and TeamDeleted hook events for Agent Teams lifecycle management",
+            "issue_numbers": [
+              42597,
+              42581,
+              42489,
+              42487,
+              42396,
+              42385,
+              42369,
+              42336,
+              42328,
+              42317
+            ],
+            "issue_urls": [
+              "https://github.com/anthropics/claude-code/issues/42597",
+              "https://github.com/anthropics/claude-code/issues/42581",
+              "https://github.com/anthropics/claude-code/issues/42489",
+              "https://github.com/anthropics/claude-code/issues/42487",
+              "https://github.com/anthropics/claude-code/issues/42396",
+              "https://github.com/anthropics/claude-code/issues/42385",
+              "https://github.com/anthropics/claude-code/issues/42369",
+              "https://github.com/anthropics/claude-code/issues/42336",
+              "https://github.com/anthropics/claude-code/issues/42328",
+              "https://github.com/anthropics/claude-code/issues/42317"
+            ],
+            "sample_titles": [
+              "Add TeamCreated and TeamDeleted hook events for Agent Teams lifecycle management",
+              "Add option to allow plugin hooks from trusted marketplaces when using allowManagedHooksOnly mode",
+              "Document format-on-save hook behavior for consecutive edits, including the v2.1.90 fix for File content has changed errors"
+            ],
+            "demand_score": 4.2304014575975595,
+            "rising_score": 11,
+            "volume": 10,
+            "open_count": 9,
+            "closed_count": 1,
+            "avg_reactions": 0.1,
+            "avg_comments": 0.8,
+            "date_first_seen": "2026-04-02T00:31:17.000Z",
+            "date_last_seen": "2026-04-02T14:09:21.000Z",
+            "repos_affected": [
+              "anthropics/claude-code"
+            ]
+          },
+          {
+            "cluster_id": "b63146616276",
+            "title": "Authentication and subscription reliability fixes",
+            "summary": "Users are experiencing multiple authentication and subscription verification issues across platforms, including broken auto-mode for Max subscribers, session handling failures on Windows/macOS, OAuth token invalidation problems for plugins, and platform-specific bugs with the MCP server and rate limit refresh. These issues prevent reliable authentication and subscription status detection across different environments.",
+            "category": "Developer Experience",
+            "representative_need": "Add remote control authentication support for enterprise plans using web sessions",
+            "issue_numbers": [
+              42608,
+              42605,
+              42603,
+              42576,
+              42530,
+              42529,
+              42430,
+              42359,
+              42342,
+              42319
+            ],
+            "issue_urls": [
+              "https://github.com/anthropics/claude-code/issues/42608",
+              "https://github.com/anthropics/claude-code/issues/42605",
+              "https://github.com/anthropics/claude-code/issues/42603",
+              "https://github.com/anthropics/claude-code/issues/42576",
+              "https://github.com/anthropics/claude-code/issues/42530",
+              "https://github.com/anthropics/claude-code/issues/42529",
+              "https://github.com/anthropics/claude-code/issues/42430",
+              "https://github.com/anthropics/claude-code/issues/42359",
+              "https://github.com/anthropics/claude-code/issues/42342",
+              "https://github.com/anthropics/claude-code/issues/42319"
+            ],
+            "sample_titles": [
+              "Add remote control authentication support for enterprise plans using web sessions",
+              "Add remote session management for Claude Code to allow users to view and revoke authenticated sessions across devices",
+              "Fix ERR_BAD_REQUEST error on startup so authorization menu appears"
+            ],
+            "demand_score": 4.152956572092531,
+            "rising_score": 11,
+            "volume": 10,
+            "open_count": 10,
+            "closed_count": 0,
+            "avg_reactions": 0.1,
+            "avg_comments": 1.2,
+            "date_first_seen": "2026-04-02T00:41:10.000Z",
+            "date_last_seen": "2026-04-02T14:37:33.000Z",
+            "repos_affected": [
+              "anthropics/claude-code"
+            ]
+          },
+          {
+            "cluster_id": "bb83213c5adf",
+            "title": "Permission System Reliability and Security Fixes",
+            "summary": "Users want fixes for multiple permission system issues including bypassPermissions mode edge cases on Windows, silent behavior degradation, and security vulnerabilities in shell command parsing. These include proper UNC path handling, complete prompt suppression when configured, strengthened security checks for subshells and quoting, and a more extensible JSON Schema-based permission rule system with clearer documentation.",
+            "category": "Security",
+            "representative_need": "Document that explicit user prohibitions override default allowed actions in auto mode",
+            "issue_numbers": [
+              42611,
+              42500,
+              42488,
+              42457,
+              42428,
+              42407,
+              42400,
+              42370,
+              42366,
+              42352,
+              42310
+            ],
+            "issue_urls": [
+              "https://github.com/anthropics/claude-code/issues/42611",
+              "https://github.com/anthropics/claude-code/issues/42500",
+              "https://github.com/anthropics/claude-code/issues/42488",
+              "https://github.com/anthropics/claude-code/issues/42457",
+              "https://github.com/anthropics/claude-code/issues/42428",
+              "https://github.com/anthropics/claude-code/issues/42407",
+              "https://github.com/anthropics/claude-code/issues/42400",
+              "https://github.com/anthropics/claude-code/issues/42370",
+              "https://github.com/anthropics/claude-code/issues/42366",
+              "https://github.com/anthropics/claude-code/issues/42352",
+              "https://github.com/anthropics/claude-code/issues/42310"
+            ],
+            "sample_titles": [
+              "Document that explicit user prohibitions override default allowed actions in auto mode",
+              "Fix --dangerously-skip-permissions to auto-approve file reads from ~/.claude/skills/ directory when copying into workspace",
+              "Fix brace expansion security check to respect shell quoting context"
+            ],
+            "demand_score": 3.981479547020078,
+            "rising_score": 12,
+            "volume": 11,
+            "open_count": 10,
+            "closed_count": 1,
+            "avg_reactions": 0,
+            "avg_comments": 0.7,
+            "date_first_seen": "2026-04-02T00:14:22.000Z",
+            "date_last_seen": "2026-04-02T14:42:23.000Z",
+            "repos_affected": [
+              "anthropics/claude-code"
+            ]
+          },
+          {
+            "cluster_id": "d9d599abf830",
+            "title": "Model Response Quality and Instruction Following",
+            "summary": "Users are experiencing significant quality degradation in AI model outputs, including hallucinations, incorrect tool selection (using Write instead of Edit causing silent data loss), and failures to accurately follow instructions. These issues undermine trust in the system, especially as degradation worsens with context compression or large contexts. Users need consistent, reliable output that matches the expected quality level.",
+            "category": "Reliability",
+            "representative_need": "Fix corrupted or nonsensical Traditional Chinese text generation",
+            "issue_numbers": [
+              42636,
+              42634,
+              42633,
+              42629,
+              42618,
+              42585,
+              42524,
+              42521,
+              42416,
+              42361,
+              42354
+            ],
+            "issue_urls": [
+              "https://github.com/anthropics/claude-code/issues/42636",
+              "https://github.com/anthropics/claude-code/issues/42634",
+              "https://github.com/anthropics/claude-code/issues/42633",
+              "https://github.com/anthropics/claude-code/issues/42629",
+              "https://github.com/anthropics/claude-code/issues/42618",
+              "https://github.com/anthropics/claude-code/issues/42585",
+              "https://github.com/anthropics/claude-code/issues/42524",
+              "https://github.com/anthropics/claude-code/issues/42521",
+              "https://github.com/anthropics/claude-code/issues/42416",
+              "https://github.com/anthropics/claude-code/issues/42361",
+              "https://github.com/anthropics/claude-code/issues/42354"
+            ],
+            "sample_titles": [
+              "Fix corrupted or nonsensical Traditional Chinese text generation",
+              "Fix degraded reasoning and execution quality within sessions",
+              "Fix instruction following so Claude accurately follows user requests without making incorrect assumptions or modifying unintended files"
+            ],
+            "demand_score": 3.79114621519625,
+            "rising_score": 12,
+            "volume": 11,
+            "open_count": 11,
+            "closed_count": 0,
+            "avg_reactions": 0.1,
+            "avg_comments": 0.8,
+            "date_first_seen": "2026-04-02T02:43:21.000Z",
+            "date_last_seen": "2026-04-02T15:26:14.000Z",
+            "repos_affected": [
+              "anthropics/claude-code"
+            ]
+          },
+          {
+            "cluster_id": "b0ddd8c87d89",
+            "title": "Background Agent Lifecycle and Reliability Management",
+            "summary": "Users need better control and visibility over background agents, including the ability to stop agents on demand, receive real-time completion notifications, and have automatic recovery mechanisms when agents stall or encounter issues like context exhaustion. These improvements would make long-running background agent sessions more reliable and easier to manage.",
+            "category": "Developer Experience",
+            "representative_need": "Add automatic continuation/resumption mechanism when Claude Code or Teammates stall or become unresponsive",
+            "issue_numbers": [
+              42621,
+              42545,
+              42541,
+              42514,
+              42497,
+              42431,
+              42391,
+              42333
+            ],
+            "issue_urls": [
+              "https://github.com/anthropics/claude-code/issues/42621",
+              "https://github.com/anthropics/claude-code/issues/42545",
+              "https://github.com/anthropics/claude-code/issues/42541",
+              "https://github.com/anthropics/claude-code/issues/42514",
+              "https://github.com/anthropics/claude-code/issues/42497",
+              "https://github.com/anthropics/claude-code/issues/42431",
+              "https://github.com/anthropics/claude-code/issues/42391",
+              "https://github.com/anthropics/claude-code/issues/42333"
+            ],
+            "sample_titles": [
+              "Add automatic continuation/resumption mechanism when Claude Code or Teammates stall or become unresponsive",
+              "Add pre-emptive context rotation to prevent context exhaustion in long-running agent sessions",
+              "Batch multiple pending background task completions into a single response instead of processing them individually"
+            ],
+            "demand_score": 3.6543702852176194,
+            "rising_score": 9,
+            "volume": 8,
+            "open_count": 6,
+            "closed_count": 2,
+            "avg_reactions": 0,
+            "avg_comments": 1.4,
+            "date_first_seen": "2026-04-02T01:33:19.000Z",
+            "date_last_seen": "2026-04-02T15:03:33.000Z",
+            "repos_affected": [
+              "anthropics/claude-code"
+            ]
+          },
+          {
+            "cluster_id": "e692247143c8",
+            "title": "Fix desktop app stability and reliability issues",
+            "summary": "Users are experiencing critical bugs in the desktop application including UI rendering failures, excessive latency, permission issues preventing project access, and silent failures from corrupted state. These issues undermine trust in the desktop client and need to be addressed to provide a reliable development experience.",
+            "category": "Reliability",
+            "representative_need": "Add animated mascot companion to desktop app",
+            "issue_numbers": [
+              42554,
+              42515,
+              42433,
+              42415,
+              42393,
+              42350
+            ],
+            "issue_urls": [
+              "https://github.com/anthropics/claude-code/issues/42554",
+              "https://github.com/anthropics/claude-code/issues/42515",
+              "https://github.com/anthropics/claude-code/issues/42433",
+              "https://github.com/anthropics/claude-code/issues/42415",
+              "https://github.com/anthropics/claude-code/issues/42393",
+              "https://github.com/anthropics/claude-code/issues/42350"
+            ],
+            "sample_titles": [
+              "Add animated mascot companion to desktop app",
+              "Fix Claude Code Desktop sandbox/permission issue preventing local project access",
+              "Fix SSH remote session UI rendering to display responses instead of resetting to blank"
+            ],
+            "demand_score": 3.4851981106315626,
+            "rising_score": 7,
+            "volume": 6,
+            "open_count": 6,
+            "closed_count": 0,
+            "avg_reactions": 0.2,
+            "avg_comments": 1.7,
+            "date_first_seen": "2026-04-02T02:17:25.000Z",
+            "date_last_seen": "2026-04-02T12:37:16.000Z",
+            "repos_affected": [
+              "anthropics/claude-code"
+            ]
+          },
+          {
+            "cluster_id": "34a4735e6144",
+            "title": "Fix Cowork VM workspace reliability issues on Windows",
+            "summary": "Users are experiencing multiple reliability issues with Cowork VM workspaces, including service startup failures, connection timeouts, session management problems, and virtualization detection failures on Windows. These issues span core functionality like FUSE cache coherency, rate limit state management, session deletion behavior, and guest kernel initialization that prevent consistent, reliable operation of virtual workspace environments.",
+            "category": "Reliability",
+            "representative_need": "Fix Cowork VM guest connection timeout on Windows ARM64 (Snapdragon) — Linux guest kernel never initializes after plan9 shares are added",
+            "issue_numbers": [
+              42614,
+              42591,
+              42578,
+              42557,
+              42520,
+              42511,
+              42495,
+              42401,
+              42381
+            ],
+            "issue_urls": [
+              "https://github.com/anthropics/claude-code/issues/42614",
+              "https://github.com/anthropics/claude-code/issues/42591",
+              "https://github.com/anthropics/claude-code/issues/42578",
+              "https://github.com/anthropics/claude-code/issues/42557",
+              "https://github.com/anthropics/claude-code/issues/42520",
+              "https://github.com/anthropics/claude-code/issues/42511",
+              "https://github.com/anthropics/claude-code/issues/42495",
+              "https://github.com/anthropics/claude-code/issues/42401",
+              "https://github.com/anthropics/claude-code/issues/42381"
+            ],
+            "sample_titles": [
+              "Fix Cowork VM guest connection timeout on Windows ARM64 (Snapdragon) — Linux guest kernel never initializes after plan9 shares are added",
+              "Fix Cowork virtualization detection failure on Windows 11 when Hyper-V and related features are properly enabled",
+              "Fix Delete Cowork VM Sessions to only delete session data, not projects, configurations, and other user data"
+            ],
+            "demand_score": 2.9921456933900794,
+            "rising_score": 10,
+            "volume": 9,
+            "open_count": 8,
+            "closed_count": 1,
+            "avg_reactions": 0,
+            "avg_comments": 1,
+            "date_first_seen": "2026-04-02T04:23:06.000Z",
+            "date_last_seen": "2026-04-02T14:49:24.000Z",
+            "repos_affected": [
+              "anthropics/claude-code"
+            ]
+          },
+          {
+            "cluster_id": "0ba9fccf83ee",
+            "title": "Configuration and Settings Management Improvements",
+            "summary": "Users want better control over Claude Code's configuration through settings.json and environment variables, including conversation retention, context compaction, companion customization, and model routing. Several issues address bugs where configuration changes aren't properly respected—like PATH environment variables, mode switching, and auto-compact settings—indicating inconsistent configuration application across the application.",
+            "category": "Configuration",
+            "representative_need": "Add configurable context compaction settings with model-aware thresholds and aggressiveness control for large context windows",
+            "issue_numbers": [
+              42625,
+              42619,
+              42602,
+              42590,
+              42566,
+              42561,
+              42555,
+              42513,
+              42506,
+              42476,
+              42449,
+              42405,
+              42394,
+              42360,
+              42335,
+              42334,
+              42321
+            ],
+            "issue_urls": [
+              "https://github.com/anthropics/claude-code/issues/42625",
+              "https://github.com/anthropics/claude-code/issues/42619",
+              "https://github.com/anthropics/claude-code/issues/42602",
+              "https://github.com/anthropics/claude-code/issues/42590",
+              "https://github.com/anthropics/claude-code/issues/42566",
+              "https://github.com/anthropics/claude-code/issues/42561",
+              "https://github.com/anthropics/claude-code/issues/42555",
+              "https://github.com/anthropics/claude-code/issues/42513",
+              "https://github.com/anthropics/claude-code/issues/42506",
+              "https://github.com/anthropics/claude-code/issues/42476",
+              "https://github.com/anthropics/claude-code/issues/42449",
+              "https://github.com/anthropics/claude-code/issues/42405",
+              "https://github.com/anthropics/claude-code/issues/42394",
+              "https://github.com/anthropics/claude-code/issues/42360",
+              "https://github.com/anthropics/claude-code/issues/42335",
+              "https://github.com/anthropics/claude-code/issues/42334",
+              "https://github.com/anthropics/claude-code/issues/42321"
+            ],
+            "sample_titles": [
+              "Add configurable context compaction settings with model-aware thresholds and aggressiveness control for large context windows",
+              "Add configurable context window indicator visibility threshold for VS Code chat view",
+              "Add configurable conversation history retention settings"
+            ],
+            "demand_score": 2.9311980282912673,
+            "rising_score": 18,
+            "volume": 17,
+            "open_count": 16,
+            "closed_count": 1,
+            "avg_reactions": 0.2,
+            "avg_comments": 1.4,
+            "date_first_seen": "2026-04-02T01:00:47.000Z",
+            "date_last_seen": "2026-04-02T15:12:13.000Z",
+            "repos_affected": [
+              "anthropics/claude-code"
+            ]
+          },
+          {
+            "cluster_id": "5f046175e42a",
+            "title": "Excessive API token consumption and tracking issues",
+            "summary": "Users are experiencing excessive token consumption across multiple scenarios including reading large files, simple interactions, and failing requests. They also report discrepancies between rate limit error messages and usage statistics, making it difficult to track actual resource consumption. These issues lead to unexpected costs and poor visibility into token usage patterns.",
+            "category": "Performance",
+            "representative_need": "Fix excessive API token consumption caused by failing requests",
+            "issue_numbers": [
+              42583,
+              42483,
+              42414,
+              42390
+            ],
+            "issue_urls": [
+              "https://github.com/anthropics/claude-code/issues/42583",
+              "https://github.com/anthropics/claude-code/issues/42483",
+              "https://github.com/anthropics/claude-code/issues/42414",
+              "https://github.com/anthropics/claude-code/issues/42390"
+            ],
+            "sample_titles": [
+              "Fix excessive API token consumption caused by failing requests",
+              "Fix rate limit and /usage synchronization discrepancy - usage stats show 0% while rate limit is triggered, and reset times don't match between error message and /usage command",
+              "Reduce excessive token consumption for simple interactions"
+            ],
+            "demand_score": 2.822976397991821,
+            "rising_score": 5,
+            "volume": 4,
+            "open_count": 3,
+            "closed_count": 1,
+            "avg_reactions": 0.8,
+            "avg_comments": 1.8,
+            "date_first_seen": "2026-04-02T04:50:25.000Z",
+            "date_last_seen": "2026-04-02T13:43:57.000Z",
+            "repos_affected": [
+              "anthropics/claude-code"
+            ]
+          },
+          {
+            "cluster_id": "8fed4ce9921d",
+            "title": "Companion visual customization and UI fixes",
+            "summary": "Users want improved visual customization options for their companion, including selectable avatar appearances with presets and custom images, as well as companion pet selection with multiple character options. Additionally, there is a bug where duplicate assistant message blocks appear during rapid message sending that needs to be fixed.",
+            "category": "UI/UX",
+            "representative_need": "Add customizable Companion avatar/appearance options with built-in presets and custom image support",
+            "issue_numbers": [
+              42586,
+              42472,
+              42331
+            ],
+            "issue_urls": [
+              "https://github.com/anthropics/claude-code/issues/42586",
+              "https://github.com/anthropics/claude-code/issues/42472",
+              "https://github.com/anthropics/claude-code/issues/42331"
+            ],
+            "sample_titles": [
+              "Add customizable Companion avatar/appearance options with built-in presets and custom image support",
+              "Add customizable companion pet selection with multiple character options",
+              "Fix duplicate assistant message blocks appearing in conversation view during rapid message sending"
+            ],
+            "demand_score": 2.3242957470617998,
+            "rising_score": 4,
+            "volume": 3,
+            "open_count": 3,
+            "closed_count": 0,
+            "avg_reactions": 0.3,
+            "avg_comments": 1,
+            "date_first_seen": "2026-04-02T01:26:47.000Z",
+            "date_last_seen": "2026-04-02T13:46:48.000Z",
+            "repos_affected": [
+              "anthropics/claude-code"
+            ]
+          },
+          {
+            "cluster_id": "be73eb45a825",
+            "title": "Resource Management and Memory Optimization",
+            "summary": "Users are experiencing crashes and excessive resource consumption during extended sessions. They want improved caching strategies to reduce token usage, automatic cleanup of temporary files, and configurable controls for context management to prevent memory issues while preserving session state.",
+            "category": "Performance",
+            "representative_need": "Add notification and user-configurable controls for silent context compaction mechanisms",
+            "issue_numbers": [
+              42620,
+              42592,
+              42542,
+              42443,
+              42388,
+              42338
+            ],
+            "issue_urls": [
+              "https://github.com/anthropics/claude-code/issues/42620",
+              "https://github.com/anthropics/claude-code/issues/42592",
+              "https://github.com/anthropics/claude-code/issues/42542",
+              "https://github.com/anthropics/claude-code/issues/42443",
+              "https://github.com/anthropics/claude-code/issues/42388",
+              "https://github.com/anthropics/claude-code/issues/42338"
+            ],
+            "sample_titles": [
+              "Add notification and user-configurable controls for silent context compaction mechanisms",
+              "Fix V8 OOM crash in desktop renderer during extended sessions",
+              "Fix excessive token consumption from re-reading chat history on every prompt instead of using cache"
+            ],
+            "demand_score": 2.2590914717066295,
+            "rising_score": 7,
+            "volume": 6,
+            "open_count": 5,
+            "closed_count": 1,
+            "avg_reactions": 1,
+            "avg_comments": 2.3,
+            "date_first_seen": "2026-04-02T01:50:40.000Z",
+            "date_last_seen": "2026-04-02T15:02:20.000Z",
+            "repos_affected": [
+              "anthropics/claude-code"
+            ]
+          },
+          {
+            "cluster_id": "f384a724be37",
+            "title": "VS Code extension improvements and editor UX fixes",
+            "summary": "Users are requesting various quality-of-life improvements for the VS Code extension, including better file path visibility in approval dialogs, local worktree/cloud mode toggles, hunk-level diff review, and clipboard support for references. Additionally, multiple UI/UX bugs are affecting the editor experience, such as timer accumulation on collapsible sections, editor focus jumping issues, temp file deletion problems, and session restoration failures after streaming. These changes aim to make the extension more reliable and aligned with modern IDE conventions like Cursor.",
+            "category": "Developer Experience",
+            "representative_need": "Add copy-to-clipboard command for at-mention references in VSCode extension",
+            "issue_numbers": [
+              42630,
+              42622,
+              42577,
+              42544,
+              42531,
+              42504,
+              42448,
+              42429,
+              42420,
+              42322
+            ],
+            "issue_urls": [
+              "https://github.com/anthropics/claude-code/issues/42630",
+              "https://github.com/anthropics/claude-code/issues/42622",
+              "https://github.com/anthropics/claude-code/issues/42577",
+              "https://github.com/anthropics/claude-code/issues/42544",
+              "https://github.com/anthropics/claude-code/issues/42531",
+              "https://github.com/anthropics/claude-code/issues/42504",
+              "https://github.com/anthropics/claude-code/issues/42448",
+              "https://github.com/anthropics/claude-code/issues/42429",
+              "https://github.com/anthropics/claude-code/issues/42420",
+              "https://github.com/anthropics/claude-code/issues/42322"
+            ],
+            "sample_titles": [
+              "Add copy-to-clipboard command for at-mention references in VSCode extension",
+              "Add hunk-level diff review with selective accept/reject/edit for VSCode extension",
+              "Add local worktree and cloud mode toggle options to VS Code extension similar to Cursor IDE"
+            ],
+            "demand_score": 2.1364690634565946,
+            "rising_score": 11,
+            "volume": 10,
+            "open_count": 10,
+            "closed_count": 0,
+            "avg_reactions": 0.1,
+            "avg_comments": 0.7,
+            "date_first_seen": "2026-04-02T01:01:54.000Z",
+            "date_last_seen": "2026-04-02T15:14:53.000Z",
+            "repos_affected": [
+              "anthropics/claude-code"
+            ]
+          },
+          {
+            "cluster_id": "482846b5a075",
+            "title": "API reliability and error handling improvements",
+            "summary": "Users are experiencing various API reliability issues including spurious rate limit errors, excessive API consumption from retry loops, and signature errors. They want improved client-side validation to prevent oversized data from reaching the API and more robust error handling to ensure stable, predictable API interactions.",
+            "category": "Reliability",
+            "representative_need": "Add client-side image downscaling to prevent oversized images from reaching the API and breaking session state",
+            "issue_numbers": [
+              42616,
+              42558,
+              42409,
+              42373
+            ],
+            "issue_urls": [
+              "https://github.com/anthropics/claude-code/issues/42616",
+              "https://github.com/anthropics/claude-code/issues/42558",
+              "https://github.com/anthropics/claude-code/issues/42409",
+              "https://github.com/anthropics/claude-code/issues/42373"
+            ],
+            "sample_titles": [
+              "Add client-side image downscaling to prevent oversized images from reaching the API and breaking session state",
+              "Fix Invalid signature error in thinking block when making API requests",
+              "Fix excessive API usage consumption caused by rapid retry loops or polling without backoff"
+            ],
+            "demand_score": 1.9935539818932235,
+            "rising_score": 5,
+            "volume": 4,
+            "open_count": 3,
+            "closed_count": 1,
+            "avg_reactions": 0,
+            "avg_comments": 2.5,
+            "date_first_seen": "2026-04-02T03:58:05.000Z",
+            "date_last_seen": "2026-04-02T14:51:42.000Z",
+            "repos_affected": [
+              "anthropics/claude-code"
+            ]
+          },
+          {
+            "cluster_id": "94d34ab7d229",
+            "title": "Fix IDE integration issues across platforms",
+            "summary": "These issues address bugs and improvements for cross-platform IDE integration, particularly in WSL and Windows environments. Users experience crashes, connection failures, and path format mismatches when using VS Code and JetBrains plugins across different platforms. A new setting for diff viewing in VS Code's side panel would also improve the development workflow.",
+            "category": "Integration",
+            "representative_need": "Add setting to open file edit diffs in VS Code side panel instead of main editor tabs",
+            "issue_numbers": [
+              42550,
+              42547,
+              42484,
+              42347
+            ],
+            "issue_urls": [
+              "https://github.com/anthropics/claude-code/issues/42550",
+              "https://github.com/anthropics/claude-code/issues/42547",
+              "https://github.com/anthropics/claude-code/issues/42484",
+              "https://github.com/anthropics/claude-code/issues/42347"
+            ],
+            "sample_titles": [
+              "Add setting to open file edit diffs in VS Code side panel instead of main editor tabs",
+              "Fix WebSocket connection dropping immediately in JetBrains plugin on Windows",
+              "Fix navigator global access that causes VS Code extension host crash on WSL2"
+            ],
+            "demand_score": 1.993221602035214,
+            "rising_score": 5,
+            "volume": 4,
+            "open_count": 3,
+            "closed_count": 1,
+            "avg_reactions": 0,
+            "avg_comments": 1,
+            "date_first_seen": "2026-04-02T02:00:07.000Z",
+            "date_last_seen": "2026-04-02T12:32:32.000Z",
+            "repos_affected": [
+              "anthropics/claude-code"
+            ]
+          },
+          {
+            "cluster_id": "59190dc502d7",
+            "title": "Improve Bash tool reliability and robustness",
+            "summary": "Users are reporting several reliability issues with the Bash tool including crashes when encountering certain redirects, orphaned background processes from unhandled termination signals, inconsistent approval persistence for compound commands, and unclear error messages for operations like disk space issues. They want the Bash tool to handle these edge cases gracefully without crashing and with clear user feedback.",
+            "category": "Reliability",
+            "representative_need": "Fix Bash tool crash when encountering 2>&1 redirects instead of proper error handling or approval prompt",
+            "issue_numbers": [
+              42563,
+              42532,
+              42461,
+              42324
+            ],
+            "issue_urls": [
+              "https://github.com/anthropics/claude-code/issues/42563",
+              "https://github.com/anthropics/claude-code/issues/42532",
+              "https://github.com/anthropics/claude-code/issues/42461",
+              "https://github.com/anthropics/claude-code/issues/42324"
+            ],
+            "sample_titles": [
+              "Fix Bash tool crash when encountering 2>&1 redirects instead of proper error handling or approval prompt",
+              "Fix approval persistence for compound Bash commands joined with &&",
+              "Improve error messaging when Bash tool operations fail due to insufficient /tmp disk space"
+            ],
+            "demand_score": 1.9927165490986254,
+            "rising_score": 5,
+            "volume": 4,
+            "open_count": 4,
+            "closed_count": 0,
+            "avg_reactions": 0,
+            "avg_comments": 1,
+            "date_first_seen": "2026-04-02T01:02:53.000Z",
+            "date_last_seen": "2026-04-02T13:10:44.000Z",
+            "repos_affected": [
+              "anthropics/claude-code"
+            ]
+          },
+          {
+            "cluster_id": "e06a42d0d91f",
+            "title": "Fix Read and Bash Tool Bugs",
+            "summary": "Users are experiencing multiple reliability issues with the Read and Bash tools that disrupt development workflows. These include file path handling failures with Unicode characters, environment PATH inheritance problems preventing Homebrew executable discovery, unexpected file reversion after test execution, and error handling that corrupts session state. Fixing these bugs will restore developer trust and ensure consistent tool behavior.",
+            "category": "Reliability",
+            "representative_need": "Fix Read tool to correctly handle file paths containing Unicode characters, specifically smart apostrophes (U+2019)",
+            "issue_numbers": [
+              42427,
+              42399,
+              42383,
+              42330
+            ],
+            "issue_urls": [
+              "https://github.com/anthropics/claude-code/issues/42427",
+              "https://github.com/anthropics/claude-code/issues/42399",
+              "https://github.com/anthropics/claude-code/issues/42383",
+              "https://github.com/anthropics/claude-code/issues/42330"
+            ],
+            "sample_titles": [
+              "Fix Read tool to correctly handle file paths containing Unicode characters, specifically smart apostrophes (U+2019)",
+              "Fix Read tool to inherit PATH from user environment to find Homebrew-installed executables",
+              "Fix silent file reversion after Bash execution of test runners"
+            ],
+            "demand_score": 1.7403328360219978,
+            "rising_score": 5,
+            "volume": 4,
+            "open_count": 4,
+            "closed_count": 0,
+            "avg_reactions": 0,
+            "avg_comments": 1.8,
+            "date_first_seen": "2026-04-02T01:23:11.000Z",
+            "date_last_seen": "2026-04-02T06:27:30.000Z",
+            "repos_affected": [
+              "anthropics/claude-code"
+            ]
+          },
+          {
+            "cluster_id": "1e82c37ff1c3",
+            "title": "StatusLine JSON Payload Improvements",
+            "summary": "These issues relate to improving the statusLine JSON payload functionality. Users want fixes for stale update notifications when resuming sessions post-upgrade, and want additional information like effort level exposed in the JSON payload. These enhancements improve the integration capabilities for developers using the tool programmatically.",
+            "category": "Developer Experience",
+            "representative_need": "Expose effort level in statusLine JSON payload",
+            "issue_numbers": [
+              42454,
+              42358
+            ],
+            "issue_urls": [
+              "https://github.com/anthropics/claude-code/issues/42454",
+              "https://github.com/anthropics/claude-code/issues/42358"
+            ],
+            "sample_titles": [
+              "Expose effort level in statusLine JSON payload",
+              "Fix stale update notification shown after resuming a session post-upgrade"
+            ],
+            "demand_score": 1.6582181371855782,
+            "rising_score": 3,
+            "volume": 2,
+            "open_count": 2,
+            "closed_count": 0,
+            "avg_reactions": 0.5,
+            "avg_comments": 1,
+            "date_first_seen": "2026-04-02T03:06:45.000Z",
+            "date_last_seen": "2026-04-02T07:40:21.000Z",
+            "repos_affected": [
+              "anthropics/claude-code"
+            ]
+          },
+          {
+            "cluster_id": "cff278fbaf8d",
+            "title": "Issues related to documentation",
+            "summary": "6 issues: Add PowerShell-specific permission-check documentation to explain security model, background job behavior, and parse-failure handling; Document the rate-limit options dialog that appears when users hit their usage limit; Document prompt cache behavior for resumed sessions with MCP servers, deferred tools, and custom agents",
+            "category": "Documentation",
+            "representative_need": "Add PowerShell-specific permission-check documentation to explain security model, background job behavior, and parse-failure handling",
+            "issue_numbers": [
+              42318,
+              42316,
+              42309,
+              42308,
+              42306,
+              42305
+            ],
+            "issue_urls": [
+              "https://github.com/anthropics/claude-code/issues/42318",
+              "https://github.com/anthropics/claude-code/issues/42316",
+              "https://github.com/anthropics/claude-code/issues/42309",
+              "https://github.com/anthropics/claude-code/issues/42308",
+              "https://github.com/anthropics/claude-code/issues/42306",
+              "https://github.com/anthropics/claude-code/issues/42305"
+            ],
+            "sample_titles": [
+              "Add PowerShell-specific permission-check documentation to explain security model, background job behavior, and parse-failure handling",
+              "Add documentation for /powerup slash command to built-in commands reference and interactive-mode page",
+              "Document CLAUDE_CODE_PLUGIN_KEEP_MARKETPLACE_ON_FAILURE environment variable"
+            ],
+            "demand_score": 1.654292077881579,
+            "rising_score": 7,
+            "volume": 6,
+            "open_count": 6,
+            "closed_count": 0,
+            "avg_reactions": 0.5,
+            "avg_comments": 0.2,
+            "date_first_seen": "2026-04-02T00:10:16.000Z",
+            "date_last_seen": "2026-04-02T00:31:18.000Z",
+            "repos_affected": [
+              "anthropics/claude-code"
+            ]
+          },
+          {
+            "cluster_id": "ba7eee2a0ffe",
+            "title": "Fix skills loading from nested subdirectories",
+            "summary": "Users want project-level skills to load correctly from nested .claude/skills/ subdirectories. Currently, skills in nested directories either fail to load or get registered twice, resulting in duplicate entries in the slash command autocomplete menu and a poor developer experience.",
+            "category": "Developer Experience",
+            "representative_need": "Fix project-level skills loading from nested .claude/skills/ subdirectories",
+            "issue_numbers": [
+              42573,
+              42384
+            ],
+            "issue_urls": [
+              "https://github.com/anthropics/claude-code/issues/42573",
+              "https://github.com/anthropics/claude-code/issues/42384"
+            ],
+            "sample_titles": [
+              "Fix project-level skills loading from nested .claude/skills/ subdirectories",
+              "Fix skills being registered/loaded twice, causing duplicate entries in the slash command autocomplete menu"
+            ],
+            "demand_score": 1.4948767276331403,
+            "rising_score": 3,
+            "volume": 2,
+            "open_count": 1,
+            "closed_count": 1,
+            "avg_reactions": 0,
+            "avg_comments": 1.5,
+            "date_first_seen": "2026-04-02T04:29:15.000Z",
+            "date_last_seen": "2026-04-02T13:25:14.000Z",
+            "repos_affected": [
+              "anthropics/claude-code"
+            ]
+          },
+          {
+            "cluster_id": "f5fb374d41b6",
+            "title": "Fix context window size handling for auto-compaction",
+            "summary": "Users need the system to properly respect actual model context window sizes instead of using hardcoded defaults for auto-compaction thresholds. Additionally, a regression has reduced context window capacity from 1M to 200K tokens, significantly impacting the ability to work with larger contexts. These issues affect functionality when using models with varying context window capabilities.",
+            "category": "Configuration",
+            "representative_need": "Fix auto-compaction threshold to calculate based on actual model context window size rather than a hardcoded default",
+            "issue_numbers": [
+              42375,
+              42325
+            ],
+            "issue_urls": [
+              "https://github.com/anthropics/claude-code/issues/42375",
+              "https://github.com/anthropics/claude-code/issues/42325"
+            ],
+            "sample_titles": [
+              "Fix auto-compaction threshold to calculate based on actual model context window size rather than a hardcoded default",
+              "Fix unexpected context window regression from 1M to 200K tokens"
+            ],
+            "demand_score": 1.2775357604488047,
+            "rising_score": 3,
+            "volume": 2,
+            "open_count": 1,
+            "closed_count": 1,
+            "avg_reactions": 0.5,
+            "avg_comments": 2,
+            "date_first_seen": "2026-04-02T01:05:21.000Z",
+            "date_last_seen": "2026-04-02T04:07:06.000Z",
+            "repos_affected": [
+              "anthropics/claude-code"
+            ]
+          },
+          {
+            "cluster_id": "fd56b8ba3786",
+            "title": "Improve operational reliability and validation safeguards",
+            "summary": "Users need the agent to reliably execute all agreed-upon steps in multi-step plans without silently dropping operations, and they want validation safeguards to prevent costly configuration errors with paid external APIs. Both issues address the need for the system to operate predictably and prevent errors that could result in unexpected costs or incomplete work.",
+            "category": "Reliability",
+            "representative_need": "Add validation safeguards for paid external API operations to prevent costly configuration errors",
+            "issue_numbers": [
+              42421,
+              42329
+            ],
+            "issue_urls": [
+              "https://github.com/anthropics/claude-code/issues/42421",
+              "https://github.com/anthropics/claude-code/issues/42329"
+            ],
+            "sample_titles": [
+              "Add validation safeguards for paid external API operations to prevent costly configuration errors",
+              "Fix agent silently dropping agreed-upon operational steps from multi-step plans"
+            ],
+            "demand_score": 1.2427466427186264,
+            "rising_score": 3,
+            "volume": 2,
+            "open_count": 2,
+            "closed_count": 0,
+            "avg_reactions": 0,
+            "avg_comments": 2.5,
+            "date_first_seen": "2026-04-02T01:19:15.000Z",
+            "date_last_seen": "2026-04-02T06:17:49.000Z",
+            "repos_affected": [
+              "anthropics/claude-code"
+            ]
+          },
+          {
+            "cluster_id": "f1a83e3f715c",
+            "title": "Improve installation and upgrade experience",
+            "summary": "Users want their customizations and environment configurations to persist through installation and upgrade processes. Specifically, they need the Windows installer to automatically configure PATH for .local\\bin and preserve buddy customizations across versions. This reduces friction when setting up or updating the tool.",
+            "category": "Developer Experience",
+            "representative_need": "Fix Windows installer to automatically add .local\\bin to user PATH after installation",
+            "issue_numbers": [
+              42377,
+              42337
+            ],
+            "issue_urls": [
+              "https://github.com/anthropics/claude-code/issues/42377",
+              "https://github.com/anthropics/claude-code/issues/42337"
+            ],
+            "sample_titles": [
+              "Fix Windows installer to automatically add .local\\bin to user PATH after installation",
+              "Preserve user buddy customization across installation and upgrade processes"
+            ],
+            "demand_score": 1.2422852122238366,
+            "rising_score": 3,
+            "volume": 2,
+            "open_count": 2,
+            "closed_count": 0,
+            "avg_reactions": 0.5,
+            "avg_comments": 1,
+            "date_first_seen": "2026-04-02T01:49:45.000Z",
+            "date_last_seen": "2026-04-02T04:11:47.000Z",
+            "repos_affected": [
+              "anthropics/claude-code"
+            ]
+          },
+          {
+            "cluster_id": "e010470671ec",
+            "title": "Enhanced git worktree and multi-repo support",
+            "summary": "Users want Claude Code to handle edge cases when working with git repositories more gracefully. This includes preserving valid characters like '/' in branch names when creating worktrees (while only sanitizing directory-unsafe characters), and loading configuration files like CLAUDE.md from target repositories during cross-repo operations. These improvements would make working with monorepos and complex git setups more reliable.",
+            "category": "Developer Experience",
+            "representative_need": "Load CLAUDE.md from target repos when modifying files across git repository boundaries",
+            "issue_numbers": [
+              42600,
+              42402
+            ],
+            "issue_urls": [
+              "https://github.com/anthropics/claude-code/issues/42600",
+              "https://github.com/anthropics/claude-code/issues/42402"
+            ],
+            "sample_titles": [
+              "Load CLAUDE.md from target repos when modifying files across git repository boundaries",
+              "Preserve '/' in branch names when creating worktrees (only sanitize directory names)"
+            ],
+            "demand_score": 0.9970058950390472,
+            "rising_score": 3,
+            "volume": 2,
+            "open_count": 1,
+            "closed_count": 1,
+            "avg_reactions": 0,
+            "avg_comments": 0.5,
+            "date_first_seen": "2026-04-02T05:25:56.000Z",
+            "date_last_seen": "2026-04-02T14:17:28.000Z",
+            "repos_affected": [
+              "anthropics/claude-code"
+            ]
+          },
+          {
+            "cluster_id": "0c8fb4e40c27",
+            "title": "Improve trust and safety mechanisms",
+            "summary": "Users want the application to handle trust and safety more intelligently. This includes restricting dangerous code execution from project-level settings, correctly parsing git commands with special syntax, and eliminating excessive confirmation prompts that create friction without meaningfully improving security.",
+            "category": "Security",
+            "representative_need": "Fix excessive trust confirmation prompts on every app launch",
+            "issue_numbers": [
+              42593,
+              42426,
+              42410
+            ],
+            "issue_urls": [
+              "https://github.com/anthropics/claude-code/issues/42593",
+              "https://github.com/anthropics/claude-code/issues/42426",
+              "https://github.com/anthropics/claude-code/issues/42410"
+            ],
+            "sample_titles": [
+              "Fix excessive trust confirmation prompts on every app launch",
+              "Fix permission checker to correctly detect git commands with heredoc/subshell syntax in commit messages",
+              "Restrict apiKeyHelper execution to user-level config or add explicit consent/warning to prevent arbitrary code execution from project-level settings"
+            ],
+            "demand_score": 0.9964729307625257,
+            "rising_score": 4,
+            "volume": 3,
+            "open_count": 3,
+            "closed_count": 0,
+            "avg_reactions": 0,
+            "avg_comments": 0.3,
+            "date_first_seen": "2026-04-02T05:48:42.000Z",
+            "date_last_seen": "2026-04-02T13:55:36.000Z",
+            "repos_affected": [
+              "anthropics/claude-code"
+            ]
+          },
+          {
+            "cluster_id": "a852ee509911",
+            "title": "Fix clipboard operations across environments and locales",
+            "summary": "Users are experiencing issues with clipboard functionality in terminal environments. One issue involves Korean text corruption during copy operations with the new renderer, while another relates to clipboard image pasting in WSL2 environments. These fixes aim to improve clipboard reliability across different system configurations and locales.",
+            "category": "Integration",
+            "representative_need": "Add WSL2 detection with PowerShell fallback for clipboard image pasting",
+            "issue_numbers": [
+              42482,
+              42440
+            ],
+            "issue_urls": [
+              "https://github.com/anthropics/claude-code/issues/42482",
+              "https://github.com/anthropics/claude-code/issues/42440"
+            ],
+            "sample_titles": [
+              "Add WSL2 detection with PowerShell fallback for clipboard image pasting",
+              "Fix Korean text corruption when copying with the new renderer enabled"
+            ],
+            "demand_score": 0.9961922409887882,
+            "rising_score": 3,
+            "volume": 2,
+            "open_count": 2,
+            "closed_count": 0,
+            "avg_reactions": 0,
+            "avg_comments": 1,
+            "date_first_seen": "2026-04-02T07:05:04.000Z",
+            "date_last_seen": "2026-04-02T09:08:32.000Z",
+            "repos_affected": [
+              "anthropics/claude-code"
+            ]
+          },
+          {
+            "cluster_id": "f40ee1fa149d",
+            "title": "Background process management and PATH preservation",
+            "summary": "Users want to run preview dev servers as background processes without spawning visible terminal windows on Windows, and ensure PATH environment variables are preserved when spawning child processes. This improves the development workflow by reducing window clutter and preventing tools from failing due to missing PATH configurations.",
+            "category": "Developer Experience",
+            "representative_need": "Preserve PATH environment variable in spawned processes to avoid breaking tools that look up executables via PATH",
+            "issue_numbers": [
+              42455,
+              42435
+            ],
+            "issue_urls": [
+              "https://github.com/anthropics/claude-code/issues/42455",
+              "https://github.com/anthropics/claude-code/issues/42435"
+            ],
+            "sample_titles": [
+              "Preserve PATH environment variable in spawned processes to avoid breaking tools that look up executables via PATH",
+              "Run preview dev server as background process without spawning visible terminal window on Windows"
+            ],
+            "demand_score": 0.9958156318964712,
+            "rising_score": 3,
+            "volume": 2,
+            "open_count": 2,
+            "closed_count": 0,
+            "avg_reactions": 0,
+            "avg_comments": 0.5,
+            "date_first_seen": "2026-04-02T06:49:37.000Z",
+            "date_last_seen": "2026-04-02T07:46:36.000Z",
+            "repos_affected": [
+              "anthropics/claude-code"
+            ]
+          },
+          {
+            "cluster_id": "68ba0c8e86d4",
+            "title": "Add internationalization and localization support",
+            "summary": "Users want the application to support multiple languages, both for the main UI text and for companion features like Buddy comments and Baublekin. This includes adding Russian language support and a general i18n framework to enable future language additions. This is important for non-English speaking users and broader international adoption.",
+            "category": "Configuration",
+            "representative_need": "Add Russian language support for Baublekin companion",
+            "issue_numbers": [
+              42439,
+              42403,
+              42346
+            ],
+            "issue_urls": [
+              "https://github.com/anthropics/claude-code/issues/42439",
+              "https://github.com/anthropics/claude-code/issues/42403",
+              "https://github.com/anthropics/claude-code/issues/42346"
+            ],
+            "sample_titles": [
+              "Add Russian language support for Baublekin companion",
+              "Add i18n/localization support for Claude Code UI text to support multiple languages",
+              "Add localization support for Buddy companion comments"
+            ],
+            "demand_score": 0.9946654561129332,
+            "rising_score": 4,
+            "volume": 3,
+            "open_count": 3,
+            "closed_count": 0,
+            "avg_reactions": 0,
+            "avg_comments": 0.3,
+            "date_first_seen": "2026-04-02T01:59:34.000Z",
+            "date_last_seen": "2026-04-02T07:00:53.000Z",
+            "repos_affected": [
+              "anthropics/claude-code"
+            ]
+          },
+          {
+            "cluster_id": "c41abcbd5f1b",
+            "title": "Improve keyboard bindings and input handling",
+            "summary": "Users want more flexible and reliable keyboard bindings across platforms, including configurable shortcuts, proper international keyboard support, correct custom binding override behavior, and improved keybinding file management. These improvements would enhance the developer experience for users who rely on keyboard-driven workflows.",
+            "category": "Developer Experience",
+            "representative_need": "Add keyboard shortcut to submit messages in Code mode on Android",
+            "issue_numbers": [
+              42567,
+              42533,
+              42523,
+              42503,
+              42450
+            ],
+            "issue_urls": [
+              "https://github.com/anthropics/claude-code/issues/42567",
+              "https://github.com/anthropics/claude-code/issues/42533",
+              "https://github.com/anthropics/claude-code/issues/42523",
+              "https://github.com/anthropics/claude-code/issues/42503",
+              "https://github.com/anthropics/claude-code/issues/42450"
+            ],
+            "sample_titles": [
+              "Add keyboard shortcut to submit messages in Code mode on Android",
+              "Fix /keybindings command to only write the keybindings.json file when user actually saves changes",
+              "Fix @-sign input handling on Nordic keyboard layouts using AltGr+2"
+            ],
+            "demand_score": 0,
+            "rising_score": 6,
+            "volume": 5,
+            "open_count": 5,
+            "closed_count": 0,
+            "avg_reactions": 0,
+            "avg_comments": 0,
+            "date_first_seen": "2026-04-02T07:33:09.000Z",
+            "date_last_seen": "2026-04-02T13:15:10.000Z",
+            "repos_affected": [
+              "anthropics/claude-code"
+            ]
+          }
+        ],
+        "category_breakdown": {
+          "Integration": 4,
+          "UI/UX": 2,
+          "Developer Experience": 12,
+          "Security": 2,
+          "Reliability": 7,
+          "Configuration": 3,
+          "Performance": 2,
+          "Documentation": 1
+        }
+      }
+    },
+    {
+      "repo": "openai/codex",
+      "slug": "openai-codex",
+      "displayName": "OpenAI Codex CLI",
+      "category": "AI Coding Assistant",
+      "generatedAt": "2026-04-03T09:51:03.177Z",
+      "totalIssuesAnalyzed": 29,
+      "totalIssuesIncluded": 28,
+      "totalClusters": 5,
+      "topNeed": {
+        "cluster_id": "734940976613",
+        "title": "Improve CLI Stability, Error Handling, and Graceful Recovery",
+        "summary": "Users want to resolve CLI instability issues including startup latency, infinite hangs, crashes, and unhandled network errors to ensure uninterrupted workflows. They also request improved error messaging, graceful timeouts, and session-level plugin reloading to minimize context drain and manual restarts. Addressing these pain points will deliver a more robust, predictable, and efficient command-line experience.",
+        "category": "Reliability",
+        "representative_need": "Cap and summarize oversized tool outputs to prevent excessive context growth and quota drain",
+        "issue_numbers": [
+          16675,
+          16671,
+          16664,
+          16657,
+          16655,
+          16653,
+          16652,
+          16650,
+          16649,
+          16647,
+          16639,
+          16637
+        ],
+        "issue_urls": [
+          "https://github.com/openai/codex/issues/16675",
+          "https://github.com/openai/codex/issues/16671",
+          "https://github.com/openai/codex/issues/16664",
+          "https://github.com/openai/codex/issues/16657",
+          "https://github.com/openai/codex/issues/16655",
+          "https://github.com/openai/codex/issues/16653",
+          "https://github.com/openai/codex/issues/16652",
+          "https://github.com/openai/codex/issues/16650",
+          "https://github.com/openai/codex/issues/16649",
+          "https://github.com/openai/codex/issues/16647",
+          "https://github.com/openai/codex/issues/16639",
+          "https://github.com/openai/codex/issues/16637"
+        ],
+        "sample_titles": [
+          "Cap and summarize oversized tool outputs to prevent excessive context growth and quota drain",
+          "Fix CLI indefinite hang and implement graceful timeout or error handling",
+          "Fix CLI repeating previous response instead of processing new input"
+        ],
+        "demand_score": 5.386279701569347,
+        "rising_score": 13,
+        "volume": 12,
+        "open_count": 3,
+        "closed_count": 9,
+        "avg_reactions": 0,
+        "avg_comments": 2.3,
+        "date_first_seen": "2026-04-03T00:32:44.000Z",
+        "date_last_seen": "2026-04-03T08:12:18.000Z",
+        "repos_affected": [
+          "openai/codex"
+        ]
+      },
+      "risingNeed": {
+        "cluster_id": "734940976613",
+        "title": "Improve CLI Stability, Error Handling, and Graceful Recovery",
+        "summary": "Users want to resolve CLI instability issues including startup latency, infinite hangs, crashes, and unhandled network errors to ensure uninterrupted workflows. They also request improved error messaging, graceful timeouts, and session-level plugin reloading to minimize context drain and manual restarts. Addressing these pain points will deliver a more robust, predictable, and efficient command-line experience.",
+        "category": "Reliability",
+        "representative_need": "Cap and summarize oversized tool outputs to prevent excessive context growth and quota drain",
+        "issue_numbers": [
+          16675,
+          16671,
+          16664,
+          16657,
+          16655,
+          16653,
+          16652,
+          16650,
+          16649,
+          16647,
+          16639,
+          16637
+        ],
+        "issue_urls": [
+          "https://github.com/openai/codex/issues/16675",
+          "https://github.com/openai/codex/issues/16671",
+          "https://github.com/openai/codex/issues/16664",
+          "https://github.com/openai/codex/issues/16657",
+          "https://github.com/openai/codex/issues/16655",
+          "https://github.com/openai/codex/issues/16653",
+          "https://github.com/openai/codex/issues/16652",
+          "https://github.com/openai/codex/issues/16650",
+          "https://github.com/openai/codex/issues/16649",
+          "https://github.com/openai/codex/issues/16647",
+          "https://github.com/openai/codex/issues/16639",
+          "https://github.com/openai/codex/issues/16637"
+        ],
+        "sample_titles": [
+          "Cap and summarize oversized tool outputs to prevent excessive context growth and quota drain",
+          "Fix CLI indefinite hang and implement graceful timeout or error handling",
+          "Fix CLI repeating previous response instead of processing new input"
+        ],
+        "demand_score": 5.386279701569347,
+        "rising_score": 13,
+        "volume": 12,
+        "open_count": 3,
+        "closed_count": 9,
+        "avg_reactions": 0,
+        "avg_comments": 2.3,
+        "date_first_seen": "2026-04-03T00:32:44.000Z",
+        "date_last_seen": "2026-04-03T08:12:18.000Z",
+        "repos_affected": [
+          "openai/codex"
+        ]
+      },
+      "dominantCategory": "Reliability",
+      "reportPaths": {
+        "en": "reports/latest/openai-codex.md",
+        "zh": "reports/latest/openai-codex.zh.md"
+      },
+      "aggregation": {
+        "repo": "openai/codex",
+        "display_name": "OpenAI Codex CLI",
+        "generated_at": "2026-04-03T09:51:03.177Z",
+        "window_start": "2026-03-04T09:51:03.177Z",
+        "window_end": "2026-04-03T09:51:03.177Z",
+        "total_issues_analyzed": 29,
+        "total_issues_included": 28,
+        "clusters": [
+          {
+            "cluster_id": "734940976613",
+            "title": "Improve CLI Stability, Error Handling, and Graceful Recovery",
+            "summary": "Users want to resolve CLI instability issues including startup latency, infinite hangs, crashes, and unhandled network errors to ensure uninterrupted workflows. They also request improved error messaging, graceful timeouts, and session-level plugin reloading to minimize context drain and manual restarts. Addressing these pain points will deliver a more robust, predictable, and efficient command-line experience.",
+            "category": "Reliability",
+            "representative_need": "Cap and summarize oversized tool outputs to prevent excessive context growth and quota drain",
+            "issue_numbers": [
+              16675,
+              16671,
+              16664,
+              16657,
+              16655,
+              16653,
+              16652,
+              16650,
+              16649,
+              16647,
+              16639,
+              16637
+            ],
+            "issue_urls": [
+              "https://github.com/openai/codex/issues/16675",
+              "https://github.com/openai/codex/issues/16671",
+              "https://github.com/openai/codex/issues/16664",
+              "https://github.com/openai/codex/issues/16657",
+              "https://github.com/openai/codex/issues/16655",
+              "https://github.com/openai/codex/issues/16653",
+              "https://github.com/openai/codex/issues/16652",
+              "https://github.com/openai/codex/issues/16650",
+              "https://github.com/openai/codex/issues/16649",
+              "https://github.com/openai/codex/issues/16647",
+              "https://github.com/openai/codex/issues/16639",
+              "https://github.com/openai/codex/issues/16637"
+            ],
+            "sample_titles": [
+              "Cap and summarize oversized tool outputs to prevent excessive context growth and quota drain",
+              "Fix CLI indefinite hang and implement graceful timeout or error handling",
+              "Fix CLI repeating previous response instead of processing new input"
+            ],
+            "demand_score": 5.386279701569347,
+            "rising_score": 13,
+            "volume": 12,
+            "open_count": 3,
+            "closed_count": 9,
+            "avg_reactions": 0,
+            "avg_comments": 2.3,
+            "date_first_seen": "2026-04-03T00:32:44.000Z",
+            "date_last_seen": "2026-04-03T08:12:18.000Z",
+            "repos_affected": [
+              "openai/codex"
+            ]
+          },
+          {
+            "cluster_id": "1cc7a07fac81",
+            "title": "Enhance Core Stability, State Management, and Execution Reliability",
+            "summary": "Users are requesting critical fixes for resource leaks, session data loss, platform-specific execution failures, and inaccurate usage tracking, alongside enhancements for conversation search and desktop automation. They require robust API retry logic and proper path resolution to ensure consistent, uninterrupted agent operation. Addressing these issues will prevent disruptive crashes and significantly improve the platform's overall reliability.",
+            "category": "Reliability",
+            "representative_need": "Add native computer use tools for desktop GUI automation",
+            "issue_numbers": [
+              16672,
+              16666,
+              16660,
+              16654,
+              16644,
+              16643,
+              16642,
+              16636
+            ],
+            "issue_urls": [
+              "https://github.com/openai/codex/issues/16672",
+              "https://github.com/openai/codex/issues/16666",
+              "https://github.com/openai/codex/issues/16660",
+              "https://github.com/openai/codex/issues/16654",
+              "https://github.com/openai/codex/issues/16644",
+              "https://github.com/openai/codex/issues/16643",
+              "https://github.com/openai/codex/issues/16642",
+              "https://github.com/openai/codex/issues/16636"
+            ],
+            "sample_titles": [
+              "Add native computer use tools for desktop GUI automation",
+              "Fix inaccurate tracking and consumption of the daily usage limit quota",
+              "Fix intermittent Windows sandbox refresh failures blocking apply_patch execution"
+            ],
+            "demand_score": 3.739662927599286,
+            "rising_score": 9,
+            "volume": 8,
+            "open_count": 4,
+            "closed_count": 4,
+            "avg_reactions": 0,
+            "avg_comments": 1.9,
+            "date_first_seen": "2026-04-03T00:26:23.000Z",
+            "date_last_seen": "2026-04-03T07:57:01.000Z",
+            "repos_affected": [
+              "openai/codex"
+            ]
+          },
+          {
+            "cluster_id": "865df44e0970",
+            "title": "Fix UI Layout Overlaps and Content Rendering Bugs",
+            "summary": "Users are reporting multiple interface display issues, including overlapping search controls, missing thread titles, and broken plugin metadata rendering. Addressing these visual inconsistencies will improve the overall polish, readability, and usability of the application.",
+            "category": "UI/UX",
+            "representative_need": "Fix UI containment and metadata rendering for local plugin skills",
+            "issue_numbers": [
+              16678,
+              16673,
+              16663
+            ],
+            "issue_urls": [
+              "https://github.com/openai/codex/issues/16678",
+              "https://github.com/openai/codex/issues/16673",
+              "https://github.com/openai/codex/issues/16663"
+            ],
+            "sample_titles": [
+              "Fix UI containment and metadata rendering for local plugin skills",
+              "Fix in-app search bar UI overlap with native window controls",
+              "Preserve and display custom thread titles in archived thread lists"
+            ],
+            "demand_score": 2.9974135704267892,
+            "rising_score": 4,
+            "volume": 3,
+            "open_count": 2,
+            "closed_count": 1,
+            "avg_reactions": 0,
+            "avg_comments": 1,
+            "date_first_seen": "2026-04-03T06:34:43.000Z",
+            "date_last_seen": "2026-04-03T09:25:20.000Z",
+            "repos_affected": [
+              "openai/codex"
+            ]
+          },
+          {
+            "cluster_id": "a8fdd2281218",
+            "title": "Cross-platform application stability and interface customization",
+            "summary": "Users are encountering critical execution blocks, launch freezes, and rigid layout constraints across Windows and macOS environments. They need reliable bundled tool execution, stable startup processes, and adjustable chat widths to ensure a smooth and adaptable user experience.",
+            "category": "Platform Support",
+            "representative_need": "Fix bundled ripgrep (rg.exe) execution on Windows due to folder permission restrictions",
+            "issue_numbers": [
+              16676,
+              16669,
+              16651
+            ],
+            "issue_urls": [
+              "https://github.com/openai/codex/issues/16676",
+              "https://github.com/openai/codex/issues/16669",
+              "https://github.com/openai/codex/issues/16651"
+            ],
+            "sample_titles": [
+              "Fix bundled ripgrep (rg.exe) execution on Windows due to folder permission restrictions",
+              "Fix system-wide process hangs and terminal freezes during macOS app launch",
+              "Support adjustable chat content width in the app UI"
+            ],
+            "demand_score": 1.9969312180885535,
+            "rising_score": 4,
+            "volume": 3,
+            "open_count": 2,
+            "closed_count": 1,
+            "avg_reactions": 0,
+            "avg_comments": 0.7,
+            "date_first_seen": "2026-04-03T03:46:38.000Z",
+            "date_last_seen": "2026-04-03T08:14:09.000Z",
+            "repos_affected": [
+              "openai/codex"
+            ]
+          },
+          {
+            "cluster_id": "0249ca2b5d88",
+            "title": "Fix expiration handling and thread pagination display issues",
+            "summary": "Users are requesting fixes for how promotional tips expire and how threads are paginated and sorted. Addressing these bugs will prevent outdated content from persisting and ensure all relevant sessions are accurately displayed without silent omissions.",
+            "category": "UI/UX",
+            "representative_need": "Fix expiration handling for TUI promotional tips",
+            "issue_numbers": [
+              16677,
+              16645
+            ],
+            "issue_urls": [
+              "https://github.com/openai/codex/issues/16677",
+              "https://github.com/openai/codex/issues/16645"
+            ],
+            "sample_titles": [
+              "Fix expiration handling for TUI promotional tips",
+              "Fix thread pagination to prevent silent session omission when sorting by UpdatedAt"
+            ],
+            "demand_score": 0.9981692172713927,
+            "rising_score": 3,
+            "volume": 2,
+            "open_count": 1,
+            "closed_count": 1,
+            "avg_reactions": 0,
+            "avg_comments": 4,
+            "date_first_seen": "2026-04-03T02:27:38.000Z",
+            "date_last_seen": "2026-04-03T09:22:05.000Z",
+            "repos_affected": [
+              "openai/codex"
+            ]
+          }
+        ],
+        "category_breakdown": {
+          "Reliability": 2,
+          "UI/UX": 2,
+          "Platform Support": 1
+        }
+      }
+    }
+  ],
+  "hottestSignals": [
+    {
+      "repo": "anthropics/claude-code",
+      "slug": "anthropics-claude-code",
+      "productName": "Claude Code",
+      "title": "MCP Server Reliability and Configuration Issues",
+      "category": "Integration",
+      "demandScore": 15.439897948594005,
+      "risingScore": 34,
+      "volume": 33,
+      "reportPath": "reports/latest/anthropics-claude-code.md"
+    },
+    {
+      "repo": "anthropics/claude-code",
+      "slug": "anthropics-claude-code",
+      "productName": "Claude Code",
+      "title": "TUI Terminal State and Input Handling Fixes",
+      "category": "UI/UX",
+      "demandScore": 13.843334771783027,
+      "risingScore": 52,
+      "volume": 51,
+      "reportPath": "reports/latest/anthropics-claude-code.md"
+    },
+    {
+      "repo": "anthropics/claude-code",
+      "slug": "anthropics-claude-code",
+      "productName": "Claude Code",
+      "title": "CLI Session Management and UX Improvements",
+      "category": "Developer Experience",
+      "demandScore": 7.870482796856514,
+      "risingScore": 33,
+      "volume": 32,
+      "reportPath": "reports/latest/anthropics-claude-code.md"
+    },
+    {
+      "repo": "openai/codex",
+      "slug": "openai-codex",
+      "productName": "OpenAI Codex CLI",
+      "title": "Improve CLI Stability, Error Handling, and Graceful Recovery",
+      "category": "Reliability",
+      "demandScore": 5.386279701569347,
+      "risingScore": 13,
+      "volume": 12,
+      "reportPath": "reports/latest/openai-codex.md"
+    },
+    {
+      "repo": "openai/codex",
+      "slug": "openai-codex",
+      "productName": "OpenAI Codex CLI",
+      "title": "Enhance Core Stability, State Management, and Execution Reliability",
+      "category": "Reliability",
+      "demandScore": 3.739662927599286,
+      "risingScore": 9,
+      "volume": 8,
+      "reportPath": "reports/latest/openai-codex.md"
+    },
+    {
+      "repo": "openai/codex",
+      "slug": "openai-codex",
+      "productName": "OpenAI Codex CLI",
+      "title": "Fix UI Layout Overlaps and Content Rendering Bugs",
+      "category": "UI/UX",
+      "demandScore": 2.9974135704267892,
+      "risingScore": 4,
+      "volume": 3,
+      "reportPath": "reports/latest/openai-codex.md"
+    }
+  ],
+  "sharedThemes": [
+    "reliability",
+    "ui/ux"
+  ],
+  "uniqueThemes": {
+    "anthropics-claude-code": [
+      "configuration",
+      "developer experience",
+      "documentation",
+      "integration",
+      "performance",
+      "security"
+    ],
+    "openai-codex": [
+      "platform support"
+    ]
+  }
+}

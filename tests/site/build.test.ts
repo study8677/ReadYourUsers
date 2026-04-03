@@ -232,6 +232,70 @@ describe("site build", () => {
     expect(productHtml).toContain("../../en/latest/anthropics-claude-code.html");
   });
 
+
+
+
+
+  it("escapes compare intro copy product names", async () => {
+    const root = createWorkspace(true);
+    const injectedName = 'Codex <img src=x onerror="alert(1)">';
+    const injectedSummary = {
+      ...summary,
+      products: summary.products.map((product) =>
+        product.slug === "openai-codex"
+          ? { ...product, displayName: injectedName }
+          : product
+      ),
+      hottestSignals: summary.hottestSignals.map((signal) =>
+        signal.slug === "openai-codex"
+          ? { ...signal, productName: injectedName }
+          : signal
+      ),
+    };
+
+    writeJson(resolve(root, "reports", "latest", "cross-product.json"), injectedSummary);
+
+    const { buildSite } = await import("../../src/site/build.js");
+    buildSite(root);
+
+    const compareHtml = readFileSync(
+      resolve(root, "site", "en", "compare", "index.html"),
+      "utf-8"
+    );
+
+    expect(compareHtml).toContain('See where Codex &lt;img src=x onerror=&quot;alert(1)&quot;&gt; and Claude Code users overlap and diverge this week.');
+    expect(compareHtml).not.toContain('<img src=x onerror="alert(1)"> users overlap and diverge this week.');
+  });
+
+  it("does not name missing configured products in compare copy", async () => {
+    const root = createWorkspace(true);
+
+    writeJson(resolve(root, "config", "repos.json"), {
+      repos: [
+        ...configs,
+        {
+          repo: "getcursor/cursor",
+          display_name: "Cursor",
+          category: "AI Code Editor",
+          include_in_homepage: true,
+          weight: 0.8,
+        },
+      ],
+    });
+
+    const { buildSite } = await import("../../src/site/build.js");
+    buildSite(root);
+
+    const compareHtml = readFileSync(
+      resolve(root, "site", "en", "compare", "index.html"),
+      "utf-8"
+    );
+
+    expect(compareHtml).toContain("OpenAI Codex CLI");
+    expect(compareHtml).toContain("Claude Code");
+    expect(compareHtml).not.toContain("Cursor users overlap and diverge this week.");
+  });
+
   it("keeps the build working when cross-product summary data is missing", async () => {
     const root = createWorkspace(false);
 

@@ -1,5 +1,5 @@
 import { loadRepoConfigs } from "../config/repos.js";
-import { generateReports } from "../pipeline/generator.js";
+import { generateReports, MissingAggregatedDataError } from "../pipeline/generator.js";
 import { logger } from "../utils/logger.js";
 
 interface GenerateCommandOptions {
@@ -34,6 +34,13 @@ export async function generateCommand(
         readmeUpdated: result.readmeUpdated,
       });
     } catch (error) {
+      if (!repo && error instanceof MissingAggregatedDataError) {
+        logger.warn(`Skipping ${r}: aggregated data is missing`, {
+          error: error.message,
+        });
+        continue;
+      }
+
       logger.error(`Failed to generate reports for ${r}`, {
         error: error instanceof Error ? error.message : String(error),
       });
