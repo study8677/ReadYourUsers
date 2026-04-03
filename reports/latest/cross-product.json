@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-03T14:05:32.072Z",
+  "generatedAt": "2026-04-03T18:11:20.144Z",
   "products": [
     {
       "repo": "anthropics/claude-code",
@@ -4589,6 +4589,443 @@
       }
     },
     {
+      "repo": "zed-industries/zed",
+      "slug": "zed-industries-zed",
+      "displayName": "Zed",
+      "category": "AI Code Editor",
+      "generatedAt": "2026-04-03T18:11:20.144Z",
+      "totalIssuesAnalyzed": 37,
+      "totalIssuesIncluded": 37,
+      "totalClusters": 8,
+      "topNeed": {
+        "cluster_id": "eec28e4ffff9",
+        "title": "Bug Fixes and Edge Case Improvements",
+        "summary": "This cluster addresses various bug fixes across the editor including Docker Compose integration issues (port and label deserialization), platform-specific problems (Flatpak Rust toolchain, Windows UNC paths), UI state persistence (settings, themes), AI agent integration (authentication, auto-approval mode), and developer tooling (syntax highlighting, Python LSP, CI testing). Users are experiencing broken functionality in these edge cases that impact their daily workflow.",
+        "category": "Developer Experience",
+        "representative_need": "Add selective crate testing based on dependency graph analysis to CI pipeline",
+        "issue_numbers": [
+          53087,
+          53081,
+          53059,
+          53055,
+          53054,
+          53048,
+          53042,
+          53027,
+          53025,
+          53011,
+          53007,
+          53000,
+          52984
+        ],
+        "issue_urls": [
+          "https://github.com/zed-industries/zed/issues/53087",
+          "https://github.com/zed-industries/zed/issues/53081",
+          "https://github.com/zed-industries/zed/issues/53059",
+          "https://github.com/zed-industries/zed/issues/53055",
+          "https://github.com/zed-industries/zed/issues/53054",
+          "https://github.com/zed-industries/zed/issues/53048",
+          "https://github.com/zed-industries/zed/issues/53042",
+          "https://github.com/zed-industries/zed/issues/53027",
+          "https://github.com/zed-industries/zed/issues/53025",
+          "https://github.com/zed-industries/zed/issues/53011",
+          "https://github.com/zed-industries/zed/issues/53007",
+          "https://github.com/zed-industries/zed/issues/53000",
+          "https://github.com/zed-industries/zed/issues/52984"
+        ],
+        "sample_titles": [
+          "Add selective crate testing based on dependency graph analysis to CI pipeline",
+          "Fix Docker Compose labels deserialization to handle map format from docker compose config output",
+          "Fix Python LSP not detecting newly added module attributes without requiring LSP restart"
+        ],
+        "demand_score": 3.5739615287244333,
+        "rising_score": 14,
+        "volume": 13,
+        "open_count": 9,
+        "closed_count": 4,
+        "avg_reactions": 0,
+        "avg_comments": 1.4,
+        "date_first_seen": "2026-04-02T11:19:55.000Z",
+        "date_last_seen": "2026-04-03T17:39:41.000Z",
+        "repos_affected": [
+          "zed-industries/zed"
+        ]
+      },
+      "risingNeed": {
+        "cluster_id": "eec28e4ffff9",
+        "title": "Bug Fixes and Edge Case Improvements",
+        "summary": "This cluster addresses various bug fixes across the editor including Docker Compose integration issues (port and label deserialization), platform-specific problems (Flatpak Rust toolchain, Windows UNC paths), UI state persistence (settings, themes), AI agent integration (authentication, auto-approval mode), and developer tooling (syntax highlighting, Python LSP, CI testing). Users are experiencing broken functionality in these edge cases that impact their daily workflow.",
+        "category": "Developer Experience",
+        "representative_need": "Add selective crate testing based on dependency graph analysis to CI pipeline",
+        "issue_numbers": [
+          53087,
+          53081,
+          53059,
+          53055,
+          53054,
+          53048,
+          53042,
+          53027,
+          53025,
+          53011,
+          53007,
+          53000,
+          52984
+        ],
+        "issue_urls": [
+          "https://github.com/zed-industries/zed/issues/53087",
+          "https://github.com/zed-industries/zed/issues/53081",
+          "https://github.com/zed-industries/zed/issues/53059",
+          "https://github.com/zed-industries/zed/issues/53055",
+          "https://github.com/zed-industries/zed/issues/53054",
+          "https://github.com/zed-industries/zed/issues/53048",
+          "https://github.com/zed-industries/zed/issues/53042",
+          "https://github.com/zed-industries/zed/issues/53027",
+          "https://github.com/zed-industries/zed/issues/53025",
+          "https://github.com/zed-industries/zed/issues/53011",
+          "https://github.com/zed-industries/zed/issues/53007",
+          "https://github.com/zed-industries/zed/issues/53000",
+          "https://github.com/zed-industries/zed/issues/52984"
+        ],
+        "sample_titles": [
+          "Add selective crate testing based on dependency graph analysis to CI pipeline",
+          "Fix Docker Compose labels deserialization to handle map format from docker compose config output",
+          "Fix Python LSP not detecting newly added module attributes without requiring LSP restart"
+        ],
+        "demand_score": 3.5739615287244333,
+        "rising_score": 14,
+        "volume": 13,
+        "open_count": 9,
+        "closed_count": 4,
+        "avg_reactions": 0,
+        "avg_comments": 1.4,
+        "date_first_seen": "2026-04-02T11:19:55.000Z",
+        "date_last_seen": "2026-04-03T17:39:41.000Z",
+        "repos_affected": [
+          "zed-industries/zed"
+        ]
+      },
+      "dominantCategory": "Developer Experience",
+      "reportPaths": {
+        "en": "reports/latest/zed-industries-zed.md",
+        "zh": "reports/latest/zed-industries-zed.zh.md"
+      },
+      "aggregation": {
+        "repo": "zed-industries/zed",
+        "display_name": "Zed",
+        "generated_at": "2026-04-03T18:11:20.144Z",
+        "window_start": "2026-03-04T18:11:20.144Z",
+        "window_end": "2026-04-03T18:11:20.144Z",
+        "total_issues_analyzed": 37,
+        "total_issues_included": 37,
+        "clusters": [
+          {
+            "cluster_id": "eec28e4ffff9",
+            "title": "Bug Fixes and Edge Case Improvements",
+            "summary": "This cluster addresses various bug fixes across the editor including Docker Compose integration issues (port and label deserialization), platform-specific problems (Flatpak Rust toolchain, Windows UNC paths), UI state persistence (settings, themes), AI agent integration (authentication, auto-approval mode), and developer tooling (syntax highlighting, Python LSP, CI testing). Users are experiencing broken functionality in these edge cases that impact their daily workflow.",
+            "category": "Developer Experience",
+            "representative_need": "Add selective crate testing based on dependency graph analysis to CI pipeline",
+            "issue_numbers": [
+              53087,
+              53081,
+              53059,
+              53055,
+              53054,
+              53048,
+              53042,
+              53027,
+              53025,
+              53011,
+              53007,
+              53000,
+              52984
+            ],
+            "issue_urls": [
+              "https://github.com/zed-industries/zed/issues/53087",
+              "https://github.com/zed-industries/zed/issues/53081",
+              "https://github.com/zed-industries/zed/issues/53059",
+              "https://github.com/zed-industries/zed/issues/53055",
+              "https://github.com/zed-industries/zed/issues/53054",
+              "https://github.com/zed-industries/zed/issues/53048",
+              "https://github.com/zed-industries/zed/issues/53042",
+              "https://github.com/zed-industries/zed/issues/53027",
+              "https://github.com/zed-industries/zed/issues/53025",
+              "https://github.com/zed-industries/zed/issues/53011",
+              "https://github.com/zed-industries/zed/issues/53007",
+              "https://github.com/zed-industries/zed/issues/53000",
+              "https://github.com/zed-industries/zed/issues/52984"
+            ],
+            "sample_titles": [
+              "Add selective crate testing based on dependency graph analysis to CI pipeline",
+              "Fix Docker Compose labels deserialization to handle map format from docker compose config output",
+              "Fix Python LSP not detecting newly added module attributes without requiring LSP restart"
+            ],
+            "demand_score": 3.5739615287244333,
+            "rising_score": 14,
+            "volume": 13,
+            "open_count": 9,
+            "closed_count": 4,
+            "avg_reactions": 0,
+            "avg_comments": 1.4,
+            "date_first_seen": "2026-04-02T11:19:55.000Z",
+            "date_last_seen": "2026-04-03T17:39:41.000Z",
+            "repos_affected": [
+              "zed-industries/zed"
+            ]
+          },
+          {
+            "cluster_id": "0e560ed25565",
+            "title": "Git Panel and Graph Bug Fixes",
+            "summary": "Users are reporting multiple bugs in the Git integration features, including UI display issues (incorrect branch names, inaccurate diff stats), stability problems (crashes, memory leaks, infinite loading), and refresh/ reload issues. These problems degrade the developer experience when using version control features, particularly in remote project scenarios like WSL.",
+            "category": "Reliability",
+            "representative_need": "Fix Git Graph loading indefinitely in remote projects (WSL)",
+            "issue_numbers": [
+              53080,
+              53069,
+              53064,
+              53061,
+              53040,
+              53015,
+              53009
+            ],
+            "issue_urls": [
+              "https://github.com/zed-industries/zed/issues/53080",
+              "https://github.com/zed-industries/zed/issues/53069",
+              "https://github.com/zed-industries/zed/issues/53064",
+              "https://github.com/zed-industries/zed/issues/53061",
+              "https://github.com/zed-industries/zed/issues/53040",
+              "https://github.com/zed-industries/zed/issues/53015",
+              "https://github.com/zed-industries/zed/issues/53009"
+            ],
+            "sample_titles": [
+              "Fix Git Graph loading indefinitely in remote projects (WSL)",
+              "Fix Git panel incorrectly showing '(no branch)' when a valid branch exists",
+              "Fix crash when opening diff view from git panel"
+            ],
+            "demand_score": 2.7840421213246525,
+            "rising_score": 8,
+            "volume": 7,
+            "open_count": 6,
+            "closed_count": 1,
+            "avg_reactions": 0,
+            "avg_comments": 2,
+            "date_first_seen": "2026-04-02T16:33:43.000Z",
+            "date_last_seen": "2026-04-03T16:42:41.000Z",
+            "repos_affected": [
+              "zed-industries/zed"
+            ]
+          },
+          {
+            "cluster_id": "6bd878d4a517",
+            "title": "AI Agent Integration Fixes",
+            "summary": "Users are experiencing various integration issues with the AI agent system, including provider-specific requirements not being met (such as Mistral's ID format constraints), UI rendering problems with text inputs, and failures when using custom APIs. These fixes aim to improve compatibility across different AI providers and ensure reliable operation of subagent functionality.",
+            "category": "Integration",
+            "representative_need": "Fix subagent invocation failure when using custom APIs with AI models",
+            "issue_numbers": [
+              53034,
+              53006,
+              52983
+            ],
+            "issue_urls": [
+              "https://github.com/zed-industries/zed/issues/53034",
+              "https://github.com/zed-industries/zed/issues/53006",
+              "https://github.com/zed-industries/zed/issues/52983"
+            ],
+            "sample_titles": [
+              "Fix subagent invocation failure when using custom APIs with AI models",
+              "Fix textarea expansion limit in AI agent prompt view",
+              "Generate provider-specific tool call IDs that conform to each AI provider's requirements (e.g., Mistral requires exactly 9 alphanumeric characters)"
+            ],
+            "demand_score": 2.224314037577237,
+            "rising_score": 4,
+            "volume": 3,
+            "open_count": 1,
+            "closed_count": 2,
+            "avg_reactions": 0.7,
+            "avg_comments": 2.7,
+            "date_first_seen": "2026-04-02T11:11:48.000Z",
+            "date_last_seen": "2026-04-03T01:06:26.000Z",
+            "repos_affected": [
+              "zed-industries/zed"
+            ]
+          },
+          {
+            "cluster_id": "c8c6c8c48b77",
+            "title": "Agent Panel Stability and Usability Fixes",
+            "summary": "Users are experiencing critical reliability issues with the CoPilot Agent panel, including PowerShell commands hanging on Windows, crashes when pasting images with queued messages, and session state not properly restoring on project reopen. These fixes address platform compatibility, crash prevention, UI responsiveness, and data persistence to improve the overall stability of the agent workflow.",
+            "category": "Developer Experience",
+            "representative_need": "Fix CoPilot Agent PowerShell command hanging on Windows with Microsoft Store-installed PowerShell",
+            "issue_numbers": [
+              53072,
+              53070,
+              53021,
+              52993
+            ],
+            "issue_urls": [
+              "https://github.com/zed-industries/zed/issues/53072",
+              "https://github.com/zed-industries/zed/issues/53070",
+              "https://github.com/zed-industries/zed/issues/53021",
+              "https://github.com/zed-industries/zed/issues/52993"
+            ],
+            "sample_titles": [
+              "Fix CoPilot Agent PowerShell command hanging on Windows with Microsoft Store-installed PowerShell",
+              "Fix agent thread session restoration to properly restore the last active thread on project reopen",
+              "Fix crash when pasting images into agent panel while messages are queued"
+            ],
+            "demand_score": 1.9863925130958773,
+            "rising_score": 5,
+            "volume": 4,
+            "open_count": 4,
+            "closed_count": 0,
+            "avg_reactions": 0,
+            "avg_comments": 0.5,
+            "date_first_seen": "2026-04-02T14:26:36.000Z",
+            "date_last_seen": "2026-04-03T14:12:08.000Z",
+            "repos_affected": [
+              "zed-industries/zed"
+            ]
+          },
+          {
+            "cluster_id": "4fbc6d9552a9",
+            "title": "Immediate Keybinding and Settings Reload",
+            "summary": "Users want keybindings and settings changes to apply immediately without requiring a restart. Currently, changes made via the settings file or UI don't take effect until the application is restarted, disrupting workflow efficiency. This hot reloading capability is essential for a smooth configuration experience.",
+            "category": "Configuration",
+            "representative_need": "Fix hot reloading of settings and keybinding changes to apply immediately without restart",
+            "issue_numbers": [
+              53012,
+              53003
+            ],
+            "issue_urls": [
+              "https://github.com/zed-industries/zed/issues/53012",
+              "https://github.com/zed-industries/zed/issues/53003"
+            ],
+            "sample_titles": [
+              "Fix hot reloading of settings and keybinding changes to apply immediately without restart",
+              "Fix keybindings not updating immediately when changed via settings file or UI"
+            ],
+            "demand_score": 1.835006392950302,
+            "rising_score": 3,
+            "volume": 2,
+            "open_count": 2,
+            "closed_count": 0,
+            "avg_reactions": 0.5,
+            "avg_comments": 3,
+            "date_first_seen": "2026-04-02T16:08:56.000Z",
+            "date_last_seen": "2026-04-02T16:44:42.000Z",
+            "repos_affected": [
+              "zed-industries/zed"
+            ]
+          },
+          {
+            "cluster_id": "26fd137842ef",
+            "title": "Fix editor rendering and font loading bugs",
+            "summary": "Users are encountering bugs that degrade the code editing visual experience. Specifically, semantic token highlighting fails to apply correctly when buffers are opened from multibuffers, and font loading doesn't properly prioritize system-installed fonts over bundled alternatives. These issues affect code clarity and visual consistency.",
+            "category": "Developer Experience",
+            "representative_need": "Fix font loading to prioritize system-installed fonts over built-in bundled fonts",
+            "issue_numbers": [
+              53051,
+              52987
+            ],
+            "issue_urls": [
+              "https://github.com/zed-industries/zed/issues/53051",
+              "https://github.com/zed-industries/zed/issues/52987"
+            ],
+            "sample_titles": [
+              "Fix font loading to prioritize system-installed fonts over built-in bundled fonts",
+              "Fix semantic token highlighting not being applied when buffers are opened from multibuffers"
+            ],
+            "demand_score": 1.2382350770943602,
+            "rising_score": 3,
+            "volume": 2,
+            "open_count": 2,
+            "closed_count": 0,
+            "avg_reactions": 0.5,
+            "avg_comments": 1,
+            "date_first_seen": "2026-04-02T12:31:59.000Z",
+            "date_last_seen": "2026-04-03T07:12:11.000Z",
+            "repos_affected": [
+              "zed-industries/zed"
+            ]
+          },
+          {
+            "cluster_id": "02ad93666ec3",
+            "title": "Terminal interaction and shell command fixes",
+            "summary": "Users are reporting issues with terminal functionality including focus management when switching between terminals, proper quoting of shell arguments with special characters, and keyboard input handling for text selection. These fixes aim to improve the reliability and usability of terminal interactions for developers.",
+            "category": "Developer Experience",
+            "representative_need": "Fix shell command building to properly quote arguments containing metacharacters like $",
+            "issue_numbers": [
+              53056,
+              53046,
+              52985
+            ],
+            "issue_urls": [
+              "https://github.com/zed-industries/zed/issues/53056",
+              "https://github.com/zed-industries/zed/issues/53046",
+              "https://github.com/zed-industries/zed/issues/52985"
+            ],
+            "sample_titles": [
+              "Fix shell command building to properly quote arguments containing metacharacters like $",
+              "Fix terminal focus not being set when switching between terminals via hotkey",
+              "Pass shift-home and shift-end keystrokes to the terminal when unbound, enabling line text selection"
+            ],
+            "demand_score": 1.1904323365389409,
+            "rising_score": 4,
+            "volume": 3,
+            "open_count": 3,
+            "closed_count": 0,
+            "avg_reactions": 0,
+            "avg_comments": 2,
+            "date_first_seen": "2026-04-02T12:16:16.000Z",
+            "date_last_seen": "2026-04-03T08:21:21.000Z",
+            "repos_affected": [
+              "zed-industries/zed"
+            ]
+          },
+          {
+            "cluster_id": "ad2a1f69993a",
+            "title": "UI/UX Bug Fixes",
+            "summary": "Users are experiencing several interface issues where UI elements don't behave as expected. Today's sessions fail to appear in preview lists, Markdown syntax breaks filename display in confirmation dialogs, and theme changes don't apply immediately when toggling modes. These bugs reduce the overall polish and reliability of the user experience.",
+            "category": "UI/UX",
+            "representative_need": "Escape or disable Markdown syntax interpretation in confirmation dialogs when displaying filenames",
+            "issue_numbers": [
+              53062,
+              53060,
+              53005
+            ],
+            "issue_urls": [
+              "https://github.com/zed-industries/zed/issues/53062",
+              "https://github.com/zed-industries/zed/issues/53060",
+              "https://github.com/zed-industries/zed/issues/53005"
+            ],
+            "sample_titles": [
+              "Escape or disable Markdown syntax interpretation in confirmation dialogs when displaying filenames",
+              "Fix ACP history to display today's sessions in the preview list",
+              "Fix theme changes to apply immediately when toggling modes"
+            ],
+            "demand_score": 0.993668803336767,
+            "rising_score": 4,
+            "volume": 3,
+            "open_count": 3,
+            "closed_count": 0,
+            "avg_reactions": 0,
+            "avg_comments": 3,
+            "date_first_seen": "2026-04-02T16:11:35.000Z",
+            "date_last_seen": "2026-04-03T11:16:26.000Z",
+            "repos_affected": [
+              "zed-industries/zed"
+            ]
+          }
+        ],
+        "category_breakdown": {
+          "Developer Experience": 4,
+          "Reliability": 1,
+          "Integration": 1,
+          "Configuration": 1,
+          "UI/UX": 1
+        }
+      }
+    },
+    {
       "repo": "block/goose",
       "slug": "block-goose",
       "displayName": "Goose",
@@ -5326,6 +5763,1196 @@
       }
     },
     {
+      "repo": "microsoft/vscode-copilot-release",
+      "slug": "microsoft-vscode-copilot-release",
+      "displayName": "GitHub Copilot Chat for VS Code",
+      "category": "AI Coding Assistant",
+      "generatedAt": "2026-04-03T18:02:32.697Z",
+      "totalIssuesAnalyzed": 100,
+      "totalIssuesIncluded": 93,
+      "totalClusters": 16,
+      "topNeed": {
+        "cluster_id": "22910916b94f",
+        "title": "Enhanced Configuration Settings and UI Fixes",
+        "summary": "Users are requesting more granular control over agent behavior through configuration options, including export capabilities for Copilot plans, timeout settings for MCP server execution, and independent control over ask_questions auto-approval. Additionally, a bug in the Configure Tools UI that writes incorrect prefix notation to agent configuration files needs to be fixed.",
+        "category": "Configuration",
+        "representative_need": "Add granular settings option to control ask_questions auto-approve behavior independently from other tools",
+        "issue_numbers": [
+          14151,
+          14130,
+          14123,
+          14104
+        ],
+        "issue_urls": [
+          "https://github.com/microsoft/vscode-copilot-release/issues/14151",
+          "https://github.com/microsoft/vscode-copilot-release/issues/14130",
+          "https://github.com/microsoft/vscode-copilot-release/issues/14123",
+          "https://github.com/microsoft/vscode-copilot-release/issues/14104"
+        ],
+        "sample_titles": [
+          "Add granular settings option to control ask_questions auto-approve behavior independently from other tools",
+          "Add settings to automatically export Copilot plans to local markdown files for version control",
+          "Add timeout configuration options for MCP server tool execution"
+        ],
+        "demand_score": 1.792071413551691,
+        "rising_score": 1,
+        "volume": 4,
+        "open_count": 4,
+        "closed_count": 0,
+        "avg_reactions": 1,
+        "avg_comments": 1,
+        "date_first_seen": "2026-01-30T06:10:50.000Z",
+        "date_last_seen": "2026-03-06T06:03:33.000Z",
+        "repos_affected": [
+          "microsoft/vscode-copilot-release"
+        ]
+      },
+      "risingNeed": null,
+      "dominantCategory": "Developer Experience",
+      "reportPaths": {
+        "en": "reports/latest/microsoft-vscode-copilot-release.md",
+        "zh": "reports/latest/microsoft-vscode-copilot-release.zh.md"
+      },
+      "aggregation": {
+        "repo": "microsoft/vscode-copilot-release",
+        "display_name": "GitHub Copilot Chat for VS Code",
+        "generated_at": "2026-04-03T18:02:32.697Z",
+        "window_start": "2026-03-04T18:02:32.697Z",
+        "window_end": "2026-04-03T18:02:32.697Z",
+        "total_issues_analyzed": 100,
+        "total_issues_included": 93,
+        "clusters": [
+          {
+            "cluster_id": "22910916b94f",
+            "title": "Enhanced Configuration Settings and UI Fixes",
+            "summary": "Users are requesting more granular control over agent behavior through configuration options, including export capabilities for Copilot plans, timeout settings for MCP server execution, and independent control over ask_questions auto-approval. Additionally, a bug in the Configure Tools UI that writes incorrect prefix notation to agent configuration files needs to be fixed.",
+            "category": "Configuration",
+            "representative_need": "Add granular settings option to control ask_questions auto-approve behavior independently from other tools",
+            "issue_numbers": [
+              14151,
+              14130,
+              14123,
+              14104
+            ],
+            "issue_urls": [
+              "https://github.com/microsoft/vscode-copilot-release/issues/14151",
+              "https://github.com/microsoft/vscode-copilot-release/issues/14130",
+              "https://github.com/microsoft/vscode-copilot-release/issues/14123",
+              "https://github.com/microsoft/vscode-copilot-release/issues/14104"
+            ],
+            "sample_titles": [
+              "Add granular settings option to control ask_questions auto-approve behavior independently from other tools",
+              "Add settings to automatically export Copilot plans to local markdown files for version control",
+              "Add timeout configuration options for MCP server tool execution"
+            ],
+            "demand_score": 1.792071413551691,
+            "rising_score": 1,
+            "volume": 4,
+            "open_count": 4,
+            "closed_count": 0,
+            "avg_reactions": 1,
+            "avg_comments": 1,
+            "date_first_seen": "2026-01-30T06:10:50.000Z",
+            "date_last_seen": "2026-03-06T06:03:33.000Z",
+            "repos_affected": [
+              "microsoft/vscode-copilot-release"
+            ]
+          },
+          {
+            "cluster_id": "7ccabfdf174f",
+            "title": "Fix Agent Mode reliability and tool integration issues",
+            "summary": "Users are experiencing multiple reliability issues in Agent Mode including hanging behavior, MCP server failures, and tool crashes. Key problems include MCP servers not auto-starting, tools being disabled with Claude models, the ask_questions tool not returning selections, and #codebase search failures. Additionally, users want enhanced multi-agent capabilities with model parameter support for subagents and fresh session handoffs.",
+            "category": "Developer Experience",
+            "representative_need": "Add optional model parameter to runSubagent tool for specifying subagent models",
+            "issue_numbers": [
+              14166,
+              14161,
+              14153,
+              14138,
+              14107,
+              14105,
+              14097
+            ],
+            "issue_urls": [
+              "https://github.com/microsoft/vscode-copilot-release/issues/14166",
+              "https://github.com/microsoft/vscode-copilot-release/issues/14161",
+              "https://github.com/microsoft/vscode-copilot-release/issues/14153",
+              "https://github.com/microsoft/vscode-copilot-release/issues/14138",
+              "https://github.com/microsoft/vscode-copilot-release/issues/14107",
+              "https://github.com/microsoft/vscode-copilot-release/issues/14105",
+              "https://github.com/microsoft/vscode-copilot-release/issues/14097"
+            ],
+            "sample_titles": [
+              "Add optional model parameter to runSubagent tool for specifying subagent models",
+              "Fix #codebase search functionality that crashes or fails with 'request failed' error after initiating codebase search",
+              "Fix MCP servers with autoStart:true not starting automatically on VS Code launch or chat session begin"
+            ],
+            "demand_score": 1.2967904744135104,
+            "rising_score": 1,
+            "volume": 7,
+            "open_count": 7,
+            "closed_count": 0,
+            "avg_reactions": 4.1,
+            "avg_comments": 0.9,
+            "date_first_seen": "2026-01-23T09:08:45.000Z",
+            "date_last_seen": "2026-03-16T09:55:21.000Z",
+            "repos_affected": [
+              "microsoft/vscode-copilot-release"
+            ]
+          },
+          {
+            "cluster_id": "216798813420",
+            "title": "AI and Copilot Integration Fixes",
+            "summary": "Users are experiencing multiple issues with AI/Copilot functionality including model availability, connectivity errors, tool computation failures, and quota consumption problems. These issues prevent reliable use of AI features and require fixes to error handling, model access, and resource management.",
+            "category": "Integration",
+            "representative_need": "Enable AI to automatically read workspace files for review without manual context attachment",
+            "issue_numbers": [
+              14172,
+              14163,
+              14162,
+              14141,
+              14116,
+              14114,
+              14101,
+              14096,
+              14091
+            ],
+            "issue_urls": [
+              "https://github.com/microsoft/vscode-copilot-release/issues/14172",
+              "https://github.com/microsoft/vscode-copilot-release/issues/14163",
+              "https://github.com/microsoft/vscode-copilot-release/issues/14162",
+              "https://github.com/microsoft/vscode-copilot-release/issues/14141",
+              "https://github.com/microsoft/vscode-copilot-release/issues/14116",
+              "https://github.com/microsoft/vscode-copilot-release/issues/14114",
+              "https://github.com/microsoft/vscode-copilot-release/issues/14101",
+              "https://github.com/microsoft/vscode-copilot-release/issues/14096",
+              "https://github.com/microsoft/vscode-copilot-release/issues/14091"
+            ],
+            "sample_titles": [
+              "Enable AI to automatically read workspace files for review without manual context attachment",
+              "Fix 'Failed to compute args for tool: semantic_search' error",
+              "Fix 504 Gateway Timeout errors in Copilot extension"
+            ],
+            "demand_score": 1.2254699087847885,
+            "rising_score": 0.5,
+            "volume": 9,
+            "open_count": 9,
+            "closed_count": 0,
+            "avg_reactions": 0.4,
+            "avg_comments": 0.7,
+            "date_first_seen": "2026-01-16T01:39:40.000Z",
+            "date_last_seen": "2026-03-21T08:31:30.000Z",
+            "repos_affected": [
+              "microsoft/vscode-copilot-release"
+            ]
+          },
+          {
+            "cluster_id": "c7068293b580",
+            "title": "Improve Copilot Chat UI status visibility and feedback",
+            "summary": "Users want improved visual feedback and status visibility in the Copilot Chat interface. This includes visible rate limit indicators showing quota usage and reset timing, source location transparency for custom prompts and skills, graceful handling of large responses, and fixing broken UI elements like stuck spinners that block interaction. These improvements would help users understand system state and work more effectively without being blocked by unresponsive UI.",
+            "category": "UI/UX",
+            "representative_need": "Add source location visibility to custom prompts and skills in the prompt picker",
+            "issue_numbers": [
+              14168,
+              14159,
+              14134,
+              14092
+            ],
+            "issue_urls": [
+              "https://github.com/microsoft/vscode-copilot-release/issues/14168",
+              "https://github.com/microsoft/vscode-copilot-release/issues/14159",
+              "https://github.com/microsoft/vscode-copilot-release/issues/14134",
+              "https://github.com/microsoft/vscode-copilot-release/issues/14092"
+            ],
+            "sample_titles": [
+              "Add source location visibility to custom prompts and skills in the prompt picker",
+              "Add visible rate limit status indicators showing usage quota, reset countdown, and scope in Copilot Chat UI",
+              "Fix stuck spinner that blocks stop button and persists after VSCode restart"
+            ],
+            "demand_score": 1.1517106955955767,
+            "rising_score": 1,
+            "volume": 4,
+            "open_count": 3,
+            "closed_count": 1,
+            "avg_reactions": 1,
+            "avg_comments": 1.3,
+            "date_first_seen": "2026-01-17T11:45:20.000Z",
+            "date_last_seen": "2026-03-18T06:55:19.000Z",
+            "repos_affected": [
+              "microsoft/vscode-copilot-release"
+            ]
+          },
+          {
+            "cluster_id": "acedf8a5a545",
+            "title": "Improve custom prompts and skills management in CLI picker",
+            "summary": "Users want better organization and visibility of custom prompts and skills in the command picker, including separating prompt files from skills with clear grouping, showing source locations, and fixing YAML validation for attributes like 'allowed-tools'. These improvements would help developers better manage, organize, and debug their custom extensions.",
+            "category": "Developer Experience",
+            "representative_need": "Add source location visibility for custom prompts and skills in the prompt picker",
+            "issue_numbers": [
+              14147,
+              14135,
+              14131
+            ],
+            "issue_urls": [
+              "https://github.com/microsoft/vscode-copilot-release/issues/14147",
+              "https://github.com/microsoft/vscode-copilot-release/issues/14135",
+              "https://github.com/microsoft/vscode-copilot-release/issues/14131"
+            ],
+            "sample_titles": [
+              "Add source location visibility for custom prompts and skills in the prompt picker",
+              "Fix SKILL.md YAML validator to recognize 'allowed-tools' as a valid frontmatter attribute",
+              "Separate prompt files from skills/commands in the slash picker with grouping or distinct prefixes"
+            ],
+            "demand_score": 1.0092730316255658,
+            "rising_score": 1,
+            "volume": 3,
+            "open_count": 1,
+            "closed_count": 2,
+            "avg_reactions": 2.3,
+            "avg_comments": 2,
+            "date_first_seen": "2026-02-16T22:46:08.000Z",
+            "date_last_seen": "2026-03-03T16:17:21.000Z",
+            "repos_affected": [
+              "microsoft/vscode-copilot-release"
+            ]
+          },
+          {
+            "cluster_id": "a1eb21d2ddc0",
+            "title": "Fix VS Code Extension Errors and Failures",
+            "summary": "Users are experiencing various extension-related issues including initialization timeouts, unhandled promise rejections during shutdown, and compatibility problems with VS Code Insiders. They want these extension errors investigated and fixed to ensure extensions work reliably without crashing or failing to initialize.",
+            "category": "Developer Experience",
+            "representative_need": "Fix GitHub Copilot Chat extension not working with VS Code Insiders",
+            "issue_numbers": [
+              14173,
+              14156,
+              14154,
+              14093
+            ],
+            "issue_urls": [
+              "https://github.com/microsoft/vscode-copilot-release/issues/14173",
+              "https://github.com/microsoft/vscode-copilot-release/issues/14156",
+              "https://github.com/microsoft/vscode-copilot-release/issues/14154",
+              "https://github.com/microsoft/vscode-copilot-release/issues/14093"
+            ],
+            "sample_titles": [
+              "Fix GitHub Copilot Chat extension not working with VS Code Insiders",
+              "Fix extension initialization timeout failure",
+              "Handle closed debug channel gracefully during extension host shutdown to prevent unhandled promise rejections"
+            ],
+            "demand_score": 0.9448898052343174,
+            "rising_score": 0.5,
+            "volume": 4,
+            "open_count": 3,
+            "closed_count": 1,
+            "avg_reactions": 0.5,
+            "avg_comments": 0.3,
+            "date_first_seen": "2026-01-19T06:56:36.000Z",
+            "date_last_seen": "2026-03-22T21:03:52.000Z",
+            "repos_affected": [
+              "microsoft/vscode-copilot-release"
+            ]
+          },
+          {
+            "cluster_id": "e33622a32b76",
+            "title": "Improve Copilot Chat reliability and session management",
+            "summary": "Users are experiencing multiple reliability issues with Copilot Chat including slow initialization, session persistence problems, context truncation causing lost message access, and accidental message deletion without confirmation. These issues frustrate users and impact productivity when the chat feature becomes unresponsive or loses important conversation history.",
+            "category": "Reliability",
+            "representative_need": "Add confirmation or modifier key requirement to prevent accidental deletion of chat messages via Delete key",
+            "issue_numbers": [
+              14169,
+              14165,
+              14160,
+              14158,
+              14157,
+              14145,
+              14143,
+              14127,
+              14126,
+              14125,
+              14115,
+              14108,
+              14090,
+              14089,
+              14086,
+              14085,
+              14084,
+              14083,
+              14081,
+              14080,
+              14079,
+              14078,
+              14077,
+              14076,
+              14075,
+              14074
+            ],
+            "issue_urls": [
+              "https://github.com/microsoft/vscode-copilot-release/issues/14169",
+              "https://github.com/microsoft/vscode-copilot-release/issues/14165",
+              "https://github.com/microsoft/vscode-copilot-release/issues/14160",
+              "https://github.com/microsoft/vscode-copilot-release/issues/14158",
+              "https://github.com/microsoft/vscode-copilot-release/issues/14157",
+              "https://github.com/microsoft/vscode-copilot-release/issues/14145",
+              "https://github.com/microsoft/vscode-copilot-release/issues/14143",
+              "https://github.com/microsoft/vscode-copilot-release/issues/14127",
+              "https://github.com/microsoft/vscode-copilot-release/issues/14126",
+              "https://github.com/microsoft/vscode-copilot-release/issues/14125",
+              "https://github.com/microsoft/vscode-copilot-release/issues/14115",
+              "https://github.com/microsoft/vscode-copilot-release/issues/14108",
+              "https://github.com/microsoft/vscode-copilot-release/issues/14090",
+              "https://github.com/microsoft/vscode-copilot-release/issues/14089",
+              "https://github.com/microsoft/vscode-copilot-release/issues/14086",
+              "https://github.com/microsoft/vscode-copilot-release/issues/14085",
+              "https://github.com/microsoft/vscode-copilot-release/issues/14084",
+              "https://github.com/microsoft/vscode-copilot-release/issues/14083",
+              "https://github.com/microsoft/vscode-copilot-release/issues/14081",
+              "https://github.com/microsoft/vscode-copilot-release/issues/14080",
+              "https://github.com/microsoft/vscode-copilot-release/issues/14079",
+              "https://github.com/microsoft/vscode-copilot-release/issues/14078",
+              "https://github.com/microsoft/vscode-copilot-release/issues/14077",
+              "https://github.com/microsoft/vscode-copilot-release/issues/14076",
+              "https://github.com/microsoft/vscode-copilot-release/issues/14075",
+              "https://github.com/microsoft/vscode-copilot-release/issues/14074"
+            ],
+            "sample_titles": [
+              "Add confirmation or modifier key requirement to prevent accidental deletion of chat messages via Delete key",
+              "Add display style setting for auto-approved terminal commands independent of approval status",
+              "Fix API version mismatch causing Chat extension activation failure when VS Code APIs are unavailable"
+            ],
+            "demand_score": 0.9226361719521756,
+            "rising_score": 1,
+            "volume": 26,
+            "open_count": 21,
+            "closed_count": 5,
+            "avg_reactions": 0.5,
+            "avg_comments": 0.5,
+            "date_first_seen": "2026-01-14T10:12:37.000Z",
+            "date_last_seen": "2026-03-19T01:27:52.000Z",
+            "repos_affected": [
+              "microsoft/vscode-copilot-release"
+            ]
+          },
+          {
+            "cluster_id": "bb6e6dadac7d",
+            "title": "API Request Error Handling and Model Compatibility",
+            "summary": "Users encounter various API errors including server errors (500, 413), unsupported endpoint combinations, and serialization issues when making API requests. They want the system to either prevent these errors through better model/endpoint compatibility checks or handle them gracefully with clear, informative error messages. This includes fixing issues like malformed function_response serialization and preventing extension load failures when models aren't accessible via certain endpoints.",
+            "category": "Developer Experience",
+            "representative_need": "Fix extension load failure when model is not accessible via /chat/completions endpoint",
+            "issue_numbers": [
+              14170,
+              14148,
+              14144,
+              14142,
+              14113,
+              14088,
+              14087
+            ],
+            "issue_urls": [
+              "https://github.com/microsoft/vscode-copilot-release/issues/14170",
+              "https://github.com/microsoft/vscode-copilot-release/issues/14148",
+              "https://github.com/microsoft/vscode-copilot-release/issues/14144",
+              "https://github.com/microsoft/vscode-copilot-release/issues/14142",
+              "https://github.com/microsoft/vscode-copilot-release/issues/14113",
+              "https://github.com/microsoft/vscode-copilot-release/issues/14088",
+              "https://github.com/microsoft/vscode-copilot-release/issues/14087"
+            ],
+            "sample_titles": [
+              "Fix extension load failure when model is not accessible via /chat/completions endpoint",
+              "Fix malformed function_response serialization when sending MCP tool responses to Gemini API",
+              "Fix model API endpoint compatibility to prevent errors when requesting unsupported model/endpoint combinations"
+            ],
+            "demand_score": 0.8125949359803247,
+            "rising_score": 1,
+            "volume": 7,
+            "open_count": 7,
+            "closed_count": 0,
+            "avg_reactions": 0.3,
+            "avg_comments": 0.4,
+            "date_first_seen": "2026-01-14T18:44:21.000Z",
+            "date_last_seen": "2026-03-19T12:00:09.000Z",
+            "repos_affected": [
+              "microsoft/vscode-copilot-release"
+            ]
+          },
+          {
+            "cluster_id": "dee9e7b716f7",
+            "title": "Excessive Rate Limit Wait Times",
+            "summary": "Users are experiencing unreasonably long rate limit wait times (455+ hours), making it impractical to continue using the platform. They are requesting either reduced rate limit thresholds or improved communication about when limits will reset so they can plan accordingly.",
+            "category": "Platform Support",
+            "representative_need": "Fix excessively long rate limit wait time (455+ hours is impractical for users)",
+            "issue_numbers": [
+              14137,
+              14099
+            ],
+            "issue_urls": [
+              "https://github.com/microsoft/vscode-copilot-release/issues/14137",
+              "https://github.com/microsoft/vscode-copilot-release/issues/14099"
+            ],
+            "sample_titles": [
+              "Fix excessively long rate limit wait time (455+ hours is impractical for users)",
+              "Reduce rate limit duration thresholds or provide better user communication about rate limits"
+            ],
+            "demand_score": 0.7179822347675509,
+            "rising_score": 1,
+            "volume": 2,
+            "open_count": 2,
+            "closed_count": 0,
+            "avg_reactions": 0,
+            "avg_comments": 2,
+            "date_first_seen": "2026-01-25T00:46:49.000Z",
+            "date_last_seen": "2026-02-19T00:00:14.000Z",
+            "repos_affected": [
+              "microsoft/vscode-copilot-release"
+            ]
+          },
+          {
+            "cluster_id": "9d20041e526c",
+            "title": "Platform Support Expansion and Installation Bug Fixes",
+            "summary": "Users want expanded platform support for the Copilot SDK (specifically linux-arm64 architecture) as well as fixes for installation-related bugs. The infinite loop issue when multiple VS Code installations are present causes reliability problems that prevent smooth usage of the SDK in complex development environments.",
+            "category": "Platform Support",
+            "representative_need": "Add linux-arm64 prebuild for pty.node in @github/copilot/sdk",
+            "issue_numbers": [
+              14174,
+              14117
+            ],
+            "issue_urls": [
+              "https://github.com/microsoft/vscode-copilot-release/issues/14174",
+              "https://github.com/microsoft/vscode-copilot-release/issues/14117"
+            ],
+            "sample_titles": [
+              "Add linux-arm64 prebuild for pty.node in @github/copilot/sdk",
+              "Fix infinite loop in Find-RealCopilot when multiple VS Code installations are present"
+            ],
+            "demand_score": 0.7176636844120259,
+            "rising_score": 0.5,
+            "volume": 2,
+            "open_count": 1,
+            "closed_count": 1,
+            "avg_reactions": 0,
+            "avg_comments": 0.5,
+            "date_first_seen": "2026-02-09T07:45:05.000Z",
+            "date_last_seen": "2026-03-23T19:53:22.000Z",
+            "repos_affected": [
+              "microsoft/vscode-copilot-release"
+            ]
+          },
+          {
+            "cluster_id": "3d9c55fbbb0d",
+            "title": "Fix AI Model Availability and Behavior Issues",
+            "summary": "Users are experiencing critical issues with AI models not being accessible, available, or functioning correctly. They report problems with model endpoints, Copilot extensions, and AI assistants that delete code without providing alternatives. Users need these AI functionality issues resolved to maintain productive workflows.",
+            "category": "Developer Experience",
+            "representative_need": "Fix AI assistant behavior that deletes user code without providing replacement content",
+            "issue_numbers": [
+              14171,
+              14119,
+              14112
+            ],
+            "issue_urls": [
+              "https://github.com/microsoft/vscode-copilot-release/issues/14171",
+              "https://github.com/microsoft/vscode-copilot-release/issues/14119",
+              "https://github.com/microsoft/vscode-copilot-release/issues/14112"
+            ],
+            "sample_titles": [
+              "Fix AI assistant behavior that deletes user code without providing replacement content",
+              "Fix GPT-5.4 model accessibility via /chat/completions endpoint",
+              "Fix language model unavailability in Copilot extension"
+            ],
+            "demand_score": 0.6384272351048486,
+            "rising_score": 1,
+            "volume": 3,
+            "open_count": 3,
+            "closed_count": 0,
+            "avg_reactions": 0.3,
+            "avg_comments": 0.3,
+            "date_first_seen": "2026-02-03T11:02:35.000Z",
+            "date_last_seen": "2026-03-19T12:18:25.000Z",
+            "repos_affected": [
+              "microsoft/vscode-copilot-release"
+            ]
+          },
+          {
+            "cluster_id": "f62fe30aec31",
+            "title": "Terminal task interruption and command parsing fixes",
+            "summary": "Users are experiencing unexpected task interruptions without any warning or notification, which disrupts workflow. Additionally, command parsing fails when heredoc terminators are followed by additional commands, causing terminal tool execution errors. These issues affect the reliability and predictability of terminal operations.",
+            "category": "Reliability",
+            "representative_need": "Fix command parsing to properly handle heredoc terminators followed by additional commands in terminal tool execution",
+            "issue_numbers": [
+              14140,
+              14124
+            ],
+            "issue_urls": [
+              "https://github.com/microsoft/vscode-copilot-release/issues/14140",
+              "https://github.com/microsoft/vscode-copilot-release/issues/14124"
+            ],
+            "sample_titles": [
+              "Fix command parsing to properly handle heredoc terminators followed by additional commands in terminal tool execution",
+              "Fix tasks being interrupted without warning or notification"
+            ],
+            "demand_score": 0.6115596822382832,
+            "rising_score": 1,
+            "volume": 2,
+            "open_count": 2,
+            "closed_count": 0,
+            "avg_reactions": 5,
+            "avg_comments": 0.5,
+            "date_first_seen": "2026-02-13T12:03:43.000Z",
+            "date_last_seen": "2026-02-23T17:43:15.000Z",
+            "repos_affected": [
+              "microsoft/vscode-copilot-release"
+            ]
+          },
+          {
+            "cluster_id": "696f8bd71807",
+            "title": "Fix subscription authentication and access issues",
+            "summary": "Users with active Copilot Pro subscriptions are encountering authentication failures, subscription recognition errors, and access restrictions that prevent them from using AI features they've paid for. These issues include quota enforcement failures, rate limiting without clear messaging, and upgrade flow problems that block paying users from accessing the service.",
+            "category": "Reliability",
+            "representative_need": "Add GitHub Copilot Enterprise authentication option to Codex extension, or display clear messaging when this subscription type is unsupported",
+            "issue_numbers": [
+              14167,
+              14164,
+              14146,
+              14122,
+              14120,
+              14109,
+              14100,
+              14098,
+              14094
+            ],
+            "issue_urls": [
+              "https://github.com/microsoft/vscode-copilot-release/issues/14167",
+              "https://github.com/microsoft/vscode-copilot-release/issues/14164",
+              "https://github.com/microsoft/vscode-copilot-release/issues/14146",
+              "https://github.com/microsoft/vscode-copilot-release/issues/14122",
+              "https://github.com/microsoft/vscode-copilot-release/issues/14120",
+              "https://github.com/microsoft/vscode-copilot-release/issues/14109",
+              "https://github.com/microsoft/vscode-copilot-release/issues/14100",
+              "https://github.com/microsoft/vscode-copilot-release/issues/14098",
+              "https://github.com/microsoft/vscode-copilot-release/issues/14094"
+            ],
+            "sample_titles": [
+              "Add GitHub Copilot Enterprise authentication option to Codex extension, or display clear messaging when this subscription type is unsupported",
+              "Fix API parameter compatibility for BYOK with newer OpenAI models by using 'max_completion_tokens' instead of 'max_tokens'",
+              "Fix Copilot Pro subscription not being recognized in VS Code despite having an active paid subscription"
+            ],
+            "demand_score": 0.5938072839864397,
+            "rising_score": 1,
+            "volume": 9,
+            "open_count": 8,
+            "closed_count": 1,
+            "avg_reactions": 0.4,
+            "avg_comments": 0.1,
+            "date_first_seen": "2026-01-20T09:56:24.000Z",
+            "date_last_seen": "2026-03-18T05:46:39.000Z",
+            "repos_affected": [
+              "microsoft/vscode-copilot-release"
+            ]
+          },
+          {
+            "cluster_id": "4d7b6a2fc476",
+            "title": "Improve Network Reliability and Error Recovery",
+            "summary": "Users are experiencing frequent gateway timeout errors (504, 502) and false connectivity reports that disrupt their workflow. They want more stable connections during high-load periods and graceful handling of network failures with improved error recovery mechanisms.",
+            "category": "Reliability",
+            "representative_need": "Fix constant 504 Gateway Timeout errors preventing Copilot usage",
+            "issue_numbers": [
+              14149,
+              14136,
+              14133,
+              14111,
+              14106
+            ],
+            "issue_urls": [
+              "https://github.com/microsoft/vscode-copilot-release/issues/14149",
+              "https://github.com/microsoft/vscode-copilot-release/issues/14136",
+              "https://github.com/microsoft/vscode-copilot-release/issues/14133",
+              "https://github.com/microsoft/vscode-copilot-release/issues/14111",
+              "https://github.com/microsoft/vscode-copilot-release/issues/14106"
+            ],
+            "sample_titles": [
+              "Fix constant 504 Gateway Timeout errors preventing Copilot usage",
+              "Fix false positive 'not connected to internet' errors when user has active connectivity",
+              "Handle network connectivity failures gracefully with better error recovery"
+            ],
+            "demand_score": 0.5902443581392384,
+            "rising_score": 1,
+            "volume": 5,
+            "open_count": 5,
+            "closed_count": 0,
+            "avg_reactions": 0,
+            "avg_comments": 1.4,
+            "date_first_seen": "2026-02-02T06:06:17.000Z",
+            "date_last_seen": "2026-03-04T22:59:19.000Z",
+            "repos_affected": [
+              "microsoft/vscode-copilot-release"
+            ]
+          },
+          {
+            "cluster_id": "e6a857bccb7e",
+            "title": "Copilot Chat Rate Limits and Session Sync",
+            "summary": "Users experience premature rate limiting that blocks paid users after minimal Copilot Chat usage, and they also want session history to sync between VS Code Stable and Insiders. These issues disrupt workflow continuity and reduce the value of Copilot Chat for paying customers who expect reliable, uninterrupted access to their conversations.",
+            "category": "Developer Experience",
+            "representative_need": "Fix premature rate limiting that blocks paid users after minimal Copilot Chat usage",
+            "issue_numbers": [
+              14128,
+              14118
+            ],
+            "issue_urls": [
+              "https://github.com/microsoft/vscode-copilot-release/issues/14128",
+              "https://github.com/microsoft/vscode-copilot-release/issues/14118"
+            ],
+            "sample_titles": [
+              "Fix premature rate limiting that blocks paid users after minimal Copilot Chat usage",
+              "Sync Copilot Chat session history between VS Code Stable and Insiders"
+            ],
+            "demand_score": 0.5682747239655364,
+            "rising_score": 1,
+            "volume": 2,
+            "open_count": 1,
+            "closed_count": 1,
+            "avg_reactions": 4.5,
+            "avg_comments": 0,
+            "date_first_seen": "2026-02-09T15:10:48.000Z",
+            "date_last_seen": "2026-02-14T16:44:02.000Z",
+            "repos_affected": [
+              "microsoft/vscode-copilot-release"
+            ]
+          },
+          {
+            "cluster_id": "ee77deb5967e",
+            "title": "Improve Copilot Chat reliability and initialization",
+            "summary": "Users are experiencing reliability issues with Copilot Chat, including renderer crashes during heavy usage in Remote-SSH workspaces on macOS, slow initialization times, and infinite retry loops from unhandled HTTP 404 errors. They want a more stable and responsive Chat experience with faster startup times and proper error handling.",
+            "category": "Reliability",
+            "representative_need": "Fix renderer crash during heavy Copilot Chat usage in Remote-SSH workspaces on macOS",
+            "issue_numbers": [
+              14139,
+              14132,
+              14082,
+              14073
+            ],
+            "issue_urls": [
+              "https://github.com/microsoft/vscode-copilot-release/issues/14139",
+              "https://github.com/microsoft/vscode-copilot-release/issues/14132",
+              "https://github.com/microsoft/vscode-copilot-release/issues/14082",
+              "https://github.com/microsoft/vscode-copilot-release/issues/14073"
+            ],
+            "sample_titles": [
+              "Fix renderer crash during heavy Copilot Chat usage in Remote-SSH workspaces on macOS",
+              "Fix slow Chat initialization time",
+              "Handle HTTP 404 responses from org custom instructions API as non-retryable errors to prevent infinite retry loops"
+            ],
+            "demand_score": 0.5118905230758227,
+            "rising_score": 1,
+            "volume": 4,
+            "open_count": 4,
+            "closed_count": 0,
+            "avg_reactions": 0,
+            "avg_comments": 0.8,
+            "date_first_seen": "2026-01-14T10:12:01.000Z",
+            "date_last_seen": "2026-02-19T23:17:50.000Z",
+            "repos_affected": [
+              "microsoft/vscode-copilot-release"
+            ]
+          }
+        ],
+        "category_breakdown": {
+          "Configuration": 1,
+          "Developer Experience": 6,
+          "Integration": 1,
+          "UI/UX": 1,
+          "Reliability": 5,
+          "Platform Support": 2
+        }
+      }
+    },
+    {
+      "repo": "voideditor/void",
+      "slug": "voideditor-void",
+      "displayName": "Void",
+      "category": "AI Code Editor",
+      "generatedAt": "2026-04-03T18:07:35.907Z",
+      "totalIssuesAnalyzed": 50,
+      "totalIssuesIncluded": 42,
+      "totalClusters": 11,
+      "topNeed": {
+        "cluster_id": "d5c92eac47f8",
+        "title": "Enhanced AI provider configuration and authentication",
+        "summary": "Users want more flexible options for connecting to AI model providers, including support for multiple provider profiles, API key authentication for servers like vLLM, and the ability to connect to endpoints with self-signed SSL/TLS certificates. These enhancements would enable integration with a wider variety of AI services and deployment scenarios.",
+        "category": "Configuration",
+        "representative_need": "Add configuration option to allow connections to self-signed SSL/TLS certificate endpoints",
+        "issue_numbers": [
+          952,
+          892,
+          886
+        ],
+        "issue_urls": [
+          "https://github.com/voideditor/void/issues/952",
+          "https://github.com/voideditor/void/issues/892",
+          "https://github.com/voideditor/void/issues/886"
+        ],
+        "sample_titles": [
+          "Add configuration option to allow connections to self-signed SSL/TLS certificate endpoints",
+          "Support API key authentication for vllm server connections",
+          "Support multiple provider profiles per AI service and GitHub Copilot as an AI model provider"
+        ],
+        "demand_score": 0.7498615554860677,
+        "rising_score": 2,
+        "volume": 3,
+        "open_count": 1,
+        "closed_count": 2,
+        "avg_reactions": 0,
+        "avg_comments": 0.7,
+        "date_first_seen": "2025-08-21T06:15:37.000Z",
+        "date_last_seen": "2026-03-30T20:33:05.000Z",
+        "repos_affected": [
+          "voideditor/void"
+        ]
+      },
+      "risingNeed": {
+        "cluster_id": "d5c92eac47f8",
+        "title": "Enhanced AI provider configuration and authentication",
+        "summary": "Users want more flexible options for connecting to AI model providers, including support for multiple provider profiles, API key authentication for servers like vLLM, and the ability to connect to endpoints with self-signed SSL/TLS certificates. These enhancements would enable integration with a wider variety of AI services and deployment scenarios.",
+        "category": "Configuration",
+        "representative_need": "Add configuration option to allow connections to self-signed SSL/TLS certificate endpoints",
+        "issue_numbers": [
+          952,
+          892,
+          886
+        ],
+        "issue_urls": [
+          "https://github.com/voideditor/void/issues/952",
+          "https://github.com/voideditor/void/issues/892",
+          "https://github.com/voideditor/void/issues/886"
+        ],
+        "sample_titles": [
+          "Add configuration option to allow connections to self-signed SSL/TLS certificate endpoints",
+          "Support API key authentication for vllm server connections",
+          "Support multiple provider profiles per AI service and GitHub Copilot as an AI model provider"
+        ],
+        "demand_score": 0.7498615554860677,
+        "rising_score": 2,
+        "volume": 3,
+        "open_count": 1,
+        "closed_count": 2,
+        "avg_reactions": 0,
+        "avg_comments": 0.7,
+        "date_first_seen": "2025-08-21T06:15:37.000Z",
+        "date_last_seen": "2026-03-30T20:33:05.000Z",
+        "repos_affected": [
+          "voideditor/void"
+        ]
+      },
+      "dominantCategory": "Configuration",
+      "reportPaths": {
+        "en": "reports/latest/voideditor-void.md",
+        "zh": "reports/latest/voideditor-void.zh.md"
+      },
+      "aggregation": {
+        "repo": "voideditor/void",
+        "display_name": "Void",
+        "generated_at": "2026-04-03T18:07:35.907Z",
+        "window_start": "2026-03-04T18:07:35.907Z",
+        "window_end": "2026-04-03T18:07:35.907Z",
+        "total_issues_analyzed": 50,
+        "total_issues_included": 42,
+        "clusters": [
+          {
+            "cluster_id": "d5c92eac47f8",
+            "title": "Enhanced AI provider configuration and authentication",
+            "summary": "Users want more flexible options for connecting to AI model providers, including support for multiple provider profiles, API key authentication for servers like vLLM, and the ability to connect to endpoints with self-signed SSL/TLS certificates. These enhancements would enable integration with a wider variety of AI services and deployment scenarios.",
+            "category": "Configuration",
+            "representative_need": "Add configuration option to allow connections to self-signed SSL/TLS certificate endpoints",
+            "issue_numbers": [
+              952,
+              892,
+              886
+            ],
+            "issue_urls": [
+              "https://github.com/voideditor/void/issues/952",
+              "https://github.com/voideditor/void/issues/892",
+              "https://github.com/voideditor/void/issues/886"
+            ],
+            "sample_titles": [
+              "Add configuration option to allow connections to self-signed SSL/TLS certificate endpoints",
+              "Support API key authentication for vllm server connections",
+              "Support multiple provider profiles per AI service and GitHub Copilot as an AI model provider"
+            ],
+            "demand_score": 0.7498615554860677,
+            "rising_score": 2,
+            "volume": 3,
+            "open_count": 1,
+            "closed_count": 2,
+            "avg_reactions": 0,
+            "avg_comments": 0.7,
+            "date_first_seen": "2025-08-21T06:15:37.000Z",
+            "date_last_seen": "2026-03-30T20:33:05.000Z",
+            "repos_affected": [
+              "voideditor/void"
+            ]
+          },
+          {
+            "cluster_id": "f378ce620692",
+            "title": "Fix UI rendering and interaction bugs",
+            "summary": "Users are experiencing multiple UI rendering failures where content appears blank white, dropdowns don't expand when clicked, and the editor fails to render properly on startup or when opening folders. These issues prevent users from effectively interacting with and using the editor interface.",
+            "category": "UI/UX",
+            "representative_need": "Fix UI rendering issue where editor content becomes blank white when opening a folder",
+            "issue_numbers": [
+              939,
+              938,
+              914
+            ],
+            "issue_urls": [
+              "https://github.com/voideditor/void/issues/939",
+              "https://github.com/voideditor/void/issues/938",
+              "https://github.com/voideditor/void/issues/914"
+            ],
+            "sample_titles": [
+              "Fix UI rendering issue where editor content becomes blank white when opening a folder",
+              "Fix blank startup page display where the editor fails to render content",
+              "Fix model selection dropdown not expanding when clicked"
+            ],
+            "demand_score": 0.5839703553626714,
+            "rising_score": 1,
+            "volume": 3,
+            "open_count": 3,
+            "closed_count": 0,
+            "avg_reactions": 0.3,
+            "avg_comments": 2,
+            "date_first_seen": "2025-11-14T12:16:54.000Z",
+            "date_last_seen": "2026-02-10T18:13:15.000Z",
+            "repos_affected": [
+              "voideditor/void"
+            ]
+          },
+          {
+            "cluster_id": "fc4c3bed5bf6",
+            "title": "Expand AI Provider Integration and Capabilities",
+            "summary": "Users want to add support for new AI providers including LLaMa, Mistral, nano-gpt.com, kimi 2k, Claude Code, and automatic OpenRouter free tier fetching. They also want internet search and web scraping capabilities for AI models, along with fixes for existing AI features like file search and Unicode character handling.",
+            "category": "Integration",
+            "representative_need": "Add Claude Code subscription authentication and integration",
+            "issue_numbers": [
+              906,
+              894,
+              891,
+              885,
+              876,
+              871,
+              870,
+              862,
+              851
+            ],
+            "issue_urls": [
+              "https://github.com/voideditor/void/issues/906",
+              "https://github.com/voideditor/void/issues/894",
+              "https://github.com/voideditor/void/issues/891",
+              "https://github.com/voideditor/void/issues/885",
+              "https://github.com/voideditor/void/issues/876",
+              "https://github.com/voideditor/void/issues/871",
+              "https://github.com/voideditor/void/issues/870",
+              "https://github.com/voideditor/void/issues/862",
+              "https://github.com/voideditor/void/issues/851"
+            ],
+            "sample_titles": [
+              "Add Claude Code subscription authentication and integration",
+              "Add LLaMa model support as an AI provider",
+              "Add automatic fetching of OpenRouter free tier models"
+            ],
+            "demand_score": 0.38797258770692133,
+            "rising_score": 1,
+            "volume": 9,
+            "open_count": 7,
+            "closed_count": 2,
+            "avg_reactions": 1,
+            "avg_comments": 1.6,
+            "date_first_seen": "2025-07-25T21:19:38.000Z",
+            "date_last_seen": "2025-10-11T18:32:31.000Z",
+            "repos_affected": [
+              "voideditor/void"
+            ]
+          },
+          {
+            "cluster_id": "ef3422750910",
+            "title": "MCP Server Integration Fixes and Features",
+            "summary": "Users are experiencing issues with MCP (Model Context Protocol) server connectivity, tool invocation with local LLMs, and SSE-based server support for decorated Python functions. They also want new capabilities like dynamic LLM model switching via API hooks and prompt inspection through request proxying. These issues collectively indicate a need for improved MCP integration robustness and extended functionality.",
+            "category": "Integration",
+            "representative_need": "Add API hook for MCP servers to dynamically switch session's LLM model",
+            "issue_numbers": [
+              945,
+              907,
+              899,
+              873,
+              868,
+              861
+            ],
+            "issue_urls": [
+              "https://github.com/voideditor/void/issues/945",
+              "https://github.com/voideditor/void/issues/907",
+              "https://github.com/voideditor/void/issues/899",
+              "https://github.com/voideditor/void/issues/873",
+              "https://github.com/voideditor/void/issues/868",
+              "https://github.com/voideditor/void/issues/861"
+            ],
+            "sample_titles": [
+              "Add API hook for MCP servers to dynamically switch session's LLM model",
+              "Add prompt inspection/analysis capability through LLM request proxying",
+              "Fix MCP server connection errors preventing servers from connecting"
+            ],
+            "demand_score": 0.31838457575946894,
+            "rising_score": 1,
+            "volume": 6,
+            "open_count": 6,
+            "closed_count": 0,
+            "avg_reactions": 0,
+            "avg_comments": 1.2,
+            "date_first_seen": "2025-08-06T13:03:32.000Z",
+            "date_last_seen": "2026-02-21T16:02:30.000Z",
+            "repos_affected": [
+              "voideditor/void"
+            ]
+          },
+          {
+            "cluster_id": "890038b8b416",
+            "title": "Critical Bug Fixes for Core Functionality",
+            "summary": "Users are reporting multiple bugs that need to be addressed to ensure the application works correctly. These include agent output formatting problems, security vulnerabilities in dependencies, path handling issues on Windows systems, and bundling errors with the Excalidraw integration. Fixing these issues will improve application reliability and developer experience.",
+            "category": "Developer Experience",
+            "representative_need": "Fix agent output formatting issues",
+            "issue_numbers": [
+              924,
+              898,
+              890,
+              869
+            ],
+            "issue_urls": [
+              "https://github.com/voideditor/void/issues/924",
+              "https://github.com/voideditor/void/issues/898",
+              "https://github.com/voideditor/void/issues/890",
+              "https://github.com/voideditor/void/issues/869"
+            ],
+            "sample_titles": [
+              "Fix agent output formatting issues",
+              "Fix duplicate identifier error when bundling Excalidraw integration",
+              "Fix path handling in tool calls to work correctly on Windows"
+            ],
+            "demand_score": 0.2999817172524799,
+            "rising_score": 1,
+            "volume": 4,
+            "open_count": 3,
+            "closed_count": 1,
+            "avg_reactions": 0.3,
+            "avg_comments": 1,
+            "date_first_seen": "2025-08-10T15:46:53.000Z",
+            "date_last_seen": "2025-12-09T22:46:40.000Z",
+            "repos_affected": [
+              "voideditor/void"
+            ]
+          },
+          {
+            "cluster_id": "156baa424991",
+            "title": "Build environment and tooling configuration",
+            "summary": "Users need proper build environment setup for smooth development workflows. This includes adding support for new IDE versions like Visual Studio 2026 and resolving PATH issues that prevent tools like tailwindcss from being accessible during builds.",
+            "category": "Developer Experience",
+            "representative_need": "Add support for Visual Studio 2026 in build configuration",
+            "issue_numbers": [
+              931,
+              882
+            ],
+            "issue_urls": [
+              "https://github.com/voideditor/void/issues/931",
+              "https://github.com/voideditor/void/issues/882"
+            ],
+            "sample_titles": [
+              "Add support for Visual Studio 2026 in build configuration",
+              "Fix build failure due to missing tailwindcss command in PATH"
+            ],
+            "demand_score": 0.24327220744954012,
+            "rising_score": 1,
+            "volume": 2,
+            "open_count": 2,
+            "closed_count": 0,
+            "avg_reactions": 0.5,
+            "avg_comments": 2.5,
+            "date_first_seen": "2025-08-20T08:57:22.000Z",
+            "date_last_seen": "2026-01-03T01:06:44.000Z",
+            "repos_affected": [
+              "voideditor/void"
+            ]
+          },
+          {
+            "cluster_id": "b7113c67c05f",
+            "title": "Enhanced AI provider and model configuration options",
+            "summary": "Users want more flexibility to customize their AI integration experience. This includes UI customization options like hiding floating widgets, configurable provider endpoints for custom proxies, per-model routing support for providers like OpenRouter, and the ability to manage custom model tags without modifying core files. These features would give users greater control over their AI setup and reduce the need for manual code modifications.",
+            "category": "Configuration",
+            "representative_need": "Add OpenRouter provider routing configuration support per model",
+            "issue_numbers": [
+              905,
+              904,
+              887,
+              884
+            ],
+            "issue_urls": [
+              "https://github.com/voideditor/void/issues/905",
+              "https://github.com/voideditor/void/issues/904",
+              "https://github.com/voideditor/void/issues/887",
+              "https://github.com/voideditor/void/issues/884"
+            ],
+            "sample_titles": [
+              "Add OpenRouter provider routing configuration support per model",
+              "Add setting option to hide floating widget",
+              "Add support for configurable/custom model tags to allow users to add, update, or remove AI models without modifying core editor files"
+            ],
+            "demand_score": 0.23793362538118865,
+            "rising_score": 1,
+            "volume": 4,
+            "open_count": 2,
+            "closed_count": 2,
+            "avg_reactions": 0.3,
+            "avg_comments": 2,
+            "date_first_seen": "2025-08-20T13:44:59.000Z",
+            "date_last_seen": "2025-09-25T07:34:58.000Z",
+            "repos_affected": [
+              "voideditor/void"
+            ]
+          },
+          {
+            "cluster_id": "3a855d5c8590",
+            "title": "Improve IDE interface controls and interactions",
+            "summary": "Users want improvements to the IDE interface, including direct numeric input for reasoning budget settings, better popup menu positioning that doesn't interfere with text selection, browser-based IDE support for Void Agent settings, and expanded model support for qwen3-coder in file editing. These changes aim to enhance usability and functionality of the development environment.",
+            "category": "Developer Experience",
+            "representative_need": "Add direct numeric input field for reasoning budget alongside the slider interface",
+            "issue_numbers": [
+              934,
+              895,
+              872,
+              857
+            ],
+            "issue_urls": [
+              "https://github.com/voideditor/void/issues/934",
+              "https://github.com/voideditor/void/issues/895",
+              "https://github.com/voideditor/void/issues/872",
+              "https://github.com/voideditor/void/issues/857"
+            ],
+            "sample_titles": [
+              "Add direct numeric input field for reasoning budget alongside the slider interface",
+              "Fix edit file functionality to support qwen3-coder model",
+              "Fix inline popup menu positioning to not cover text selection or interrupt text selection behavior"
+            ],
+            "demand_score": 0.19530775370308165,
+            "rising_score": 1,
+            "volume": 4,
+            "open_count": 3,
+            "closed_count": 1,
+            "avg_reactions": 2.5,
+            "avg_comments": 4.8,
+            "date_first_seen": "2025-08-01T03:09:25.000Z",
+            "date_last_seen": "2026-01-04T10:59:42.000Z",
+            "repos_affected": [
+              "voideditor/void"
+            ]
+          },
+          {
+            "cluster_id": "73e740da4b38",
+            "title": "Chat Panel UI Enhancements and Bug Fixes",
+            "summary": "Users want improvements to the chat panel interface, including fixing a CSS bug where file drag-and-drop overlays fail to display due to missing positioning. Additionally, they want new UI features like parallel tool calling, web search integration, image attachments, thinking process visualization, tool call pending animations, and improved search functionality.",
+            "category": "UI/UX",
+            "representative_need": "Add parallel tool calling, web search tool, image attachments, thinking process display, tool call pending animation, and regex search improvements",
+            "issue_numbers": [
+              925,
+              877
+            ],
+            "issue_urls": [
+              "https://github.com/voideditor/void/issues/925",
+              "https://github.com/voideditor/void/issues/877"
+            ],
+            "sample_titles": [
+              "Add parallel tool calling, web search tool, image attachments, thinking process display, tool call pending animation, and regex search improvements",
+              "Fix file drag-and-drop overlay not displaying in chat panel due to missing CSS position: relative"
+            ],
+            "demand_score": 0.1798911341588057,
+            "rising_score": 1,
+            "volume": 2,
+            "open_count": 2,
+            "closed_count": 0,
+            "avg_reactions": 1,
+            "avg_comments": 1,
+            "date_first_seen": "2025-08-19T11:19:53.000Z",
+            "date_last_seen": "2025-12-11T05:00:45.000Z",
+            "repos_affected": [
+              "voideditor/void"
+            ]
+          },
+          {
+            "cluster_id": "15658d8b4350",
+            "title": "Fix Gemini API integration bugs",
+            "summary": "Users are experiencing bugs in the Gemini API integration including broken request handling when proxying through OpenAI-compatible endpoints with specific settings, and invalid function name generation when .voidrules is empty. These issues prevent proper functionality in AI provider integrations.",
+            "category": "Integration",
+            "representative_need": "Fix invalid function name generation in Gemini API integration when .voidrules is empty",
+            "issue_numbers": [
+              902,
+              874
+            ],
+            "issue_urls": [
+              "https://github.com/voideditor/void/issues/902",
+              "https://github.com/voideditor/void/issues/874"
+            ],
+            "sample_titles": [
+              "Fix invalid function name generation in Gemini API integration when .voidrules is empty",
+              "Fix request handling for OpenAI-compatible endpoints that proxy to Gemini when using 'supportsSystemMessage' and 'specialToolFormat' settings"
+            ],
+            "demand_score": 0.15656858580296834,
+            "rising_score": 1,
+            "volume": 2,
+            "open_count": 2,
+            "closed_count": 0,
+            "avg_reactions": 0.5,
+            "avg_comments": 1,
+            "date_first_seen": "2025-08-18T15:38:52.000Z",
+            "date_last_seen": "2025-09-18T04:02:02.000Z",
+            "repos_affected": [
+              "voideditor/void"
+            ]
+          },
+          {
+            "cluster_id": "46991fcc24d1",
+            "title": "LLM Provider Configuration and Model Support",
+            "summary": "Users need improved support and configuration options for various LLM providers including Gemini, GPT-OSS, and LM Studio. These issues involve fixing model selection, supporting non-standard model tags, and enabling file access for local models. This improves flexibility for users working with different LLM ecosystems.",
+            "category": "Configuration",
+            "representative_need": "Add support for non-standard GPT-OSS model tags",
+            "issue_numbers": [
+              893,
+              889,
+              865
+            ],
+            "issue_urls": [
+              "https://github.com/voideditor/void/issues/893",
+              "https://github.com/voideditor/void/issues/889",
+              "https://github.com/voideditor/void/issues/865"
+            ],
+            "sample_titles": [
+              "Add support for non-standard GPT-OSS model tags",
+              "Fix Gemini model configuration to use available models",
+              "Fix local LLM file access via LM Studio provider"
+            ],
+            "demand_score": 0.14591577732226674,
+            "rising_score": 1,
+            "volume": 3,
+            "open_count": 0,
+            "closed_count": 3,
+            "avg_reactions": 1,
+            "avg_comments": 1,
+            "date_first_seen": "2025-08-07T16:20:10.000Z",
+            "date_last_seen": "2025-08-31T23:09:41.000Z",
+            "repos_affected": [
+              "voideditor/void"
+            ]
+          }
+        ],
+        "category_breakdown": {
+          "Configuration": 3,
+          "UI/UX": 2,
+          "Integration": 3,
+          "Developer Experience": 3
+        }
+      }
+    },
+    {
       "repo": "opencode-ai/opencode",
       "slug": "opencode-ai-opencode",
       "displayName": "OpenCode",
@@ -5917,8 +7544,11 @@
     "openai-codex": [],
     "cline-cline": [],
     "google-gemini-gemini-cli": [],
+    "zed-industries-zed": [],
     "block-goose": [],
     "continuedev-continue": [],
+    "microsoft-vscode-copilot-release": [],
+    "voideditor-void": [],
     "opencode-ai-opencode": []
   }
 }

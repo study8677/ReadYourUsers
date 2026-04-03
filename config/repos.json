@@ -87,6 +87,30 @@
       "include_in_homepage": true,
       "weight": 0.9,
       "notes": "Open-source AI coding assistant with CI and editor workflows"
+    },
+    {
+      "repo": "microsoft/vscode-copilot-release",
+      "display_name": "GitHub Copilot Chat for VS Code",
+      "category": "AI Coding Assistant",
+      "include_in_homepage": true,
+      "weight": 0.9,
+      "notes": "Public feedback repo for GitHub Copilot Chat in VS Code"
+    },
+    {
+      "repo": "voideditor/void",
+      "display_name": "Void",
+      "category": "AI Code Editor",
+      "include_in_homepage": true,
+      "weight": 0.9,
+      "notes": "Open-source AI editor with public issues and active demand signals"
+    },
+    {
+      "repo": "zed-industries/zed",
+      "display_name": "Zed",
+      "category": "AI Code Editor",
+      "include_in_homepage": true,
+      "weight": 0.8,
+      "notes": "High-growth editor with active AI assistant and copilot-related issue traffic"
     }
   ]
 }

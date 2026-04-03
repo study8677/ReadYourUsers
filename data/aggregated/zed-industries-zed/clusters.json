@@ -1,0 +1,314 @@
+{
+  "repo": "zed-industries/zed",
+  "display_name": "Zed",
+  "generated_at": "2026-04-03T18:11:20.144Z",
+  "window_start": "2026-03-04T18:11:20.144Z",
+  "window_end": "2026-04-03T18:11:20.144Z",
+  "total_issues_analyzed": 37,
+  "total_issues_included": 37,
+  "clusters": [
+    {
+      "cluster_id": "eec28e4ffff9",
+      "title": "Bug Fixes and Edge Case Improvements",
+      "summary": "This cluster addresses various bug fixes across the editor including Docker Compose integration issues (port and label deserialization), platform-specific problems (Flatpak Rust toolchain, Windows UNC paths), UI state persistence (settings, themes), AI agent integration (authentication, auto-approval mode), and developer tooling (syntax highlighting, Python LSP, CI testing). Users are experiencing broken functionality in these edge cases that impact their daily workflow.",
+      "category": "Developer Experience",
+      "representative_need": "Add selective crate testing based on dependency graph analysis to CI pipeline",
+      "issue_numbers": [
+        53087,
+        53081,
+        53059,
+        53055,
+        53054,
+        53048,
+        53042,
+        53027,
+        53025,
+        53011,
+        53007,
+        53000,
+        52984
+      ],
+      "issue_urls": [
+        "https://github.com/zed-industries/zed/issues/53087",
+        "https://github.com/zed-industries/zed/issues/53081",
+        "https://github.com/zed-industries/zed/issues/53059",
+        "https://github.com/zed-industries/zed/issues/53055",
+        "https://github.com/zed-industries/zed/issues/53054",
+        "https://github.com/zed-industries/zed/issues/53048",
+        "https://github.com/zed-industries/zed/issues/53042",
+        "https://github.com/zed-industries/zed/issues/53027",
+        "https://github.com/zed-industries/zed/issues/53025",
+        "https://github.com/zed-industries/zed/issues/53011",
+        "https://github.com/zed-industries/zed/issues/53007",
+        "https://github.com/zed-industries/zed/issues/53000",
+        "https://github.com/zed-industries/zed/issues/52984"
+      ],
+      "sample_titles": [
+        "Add selective crate testing based on dependency graph analysis to CI pipeline",
+        "Fix Docker Compose labels deserialization to handle map format from docker compose config output",
+        "Fix Python LSP not detecting newly added module attributes without requiring LSP restart"
+      ],
+      "demand_score": 3.5739615287244333,
+      "rising_score": 14,
+      "volume": 13,
+      "open_count": 9,
+      "closed_count": 4,
+      "avg_reactions": 0,
+      "avg_comments": 1.4,
+      "date_first_seen": "2026-04-02T11:19:55.000Z",
+      "date_last_seen": "2026-04-03T17:39:41.000Z",
+      "repos_affected": [
+        "zed-industries/zed"
+      ]
+    },
+    {
+      "cluster_id": "0e560ed25565",
+      "title": "Git Panel and Graph Bug Fixes",
+      "summary": "Users are reporting multiple bugs in the Git integration features, including UI display issues (incorrect branch names, inaccurate diff stats), stability problems (crashes, memory leaks, infinite loading), and refresh/ reload issues. These problems degrade the developer experience when using version control features, particularly in remote project scenarios like WSL.",
+      "category": "Reliability",
+      "representative_need": "Fix Git Graph loading indefinitely in remote projects (WSL)",
+      "issue_numbers": [
+        53080,
+        53069,
+        53064,
+        53061,
+        53040,
+        53015,
+        53009
+      ],
+      "issue_urls": [
+        "https://github.com/zed-industries/zed/issues/53080",
+        "https://github.com/zed-industries/zed/issues/53069",
+        "https://github.com/zed-industries/zed/issues/53064",
+        "https://github.com/zed-industries/zed/issues/53061",
+        "https://github.com/zed-industries/zed/issues/53040",
+        "https://github.com/zed-industries/zed/issues/53015",
+        "https://github.com/zed-industries/zed/issues/53009"
+      ],
+      "sample_titles": [
+        "Fix Git Graph loading indefinitely in remote projects (WSL)",
+        "Fix Git panel incorrectly showing '(no branch)' when a valid branch exists",
+        "Fix crash when opening diff view from git panel"
+      ],
+      "demand_score": 2.7840421213246525,
+      "rising_score": 8,
+      "volume": 7,
+      "open_count": 6,
+      "closed_count": 1,
+      "avg_reactions": 0,
+      "avg_comments": 2,
+      "date_first_seen": "2026-04-02T16:33:43.000Z",
+      "date_last_seen": "2026-04-03T16:42:41.000Z",
+      "repos_affected": [
+        "zed-industries/zed"
+      ]
+    },
+    {
+      "cluster_id": "6bd878d4a517",
+      "title": "AI Agent Integration Fixes",
+      "summary": "Users are experiencing various integration issues with the AI agent system, including provider-specific requirements not being met (such as Mistral's ID format constraints), UI rendering problems with text inputs, and failures when using custom APIs. These fixes aim to improve compatibility across different AI providers and ensure reliable operation of subagent functionality.",
+      "category": "Integration",
+      "representative_need": "Fix subagent invocation failure when using custom APIs with AI models",
+      "issue_numbers": [
+        53034,
+        53006,
+        52983
+      ],
+      "issue_urls": [
+        "https://github.com/zed-industries/zed/issues/53034",
+        "https://github.com/zed-industries/zed/issues/53006",
+        "https://github.com/zed-industries/zed/issues/52983"
+      ],
+      "sample_titles": [
+        "Fix subagent invocation failure when using custom APIs with AI models",
+        "Fix textarea expansion limit in AI agent prompt view",
+        "Generate provider-specific tool call IDs that conform to each AI provider's requirements (e.g., Mistral requires exactly 9 alphanumeric characters)"
+      ],
+      "demand_score": 2.224314037577237,
+      "rising_score": 4,
+      "volume": 3,
+      "open_count": 1,
+      "closed_count": 2,
+      "avg_reactions": 0.7,
+      "avg_comments": 2.7,
+      "date_first_seen": "2026-04-02T11:11:48.000Z",
+      "date_last_seen": "2026-04-03T01:06:26.000Z",
+      "repos_affected": [
+        "zed-industries/zed"
+      ]
+    },
+    {
+      "cluster_id": "c8c6c8c48b77",
+      "title": "Agent Panel Stability and Usability Fixes",
+      "summary": "Users are experiencing critical reliability issues with the CoPilot Agent panel, including PowerShell commands hanging on Windows, crashes when pasting images with queued messages, and session state not properly restoring on project reopen. These fixes address platform compatibility, crash prevention, UI responsiveness, and data persistence to improve the overall stability of the agent workflow.",
+      "category": "Developer Experience",
+      "representative_need": "Fix CoPilot Agent PowerShell command hanging on Windows with Microsoft Store-installed PowerShell",
+      "issue_numbers": [
+        53072,
+        53070,
+        53021,
+        52993
+      ],
+      "issue_urls": [
+        "https://github.com/zed-industries/zed/issues/53072",
+        "https://github.com/zed-industries/zed/issues/53070",
+        "https://github.com/zed-industries/zed/issues/53021",
+        "https://github.com/zed-industries/zed/issues/52993"
+      ],
+      "sample_titles": [
+        "Fix CoPilot Agent PowerShell command hanging on Windows with Microsoft Store-installed PowerShell",
+        "Fix agent thread session restoration to properly restore the last active thread on project reopen",
+        "Fix crash when pasting images into agent panel while messages are queued"
+      ],
+      "demand_score": 1.9863925130958773,
+      "rising_score": 5,
+      "volume": 4,
+      "open_count": 4,
+      "closed_count": 0,
+      "avg_reactions": 0,
+      "avg_comments": 0.5,
+      "date_first_seen": "2026-04-02T14:26:36.000Z",
+      "date_last_seen": "2026-04-03T14:12:08.000Z",
+      "repos_affected": [
+        "zed-industries/zed"
+      ]
+    },
+    {
+      "cluster_id": "4fbc6d9552a9",
+      "title": "Immediate Keybinding and Settings Reload",
+      "summary": "Users want keybindings and settings changes to apply immediately without requiring a restart. Currently, changes made via the settings file or UI don't take effect until the application is restarted, disrupting workflow efficiency. This hot reloading capability is essential for a smooth configuration experience.",
+      "category": "Configuration",
+      "representative_need": "Fix hot reloading of settings and keybinding changes to apply immediately without restart",
+      "issue_numbers": [
+        53012,
+        53003
+      ],
+      "issue_urls": [
+        "https://github.com/zed-industries/zed/issues/53012",
+        "https://github.com/zed-industries/zed/issues/53003"
+      ],
+      "sample_titles": [
+        "Fix hot reloading of settings and keybinding changes to apply immediately without restart",
+        "Fix keybindings not updating immediately when changed via settings file or UI"
+      ],
+      "demand_score": 1.835006392950302,
+      "rising_score": 3,
+      "volume": 2,
+      "open_count": 2,
+      "closed_count": 0,
+      "avg_reactions": 0.5,
+      "avg_comments": 3,
+      "date_first_seen": "2026-04-02T16:08:56.000Z",
+      "date_last_seen": "2026-04-02T16:44:42.000Z",
+      "repos_affected": [
+        "zed-industries/zed"
+      ]
+    },
+    {
+      "cluster_id": "26fd137842ef",
+      "title": "Fix editor rendering and font loading bugs",
+      "summary": "Users are encountering bugs that degrade the code editing visual experience. Specifically, semantic token highlighting fails to apply correctly when buffers are opened from multibuffers, and font loading doesn't properly prioritize system-installed fonts over bundled alternatives. These issues affect code clarity and visual consistency.",
+      "category": "Developer Experience",
+      "representative_need": "Fix font loading to prioritize system-installed fonts over built-in bundled fonts",
+      "issue_numbers": [
+        53051,
+        52987
+      ],
+      "issue_urls": [
+        "https://github.com/zed-industries/zed/issues/53051",
+        "https://github.com/zed-industries/zed/issues/52987"
+      ],
+      "sample_titles": [
+        "Fix font loading to prioritize system-installed fonts over built-in bundled fonts",
+        "Fix semantic token highlighting not being applied when buffers are opened from multibuffers"
+      ],
+      "demand_score": 1.2382350770943602,
+      "rising_score": 3,
+      "volume": 2,
+      "open_count": 2,
+      "closed_count": 0,
+      "avg_reactions": 0.5,
+      "avg_comments": 1,
+      "date_first_seen": "2026-04-02T12:31:59.000Z",
+      "date_last_seen": "2026-04-03T07:12:11.000Z",
+      "repos_affected": [
+        "zed-industries/zed"
+      ]
+    },
+    {
+      "cluster_id": "02ad93666ec3",
+      "title": "Terminal interaction and shell command fixes",
+      "summary": "Users are reporting issues with terminal functionality including focus management when switching between terminals, proper quoting of shell arguments with special characters, and keyboard input handling for text selection. These fixes aim to improve the reliability and usability of terminal interactions for developers.",
+      "category": "Developer Experience",
+      "representative_need": "Fix shell command building to properly quote arguments containing metacharacters like $",
+      "issue_numbers": [
+        53056,
+        53046,
+        52985
+      ],
+      "issue_urls": [
+        "https://github.com/zed-industries/zed/issues/53056",
+        "https://github.com/zed-industries/zed/issues/53046",
+        "https://github.com/zed-industries/zed/issues/52985"
+      ],
+      "sample_titles": [
+        "Fix shell command building to properly quote arguments containing metacharacters like $",
+        "Fix terminal focus not being set when switching between terminals via hotkey",
+        "Pass shift-home and shift-end keystrokes to the terminal when unbound, enabling line text selection"
+      ],
+      "demand_score": 1.1904323365389409,
+      "rising_score": 4,
+      "volume": 3,
+      "open_count": 3,
+      "closed_count": 0,
+      "avg_reactions": 0,
+      "avg_comments": 2,
+      "date_first_seen": "2026-04-02T12:16:16.000Z",
+      "date_last_seen": "2026-04-03T08:21:21.000Z",
+      "repos_affected": [
+        "zed-industries/zed"
+      ]
+    },
+    {
+      "cluster_id": "ad2a1f69993a",
+      "title": "UI/UX Bug Fixes",
+      "summary": "Users are experiencing several interface issues where UI elements don't behave as expected. Today's sessions fail to appear in preview lists, Markdown syntax breaks filename display in confirmation dialogs, and theme changes don't apply immediately when toggling modes. These bugs reduce the overall polish and reliability of the user experience.",
+      "category": "UI/UX",
+      "representative_need": "Escape or disable Markdown syntax interpretation in confirmation dialogs when displaying filenames",
+      "issue_numbers": [
+        53062,
+        53060,
+        53005
+      ],
+      "issue_urls": [
+        "https://github.com/zed-industries/zed/issues/53062",
+        "https://github.com/zed-industries/zed/issues/53060",
+        "https://github.com/zed-industries/zed/issues/53005"
+      ],
+      "sample_titles": [
+        "Escape or disable Markdown syntax interpretation in confirmation dialogs when displaying filenames",
+        "Fix ACP history to display today's sessions in the preview list",
+        "Fix theme changes to apply immediately when toggling modes"
+      ],
+      "demand_score": 0.993668803336767,
+      "rising_score": 4,
+      "volume": 3,
+      "open_count": 3,
+      "closed_count": 0,
+      "avg_reactions": 0,
+      "avg_comments": 3,
+      "date_first_seen": "2026-04-02T16:11:35.000Z",
+      "date_last_seen": "2026-04-03T11:16:26.000Z",
+      "repos_affected": [
+        "zed-industries/zed"
+      ]
+    }
+  ],
+  "category_breakdown": {
+    "Developer Experience": 4,
+    "Reliability": 1,
+    "Integration": 1,
+    "Configuration": 1,
+    "UI/UX": 1
+  }
+}

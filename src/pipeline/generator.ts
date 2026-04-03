@@ -486,6 +486,9 @@ README.zh.md
 | [google-gemini/gemini-cli](https://github.com/google-gemini/gemini-cli) | Gemini CLI | AI Coding Agent |
 | [RooCodeInc/Roo-Code](https://github.com/RooCodeInc/Roo-Code) | Roo Code | AI Coding Agent |
 | [continuedev/continue](https://github.com/continuedev/continue) | Continue | AI Coding Assistant |
+| [microsoft/vscode-copilot-release](https://github.com/microsoft/vscode-copilot-release) | GitHub Copilot Chat for VS Code | AI Coding Assistant |
+| [voideditor/void](https://github.com/voideditor/void) | Void | AI Code Editor |
+| [zed-industries/zed](https://github.com/zed-industries/zed) | Zed | AI Code Editor |
 
 ## Limits
 
@@ -662,6 +665,9 @@ README.zh.md
 | [google-gemini/gemini-cli](https://github.com/google-gemini/gemini-cli) | Gemini CLI | AI 编程 Agent |
 | [RooCodeInc/Roo-Code](https://github.com/RooCodeInc/Roo-Code) | Roo Code | AI 编程 Agent |
 | [continuedev/continue](https://github.com/continuedev/continue) | Continue | AI 编程助手 |
+| [microsoft/vscode-copilot-release](https://github.com/microsoft/vscode-copilot-release) | GitHub Copilot Chat for VS Code | AI 编程助手 |
+| [voideditor/void](https://github.com/voideditor/void) | Void | AI 代码编辑器 |
+| [zed-industries/zed](https://github.com/zed-industries/zed) | Zed | AI 代码编辑器 |
 
 ## 局限
 

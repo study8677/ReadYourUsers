@@ -16,33 +16,34 @@ ReadYourUsers 是一个 TypeScript 工作流和公开的多产品观测站，用
 
 <!-- READYOURUSERS:START -->
 
-## 实时快照 — Continue
+## 实时快照 — Zed
 
-> 基于 [continuedev/continue](https://github.com/continuedev/continue) 的 38 条 issue · 7 个需求簇 · 更新于 2026-04-03
+> 基于 [zed-industries/zed](https://github.com/zed-industries/zed) 的 37 条 issue · 8 个需求簇 · 更新于 2026-04-03
 
 ### 当前最强需求
 
 | 排名 | 需求 | Issue 数 | 得分 | 分类 | 示例 |
 | --- | --- | --- | --- | --- | --- |
-| 1 | Bug Fixes and Documentation for Multi-Provider Integration | 11 | 2.1 | Developer Experience | [#11999](https://github.com/continuedev/continue/issues/11999), [#11985](https://github.com/continuedev/continue/issues/11985), [#11978](https://github.com/continuedev/continue/issues/11978) |
-| 2 | Document config profiles and improve API error handling | 7 | 1.9 | Developer Experience | [#12026](https://github.com/continuedev/continue/issues/12026), [#12004](https://github.com/continuedev/continue/issues/12004), [#11968](https://github.com/continuedev/continue/issues/11968) |
-| 3 | Fix API Provider Authentication and Key Configuration | 4 | 1.9 | Configuration | [#12008](https://github.com/continuedev/continue/issues/12008), [#11961](https://github.com/continuedev/continue/issues/11961), [#11956](https://github.com/continuedev/continue/issues/11956) |
-| 4 | Fix Response Streaming and Error Handling Bugs | 4 | 1.9 | Reliability | [#11994](https://github.com/continuedev/continue/issues/11994), [#11983](https://github.com/continuedev/continue/issues/11983), [#11926](https://github.com/continuedev/continue/issues/11926) |
-| 5 | Fix IDE stability and reliability issues | 3 | 1.4 | Reliability | [#11959](https://github.com/continuedev/continue/issues/11959), [#11932](https://github.com/continuedev/continue/issues/11932), [#11919](https://github.com/continuedev/continue/issues/11919) |
-| 6 | Fix Tool Calling Reliability Across AI Providers | 3 | 0.0 | Reliability | [#11976](https://github.com/continuedev/continue/issues/11976), [#11964](https://github.com/continuedev/continue/issues/11964), [#11929](https://github.com/continuedev/continue/issues/11929) |
-| 7 | Fix IntelliJ extension resource limits and CPU usage | 2 | 0.0 | Performance | [#11977](https://github.com/continuedev/continue/issues/11977), [#11966](https://github.com/continuedev/continue/issues/11966) |
+| 1 | Bug Fixes and Edge Case Improvements | 13 | 3.6 | Developer Experience | [#53087](https://github.com/zed-industries/zed/issues/53087), [#53081](https://github.com/zed-industries/zed/issues/53081), [#53059](https://github.com/zed-industries/zed/issues/53059) |
+| 2 | Git Panel and Graph Bug Fixes | 7 | 2.8 | Reliability | [#53080](https://github.com/zed-industries/zed/issues/53080), [#53069](https://github.com/zed-industries/zed/issues/53069), [#53064](https://github.com/zed-industries/zed/issues/53064) |
+| 3 | AI Agent Integration Fixes | 3 | 2.2 | Integration | [#53034](https://github.com/zed-industries/zed/issues/53034), [#53006](https://github.com/zed-industries/zed/issues/53006), [#52983](https://github.com/zed-industries/zed/issues/52983) |
+| 4 | Agent Panel Stability and Usability Fixes | 4 | 2.0 | Developer Experience | [#53072](https://github.com/zed-industries/zed/issues/53072), [#53070](https://github.com/zed-industries/zed/issues/53070), [#53021](https://github.com/zed-industries/zed/issues/53021) |
+| 5 | Immediate Keybinding and Settings Reload | 2 | 1.8 | Configuration | [#53012](https://github.com/zed-industries/zed/issues/53012), [#53003](https://github.com/zed-industries/zed/issues/53003) |
+| 6 | Fix editor rendering and font loading bugs | 2 | 1.2 | Developer Experience | [#53051](https://github.com/zed-industries/zed/issues/53051), [#52987](https://github.com/zed-industries/zed/issues/52987) |
+| 7 | Terminal interaction and shell command fixes | 3 | 1.2 | Developer Experience | [#53056](https://github.com/zed-industries/zed/issues/53056), [#53046](https://github.com/zed-industries/zed/issues/53046), [#52985](https://github.com/zed-industries/zed/issues/52985) |
+| 8 | UI/UX Bug Fixes | 3 | 1.0 | UI/UX | [#53062](https://github.com/zed-industries/zed/issues/53062), [#53060](https://github.com/zed-industries/zed/issues/53060), [#53005](https://github.com/zed-industries/zed/issues/53005) |
 
 ### 上升最快
 
 | 需求 | 上升倍率 | 本周 | 分类 |
 | --- | --- | --- | --- |
-| Document config profiles and improve API error handling | 8.0x | 7 | Developer Experience |
-| Fix API Provider Authentication and Key Configuration | 5.0x | 4 | Configuration |
-| Fix IntelliJ extension resource limits and CPU usage | 3.0x | 2 | Performance |
-| Bug Fixes and Documentation for Multi-Provider Integration | 1.6x | 11 | Developer Experience |
-| Fix IDE stability and reliability issues | 1.5x | 3 | Reliability |
+| Bug Fixes and Edge Case Improvements | 14.0x | 13 | Developer Experience |
+| Git Panel and Graph Bug Fixes | 8.0x | 7 | Reliability |
+| Agent Panel Stability and Usability Fixes | 5.0x | 4 | Developer Experience |
+| AI Agent Integration Fixes | 4.0x | 3 | Integration |
+| Terminal interaction and shell command fixes | 4.0x | 3 | Developer Experience |
 
-[观测站](https://study8677.github.io/ReadYourUsers/) | [对比页](https://study8677.github.io/ReadYourUsers/zh/compare/index.html) | [产品页](https://study8677.github.io/ReadYourUsers/zh/products/continuedev-continue.html) | [完整报告](reports/latest/continuedev-continue.zh.md) | [English](README.md) | *基于公开 GitHub Issues，代表需求信号而非全部用户声音。*
+[观测站](https://study8677.github.io/ReadYourUsers/) | [对比页](https://study8677.github.io/ReadYourUsers/zh/compare/index.html) | [产品页](https://study8677.github.io/ReadYourUsers/zh/products/zed-industries-zed.html) | [完整报告](reports/latest/zed-industries-zed.zh.md) | [English](README.md) | *基于公开 GitHub Issues，代表需求信号而非全部用户声音。*
 
 <!-- READYOURUSERS:END -->
 
@@ -147,6 +148,9 @@ README.zh.md
 | [google-gemini/gemini-cli](https://github.com/google-gemini/gemini-cli) | Gemini CLI | AI 编程 Agent |
 | [RooCodeInc/Roo-Code](https://github.com/RooCodeInc/Roo-Code) | Roo Code | AI 编程 Agent |
 | [continuedev/continue](https://github.com/continuedev/continue) | Continue | AI 编程助手 |
+| [microsoft/vscode-copilot-release](https://github.com/microsoft/vscode-copilot-release) | GitHub Copilot Chat for VS Code | AI 编程助手 |
+| [voideditor/void](https://github.com/voideditor/void) | Void | AI 代码编辑器 |
+| [zed-industries/zed](https://github.com/zed-industries/zed) | Zed | AI 代码编辑器 |
 
 ## 局限
 
