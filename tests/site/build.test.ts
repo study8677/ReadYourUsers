@@ -235,6 +235,9 @@ describe("site build", () => {
     expect(productHtml).toContain("MCP reliability");
     expect(toolsHtml).toContain("All tools in the observatory");
     expect(toolsHtml).toContain("OpenAI Codex CLI");
+    expect(toolsHtml).toContain("Overall heat");
+    expect(toolsHtml).toContain("Rising fastest");
+    expect(toolsHtml).toContain("Most discussed");
     expect(zhProductHtml).toContain("Claude Code");
     expect(productHtml).toContain("../../en/latest/anthropics-claude-code.html");
   });

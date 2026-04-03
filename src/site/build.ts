@@ -121,6 +121,12 @@ const ui = {
     toolsIntroCopy: "Browse every tool currently covered by the public issue observatory, then jump into its product page or latest report.",
     toolsAllTitle: "Tracked tools",
     toolsViewProduct: "Product page",
+    toolsOverallTitle: "Overall heat",
+    toolsRisingTitle: "Rising fastest",
+    toolsDiscussedTitle: "Most discussed",
+    toolsMetricDemand: "Demand",
+    toolsMetricRising: "Rising",
+    toolsMetricVolume: "Issues",
     productEyebrow: "Product snapshot",
     productTopNeed: "Top need",
     productRisingNeed: "Rising need",
@@ -221,6 +227,12 @@ const ui = {
     toolsIntroCopy: "查看当前观测站覆盖的全部工具，并跳转到产品页或最新报告。",
     toolsAllTitle: "全部工具",
     toolsViewProduct: "产品页",
+    toolsOverallTitle: "综合热度",
+    toolsRisingTitle: "上升最快",
+    toolsDiscussedTitle: "讨论最多",
+    toolsMetricDemand: "需求",
+    toolsMetricRising: "上升",
+    toolsMetricVolume: "Issue",
     productEyebrow: "产品快照",
     productTopNeed: "头号需求",
     productRisingNeed: "上升需求",
@@ -972,6 +984,60 @@ function buildComparePage(
 function buildToolsPage(uiLang: UiLang, visibleProducts: ProductSummaryCard[]): string {
   const t = ui[uiLang];
   const base = prefix(2);
+  const risingValue = (product: ProductSummaryCard): number =>
+    product.risingNeed?.rising_score === Infinity
+      ? 999
+      : (product.risingNeed?.rising_score ?? -1);
+  const overallValue = (product: ProductSummaryCard): number =>
+    (product.topNeed?.demand_score ?? 0) +
+    Math.min(risingValue(product), 20) * 0.35 +
+    Math.log10(product.totalIssuesIncluded + 1);
+  const sortByText = (left: ProductSummaryCard, right: ProductSummaryCard): number =>
+    left.displayName.localeCompare(right.displayName, "en");
+  const byOverall = [...visibleProducts]
+    .sort(
+      (left, right) =>
+        overallValue(right) - overallValue(left) ||
+        (right.topNeed?.demand_score ?? 0) - (left.topNeed?.demand_score ?? 0) ||
+        right.totalIssuesIncluded - left.totalIssuesIncluded ||
+        sortByText(left, right)
+    )
+    .slice(0, 5);
+  const byRising = [...visibleProducts]
+    .filter((product) => product.risingNeed)
+    .sort(
+      (left, right) =>
+        risingValue(right) - risingValue(left) ||
+        (right.topNeed?.demand_score ?? 0) - (left.topNeed?.demand_score ?? 0) ||
+        sortByText(left, right)
+    )
+    .slice(0, 5);
+  const byDiscussed = [...visibleProducts]
+    .sort(
+      (left, right) =>
+        right.totalIssuesIncluded - left.totalIssuesIncluded ||
+        (right.topNeed?.volume ?? 0) - (left.topNeed?.volume ?? 0) ||
+        sortByText(left, right)
+    )
+    .slice(0, 5);
+
+  const leaderboard = (
+    title: string,
+    products: ProductSummaryCard[],
+    metric: (product: ProductSummaryCard) => string
+  ) =>
+    `<section class="panel compact">
+      <div class="panel-header"><h2>${title}</h2></div>
+      <ol class="link-list">
+        ${products
+          .map(
+            (product) =>
+              `<li><strong><a href="../products/${product.slug}.html">${escapeHtml(product.displayName)}</a></strong><span>${metric(product)}</span></li>`
+          )
+          .join("")}
+      </ol>
+    </section>`;
+
   const cards = visibleProducts
     .map((product) => {
       const topNeed = product.topNeed;
@@ -1002,6 +1068,26 @@ function buildToolsPage(uiLang: UiLang, visibleProducts: ProductSummaryCard[]): 
     .join("\n");
 
   const body = `<section class="page-intro"><p class="eyebrow">${t.toolsIntroEyebrow}</p><h1>${t.toolsIntroTitle}</h1><p>${t.toolsIntroCopy}</p></section>
+    <section class="section-grid">
+      ${leaderboard(
+        t.toolsOverallTitle,
+        byOverall,
+        (product) =>
+          `${t.toolsMetricDemand} ${(product.topNeed?.demand_score ?? 0).toFixed(1)} · ${t.toolsMetricRising} ${product.risingNeed ? formatRisingScore(product.risingNeed.rising_score) : "—"}`
+      )}
+      ${leaderboard(
+        t.toolsRisingTitle,
+        byRising,
+        (product) =>
+          `${t.toolsMetricRising} ${product.risingNeed ? formatRisingScore(product.risingNeed.rising_score) : "—"} · ${t.toolsMetricDemand} ${(product.topNeed?.demand_score ?? 0).toFixed(1)}`
+      )}
+      ${leaderboard(
+        t.toolsDiscussedTitle,
+        byDiscussed,
+        (product) =>
+          `${t.toolsMetricVolume} ${product.totalIssuesIncluded} · ${t.toolsMetricDemand} ${(product.topNeed?.demand_score ?? 0).toFixed(1)}`
+      )}
+    </section>
     <section class="panel">
       <div class="panel-header"><h2>${t.toolsAllTitle}</h2></div>
       <section class="repo-grid">${cards}</section>
