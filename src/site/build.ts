@@ -55,6 +55,7 @@ const ui = {
     navLatest: "Latest",
     navArchive: "Archive",
     navCompare: "Compare",
+    navTools: "Tools",
     navGitHub: "GitHub",
     footer: "Built from public GitHub issues. Signals, not a full census.",
     homeObservatoryEyebrow: "Cross-product observatory",
@@ -63,8 +64,10 @@ const ui = {
       "Track the strongest public needs across {count} products, compare shared themes, and drill into each product's latest demand map.",
     homeComparePrimary: "Compare products",
     homeLatestSecondary: "Browse latest reports",
+    homeToolsTertiary: "Browse all tools",
     homeProductsEyebrow: "Products",
-    homeProductsTitle: "Latest product snapshots",
+    homeProductsTitle: "Featured product snapshots",
+    homeProductsViewAll: "View all tracked tools",
     homeSignalsEyebrow: "Signals",
     homeSignalsTitle: "Hottest needs across products",
     homeThemesEyebrow: "Themes",
@@ -113,6 +116,11 @@ const ui = {
     compareSharedTitle: "Shared themes",
     compareUniqueTitle: "Unique themes",
     compareEmptyCopy: "Cross-product summaries will appear here after the summary artifact is generated.",
+    toolsIntroEyebrow: "Tracked tools",
+    toolsIntroTitle: "All tools in the observatory",
+    toolsIntroCopy: "Browse every tool currently covered by the public issue observatory, then jump into its product page or latest report.",
+    toolsAllTitle: "Tracked tools",
+    toolsViewProduct: "Product page",
     productEyebrow: "Product snapshot",
     productTopNeed: "Top need",
     productRisingNeed: "Rising need",
@@ -147,6 +155,7 @@ const ui = {
     navLatest: "最新",
     navArchive: "归档",
     navCompare: "对比",
+    navTools: "工具",
     navGitHub: "GitHub",
     footer: "基于公开 GitHub Issues 构建，代表信号而非完整普查。",
     homeObservatoryEyebrow: "跨产品观察站",
@@ -155,8 +164,10 @@ const ui = {
       "跨 {count} 个产品跟踪最强公开需求信号，对比共同主题，并继续下钻到每个产品的最新需求地图。",
     homeComparePrimary: "对比产品",
     homeLatestSecondary: "查看最新报告",
+    homeToolsTertiary: "查看全部工具",
     homeProductsEyebrow: "产品",
-    homeProductsTitle: "最新产品快照",
+    homeProductsTitle: "精选产品快照",
+    homeProductsViewAll: "查看全部已跟踪工具",
     homeSignalsEyebrow: "信号",
     homeSignalsTitle: "跨产品最热需求",
     homeThemesEyebrow: "主题",
@@ -205,6 +216,11 @@ const ui = {
     compareSharedTitle: "共同主题",
     compareUniqueTitle: "独有主题",
     compareEmptyCopy: "跨产品汇总产物生成后，这里会出现对比内容。",
+    toolsIntroEyebrow: "已跟踪工具",
+    toolsIntroTitle: "观测站工具目录",
+    toolsIntroCopy: "查看当前观测站覆盖的全部工具，并跳转到产品页或最新报告。",
+    toolsAllTitle: "全部工具",
+    toolsViewProduct: "产品页",
     productEyebrow: "产品快照",
     productTopNeed: "头号需求",
     productRisingNeed: "上升需求",
@@ -396,6 +412,7 @@ function pageTemplate(params: {
   const latestHref = `${base}/${routeFor(uiLang, "latest/index.html")}`;
   const archiveHref = `${base}/${routeFor(uiLang, "archive/index.html")}`;
   const compareHref = `${base}/${routeFor(uiLang, "compare/index.html")}`;
+  const toolsHref = `${base}/${routeFor(uiLang, "tools/index.html")}`;
   const altHref = `${base}/${alternateRoutePath}`;
 
   return `<!doctype html>
@@ -420,6 +437,7 @@ function pageTemplate(params: {
             <a href="${latestHref}">${t.navLatest}</a>
             <a href="${archiveHref}">${t.navArchive}</a>
             <a href="${compareHref}">${t.navCompare}</a>
+            <a href="${toolsHref}">${t.navTools}</a>
             <a href="${PROJECT_GITHUB_URL}">${t.navGitHub}</a>
           </nav>
           <a class="lang-switch" href="${altHref}">${uiLang === "en" ? t.switchToChinese : t.switchToEnglish}</a>
@@ -713,8 +731,9 @@ function buildObservatoryHomePage(
   const fallbackLeadNeed = visibleProducts[0]?.topNeed;
   const recentWeeks = Array.from(archiveWeeks.keys()).sort().reverse().slice(0, 8);
   const heroCopy = t.homeObservatoryCopy.replace("{count}", String(visibleProducts.length));
+  const featuredProducts = visibleProducts.slice(0, 6);
 
-  const productCards = visibleProducts
+  const productCards = featuredProducts
     .map((product) => {
       const topNeed = product.topNeed;
       const risingNeed = product.risingNeed;
@@ -767,6 +786,7 @@ function buildObservatoryHomePage(
         <div class="hero-actions">
           <a class="button primary" href="./compare/index.html">${t.homeComparePrimary}</a>
           <a class="button" href="./latest/index.html">${t.homeLatestSecondary}</a>
+          <a class="button" href="./tools/index.html">${t.homeToolsTertiary}</a>
         </div>
       </div>
       <div class="stats-grid">
@@ -816,6 +836,7 @@ function buildObservatoryHomePage(
             <p class="eyebrow">${t.homeProductsEyebrow}</p>
             <h2>${t.homeProductsTitle}</h2>
           </div>
+          <a href="./tools/index.html">${t.homeProductsViewAll}</a>
         </div>
         <section class="repo-grid">
           ${productCards}
@@ -945,6 +966,55 @@ function buildComparePage(
     depth: 2,
     routePath: routeFor(uiLang, "compare/index.html"),
     alternateRoutePath: routeFor(uiLang === "en" ? "zh" : "en", "compare/index.html"),
+  });
+}
+
+function buildToolsPage(uiLang: UiLang, visibleProducts: ProductSummaryCard[]): string {
+  const t = ui[uiLang];
+  const base = prefix(2);
+  const cards = visibleProducts
+    .map((product) => {
+      const topNeed = product.topNeed;
+      const risingNeed = product.risingNeed;
+
+      return `<article class="repo-card">
+        <div class="repo-card-head">
+          <h2><a href="../products/${product.slug}.html">${escapeHtml(product.displayName)}</a></h2>
+          <span>${formatDate(product.generatedAt)}</span>
+        </div>
+        <p>${escapeHtml(topNeed?.summary ?? "")}</p>
+        <div class="top-five-meta">
+          <span>${product.totalIssuesAnalyzed} ${t.repoCardIssues}</span>
+          <span>${product.totalClusters} ${t.repoCardClusters}</span>
+          <span>${escapeHtml(product.dominantCategory ?? "—")}</span>
+        </div>
+        <div class="report-links">
+          <a href="../products/${product.slug}.html">${t.toolsViewProduct}</a>
+          <a href="${base}/${routeFor(uiLang, `latest/${product.slug}.html`)}">${t.productLatestReport}</a>
+          ${
+            risingNeed
+              ? `<span>${t.productRisingNeed}: ${escapeHtml(shortTitle(risingNeed.title, 42))} (${formatRisingScore(risingNeed.rising_score)})</span>`
+              : ""
+          }
+        </div>
+      </article>`;
+    })
+    .join("\n");
+
+  const body = `<section class="page-intro"><p class="eyebrow">${t.toolsIntroEyebrow}</p><h1>${t.toolsIntroTitle}</h1><p>${t.toolsIntroCopy}</p></section>
+    <section class="panel">
+      <div class="panel-header"><h2>${t.toolsAllTitle}</h2></div>
+      <section class="repo-grid">${cards}</section>
+    </section>`;
+
+  return pageTemplate({
+    uiLang,
+    title: `${t.navTools} — ${t.siteName}`,
+    description: t.toolsIntroCopy,
+    body,
+    depth: 2,
+    routePath: routeFor(uiLang, "tools/index.html"),
+    alternateRoutePath: routeFor(uiLang === "en" ? "zh" : "en", "tools/index.html"),
   });
 }
 
@@ -1369,6 +1439,11 @@ export function buildSite(rootDir = process.cwd()): void {
     writeText(
       absoluteSitePath(paths.siteDir, routeFor(uiLang, "compare/index.html")),
       buildComparePage(uiLang, summary, visibleProducts)
+    );
+
+    writeText(
+      absoluteSitePath(paths.siteDir, routeFor(uiLang, "tools/index.html")),
+      buildToolsPage(uiLang, visibleProducts)
     );
 
     for (const product of visibleProducts) {

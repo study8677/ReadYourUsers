@@ -217,6 +217,10 @@ describe("site build", () => {
       resolve(root, "site", "en", "products", "anthropics-claude-code.html"),
       "utf-8"
     );
+    const toolsHtml = readFileSync(
+      resolve(root, "site", "en", "tools", "index.html"),
+      "utf-8"
+    );
     const zhProductHtml = readFileSync(
       resolve(root, "site", "zh", "products", "anthropics-claude-code.html"),
       "utf-8"
@@ -225,9 +229,12 @@ describe("site build", () => {
     expect(compareHtml).toContain("Compare");
     expect(compareHtml).toContain("Agent workflow control");
     expect(compareHtml).toContain("Claude Code");
+    expect(compareHtml).toContain(">Tools<");
     expect(zhCompareHtml).toContain("Claude Code");
     expect(productHtml).toContain("Claude Code");
     expect(productHtml).toContain("MCP reliability");
+    expect(toolsHtml).toContain("All tools in the observatory");
+    expect(toolsHtml).toContain("OpenAI Codex CLI");
     expect(zhProductHtml).toContain("Claude Code");
     expect(productHtml).toContain("../../en/latest/anthropics-claude-code.html");
   });
