@@ -63,6 +63,30 @@
       "include_in_homepage": true,
       "weight": 0.8,
       "notes": "Cross-platform open-source AI assistant requested for observatory coverage"
+    },
+    {
+      "repo": "google-gemini/gemini-cli",
+      "display_name": "Gemini CLI",
+      "category": "AI Coding Assistant",
+      "include_in_homepage": true,
+      "weight": 1.0,
+      "notes": "Google's open-source terminal AI coding agent"
+    },
+    {
+      "repo": "RooCodeInc/Roo-Code",
+      "display_name": "Roo Code",
+      "category": "AI Coding Assistant",
+      "include_in_homepage": true,
+      "weight": 1.0,
+      "notes": "Editor-based multi-agent AI dev team"
+    },
+    {
+      "repo": "continuedev/continue",
+      "display_name": "Continue",
+      "category": "AI Coding Assistant",
+      "include_in_homepage": true,
+      "weight": 0.9,
+      "notes": "Open-source AI coding assistant with CI and editor workflows"
     }
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-03T13:21:31.317Z",
+  "generatedAt": "2026-04-03T14:05:32.072Z",
   "products": [
     {
       "repo": "anthropics/claude-code",
@@ -1804,6 +1804,485 @@
       }
     },
     {
+      "repo": "RooCodeInc/Roo-Code",
+      "slug": "RooCodeInc-Roo-Code",
+      "displayName": "Roo Code",
+      "category": "AI Coding Assistant",
+      "generatedAt": "2026-04-03T14:00:17.253Z",
+      "totalIssuesAnalyzed": 53,
+      "totalIssuesIncluded": 52,
+      "totalClusters": 9,
+      "topNeed": {
+        "cluster_id": "7d6e4cfe16c0",
+        "title": "Provider and Model Configuration Enhancements",
+        "summary": "Users are requesting expanded model support across providers like Ollama, OpenRouter, and Z.ai, along with fixes for context management issues including token limit calculations and content truncation. These enhancements improve the system's flexibility and reliability when working with diverse AI models and configurations.",
+        "category": "Configuration",
+        "representative_need": "Add Hebrew (he) locale support with RTL layout",
+        "issue_numbers": [
+          12044,
+          12037,
+          12024,
+          12020,
+          12018,
+          12017,
+          12001,
+          11998,
+          11994,
+          11992,
+          11990,
+          11989,
+          11977,
+          11968,
+          11958,
+          11953,
+          11951
+        ],
+        "issue_urls": [
+          "https://github.com/RooCodeInc/Roo-Code/issues/12044",
+          "https://github.com/RooCodeInc/Roo-Code/issues/12037",
+          "https://github.com/RooCodeInc/Roo-Code/issues/12024",
+          "https://github.com/RooCodeInc/Roo-Code/issues/12020",
+          "https://github.com/RooCodeInc/Roo-Code/issues/12018",
+          "https://github.com/RooCodeInc/Roo-Code/issues/12017",
+          "https://github.com/RooCodeInc/Roo-Code/issues/12001",
+          "https://github.com/RooCodeInc/Roo-Code/issues/11998",
+          "https://github.com/RooCodeInc/Roo-Code/issues/11994",
+          "https://github.com/RooCodeInc/Roo-Code/issues/11992",
+          "https://github.com/RooCodeInc/Roo-Code/issues/11990",
+          "https://github.com/RooCodeInc/Roo-Code/issues/11989",
+          "https://github.com/RooCodeInc/Roo-Code/issues/11977",
+          "https://github.com/RooCodeInc/Roo-Code/issues/11968",
+          "https://github.com/RooCodeInc/Roo-Code/issues/11958",
+          "https://github.com/RooCodeInc/Roo-Code/issues/11953",
+          "https://github.com/RooCodeInc/Roo-Code/issues/11951"
+        ],
+        "sample_titles": [
+          "Add Hebrew (he) locale support with RTL layout",
+          "Add MiniMax M2.7 model to the MiniMax provider",
+          "Add automatic commit message generation feature"
+        ],
+        "demand_score": 7.845479335498307,
+        "rising_score": 0.7777777777777778,
+        "volume": 17,
+        "open_count": 17,
+        "closed_count": 0,
+        "avg_reactions": 0.4,
+        "avg_comments": 3.9,
+        "date_first_seen": "2026-03-18T09:33:17.000Z",
+        "date_last_seen": "2026-04-02T04:46:47.000Z",
+        "repos_affected": [
+          "RooCodeInc/Roo-Code"
+        ]
+      },
+      "risingNeed": {
+        "cluster_id": "575a4a54be9f",
+        "title": "Improve shell parsing and file exclusion reliability",
+        "summary": "Users want the tool to replace regexp-based shell parsing with a true shell parser for more reliable command safety validation and allow/deny list enforcement. Additionally, they need consistent .rooignore exclusion behavior across all MCP tools to prevent inconsistent file filtering.",
+        "category": "Security",
+        "representative_need": "Fix inconsistent .rooignore exclusion enforcement across MCP tools",
+        "issue_numbers": [
+          12040,
+          12023
+        ],
+        "issue_urls": [
+          "https://github.com/RooCodeInc/Roo-Code/issues/12040",
+          "https://github.com/RooCodeInc/Roo-Code/issues/12023"
+        ],
+        "sample_titles": [
+          "Fix inconsistent .rooignore exclusion enforcement across MCP tools",
+          "Replace regexp-based shell parsing with a true shell parser for improved command safety validation and allow/deny list reliability"
+        ],
+        "demand_score": 1.9002766455045519,
+        "rising_score": 3,
+        "volume": 2,
+        "open_count": 2,
+        "closed_count": 0,
+        "avg_reactions": 1,
+        "avg_comments": 1.5,
+        "date_first_seen": "2026-03-27T23:01:54.000Z",
+        "date_last_seen": "2026-04-01T00:16:34.000Z",
+        "repos_affected": [
+          "RooCodeInc/Roo-Code"
+        ]
+      },
+      "dominantCategory": "Integration",
+      "reportPaths": {
+        "en": "reports/latest/RooCodeInc-Roo-Code.md",
+        "zh": "reports/latest/RooCodeInc-Roo-Code.zh.md"
+      },
+      "aggregation": {
+        "repo": "RooCodeInc/Roo-Code",
+        "display_name": "Roo Code",
+        "generated_at": "2026-04-03T14:00:17.253Z",
+        "window_start": "2026-03-04T14:00:17.253Z",
+        "window_end": "2026-04-03T14:00:17.253Z",
+        "total_issues_analyzed": 53,
+        "total_issues_included": 52,
+        "clusters": [
+          {
+            "cluster_id": "7d6e4cfe16c0",
+            "title": "Provider and Model Configuration Enhancements",
+            "summary": "Users are requesting expanded model support across providers like Ollama, OpenRouter, and Z.ai, along with fixes for context management issues including token limit calculations and content truncation. These enhancements improve the system's flexibility and reliability when working with diverse AI models and configurations.",
+            "category": "Configuration",
+            "representative_need": "Add Hebrew (he) locale support with RTL layout",
+            "issue_numbers": [
+              12044,
+              12037,
+              12024,
+              12020,
+              12018,
+              12017,
+              12001,
+              11998,
+              11994,
+              11992,
+              11990,
+              11989,
+              11977,
+              11968,
+              11958,
+              11953,
+              11951
+            ],
+            "issue_urls": [
+              "https://github.com/RooCodeInc/Roo-Code/issues/12044",
+              "https://github.com/RooCodeInc/Roo-Code/issues/12037",
+              "https://github.com/RooCodeInc/Roo-Code/issues/12024",
+              "https://github.com/RooCodeInc/Roo-Code/issues/12020",
+              "https://github.com/RooCodeInc/Roo-Code/issues/12018",
+              "https://github.com/RooCodeInc/Roo-Code/issues/12017",
+              "https://github.com/RooCodeInc/Roo-Code/issues/12001",
+              "https://github.com/RooCodeInc/Roo-Code/issues/11998",
+              "https://github.com/RooCodeInc/Roo-Code/issues/11994",
+              "https://github.com/RooCodeInc/Roo-Code/issues/11992",
+              "https://github.com/RooCodeInc/Roo-Code/issues/11990",
+              "https://github.com/RooCodeInc/Roo-Code/issues/11989",
+              "https://github.com/RooCodeInc/Roo-Code/issues/11977",
+              "https://github.com/RooCodeInc/Roo-Code/issues/11968",
+              "https://github.com/RooCodeInc/Roo-Code/issues/11958",
+              "https://github.com/RooCodeInc/Roo-Code/issues/11953",
+              "https://github.com/RooCodeInc/Roo-Code/issues/11951"
+            ],
+            "sample_titles": [
+              "Add Hebrew (he) locale support with RTL layout",
+              "Add MiniMax M2.7 model to the MiniMax provider",
+              "Add automatic commit message generation feature"
+            ],
+            "demand_score": 7.845479335498307,
+            "rising_score": 0.7777777777777778,
+            "volume": 17,
+            "open_count": 17,
+            "closed_count": 0,
+            "avg_reactions": 0.4,
+            "avg_comments": 3.9,
+            "date_first_seen": "2026-03-18T09:33:17.000Z",
+            "date_last_seen": "2026-04-02T04:46:47.000Z",
+            "repos_affected": [
+              "RooCodeInc/Roo-Code"
+            ]
+          },
+          {
+            "cluster_id": "c56ec41f68ef",
+            "title": "Expand AI Model Integrations and MCP Protocol Support",
+            "summary": "Users are requesting expanded support for various AI model providers (including xAI/grok-4.20, Gemini 3, and Claude via VS Code LM API) along with MCP protocol enhancements. Key needs include fixing tool calling failures, supporting new MCP server versions and protocol specs, enabling agent-to-agent communication via A2A, and providing per-mode MCP server restrictions to manage context bloat.",
+            "category": "Integration",
+            "representative_need": "Add grok-4.20 models to xAI provider",
+            "issue_numbers": [
+              12050,
+              12035,
+              12016,
+              12007,
+              12004,
+              11997,
+              11966,
+              11955
+            ],
+            "issue_urls": [
+              "https://github.com/RooCodeInc/Roo-Code/issues/12050",
+              "https://github.com/RooCodeInc/Roo-Code/issues/12035",
+              "https://github.com/RooCodeInc/Roo-Code/issues/12016",
+              "https://github.com/RooCodeInc/Roo-Code/issues/12007",
+              "https://github.com/RooCodeInc/Roo-Code/issues/12004",
+              "https://github.com/RooCodeInc/Roo-Code/issues/11997",
+              "https://github.com/RooCodeInc/Roo-Code/issues/11966",
+              "https://github.com/RooCodeInc/Roo-Code/issues/11955"
+            ],
+            "sample_titles": [
+              "Add grok-4.20 models to xAI provider",
+              "Add support for MiniMax MCP Server version 2.7",
+              "Fix empty response handling when using Claude models via VS Code LM API"
+            ],
+            "demand_score": 4.20770660057867,
+            "rising_score": 0.8,
+            "volume": 8,
+            "open_count": 5,
+            "closed_count": 3,
+            "avg_reactions": 0,
+            "avg_comments": 2.9,
+            "date_first_seen": "2026-03-18T22:40:58.000Z",
+            "date_last_seen": "2026-04-03T12:46:09.000Z",
+            "repos_affected": [
+              "RooCodeInc/Roo-Code"
+            ]
+          },
+          {
+            "cluster_id": "b2376639e132",
+            "title": "Provider-specific API integration bug fixes",
+            "summary": "Users are experiencing various integration issues with different AI providers, including response handling, configuration parameters, caching behavior, and deprecated API migrations. These fixes ensure reliable communication with Vertex AI, OpenAI-compatible endpoints, Mistral, AWS Bedrock, and Grok providers.",
+            "category": "Integration",
+            "representative_need": "Fix 'duplex option is required' error when making Mistral API requests",
+            "issue_numbers": [
+              12045,
+              12042,
+              12006,
+              11996,
+              11983,
+              11961
+            ],
+            "issue_urls": [
+              "https://github.com/RooCodeInc/Roo-Code/issues/12045",
+              "https://github.com/RooCodeInc/Roo-Code/issues/12042",
+              "https://github.com/RooCodeInc/Roo-Code/issues/12006",
+              "https://github.com/RooCodeInc/Roo-Code/issues/11996",
+              "https://github.com/RooCodeInc/Roo-Code/issues/11983",
+              "https://github.com/RooCodeInc/Roo-Code/issues/11961"
+            ],
+            "sample_titles": [
+              "Fix 'duplex option is required' error when making Mistral API requests",
+              "Fix Gemini API response handling for Vertex AI provider",
+              "Fix OpenAI compatible providers receiving forced temperature: 0 when custom temperature is not configured"
+            ],
+            "demand_score": 3.2680973383109397,
+            "rising_score": 0.75,
+            "volume": 6,
+            "open_count": 6,
+            "closed_count": 0,
+            "avg_reactions": 0.2,
+            "avg_comments": 3.2,
+            "date_first_seen": "2026-03-19T21:25:59.000Z",
+            "date_last_seen": "2026-04-02T13:41:52.000Z",
+            "repos_affected": [
+              "RooCodeInc/Roo-Code"
+            ]
+          },
+          {
+            "cluster_id": "2688d2473537",
+            "title": "AI Coding Assistant UX Improvements",
+            "summary": "Users want improvements to the AI coding assistant's core interaction behaviors, including better visual feedback when operations fail, expanded slash command functionality in multiline inputs, automatic checkpoint features for code change recovery, and consistent adherence to user-defined preferences. These issues collectively address the assistant's reliability, usability, and alignment with developer workflows.",
+            "category": "Developer Experience",
+            "representative_need": "Add automatic checkpoint creation after code changes to enable easy re-application of reverted changes",
+            "issue_numbers": [
+              12032,
+              12028,
+              11987,
+              11967
+            ],
+            "issue_urls": [
+              "https://github.com/RooCodeInc/Roo-Code/issues/12032",
+              "https://github.com/RooCodeInc/Roo-Code/issues/12028",
+              "https://github.com/RooCodeInc/Roo-Code/issues/11987",
+              "https://github.com/RooCodeInc/Roo-Code/issues/11967"
+            ],
+            "sample_titles": [
+              "Add automatic checkpoint creation after code changes to enable easy re-application of reverted changes",
+              "Enable slash commands across all lines of multiline input, not just the first line",
+              "Fix AI assistant not following user custom instructions about not creating tests or multiple script versions"
+            ],
+            "demand_score": 2.507183062207184,
+            "rising_score": 1,
+            "volume": 4,
+            "open_count": 4,
+            "closed_count": 0,
+            "avg_reactions": 0,
+            "avg_comments": 2.8,
+            "date_first_seen": "2026-03-20T22:39:37.000Z",
+            "date_last_seen": "2026-03-29T11:55:29.000Z",
+            "repos_affected": [
+              "RooCodeInc/Roo-Code"
+            ]
+          },
+          {
+            "cluster_id": "189d9800f952",
+            "title": "Per-Context Settings and Model Provider Improvements",
+            "summary": "Users want improved configuration management with per-project and per-mode settings persistence instead of global-only configurations, better handling of custom AI provider models (including context window detection and custom model names), and enhanced MCP server security with allowlist-based tool filtering. They also need initialization code that works reliably in offline/restricted environments without depending on proxy tool side effects.",
+            "category": "Configuration",
+            "representative_need": "Add MiniMax-M2.7 model to the available model list",
+            "issue_numbers": [
+              12038,
+              12034,
+              12014,
+              12002,
+              11999,
+              11981,
+              11971,
+              11964
+            ],
+            "issue_urls": [
+              "https://github.com/RooCodeInc/Roo-Code/issues/12038",
+              "https://github.com/RooCodeInc/Roo-Code/issues/12034",
+              "https://github.com/RooCodeInc/Roo-Code/issues/12014",
+              "https://github.com/RooCodeInc/Roo-Code/issues/12002",
+              "https://github.com/RooCodeInc/Roo-Code/issues/11999",
+              "https://github.com/RooCodeInc/Roo-Code/issues/11981",
+              "https://github.com/RooCodeInc/Roo-Code/issues/11971",
+              "https://github.com/RooCodeInc/Roo-Code/issues/11964"
+            ],
+            "sample_titles": [
+              "Add MiniMax-M2.7 model to the available model list",
+              "Add onlyAllow field for MCP server configuration to enable allowlist-based tool filtering",
+              "Fix auto-approve settings synchronization across multiple VS Code windows"
+            ],
+            "demand_score": 2.212374012225961,
+            "rising_score": 0.5,
+            "volume": 8,
+            "open_count": 8,
+            "closed_count": 0,
+            "avg_reactions": 0.1,
+            "avg_comments": 2.4,
+            "date_first_seen": "2026-03-20T13:29:59.000Z",
+            "date_last_seen": "2026-03-31T09:19:37.000Z",
+            "repos_affected": [
+              "RooCodeInc/Roo-Code"
+            ]
+          },
+          {
+            "cluster_id": "4d9efedf3e18",
+            "title": "Chat Interface Visual Rendering Fixes",
+            "summary": "Users are experiencing multiple visual display issues in the chat window interface, including missing icons on Windows 10, improperly formatted markdown tables that stretch instead of scroll, and unwanted jitter when updating content. These rendering problems negatively impact the polish and usability of the interface.",
+            "category": "UI/UX",
+            "representative_need": "Fix chat window jitter when updating todo items",
+            "issue_numbers": [
+              12030,
+              12026,
+              11986
+            ],
+            "issue_urls": [
+              "https://github.com/RooCodeInc/Roo-Code/issues/12030",
+              "https://github.com/RooCodeInc/Roo-Code/issues/12026",
+              "https://github.com/RooCodeInc/Roo-Code/issues/11986"
+            ],
+            "sample_titles": [
+              "Fix chat window jitter when updating todo items",
+              "Fix markdown table rendering to use horizontal scrolling instead of stretching to chat window width",
+              "Fix missing Debug and Orchestrator mode icons on Windows 10"
+            ],
+            "demand_score": 2.0867504232887897,
+            "rising_score": 1.5,
+            "volume": 3,
+            "open_count": 3,
+            "closed_count": 0,
+            "avg_reactions": 0,
+            "avg_comments": 3,
+            "date_first_seen": "2026-03-25T02:46:03.000Z",
+            "date_last_seen": "2026-03-29T09:08:10.000Z",
+            "repos_affected": [
+              "RooCodeInc/Roo-Code"
+            ]
+          },
+          {
+            "cluster_id": "575a4a54be9f",
+            "title": "Improve shell parsing and file exclusion reliability",
+            "summary": "Users want the tool to replace regexp-based shell parsing with a true shell parser for more reliable command safety validation and allow/deny list enforcement. Additionally, they need consistent .rooignore exclusion behavior across all MCP tools to prevent inconsistent file filtering.",
+            "category": "Security",
+            "representative_need": "Fix inconsistent .rooignore exclusion enforcement across MCP tools",
+            "issue_numbers": [
+              12040,
+              12023
+            ],
+            "issue_urls": [
+              "https://github.com/RooCodeInc/Roo-Code/issues/12040",
+              "https://github.com/RooCodeInc/Roo-Code/issues/12023"
+            ],
+            "sample_titles": [
+              "Fix inconsistent .rooignore exclusion enforcement across MCP tools",
+              "Replace regexp-based shell parsing with a true shell parser for improved command safety validation and allow/deny list reliability"
+            ],
+            "demand_score": 1.9002766455045519,
+            "rising_score": 3,
+            "volume": 2,
+            "open_count": 2,
+            "closed_count": 0,
+            "avg_reactions": 1,
+            "avg_comments": 1.5,
+            "date_first_seen": "2026-03-27T23:01:54.000Z",
+            "date_last_seen": "2026-04-01T00:16:34.000Z",
+            "repos_affected": [
+              "RooCodeInc/Roo-Code"
+            ]
+          },
+          {
+            "cluster_id": "d162cdfbd9ff",
+            "title": "CLI Feature Enhancements",
+            "summary": "Users want improvements to the ClaudeCode CLI including fixing the auto-approve feature to work properly in code mode, and adding a /plugin command for installing, listing, and removing plugins. These enhancements would improve workflow automation and extensibility for CLI users.",
+            "category": "Developer Experience",
+            "representative_need": "Add /plugin command to install, list, and remove ClaudeCode plugins",
+            "issue_numbers": [
+              12003,
+              11974
+            ],
+            "issue_urls": [
+              "https://github.com/RooCodeInc/Roo-Code/issues/12003",
+              "https://github.com/RooCodeInc/Roo-Code/issues/11974"
+            ],
+            "sample_titles": [
+              "Add /plugin command to install, list, and remove ClaudeCode plugins",
+              "Fix auto-approve feature to properly auto-execute commands in code mode"
+            ],
+            "demand_score": 1.2611037050405436,
+            "rising_score": 0.3333333333333333,
+            "volume": 2,
+            "open_count": 2,
+            "closed_count": 0,
+            "avg_reactions": 0.5,
+            "avg_comments": 4,
+            "date_first_seen": "2026-03-21T12:01:15.000Z",
+            "date_last_seen": "2026-03-26T18:42:26.000Z",
+            "repos_affected": [
+              "RooCodeInc/Roo-Code"
+            ]
+          },
+          {
+            "cluster_id": "cf0abce951a1",
+            "title": "Enhanced audio feedback and notification hooks",
+            "summary": "Users want distinct audio feedback for different event types like task completion and AI/extension replies, along with programmatic hooks that trigger external notification systems during user prompts. This enables better workflow integration and awareness without requiring constant screen monitoring.",
+            "category": "Integration",
+            "representative_need": "Add distinct audio feedback for task completion and AI/extension replies",
+            "issue_numbers": [
+              12047,
+              12025
+            ],
+            "issue_urls": [
+              "https://github.com/RooCodeInc/Roo-Code/issues/12047",
+              "https://github.com/RooCodeInc/Roo-Code/issues/12025"
+            ],
+            "sample_titles": [
+              "Add distinct audio feedback for task completion and AI/extension replies",
+              "Add hook command execution for events requiring user prompts to enable external notification forwarding"
+            ],
+            "demand_score": 1.1797668698584074,
+            "rising_score": 3,
+            "volume": 2,
+            "open_count": 2,
+            "closed_count": 0,
+            "avg_reactions": 0.5,
+            "avg_comments": 2.5,
+            "date_first_seen": "2026-03-28T16:51:24.000Z",
+            "date_last_seen": "2026-04-03T01:26:15.000Z",
+            "repos_affected": [
+              "RooCodeInc/Roo-Code"
+            ]
+          }
+        ],
+        "category_breakdown": {
+          "Configuration": 2,
+          "Integration": 3,
+          "Developer Experience": 2,
+          "UI/UX": 1,
+          "Security": 1
+        }
+      }
+    },
+    {
       "repo": "openclaw/openclaw",
       "slug": "openclaw-openclaw",
       "displayName": "OpenClaw",
@@ -3601,6 +4080,515 @@
       }
     },
     {
+      "repo": "google-gemini/gemini-cli",
+      "slug": "google-gemini-gemini-cli",
+      "displayName": "Gemini CLI",
+      "category": "AI Coding Assistant",
+      "generatedAt": "2026-04-03T13:54:36.979Z",
+      "totalIssuesAnalyzed": 59,
+      "totalIssuesIncluded": 54,
+      "totalClusters": 10,
+      "topNeed": {
+        "cluster_id": "ee183d148b71",
+        "title": "Optimize Resource Usage and Performance",
+        "summary": "Users are experiencing excessive token consumption, memory leaks, infinite loops, and performance regressions that waste computational resources and increase costs. They want the system to be more efficient with tokens, memory, and processing during agent operations, particularly during extended thinking, waiting states, and tool execution. These issues cause degraded performance and unexpected resource exhaustion.",
+        "category": "Performance",
+        "representative_need": "Fix excessive token consumption from inefficient agent behavior that wastes context on elaborate steps without progressing",
+        "issue_numbers": [
+          24600,
+          24593,
+          24589,
+          24584,
+          24536
+        ],
+        "issue_urls": [
+          "https://github.com/google-gemini/gemini-cli/issues/24600",
+          "https://github.com/google-gemini/gemini-cli/issues/24593",
+          "https://github.com/google-gemini/gemini-cli/issues/24589",
+          "https://github.com/google-gemini/gemini-cli/issues/24584",
+          "https://github.com/google-gemini/gemini-cli/issues/24536"
+        ],
+        "sample_titles": [
+          "Fix excessive token consumption from inefficient agent behavior that wastes context on elaborate steps without progressing",
+          "Fix memory leak or infinite loop causing heap exhaustion during context processing",
+          "Fix performance regression in tool calls"
+        ],
+        "demand_score": 3.979215812940051,
+        "rising_score": 6,
+        "volume": 5,
+        "open_count": 5,
+        "closed_count": 0,
+        "avg_reactions": 0,
+        "avg_comments": 0.8,
+        "date_first_seen": "2026-04-02T16:30:04.000Z",
+        "date_last_seen": "2026-04-03T09:39:17.000Z",
+        "repos_affected": [
+          "google-gemini/gemini-cli"
+        ]
+      },
+      "risingNeed": {
+        "cluster_id": "4d0461060538",
+        "title": "CLI Reliability and UX Bug Fixes",
+        "summary": "Users are experiencing multiple reliability issues with the CLI tool including hanging on 'thinking' states, incorrect output display in non-interactive contexts, authentication dialog handling problems, and inconsistent keyboard shortcuts across platforms. These fixes address session management, input handling, and display rendering to improve overall CLI stability.",
+        "category": "Developer Experience",
+        "representative_need": "Add SSH session detection helper function",
+        "issue_numbers": [
+          24605,
+          24597,
+          24591,
+          24574,
+          24570,
+          24557,
+          24546,
+          24535,
+          24518,
+          24513,
+          24511,
+          24505
+        ],
+        "issue_urls": [
+          "https://github.com/google-gemini/gemini-cli/issues/24605",
+          "https://github.com/google-gemini/gemini-cli/issues/24597",
+          "https://github.com/google-gemini/gemini-cli/issues/24591",
+          "https://github.com/google-gemini/gemini-cli/issues/24574",
+          "https://github.com/google-gemini/gemini-cli/issues/24570",
+          "https://github.com/google-gemini/gemini-cli/issues/24557",
+          "https://github.com/google-gemini/gemini-cli/issues/24546",
+          "https://github.com/google-gemini/gemini-cli/issues/24535",
+          "https://github.com/google-gemini/gemini-cli/issues/24518",
+          "https://github.com/google-gemini/gemini-cli/issues/24513",
+          "https://github.com/google-gemini/gemini-cli/issues/24511",
+          "https://github.com/google-gemini/gemini-cli/issues/24505"
+        ],
+        "sample_titles": [
+          "Add SSH session detection helper function",
+          "Clear authentication dialog from terminal before CLI process exits",
+          "Fix CLI getting stuck in 'thinking' state and not responding"
+        ],
+        "demand_score": 3.206788152379093,
+        "rising_score": 13,
+        "volume": 12,
+        "open_count": 9,
+        "closed_count": 3,
+        "avg_reactions": 0.1,
+        "avg_comments": 2.3,
+        "date_first_seen": "2026-04-02T06:34:52.000Z",
+        "date_last_seen": "2026-04-03T10:47:38.000Z",
+        "repos_affected": [
+          "google-gemini/gemini-cli"
+        ]
+      },
+      "dominantCategory": "Developer Experience",
+      "reportPaths": {
+        "en": "reports/latest/google-gemini-gemini-cli.md",
+        "zh": "reports/latest/google-gemini-gemini-cli.zh.md"
+      },
+      "aggregation": {
+        "repo": "google-gemini/gemini-cli",
+        "display_name": "Gemini CLI",
+        "generated_at": "2026-04-03T13:54:36.979Z",
+        "window_start": "2026-03-04T13:54:36.979Z",
+        "window_end": "2026-04-03T13:54:36.979Z",
+        "total_issues_analyzed": 59,
+        "total_issues_included": 54,
+        "clusters": [
+          {
+            "cluster_id": "ee183d148b71",
+            "title": "Optimize Resource Usage and Performance",
+            "summary": "Users are experiencing excessive token consumption, memory leaks, infinite loops, and performance regressions that waste computational resources and increase costs. They want the system to be more efficient with tokens, memory, and processing during agent operations, particularly during extended thinking, waiting states, and tool execution. These issues cause degraded performance and unexpected resource exhaustion.",
+            "category": "Performance",
+            "representative_need": "Fix excessive token consumption from inefficient agent behavior that wastes context on elaborate steps without progressing",
+            "issue_numbers": [
+              24600,
+              24593,
+              24589,
+              24584,
+              24536
+            ],
+            "issue_urls": [
+              "https://github.com/google-gemini/gemini-cli/issues/24600",
+              "https://github.com/google-gemini/gemini-cli/issues/24593",
+              "https://github.com/google-gemini/gemini-cli/issues/24589",
+              "https://github.com/google-gemini/gemini-cli/issues/24584",
+              "https://github.com/google-gemini/gemini-cli/issues/24536"
+            ],
+            "sample_titles": [
+              "Fix excessive token consumption from inefficient agent behavior that wastes context on elaborate steps without progressing",
+              "Fix memory leak or infinite loop causing heap exhaustion during context processing",
+              "Fix performance regression in tool calls"
+            ],
+            "demand_score": 3.979215812940051,
+            "rising_score": 6,
+            "volume": 5,
+            "open_count": 5,
+            "closed_count": 0,
+            "avg_reactions": 0,
+            "avg_comments": 0.8,
+            "date_first_seen": "2026-04-02T16:30:04.000Z",
+            "date_last_seen": "2026-04-03T09:39:17.000Z",
+            "repos_affected": [
+              "google-gemini/gemini-cli"
+            ]
+          },
+          {
+            "cluster_id": "4d0461060538",
+            "title": "CLI Reliability and UX Bug Fixes",
+            "summary": "Users are experiencing multiple reliability issues with the CLI tool including hanging on 'thinking' states, incorrect output display in non-interactive contexts, authentication dialog handling problems, and inconsistent keyboard shortcuts across platforms. These fixes address session management, input handling, and display rendering to improve overall CLI stability.",
+            "category": "Developer Experience",
+            "representative_need": "Add SSH session detection helper function",
+            "issue_numbers": [
+              24605,
+              24597,
+              24591,
+              24574,
+              24570,
+              24557,
+              24546,
+              24535,
+              24518,
+              24513,
+              24511,
+              24505
+            ],
+            "issue_urls": [
+              "https://github.com/google-gemini/gemini-cli/issues/24605",
+              "https://github.com/google-gemini/gemini-cli/issues/24597",
+              "https://github.com/google-gemini/gemini-cli/issues/24591",
+              "https://github.com/google-gemini/gemini-cli/issues/24574",
+              "https://github.com/google-gemini/gemini-cli/issues/24570",
+              "https://github.com/google-gemini/gemini-cli/issues/24557",
+              "https://github.com/google-gemini/gemini-cli/issues/24546",
+              "https://github.com/google-gemini/gemini-cli/issues/24535",
+              "https://github.com/google-gemini/gemini-cli/issues/24518",
+              "https://github.com/google-gemini/gemini-cli/issues/24513",
+              "https://github.com/google-gemini/gemini-cli/issues/24511",
+              "https://github.com/google-gemini/gemini-cli/issues/24505"
+            ],
+            "sample_titles": [
+              "Add SSH session detection helper function",
+              "Clear authentication dialog from terminal before CLI process exits",
+              "Fix CLI getting stuck in 'thinking' state and not responding"
+            ],
+            "demand_score": 3.206788152379093,
+            "rising_score": 13,
+            "volume": 12,
+            "open_count": 9,
+            "closed_count": 3,
+            "avg_reactions": 0.1,
+            "avg_comments": 2.3,
+            "date_first_seen": "2026-04-02T06:34:52.000Z",
+            "date_last_seen": "2026-04-03T10:47:38.000Z",
+            "repos_affected": [
+              "google-gemini/gemini-cli"
+            ]
+          },
+          {
+            "cluster_id": "985329993199",
+            "title": "Google AI Pro authentication and quota fixes",
+            "summary": "Users are experiencing authentication failures, incorrect error messages, and quota visibility issues when using Google AI Pro accounts. Issues include 403 PERMISSION_DENIED errors after successful OAuth, race conditions in the OIDC login flow, and inability to distinguish between personal vs workspace accounts. Developers need reliable account type detection, clearer error messaging, and proper quota handling to effectively use the CLI.",
+            "category": "Developer Experience",
+            "representative_need": "Detect account type and display contextually appropriate error messages for personal accounts instead of workspace-themed errors",
+            "issue_numbers": [
+              24607,
+              24587,
+              24539,
+              24533,
+              24525,
+              24521,
+              24520,
+              24517
+            ],
+            "issue_urls": [
+              "https://github.com/google-gemini/gemini-cli/issues/24607",
+              "https://github.com/google-gemini/gemini-cli/issues/24587",
+              "https://github.com/google-gemini/gemini-cli/issues/24539",
+              "https://github.com/google-gemini/gemini-cli/issues/24533",
+              "https://github.com/google-gemini/gemini-cli/issues/24525",
+              "https://github.com/google-gemini/gemini-cli/issues/24521",
+              "https://github.com/google-gemini/gemini-cli/issues/24520",
+              "https://github.com/google-gemini/gemini-cli/issues/24517"
+            ],
+            "sample_titles": [
+              "Detect account type and display contextually appropriate error messages for personal accounts instead of workspace-themed errors",
+              "Fix 403 PERMISSION_DENIED errors for Google AI Pro accounts that successfully authenticate but cannot use the CLI",
+              "Fix Pro subscription quota entitlement recognition and sync for OAuth authenticated users receiving 429 errors"
+            ],
+            "demand_score": 2.477652288415656,
+            "rising_score": 9,
+            "volume": 8,
+            "open_count": 5,
+            "closed_count": 3,
+            "avg_reactions": 0.5,
+            "avg_comments": 2.3,
+            "date_first_seen": "2026-04-02T11:35:55.000Z",
+            "date_last_seen": "2026-04-03T13:18:57.000Z",
+            "repos_affected": [
+              "google-gemini/gemini-cli"
+            ]
+          },
+          {
+            "cluster_id": "b86eda7b2dcb",
+            "title": "Graceful rate limit error handling",
+            "summary": "Users encountering HTTP 429 rate limit errors need the application to handle them gracefully, either through automatic retry logic with backoff or by providing clear, actionable error messages that explain why requests were blocked and when users can retry. This improves the developer experience and reduces frustration when hitting API limits.",
+            "category": "Developer Experience",
+            "representative_need": "Handle 429 rate limit errors gracefully with clear messaging and retry guidance",
+            "issue_numbers": [
+              24594,
+              24588
+            ],
+            "issue_urls": [
+              "https://github.com/google-gemini/gemini-cli/issues/24594",
+              "https://github.com/google-gemini/gemini-cli/issues/24588"
+            ],
+            "sample_titles": [
+              "Handle 429 rate limit errors gracefully with clear messaging and retry guidance",
+              "Handle rate limit (429) errors gracefully with retry logic or clearer user messaging"
+            ],
+            "demand_score": 1.9918893559532656,
+            "rising_score": 3,
+            "volume": 2,
+            "open_count": 2,
+            "closed_count": 0,
+            "avg_reactions": 0,
+            "avg_comments": 1,
+            "date_first_seen": "2026-04-03T03:31:45.000Z",
+            "date_last_seen": "2026-04-03T06:50:36.000Z",
+            "repos_affected": [
+              "google-gemini/gemini-cli"
+            ]
+          },
+          {
+            "cluster_id": "b218292ac60f",
+            "title": "Bug Fixes and Quality Improvements",
+            "summary": "Users are reporting various bugs affecting core functionality, UI correctness, and data integrity. These include crashes when handling specific characters, infinite loops during MCP server connections, session persistence failures, and UI rendering issues in tables and sidebars. Addressing these issues will improve overall application stability and user experience.",
+            "category": "Reliability",
+            "representative_need": "Add an internal TelemetryProvider interface abstraction for extensible telemetry backends",
+            "issue_numbers": [
+              24604,
+              24595,
+              24564,
+              24563,
+              24562,
+              24555,
+              24552,
+              24547,
+              24532,
+              24530,
+              24508
+            ],
+            "issue_urls": [
+              "https://github.com/google-gemini/gemini-cli/issues/24604",
+              "https://github.com/google-gemini/gemini-cli/issues/24595",
+              "https://github.com/google-gemini/gemini-cli/issues/24564",
+              "https://github.com/google-gemini/gemini-cli/issues/24563",
+              "https://github.com/google-gemini/gemini-cli/issues/24562",
+              "https://github.com/google-gemini/gemini-cli/issues/24555",
+              "https://github.com/google-gemini/gemini-cli/issues/24552",
+              "https://github.com/google-gemini/gemini-cli/issues/24547",
+              "https://github.com/google-gemini/gemini-cli/issues/24532",
+              "https://github.com/google-gemini/gemini-cli/issues/24530",
+              "https://github.com/google-gemini/gemini-cli/issues/24508"
+            ],
+            "sample_titles": [
+              "Add an internal TelemetryProvider interface abstraction for extensible telemetry backends",
+              "Add support for gender-neutral or inclusive terminology when describing hierarchical technical concepts",
+              "Apply .geminignore patterns to grep and ripgrep commands to prevent scanning of sensitive directories"
+            ],
+            "demand_score": 1.4876983727694635,
+            "rising_score": 12,
+            "volume": 11,
+            "open_count": 9,
+            "closed_count": 2,
+            "avg_reactions": 0,
+            "avg_comments": 0.3,
+            "date_first_seen": "2026-04-02T07:36:01.000Z",
+            "date_last_seen": "2026-04-03T10:25:33.000Z",
+            "repos_affected": [
+              "google-gemini/gemini-cli"
+            ]
+          },
+          {
+            "cluster_id": "60d33e114b34",
+            "title": "Agent Reliability and Stability Fixes",
+            "summary": "Users are experiencing multiple reliability issues with the agent, including unresponsiveness after updates, endless thinking loops, unhandled crashes during file operations, and failure to properly execute halt commands. These stability problems significantly impact workflow continuity and user trust in the agent's ability to complete tasks reliably.",
+            "category": "Reliability",
+            "representative_need": "Add 'Other' option to yesno question type to enable custom feedback responses",
+            "issue_numbers": [
+              24581,
+              24576,
+              24541,
+              24516,
+              24515
+            ],
+            "issue_urls": [
+              "https://github.com/google-gemini/gemini-cli/issues/24581",
+              "https://github.com/google-gemini/gemini-cli/issues/24576",
+              "https://github.com/google-gemini/gemini-cli/issues/24541",
+              "https://github.com/google-gemini/gemini-cli/issues/24516",
+              "https://github.com/google-gemini/gemini-cli/issues/24515"
+            ],
+            "sample_titles": [
+              "Add 'Other' option to yesno question type to enable custom feedback responses",
+              "Fix agent becoming unresponsive after version update to Gemini 3.1",
+              "Fix agent to properly respect and execute halt commands when conditions are met"
+            ],
+            "demand_score": 1.4851331376035315,
+            "rising_score": 6,
+            "volume": 5,
+            "open_count": 2,
+            "closed_count": 3,
+            "avg_reactions": 0,
+            "avg_comments": 1.8,
+            "date_first_seen": "2026-04-02T09:34:43.000Z",
+            "date_last_seen": "2026-04-02T22:57:01.000Z",
+            "repos_affected": [
+              "google-gemini/gemini-cli"
+            ]
+          },
+          {
+            "cluster_id": "53cbdf19988e",
+            "title": "Fix editor bugs causing crashes and corruption",
+            "summary": "Users are experiencing multiple critical bugs in the editor and file handling systems that cause unexpected behavior, crashes, and data corruption. These issues range from minor UX problems like scroll reset when viewing diffs to serious issues like file content corruption on Windows. Fixing these bugs is essential for maintaining user trust and preventing data loss.",
+            "category": "Reliability",
+            "representative_need": "Fix automatic scroll reset when viewing diffs in the editor",
+            "issue_numbers": [
+              24602,
+              24580,
+              24560
+            ],
+            "issue_urls": [
+              "https://github.com/google-gemini/gemini-cli/issues/24602",
+              "https://github.com/google-gemini/gemini-cli/issues/24580",
+              "https://github.com/google-gemini/gemini-cli/issues/24560"
+            ],
+            "sample_titles": [
+              "Fix automatic scroll reset when viewing diffs in the editor",
+              "Fix external editor integration crash when typing in the external editor",
+              "Fix replace tool corrupting files on Windows by blanking entire file content instead of applying the intended diff changes"
+            ],
+            "demand_score": 1.1930181534286532,
+            "rising_score": 4,
+            "volume": 3,
+            "open_count": 2,
+            "closed_count": 1,
+            "avg_reactions": 0,
+            "avg_comments": 2,
+            "date_first_seen": "2026-04-02T19:37:44.000Z",
+            "date_last_seen": "2026-04-03T09:49:27.000Z",
+            "repos_affected": [
+              "google-gemini/gemini-cli"
+            ]
+          },
+          {
+            "cluster_id": "998b42d27583",
+            "title": "Fix and enhance gemini extensions functionality",
+            "summary": "These issues relate to improving the gemini extensions system by fixing directory resolution bugs, enabling third-party extension submissions, and resolving missing files in the NPM bundle. Users need a reliable and extensible system for managing role-based SDLC skills through the CLI.",
+            "category": "Developer Experience",
+            "representative_need": "Fix extension plan directory resolution to use the correct extension-specific or default directory based on active extension state",
+            "issue_numbers": [
+              24572,
+              24543,
+              24534
+            ],
+            "issue_urls": [
+              "https://github.com/google-gemini/gemini-cli/issues/24572",
+              "https://github.com/google-gemini/gemini-cli/issues/24543",
+              "https://github.com/google-gemini/gemini-cli/issues/24534"
+            ],
+            "sample_titles": [
+              "Fix extension plan directory resolution to use the correct extension-specific or default directory based on active extension state",
+              "Fix missing examples directory in NPM bundle causing gemini extensions new command to fail",
+              "Support third-party extension submissions for role-based SDLC skills"
+            ],
+            "demand_score": 0.9909594444895171,
+            "rising_score": 4,
+            "volume": 3,
+            "open_count": 3,
+            "closed_count": 0,
+            "avg_reactions": 0,
+            "avg_comments": 0.3,
+            "date_first_seen": "2026-04-02T15:54:01.000Z",
+            "date_last_seen": "2026-04-02T21:36:49.000Z",
+            "repos_affected": [
+              "google-gemini/gemini-cli"
+            ]
+          },
+          {
+            "cluster_id": "184e93e98f0c",
+            "title": "Configuration Settings and Defaults",
+            "summary": "Users want settings to work as intended and have better default behaviors. One issue is that the 'inlineThinkingMode' setting is being ignored, causing unwanted thinking tokens to appear. Another request is to change the default value of 'Compact Tool Output' to be enabled by default, improving the user experience out of the box.",
+            "category": "Configuration",
+            "representative_need": "Enable 'Compact Tool Output' setting by default",
+            "issue_numbers": [
+              24583,
+              24509
+            ],
+            "issue_urls": [
+              "https://github.com/google-gemini/gemini-cli/issues/24583",
+              "https://github.com/google-gemini/gemini-cli/issues/24509"
+            ],
+            "sample_titles": [
+              "Enable 'Compact Tool Output' setting by default",
+              "Fix thinking tokens appearing when inlineThinkingMode is configured to off"
+            ],
+            "demand_score": 0.9899424443537541,
+            "rising_score": 3,
+            "volume": 2,
+            "open_count": 2,
+            "closed_count": 0,
+            "avg_reactions": 0,
+            "avg_comments": 0.5,
+            "date_first_seen": "2026-04-02T07:38:15.000Z",
+            "date_last_seen": "2026-04-03T00:44:55.000Z",
+            "repos_affected": [
+              "google-gemini/gemini-cli"
+            ]
+          },
+          {
+            "cluster_id": "ea9ecb7953b7",
+            "title": "Improve UI Information Display and Readability",
+            "summary": "Users want improvements to the interface including fixing missing information displays (like email and tier), adding persistent navigation elements (sticky header), and improving output readability with concise summaries. These enhancements would make the application more intuitive and reduce visual clutter while maintaining access to important context.",
+            "category": "UI/UX",
+            "representative_need": "Fix missing email and tier information in UI when options are enabled",
+            "issue_numbers": [
+              24601,
+              24553,
+              24507
+            ],
+            "issue_urls": [
+              "https://github.com/google-gemini/gemini-cli/issues/24601",
+              "https://github.com/google-gemini/gemini-cli/issues/24553",
+              "https://github.com/google-gemini/gemini-cli/issues/24507"
+            ],
+            "sample_titles": [
+              "Fix missing email and tier information in UI when options are enabled",
+              "Implement persistent sticky topic header at top of application layout",
+              "Improve tool output formatting and readability by providing more concise summaries for large or repetitive outputs"
+            ],
+            "demand_score": 0,
+            "rising_score": 4,
+            "volume": 3,
+            "open_count": 3,
+            "closed_count": 0,
+            "avg_reactions": 0,
+            "avg_comments": 0,
+            "date_first_seen": "2026-04-02T07:30:44.000Z",
+            "date_last_seen": "2026-04-03T09:40:56.000Z",
+            "repos_affected": [
+              "google-gemini/gemini-cli"
+            ]
+          }
+        ],
+        "category_breakdown": {
+          "Performance": 1,
+          "Developer Experience": 4,
+          "Reliability": 3,
+          "Configuration": 1,
+          "UI/UX": 1
+        }
+      }
+    },
+    {
       "repo": "block/goose",
       "slug": "block-goose",
       "displayName": "Goose",
@@ -3947,6 +4935,393 @@
           "Integration": 1,
           "Performance": 1,
           "Configuration": 1
+        }
+      }
+    },
+    {
+      "repo": "continuedev/continue",
+      "slug": "continuedev-continue",
+      "displayName": "Continue",
+      "category": "AI Coding Assistant",
+      "generatedAt": "2026-04-03T14:05:32.072Z",
+      "totalIssuesAnalyzed": 38,
+      "totalIssuesIncluded": 34,
+      "totalClusters": 7,
+      "topNeed": {
+        "cluster_id": "cc8ffec07ace",
+        "title": "Bug Fixes and Documentation for Multi-Provider Integration",
+        "summary": "Users are requesting various bug fixes to improve reliability across different LLM providers (OpenAI, Ollama, LM Studio, OpenRouter) and IDE integrations (IntelliJ/JetBrains). These issues affect core functionality like streaming, tool calls, file editing, and process management. Additionally, users need documentation for CLI commands and provider-specific API headers.",
+        "category": "Developer Experience",
+        "representative_need": "Add documentation for the cn review CLI command",
+        "issue_numbers": [
+          11999,
+          11985,
+          11978,
+          11962,
+          11960,
+          11954,
+          11953,
+          11924,
+          11923,
+          11918,
+          11917
+        ],
+        "issue_urls": [
+          "https://github.com/continuedev/continue/issues/11999",
+          "https://github.com/continuedev/continue/issues/11985",
+          "https://github.com/continuedev/continue/issues/11978",
+          "https://github.com/continuedev/continue/issues/11962",
+          "https://github.com/continuedev/continue/issues/11960",
+          "https://github.com/continuedev/continue/issues/11954",
+          "https://github.com/continuedev/continue/issues/11953",
+          "https://github.com/continuedev/continue/issues/11924",
+          "https://github.com/continuedev/continue/issues/11923",
+          "https://github.com/continuedev/continue/issues/11918",
+          "https://github.com/continuedev/continue/issues/11917"
+        ],
+        "sample_titles": [
+          "Add documentation for the cn review CLI command",
+          "Continue supporting and updating JetBrains IDE integration",
+          "Document OpenRouter HTTP-Referer and X-Title headers for app identification"
+        ],
+        "demand_score": 2.1218906400453807,
+        "rising_score": 1.6,
+        "volume": 11,
+        "open_count": 7,
+        "closed_count": 4,
+        "avg_reactions": 0.3,
+        "avg_comments": 0.3,
+        "date_first_seen": "2026-03-27T02:11:27.000Z",
+        "date_last_seen": "2026-04-02T07:43:23.000Z",
+        "repos_affected": [
+          "continuedev/continue"
+        ]
+      },
+      "risingNeed": {
+        "cluster_id": "b38b1a42a178",
+        "title": "Document config profiles and improve API error handling",
+        "summary": "Users need comprehensive documentation for the `.continue/configs/` directory feature that supports local configuration profiles, making it easier to discover and use this functionality. Additionally, users want better error handling and visibility for API-related issues including maxTokens edge cases near context limits, API usage limits, and proxy connection failures so they are warned rather than experiencing silent failures.",
+        "category": "Developer Experience",
+        "representative_need": "Add API usage and limit visibility within the extension",
+        "issue_numbers": [
+          12026,
+          12004,
+          11968,
+          11963,
+          11944,
+          11934,
+          11933
+        ],
+        "issue_urls": [
+          "https://github.com/continuedev/continue/issues/12026",
+          "https://github.com/continuedev/continue/issues/12004",
+          "https://github.com/continuedev/continue/issues/11968",
+          "https://github.com/continuedev/continue/issues/11963",
+          "https://github.com/continuedev/continue/issues/11944",
+          "https://github.com/continuedev/continue/issues/11934",
+          "https://github.com/continuedev/continue/issues/11933"
+        ],
+        "sample_titles": [
+          "Add API usage and limit visibility within the extension",
+          "Add documentation for .continue/configs/ directory support for loading local config profiles",
+          "Add documentation for .continue/configs/ directory support for local config profiles"
+        ],
+        "demand_score": 1.9074716196046975,
+        "rising_score": 8,
+        "volume": 7,
+        "open_count": 6,
+        "closed_count": 1,
+        "avg_reactions": 0,
+        "avg_comments": 0.3,
+        "date_first_seen": "2026-03-27T16:07:18.000Z",
+        "date_last_seen": "2026-04-03T09:01:55.000Z",
+        "repos_affected": [
+          "continuedev/continue"
+        ]
+      },
+      "dominantCategory": "Reliability",
+      "reportPaths": {
+        "en": "reports/latest/continuedev-continue.md",
+        "zh": "reports/latest/continuedev-continue.zh.md"
+      },
+      "aggregation": {
+        "repo": "continuedev/continue",
+        "display_name": "Continue",
+        "generated_at": "2026-04-03T14:05:32.072Z",
+        "window_start": "2026-03-04T14:05:32.072Z",
+        "window_end": "2026-04-03T14:05:32.072Z",
+        "total_issues_analyzed": 38,
+        "total_issues_included": 34,
+        "clusters": [
+          {
+            "cluster_id": "cc8ffec07ace",
+            "title": "Bug Fixes and Documentation for Multi-Provider Integration",
+            "summary": "Users are requesting various bug fixes to improve reliability across different LLM providers (OpenAI, Ollama, LM Studio, OpenRouter) and IDE integrations (IntelliJ/JetBrains). These issues affect core functionality like streaming, tool calls, file editing, and process management. Additionally, users need documentation for CLI commands and provider-specific API headers.",
+            "category": "Developer Experience",
+            "representative_need": "Add documentation for the cn review CLI command",
+            "issue_numbers": [
+              11999,
+              11985,
+              11978,
+              11962,
+              11960,
+              11954,
+              11953,
+              11924,
+              11923,
+              11918,
+              11917
+            ],
+            "issue_urls": [
+              "https://github.com/continuedev/continue/issues/11999",
+              "https://github.com/continuedev/continue/issues/11985",
+              "https://github.com/continuedev/continue/issues/11978",
+              "https://github.com/continuedev/continue/issues/11962",
+              "https://github.com/continuedev/continue/issues/11960",
+              "https://github.com/continuedev/continue/issues/11954",
+              "https://github.com/continuedev/continue/issues/11953",
+              "https://github.com/continuedev/continue/issues/11924",
+              "https://github.com/continuedev/continue/issues/11923",
+              "https://github.com/continuedev/continue/issues/11918",
+              "https://github.com/continuedev/continue/issues/11917"
+            ],
+            "sample_titles": [
+              "Add documentation for the cn review CLI command",
+              "Continue supporting and updating JetBrains IDE integration",
+              "Document OpenRouter HTTP-Referer and X-Title headers for app identification"
+            ],
+            "demand_score": 2.1218906400453807,
+            "rising_score": 1.6,
+            "volume": 11,
+            "open_count": 7,
+            "closed_count": 4,
+            "avg_reactions": 0.3,
+            "avg_comments": 0.3,
+            "date_first_seen": "2026-03-27T02:11:27.000Z",
+            "date_last_seen": "2026-04-02T07:43:23.000Z",
+            "repos_affected": [
+              "continuedev/continue"
+            ]
+          },
+          {
+            "cluster_id": "b38b1a42a178",
+            "title": "Document config profiles and improve API error handling",
+            "summary": "Users need comprehensive documentation for the `.continue/configs/` directory feature that supports local configuration profiles, making it easier to discover and use this functionality. Additionally, users want better error handling and visibility for API-related issues including maxTokens edge cases near context limits, API usage limits, and proxy connection failures so they are warned rather than experiencing silent failures.",
+            "category": "Developer Experience",
+            "representative_need": "Add API usage and limit visibility within the extension",
+            "issue_numbers": [
+              12026,
+              12004,
+              11968,
+              11963,
+              11944,
+              11934,
+              11933
+            ],
+            "issue_urls": [
+              "https://github.com/continuedev/continue/issues/12026",
+              "https://github.com/continuedev/continue/issues/12004",
+              "https://github.com/continuedev/continue/issues/11968",
+              "https://github.com/continuedev/continue/issues/11963",
+              "https://github.com/continuedev/continue/issues/11944",
+              "https://github.com/continuedev/continue/issues/11934",
+              "https://github.com/continuedev/continue/issues/11933"
+            ],
+            "sample_titles": [
+              "Add API usage and limit visibility within the extension",
+              "Add documentation for .continue/configs/ directory support for loading local config profiles",
+              "Add documentation for .continue/configs/ directory support for local config profiles"
+            ],
+            "demand_score": 1.9074716196046975,
+            "rising_score": 8,
+            "volume": 7,
+            "open_count": 6,
+            "closed_count": 1,
+            "avg_reactions": 0,
+            "avg_comments": 0.3,
+            "date_first_seen": "2026-03-27T16:07:18.000Z",
+            "date_last_seen": "2026-04-03T09:01:55.000Z",
+            "repos_affected": [
+              "continuedev/continue"
+            ]
+          },
+          {
+            "cluster_id": "20a635315a5f",
+            "title": "Fix API Provider Authentication and Key Configuration",
+            "summary": "Users are experiencing issues with API authentication across multiple providers (Gemini, Anthropic, continue-proxy). Issues include authentication errors, API key configuration lookup failures, and the system not properly using user-provided keys over proxy credits. Users need reliable API key handling and support for custom request headers to successfully connect to external AI providers.",
+            "category": "Configuration",
+            "representative_need": "Fix API key configuration lookup failure for continue-proxy provider",
+            "issue_numbers": [
+              12008,
+              11961,
+              11956,
+              11952
+            ],
+            "issue_urls": [
+              "https://github.com/continuedev/continue/issues/12008",
+              "https://github.com/continuedev/continue/issues/11961",
+              "https://github.com/continuedev/continue/issues/11956",
+              "https://github.com/continuedev/continue/issues/11952"
+            ],
+            "sample_titles": [
+              "Fix API key configuration lookup failure for continue-proxy provider",
+              "Fix API key configuration so user-provided keys are properly used instead of Continue proxy credits",
+              "Fix authentication errors when connecting to Anthropic API"
+            ],
+            "demand_score": 1.906796413791594,
+            "rising_score": 5,
+            "volume": 4,
+            "open_count": 4,
+            "closed_count": 0,
+            "avg_reactions": 0,
+            "avg_comments": 1,
+            "date_first_seen": "2026-03-28T17:44:01.000Z",
+            "date_last_seen": "2026-04-02T14:20:13.000Z",
+            "repos_affected": [
+              "continuedev/continue"
+            ]
+          },
+          {
+            "cluster_id": "e108e2e923c0",
+            "title": "Fix Response Streaming and Error Handling Bugs",
+            "summary": "Users are encountering multiple bugs that affect the reliability of the application: incorrect item emission ordering when using reasoning-enabled models, premature close errors during streaming, unhelpful 'Unknown error' messages for API quota issues, and 404 errors with certain Claude models. These issues cause unexpected failures and poor user experience during normal operation.",
+            "category": "Reliability",
+            "representative_need": "Fix 'Unknown error' display for API quota exceeded errors",
+            "issue_numbers": [
+              11994,
+              11983,
+              11926,
+              11925
+            ],
+            "issue_urls": [
+              "https://github.com/continuedev/continue/issues/11994",
+              "https://github.com/continuedev/continue/issues/11983",
+              "https://github.com/continuedev/continue/issues/11926",
+              "https://github.com/continuedev/continue/issues/11925"
+            ],
+            "sample_titles": [
+              "Fix 'Unknown error' display for API quota exceeded errors",
+              "Fix 404 error when using Claude 3.5 Sonnet model",
+              "Fix item emission order in toResponsesInput to place text messages before function_call items when using reasoning-enabled models"
+            ],
+            "demand_score": 1.8984914276615537,
+            "rising_score": 1,
+            "volume": 4,
+            "open_count": 2,
+            "closed_count": 2,
+            "avg_reactions": 0,
+            "avg_comments": 0.5,
+            "date_first_seen": "2026-03-27T09:35:50.000Z",
+            "date_last_seen": "2026-04-02T06:21:08.000Z",
+            "repos_affected": [
+              "continuedev/continue"
+            ]
+          },
+          {
+            "cluster_id": "0945b18f931d",
+            "title": "Fix IDE stability and reliability issues",
+            "summary": "Users are experiencing critical reliability issues when using the IDE including crashes while editing files, rendering problems in Firefox with code-server, and document tracking errors when switching between text editors. These bugs prevent users from effectively using the IDE in various environments and workflows.",
+            "category": "Reliability",
+            "representative_need": "Fix Continue window rendering in Firefox desktop with code-server",
+            "issue_numbers": [
+              11959,
+              11932,
+              11919
+            ],
+            "issue_urls": [
+              "https://github.com/continuedev/continue/issues/11959",
+              "https://github.com/continuedev/continue/issues/11932",
+              "https://github.com/continuedev/continue/issues/11919"
+            ],
+            "sample_titles": [
+              "Fix Continue window rendering in Firefox desktop with code-server",
+              "Fix IDE crash when editing files",
+              "Fix document not found error in AST tracker when switching between text editors"
+            ],
+            "demand_score": 1.3942969948146875,
+            "rising_score": 1.5,
+            "volume": 3,
+            "open_count": 3,
+            "closed_count": 0,
+            "avg_reactions": 0.3,
+            "avg_comments": 0.3,
+            "date_first_seen": "2026-03-27T02:55:21.000Z",
+            "date_last_seen": "2026-03-29T09:08:23.000Z",
+            "repos_affected": [
+              "continuedev/continue"
+            ]
+          },
+          {
+            "cluster_id": "dadbd2ff8ebb",
+            "title": "Fix Tool Calling Reliability Across AI Providers",
+            "summary": "Users are experiencing critical failures when using tool calling features across different AI providers (OpenAI o1/o3-mini, Claude Opus 4.6) and environments (JetBrains IDEs, Android Studio). Issues include 500 API errors, execution hangs, and message sequencing problems that prevent tools from working properly. These reliability issues block developers from using essential functionality in their workflows.",
+            "category": "Reliability",
+            "representative_need": "Fix 500 errors when using OpenAI o1/o3-mini reasoning models with tool calling",
+            "issue_numbers": [
+              11976,
+              11964,
+              11929
+            ],
+            "issue_urls": [
+              "https://github.com/continuedev/continue/issues/11976",
+              "https://github.com/continuedev/continue/issues/11964",
+              "https://github.com/continuedev/continue/issues/11929"
+            ],
+            "sample_titles": [
+              "Fix 500 errors when using OpenAI o1/o3-mini reasoning models with tool calling",
+              "Fix tool_call execution hanging in Android Studio/JetBrains IDEs",
+              "Fix tool_use/tool_result message sequencing for Claude Opus 4.6 (1M Beta) to ensure tool_result blocks immediately follow tool_use blocks"
+            ],
+            "demand_score": 0,
+            "rising_score": 1.5,
+            "volume": 3,
+            "open_count": 2,
+            "closed_count": 1,
+            "avg_reactions": 0,
+            "avg_comments": 0,
+            "date_first_seen": "2026-03-27T12:15:58.000Z",
+            "date_last_seen": "2026-03-31T08:10:57.000Z",
+            "repos_affected": [
+              "continuedev/continue"
+            ]
+          },
+          {
+            "cluster_id": "9803612e43f2",
+            "title": "Fix IntelliJ extension resource limits and CPU usage",
+            "summary": "Users are experiencing the IntelliJ extension becoming unresponsive due to high CPU usage and unbounded file search results causing token overflow. These resource consumption issues make the extension unreliable and unusable during development. Users want fixes to prevent resource exhaustion and maintain stable extension performance.",
+            "category": "Performance",
+            "representative_need": "Fix file search result limits in IntelliJ to prevent token overflow",
+            "issue_numbers": [
+              11977,
+              11966
+            ],
+            "issue_urls": [
+              "https://github.com/continuedev/continue/issues/11977",
+              "https://github.com/continuedev/continue/issues/11966"
+            ],
+            "sample_titles": [
+              "Fix file search result limits in IntelliJ to prevent token overflow",
+              "Fix high CPU usage causing extension to become unresponsive"
+            ],
+            "demand_score": 0,
+            "rising_score": 3,
+            "volume": 2,
+            "open_count": 2,
+            "closed_count": 0,
+            "avg_reactions": 0,
+            "avg_comments": 0,
+            "date_first_seen": "2026-03-30T08:38:40.000Z",
+            "date_last_seen": "2026-03-31T08:10:59.000Z",
+            "repos_affected": [
+              "continuedev/continue"
+            ]
+          }
+        ],
+        "category_breakdown": {
+          "Developer Experience": 2,
+          "Configuration": 1,
+          "Reliability": 3,
+          "Performance": 1
         }
       }
     },
@@ -4468,6 +5843,17 @@
       "reportPath": "reports/latest/anthropics-claude-code.md"
     },
     {
+      "repo": "RooCodeInc/Roo-Code",
+      "slug": "RooCodeInc-Roo-Code",
+      "productName": "Roo Code",
+      "title": "Provider and Model Configuration Enhancements",
+      "category": "Configuration",
+      "demandScore": 7.845479335498307,
+      "risingScore": 0.7777777777777778,
+      "volume": 17,
+      "reportPath": "reports/latest/RooCodeInc-Roo-Code.md"
+    },
+    {
       "repo": "openclaw/openclaw",
       "slug": "openclaw-openclaw",
       "productName": "OpenClaw",
@@ -4510,17 +5896,6 @@
       "risingScore": 5.5,
       "volume": 11,
       "reportPath": "reports/latest/cline-cline.md"
-    },
-    {
-      "repo": "cline/cline",
-      "slug": "cline-cline",
-      "productName": "Cline",
-      "title": "Fix CLI Rendering, State Synchronization, and Environment Stability Bugs",
-      "category": "Reliability",
-      "demandScore": 4.946810653986734,
-      "risingScore": 1.6666666666666667,
-      "volume": 14,
-      "reportPath": "reports/latest/cline-cline.md"
     }
   ],
   "sharedThemes": [
@@ -4536,11 +5911,14 @@
   ],
   "uniqueThemes": {
     "anthropics-claude-code": [],
+    "RooCodeInc-Roo-Code": [],
     "openclaw-openclaw": [],
     "Aider-AI-aider": [],
     "openai-codex": [],
     "cline-cline": [],
+    "google-gemini-gemini-cli": [],
     "block-goose": [],
+    "continuedev-continue": [],
     "opencode-ai-opencode": []
   }
 }

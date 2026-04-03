@@ -483,6 +483,9 @@ README.zh.md
 | [Aider-AI/aider](https://github.com/Aider-AI/aider) | aider | Terminal Pair Programming |
 | [block/goose](https://github.com/block/goose) | Goose | Open-source AI Agent |
 | [openclaw/openclaw](https://github.com/openclaw/openclaw) | OpenClaw | Cross-platform AI Agent |
+| [google-gemini/gemini-cli](https://github.com/google-gemini/gemini-cli) | Gemini CLI | AI Coding Agent |
+| [RooCodeInc/Roo-Code](https://github.com/RooCodeInc/Roo-Code) | Roo Code | AI Coding Agent |
+| [continuedev/continue](https://github.com/continuedev/continue) | Continue | AI Coding Assistant |
 
 ## Limits
 
@@ -656,6 +659,9 @@ README.zh.md
 | [Aider-AI/aider](https://github.com/Aider-AI/aider) | aider | 终端结对编程助手 |
 | [block/goose](https://github.com/block/goose) | Goose | 开源 AI Agent |
 | [openclaw/openclaw](https://github.com/openclaw/openclaw) | OpenClaw | 跨平台 AI Agent |
+| [google-gemini/gemini-cli](https://github.com/google-gemini/gemini-cli) | Gemini CLI | AI 编程 Agent |
+| [RooCodeInc/Roo-Code](https://github.com/RooCodeInc/Roo-Code) | Roo Code | AI 编程 Agent |
+| [continuedev/continue](https://github.com/continuedev/continue) | Continue | AI 编程助手 |
 
 ## 局限
 

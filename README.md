@@ -16,26 +16,33 @@ ReadYourUsers is a TypeScript workflow and public multi-product observatory for 
 
 <!-- READYOURUSERS:START -->
 
-## Live snapshot — OpenCode
+## Live snapshot — Continue
 
-> 62 issues analyzed from [opencode-ai/opencode](https://github.com/opencode-ai/opencode) · 10 need clusters · Updated 2026-04-03
+> 38 issues analyzed from [continuedev/continue](https://github.com/continuedev/continue) · 7 need clusters · Updated 2026-04-03
 
 ### Top needs right now
 
 | Rank | Need | Issues | Score | Category | Examples |
 | --- | --- | --- | --- | --- | --- |
-| 1 | Model Provider Configuration and Integration Fixes | 14 | 0.3 | Integration | [#352](https://github.com/opencode-ai/opencode/issues/352), [#351](https://github.com/opencode-ai/opencode/issues/351), [#349](https://github.com/opencode-ai/opencode/issues/349) |
-| 2 | Improve Installation, Configuration, and CLI Flexibility | 12 | 0.1 | Configuration | [#339](https://github.com/opencode-ai/opencode/issues/339), [#322](https://github.com/opencode-ai/opencode/issues/322), [#319](https://github.com/opencode-ai/opencode/issues/319) |
-| 3 | Provider Integration, Model Support, and Tool Improvements | 13 | 0.1 | Integration | [#353](https://github.com/opencode-ai/opencode/issues/353), [#334](https://github.com/opencode-ai/opencode/issues/334), [#313](https://github.com/opencode-ai/opencode/issues/313) |
-| 4 | Expand AI Provider Support and Error Handling | 6 | 0.1 | Integration | [#318](https://github.com/opencode-ai/opencode/issues/318), [#305](https://github.com/opencode-ai/opencode/issues/305), [#300](https://github.com/opencode-ai/opencode/issues/300) |
-| 5 | Ollama Local LLM Integration Support | 2 | 0.1 | Integration | [#326](https://github.com/opencode-ai/opencode/issues/326), [#296](https://github.com/opencode-ai/opencode/issues/296) |
-| 6 | Enhanced Authentication Methods and CLI Support | 4 | 0.1 | Developer Experience | [#343](https://github.com/opencode-ai/opencode/issues/343), [#335](https://github.com/opencode-ai/opencode/issues/335), [#275](https://github.com/opencode-ai/opencode/issues/275) |
-| 7 | Terminal Integration and Compatibility Issues | 2 | 0.1 | Integration | [#345](https://github.com/opencode-ai/opencode/issues/345), [#331](https://github.com/opencode-ai/opencode/issues/331) |
-| 8 | Fix text input and file search usability issues | 2 | 0.0 | Developer Experience | [#292](https://github.com/opencode-ai/opencode/issues/292), [#273](https://github.com/opencode-ai/opencode/issues/273) |
-| 9 | Fix external LLM model provider integrations | 2 | 0.0 | Integration | [#279](https://github.com/opencode-ai/opencode/issues/279), [#252](https://github.com/opencode-ai/opencode/issues/252) |
-| 10 | Windows Installation and Extraction Compatibility Fixes | 2 | 0.0 | Platform Support | [#320](https://github.com/opencode-ai/opencode/issues/320), [#306](https://github.com/opencode-ai/opencode/issues/306) |
+| 1 | Bug Fixes and Documentation for Multi-Provider Integration | 11 | 2.1 | Developer Experience | [#11999](https://github.com/continuedev/continue/issues/11999), [#11985](https://github.com/continuedev/continue/issues/11985), [#11978](https://github.com/continuedev/continue/issues/11978) |
+| 2 | Document config profiles and improve API error handling | 7 | 1.9 | Developer Experience | [#12026](https://github.com/continuedev/continue/issues/12026), [#12004](https://github.com/continuedev/continue/issues/12004), [#11968](https://github.com/continuedev/continue/issues/11968) |
+| 3 | Fix API Provider Authentication and Key Configuration | 4 | 1.9 | Configuration | [#12008](https://github.com/continuedev/continue/issues/12008), [#11961](https://github.com/continuedev/continue/issues/11961), [#11956](https://github.com/continuedev/continue/issues/11956) |
+| 4 | Fix Response Streaming and Error Handling Bugs | 4 | 1.9 | Reliability | [#11994](https://github.com/continuedev/continue/issues/11994), [#11983](https://github.com/continuedev/continue/issues/11983), [#11926](https://github.com/continuedev/continue/issues/11926) |
+| 5 | Fix IDE stability and reliability issues | 3 | 1.4 | Reliability | [#11959](https://github.com/continuedev/continue/issues/11959), [#11932](https://github.com/continuedev/continue/issues/11932), [#11919](https://github.com/continuedev/continue/issues/11919) |
+| 6 | Fix Tool Calling Reliability Across AI Providers | 3 | 0.0 | Reliability | [#11976](https://github.com/continuedev/continue/issues/11976), [#11964](https://github.com/continuedev/continue/issues/11964), [#11929](https://github.com/continuedev/continue/issues/11929) |
+| 7 | Fix IntelliJ extension resource limits and CPU usage | 2 | 0.0 | Performance | [#11977](https://github.com/continuedev/continue/issues/11977), [#11966](https://github.com/continuedev/continue/issues/11966) |
 
-[Observatory](https://study8677.github.io/ReadYourUsers/) | [Compare](https://study8677.github.io/ReadYourUsers/en/compare/index.html) | [Product page](https://study8677.github.io/ReadYourUsers/en/products/opencode-ai-opencode.html) | [Full report](reports/latest/opencode-ai-opencode.md) | [中文版](README.zh.md) | *Based on public GitHub issues — signal, not census.*
+### Rising fastest
+
+| Need | Rising Score | This Week | Category |
+| --- | --- | --- | --- |
+| Document config profiles and improve API error handling | 8.0x | 7 | Developer Experience |
+| Fix API Provider Authentication and Key Configuration | 5.0x | 4 | Configuration |
+| Fix IntelliJ extension resource limits and CPU usage | 3.0x | 2 | Performance |
+| Bug Fixes and Documentation for Multi-Provider Integration | 1.6x | 11 | Developer Experience |
+| Fix IDE stability and reliability issues | 1.5x | 3 | Reliability |
+
+[Observatory](https://study8677.github.io/ReadYourUsers/) | [Compare](https://study8677.github.io/ReadYourUsers/en/compare/index.html) | [Product page](https://study8677.github.io/ReadYourUsers/en/products/continuedev-continue.html) | [Full report](reports/latest/continuedev-continue.md) | [中文版](README.zh.md) | *Based on public GitHub issues — signal, not census.*
 
 <!-- READYOURUSERS:END -->
 
@@ -137,6 +144,9 @@ README.zh.md
 | [Aider-AI/aider](https://github.com/Aider-AI/aider) | aider | Terminal Pair Programming |
 | [block/goose](https://github.com/block/goose) | Goose | Open-source AI Agent |
 | [openclaw/openclaw](https://github.com/openclaw/openclaw) | OpenClaw | Cross-platform AI Agent |
+| [google-gemini/gemini-cli](https://github.com/google-gemini/gemini-cli) | Gemini CLI | AI Coding Agent |
+| [RooCodeInc/Roo-Code](https://github.com/RooCodeInc/Roo-Code) | Roo Code | AI Coding Agent |
+| [continuedev/continue](https://github.com/continuedev/continue) | Continue | AI Coding Assistant |
 
 ## Limits
 

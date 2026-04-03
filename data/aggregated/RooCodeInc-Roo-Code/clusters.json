@@ -1,0 +1,371 @@
+{
+  "repo": "RooCodeInc/Roo-Code",
+  "display_name": "Roo Code",
+  "generated_at": "2026-04-03T14:00:17.253Z",
+  "window_start": "2026-03-04T14:00:17.253Z",
+  "window_end": "2026-04-03T14:00:17.253Z",
+  "total_issues_analyzed": 53,
+  "total_issues_included": 52,
+  "clusters": [
+    {
+      "cluster_id": "7d6e4cfe16c0",
+      "title": "Provider and Model Configuration Enhancements",
+      "summary": "Users are requesting expanded model support across providers like Ollama, OpenRouter, and Z.ai, along with fixes for context management issues including token limit calculations and content truncation. These enhancements improve the system's flexibility and reliability when working with diverse AI models and configurations.",
+      "category": "Configuration",
+      "representative_need": "Add Hebrew (he) locale support with RTL layout",
+      "issue_numbers": [
+        12044,
+        12037,
+        12024,
+        12020,
+        12018,
+        12017,
+        12001,
+        11998,
+        11994,
+        11992,
+        11990,
+        11989,
+        11977,
+        11968,
+        11958,
+        11953,
+        11951
+      ],
+      "issue_urls": [
+        "https://github.com/RooCodeInc/Roo-Code/issues/12044",
+        "https://github.com/RooCodeInc/Roo-Code/issues/12037",
+        "https://github.com/RooCodeInc/Roo-Code/issues/12024",
+        "https://github.com/RooCodeInc/Roo-Code/issues/12020",
+        "https://github.com/RooCodeInc/Roo-Code/issues/12018",
+        "https://github.com/RooCodeInc/Roo-Code/issues/12017",
+        "https://github.com/RooCodeInc/Roo-Code/issues/12001",
+        "https://github.com/RooCodeInc/Roo-Code/issues/11998",
+        "https://github.com/RooCodeInc/Roo-Code/issues/11994",
+        "https://github.com/RooCodeInc/Roo-Code/issues/11992",
+        "https://github.com/RooCodeInc/Roo-Code/issues/11990",
+        "https://github.com/RooCodeInc/Roo-Code/issues/11989",
+        "https://github.com/RooCodeInc/Roo-Code/issues/11977",
+        "https://github.com/RooCodeInc/Roo-Code/issues/11968",
+        "https://github.com/RooCodeInc/Roo-Code/issues/11958",
+        "https://github.com/RooCodeInc/Roo-Code/issues/11953",
+        "https://github.com/RooCodeInc/Roo-Code/issues/11951"
+      ],
+      "sample_titles": [
+        "Add Hebrew (he) locale support with RTL layout",
+        "Add MiniMax M2.7 model to the MiniMax provider",
+        "Add automatic commit message generation feature"
+      ],
+      "demand_score": 7.845479335498307,
+      "rising_score": 0.7777777777777778,
+      "volume": 17,
+      "open_count": 17,
+      "closed_count": 0,
+      "avg_reactions": 0.4,
+      "avg_comments": 3.9,
+      "date_first_seen": "2026-03-18T09:33:17.000Z",
+      "date_last_seen": "2026-04-02T04:46:47.000Z",
+      "repos_affected": [
+        "RooCodeInc/Roo-Code"
+      ]
+    },
+    {
+      "cluster_id": "c56ec41f68ef",
+      "title": "Expand AI Model Integrations and MCP Protocol Support",
+      "summary": "Users are requesting expanded support for various AI model providers (including xAI/grok-4.20, Gemini 3, and Claude via VS Code LM API) along with MCP protocol enhancements. Key needs include fixing tool calling failures, supporting new MCP server versions and protocol specs, enabling agent-to-agent communication via A2A, and providing per-mode MCP server restrictions to manage context bloat.",
+      "category": "Integration",
+      "representative_need": "Add grok-4.20 models to xAI provider",
+      "issue_numbers": [
+        12050,
+        12035,
+        12016,
+        12007,
+        12004,
+        11997,
+        11966,
+        11955
+      ],
+      "issue_urls": [
+        "https://github.com/RooCodeInc/Roo-Code/issues/12050",
+        "https://github.com/RooCodeInc/Roo-Code/issues/12035",
+        "https://github.com/RooCodeInc/Roo-Code/issues/12016",
+        "https://github.com/RooCodeInc/Roo-Code/issues/12007",
+        "https://github.com/RooCodeInc/Roo-Code/issues/12004",
+        "https://github.com/RooCodeInc/Roo-Code/issues/11997",
+        "https://github.com/RooCodeInc/Roo-Code/issues/11966",
+        "https://github.com/RooCodeInc/Roo-Code/issues/11955"
+      ],
+      "sample_titles": [
+        "Add grok-4.20 models to xAI provider",
+        "Add support for MiniMax MCP Server version 2.7",
+        "Fix empty response handling when using Claude models via VS Code LM API"
+      ],
+      "demand_score": 4.20770660057867,
+      "rising_score": 0.8,
+      "volume": 8,
+      "open_count": 5,
+      "closed_count": 3,
+      "avg_reactions": 0,
+      "avg_comments": 2.9,
+      "date_first_seen": "2026-03-18T22:40:58.000Z",
+      "date_last_seen": "2026-04-03T12:46:09.000Z",
+      "repos_affected": [
+        "RooCodeInc/Roo-Code"
+      ]
+    },
+    {
+      "cluster_id": "b2376639e132",
+      "title": "Provider-specific API integration bug fixes",
+      "summary": "Users are experiencing various integration issues with different AI providers, including response handling, configuration parameters, caching behavior, and deprecated API migrations. These fixes ensure reliable communication with Vertex AI, OpenAI-compatible endpoints, Mistral, AWS Bedrock, and Grok providers.",
+      "category": "Integration",
+      "representative_need": "Fix 'duplex option is required' error when making Mistral API requests",
+      "issue_numbers": [
+        12045,
+        12042,
+        12006,
+        11996,
+        11983,
+        11961
+      ],
+      "issue_urls": [
+        "https://github.com/RooCodeInc/Roo-Code/issues/12045",
+        "https://github.com/RooCodeInc/Roo-Code/issues/12042",
+        "https://github.com/RooCodeInc/Roo-Code/issues/12006",
+        "https://github.com/RooCodeInc/Roo-Code/issues/11996",
+        "https://github.com/RooCodeInc/Roo-Code/issues/11983",
+        "https://github.com/RooCodeInc/Roo-Code/issues/11961"
+      ],
+      "sample_titles": [
+        "Fix 'duplex option is required' error when making Mistral API requests",
+        "Fix Gemini API response handling for Vertex AI provider",
+        "Fix OpenAI compatible providers receiving forced temperature: 0 when custom temperature is not configured"
+      ],
+      "demand_score": 3.2680973383109397,
+      "rising_score": 0.75,
+      "volume": 6,
+      "open_count": 6,
+      "closed_count": 0,
+      "avg_reactions": 0.2,
+      "avg_comments": 3.2,
+      "date_first_seen": "2026-03-19T21:25:59.000Z",
+      "date_last_seen": "2026-04-02T13:41:52.000Z",
+      "repos_affected": [
+        "RooCodeInc/Roo-Code"
+      ]
+    },
+    {
+      "cluster_id": "2688d2473537",
+      "title": "AI Coding Assistant UX Improvements",
+      "summary": "Users want improvements to the AI coding assistant's core interaction behaviors, including better visual feedback when operations fail, expanded slash command functionality in multiline inputs, automatic checkpoint features for code change recovery, and consistent adherence to user-defined preferences. These issues collectively address the assistant's reliability, usability, and alignment with developer workflows.",
+      "category": "Developer Experience",
+      "representative_need": "Add automatic checkpoint creation after code changes to enable easy re-application of reverted changes",
+      "issue_numbers": [
+        12032,
+        12028,
+        11987,
+        11967
+      ],
+      "issue_urls": [
+        "https://github.com/RooCodeInc/Roo-Code/issues/12032",
+        "https://github.com/RooCodeInc/Roo-Code/issues/12028",
+        "https://github.com/RooCodeInc/Roo-Code/issues/11987",
+        "https://github.com/RooCodeInc/Roo-Code/issues/11967"
+      ],
+      "sample_titles": [
+        "Add automatic checkpoint creation after code changes to enable easy re-application of reverted changes",
+        "Enable slash commands across all lines of multiline input, not just the first line",
+        "Fix AI assistant not following user custom instructions about not creating tests or multiple script versions"
+      ],
+      "demand_score": 2.507183062207184,
+      "rising_score": 1,
+      "volume": 4,
+      "open_count": 4,
+      "closed_count": 0,
+      "avg_reactions": 0,
+      "avg_comments": 2.8,
+      "date_first_seen": "2026-03-20T22:39:37.000Z",
+      "date_last_seen": "2026-03-29T11:55:29.000Z",
+      "repos_affected": [
+        "RooCodeInc/Roo-Code"
+      ]
+    },
+    {
+      "cluster_id": "189d9800f952",
+      "title": "Per-Context Settings and Model Provider Improvements",
+      "summary": "Users want improved configuration management with per-project and per-mode settings persistence instead of global-only configurations, better handling of custom AI provider models (including context window detection and custom model names), and enhanced MCP server security with allowlist-based tool filtering. They also need initialization code that works reliably in offline/restricted environments without depending on proxy tool side effects.",
+      "category": "Configuration",
+      "representative_need": "Add MiniMax-M2.7 model to the available model list",
+      "issue_numbers": [
+        12038,
+        12034,
+        12014,
+        12002,
+        11999,
+        11981,
+        11971,
+        11964
+      ],
+      "issue_urls": [
+        "https://github.com/RooCodeInc/Roo-Code/issues/12038",
+        "https://github.com/RooCodeInc/Roo-Code/issues/12034",
+        "https://github.com/RooCodeInc/Roo-Code/issues/12014",
+        "https://github.com/RooCodeInc/Roo-Code/issues/12002",
+        "https://github.com/RooCodeInc/Roo-Code/issues/11999",
+        "https://github.com/RooCodeInc/Roo-Code/issues/11981",
+        "https://github.com/RooCodeInc/Roo-Code/issues/11971",
+        "https://github.com/RooCodeInc/Roo-Code/issues/11964"
+      ],
+      "sample_titles": [
+        "Add MiniMax-M2.7 model to the available model list",
+        "Add onlyAllow field for MCP server configuration to enable allowlist-based tool filtering",
+        "Fix auto-approve settings synchronization across multiple VS Code windows"
+      ],
+      "demand_score": 2.212374012225961,
+      "rising_score": 0.5,
+      "volume": 8,
+      "open_count": 8,
+      "closed_count": 0,
+      "avg_reactions": 0.1,
+      "avg_comments": 2.4,
+      "date_first_seen": "2026-03-20T13:29:59.000Z",
+      "date_last_seen": "2026-03-31T09:19:37.000Z",
+      "repos_affected": [
+        "RooCodeInc/Roo-Code"
+      ]
+    },
+    {
+      "cluster_id": "4d9efedf3e18",
+      "title": "Chat Interface Visual Rendering Fixes",
+      "summary": "Users are experiencing multiple visual display issues in the chat window interface, including missing icons on Windows 10, improperly formatted markdown tables that stretch instead of scroll, and unwanted jitter when updating content. These rendering problems negatively impact the polish and usability of the interface.",
+      "category": "UI/UX",
+      "representative_need": "Fix chat window jitter when updating todo items",
+      "issue_numbers": [
+        12030,
+        12026,
+        11986
+      ],
+      "issue_urls": [
+        "https://github.com/RooCodeInc/Roo-Code/issues/12030",
+        "https://github.com/RooCodeInc/Roo-Code/issues/12026",
+        "https://github.com/RooCodeInc/Roo-Code/issues/11986"
+      ],
+      "sample_titles": [
+        "Fix chat window jitter when updating todo items",
+        "Fix markdown table rendering to use horizontal scrolling instead of stretching to chat window width",
+        "Fix missing Debug and Orchestrator mode icons on Windows 10"
+      ],
+      "demand_score": 2.0867504232887897,
+      "rising_score": 1.5,
+      "volume": 3,
+      "open_count": 3,
+      "closed_count": 0,
+      "avg_reactions": 0,
+      "avg_comments": 3,
+      "date_first_seen": "2026-03-25T02:46:03.000Z",
+      "date_last_seen": "2026-03-29T09:08:10.000Z",
+      "repos_affected": [
+        "RooCodeInc/Roo-Code"
+      ]
+    },
+    {
+      "cluster_id": "575a4a54be9f",
+      "title": "Improve shell parsing and file exclusion reliability",
+      "summary": "Users want the tool to replace regexp-based shell parsing with a true shell parser for more reliable command safety validation and allow/deny list enforcement. Additionally, they need consistent .rooignore exclusion behavior across all MCP tools to prevent inconsistent file filtering.",
+      "category": "Security",
+      "representative_need": "Fix inconsistent .rooignore exclusion enforcement across MCP tools",
+      "issue_numbers": [
+        12040,
+        12023
+      ],
+      "issue_urls": [
+        "https://github.com/RooCodeInc/Roo-Code/issues/12040",
+        "https://github.com/RooCodeInc/Roo-Code/issues/12023"
+      ],
+      "sample_titles": [
+        "Fix inconsistent .rooignore exclusion enforcement across MCP tools",
+        "Replace regexp-based shell parsing with a true shell parser for improved command safety validation and allow/deny list reliability"
+      ],
+      "demand_score": 1.9002766455045519,
+      "rising_score": 3,
+      "volume": 2,
+      "open_count": 2,
+      "closed_count": 0,
+      "avg_reactions": 1,
+      "avg_comments": 1.5,
+      "date_first_seen": "2026-03-27T23:01:54.000Z",
+      "date_last_seen": "2026-04-01T00:16:34.000Z",
+      "repos_affected": [
+        "RooCodeInc/Roo-Code"
+      ]
+    },
+    {
+      "cluster_id": "d162cdfbd9ff",
+      "title": "CLI Feature Enhancements",
+      "summary": "Users want improvements to the ClaudeCode CLI including fixing the auto-approve feature to work properly in code mode, and adding a /plugin command for installing, listing, and removing plugins. These enhancements would improve workflow automation and extensibility for CLI users.",
+      "category": "Developer Experience",
+      "representative_need": "Add /plugin command to install, list, and remove ClaudeCode plugins",
+      "issue_numbers": [
+        12003,
+        11974
+      ],
+      "issue_urls": [
+        "https://github.com/RooCodeInc/Roo-Code/issues/12003",
+        "https://github.com/RooCodeInc/Roo-Code/issues/11974"
+      ],
+      "sample_titles": [
+        "Add /plugin command to install, list, and remove ClaudeCode plugins",
+        "Fix auto-approve feature to properly auto-execute commands in code mode"
+      ],
+      "demand_score": 1.2611037050405436,
+      "rising_score": 0.3333333333333333,
+      "volume": 2,
+      "open_count": 2,
+      "closed_count": 0,
+      "avg_reactions": 0.5,
+      "avg_comments": 4,
+      "date_first_seen": "2026-03-21T12:01:15.000Z",
+      "date_last_seen": "2026-03-26T18:42:26.000Z",
+      "repos_affected": [
+        "RooCodeInc/Roo-Code"
+      ]
+    },
+    {
+      "cluster_id": "cf0abce951a1",
+      "title": "Enhanced audio feedback and notification hooks",
+      "summary": "Users want distinct audio feedback for different event types like task completion and AI/extension replies, along with programmatic hooks that trigger external notification systems during user prompts. This enables better workflow integration and awareness without requiring constant screen monitoring.",
+      "category": "Integration",
+      "representative_need": "Add distinct audio feedback for task completion and AI/extension replies",
+      "issue_numbers": [
+        12047,
+        12025
+      ],
+      "issue_urls": [
+        "https://github.com/RooCodeInc/Roo-Code/issues/12047",
+        "https://github.com/RooCodeInc/Roo-Code/issues/12025"
+      ],
+      "sample_titles": [
+        "Add distinct audio feedback for task completion and AI/extension replies",
+        "Add hook command execution for events requiring user prompts to enable external notification forwarding"
+      ],
+      "demand_score": 1.1797668698584074,
+      "rising_score": 3,
+      "volume": 2,
+      "open_count": 2,
+      "closed_count": 0,
+      "avg_reactions": 0.5,
+      "avg_comments": 2.5,
+      "date_first_seen": "2026-03-28T16:51:24.000Z",
+      "date_last_seen": "2026-04-03T01:26:15.000Z",
+      "repos_affected": [
+        "RooCodeInc/Roo-Code"
+      ]
+    }
+  ],
+  "category_breakdown": {
+    "Configuration": 2,
+    "Integration": 3,
+    "Developer Experience": 2,
+    "UI/UX": 1,
+    "Security": 1
+  }
+}
