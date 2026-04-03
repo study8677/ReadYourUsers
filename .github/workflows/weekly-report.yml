@@ -1,4 +1,4 @@
-name: Weekly User Demand Report
+name: Weekly Multi-Product Observatory
 
 on:
   schedule:
@@ -44,10 +44,12 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.READYOURUSERS_GITHUB_TOKEN }}
           READYOURUSERS_GITHUB_TOKEN: ${{ secrets.READYOURUSERS_GITHUB_TOKEN }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          OPENAI_BASE_URL: ${{ secrets.OPENAI_BASE_URL }}
+          OPENAI_BASE_URL: ${{ secrets.OPENAI_BASE_URL || vars.OPENAI_BASE_URL || 'https://openrouter.ai/api/v1' }}
+          OPENROUTER_HTTP_REFERER: ${{ vars.OPENROUTER_HTTP_REFERER || format('{0}/{1}', github.server_url, github.repository) }}
+          OPENROUTER_APP_TITLE: ${{ vars.OPENROUTER_APP_TITLE || 'ReadYourUsers' }}
           LLM_PROVIDER: openai
-          ANALYSIS_MODEL: ${{ vars.ANALYSIS_MODEL || 'gpt-4o-mini' }}
-          AGGREGATION_MODEL: ${{ vars.AGGREGATION_MODEL || 'gpt-4o' }}
+          ANALYSIS_MODEL: ${{ vars.ANALYSIS_MODEL || 'qwen/qwen3.6-plus:free' }}
+          AGGREGATION_MODEL: ${{ vars.AGGREGATION_MODEL || 'qwen/qwen3.6-plus:free' }}
         run: |
           ARGS="${{ github.event.inputs.repo }}"
           if [ -n "${{ github.event.inputs.max_pages }}" ]; then

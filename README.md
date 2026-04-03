@@ -2,16 +2,17 @@
 
 **Language:** English · [中文](README.zh.md)
 
-> Understand what users actually want by turning public GitHub issues into ranked demand maps.
+> Track what users of Claude Code, Codex, Cursor, and other AI coding products want by turning public GitHub issues into a bilingual demand observatory.
 
-ReadYourUsers is a TypeScript CLI + static site workflow for turning noisy GitHub issue streams into something product teams can actually use:
+ReadYourUsers is a TypeScript workflow and public multi-product observatory for turning noisy GitHub issue streams into weekly demand maps across AI coding products:
 
-- **ranked user needs**
-- **rising demand signals**
-- **traceable links back to source issues**
-- **bilingual reports and a bilingual public site**
+- **cross-product signal maps**
+- **product-level deep dives**
+- **rising demand shifts**
+- **traceable issue evidence**
+- **bilingual reports, compare pages, and product routes**
 
-**Links:** [Live site](https://study8677.github.io/ReadYourUsers/) · [English site](https://study8677.github.io/ReadYourUsers/en/index.html) · [中文站点](https://study8677.github.io/ReadYourUsers/zh/index.html) · [中文版 README](README.zh.md)
+**Links:** [Live site](https://study8677.github.io/ReadYourUsers/) · [Compare](https://study8677.github.io/ReadYourUsers/en/compare/index.html) · [English site](https://study8677.github.io/ReadYourUsers/en/index.html) · [中文站点](https://study8677.github.io/ReadYourUsers/zh/index.html) · [中文版 README](README.zh.md)
 
 <!-- READYOURUSERS:START -->
 
@@ -44,28 +45,29 @@ ReadYourUsers is a TypeScript CLI + static site workflow for turning noisy GitHu
 | Bug Fixes and Feature Enhancements | 32.0x | 31 | Developer Experience |
 | Configuration and Settings Management Improvements | 18.0x | 17 | Configuration |
 
-[Live site](https://study8677.github.io/ReadYourUsers/) | [English site](https://study8677.github.io/ReadYourUsers/en/index.html) | [中文站点](https://study8677.github.io/ReadYourUsers/zh/index.html) | [Full report](reports/latest/anthropics-claude-code.md) | [中文版](README.zh.md) | *Based on public GitHub issues — signal, not census.*
+[Observatory](https://study8677.github.io/ReadYourUsers/) | [Compare](https://study8677.github.io/ReadYourUsers/en/compare/index.html) | [Product page](https://study8677.github.io/ReadYourUsers/en/products/anthropics-claude-code.html) | [Full report](reports/latest/anthropics-claude-code.md) | [中文版](README.zh.md) | *Based on public GitHub issues — signal, not census.*
 
 <!-- READYOURUSERS:END -->
 
 ## Why this exists
 
-Reading GitHub issues one by one does not scale.
+If you follow more than one AI coding product, reading GitHub issues repo by repo does not scale.
 
-- titles are inconsistent
-- duplicates are spread across multiple threads
-- urgency is easy to miss
-- recent momentum is buried in long issue lists
+- titles are inconsistent across repos
+- duplicates hide inside different product communities
+- urgency is easy to miss in long queues
+- cross-product shifts are hard to spot without a shared lens
 
-ReadYourUsers turns that raw stream into a compact demand map you can scan in minutes.
+ReadYourUsers turns that raw stream into a compact observatory you can scan in minutes, then drill into a specific product when something spikes.
 
 ## What you get
 
-- **Ranked needs** — clustered requests with demand scores
+- **Cross-product observatory** — homepage + compare view for tracked products
+- **Product deep dives** — per-product reports and dedicated product pages
 - **Rising signals** — what is accelerating right now
 - **Traceability** — every insight links back to the original issues
-- **Bilingual outputs** — English / Chinese reports and site routes
-- **Repeatable workflow** — fetch, analyze, aggregate, publish
+- **Bilingual outputs** — English / Chinese reports and public site routes
+- **Repeatable workflow** — fetch, analyze, aggregate, generate, publish
 
 ## Quick start
 
@@ -73,7 +75,7 @@ ReadYourUsers turns that raw stream into a compact demand map you can scan in mi
 
 - Node.js 18+
 - a GitHub token for reading public issues
-- an LLM key for Anthropic or OpenAI-compatible APIs
+- an OpenRouter key (recommended) or another OpenAI-compatible / Anthropic LLM key
 
 ### Install
 
@@ -82,19 +84,30 @@ npm install
 cp .env.example .env
 ```
 
-### Run the full pipeline
+### Recommended OpenRouter defaults
+
+```bash
+READYOURUSERS_GITHUB_TOKEN=your_github_token
+LLM_PROVIDER=openai
+OPENAI_API_KEY=your_openrouter_key
+OPENAI_BASE_URL=https://openrouter.ai/api/v1
+OPENROUTER_HTTP_REFERER=https://github.com/fanjingwen/ReadYourUsers
+OPENROUTER_APP_TITLE=ReadYourUsers
+ANALYSIS_MODEL=qwen/qwen3.6-plus:free
+AGGREGATION_MODEL=qwen/qwen3.6-plus:free
+```
+
+### Build the full observatory
+
+```bash
+npx tsx src/cli.ts run
+npm run site:build
+```
+
+### Drill into a single product
 
 ```bash
 npx tsx src/cli.ts run anthropics/claude-code
-```
-
-### Run step by step
-
-```bash
-npx tsx src/cli.ts fetch anthropics/claude-code
-npx tsx src/cli.ts analyze anthropics/claude-code
-npx tsx src/cli.ts aggregate anthropics/claude-code
-npx tsx src/cli.ts generate anthropics/claude-code
 ```
 
 ## How it works
@@ -102,22 +115,27 @@ npx tsx src/cli.ts generate anthropics/claude-code
 1. **Fetch** — pull public issues from GitHub with caching
 2. **Analyze** — use an LLM to extract structured need signals
 3. **Aggregate** — cluster similar needs and compute demand / rising scores
-4. **Generate** — publish Markdown reports, site pages, and README snapshots
+4. **Generate** — publish per-product reports, README snapshots, cross-product summary artifacts, and compare/product site routes
 
 ## Outputs
 
 ```text
 reports/latest/<repo>.md
 reports/latest/<repo>.zh.md
+reports/latest/cross-product.json
 reports/archive/<week>/<repo>.md
 reports/archive/<week>/<repo>.zh.md
-site/en/...
-site/zh/...
+site/en/index.html
+site/en/compare/index.html
+site/en/products/<slug>.html
+site/zh/index.html
+site/zh/compare/index.html
+site/zh/products/<slug>.html
 README.md
 README.zh.md
 ```
 
-## Tracked repositories
+## Products currently tracked
 
 | Repository | Product | Category |
 | --- | --- | --- |

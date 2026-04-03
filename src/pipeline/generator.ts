@@ -21,6 +21,8 @@ import { logger } from "../utils/logger.js";
 const PUBLIC_SITE_URL = "https://study8677.github.io/ReadYourUsers/";
 const PUBLIC_SITE_EN_URL = `${PUBLIC_SITE_URL}en/index.html`;
 const PUBLIC_SITE_ZH_URL = `${PUBLIC_SITE_URL}zh/index.html`;
+const PUBLIC_SITE_COMPARE_EN_URL = `${PUBLIC_SITE_URL}en/compare/index.html`;
+const PUBLIC_SITE_COMPARE_ZH_URL = `${PUBLIC_SITE_URL}zh/compare/index.html`;
 
 export interface GenerateOptions {
   repo: string;
@@ -343,9 +345,9 @@ function buildEnglishReadme(
     s.push("");
   }
   s.push(
-    `[Live site](${PUBLIC_SITE_URL}) | ` +
-    `[English site](${PUBLIC_SITE_EN_URL}) | ` +
-    `[中文站点](${PUBLIC_SITE_ZH_URL}) | ` +
+    `[Observatory](${PUBLIC_SITE_URL}) | ` +
+    `[Compare](${PUBLIC_SITE_COMPARE_EN_URL}) | ` +
+    `[Product page](${PUBLIC_SITE_URL}en/products/${slug}.html) | ` +
     `[Full report](reports/latest/${slug}.md) | ` +
     `[中文版](README.zh.md) | ` +
     `*Based on public GitHub issues — signal, not census.*`
@@ -358,37 +360,39 @@ function buildEnglishReadme(
 
 **Language:** English · [中文](README.zh.md)
 
-> Understand what users actually want by turning public GitHub issues into ranked demand maps.
+> Track what users of Claude Code, Codex, Cursor, and other AI coding products want by turning public GitHub issues into a bilingual demand observatory.
 
-ReadYourUsers is a TypeScript CLI and static site generator for turning noisy GitHub issue streams into something product teams can actually use:
+ReadYourUsers is a TypeScript workflow and public multi-product observatory for turning noisy GitHub issue streams into weekly demand maps across AI coding products:
 
-- ranked user needs
-- rising trends
-- traceable evidence back to the original issues
-- bilingual reports and a bilingual public site
+- cross-product signal maps
+- product-level deep dives
+- rising demand shifts
+- traceable issue evidence
+- bilingual reports, compare pages, and product routes
 
-**Links:** [Live site](${PUBLIC_SITE_URL}) · [English site](${PUBLIC_SITE_EN_URL}) · [中文站点](${PUBLIC_SITE_ZH_URL}) · [中文版 README](README.zh.md)
+**Links:** [Live site](${PUBLIC_SITE_URL}) · [Compare](${PUBLIC_SITE_COMPARE_EN_URL}) · [English site](${PUBLIC_SITE_EN_URL}) · [中文站点](${PUBLIC_SITE_ZH_URL}) · [中文版 README](README.zh.md)
 
 ${section}
 
-## Why ReadYourUsers
+## Why this exists
 
-Reading issues one by one does not scale.
+If you follow more than one AI coding product, reading GitHub issues repo by repo does not scale.
 
-- titles are inconsistent
-- duplicates are spread across many threads
-- urgency is easy to miss
-- recent momentum is buried in a long list of issues
+- titles are inconsistent across repos
+- duplicates hide inside different product communities
+- urgency is easy to miss in long queues
+- cross-product shifts are hard to spot without a shared lens
 
-ReadYourUsers turns that raw stream into a compact demand map you can scan in minutes.
+ReadYourUsers turns that raw stream into a compact observatory you can scan in minutes, then drill into a specific product when something spikes.
 
 ## What you get
 
-- **Ranked needs** — clustered requests with demand scores
+- **Cross-product observatory** — homepage + compare view for tracked products
+- **Product deep dives** — per-product reports and dedicated product pages
 - **Rising signals** — what is accelerating right now
-- **Traceability** — every insight links back to source issues
-- **Bilingual outputs** — English and Chinese reports plus a bilingual site
-- **Repeatable pipeline** — fetch, analyze, aggregate, publish
+- **Traceability** — every insight links back to the original issues
+- **Bilingual outputs** — English / Chinese reports and public site routes
+- **Repeatable workflow** — fetch, analyze, aggregate, generate, publish
 
 ## Quick start
 
@@ -396,7 +400,7 @@ ReadYourUsers turns that raw stream into a compact demand map you can scan in mi
 
 - Node.js 18+
 - a GitHub token for reading public issues
-- an LLM key for either Anthropic or OpenAI-compatible APIs
+- an OpenRouter key (recommended) or another OpenAI-compatible / Anthropic LLM key
 
 ### Install
 
@@ -405,19 +409,30 @@ npm install
 cp .env.example .env
 \`\`\`
 
-### Run the full pipeline
+### Recommended OpenRouter defaults
+
+\`\`\`bash
+READYOURUSERS_GITHUB_TOKEN=your_github_token
+LLM_PROVIDER=openai
+OPENAI_API_KEY=your_openrouter_key
+OPENAI_BASE_URL=https://openrouter.ai/api/v1
+OPENROUTER_HTTP_REFERER=https://github.com/fanjingwen/ReadYourUsers
+OPENROUTER_APP_TITLE=ReadYourUsers
+ANALYSIS_MODEL=qwen/qwen3.6-plus:free
+AGGREGATION_MODEL=qwen/qwen3.6-plus:free
+\`\`\`
+
+### Build the full observatory
+
+\`\`\`bash
+npx tsx src/cli.ts run
+npm run site:build
+\`\`\`
+
+### Drill into a single product
 
 \`\`\`bash
 npx tsx src/cli.ts run anthropics/claude-code
-\`\`\`
-
-### Run step by step
-
-\`\`\`bash
-npx tsx src/cli.ts fetch anthropics/claude-code
-npx tsx src/cli.ts analyze anthropics/claude-code
-npx tsx src/cli.ts aggregate anthropics/claude-code
-npx tsx src/cli.ts generate anthropics/claude-code
 \`\`\`
 
 ## How it works
@@ -425,22 +440,27 @@ npx tsx src/cli.ts generate anthropics/claude-code
 1. **Fetch** — pull public issues from GitHub with caching
 2. **Analyze** — use an LLM to extract structured need signals
 3. **Aggregate** — cluster similar needs and compute demand / rising scores
-4. **Generate** — publish Markdown reports, site pages, and README snapshots
+4. **Generate** — publish per-product reports, README snapshots, cross-product summary artifacts, and compare/product site routes
 
 ## Outputs
 
 \`\`\`text
 reports/latest/<repo>.md
 reports/latest/<repo>.zh.md
+reports/latest/cross-product.json
 reports/archive/<week>/<repo>.md
 reports/archive/<week>/<repo>.zh.md
-site/en/...
-site/zh/...
+site/en/index.html
+site/en/compare/index.html
+site/en/products/<slug>.html
+site/zh/index.html
+site/zh/compare/index.html
+site/zh/products/<slug>.html
 README.md
 README.zh.md
 \`\`\`
 
-## Tracked repositories
+## Products currently tracked
 
 | Repository | Product | Category |
 | --- | --- | --- |
@@ -452,15 +472,8 @@ README.zh.md
 
 - **Public data only** — private support channels are not included
 - **Signal, not census** — issue volume is not the same as total user count
-- **LLM summarization is imperfect** — conclusions stay grounded by linking back to the source issues
-- **Feedback quality varies by product** — some products rely less on GitHub issues than others
-
-## Principles
-
-- **Public-data only**
-- **Traceable conclusions**
-- **Fast to scan**
-- **Useful for product decisions, not just issue triage**
+- **LLM summarization is imperfect** — conclusions stay grounded through source links
+- **Cross-product comparisons require care** — GitHub issue culture varies by product
 
 ## License
 
@@ -500,9 +513,9 @@ function buildChineseReadme(
     s.push("");
   }
   s.push(
-    `[在线网页](${PUBLIC_SITE_URL}) | ` +
-    `[English site](${PUBLIC_SITE_EN_URL}) | ` +
-    `[中文站点](${PUBLIC_SITE_ZH_URL}) | ` +
+    `[观测站](${PUBLIC_SITE_URL}) | ` +
+    `[对比页](${PUBLIC_SITE_COMPARE_ZH_URL}) | ` +
+    `[产品页](${PUBLIC_SITE_URL}zh/products/${slug}.html) | ` +
     `[完整报告](reports/latest/${slug}.zh.md) | ` +
     `[English](README.md) | ` +
     `*基于公开 GitHub Issues，代表需求信号而非全部用户声音。*`
@@ -515,37 +528,39 @@ function buildChineseReadme(
 
 **语言切换：** [English](README.md) · 中文
 
-> 把公开 GitHub Issues 变成可读、可排序、可追溯的用户需求地图。
+> 把 Claude Code、Codex、Cursor 等 AI 编程产品的公开 GitHub Issues 变成一座中英双语需求观测站。
 
-ReadYourUsers 是一个 TypeScript CLI + 静态站点生成器，用来把嘈杂的 GitHub issue 流整理成产品团队真正能用的需求信号：
+ReadYourUsers 是一个 TypeScript 工作流和公开的多产品观测站，用来把嘈杂的 GitHub issue 流整理成跨 AI 编程产品的周度需求地图：
 
-- 有排序的用户需求
-- 正在上升的趋势
-- 可以追溯到原始 issue 的证据链
-- 中英双语报告和双语网站
+- 跨产品信号总览
+- 单产品深挖页
+- 正在升温的需求变化
+- 可追溯的 issue 证据链
+- 双语报告、对比页和产品页
 
-**链接：** [在线网页](${PUBLIC_SITE_URL}) · [English site](${PUBLIC_SITE_EN_URL}) · [中文站点](${PUBLIC_SITE_ZH_URL}) · [English README](README.md)
+**链接：** [在线网页](${PUBLIC_SITE_URL}) · [对比页](${PUBLIC_SITE_COMPARE_ZH_URL}) · [English](${PUBLIC_SITE_EN_URL}) · [中文](${PUBLIC_SITE_ZH_URL}) · [English README](README.md)
 
 ${section}
 
 ## 为什么值得做
 
-直接看 issue 不够高效：
+如果你同时关注多个 AI 编程产品，按仓库逐个读 GitHub issue 并不能高效回答“用户现在到底想要什么”。
 
-- 标题表达不统一
-- 重复需求分散在不同线程
-- 紧迫度不容易一眼看出
-- 最近正在升温的问题常常埋在长列表里
+- 不同仓库的标题写法不一致
+- 相似需求会分散在不同社区里
+- 紧迫度容易被长列表淹没
+- 没有统一视角就很难看见跨产品变化
 
-ReadYourUsers 把这些原始讨论压缩成一张几分钟就能扫完的需求地图。
+ReadYourUsers 把这些原始讨论压缩成一座几分钟就能扫完的观测站，发现异常后再深入到具体产品。
 
 ## 你能得到什么
 
-- **需求排行** — 聚类后的核心用户需求与 demand score
-- **上升趋势** — 最近正在加速出现的问题
+- **多产品观测站** — 首页 + 对比页快速浏览所有追踪产品
+- **产品深挖** — 每个产品都有独立报告和产品页面
+- **上升信号** — 最近正在加速出现的问题
 - **可追溯证据** — 每条结论都能回到原始 issue
-- **双语输出** — 英文 / 中文报告与双语站点
-- **可复用流水线** — 抓取、分析、聚合、发布一条龙
+- **双语输出** — 英文 / 中文报告与公开站点路由
+- **可复用工作流** — 抓取、分析、聚合、生成、发布一条龙
 
 ## 快速开始
 
@@ -553,7 +568,7 @@ ReadYourUsers 把这些原始讨论压缩成一张几分钟就能扫完的需求
 
 - Node.js 18+
 - 用于读取公开 issue 的 GitHub token
-- Anthropic 或 OpenAI 兼容接口的 LLM key
+- OpenRouter（推荐）或其他 OpenAI 兼容 / Anthropic LLM key
 
 ### 安装
 
@@ -562,19 +577,30 @@ npm install
 cp .env.example .env
 \`\`\`
 
-### 跑完整流程
+### 推荐的 OpenRouter 默认配置
+
+\`\`\`bash
+READYOURUSERS_GITHUB_TOKEN=your_github_token
+LLM_PROVIDER=openai
+OPENAI_API_KEY=your_openrouter_key
+OPENAI_BASE_URL=https://openrouter.ai/api/v1
+OPENROUTER_HTTP_REFERER=https://github.com/fanjingwen/ReadYourUsers
+OPENROUTER_APP_TITLE=ReadYourUsers
+ANALYSIS_MODEL=qwen/qwen3.6-plus:free
+AGGREGATION_MODEL=qwen/qwen3.6-plus:free
+\`\`\`
+
+### 生成完整观测站
+
+\`\`\`bash
+npx tsx src/cli.ts run
+npm run site:build
+\`\`\`
+
+### 钻取单个产品
 
 \`\`\`bash
 npx tsx src/cli.ts run anthropics/claude-code
-\`\`\`
-
-### 分步执行
-
-\`\`\`bash
-npx tsx src/cli.ts fetch anthropics/claude-code
-npx tsx src/cli.ts analyze anthropics/claude-code
-npx tsx src/cli.ts aggregate anthropics/claude-code
-npx tsx src/cli.ts generate anthropics/claude-code
 \`\`\`
 
 ## 工作原理
@@ -582,22 +608,27 @@ npx tsx src/cli.ts generate anthropics/claude-code
 1. **抓取** — 从 GitHub 拉取公开 issue，并做缓存
 2. **分析** — 用 LLM 提取结构化需求信号
 3. **聚合** — 聚类相似需求，计算 demand / rising score
-4. **生成** — 发布 Markdown 报告、站点页面和 README 快照
+4. **生成** — 发布单产品报告、README 快照、跨产品 summary，以及对比页 / 产品页站点路由
 
 ## 产物
 
 \`\`\`text
 reports/latest/<repo>.md
 reports/latest/<repo>.zh.md
+reports/latest/cross-product.json
 reports/archive/<week>/<repo>.md
 reports/archive/<week>/<repo>.zh.md
-site/en/...
-site/zh/...
+site/en/index.html
+site/en/compare/index.html
+site/en/products/<slug>.html
+site/zh/index.html
+site/zh/compare/index.html
+site/zh/products/<slug>.html
 README.md
 README.zh.md
 \`\`\`
 
-## 当前追踪的仓库
+## 当前追踪的产品
 
 | 仓库 | 产品 | 分类 |
 | --- | --- | --- |
@@ -610,14 +641,7 @@ README.zh.md
 - **只看公开数据** — 私有支持渠道不包含在内
 - **信号不是普查** — issue 数量不等于真实总用户数
 - **LLM 总结不是完美的** — 所以必须保留可追溯链接
-- **不同产品的 GitHub 活跃度不同** — 跨产品比较要谨慎
-
-## 原则
-
-- **只用公开数据**
-- **结论必须可追溯**
-- **优先可快速扫描**
-- **服务产品判断，而不只是 issue 整理**
+- **跨产品比较要谨慎** — 不同产品的 GitHub issue 文化并不相同
 
 ## License
 
