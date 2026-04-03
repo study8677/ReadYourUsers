@@ -30,6 +30,10 @@ function getAnthropicClient(): Anthropic {
 // --- OpenAI-compatible ---
 let openaiClient: OpenAI | null = null;
 
+function isOpenRouterBaseUrl(baseUrl: string | undefined): boolean {
+  return Boolean(baseUrl?.includes("openrouter.ai"));
+}
+
 function getOpenAIHeaders(): Record<string, string> | undefined {
   const headers: Record<string, string> = {};
 
@@ -42,6 +46,33 @@ function getOpenAIHeaders(): Record<string, string> | undefined {
   }
 
   return Object.keys(headers).length > 0 ? headers : undefined;
+}
+
+function getOpenAIModelFallbacks(primaryModel: string): string[] {
+  if (!isOpenRouterBaseUrl(process.env.OPENAI_BASE_URL)) {
+    return [primaryModel];
+  }
+
+  const rawFallbacks = process.env.OPENAI_FALLBACK_MODELS
+    ?? "openai/gpt-oss-120b:free,qwen/qwen3-next-80b-a3b-instruct:free,z-ai/glm-4.5-air:free";
+
+  const fallbacks = rawFallbacks
+    .split(",")
+    .map((value) => value.trim())
+    .filter(Boolean)
+    .filter((value, index, all) => all.indexOf(value) === index)
+    .filter((value) => value !== primaryModel);
+
+  return [primaryModel, ...fallbacks];
+}
+
+function isRetryableOpenAIError(error: unknown): boolean {
+  if (!(error instanceof Error)) {
+    return false;
+  }
+
+  const status = (error as Error & { status?: number }).status;
+  return status === 404 || status === 429 || status === 500 || status === 502 || status === 503 || status === 504;
 }
 
 function getOpenAIClient(): OpenAI {
@@ -138,19 +169,45 @@ async function callOpenAIStructured<T>(
   const client = getOpenAIClient();
 
   const jsonSchema = zodToJsonSchema(schema);
+  const modelsToTry = getOpenAIModelFallbacks(model);
+  let response: Awaited<ReturnType<typeof client.chat.completions.create>> | null = null;
+  let lastError: unknown;
 
-  const response = await client.chat.completions.create({
-    model,
-    max_tokens: maxTokens,
-    messages: [
-      { role: "system", content: systemPrompt },
-      {
-        role: "user",
-        content: userPrompt + `\n\nRespond with a JSON object matching this schema:\n${JSON.stringify(jsonSchema, null, 2)}`,
-      },
-    ],
-    response_format: { type: "json_object" },
-  });
+  for (let index = 0; index < modelsToTry.length; index += 1) {
+    const candidateModel = modelsToTry[index];
+    try {
+      response = await client.chat.completions.create({
+        model: candidateModel,
+        max_tokens: maxTokens,
+        messages: [
+          { role: "system", content: systemPrompt },
+          {
+            role: "user",
+            content: userPrompt + `\n\nRespond with a JSON object matching this schema:\n${JSON.stringify(jsonSchema, null, 2)}`,
+          },
+        ],
+        response_format: { type: "json_object" },
+      });
+      break;
+    } catch (error) {
+      lastError = error;
+
+      if (index === modelsToTry.length - 1 || !isRetryableOpenAIError(error)) {
+        throw error;
+      }
+
+      logger.warn(`OpenAI-compatible call failed for model ${candidateModel}, retrying with fallback`, {
+        error: error instanceof Error ? error.message : String(error),
+        nextModel: modelsToTry[index + 1],
+      });
+    }
+  }
+
+  if (!response) {
+    throw lastError instanceof Error
+      ? lastError
+      : new Error("OpenAI-compatible request failed before a response was received.");
+  }
 
   const content = response.choices[0]?.message?.content;
   if (!content) {
