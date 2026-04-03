@@ -8,8 +8,10 @@ import {
   writeFileSync,
 } from "node:fs";
 import { basename, extname, resolve } from "node:path";
+import { fileURLToPath } from "node:url";
 import { loadRepoConfigs, repoSlug, type RepoConfig } from "../config/repos.js";
 import type { NeedCluster, RepoAggregation } from "../models/cluster.js";
+import type { CrossProductSummary, ProductSummaryCard } from "../models/site.js";
 
 type ReportLang = "en" | "zh";
 type UiLang = "en" | "zh";
@@ -28,10 +30,13 @@ interface SiteReportEntry {
   aggregation?: RepoAggregation;
 }
 
-const ROOT = process.cwd();
-const REPORTS_DIR = resolve(ROOT, "reports");
-const DATA_DIR = resolve(ROOT, "data", "aggregated");
-const SITE_DIR = resolve(ROOT, "site");
+interface SitePaths {
+  rootDir: string;
+  reportsDir: string;
+  dataDir: string;
+  siteDir: string;
+}
+
 const DEFAULT_HOME_SLUG = "anthropics-claude-code";
 const UI_LANGS: UiLang[] = ["en", "zh"];
 const REPORT_LANGS: ReportLang[] = ["en", "zh"];
@@ -48,8 +53,24 @@ const ui = {
     navHome: "Home",
     navLatest: "Latest",
     navArchive: "Archive",
+    navCompare: "Compare",
     navGitHub: "GitHub",
     footer: "Built from public GitHub issues. Signals, not a full census.",
+    homeObservatoryEyebrow: "Cross-product observatory",
+    homeObservatoryTitle: "What AI coding users need right now",
+    homeObservatoryCopy:
+      "Track the strongest public needs across {count} products, compare shared themes, and drill into each product's latest demand map.",
+    homeComparePrimary: "Compare products",
+    homeLatestSecondary: "Browse latest reports",
+    homeProductsEyebrow: "Products",
+    homeProductsTitle: "Latest product snapshots",
+    homeSignalsEyebrow: "Signals",
+    homeSignalsTitle: "Hottest needs across products",
+    homeThemesEyebrow: "Themes",
+    homeThemesTitle: "Shared vs unique themes",
+    homeStatsProducts: "Products tracked",
+    homeStatsSignals: "Hot signals",
+    homeStatsSharedThemes: "Shared themes",
     heroEyebrow: "Public issue intelligence",
     heroTitle: "{name} users are shouting about {topDemand}",
     heroCopy:
@@ -83,6 +104,23 @@ const ui = {
     archiveIntroEyebrow: "Archive",
     archiveIntroTitle: "Weekly history",
     archiveIntroCopy: "Browse prior report generations by week.",
+    compareIntroEyebrow: "Cross-product signals",
+    compareIntroTitle: "Compare products",
+    compareIntroCopy: "See where Claude Code, Codex, and Cursor users overlap and diverge this week.",
+    compareProductsTitle: "Product scorecards",
+    compareSignalsTitle: "Hottest signals",
+    compareSharedTitle: "Shared themes",
+    compareUniqueTitle: "Unique themes",
+    compareEmptyCopy: "Cross-product summaries will appear here after the summary artifact is generated.",
+    productEyebrow: "Product snapshot",
+    productTopNeed: "Top need",
+    productRisingNeed: "Rising need",
+    productDominantCategory: "Dominant category",
+    productLatestReport: "Latest report",
+    productCompareView: "Compare view",
+    productNeedsEyebrow: "Priority map",
+    productNeedsTitle: "Top needs right now",
+    themeNone: "No exclusive themes yet.",
     reportsCount: "reports",
     reportPageLatest: "Latest report",
     reportPageArchive: "Archive report",
@@ -107,8 +145,24 @@ const ui = {
     navHome: "首页",
     navLatest: "最新",
     navArchive: "归档",
+    navCompare: "对比",
     navGitHub: "GitHub",
     footer: "基于公开 GitHub Issues 构建，代表信号而非完整普查。",
+    homeObservatoryEyebrow: "跨产品观察站",
+    homeObservatoryTitle: "AI 编程产品用户此刻最在意什么",
+    homeObservatoryCopy:
+      "跨 {count} 个产品跟踪最强公开需求信号，对比共同主题，并继续下钻到每个产品的最新需求地图。",
+    homeComparePrimary: "对比产品",
+    homeLatestSecondary: "查看最新报告",
+    homeProductsEyebrow: "产品",
+    homeProductsTitle: "最新产品快照",
+    homeSignalsEyebrow: "信号",
+    homeSignalsTitle: "跨产品最热需求",
+    homeThemesEyebrow: "主题",
+    homeThemesTitle: "共同主题与独有主题",
+    homeStatsProducts: "跟踪产品数",
+    homeStatsSignals: "热点信号",
+    homeStatsSharedThemes: "共同主题",
     heroEyebrow: "公开 Issue 情报",
     heroTitle: "{name} 用户最强烈的信号：{topDemand}",
     heroCopy:
@@ -142,6 +196,23 @@ const ui = {
     archiveIntroEyebrow: "历史归档",
     archiveIntroTitle: "周度历史",
     archiveIntroCopy: "按周浏览过去生成的报告。",
+    compareIntroEyebrow: "跨产品信号",
+    compareIntroTitle: "对比产品差异",
+    compareIntroCopy: "看看 Claude Code、Codex、Cursor 用户这周关注点在哪里重叠、又在哪里分化。",
+    compareProductsTitle: "产品分卡",
+    compareSignalsTitle: "最热信号",
+    compareSharedTitle: "共同主题",
+    compareUniqueTitle: "独有主题",
+    compareEmptyCopy: "跨产品汇总产物生成后，这里会出现对比内容。",
+    productEyebrow: "产品快照",
+    productTopNeed: "头号需求",
+    productRisingNeed: "上升需求",
+    productDominantCategory: "主导分类",
+    productLatestReport: "最新报告",
+    productCompareView: "查看对比页",
+    productNeedsEyebrow: "优先级地图",
+    productNeedsTitle: "当前最重要需求",
+    themeNone: "暂时没有独有主题。",
     reportsCount: "份报告",
     reportPageLatest: "最新报告",
     reportPageArchive: "归档报告",
@@ -196,8 +267,17 @@ function routeFor(uiLang: UiLang, path: string): string {
   return `${uiLang}/${path}`;
 }
 
-function absoluteSitePath(routePath: string): string {
-  return resolve(SITE_DIR, routePath);
+function getSitePaths(rootDir: string): SitePaths {
+  return {
+    rootDir,
+    reportsDir: resolve(rootDir, "reports"),
+    dataDir: resolve(rootDir, "data", "aggregated"),
+    siteDir: resolve(rootDir, "site"),
+  };
+}
+
+function absoluteSitePath(siteDir: string, routePath: string): string {
+  return resolve(siteDir, routePath);
 }
 
 function applyInlineMarkdown(text: string): string {
@@ -314,6 +394,7 @@ function pageTemplate(params: {
   const homeHref = `${base}/${routeFor(uiLang, "index.html")}`;
   const latestHref = `${base}/${routeFor(uiLang, "latest/index.html")}`;
   const archiveHref = `${base}/${routeFor(uiLang, "archive/index.html")}`;
+  const compareHref = `${base}/${routeFor(uiLang, "compare/index.html")}`;
   const altHref = `${base}/${alternateRoutePath}`;
 
   return `<!doctype html>
@@ -337,6 +418,7 @@ function pageTemplate(params: {
             <a href="${homeHref}">${t.navHome}</a>
             <a href="${latestHref}">${t.navLatest}</a>
             <a href="${archiveHref}">${t.navArchive}</a>
+            <a href="${compareHref}">${t.navCompare}</a>
             <a href="https://github.com/fanjingwen/ReadYourUsers">${t.navGitHub}</a>
           </nav>
           <a class="lang-switch" href="${altHref}">${uiLang === "en" ? t.switchToChinese : t.switchToEnglish}</a>
@@ -373,6 +455,62 @@ function buildClusterCard(cluster: NeedCluster, uiLang: UiLang): string {
 
 function shortTitle(text: string, max = 52): string {
   return text.length <= max ? text : `${text.slice(0, max - 1)}…`;
+}
+
+function formatRisingScore(value: number): string {
+  return value === Infinity ? "NEW" : `${value.toFixed(1)}x`;
+}
+
+function titleCase(text: string): string {
+  return text.replace(/\b\w/g, (match) => match.toUpperCase());
+}
+
+function listOrFallback(items: string[], fallback: string): string {
+  return items.length > 0 ? items.map((item) => titleCase(item)).join(", ") : fallback;
+}
+
+function buildSignalCard(
+  signal: {
+    slug: string;
+    productName: string;
+    title: string;
+    category: string;
+    demandScore: number;
+    volume: number;
+  },
+  uiLang: UiLang,
+  href: string
+): string {
+  const t = ui[uiLang];
+
+  return `<article class="cluster-card">
+    <div class="cluster-meta"><span class="pill">${escapeHtml(signal.productName)}</span><span>${signal.volume} ${t.clusterIssues}</span><span>${signal.demandScore.toFixed(1)} ${t.clusterDemand}</span></div>
+    <h3><a href="${href}">${escapeHtml(signal.title)}</a></h3>
+    <p>${escapeHtml(signal.category)}</p>
+  </article>`;
+}
+
+function readCrossProductSummary(paths: SitePaths): CrossProductSummary | null {
+  return readJson<CrossProductSummary>(resolve(paths.reportsDir, "latest", "cross-product.json"));
+}
+
+function getVisibleProducts(
+  summary: CrossProductSummary | null,
+  latestEntries: SiteReportEntry[],
+  uiLang: UiLang
+): ProductSummaryCard[] {
+  if (!summary) return [];
+
+  const entryBySlug = new Map(
+    latestEntries
+      .filter((entry) => entry.routePath.startsWith(`${uiLang}/`))
+      .map((entry) => [entry.slug, entry] as const)
+  );
+
+  return summary.products.flatMap((product) => {
+    const latestEntry = entryBySlug.get(product.slug);
+    return latestEntry ? [product] : [];
+  });
 }
 
 function topFiveRow(cluster: NeedCluster, index: number, uiLang: UiLang): string {
@@ -529,6 +667,323 @@ function buildHomePage(uiLang: UiLang, defaultEntry: SiteReportEntry, latestEntr
     depth: 1,
     routePath: routeFor(uiLang, "index.html"),
     alternateRoutePath: routeFor(uiLang === "en" ? "zh" : "en", "index.html"),
+  });
+}
+
+function buildObservatoryHomePage(
+  uiLang: UiLang,
+  summary: CrossProductSummary,
+  visibleProducts: ProductSummaryCard[],
+  archiveWeeks: Map<string, SiteReportEntry[]>
+): string {
+  const t = ui[uiLang];
+  const visibleSlugs = new Set(visibleProducts.map((product) => product.slug));
+  const hottestSignals = summary.hottestSignals.filter((signal) => visibleSlugs.has(signal.slug)).slice(0, 6);
+  const leadSignal = hottestSignals[0];
+  const fallbackLeadNeed = visibleProducts[0]?.topNeed;
+  const recentWeeks = Array.from(archiveWeeks.keys()).sort().reverse().slice(0, 8);
+  const heroCopy = t.homeObservatoryCopy.replace("{count}", String(visibleProducts.length));
+
+  const productCards = visibleProducts
+    .map((product) => {
+      const topNeed = product.topNeed;
+      const risingNeed = product.risingNeed;
+
+      return `<article class="repo-card">
+        <div class="repo-card-head">
+          <h2><a href="./products/${product.slug}.html">${escapeHtml(product.displayName)}</a></h2>
+          <span>${formatDate(product.generatedAt)}</span>
+        </div>
+        <p>${escapeHtml(topNeed?.summary ?? "")}</p>
+        <div class="top-five-meta">
+          <span>${product.totalIssuesAnalyzed} ${t.repoCardIssues}</span>
+          <span>${product.totalClusters} ${t.repoCardClusters}</span>
+          <span>${escapeHtml(product.dominantCategory ?? "—")}</span>
+        </div>
+        <div class="report-links">
+          <a href="./products/${product.slug}.html">${escapeHtml(product.displayName)}</a>
+          <a href="./latest/${product.slug}.html">${t.productLatestReport}</a>
+          ${
+            risingNeed
+              ? `<span>${t.productRisingNeed}: ${escapeHtml(shortTitle(risingNeed.title, 42))} (${formatRisingScore(risingNeed.rising_score)})</span>`
+              : ""
+          }
+        </div>
+      </article>`;
+    })
+    .join("\n");
+
+  const signals = hottestSignals.length > 0
+    ? hottestSignals
+        .map((signal) => buildSignalCard(signal, uiLang, `./products/${signal.slug}.html`))
+        .join("\n")
+    : `<article class="repo-card"><p>${t.compareEmptyCopy}</p></article>`;
+
+  const uniqueThemeRows = visibleProducts
+    .map(
+      (product) =>
+        `<li><strong>${escapeHtml(product.displayName)}</strong><span>${escapeHtml(
+          listOrFallback(summary.uniqueThemes[product.slug] ?? [], t.themeNone)
+        )}</span></li>`
+    )
+    .join("");
+
+  const body = `
+    <section class="hero">
+      <div>
+        <p class="eyebrow">${t.homeObservatoryEyebrow}</p>
+        <h1>${t.homeObservatoryTitle}</h1>
+        <p class="hero-copy">${heroCopy}</p>
+        <div class="hero-actions">
+          <a class="button primary" href="./compare/index.html">${t.homeComparePrimary}</a>
+          <a class="button" href="./latest/index.html">${t.homeLatestSecondary}</a>
+        </div>
+      </div>
+      <div class="stats-grid">
+        <div class="stat-card"><span>${t.homeStatsProducts}</span><strong>${visibleProducts.length}</strong></div>
+        <div class="stat-card"><span>${t.homeStatsSignals}</span><strong>${hottestSignals.length}</strong></div>
+        <div class="stat-card"><span>${t.homeStatsSharedThemes}</span><strong>${summary.sharedThemes.length}</strong></div>
+        <div class="stat-card"><span>${t.statsUpdated}</span><strong>${formatDate(summary.generatedAt)}</strong></div>
+      </div>
+    </section>
+
+    <section class="panel insight-panel">
+      <div class="panel-header">
+        <div>
+          <p class="eyebrow">${t.homeSignalsEyebrow}</p>
+          <h2>${t.homeSignalsTitle}</h2>
+        </div>
+      </div>
+      <div class="insight-grid">
+        <article class="insight-card">
+          <span class="insight-label">${t.insightTopDemand}</span>
+          <h3>${escapeHtml(leadSignal?.title ?? fallbackLeadNeed?.title ?? "—")}</h3>
+          <p>${
+            leadSignal
+              ? `${leadSignal.demandScore.toFixed(1)} ${t.topFiveScore}`
+              : fallbackLeadNeed
+                ? `${fallbackLeadNeed.demand_score.toFixed(1)} ${t.topFiveScore}`
+                : t.compareEmptyCopy
+          }</p>
+        </article>
+        <article class="insight-card">
+          <span class="insight-label">${t.compareSharedTitle}</span>
+          <h3>${summary.sharedThemes.length}</h3>
+          <p>${escapeHtml(listOrFallback(summary.sharedThemes, t.themeNone))}</p>
+        </article>
+        <article class="insight-card">
+          <span class="insight-label">${t.compareProductsTitle}</span>
+          <h3>${visibleProducts[0]?.displayName ?? "—"}</h3>
+          <p>${escapeHtml(visibleProducts[0]?.topNeed?.title ?? t.compareEmptyCopy)}</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-grid">
+      <section class="panel">
+        <div class="panel-header">
+          <div>
+            <p class="eyebrow">${t.homeProductsEyebrow}</p>
+            <h2>${t.homeProductsTitle}</h2>
+          </div>
+        </div>
+        <section class="repo-grid">
+          ${productCards}
+        </section>
+      </section>
+
+      <aside class="sidebar-stack">
+        <section class="panel compact">
+          <p class="eyebrow">${t.homeThemesEyebrow}</p>
+          <h2>${t.homeThemesTitle}</h2>
+          <ul class="link-list">
+            <li><strong>${t.compareSharedTitle}</strong><span>${escapeHtml(listOrFallback(summary.sharedThemes, t.themeNone))}</span></li>
+            ${uniqueThemeRows}
+          </ul>
+        </section>
+
+        <section class="panel compact">
+          <p class="eyebrow">${t.historyEyebrow}</p>
+          <h2>${t.historyTitle}</h2>
+          <ul class="link-list">
+            ${recentWeeks
+              .map((week) => `<li><a href="./archive/index.html#${week}">${week}</a><span>${archiveWeeks.get(week)?.length ?? 0} ${t.reportsCount}</span></li>`)
+              .join("")}
+          </ul>
+        </section>
+      </aside>
+    </section>
+
+    <section class="panel">
+      <div class="panel-header">
+        <div>
+          <p class="eyebrow">${t.compareIntroEyebrow}</p>
+          <h2>${t.compareSignalsTitle}</h2>
+        </div>
+      </div>
+      <div class="cluster-grid">
+        ${signals}
+      </div>
+    </section>`;
+
+  return pageTemplate({
+    uiLang,
+    title: t.siteName,
+    description: t.homeObservatoryTitle,
+    body,
+    depth: 1,
+    routePath: routeFor(uiLang, "index.html"),
+    alternateRoutePath: routeFor(uiLang === "en" ? "zh" : "en", "index.html"),
+  });
+}
+
+function buildComparePage(
+  uiLang: UiLang,
+  summary: CrossProductSummary | null,
+  visibleProducts: ProductSummaryCard[]
+): string {
+  const t = ui[uiLang];
+
+  const productCards = visibleProducts
+    .map((product) => {
+      const topNeed = product.topNeed;
+      const risingNeed = product.risingNeed;
+
+      return `<article class="repo-card">
+        <div class="repo-card-head">
+          <h2><a href="../products/${product.slug}.html">${escapeHtml(product.displayName)}</a></h2>
+          <span>${formatDate(product.generatedAt)}</span>
+        </div>
+        <p>${escapeHtml(topNeed?.summary ?? "")}</p>
+        <div class="top-five-meta">
+          <span>${t.productTopNeed}: ${escapeHtml(topNeed?.title ?? "—")}</span>
+          <span>${t.productRisingNeed}: ${escapeHtml(risingNeed?.title ?? "—")}</span>
+          <span>${t.productDominantCategory}: ${escapeHtml(product.dominantCategory ?? "—")}</span>
+        </div>
+      </article>`;
+    })
+    .join("\n");
+
+  const visibleSlugs = new Set(visibleProducts.map((product) => product.slug));
+  const signals = summary
+    ? summary.hottestSignals
+        .filter((signal) => visibleSlugs.has(signal.slug))
+        .slice(0, 6)
+        .map((signal) => buildSignalCard(signal, uiLang, `../products/${signal.slug}.html`))
+        .join("\n")
+    : "";
+
+  const uniqueRows = visibleProducts
+    .map(
+      (product) =>
+        `<li><strong>${escapeHtml(product.displayName)}</strong><span>${escapeHtml(
+          listOrFallback(summary?.uniqueThemes[product.slug] ?? [], t.themeNone)
+        )}</span></li>`
+    )
+    .join("");
+
+  const body = summary && visibleProducts.length > 0
+    ? `<section class="page-intro"><p class="eyebrow">${t.compareIntroEyebrow}</p><h1>${t.compareIntroTitle}</h1><p>${t.compareIntroCopy}</p></section>
+      <section class="panel">
+        <div class="panel-header"><h2>${t.compareProductsTitle}</h2></div>
+        <section class="repo-grid">${productCards}</section>
+      </section>
+      <section class="panel">
+        <div class="panel-header"><h2>${t.compareSignalsTitle}</h2></div>
+        <div class="cluster-grid">${signals}</div>
+      </section>
+      <section class="section-grid">
+        <section class="panel compact">
+          <p class="eyebrow">${t.homeThemesEyebrow}</p>
+          <h2>${t.compareSharedTitle}</h2>
+          <p>${escapeHtml(listOrFallback(summary.sharedThemes, t.themeNone))}</p>
+        </section>
+        <section class="panel compact">
+          <p class="eyebrow">${t.homeThemesEyebrow}</p>
+          <h2>${t.compareUniqueTitle}</h2>
+          <ul class="link-list">${uniqueRows}</ul>
+        </section>
+      </section>`
+    : `<section class="page-intro"><p class="eyebrow">${t.compareIntroEyebrow}</p><h1>${t.compareIntroTitle}</h1><p>${t.compareEmptyCopy}</p></section>`;
+
+  return pageTemplate({
+    uiLang,
+    title: `${t.navCompare} — ${t.siteName}`,
+    description: t.compareIntroCopy,
+    body,
+    depth: 2,
+    routePath: routeFor(uiLang, "compare/index.html"),
+    alternateRoutePath: routeFor(uiLang === "en" ? "zh" : "en", "compare/index.html"),
+  });
+}
+
+function buildProductPage(uiLang: UiLang, product: ProductSummaryCard): string {
+  const t = ui[uiLang];
+  const base = prefix(2);
+  const topClusters = [...product.aggregation.clusters].sort((a, b) => b.demand_score - a.demand_score).slice(0, 5);
+  const topNeed = product.topNeed;
+  const risingNeed = product.risingNeed;
+  const body = `
+    <section class="hero">
+      <div>
+        <p class="eyebrow">${t.productEyebrow}</p>
+        <h1>${escapeHtml(product.displayName)}</h1>
+        <p class="hero-copy">${escapeHtml(topNeed?.summary ?? "")}</p>
+        <div class="report-links">
+          <a href="${base}/${routeFor("en", `latest/${product.slug}.html`)}">${t.reportEn}</a>
+          <a href="${base}/${routeFor("zh", `latest/${product.slug}.html`)}">${t.reportZh}</a>
+          <a href="${base}/${product.reportPaths[uiLang]}">${t.rawMarkdown}</a>
+          <a href="${base}/${routeFor(uiLang, "compare/index.html")}">${t.productCompareView}</a>
+        </div>
+      </div>
+      <div class="stats-grid">
+        <div class="stat-card"><span>${t.statsIssues}</span><strong>${product.totalIssuesAnalyzed}</strong></div>
+        <div class="stat-card"><span>${t.statsIncluded}</span><strong>${product.totalIssuesIncluded}</strong></div>
+        <div class="stat-card"><span>${t.statsClusters}</span><strong>${product.totalClusters}</strong></div>
+        <div class="stat-card"><span>${t.statsUpdated}</span><strong>${formatDate(product.generatedAt)}</strong></div>
+      </div>
+    </section>
+
+    <section class="insight-grid">
+      <article class="insight-card">
+        <span class="insight-label">${t.productTopNeed}</span>
+        <h3>${escapeHtml(topNeed?.title ?? "—")}</h3>
+        <p>${topNeed ? `${topNeed.demand_score.toFixed(1)} ${t.topFiveScore}` : ""}</p>
+      </article>
+      <article class="insight-card">
+        <span class="insight-label">${t.productRisingNeed}</span>
+        <h3>${escapeHtml(risingNeed?.title ?? "—")}</h3>
+        <p>${risingNeed ? formatRisingScore(risingNeed.rising_score) : ""}</p>
+      </article>
+      <article class="insight-card">
+        <span class="insight-label">${t.productDominantCategory}</span>
+        <h3>${escapeHtml(product.dominantCategory ?? "—")}</h3>
+        <p>${escapeHtml(product.category)}</p>
+      </article>
+    </section>
+
+    <section class="panel">
+      <div class="panel-header">
+        <div>
+          <p class="eyebrow">${t.productNeedsEyebrow}</p>
+          <h2>${t.productNeedsTitle}</h2>
+        </div>
+      </div>
+      ${
+        topClusters.length > 0
+          ? `<ol class="top-five-list">${topClusters.map((cluster, index) => topFiveRow(cluster, index, uiLang)).join("\n")}</ol>`
+          : `<p>${t.compareEmptyCopy}</p>`
+      }
+    </section>`;
+
+  return pageTemplate({
+    uiLang,
+    title: `${product.displayName} — ${t.siteName}`,
+    description: topNeed?.summary ?? product.displayName,
+    body,
+    depth: 2,
+    routePath: routeFor(uiLang, `products/${product.slug}.html`),
+    alternateRoutePath: routeFor(uiLang === "en" ? "zh" : "en", `products/${product.slug}.html`),
   });
 }
 
@@ -755,7 +1210,7 @@ hr { border: none; border-top: 1px solid var(--line); margin: 24px 0; }
 `;
 }
 
-function collectLatestEntries(configs: RepoConfig[]): SiteReportEntry[] {
+function collectLatestEntries(configs: RepoConfig[], paths: SitePaths): SiteReportEntry[] {
   const entries: SiteReportEntry[] = [];
 
   for (const uiLang of UI_LANGS) {
@@ -763,7 +1218,7 @@ function collectLatestEntries(configs: RepoConfig[]): SiteReportEntry[] {
       const slug = repoSlug(config.repo);
       const reportLang = COPY_BY_UI_LANG[uiLang];
       const suffix = reportLang === "zh" ? ".zh" : "";
-      const sourcePath = resolve(REPORTS_DIR, "latest", `${slug}${suffix}.md`);
+      const sourcePath = resolve(paths.reportsDir, "latest", `${slug}${suffix}.md`);
       if (!existsSync(sourcePath)) continue;
       entries.push({
         repo: config.repo,
@@ -771,11 +1226,11 @@ function collectLatestEntries(configs: RepoConfig[]): SiteReportEntry[] {
         displayName: config.display_name,
         reportLang,
         sourcePath,
-        outputHtmlPath: absoluteSitePath(routeFor(uiLang, `latest/${slug}.html`)),
-        outputRawPath: absoluteSitePath(`reports/latest/${slug}${suffix}.md`),
+        outputHtmlPath: absoluteSitePath(paths.siteDir, routeFor(uiLang, `latest/${slug}.html`)),
+        outputRawPath: absoluteSitePath(paths.siteDir, `reports/latest/${slug}${suffix}.md`),
         routePath: routeFor(uiLang, `latest/${slug}.html`),
         rawRoutePath: `reports/latest/${slug}${suffix}.md`,
-        aggregation: readJson<RepoAggregation>(resolve(DATA_DIR, slug, "clusters.json")) ?? undefined,
+        aggregation: readJson<RepoAggregation>(resolve(paths.dataDir, slug, "clusters.json")) ?? undefined,
       });
     }
   }
@@ -783,9 +1238,9 @@ function collectLatestEntries(configs: RepoConfig[]): SiteReportEntry[] {
   return entries;
 }
 
-function collectArchiveEntries(configs: RepoConfig[]): Map<string, SiteReportEntry[]> {
+function collectArchiveEntries(configs: RepoConfig[], paths: SitePaths): Map<string, SiteReportEntry[]> {
   const map = new Map<string, SiteReportEntry[]>();
-  const archiveRoot = resolve(REPORTS_DIR, "archive");
+  const archiveRoot = resolve(paths.reportsDir, "archive");
   if (!existsSync(archiveRoot)) return map;
 
   const configBySlug = new Map(configs.map((config) => [repoSlug(config.repo), config]));
@@ -812,8 +1267,8 @@ function collectArchiveEntries(configs: RepoConfig[]): Map<string, SiteReportEnt
           week,
           reportLang: fileReportLang,
           sourcePath: resolve(weekDir, file.name),
-          outputHtmlPath: absoluteSitePath(routeFor(uiLang, `archive/${week}/${slug}.html`)),
-          outputRawPath: absoluteSitePath(`reports/archive/${week}/${file.name}`),
+          outputHtmlPath: absoluteSitePath(paths.siteDir, routeFor(uiLang, `archive/${week}/${slug}.html`)),
+          outputRawPath: absoluteSitePath(paths.siteDir, `reports/archive/${week}/${file.name}`),
           routePath: routeFor(uiLang, `archive/${week}/${slug}.html`),
           rawRoutePath: `reports/archive/${week}/${file.name}`,
         });
@@ -826,20 +1281,22 @@ function collectArchiveEntries(configs: RepoConfig[]): Map<string, SiteReportEnt
   return map;
 }
 
-function main(): void {
-  const configs = loadRepoConfigs(resolve(ROOT, "config", "repos.json"));
-  const latestEntries = collectLatestEntries(configs);
-  const archiveEntries = collectArchiveEntries(configs);
+export function buildSite(rootDir = process.cwd()): void {
+  const paths = getSitePaths(rootDir);
+  const configs = loadRepoConfigs(resolve(paths.rootDir, "config", "repos.json"));
+  const latestEntries = collectLatestEntries(configs, paths);
+  const archiveEntries = collectArchiveEntries(configs, paths);
+  const summary = readCrossProductSummary(paths);
 
   if (latestEntries.length === 0) {
     throw new Error("No latest reports found. Run the report generator first.");
   }
 
-  rmSync(SITE_DIR, { recursive: true, force: true });
-  ensureDir(resolve(SITE_DIR, "assets"));
-  writeText(resolve(SITE_DIR, "assets", "style.css"), siteCss());
-  writeText(resolve(SITE_DIR, ".nojekyll"), "");
-  writeText(resolve(SITE_DIR, "index.html"), rootRedirectPage());
+  rmSync(paths.siteDir, { recursive: true, force: true });
+  ensureDir(resolve(paths.siteDir, "assets"));
+  writeText(resolve(paths.siteDir, "assets", "style.css"), siteCss());
+  writeText(resolve(paths.siteDir, ".nojekyll"), "");
+  writeText(resolve(paths.siteDir, "index.html"), rootRedirectPage());
 
   for (const entry of latestEntries) {
     writeText(entry.outputHtmlPath, buildReportPage(entry.routePath.startsWith("en/") ? "en" : "zh", entry));
@@ -856,6 +1313,7 @@ function main(): void {
   }
 
   for (const uiLang of UI_LANGS) {
+    const visibleProducts = getVisibleProducts(summary, latestEntries, uiLang);
     const defaultEntry = latestEntries.find((entry) => entry.slug === DEFAULT_HOME_SLUG && entry.routePath.startsWith(`${uiLang}/`))
       ?? latestEntries.find((entry) => entry.routePath.startsWith(`${uiLang}/`));
 
@@ -864,20 +1322,35 @@ function main(): void {
     }
 
     writeText(
-      absoluteSitePath(routeFor(uiLang, "index.html")),
-      buildHomePage(uiLang, defaultEntry, latestEntries.filter((entry) => entry.routePath.startsWith(`${uiLang}/`)), archiveEntries)
+      absoluteSitePath(paths.siteDir, routeFor(uiLang, "index.html")),
+      visibleProducts.length > 0 && summary
+        ? buildObservatoryHomePage(uiLang, summary, visibleProducts, archiveEntries)
+        : buildHomePage(uiLang, defaultEntry, latestEntries.filter((entry) => entry.routePath.startsWith(`${uiLang}/`)), archiveEntries)
     );
     writeText(
-      absoluteSitePath(routeFor(uiLang, "latest/index.html")),
+      absoluteSitePath(paths.siteDir, routeFor(uiLang, "latest/index.html")),
       buildLatestIndex(uiLang, latestEntries.filter((entry) => entry.routePath.startsWith(`${uiLang}/`)))
     );
     writeText(
-      absoluteSitePath(routeFor(uiLang, "archive/index.html")),
+      absoluteSitePath(paths.siteDir, routeFor(uiLang, "archive/index.html")),
       buildArchiveIndex(uiLang, archiveEntries)
     );
+    writeText(
+      absoluteSitePath(paths.siteDir, routeFor(uiLang, "compare/index.html")),
+      buildComparePage(uiLang, summary, visibleProducts)
+    );
+
+    for (const product of visibleProducts) {
+      writeText(
+        absoluteSitePath(paths.siteDir, routeFor(uiLang, `products/${product.slug}.html`)),
+        buildProductPage(uiLang, product)
+      );
+    }
   }
 
-  console.log(`Site generated at ${SITE_DIR}`);
+  console.log(`Site generated at ${paths.siteDir}`);
 }
 
-main();
+if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
+  buildSite();
+}
