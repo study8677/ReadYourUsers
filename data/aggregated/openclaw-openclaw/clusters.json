@@ -1,0 +1,443 @@
+{
+  "repo": "openclaw/openclaw",
+  "display_name": "OpenClaw",
+  "generated_at": "2026-04-03T13:00:54.094Z",
+  "window_start": "2026-03-04T13:00:54.094Z",
+  "window_end": "2026-04-03T13:00:54.094Z",
+  "total_issues_analyzed": 52,
+  "total_issues_included": 47,
+  "clusters": [
+    {
+      "cluster_id": "73b72847d17a",
+      "title": "Core System Stability Fixes and Platform Enhancements",
+      "summary": "Users are requesting critical bug fixes for task lifecycle management, race conditions, and provider parsing to ensure consistent reliability across environments. They also require expanded channel integrations, advanced configuration inheritance, and improved media handling to streamline cross-platform workflows and system interoperability.",
+      "category": "Platform Support",
+      "representative_need": "Add Chinese (Simplified) localization support to the Android app",
+      "issue_numbers": [
+        60299,
+        60295,
+        60294,
+        60292,
+        60280,
+        60275,
+        60272,
+        60270,
+        60268,
+        60261,
+        60246,
+        60244,
+        60242,
+        60240,
+        60226,
+        60218,
+        60216,
+        60211,
+        60207,
+        60204
+      ],
+      "issue_urls": [
+        "https://github.com/openclaw/openclaw/issues/60299",
+        "https://github.com/openclaw/openclaw/issues/60295",
+        "https://github.com/openclaw/openclaw/issues/60294",
+        "https://github.com/openclaw/openclaw/issues/60292",
+        "https://github.com/openclaw/openclaw/issues/60280",
+        "https://github.com/openclaw/openclaw/issues/60275",
+        "https://github.com/openclaw/openclaw/issues/60272",
+        "https://github.com/openclaw/openclaw/issues/60270",
+        "https://github.com/openclaw/openclaw/issues/60268",
+        "https://github.com/openclaw/openclaw/issues/60261",
+        "https://github.com/openclaw/openclaw/issues/60246",
+        "https://github.com/openclaw/openclaw/issues/60244",
+        "https://github.com/openclaw/openclaw/issues/60242",
+        "https://github.com/openclaw/openclaw/issues/60240",
+        "https://github.com/openclaw/openclaw/issues/60226",
+        "https://github.com/openclaw/openclaw/issues/60218",
+        "https://github.com/openclaw/openclaw/issues/60216",
+        "https://github.com/openclaw/openclaw/issues/60211",
+        "https://github.com/openclaw/openclaw/issues/60207",
+        "https://github.com/openclaw/openclaw/issues/60204"
+      ],
+      "sample_titles": [
+        "Add Chinese (Simplified) localization support to the Android app",
+        "Add DingTalk channel support",
+        "Ensure subagent runTimeoutSeconds enforces hard termination instead of triggering model fallback retry"
+      ],
+      "demand_score": 6.495067913687111,
+      "rising_score": 21,
+      "volume": 20,
+      "open_count": 19,
+      "closed_count": 1,
+      "avg_reactions": 0.1,
+      "avg_comments": 0.3,
+      "date_first_seen": "2026-04-03T09:39:19.000Z",
+      "date_last_seen": "2026-04-03T12:54:05.000Z",
+      "repos_affected": [
+        "openclaw/openclaw"
+      ]
+    },
+    {
+      "cluster_id": "485c9ab96e92",
+      "title": "Fix Telegram DM Command Approval and File Context Handling",
+      "summary": "Users are reporting bugs where command execution approval workflows are inconsistently triggered or bypassed in Telegram direct messages. They also need reliable attachment of Telegram file messages to the active session context. These fixes are essential to maintain secure command execution and accurate conversation state during Telegram interactions.",
+      "category": "Integration",
+      "representative_need": "Fix attachment of Telegram file messages to session context",
+      "issue_numbers": [
+        60260,
+        60252,
+        60201
+      ],
+      "issue_urls": [
+        "https://github.com/openclaw/openclaw/issues/60260",
+        "https://github.com/openclaw/openclaw/issues/60252",
+        "https://github.com/openclaw/openclaw/issues/60201"
+      ],
+      "sample_titles": [
+        "Fix attachment of Telegram file messages to session context",
+        "Fix command execution approval triggering in Telegram DM mode",
+        "Fix exec command approval bypass in Telegram DM mode"
+      ],
+      "demand_score": 1.9980471762396264,
+      "rising_score": 4,
+      "volume": 3,
+      "open_count": 1,
+      "closed_count": 2,
+      "avg_reactions": 0,
+      "avg_comments": 0.7,
+      "date_first_seen": "2026-04-03T09:32:44.000Z",
+      "date_last_seen": "2026-04-03T11:46:47.000Z",
+      "repos_affected": [
+        "openclaw/openclaw"
+      ]
+    },
+    {
+      "cluster_id": "81a4f397ad8a",
+      "title": "Resolve UI Overflows and Streaming Text Parsing Errors",
+      "summary": "Users are requesting fixes for interface layout glitches and multi-byte character handling that disrupt command prompts and streaming outputs. These enhancements will ensure a polished visual experience and prevent text corruption during interactive sessions.",
+      "category": "UI/UX",
+      "representative_need": "Fix command permission dialog UI overflow and add setting to disable approval prompts",
+      "issue_numbers": [
+        60293,
+        60247
+      ],
+      "issue_urls": [
+        "https://github.com/openclaw/openclaw/issues/60293",
+        "https://github.com/openclaw/openclaw/issues/60247"
+      ],
+      "sample_titles": [
+        "Fix command permission dialog UI overflow and add setting to disable approval prompts",
+        "Handle multi-byte UTF-8 character boundaries correctly during streaming response parsing"
+      ],
+      "demand_score": 0.999520421758969,
+      "rising_score": 3,
+      "volume": 2,
+      "open_count": 2,
+      "closed_count": 0,
+      "avg_reactions": 0,
+      "avg_comments": 0.5,
+      "date_first_seen": "2026-04-03T11:16:55.000Z",
+      "date_last_seen": "2026-04-03T12:41:18.000Z",
+      "repos_affected": [
+        "openclaw/openclaw"
+      ]
+    },
+    {
+      "cluster_id": "2495b62a2c9d",
+      "title": "Fix cron job execution, delivery, and reporting failures",
+      "summary": "Users are encountering multiple failures with scheduled cron jobs, including problems waking agent sessions, delivering messages during active sessions, and reporting errors when environment variables are used. Addressing these issues is critical to ensure consistent automated task execution and accurate error notifications for agent workflows.",
+      "category": "Reliability",
+      "representative_need": "Fix cron job failure reporting when using environment variables for delivery channels",
+      "issue_numbers": [
+        60262,
+        60256,
+        60251
+      ],
+      "issue_urls": [
+        "https://github.com/openclaw/openclaw/issues/60262",
+        "https://github.com/openclaw/openclaw/issues/60256",
+        "https://github.com/openclaw/openclaw/issues/60251"
+      ],
+      "sample_titles": [
+        "Fix cron job failure reporting when using environment variables for delivery channels",
+        "Fix cron job message delivery failure when ACP sessions are active",
+        "Fix cron jobs failing to wake agent sessions"
+      ],
+      "demand_score": 0.9993514538443278,
+      "rising_score": 4,
+      "volume": 3,
+      "open_count": 3,
+      "closed_count": 0,
+      "avg_reactions": 0,
+      "avg_comments": 1,
+      "date_first_seen": "2026-04-03T11:25:07.000Z",
+      "date_last_seen": "2026-04-03T11:48:39.000Z",
+      "repos_affected": [
+        "openclaw/openclaw"
+      ]
+    },
+    {
+      "cluster_id": "ea78d785cf08",
+      "title": "Robust Session State Persistence and Context Continuity",
+      "summary": "Users need reliable session management to prevent conversation context loss during automatic compaction or channel switches. They also require accurate state persistence to ensure runs correctly transition to terminal states. These improvements are essential for maintaining seamless conversational continuity and preventing silent session failures.",
+      "category": "Reliability",
+      "representative_need": "Fix conversation context loss and silent session abandonment after automatic compaction",
+      "issue_numbers": [
+        60255,
+        60250,
+        60213
+      ],
+      "issue_urls": [
+        "https://github.com/openclaw/openclaw/issues/60255",
+        "https://github.com/openclaw/openclaw/issues/60250",
+        "https://github.com/openclaw/openclaw/issues/60213"
+      ],
+      "sample_titles": [
+        "Fix conversation context loss and silent session abandonment after automatic compaction",
+        "Fix session store status persistence to correctly transition completed runs to a terminal state",
+        "Support session reuse and context sharing across communication channels"
+      ],
+      "demand_score": 0.999058526298402,
+      "rising_score": 4,
+      "volume": 3,
+      "open_count": 3,
+      "closed_count": 0,
+      "avg_reactions": 0,
+      "avg_comments": 1,
+      "date_first_seen": "2026-04-03T10:01:14.000Z",
+      "date_last_seen": "2026-04-03T11:37:53.000Z",
+      "repos_affected": [
+        "openclaw/openclaw"
+      ]
+    },
+    {
+      "cluster_id": "f2492dd2a66c",
+      "title": "Fix Plugin Dependency Installation and Registration Conflicts",
+      "summary": "Users want the system to automatically install or bundle plugin peer dependencies during upgrades to prevent missing functionality. They also need to resolve issues where duplicate plugin loads incorrectly skip tool registration. Fixing these problems will ensure a stable plugin ecosystem and reliable upgrade experiences.",
+      "category": "Reliability",
+      "representative_need": "Fix automatic installation or bundling of plugin peer dependencies during upgrades",
+      "issue_numbers": [
+        60263,
+        60219
+      ],
+      "issue_urls": [
+        "https://github.com/openclaw/openclaw/issues/60263",
+        "https://github.com/openclaw/openclaw/issues/60219"
+      ],
+      "sample_titles": [
+        "Fix automatic installation or bundling of plugin peer dependencies during upgrades",
+        "Fix plugin tool registration skipping during duplicate plugin loads"
+      ],
+      "demand_score": 0.9990430644595764,
+      "rising_score": 3,
+      "volume": 2,
+      "open_count": 2,
+      "closed_count": 0,
+      "avg_reactions": 0,
+      "avg_comments": 1,
+      "date_first_seen": "2026-04-03T10:05:18.000Z",
+      "date_last_seen": "2026-04-03T11:49:51.000Z",
+      "repos_affected": [
+        "openclaw/openclaw"
+      ]
+    },
+    {
+      "cluster_id": "a928f2f4aac6",
+      "title": "Improve Inbound Message Filtering and Plugin Hook Reliability",
+      "summary": "Users are requesting better filtering of non-essential inbound events, such as iMessage tapbacks, to prevent processing noise and errors. They also need consistent triggering of plugin execution hooks during embedded agent runs to guarantee reliable automation workflows. These changes will clean up message ingestion and ensure dependable plugin behavior across different runtime contexts.",
+      "category": "Integration",
+      "representative_need": "Ensure plugin tool execution hooks trigger consistently in embedded agent runs",
+      "issue_numbers": [
+        60274,
+        60209
+      ],
+      "issue_urls": [
+        "https://github.com/openclaw/openclaw/issues/60274",
+        "https://github.com/openclaw/openclaw/issues/60209"
+      ],
+      "sample_titles": [
+        "Ensure plugin tool execution hooks trigger consistently in embedded agent runs",
+        "Filter iMessage tapback reactions from inbound message processing"
+      ],
+      "demand_score": 0.9990254067383556,
+      "rising_score": 3,
+      "volume": 2,
+      "open_count": 2,
+      "closed_count": 0,
+      "avg_reactions": 0,
+      "avg_comments": 0.5,
+      "date_first_seen": "2026-04-03T09:48:25.000Z",
+      "date_last_seen": "2026-04-03T12:02:10.000Z",
+      "repos_affected": [
+        "openclaw/openclaw"
+      ]
+    },
+    {
+      "cluster_id": "f87cc3bf670d",
+      "title": "Resolve agent authentication and messaging delivery issues",
+      "summary": "Users need fixes for authentication failures when spawning subagents on unsupported channels, alongside corrections to prevent duplicate and stale responses in the messaging gateway. Addressing these bugs is essential for ensuring consistent and accurate communication across the system.",
+      "category": "Reliability",
+      "representative_need": "Fix duplicate and stale response delivery in the messaging gateway",
+      "issue_numbers": [
+        60265,
+        60202
+      ],
+      "issue_urls": [
+        "https://github.com/openclaw/openclaw/issues/60265",
+        "https://github.com/openclaw/openclaw/issues/60202"
+      ],
+      "sample_titles": [
+        "Fix duplicate and stale response delivery in the messaging gateway",
+        "Fix subagent spawning authentication requirement for channels lacking pairing support"
+      ],
+      "demand_score": 0.9989385483824027,
+      "rising_score": 3,
+      "volume": 2,
+      "open_count": 2,
+      "closed_count": 0,
+      "avg_reactions": 0,
+      "avg_comments": 0.5,
+      "date_first_seen": "2026-04-03T09:35:29.000Z",
+      "date_last_seen": "2026-04-03T11:52:42.000Z",
+      "repos_affected": [
+        "openclaw/openclaw"
+      ]
+    },
+    {
+      "cluster_id": "65b70d910426",
+      "title": "Granular Configuration Options for AI Reasoning and System Settings",
+      "summary": "Users want more flexible and granular control over how AI reasoning and underlying system processes are configured. They are specifically requesting scoped settings, secure environment variable resolution, customizable output languages, and adjustable processing timeouts. These enhancements will allow teams to better align the platform with their specific security policies, workflow requirements, and performance expectations.",
+      "category": "Configuration",
+      "representative_need": "Support configurable language for AI reasoning output",
+      "issue_numbers": [
+        60232,
+        60228,
+        60217,
+        60203
+      ],
+      "issue_urls": [
+        "https://github.com/openclaw/openclaw/issues/60232",
+        "https://github.com/openclaw/openclaw/issues/60228",
+        "https://github.com/openclaw/openclaw/issues/60217",
+        "https://github.com/openclaw/openclaw/issues/60203"
+      ],
+      "sample_titles": [
+        "Support configurable language for AI reasoning output",
+        "Support configurable timeout for LLM prompt processing",
+        "Support environment variable resolution for sensitive configuration fields"
+      ],
+      "demand_score": 0.9987078247154035,
+      "rising_score": 5,
+      "volume": 4,
+      "open_count": 4,
+      "closed_count": 0,
+      "avg_reactions": 0.3,
+      "avg_comments": 0.5,
+      "date_first_seen": "2026-04-03T09:35:43.000Z",
+      "date_last_seen": "2026-04-03T10:40:44.000Z",
+      "repos_affected": [
+        "openclaw/openclaw"
+      ]
+    },
+    {
+      "cluster_id": "44b0340094e2",
+      "title": "Fix Authentication Header and OAuth Scope Regressions",
+      "summary": "Users are reporting recent regressions where OAuth authentication headers are incorrectly routed and operator scopes are unexpectedly cleared for shared-auth API clients. These issues disrupt secure API access and token validation, requiring immediate fixes to restore reliable authentication workflows.",
+      "category": "Security",
+      "representative_need": "Fix Anthropic OAuth token authentication header routing regression",
+      "issue_numbers": [
+        60279,
+        60225
+      ],
+      "issue_urls": [
+        "https://github.com/openclaw/openclaw/issues/60279",
+        "https://github.com/openclaw/openclaw/issues/60225"
+      ],
+      "sample_titles": [
+        "Fix Anthropic OAuth token authentication header routing regression",
+        "Fix regression that clears operator scopes for shared-auth API clients"
+      ],
+      "demand_score": 0,
+      "rising_score": 3,
+      "volume": 2,
+      "open_count": 2,
+      "closed_count": 0,
+      "avg_reactions": 0,
+      "avg_comments": 0,
+      "date_first_seen": "2026-04-03T10:24:49.000Z",
+      "date_last_seen": "2026-04-03T12:10:28.000Z",
+      "repos_affected": [
+        "openclaw/openclaw"
+      ]
+    },
+    {
+      "cluster_id": "3f2645b397f7",
+      "title": "Improve Session Lock Handling and Workflow Orchestration",
+      "summary": "Users want the system to automatically reclaim file locks left behind by terminated processes, while also enabling the creation of named, reusable procedural workflows. These enhancements will eliminate resource contention and provide developers with a standardized way to automate complex, multi-step tasks.",
+      "category": "Developer Experience",
+      "representative_need": "Add support for named, reusable procedural workflows via a ROUTINE.md specification",
+      "issue_numbers": [
+        60258,
+        60257
+      ],
+      "issue_urls": [
+        "https://github.com/openclaw/openclaw/issues/60258",
+        "https://github.com/openclaw/openclaw/issues/60257"
+      ],
+      "sample_titles": [
+        "Add support for named, reusable procedural workflows via a ROUTINE.md specification",
+        "Fix stale session file lock reclamation when holder process exits"
+      ],
+      "demand_score": 0,
+      "rising_score": 3,
+      "volume": 2,
+      "open_count": 2,
+      "closed_count": 0,
+      "avg_reactions": 0,
+      "avg_comments": 0,
+      "date_first_seen": "2026-04-03T11:39:08.000Z",
+      "date_last_seen": "2026-04-03T11:42:32.000Z",
+      "repos_affected": [
+        "openclaw/openclaw"
+      ]
+    },
+    {
+      "cluster_id": "c534b06369ea",
+      "title": "Enhance Discord Thread Customization and Voice Channel Reliability",
+      "summary": "Users want customizable prompts for auto-generated Discord thread titles to improve organization and personalization. They also need a fix for voice channels failing to capture incoming audio to ensure stable communication. Addressing these requests will significantly improve the reliability and usability of Discord integrations.",
+      "category": "Integration",
+      "representative_need": "Fix Discord voice channel failing to capture incoming user audio",
+      "issue_numbers": [
+        60237,
+        60236
+      ],
+      "issue_urls": [
+        "https://github.com/openclaw/openclaw/issues/60237",
+        "https://github.com/openclaw/openclaw/issues/60236"
+      ],
+      "sample_titles": [
+        "Fix Discord voice channel failing to capture incoming user audio",
+        "Support customizable prompts for auto-generated Discord thread titles"
+      ],
+      "demand_score": 0,
+      "rising_score": 3,
+      "volume": 2,
+      "open_count": 2,
+      "closed_count": 0,
+      "avg_reactions": 0,
+      "avg_comments": 0,
+      "date_first_seen": "2026-04-03T10:55:37.000Z",
+      "date_last_seen": "2026-04-03T10:55:51.000Z",
+      "repos_affected": [
+        "openclaw/openclaw"
+      ]
+    }
+  ],
+  "category_breakdown": {
+    "Platform Support": 1,
+    "Integration": 3,
+    "UI/UX": 1,
+    "Reliability": 4,
+    "Configuration": 1,
+    "Security": 1,
+    "Developer Experience": 1
+  }
+}

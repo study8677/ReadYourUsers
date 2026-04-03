@@ -9,6 +9,7 @@ async function callStructuredWithMock(
     }) => void;
     createImplementation?: (request: {
       model: string;
+      reasoning?: { enabled: boolean };
     }) => Promise<{ choices: [{ message: { content: string } }] }> | { choices: [{ message: { content: string } }] };
     expectedCreateCalls?: number;
   } = {}
@@ -152,5 +153,24 @@ describe("getOpenAIClient", () => {
     ).rejects.toMatchObject({ status: 400 });
 
     expect(callCount).toBe(1);
+  });
+
+  it("disables reasoning for Teamo Router requests so content is returned", async () => {
+    vi.stubEnv("OPENAI_BASE_URL", "https://router.teamolab.com/v1");
+
+    await callStructuredWithMock({
+      assertClientConfig: (config) => {
+        expect(config.baseURL).toBe("https://router.teamolab.com/v1");
+      },
+      createImplementation: (request) => {
+        expect(request).toMatchObject({
+          model: "test-model",
+          reasoning: { enabled: false },
+        });
+        return Promise.resolve({
+          choices: [{ message: { content: "{\"value\":1}" } }],
+        });
+      },
+    });
   });
 });

@@ -477,7 +477,12 @@ README.zh.md
 | --- | --- | --- |
 | [anthropics/claude-code](https://github.com/anthropics/claude-code) | Claude Code | AI Coding CLI |
 | [openai/codex](https://github.com/openai/codex) | OpenAI Codex CLI | AI Coding Agent |
-| [getcursor/cursor](https://github.com/getcursor/cursor) | Cursor | AI Code Editor |
+| [cursor/cursor](https://github.com/cursor/cursor) | Cursor | AI Code Editor |
+| [opencode-ai/opencode](https://github.com/opencode-ai/opencode) | OpenCode | AI Coding Agent |
+| [cline/cline](https://github.com/cline/cline) | Cline | IDE Coding Agent |
+| [Aider-AI/aider](https://github.com/Aider-AI/aider) | aider | Terminal Pair Programming |
+| [block/goose](https://github.com/block/goose) | Goose | Open-source AI Agent |
+| [openclaw/openclaw](https://github.com/openclaw/openclaw) | OpenClaw | Cross-platform AI Agent |
 
 ## Limits
 
@@ -645,7 +650,12 @@ README.zh.md
 | --- | --- | --- |
 | [anthropics/claude-code](https://github.com/anthropics/claude-code) | Claude Code | AI 编程 CLI |
 | [openai/codex](https://github.com/openai/codex) | OpenAI Codex CLI | AI 编程 Agent |
-| [getcursor/cursor](https://github.com/getcursor/cursor) | Cursor | AI 代码编辑器 |
+| [cursor/cursor](https://github.com/cursor/cursor) | Cursor | AI 代码编辑器 |
+| [opencode-ai/opencode](https://github.com/opencode-ai/opencode) | OpenCode | AI 编程 Agent |
+| [cline/cline](https://github.com/cline/cline) | Cline | IDE 编程 Agent |
+| [Aider-AI/aider](https://github.com/Aider-AI/aider) | aider | 终端结对编程助手 |
+| [block/goose](https://github.com/block/goose) | Goose | 开源 AI Agent |
+| [openclaw/openclaw](https://github.com/openclaw/openclaw) | OpenClaw | 跨平台 AI Agent |
 
 ## 局限
 

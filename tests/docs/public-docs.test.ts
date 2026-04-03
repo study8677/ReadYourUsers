@@ -32,7 +32,7 @@ describe("public docs and automation", () => {
 
     expect(readme).toContain("public multi-product observatory");
     expect(readme).toContain("[Compare](https://study8677.github.io/ReadYourUsers/en/compare/index.html)");
-    expect(readme).toContain("[Product page](https://study8677.github.io/ReadYourUsers/en/products/anthropics-claude-code.html)");
+    expect(readme).toContain("[Product page](https://study8677.github.io/ReadYourUsers/en/products/");
     expect(readme).toContain(openRouterSetupBlock);
     for (const line of observatoryOutputLines) {
       expect(readme).toContain(line);
@@ -40,7 +40,7 @@ describe("public docs and automation", () => {
 
     expect(readmeZh).toContain("多产品观测站");
     expect(readmeZh).toContain("[对比页](https://study8677.github.io/ReadYourUsers/zh/compare/index.html)");
-    expect(readmeZh).toContain("[产品页](https://study8677.github.io/ReadYourUsers/zh/products/anthropics-claude-code.html)");
+    expect(readmeZh).toContain("[产品页](https://study8677.github.io/ReadYourUsers/zh/products/");
     expect(readmeZh).toContain(openRouterSetupBlock);
     for (const line of observatoryOutputLines) {
       expect(readmeZh).toContain(line);

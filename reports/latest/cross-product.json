@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-03T09:51:03.177Z",
+  "generatedAt": "2026-04-03T13:21:31.317Z",
   "products": [
     {
       "repo": "anthropics/claude-code",
@@ -1804,6 +1804,1109 @@
       }
     },
     {
+      "repo": "openclaw/openclaw",
+      "slug": "openclaw-openclaw",
+      "displayName": "OpenClaw",
+      "category": "AI Agent",
+      "generatedAt": "2026-04-03T13:00:54.094Z",
+      "totalIssuesAnalyzed": 52,
+      "totalIssuesIncluded": 47,
+      "totalClusters": 12,
+      "topNeed": {
+        "cluster_id": "73b72847d17a",
+        "title": "Core System Stability Fixes and Platform Enhancements",
+        "summary": "Users are requesting critical bug fixes for task lifecycle management, race conditions, and provider parsing to ensure consistent reliability across environments. They also require expanded channel integrations, advanced configuration inheritance, and improved media handling to streamline cross-platform workflows and system interoperability.",
+        "category": "Platform Support",
+        "representative_need": "Add Chinese (Simplified) localization support to the Android app",
+        "issue_numbers": [
+          60299,
+          60295,
+          60294,
+          60292,
+          60280,
+          60275,
+          60272,
+          60270,
+          60268,
+          60261,
+          60246,
+          60244,
+          60242,
+          60240,
+          60226,
+          60218,
+          60216,
+          60211,
+          60207,
+          60204
+        ],
+        "issue_urls": [
+          "https://github.com/openclaw/openclaw/issues/60299",
+          "https://github.com/openclaw/openclaw/issues/60295",
+          "https://github.com/openclaw/openclaw/issues/60294",
+          "https://github.com/openclaw/openclaw/issues/60292",
+          "https://github.com/openclaw/openclaw/issues/60280",
+          "https://github.com/openclaw/openclaw/issues/60275",
+          "https://github.com/openclaw/openclaw/issues/60272",
+          "https://github.com/openclaw/openclaw/issues/60270",
+          "https://github.com/openclaw/openclaw/issues/60268",
+          "https://github.com/openclaw/openclaw/issues/60261",
+          "https://github.com/openclaw/openclaw/issues/60246",
+          "https://github.com/openclaw/openclaw/issues/60244",
+          "https://github.com/openclaw/openclaw/issues/60242",
+          "https://github.com/openclaw/openclaw/issues/60240",
+          "https://github.com/openclaw/openclaw/issues/60226",
+          "https://github.com/openclaw/openclaw/issues/60218",
+          "https://github.com/openclaw/openclaw/issues/60216",
+          "https://github.com/openclaw/openclaw/issues/60211",
+          "https://github.com/openclaw/openclaw/issues/60207",
+          "https://github.com/openclaw/openclaw/issues/60204"
+        ],
+        "sample_titles": [
+          "Add Chinese (Simplified) localization support to the Android app",
+          "Add DingTalk channel support",
+          "Ensure subagent runTimeoutSeconds enforces hard termination instead of triggering model fallback retry"
+        ],
+        "demand_score": 6.495067913687111,
+        "rising_score": 21,
+        "volume": 20,
+        "open_count": 19,
+        "closed_count": 1,
+        "avg_reactions": 0.1,
+        "avg_comments": 0.3,
+        "date_first_seen": "2026-04-03T09:39:19.000Z",
+        "date_last_seen": "2026-04-03T12:54:05.000Z",
+        "repos_affected": [
+          "openclaw/openclaw"
+        ]
+      },
+      "risingNeed": {
+        "cluster_id": "73b72847d17a",
+        "title": "Core System Stability Fixes and Platform Enhancements",
+        "summary": "Users are requesting critical bug fixes for task lifecycle management, race conditions, and provider parsing to ensure consistent reliability across environments. They also require expanded channel integrations, advanced configuration inheritance, and improved media handling to streamline cross-platform workflows and system interoperability.",
+        "category": "Platform Support",
+        "representative_need": "Add Chinese (Simplified) localization support to the Android app",
+        "issue_numbers": [
+          60299,
+          60295,
+          60294,
+          60292,
+          60280,
+          60275,
+          60272,
+          60270,
+          60268,
+          60261,
+          60246,
+          60244,
+          60242,
+          60240,
+          60226,
+          60218,
+          60216,
+          60211,
+          60207,
+          60204
+        ],
+        "issue_urls": [
+          "https://github.com/openclaw/openclaw/issues/60299",
+          "https://github.com/openclaw/openclaw/issues/60295",
+          "https://github.com/openclaw/openclaw/issues/60294",
+          "https://github.com/openclaw/openclaw/issues/60292",
+          "https://github.com/openclaw/openclaw/issues/60280",
+          "https://github.com/openclaw/openclaw/issues/60275",
+          "https://github.com/openclaw/openclaw/issues/60272",
+          "https://github.com/openclaw/openclaw/issues/60270",
+          "https://github.com/openclaw/openclaw/issues/60268",
+          "https://github.com/openclaw/openclaw/issues/60261",
+          "https://github.com/openclaw/openclaw/issues/60246",
+          "https://github.com/openclaw/openclaw/issues/60244",
+          "https://github.com/openclaw/openclaw/issues/60242",
+          "https://github.com/openclaw/openclaw/issues/60240",
+          "https://github.com/openclaw/openclaw/issues/60226",
+          "https://github.com/openclaw/openclaw/issues/60218",
+          "https://github.com/openclaw/openclaw/issues/60216",
+          "https://github.com/openclaw/openclaw/issues/60211",
+          "https://github.com/openclaw/openclaw/issues/60207",
+          "https://github.com/openclaw/openclaw/issues/60204"
+        ],
+        "sample_titles": [
+          "Add Chinese (Simplified) localization support to the Android app",
+          "Add DingTalk channel support",
+          "Ensure subagent runTimeoutSeconds enforces hard termination instead of triggering model fallback retry"
+        ],
+        "demand_score": 6.495067913687111,
+        "rising_score": 21,
+        "volume": 20,
+        "open_count": 19,
+        "closed_count": 1,
+        "avg_reactions": 0.1,
+        "avg_comments": 0.3,
+        "date_first_seen": "2026-04-03T09:39:19.000Z",
+        "date_last_seen": "2026-04-03T12:54:05.000Z",
+        "repos_affected": [
+          "openclaw/openclaw"
+        ]
+      },
+      "dominantCategory": "Reliability",
+      "reportPaths": {
+        "en": "reports/latest/openclaw-openclaw.md",
+        "zh": "reports/latest/openclaw-openclaw.zh.md"
+      },
+      "aggregation": {
+        "repo": "openclaw/openclaw",
+        "display_name": "OpenClaw",
+        "generated_at": "2026-04-03T13:00:54.094Z",
+        "window_start": "2026-03-04T13:00:54.094Z",
+        "window_end": "2026-04-03T13:00:54.094Z",
+        "total_issues_analyzed": 52,
+        "total_issues_included": 47,
+        "clusters": [
+          {
+            "cluster_id": "73b72847d17a",
+            "title": "Core System Stability Fixes and Platform Enhancements",
+            "summary": "Users are requesting critical bug fixes for task lifecycle management, race conditions, and provider parsing to ensure consistent reliability across environments. They also require expanded channel integrations, advanced configuration inheritance, and improved media handling to streamline cross-platform workflows and system interoperability.",
+            "category": "Platform Support",
+            "representative_need": "Add Chinese (Simplified) localization support to the Android app",
+            "issue_numbers": [
+              60299,
+              60295,
+              60294,
+              60292,
+              60280,
+              60275,
+              60272,
+              60270,
+              60268,
+              60261,
+              60246,
+              60244,
+              60242,
+              60240,
+              60226,
+              60218,
+              60216,
+              60211,
+              60207,
+              60204
+            ],
+            "issue_urls": [
+              "https://github.com/openclaw/openclaw/issues/60299",
+              "https://github.com/openclaw/openclaw/issues/60295",
+              "https://github.com/openclaw/openclaw/issues/60294",
+              "https://github.com/openclaw/openclaw/issues/60292",
+              "https://github.com/openclaw/openclaw/issues/60280",
+              "https://github.com/openclaw/openclaw/issues/60275",
+              "https://github.com/openclaw/openclaw/issues/60272",
+              "https://github.com/openclaw/openclaw/issues/60270",
+              "https://github.com/openclaw/openclaw/issues/60268",
+              "https://github.com/openclaw/openclaw/issues/60261",
+              "https://github.com/openclaw/openclaw/issues/60246",
+              "https://github.com/openclaw/openclaw/issues/60244",
+              "https://github.com/openclaw/openclaw/issues/60242",
+              "https://github.com/openclaw/openclaw/issues/60240",
+              "https://github.com/openclaw/openclaw/issues/60226",
+              "https://github.com/openclaw/openclaw/issues/60218",
+              "https://github.com/openclaw/openclaw/issues/60216",
+              "https://github.com/openclaw/openclaw/issues/60211",
+              "https://github.com/openclaw/openclaw/issues/60207",
+              "https://github.com/openclaw/openclaw/issues/60204"
+            ],
+            "sample_titles": [
+              "Add Chinese (Simplified) localization support to the Android app",
+              "Add DingTalk channel support",
+              "Ensure subagent runTimeoutSeconds enforces hard termination instead of triggering model fallback retry"
+            ],
+            "demand_score": 6.495067913687111,
+            "rising_score": 21,
+            "volume": 20,
+            "open_count": 19,
+            "closed_count": 1,
+            "avg_reactions": 0.1,
+            "avg_comments": 0.3,
+            "date_first_seen": "2026-04-03T09:39:19.000Z",
+            "date_last_seen": "2026-04-03T12:54:05.000Z",
+            "repos_affected": [
+              "openclaw/openclaw"
+            ]
+          },
+          {
+            "cluster_id": "485c9ab96e92",
+            "title": "Fix Telegram DM Command Approval and File Context Handling",
+            "summary": "Users are reporting bugs where command execution approval workflows are inconsistently triggered or bypassed in Telegram direct messages. They also need reliable attachment of Telegram file messages to the active session context. These fixes are essential to maintain secure command execution and accurate conversation state during Telegram interactions.",
+            "category": "Integration",
+            "representative_need": "Fix attachment of Telegram file messages to session context",
+            "issue_numbers": [
+              60260,
+              60252,
+              60201
+            ],
+            "issue_urls": [
+              "https://github.com/openclaw/openclaw/issues/60260",
+              "https://github.com/openclaw/openclaw/issues/60252",
+              "https://github.com/openclaw/openclaw/issues/60201"
+            ],
+            "sample_titles": [
+              "Fix attachment of Telegram file messages to session context",
+              "Fix command execution approval triggering in Telegram DM mode",
+              "Fix exec command approval bypass in Telegram DM mode"
+            ],
+            "demand_score": 1.9980471762396264,
+            "rising_score": 4,
+            "volume": 3,
+            "open_count": 1,
+            "closed_count": 2,
+            "avg_reactions": 0,
+            "avg_comments": 0.7,
+            "date_first_seen": "2026-04-03T09:32:44.000Z",
+            "date_last_seen": "2026-04-03T11:46:47.000Z",
+            "repos_affected": [
+              "openclaw/openclaw"
+            ]
+          },
+          {
+            "cluster_id": "81a4f397ad8a",
+            "title": "Resolve UI Overflows and Streaming Text Parsing Errors",
+            "summary": "Users are requesting fixes for interface layout glitches and multi-byte character handling that disrupt command prompts and streaming outputs. These enhancements will ensure a polished visual experience and prevent text corruption during interactive sessions.",
+            "category": "UI/UX",
+            "representative_need": "Fix command permission dialog UI overflow and add setting to disable approval prompts",
+            "issue_numbers": [
+              60293,
+              60247
+            ],
+            "issue_urls": [
+              "https://github.com/openclaw/openclaw/issues/60293",
+              "https://github.com/openclaw/openclaw/issues/60247"
+            ],
+            "sample_titles": [
+              "Fix command permission dialog UI overflow and add setting to disable approval prompts",
+              "Handle multi-byte UTF-8 character boundaries correctly during streaming response parsing"
+            ],
+            "demand_score": 0.999520421758969,
+            "rising_score": 3,
+            "volume": 2,
+            "open_count": 2,
+            "closed_count": 0,
+            "avg_reactions": 0,
+            "avg_comments": 0.5,
+            "date_first_seen": "2026-04-03T11:16:55.000Z",
+            "date_last_seen": "2026-04-03T12:41:18.000Z",
+            "repos_affected": [
+              "openclaw/openclaw"
+            ]
+          },
+          {
+            "cluster_id": "2495b62a2c9d",
+            "title": "Fix cron job execution, delivery, and reporting failures",
+            "summary": "Users are encountering multiple failures with scheduled cron jobs, including problems waking agent sessions, delivering messages during active sessions, and reporting errors when environment variables are used. Addressing these issues is critical to ensure consistent automated task execution and accurate error notifications for agent workflows.",
+            "category": "Reliability",
+            "representative_need": "Fix cron job failure reporting when using environment variables for delivery channels",
+            "issue_numbers": [
+              60262,
+              60256,
+              60251
+            ],
+            "issue_urls": [
+              "https://github.com/openclaw/openclaw/issues/60262",
+              "https://github.com/openclaw/openclaw/issues/60256",
+              "https://github.com/openclaw/openclaw/issues/60251"
+            ],
+            "sample_titles": [
+              "Fix cron job failure reporting when using environment variables for delivery channels",
+              "Fix cron job message delivery failure when ACP sessions are active",
+              "Fix cron jobs failing to wake agent sessions"
+            ],
+            "demand_score": 0.9993514538443278,
+            "rising_score": 4,
+            "volume": 3,
+            "open_count": 3,
+            "closed_count": 0,
+            "avg_reactions": 0,
+            "avg_comments": 1,
+            "date_first_seen": "2026-04-03T11:25:07.000Z",
+            "date_last_seen": "2026-04-03T11:48:39.000Z",
+            "repos_affected": [
+              "openclaw/openclaw"
+            ]
+          },
+          {
+            "cluster_id": "ea78d785cf08",
+            "title": "Robust Session State Persistence and Context Continuity",
+            "summary": "Users need reliable session management to prevent conversation context loss during automatic compaction or channel switches. They also require accurate state persistence to ensure runs correctly transition to terminal states. These improvements are essential for maintaining seamless conversational continuity and preventing silent session failures.",
+            "category": "Reliability",
+            "representative_need": "Fix conversation context loss and silent session abandonment after automatic compaction",
+            "issue_numbers": [
+              60255,
+              60250,
+              60213
+            ],
+            "issue_urls": [
+              "https://github.com/openclaw/openclaw/issues/60255",
+              "https://github.com/openclaw/openclaw/issues/60250",
+              "https://github.com/openclaw/openclaw/issues/60213"
+            ],
+            "sample_titles": [
+              "Fix conversation context loss and silent session abandonment after automatic compaction",
+              "Fix session store status persistence to correctly transition completed runs to a terminal state",
+              "Support session reuse and context sharing across communication channels"
+            ],
+            "demand_score": 0.999058526298402,
+            "rising_score": 4,
+            "volume": 3,
+            "open_count": 3,
+            "closed_count": 0,
+            "avg_reactions": 0,
+            "avg_comments": 1,
+            "date_first_seen": "2026-04-03T10:01:14.000Z",
+            "date_last_seen": "2026-04-03T11:37:53.000Z",
+            "repos_affected": [
+              "openclaw/openclaw"
+            ]
+          },
+          {
+            "cluster_id": "f2492dd2a66c",
+            "title": "Fix Plugin Dependency Installation and Registration Conflicts",
+            "summary": "Users want the system to automatically install or bundle plugin peer dependencies during upgrades to prevent missing functionality. They also need to resolve issues where duplicate plugin loads incorrectly skip tool registration. Fixing these problems will ensure a stable plugin ecosystem and reliable upgrade experiences.",
+            "category": "Reliability",
+            "representative_need": "Fix automatic installation or bundling of plugin peer dependencies during upgrades",
+            "issue_numbers": [
+              60263,
+              60219
+            ],
+            "issue_urls": [
+              "https://github.com/openclaw/openclaw/issues/60263",
+              "https://github.com/openclaw/openclaw/issues/60219"
+            ],
+            "sample_titles": [
+              "Fix automatic installation or bundling of plugin peer dependencies during upgrades",
+              "Fix plugin tool registration skipping during duplicate plugin loads"
+            ],
+            "demand_score": 0.9990430644595764,
+            "rising_score": 3,
+            "volume": 2,
+            "open_count": 2,
+            "closed_count": 0,
+            "avg_reactions": 0,
+            "avg_comments": 1,
+            "date_first_seen": "2026-04-03T10:05:18.000Z",
+            "date_last_seen": "2026-04-03T11:49:51.000Z",
+            "repos_affected": [
+              "openclaw/openclaw"
+            ]
+          },
+          {
+            "cluster_id": "a928f2f4aac6",
+            "title": "Improve Inbound Message Filtering and Plugin Hook Reliability",
+            "summary": "Users are requesting better filtering of non-essential inbound events, such as iMessage tapbacks, to prevent processing noise and errors. They also need consistent triggering of plugin execution hooks during embedded agent runs to guarantee reliable automation workflows. These changes will clean up message ingestion and ensure dependable plugin behavior across different runtime contexts.",
+            "category": "Integration",
+            "representative_need": "Ensure plugin tool execution hooks trigger consistently in embedded agent runs",
+            "issue_numbers": [
+              60274,
+              60209
+            ],
+            "issue_urls": [
+              "https://github.com/openclaw/openclaw/issues/60274",
+              "https://github.com/openclaw/openclaw/issues/60209"
+            ],
+            "sample_titles": [
+              "Ensure plugin tool execution hooks trigger consistently in embedded agent runs",
+              "Filter iMessage tapback reactions from inbound message processing"
+            ],
+            "demand_score": 0.9990254067383556,
+            "rising_score": 3,
+            "volume": 2,
+            "open_count": 2,
+            "closed_count": 0,
+            "avg_reactions": 0,
+            "avg_comments": 0.5,
+            "date_first_seen": "2026-04-03T09:48:25.000Z",
+            "date_last_seen": "2026-04-03T12:02:10.000Z",
+            "repos_affected": [
+              "openclaw/openclaw"
+            ]
+          },
+          {
+            "cluster_id": "f87cc3bf670d",
+            "title": "Resolve agent authentication and messaging delivery issues",
+            "summary": "Users need fixes for authentication failures when spawning subagents on unsupported channels, alongside corrections to prevent duplicate and stale responses in the messaging gateway. Addressing these bugs is essential for ensuring consistent and accurate communication across the system.",
+            "category": "Reliability",
+            "representative_need": "Fix duplicate and stale response delivery in the messaging gateway",
+            "issue_numbers": [
+              60265,
+              60202
+            ],
+            "issue_urls": [
+              "https://github.com/openclaw/openclaw/issues/60265",
+              "https://github.com/openclaw/openclaw/issues/60202"
+            ],
+            "sample_titles": [
+              "Fix duplicate and stale response delivery in the messaging gateway",
+              "Fix subagent spawning authentication requirement for channels lacking pairing support"
+            ],
+            "demand_score": 0.9989385483824027,
+            "rising_score": 3,
+            "volume": 2,
+            "open_count": 2,
+            "closed_count": 0,
+            "avg_reactions": 0,
+            "avg_comments": 0.5,
+            "date_first_seen": "2026-04-03T09:35:29.000Z",
+            "date_last_seen": "2026-04-03T11:52:42.000Z",
+            "repos_affected": [
+              "openclaw/openclaw"
+            ]
+          },
+          {
+            "cluster_id": "65b70d910426",
+            "title": "Granular Configuration Options for AI Reasoning and System Settings",
+            "summary": "Users want more flexible and granular control over how AI reasoning and underlying system processes are configured. They are specifically requesting scoped settings, secure environment variable resolution, customizable output languages, and adjustable processing timeouts. These enhancements will allow teams to better align the platform with their specific security policies, workflow requirements, and performance expectations.",
+            "category": "Configuration",
+            "representative_need": "Support configurable language for AI reasoning output",
+            "issue_numbers": [
+              60232,
+              60228,
+              60217,
+              60203
+            ],
+            "issue_urls": [
+              "https://github.com/openclaw/openclaw/issues/60232",
+              "https://github.com/openclaw/openclaw/issues/60228",
+              "https://github.com/openclaw/openclaw/issues/60217",
+              "https://github.com/openclaw/openclaw/issues/60203"
+            ],
+            "sample_titles": [
+              "Support configurable language for AI reasoning output",
+              "Support configurable timeout for LLM prompt processing",
+              "Support environment variable resolution for sensitive configuration fields"
+            ],
+            "demand_score": 0.9987078247154035,
+            "rising_score": 5,
+            "volume": 4,
+            "open_count": 4,
+            "closed_count": 0,
+            "avg_reactions": 0.3,
+            "avg_comments": 0.5,
+            "date_first_seen": "2026-04-03T09:35:43.000Z",
+            "date_last_seen": "2026-04-03T10:40:44.000Z",
+            "repos_affected": [
+              "openclaw/openclaw"
+            ]
+          },
+          {
+            "cluster_id": "44b0340094e2",
+            "title": "Fix Authentication Header and OAuth Scope Regressions",
+            "summary": "Users are reporting recent regressions where OAuth authentication headers are incorrectly routed and operator scopes are unexpectedly cleared for shared-auth API clients. These issues disrupt secure API access and token validation, requiring immediate fixes to restore reliable authentication workflows.",
+            "category": "Security",
+            "representative_need": "Fix Anthropic OAuth token authentication header routing regression",
+            "issue_numbers": [
+              60279,
+              60225
+            ],
+            "issue_urls": [
+              "https://github.com/openclaw/openclaw/issues/60279",
+              "https://github.com/openclaw/openclaw/issues/60225"
+            ],
+            "sample_titles": [
+              "Fix Anthropic OAuth token authentication header routing regression",
+              "Fix regression that clears operator scopes for shared-auth API clients"
+            ],
+            "demand_score": 0,
+            "rising_score": 3,
+            "volume": 2,
+            "open_count": 2,
+            "closed_count": 0,
+            "avg_reactions": 0,
+            "avg_comments": 0,
+            "date_first_seen": "2026-04-03T10:24:49.000Z",
+            "date_last_seen": "2026-04-03T12:10:28.000Z",
+            "repos_affected": [
+              "openclaw/openclaw"
+            ]
+          },
+          {
+            "cluster_id": "3f2645b397f7",
+            "title": "Improve Session Lock Handling and Workflow Orchestration",
+            "summary": "Users want the system to automatically reclaim file locks left behind by terminated processes, while also enabling the creation of named, reusable procedural workflows. These enhancements will eliminate resource contention and provide developers with a standardized way to automate complex, multi-step tasks.",
+            "category": "Developer Experience",
+            "representative_need": "Add support for named, reusable procedural workflows via a ROUTINE.md specification",
+            "issue_numbers": [
+              60258,
+              60257
+            ],
+            "issue_urls": [
+              "https://github.com/openclaw/openclaw/issues/60258",
+              "https://github.com/openclaw/openclaw/issues/60257"
+            ],
+            "sample_titles": [
+              "Add support for named, reusable procedural workflows via a ROUTINE.md specification",
+              "Fix stale session file lock reclamation when holder process exits"
+            ],
+            "demand_score": 0,
+            "rising_score": 3,
+            "volume": 2,
+            "open_count": 2,
+            "closed_count": 0,
+            "avg_reactions": 0,
+            "avg_comments": 0,
+            "date_first_seen": "2026-04-03T11:39:08.000Z",
+            "date_last_seen": "2026-04-03T11:42:32.000Z",
+            "repos_affected": [
+              "openclaw/openclaw"
+            ]
+          },
+          {
+            "cluster_id": "c534b06369ea",
+            "title": "Enhance Discord Thread Customization and Voice Channel Reliability",
+            "summary": "Users want customizable prompts for auto-generated Discord thread titles to improve organization and personalization. They also need a fix for voice channels failing to capture incoming audio to ensure stable communication. Addressing these requests will significantly improve the reliability and usability of Discord integrations.",
+            "category": "Integration",
+            "representative_need": "Fix Discord voice channel failing to capture incoming user audio",
+            "issue_numbers": [
+              60237,
+              60236
+            ],
+            "issue_urls": [
+              "https://github.com/openclaw/openclaw/issues/60237",
+              "https://github.com/openclaw/openclaw/issues/60236"
+            ],
+            "sample_titles": [
+              "Fix Discord voice channel failing to capture incoming user audio",
+              "Support customizable prompts for auto-generated Discord thread titles"
+            ],
+            "demand_score": 0,
+            "rising_score": 3,
+            "volume": 2,
+            "open_count": 2,
+            "closed_count": 0,
+            "avg_reactions": 0,
+            "avg_comments": 0,
+            "date_first_seen": "2026-04-03T10:55:37.000Z",
+            "date_last_seen": "2026-04-03T10:55:51.000Z",
+            "repos_affected": [
+              "openclaw/openclaw"
+            ]
+          }
+        ],
+        "category_breakdown": {
+          "Platform Support": 1,
+          "Integration": 3,
+          "UI/UX": 1,
+          "Reliability": 4,
+          "Configuration": 1,
+          "Security": 1,
+          "Developer Experience": 1
+        }
+      }
+    },
+    {
+      "repo": "Aider-AI/aider",
+      "slug": "Aider-AI-aider",
+      "displayName": "aider",
+      "category": "AI Coding Assistant",
+      "generatedAt": "2026-04-03T12:42:28.284Z",
+      "totalIssuesAnalyzed": 51,
+      "totalIssuesIncluded": 50,
+      "totalClusters": 10,
+      "topNeed": {
+        "cluster_id": "e35d14812205",
+        "title": "Resolving CLI crashes and enhancing terminal error handling",
+        "summary": "Users want the application to stop crashing due to Unicode encoding failures, path resolution issues, missing dependencies, and permission checks during startup and execution. They also request new CLI flags for headless automation and clearer workflow documentation to streamline their development process. Implementing these fixes will ensure consistent, uninterrupted operation across different operating systems and deployment setups.",
+        "category": "Developer Experience",
+        "representative_need": "Add CLI option to enforce single-pass LLM execution",
+        "issue_numbers": [
+          4986,
+          4985,
+          4984,
+          4966,
+          4963,
+          4958,
+          4952,
+          4950,
+          4948,
+          4943,
+          4942,
+          4939,
+          4933,
+          4911,
+          4907,
+          4906,
+          4903,
+          4890,
+          4886,
+          4885
+        ],
+        "issue_urls": [
+          "https://github.com/Aider-AI/aider/issues/4986",
+          "https://github.com/Aider-AI/aider/issues/4985",
+          "https://github.com/Aider-AI/aider/issues/4984",
+          "https://github.com/Aider-AI/aider/issues/4966",
+          "https://github.com/Aider-AI/aider/issues/4963",
+          "https://github.com/Aider-AI/aider/issues/4958",
+          "https://github.com/Aider-AI/aider/issues/4952",
+          "https://github.com/Aider-AI/aider/issues/4950",
+          "https://github.com/Aider-AI/aider/issues/4948",
+          "https://github.com/Aider-AI/aider/issues/4943",
+          "https://github.com/Aider-AI/aider/issues/4942",
+          "https://github.com/Aider-AI/aider/issues/4939",
+          "https://github.com/Aider-AI/aider/issues/4933",
+          "https://github.com/Aider-AI/aider/issues/4911",
+          "https://github.com/Aider-AI/aider/issues/4907",
+          "https://github.com/Aider-AI/aider/issues/4906",
+          "https://github.com/Aider-AI/aider/issues/4903",
+          "https://github.com/Aider-AI/aider/issues/4890",
+          "https://github.com/Aider-AI/aider/issues/4886",
+          "https://github.com/Aider-AI/aider/issues/4885"
+        ],
+        "sample_titles": [
+          "Add CLI option to enforce single-pass LLM execution",
+          "Add provider identifiers to model names in the selection list",
+          "Document the differences, trade-offs, and recommended use cases for the /architect versus /ask /code workflows"
+        ],
+        "demand_score": 6.1678199407767265,
+        "rising_score": 1.2,
+        "volume": 20,
+        "open_count": 9,
+        "closed_count": 11,
+        "avg_reactions": 0.1,
+        "avg_comments": 0.7,
+        "date_first_seen": "2026-03-05T20:51:05.000Z",
+        "date_last_seen": "2026-04-03T12:24:12.000Z",
+        "repos_affected": [
+          "Aider-AI/aider"
+        ]
+      },
+      "risingNeed": {
+        "cluster_id": "df6efd475d0b",
+        "title": "Resolve startup crashes caused by dependency version conflicts",
+        "summary": "Users are experiencing application startup failures triggered by missing or incompatible Python package dependencies. Resolving these library conflicts and import errors is critical to prevent crashes and guarantee a stable, reliable launch experience.",
+        "category": "Reliability",
+        "representative_need": "Fix ImportError when loading litellm due to openai package version incompatibility",
+        "issue_numbers": [
+          4983,
+          4964,
+          4962,
+          4904
+        ],
+        "issue_urls": [
+          "https://github.com/Aider-AI/aider/issues/4983",
+          "https://github.com/Aider-AI/aider/issues/4964",
+          "https://github.com/Aider-AI/aider/issues/4962",
+          "https://github.com/Aider-AI/aider/issues/4904"
+        ],
+        "sample_titles": [
+          "Fix ImportError when loading litellm due to openai package version incompatibility",
+          "Fix missing scipy dependency crash during repo map generation",
+          "Fix startup crash caused by litellm and aiohttp dependency incompatibility"
+        ],
+        "demand_score": 1.8171957034992137,
+        "rising_score": 4,
+        "volume": 4,
+        "open_count": 2,
+        "closed_count": 2,
+        "avg_reactions": 0,
+        "avg_comments": 0.5,
+        "date_first_seen": "2026-03-11T04:14:23.000Z",
+        "date_last_seen": "2026-04-02T09:21:44.000Z",
+        "repos_affected": [
+          "Aider-AI/aider"
+        ]
+      },
+      "dominantCategory": "Reliability",
+      "reportPaths": {
+        "en": "reports/latest/Aider-AI-aider.md",
+        "zh": "reports/latest/Aider-AI-aider.zh.md"
+      },
+      "aggregation": {
+        "repo": "Aider-AI/aider",
+        "display_name": "aider",
+        "generated_at": "2026-04-03T12:42:28.284Z",
+        "window_start": "2026-03-04T12:42:28.284Z",
+        "window_end": "2026-04-03T12:42:28.284Z",
+        "total_issues_analyzed": 51,
+        "total_issues_included": 50,
+        "clusters": [
+          {
+            "cluster_id": "e35d14812205",
+            "title": "Resolving CLI crashes and enhancing terminal error handling",
+            "summary": "Users want the application to stop crashing due to Unicode encoding failures, path resolution issues, missing dependencies, and permission checks during startup and execution. They also request new CLI flags for headless automation and clearer workflow documentation to streamline their development process. Implementing these fixes will ensure consistent, uninterrupted operation across different operating systems and deployment setups.",
+            "category": "Developer Experience",
+            "representative_need": "Add CLI option to enforce single-pass LLM execution",
+            "issue_numbers": [
+              4986,
+              4985,
+              4984,
+              4966,
+              4963,
+              4958,
+              4952,
+              4950,
+              4948,
+              4943,
+              4942,
+              4939,
+              4933,
+              4911,
+              4907,
+              4906,
+              4903,
+              4890,
+              4886,
+              4885
+            ],
+            "issue_urls": [
+              "https://github.com/Aider-AI/aider/issues/4986",
+              "https://github.com/Aider-AI/aider/issues/4985",
+              "https://github.com/Aider-AI/aider/issues/4984",
+              "https://github.com/Aider-AI/aider/issues/4966",
+              "https://github.com/Aider-AI/aider/issues/4963",
+              "https://github.com/Aider-AI/aider/issues/4958",
+              "https://github.com/Aider-AI/aider/issues/4952",
+              "https://github.com/Aider-AI/aider/issues/4950",
+              "https://github.com/Aider-AI/aider/issues/4948",
+              "https://github.com/Aider-AI/aider/issues/4943",
+              "https://github.com/Aider-AI/aider/issues/4942",
+              "https://github.com/Aider-AI/aider/issues/4939",
+              "https://github.com/Aider-AI/aider/issues/4933",
+              "https://github.com/Aider-AI/aider/issues/4911",
+              "https://github.com/Aider-AI/aider/issues/4907",
+              "https://github.com/Aider-AI/aider/issues/4906",
+              "https://github.com/Aider-AI/aider/issues/4903",
+              "https://github.com/Aider-AI/aider/issues/4890",
+              "https://github.com/Aider-AI/aider/issues/4886",
+              "https://github.com/Aider-AI/aider/issues/4885"
+            ],
+            "sample_titles": [
+              "Add CLI option to enforce single-pass LLM execution",
+              "Add provider identifiers to model names in the selection list",
+              "Document the differences, trade-offs, and recommended use cases for the /architect versus /ask /code workflows"
+            ],
+            "demand_score": 6.1678199407767265,
+            "rising_score": 1.2,
+            "volume": 20,
+            "open_count": 9,
+            "closed_count": 11,
+            "avg_reactions": 0.1,
+            "avg_comments": 0.7,
+            "date_first_seen": "2026-03-05T20:51:05.000Z",
+            "date_last_seen": "2026-04-03T12:24:12.000Z",
+            "repos_affected": [
+              "Aider-AI/aider"
+            ]
+          },
+          {
+            "cluster_id": "99bcf7ea4c57",
+            "title": "Gracefully Handle Git Errors and Prevent Startup Crashes",
+            "summary": "Users want the application to manage Git permission issues, missing working trees, and configuration problems gracefully to avoid application failures during startup. They also request improved exception handling and accurate gitignore warnings to prevent auto-commit blockages and ensure underlying bugs are properly surfaced rather than masked. These enhancements will improve system stability and provide a smoother, more predictable development workflow.",
+            "category": "Integration",
+            "representative_need": "Fix exception handling to stop masking programming bugs as Git errors",
+            "issue_numbers": [
+              4971,
+              4956,
+              4947,
+              4944,
+              4932,
+              4912
+            ],
+            "issue_urls": [
+              "https://github.com/Aider-AI/aider/issues/4971",
+              "https://github.com/Aider-AI/aider/issues/4956",
+              "https://github.com/Aider-AI/aider/issues/4947",
+              "https://github.com/Aider-AI/aider/issues/4944",
+              "https://github.com/Aider-AI/aider/issues/4932",
+              "https://github.com/Aider-AI/aider/issues/4912"
+            ],
+            "sample_titles": [
+              "Fix exception handling to stop masking programming bugs as Git errors",
+              "Fix false gitignore warnings that block auto-commit after manually adding files to context",
+              "Gracefully handle git configuration permission errors during startup"
+            ],
+            "demand_score": 3.4394942382219194,
+            "rising_score": 1,
+            "volume": 6,
+            "open_count": 2,
+            "closed_count": 4,
+            "avg_reactions": 0,
+            "avg_comments": 0.7,
+            "date_first_seen": "2026-03-13T01:48:12.000Z",
+            "date_last_seen": "2026-03-30T17:07:30.000Z",
+            "repos_affected": [
+              "Aider-AI/aider"
+            ]
+          },
+          {
+            "cluster_id": "d31783cd96f3",
+            "title": "Graceful Handling Of Missing Or Incompatible Dependencies",
+            "summary": "Users want the application to manage optional or conflicting third-party packages gracefully instead of failing during initialization. They specifically request actionable error messages that guide users on how to resolve missing or incompatible library versions. Addressing these issues will prevent unexpected startup crashes and streamline the overall development experience.",
+            "category": "Reliability",
+            "representative_need": "Fix startup crash caused by incompatible pydantic_core dependency",
+            "issue_numbers": [
+              4979,
+              4961
+            ],
+            "issue_urls": [
+              "https://github.com/Aider-AI/aider/issues/4979",
+              "https://github.com/Aider-AI/aider/issues/4961"
+            ],
+            "sample_titles": [
+              "Fix startup crash caused by incompatible pydantic_core dependency",
+              "Handle missing optional dependencies gracefully with actionable error messages"
+            ],
+            "demand_score": 1.8949730041178459,
+            "rising_score": 1,
+            "volume": 2,
+            "open_count": 0,
+            "closed_count": 2,
+            "avg_reactions": 0,
+            "avg_comments": 1,
+            "date_first_seen": "2026-03-27T04:46:06.000Z",
+            "date_last_seen": "2026-04-01T03:24:29.000Z",
+            "repos_affected": [
+              "Aider-AI/aider"
+            ]
+          },
+          {
+            "cluster_id": "df6efd475d0b",
+            "title": "Resolve startup crashes caused by dependency version conflicts",
+            "summary": "Users are experiencing application startup failures triggered by missing or incompatible Python package dependencies. Resolving these library conflicts and import errors is critical to prevent crashes and guarantee a stable, reliable launch experience.",
+            "category": "Reliability",
+            "representative_need": "Fix ImportError when loading litellm due to openai package version incompatibility",
+            "issue_numbers": [
+              4983,
+              4964,
+              4962,
+              4904
+            ],
+            "issue_urls": [
+              "https://github.com/Aider-AI/aider/issues/4983",
+              "https://github.com/Aider-AI/aider/issues/4964",
+              "https://github.com/Aider-AI/aider/issues/4962",
+              "https://github.com/Aider-AI/aider/issues/4904"
+            ],
+            "sample_titles": [
+              "Fix ImportError when loading litellm due to openai package version incompatibility",
+              "Fix missing scipy dependency crash during repo map generation",
+              "Fix startup crash caused by litellm and aiohttp dependency incompatibility"
+            ],
+            "demand_score": 1.8171957034992137,
+            "rising_score": 4,
+            "volume": 4,
+            "open_count": 2,
+            "closed_count": 2,
+            "avg_reactions": 0,
+            "avg_comments": 0.5,
+            "date_first_seen": "2026-03-11T04:14:23.000Z",
+            "date_last_seen": "2026-04-02T09:21:44.000Z",
+            "repos_affected": [
+              "Aider-AI/aider"
+            ]
+          },
+          {
+            "cluster_id": "1c9075ec80ca",
+            "title": "Fix Crashes From Unmapped LiteLLM Exception Types",
+            "summary": "Users are reporting application crashes due to newly added or missing exception mappings in the LiteLLM client. They request proper handling and mapping of these errors to prevent unexpected runtime failures. Addressing this ensures stable operation and graceful error recovery when interacting with external LLM providers.",
+            "category": "Reliability",
+            "representative_need": "Fix crash caused by missing PermissionDeniedError in litellm exceptions mapping",
+            "issue_numbers": [
+              4978,
+              4897
+            ],
+            "issue_urls": [
+              "https://github.com/Aider-AI/aider/issues/4978",
+              "https://github.com/Aider-AI/aider/issues/4897"
+            ],
+            "sample_titles": [
+              "Fix crash caused by missing PermissionDeniedError in litellm exceptions mapping",
+              "Fix uncaught ValueError crashes caused by newly added LiteLLM exceptions"
+            ],
+            "demand_score": 1.723128910840313,
+            "rising_score": 2,
+            "volume": 2,
+            "open_count": 0,
+            "closed_count": 2,
+            "avg_reactions": 0,
+            "avg_comments": 1,
+            "date_first_seen": "2026-03-08T22:50:39.000Z",
+            "date_last_seen": "2026-03-31T23:22:06.000Z",
+            "repos_affected": [
+              "Aider-AI/aider"
+            ]
+          },
+          {
+            "cluster_id": "ae23c8f5e9e0",
+            "title": "Improve Core CLI Reliability, Setup, and Execution Handling",
+            "summary": "Users are requesting improvements to the application’s installation process, startup resilience, and terminal command handling to minimize setup friction and runtime errors. They also seek secure subprocess execution, flexible provider configurations, and local processing options to support safer and more customized development workflows. These enhancements collectively aim to deliver a more stable, predictable, and efficient developer tooling experience.",
+            "category": "Developer Experience",
+            "representative_need": "Acquire the 'aider' PyPI namespace to simplify package installation",
+            "issue_numbers": [
+              4980,
+              4976,
+              4955,
+              4954,
+              4949,
+              4913,
+              4900,
+              4884
+            ],
+            "issue_urls": [
+              "https://github.com/Aider-AI/aider/issues/4980",
+              "https://github.com/Aider-AI/aider/issues/4976",
+              "https://github.com/Aider-AI/aider/issues/4955",
+              "https://github.com/Aider-AI/aider/issues/4954",
+              "https://github.com/Aider-AI/aider/issues/4949",
+              "https://github.com/Aider-AI/aider/issues/4913",
+              "https://github.com/Aider-AI/aider/issues/4900",
+              "https://github.com/Aider-AI/aider/issues/4884"
+            ],
+            "sample_titles": [
+              "Acquire the 'aider' PyPI namespace to simplify package installation",
+              "Add subprocess security hardening with command validation, execution sandboxing, and audit logging",
+              "Fix forced API key validation for custom LiteLLM providers"
+            ],
+            "demand_score": 1.7121779295393167,
+            "rising_score": 0.75,
+            "volume": 8,
+            "open_count": 8,
+            "closed_count": 0,
+            "avg_reactions": 0.3,
+            "avg_comments": 0.1,
+            "date_first_seen": "2026-03-05T08:40:22.000Z",
+            "date_last_seen": "2026-04-01T04:22:58.000Z",
+            "repos_affected": [
+              "Aider-AI/aider"
+            ]
+          },
+          {
+            "cluster_id": "17412fdc61ee",
+            "title": "Graceful Handling of Symlink Loops During File Scanning",
+            "summary": "Users want the system to detect and safely bypass circular symbolic link references when traversing directories or resolving paths. This prevents infinite recursion and application crashes that currently interrupt development workflows. Proper loop handling ensures consistent and reliable file operations across complex filesystem structures.",
+            "category": "Reliability",
+            "representative_need": "Handle filesystem symlink loops gracefully during path resolution",
+            "issue_numbers": [
+              4965,
+              4892
+            ],
+            "issue_urls": [
+              "https://github.com/Aider-AI/aider/issues/4965",
+              "https://github.com/Aider-AI/aider/issues/4892"
+            ],
+            "sample_titles": [
+              "Handle filesystem symlink loops gracefully during path resolution",
+              "Handle symlink loops gracefully during repository file scanning"
+            ],
+            "demand_score": 1.6841296465232949,
+            "rising_score": 2,
+            "volume": 2,
+            "open_count": 0,
+            "closed_count": 2,
+            "avg_reactions": 0,
+            "avg_comments": 1,
+            "date_first_seen": "2026-03-07T20:55:38.000Z",
+            "date_last_seen": "2026-03-29T04:05:34.000Z",
+            "repos_affected": [
+              "Aider-AI/aider"
+            ]
+          },
+          {
+            "cluster_id": "2e93e6a9fdbb",
+            "title": "Fix startup crash from duplicate analytics module arguments",
+            "summary": "Users are reporting application failures at startup due to a duplicate parameter conflict in the analytics and telemetry module. Resolving this initialization error is critical to ensure stable application launches and prevent tracking disruptions.",
+            "category": "Reliability",
+            "representative_need": "Fix duplicate argument error in analytics telemetry module",
+            "issue_numbers": [
+              4951,
+              4905
+            ],
+            "issue_urls": [
+              "https://github.com/Aider-AI/aider/issues/4951",
+              "https://github.com/Aider-AI/aider/issues/4905"
+            ],
+            "sample_titles": [
+              "Fix duplicate argument error in analytics telemetry module",
+              "Fix startup crash caused by duplicate distinct_id argument in analytics module"
+            ],
+            "demand_score": 1.6459950873796552,
+            "rising_score": 0.5,
+            "volume": 2,
+            "open_count": 0,
+            "closed_count": 2,
+            "avg_reactions": 0,
+            "avg_comments": 1,
+            "date_first_seen": "2026-03-11T04:42:51.000Z",
+            "date_last_seen": "2026-03-22T15:32:13.000Z",
+            "repos_affected": [
+              "Aider-AI/aider"
+            ]
+          },
+          {
+            "cluster_id": "85e7a95209be",
+            "title": "Fix tree-sitter query parsing crashes during repo map generation",
+            "summary": "Users want to resolve crashes triggered by unhandled tree-sitter queries when generating repository maps. These parsing failures interrupt development workflows and block access to essential repository navigation features. Addressing these errors will ensure stable and uninterrupted codebase exploration.",
+            "category": "Reliability",
+            "representative_need": "Fix tree-sitter query error crashing repo map generation",
+            "issue_numbers": [
+              4919,
+              4888
+            ],
+            "issue_urls": [
+              "https://github.com/Aider-AI/aider/issues/4919",
+              "https://github.com/Aider-AI/aider/issues/4888"
+            ],
+            "sample_titles": [
+              "Fix tree-sitter query error crashing repo map generation",
+              "Fix tree-sitter query parsing crash during repository map generation"
+            ],
+            "demand_score": 1.1494209800437802,
+            "rising_score": 1,
+            "volume": 2,
+            "open_count": 1,
+            "closed_count": 1,
+            "avg_reactions": 0.5,
+            "avg_comments": 0.5,
+            "date_first_seen": "2026-03-06T14:06:10.000Z",
+            "date_last_seen": "2026-03-14T15:59:18.000Z",
+            "repos_affected": [
+              "Aider-AI/aider"
+            ]
+          },
+          {
+            "cluster_id": "9cf8923ada26",
+            "title": "Graceful Error Handling for Missing or Unrecognized LiteLLM Exceptions",
+            "summary": "Users are experiencing application crashes when encountering missing, renamed, or unrecognized exception types from the LiteLLM library. They are requesting more robust error handling logic to catch and manage these edge cases gracefully without interrupting execution. Implementing this will improve overall system stability when interacting with evolving third-party dependencies.",
+            "category": "Reliability",
+            "representative_need": "Fix crash caused by missing or renamed LiteLLM exception attributes",
+            "issue_numbers": [
+              4957,
+              4902
+            ],
+            "issue_urls": [
+              "https://github.com/Aider-AI/aider/issues/4957",
+              "https://github.com/Aider-AI/aider/issues/4902"
+            ],
+            "sample_titles": [
+              "Fix crash caused by missing or renamed LiteLLM exception attributes",
+              "Handle unrecognized LiteLLM exception types gracefully to prevent crashes"
+            ],
+            "demand_score": 0.8340581774940774,
+            "rising_score": 0.5,
+            "volume": 2,
+            "open_count": 1,
+            "closed_count": 1,
+            "avg_reactions": 0,
+            "avg_comments": 0.5,
+            "date_first_seen": "2026-03-10T18:32:44.000Z",
+            "date_last_seen": "2026-03-25T05:47:10.000Z",
+            "repos_affected": [
+              "Aider-AI/aider"
+            ]
+          }
+        ],
+        "category_breakdown": {
+          "Developer Experience": 2,
+          "Integration": 1,
+          "Reliability": 7
+        }
+      }
+    },
+    {
       "repo": "openai/codex",
       "slug": "openai-codex",
       "displayName": "OpenAI Codex CLI",
@@ -2132,6 +3235,1202 @@
           "Platform Support": 1
         }
       }
+    },
+    {
+      "repo": "cline/cline",
+      "slug": "cline-cline",
+      "displayName": "Cline",
+      "category": "AI Coding Assistant",
+      "generatedAt": "2026-04-03T12:31:41.245Z",
+      "totalIssuesAnalyzed": 39,
+      "totalIssuesIncluded": 39,
+      "totalClusters": 6,
+      "topNeed": {
+        "cluster_id": "2399675929bf",
+        "title": "Fix Configuration, UI, and Extension Stability Issues",
+        "summary": "Developers are encountering frequent disruptions from broken API setups, misaligned interfaces, stuck workflows, and extension crashes. Resolving these defects will restore core functionality, streamline daily coding tasks, and ensure a stable development environment.",
+        "category": "Reliability",
+        "representative_need": "Add bilingual architecture documentation for contributor onboarding",
+        "issue_numbers": [
+          10115,
+          10077,
+          10074,
+          10070,
+          10069,
+          10042,
+          10035,
+          10034,
+          10030,
+          10022,
+          10011
+        ],
+        "issue_urls": [
+          "https://github.com/cline/cline/issues/10115",
+          "https://github.com/cline/cline/issues/10077",
+          "https://github.com/cline/cline/issues/10074",
+          "https://github.com/cline/cline/issues/10070",
+          "https://github.com/cline/cline/issues/10069",
+          "https://github.com/cline/cline/issues/10042",
+          "https://github.com/cline/cline/issues/10035",
+          "https://github.com/cline/cline/issues/10034",
+          "https://github.com/cline/cline/issues/10030",
+          "https://github.com/cline/cline/issues/10022",
+          "https://github.com/cline/cline/issues/10011"
+        ],
+        "sample_titles": [
+          "Add bilingual architecture documentation for contributor onboarding",
+          "Apply file read optimization aggressively to reduce token consumption during iterative file edits",
+          "Fix Cline initialization failure when used via ACP in JetBrains IDEs"
+        ],
+        "demand_score": 5.244686081938549,
+        "rising_score": 5.5,
+        "volume": 11,
+        "open_count": 9,
+        "closed_count": 2,
+        "avg_reactions": 0.1,
+        "avg_comments": 1.5,
+        "date_first_seen": "2026-03-27T06:47:45.000Z",
+        "date_last_seen": "2026-04-03T04:07:27.000Z",
+        "repos_affected": [
+          "cline/cline"
+        ]
+      },
+      "risingNeed": {
+        "cluster_id": "de73305688b2",
+        "title": "Resolve terminal command execution and output capture crashes",
+        "summary": "Users are experiencing extension host crashes, process hangs, and infinite loops triggered by terminal command execution and output capture failures, especially with complex shell syntax. They need robust error handling and proper cancellation support to stabilize shell interactions and prevent unresponsive states.",
+        "category": "Reliability",
+        "representative_need": "Fix HTML entity escaping in execute_command shell execution",
+        "issue_numbers": [
+          10108,
+          10066,
+          10064,
+          10063,
+          10015
+        ],
+        "issue_urls": [
+          "https://github.com/cline/cline/issues/10108",
+          "https://github.com/cline/cline/issues/10066",
+          "https://github.com/cline/cline/issues/10064",
+          "https://github.com/cline/cline/issues/10063",
+          "https://github.com/cline/cline/issues/10015"
+        ],
+        "sample_titles": [
+          "Fix HTML entity escaping in execute_command shell execution",
+          "Fix extension host crash loops caused by terminal output capture failures and Node.js compatibility issues",
+          "Fix infinite 'Thinking' loop when command execution is skipped"
+        ],
+        "demand_score": 3.658762334625118,
+        "rising_score": 6,
+        "volume": 5,
+        "open_count": 2,
+        "closed_count": 3,
+        "avg_reactions": 0.2,
+        "avg_comments": 1.8,
+        "date_first_seen": "2026-03-27T14:23:44.000Z",
+        "date_last_seen": "2026-04-02T22:37:17.000Z",
+        "repos_affected": [
+          "cline/cline"
+        ]
+      },
+      "dominantCategory": "Reliability",
+      "reportPaths": {
+        "en": "reports/latest/cline-cline.md",
+        "zh": "reports/latest/cline-cline.zh.md"
+      },
+      "aggregation": {
+        "repo": "cline/cline",
+        "display_name": "Cline",
+        "generated_at": "2026-04-03T12:31:41.245Z",
+        "window_start": "2026-03-04T12:31:41.245Z",
+        "window_end": "2026-04-03T12:31:41.245Z",
+        "total_issues_analyzed": 39,
+        "total_issues_included": 39,
+        "clusters": [
+          {
+            "cluster_id": "2399675929bf",
+            "title": "Fix Configuration, UI, and Extension Stability Issues",
+            "summary": "Developers are encountering frequent disruptions from broken API setups, misaligned interfaces, stuck workflows, and extension crashes. Resolving these defects will restore core functionality, streamline daily coding tasks, and ensure a stable development environment.",
+            "category": "Reliability",
+            "representative_need": "Add bilingual architecture documentation for contributor onboarding",
+            "issue_numbers": [
+              10115,
+              10077,
+              10074,
+              10070,
+              10069,
+              10042,
+              10035,
+              10034,
+              10030,
+              10022,
+              10011
+            ],
+            "issue_urls": [
+              "https://github.com/cline/cline/issues/10115",
+              "https://github.com/cline/cline/issues/10077",
+              "https://github.com/cline/cline/issues/10074",
+              "https://github.com/cline/cline/issues/10070",
+              "https://github.com/cline/cline/issues/10069",
+              "https://github.com/cline/cline/issues/10042",
+              "https://github.com/cline/cline/issues/10035",
+              "https://github.com/cline/cline/issues/10034",
+              "https://github.com/cline/cline/issues/10030",
+              "https://github.com/cline/cline/issues/10022",
+              "https://github.com/cline/cline/issues/10011"
+            ],
+            "sample_titles": [
+              "Add bilingual architecture documentation for contributor onboarding",
+              "Apply file read optimization aggressively to reduce token consumption during iterative file edits",
+              "Fix Cline initialization failure when used via ACP in JetBrains IDEs"
+            ],
+            "demand_score": 5.244686081938549,
+            "rising_score": 5.5,
+            "volume": 11,
+            "open_count": 9,
+            "closed_count": 2,
+            "avg_reactions": 0.1,
+            "avg_comments": 1.5,
+            "date_first_seen": "2026-03-27T06:47:45.000Z",
+            "date_last_seen": "2026-04-03T04:07:27.000Z",
+            "repos_affected": [
+              "cline/cline"
+            ]
+          },
+          {
+            "cluster_id": "fb76bce0224f",
+            "title": "Fix CLI Rendering, State Synchronization, and Environment Stability Bugs",
+            "summary": "Users are experiencing frequent CLI/TUI rendering issues, state synchronization failures, and unhandled crashes that interrupt AI agent workflows. They need reliable session recovery, accurate configuration forwarding, and graceful error handling across different operating systems and terminal themes. Addressing these defects will significantly improve tool stability and developer productivity.",
+            "category": "Reliability",
+            "representative_need": "Enable automatic Kanban board population and task orchestration when creating new projects",
+            "issue_numbers": [
+              10086,
+              10059,
+              10053,
+              10052,
+              10046,
+              10043,
+              10041,
+              10040,
+              10016,
+              10006,
+              9999,
+              9993,
+              9991,
+              9990
+            ],
+            "issue_urls": [
+              "https://github.com/cline/cline/issues/10086",
+              "https://github.com/cline/cline/issues/10059",
+              "https://github.com/cline/cline/issues/10053",
+              "https://github.com/cline/cline/issues/10052",
+              "https://github.com/cline/cline/issues/10046",
+              "https://github.com/cline/cline/issues/10043",
+              "https://github.com/cline/cline/issues/10041",
+              "https://github.com/cline/cline/issues/10040",
+              "https://github.com/cline/cline/issues/10016",
+              "https://github.com/cline/cline/issues/10006",
+              "https://github.com/cline/cline/issues/9999",
+              "https://github.com/cline/cline/issues/9993",
+              "https://github.com/cline/cline/issues/9991",
+              "https://github.com/cline/cline/issues/9990"
+            ],
+            "sample_titles": [
+              "Enable automatic Kanban board population and task orchestration when creating new projects",
+              "Fix CLI UI visibility in light terminal themes and add theme configuration options",
+              "Fix Claude Code provider API timeout errors in Cline Kanban"
+            ],
+            "demand_score": 4.946810653986734,
+            "rising_score": 1.6666666666666667,
+            "volume": 14,
+            "open_count": 8,
+            "closed_count": 6,
+            "avg_reactions": 0.8,
+            "avg_comments": 2.4,
+            "date_first_seen": "2026-03-26T18:30:59.000Z",
+            "date_last_seen": "2026-04-01T16:32:35.000Z",
+            "repos_affected": [
+              "cline/cline"
+            ]
+          },
+          {
+            "cluster_id": "de73305688b2",
+            "title": "Resolve terminal command execution and output capture crashes",
+            "summary": "Users are experiencing extension host crashes, process hangs, and infinite loops triggered by terminal command execution and output capture failures, especially with complex shell syntax. They need robust error handling and proper cancellation support to stabilize shell interactions and prevent unresponsive states.",
+            "category": "Reliability",
+            "representative_need": "Fix HTML entity escaping in execute_command shell execution",
+            "issue_numbers": [
+              10108,
+              10066,
+              10064,
+              10063,
+              10015
+            ],
+            "issue_urls": [
+              "https://github.com/cline/cline/issues/10108",
+              "https://github.com/cline/cline/issues/10066",
+              "https://github.com/cline/cline/issues/10064",
+              "https://github.com/cline/cline/issues/10063",
+              "https://github.com/cline/cline/issues/10015"
+            ],
+            "sample_titles": [
+              "Fix HTML entity escaping in execute_command shell execution",
+              "Fix extension host crash loops caused by terminal output capture failures and Node.js compatibility issues",
+              "Fix infinite 'Thinking' loop when command execution is skipped"
+            ],
+            "demand_score": 3.658762334625118,
+            "rising_score": 6,
+            "volume": 5,
+            "open_count": 2,
+            "closed_count": 3,
+            "avg_reactions": 0.2,
+            "avg_comments": 1.8,
+            "date_first_seen": "2026-03-27T14:23:44.000Z",
+            "date_last_seen": "2026-04-02T22:37:17.000Z",
+            "repos_affected": [
+              "cline/cline"
+            ]
+          },
+          {
+            "cluster_id": "6b2b0a525f30",
+            "title": "Optimize CPU Usage and Extension Lifecycle Performance",
+            "summary": "Users are requesting improvements to the extension's CPU efficiency and deactivation or shutdown processes. These performance bottlenecks currently cause IDE unresponsiveness, delay window reloads, trigger unnecessary close prompts, and interfere with system sleep modes. Resolving these issues will ensure smoother workflow transitions and better overall system resource management.",
+            "category": "Performance",
+            "representative_need": "Fix extension preventing macOS from entering sleep mode",
+            "issue_numbers": [
+              10118,
+              10054,
+              10051,
+              10029
+            ],
+            "issue_urls": [
+              "https://github.com/cline/cline/issues/10118",
+              "https://github.com/cline/cline/issues/10054",
+              "https://github.com/cline/cline/issues/10051",
+              "https://github.com/cline/cline/issues/10029"
+            ],
+            "sample_titles": [
+              "Fix extension preventing macOS from entering sleep mode",
+              "Fix slow extension deactivation to prevent window reload delays",
+              "Fix slow extension shutdown process triggering VS Code close prompt"
+            ],
+            "demand_score": 2.182819122524866,
+            "rising_score": 5,
+            "volume": 4,
+            "open_count": 4,
+            "closed_count": 0,
+            "avg_reactions": 0.8,
+            "avg_comments": 2.8,
+            "date_first_seen": "2026-03-28T08:50:01.000Z",
+            "date_last_seen": "2026-04-03T05:59:42.000Z",
+            "repos_affected": [
+              "cline/cline"
+            ]
+          },
+          {
+            "cluster_id": "2a9a4df09d6f",
+            "title": "Fix provider configuration and environment path detection issues",
+            "summary": "Users need reliable setup options for custom AI model providers, including accurate context window detection and removal of duplicate UI entries. They also require fixes for environment-specific directory paths, like those in WSL, to ensure system hooks and integrations load correctly. Resolving these issues will streamline third-party connections and prevent cross-platform configuration errors.",
+            "category": "Integration",
+            "representative_need": "Fix global hooks directory path mismatch on WSL",
+            "issue_numbers": [
+              10094,
+              10010,
+              9994
+            ],
+            "issue_urls": [
+              "https://github.com/cline/cline/issues/10094",
+              "https://github.com/cline/cline/issues/10010",
+              "https://github.com/cline/cline/issues/9994"
+            ],
+            "sample_titles": [
+              "Fix global hooks directory path mismatch on WSL",
+              "Fix incorrect context window detection for model provider integrations",
+              "Support configuration of custom OpenAI-compatible API providers and fix duplicate provider dropdown entries"
+            ],
+            "demand_score": 1.5682722246627792,
+            "rising_score": 0.6666666666666666,
+            "volume": 3,
+            "open_count": 2,
+            "closed_count": 1,
+            "avg_reactions": 0,
+            "avg_comments": 1.7,
+            "date_first_seen": "2026-03-26T21:23:16.000Z",
+            "date_last_seen": "2026-04-01T22:52:47.000Z",
+            "repos_affected": [
+              "cline/cline"
+            ]
+          },
+          {
+            "cluster_id": "c3eb95a962d7",
+            "title": "Resolve agent execution errors and task state hangs",
+            "summary": "Users are reporting agent tasks that either fail or become unresponsive due to missing parameters during model transitions and stuck 'Thinking...' states during shell execution. Fixing these bugs will prevent workflow interruptions and ensure reliable agent task completion.",
+            "category": "Reliability",
+            "representative_need": "Fix agent task hanging on 'Thinking...' state during shell command execution",
+            "issue_numbers": [
+              10055,
+              10031
+            ],
+            "issue_urls": [
+              "https://github.com/cline/cline/issues/10055",
+              "https://github.com/cline/cline/issues/10031"
+            ],
+            "sample_titles": [
+              "Fix agent task hanging on 'Thinking...' state during shell command execution",
+              "Fix missing required parameter errors in tool calls when switching between planning and execution models"
+            ],
+            "demand_score": 1.3272628843456853,
+            "rising_score": 3,
+            "volume": 2,
+            "open_count": 1,
+            "closed_count": 1,
+            "avg_reactions": 1,
+            "avg_comments": 3,
+            "date_first_seen": "2026-03-28T18:42:52.000Z",
+            "date_last_seen": "2026-03-30T17:01:17.000Z",
+            "repos_affected": [
+              "cline/cline"
+            ]
+          }
+        ],
+        "category_breakdown": {
+          "Reliability": 4,
+          "Performance": 1,
+          "Integration": 1
+        }
+      }
+    },
+    {
+      "repo": "block/goose",
+      "slug": "block-goose",
+      "displayName": "Goose",
+      "category": "AI Agent",
+      "generatedAt": "2026-04-03T12:52:02.740Z",
+      "totalIssuesAnalyzed": 32,
+      "totalIssuesIncluded": 28,
+      "totalClusters": 6,
+      "topNeed": {
+        "cluster_id": "3d5b51366c94",
+        "title": "Improve CLI stability, usability, and local model management",
+        "summary": "Users want enhancements to the command-line interface, including better model management, crash fixes, log cleanup, and improved interactive session features. These changes aim to create a more reliable, user-friendly terminal experience that minimizes friction and clarifies output during local AI workflows.",
+        "category": "Developer Experience",
+        "representative_need": "Add CLI commands to download and manage local inference models without starting the goosed server",
+        "issue_numbers": [
+          8282,
+          8275,
+          8274,
+          8273,
+          8272,
+          8249,
+          8223,
+          8221,
+          8198,
+          8192
+        ],
+        "issue_urls": [
+          "https://github.com/block/goose/issues/8282",
+          "https://github.com/block/goose/issues/8275",
+          "https://github.com/block/goose/issues/8274",
+          "https://github.com/block/goose/issues/8273",
+          "https://github.com/block/goose/issues/8272",
+          "https://github.com/block/goose/issues/8249",
+          "https://github.com/block/goose/issues/8223",
+          "https://github.com/block/goose/issues/8221",
+          "https://github.com/block/goose/issues/8198",
+          "https://github.com/block/goose/issues/8192"
+        ],
+        "sample_titles": [
+          "Add CLI commands to download and manage local inference models without starting the goosed server",
+          "Add `-i` short flag and visible `--id` alias for session ID CLI argument",
+          "Buffer streaming tool call fragments before sending them to the local interpreter model"
+        ],
+        "demand_score": 2.2050651436541147,
+        "rising_score": 11,
+        "volume": 10,
+        "open_count": 8,
+        "closed_count": 2,
+        "avg_reactions": 0.1,
+        "avg_comments": 0.4,
+        "date_first_seen": "2026-03-29T18:53:56.000Z",
+        "date_last_seen": "2026-04-03T10:22:44.000Z",
+        "repos_affected": [
+          "block/goose"
+        ]
+      },
+      "risingNeed": {
+        "cluster_id": "3d5b51366c94",
+        "title": "Improve CLI stability, usability, and local model management",
+        "summary": "Users want enhancements to the command-line interface, including better model management, crash fixes, log cleanup, and improved interactive session features. These changes aim to create a more reliable, user-friendly terminal experience that minimizes friction and clarifies output during local AI workflows.",
+        "category": "Developer Experience",
+        "representative_need": "Add CLI commands to download and manage local inference models without starting the goosed server",
+        "issue_numbers": [
+          8282,
+          8275,
+          8274,
+          8273,
+          8272,
+          8249,
+          8223,
+          8221,
+          8198,
+          8192
+        ],
+        "issue_urls": [
+          "https://github.com/block/goose/issues/8282",
+          "https://github.com/block/goose/issues/8275",
+          "https://github.com/block/goose/issues/8274",
+          "https://github.com/block/goose/issues/8273",
+          "https://github.com/block/goose/issues/8272",
+          "https://github.com/block/goose/issues/8249",
+          "https://github.com/block/goose/issues/8223",
+          "https://github.com/block/goose/issues/8221",
+          "https://github.com/block/goose/issues/8198",
+          "https://github.com/block/goose/issues/8192"
+        ],
+        "sample_titles": [
+          "Add CLI commands to download and manage local inference models without starting the goosed server",
+          "Add `-i` short flag and visible `--id` alias for session ID CLI argument",
+          "Buffer streaming tool call fragments before sending them to the local interpreter model"
+        ],
+        "demand_score": 2.2050651436541147,
+        "rising_score": 11,
+        "volume": 10,
+        "open_count": 8,
+        "closed_count": 2,
+        "avg_reactions": 0.1,
+        "avg_comments": 0.4,
+        "date_first_seen": "2026-03-29T18:53:56.000Z",
+        "date_last_seen": "2026-04-03T10:22:44.000Z",
+        "repos_affected": [
+          "block/goose"
+        ]
+      },
+      "dominantCategory": "Developer Experience",
+      "reportPaths": {
+        "en": "reports/latest/block-goose.md",
+        "zh": "reports/latest/block-goose.zh.md"
+      },
+      "aggregation": {
+        "repo": "block/goose",
+        "display_name": "Goose",
+        "generated_at": "2026-04-03T12:52:02.740Z",
+        "window_start": "2026-03-04T12:52:02.740Z",
+        "window_end": "2026-04-03T12:52:02.740Z",
+        "total_issues_analyzed": 32,
+        "total_issues_included": 28,
+        "clusters": [
+          {
+            "cluster_id": "3d5b51366c94",
+            "title": "Improve CLI stability, usability, and local model management",
+            "summary": "Users want enhancements to the command-line interface, including better model management, crash fixes, log cleanup, and improved interactive session features. These changes aim to create a more reliable, user-friendly terminal experience that minimizes friction and clarifies output during local AI workflows.",
+            "category": "Developer Experience",
+            "representative_need": "Add CLI commands to download and manage local inference models without starting the goosed server",
+            "issue_numbers": [
+              8282,
+              8275,
+              8274,
+              8273,
+              8272,
+              8249,
+              8223,
+              8221,
+              8198,
+              8192
+            ],
+            "issue_urls": [
+              "https://github.com/block/goose/issues/8282",
+              "https://github.com/block/goose/issues/8275",
+              "https://github.com/block/goose/issues/8274",
+              "https://github.com/block/goose/issues/8273",
+              "https://github.com/block/goose/issues/8272",
+              "https://github.com/block/goose/issues/8249",
+              "https://github.com/block/goose/issues/8223",
+              "https://github.com/block/goose/issues/8221",
+              "https://github.com/block/goose/issues/8198",
+              "https://github.com/block/goose/issues/8192"
+            ],
+            "sample_titles": [
+              "Add CLI commands to download and manage local inference models without starting the goosed server",
+              "Add `-i` short flag and visible `--id` alias for session ID CLI argument",
+              "Buffer streaming tool call fragments before sending them to the local interpreter model"
+            ],
+            "demand_score": 2.2050651436541147,
+            "rising_score": 11,
+            "volume": 10,
+            "open_count": 8,
+            "closed_count": 2,
+            "avg_reactions": 0.1,
+            "avg_comments": 0.4,
+            "date_first_seen": "2026-03-29T18:53:56.000Z",
+            "date_last_seen": "2026-04-03T10:22:44.000Z",
+            "repos_affected": [
+              "block/goose"
+            ]
+          },
+          {
+            "cluster_id": "79fc8f005ec6",
+            "title": "Improving AI Agent Reliability, Configuration, and Extensibility",
+            "summary": "Users need critical bug fixes for runtime crashes, authentication issues, and model regressions to maintain reliable AI agent performance. They also require enhanced configuration controls, automated maintenance workflows, and custom security hooks to better adapt the extension to complex development environments.",
+            "category": "Developer Experience",
+            "representative_need": "Add automated cleanup for merged branches and stale issues",
+            "issue_numbers": [
+              8270,
+              8265,
+              8264,
+              8262,
+              8248,
+              8213,
+              8201,
+              8193,
+              8184
+            ],
+            "issue_urls": [
+              "https://github.com/block/goose/issues/8270",
+              "https://github.com/block/goose/issues/8265",
+              "https://github.com/block/goose/issues/8264",
+              "https://github.com/block/goose/issues/8262",
+              "https://github.com/block/goose/issues/8248",
+              "https://github.com/block/goose/issues/8213",
+              "https://github.com/block/goose/issues/8201",
+              "https://github.com/block/goose/issues/8193",
+              "https://github.com/block/goose/issues/8184"
+            ],
+            "sample_titles": [
+              "Add automated cleanup for merged branches and stale issues",
+              "Add pre-tool-execution hooks for custom security scanning and validation",
+              "Fix OAuth authentication failure for Tetrate Agent Router"
+            ],
+            "demand_score": 1.9461599591221501,
+            "rising_score": 10,
+            "volume": 9,
+            "open_count": 8,
+            "closed_count": 1,
+            "avg_reactions": 0,
+            "avg_comments": 0.2,
+            "date_first_seen": "2026-03-29T03:02:30.000Z",
+            "date_last_seen": "2026-04-03T05:58:18.000Z",
+            "repos_affected": [
+              "block/goose"
+            ]
+          },
+          {
+            "cluster_id": "e7223d9d72c1",
+            "title": "Comprehensive Documentation Updates, Fixes, and Quickstart Enhancements",
+            "summary": "Users are requesting comprehensive updates to the project documentation to cover new features, correct outdated references, and fix copy-paste errors. Accurate and current documentation is crucial to prevent configuration mistakes and streamline the onboarding process for new developers.",
+            "category": "Documentation",
+            "representative_need": "Document toolshim usage, configuration, and model compatibility",
+            "issue_numbers": [
+              8269,
+              8226,
+              8195
+            ],
+            "issue_urls": [
+              "https://github.com/block/goose/issues/8269",
+              "https://github.com/block/goose/issues/8226",
+              "https://github.com/block/goose/issues/8195"
+            ],
+            "sample_titles": [
+              "Document toolshim usage, configuration, and model compatibility",
+              "Fix documentation copy-paste errors and outdated references",
+              "Update quickstart documentation to reflect current persistent personality configuration methods"
+            ],
+            "demand_score": 0.9708538086996932,
+            "rising_score": 4,
+            "volume": 3,
+            "open_count": 3,
+            "closed_count": 0,
+            "avg_reactions": 0,
+            "avg_comments": 0.7,
+            "date_first_seen": "2026-03-29T23:16:30.000Z",
+            "date_last_seen": "2026-04-03T05:32:34.000Z",
+            "repos_affected": [
+              "block/goose"
+            ]
+          },
+          {
+            "cluster_id": "3b041c82a545",
+            "title": "Improve Cloud AI API Version Routing Compatibility",
+            "summary": "Users need the system to correctly route API requests and handle version query parameters for external cloud AI providers like GCP and Azure. Implementing conditional parameter exclusion and fixing global endpoint routing will resolve compatibility issues across different API versions. This ensures reliable integration with multiple cloud-hosted AI services.",
+            "category": "Integration",
+            "representative_need": "Conditionally exclude api-version query parameter for Azure OpenAI API v1 compatibility",
+            "issue_numbers": [
+              8277,
+              8236
+            ],
+            "issue_urls": [
+              "https://github.com/block/goose/issues/8277",
+              "https://github.com/block/goose/issues/8236"
+            ],
+            "sample_titles": [
+              "Conditionally exclude api-version query parameter for Azure OpenAI API v1 compatibility",
+              "Fix API version routing for GCP Vertex AI global endpoint"
+            ],
+            "demand_score": 0,
+            "rising_score": 3,
+            "volume": 2,
+            "open_count": 2,
+            "closed_count": 0,
+            "avg_reactions": 0,
+            "avg_comments": 0,
+            "date_first_seen": "2026-04-01T12:32:45.000Z",
+            "date_last_seen": "2026-04-03T08:50:22.000Z",
+            "repos_affected": [
+              "block/goose"
+            ]
+          },
+          {
+            "cluster_id": "f476f18d090e",
+            "title": "Resource Monitoring and Process Lifecycle Management",
+            "summary": "Users want integrated tools to track LLM token usage and costs while ensuring system resources are properly cleaned up. They are requesting automatic process termination at the end of sessions to eliminate memory leaks and prevent resource exhaustion. These improvements aim to enhance application stability and provide clear visibility into operational expenses.",
+            "category": "Performance",
+            "representative_need": "Add built-in token usage tracking and cost monitoring for LLM providers",
+            "issue_numbers": [
+              8266,
+              8229
+            ],
+            "issue_urls": [
+              "https://github.com/block/goose/issues/8266",
+              "https://github.com/block/goose/issues/8229"
+            ],
+            "sample_titles": [
+              "Add built-in token usage tracking and cost monitoring for LLM providers",
+              "Terminate MCP extension processes when Goose sessions end to prevent memory leaks"
+            ],
+            "demand_score": 0,
+            "rising_score": 3,
+            "volume": 2,
+            "open_count": 1,
+            "closed_count": 1,
+            "avg_reactions": 0,
+            "avg_comments": 0,
+            "date_first_seen": "2026-03-31T16:38:25.000Z",
+            "date_last_seen": "2026-04-02T21:57:59.000Z",
+            "repos_affected": [
+              "block/goose"
+            ]
+          },
+          {
+            "cluster_id": "44c1776f3ae0",
+            "title": "Flexible LLM Provider Settings and Per-Agent Assignments",
+            "summary": "Users want the ability to assign specific LLM models and API keys to individual agents within a single provider setup. They also need the flexibility to override base URLs for built-in providers to support custom deployments or proxy routing. These enhancements would improve environment isolation, cost tracking, and infrastructure adaptability.",
+            "category": "Configuration",
+            "representative_need": "Allow overriding the base URL for built-in LLM providers",
+            "issue_numbers": [
+              8203,
+              8187
+            ],
+            "issue_urls": [
+              "https://github.com/block/goose/issues/8203",
+              "https://github.com/block/goose/issues/8187"
+            ],
+            "sample_titles": [
+              "Allow overriding the base URL for built-in LLM providers",
+              "Support per-agent model and API key assignment under a single provider"
+            ],
+            "demand_score": 0,
+            "rising_score": 3,
+            "volume": 2,
+            "open_count": 1,
+            "closed_count": 1,
+            "avg_reactions": 0,
+            "avg_comments": 0,
+            "date_first_seen": "2026-03-29T11:55:08.000Z",
+            "date_last_seen": "2026-03-30T08:13:27.000Z",
+            "repos_affected": [
+              "block/goose"
+            ]
+          }
+        ],
+        "category_breakdown": {
+          "Developer Experience": 2,
+          "Documentation": 1,
+          "Integration": 1,
+          "Performance": 1,
+          "Configuration": 1
+        }
+      }
+    },
+    {
+      "repo": "opencode-ai/opencode",
+      "slug": "opencode-ai-opencode",
+      "displayName": "OpenCode",
+      "category": "AI Coding Assistant",
+      "generatedAt": "2026-04-03T13:21:31.317Z",
+      "totalIssuesAnalyzed": 62,
+      "totalIssuesIncluded": 59,
+      "totalClusters": 10,
+      "topNeed": {
+        "cluster_id": "3cf60c268748",
+        "title": "Model Provider Configuration and Integration Fixes",
+        "summary": "Users want improved configuration support for various AI model providers including OpenRouter, Ollama, Kimi K2, GCP Anthropic, and Azure OpenAI. They also need fixes for issues with environment variables, endpoint configuration, and provider selection loops that prevent smooth integration with these providers.",
+        "category": "Integration",
+        "representative_need": "Add ability to configure hotkeys",
+        "issue_numbers": [
+          352,
+          351,
+          349,
+          342,
+          340,
+          333,
+          325,
+          311,
+          309,
+          304,
+          303,
+          302,
+          295,
+          274
+        ],
+        "issue_urls": [
+          "https://github.com/opencode-ai/opencode/issues/352",
+          "https://github.com/opencode-ai/opencode/issues/351",
+          "https://github.com/opencode-ai/opencode/issues/349",
+          "https://github.com/opencode-ai/opencode/issues/342",
+          "https://github.com/opencode-ai/opencode/issues/340",
+          "https://github.com/opencode-ai/opencode/issues/333",
+          "https://github.com/opencode-ai/opencode/issues/325",
+          "https://github.com/opencode-ai/opencode/issues/311",
+          "https://github.com/opencode-ai/opencode/issues/309",
+          "https://github.com/opencode-ai/opencode/issues/304",
+          "https://github.com/opencode-ai/opencode/issues/303",
+          "https://github.com/opencode-ai/opencode/issues/302",
+          "https://github.com/opencode-ai/opencode/issues/295",
+          "https://github.com/opencode-ai/opencode/issues/274"
+        ],
+        "sample_titles": [
+          "Add ability to configure hotkeys",
+          "Add configuration support for Kimi K2 and Openrouter provider",
+          "Add support for or document Kimi K2 model configuration with Groq provider"
+        ],
+        "demand_score": 0.2767756953817444,
+        "rising_score": 1,
+        "volume": 14,
+        "open_count": 10,
+        "closed_count": 4,
+        "avg_reactions": 1.3,
+        "avg_comments": 1.6,
+        "date_first_seen": "2025-06-30T12:00:06.000Z",
+        "date_last_seen": "2025-07-29T03:30:18.000Z",
+        "repos_affected": [
+          "opencode-ai/opencode"
+        ]
+      },
+      "risingNeed": null,
+      "dominantCategory": "Integration",
+      "reportPaths": {
+        "en": "reports/latest/opencode-ai-opencode.md",
+        "zh": "reports/latest/opencode-ai-opencode.zh.md"
+      },
+      "aggregation": {
+        "repo": "opencode-ai/opencode",
+        "display_name": "OpenCode",
+        "generated_at": "2026-04-03T13:21:31.317Z",
+        "window_start": "2026-03-04T13:21:31.317Z",
+        "window_end": "2026-04-03T13:21:31.317Z",
+        "total_issues_analyzed": 62,
+        "total_issues_included": 59,
+        "clusters": [
+          {
+            "cluster_id": "3cf60c268748",
+            "title": "Model Provider Configuration and Integration Fixes",
+            "summary": "Users want improved configuration support for various AI model providers including OpenRouter, Ollama, Kimi K2, GCP Anthropic, and Azure OpenAI. They also need fixes for issues with environment variables, endpoint configuration, and provider selection loops that prevent smooth integration with these providers.",
+            "category": "Integration",
+            "representative_need": "Add ability to configure hotkeys",
+            "issue_numbers": [
+              352,
+              351,
+              349,
+              342,
+              340,
+              333,
+              325,
+              311,
+              309,
+              304,
+              303,
+              302,
+              295,
+              274
+            ],
+            "issue_urls": [
+              "https://github.com/opencode-ai/opencode/issues/352",
+              "https://github.com/opencode-ai/opencode/issues/351",
+              "https://github.com/opencode-ai/opencode/issues/349",
+              "https://github.com/opencode-ai/opencode/issues/342",
+              "https://github.com/opencode-ai/opencode/issues/340",
+              "https://github.com/opencode-ai/opencode/issues/333",
+              "https://github.com/opencode-ai/opencode/issues/325",
+              "https://github.com/opencode-ai/opencode/issues/311",
+              "https://github.com/opencode-ai/opencode/issues/309",
+              "https://github.com/opencode-ai/opencode/issues/304",
+              "https://github.com/opencode-ai/opencode/issues/303",
+              "https://github.com/opencode-ai/opencode/issues/302",
+              "https://github.com/opencode-ai/opencode/issues/295",
+              "https://github.com/opencode-ai/opencode/issues/274"
+            ],
+            "sample_titles": [
+              "Add ability to configure hotkeys",
+              "Add configuration support for Kimi K2 and Openrouter provider",
+              "Add support for or document Kimi K2 model configuration with Groq provider"
+            ],
+            "demand_score": 0.2767756953817444,
+            "rising_score": 1,
+            "volume": 14,
+            "open_count": 10,
+            "closed_count": 4,
+            "avg_reactions": 1.3,
+            "avg_comments": 1.6,
+            "date_first_seen": "2025-06-30T12:00:06.000Z",
+            "date_last_seen": "2025-07-29T03:30:18.000Z",
+            "repos_affected": [
+              "opencode-ai/opencode"
+            ]
+          },
+          {
+            "cluster_id": "c758db70bf62",
+            "title": "Improve Installation, Configuration, and CLI Flexibility",
+            "summary": "Users are experiencing installation and setup issues across different platforms (npm, WSL/Linux) while also seeking more flexibility in how they configure and interact with the CLI. Key requests include adding alternative installation methods, fixing 'agent coder not found' errors, improving model configuration options, and enhancing input handling for special characters and multiline content.",
+            "category": "Configuration",
+            "representative_need": "Add CLI flag to restrict allowed tools/commands for security control",
+            "issue_numbers": [
+              339,
+              322,
+              319,
+              299,
+              298,
+              297,
+              291,
+              284,
+              277,
+              264,
+              263,
+              260
+            ],
+            "issue_urls": [
+              "https://github.com/opencode-ai/opencode/issues/339",
+              "https://github.com/opencode-ai/opencode/issues/322",
+              "https://github.com/opencode-ai/opencode/issues/319",
+              "https://github.com/opencode-ai/opencode/issues/299",
+              "https://github.com/opencode-ai/opencode/issues/298",
+              "https://github.com/opencode-ai/opencode/issues/297",
+              "https://github.com/opencode-ai/opencode/issues/291",
+              "https://github.com/opencode-ai/opencode/issues/284",
+              "https://github.com/opencode-ai/opencode/issues/277",
+              "https://github.com/opencode-ai/opencode/issues/264",
+              "https://github.com/opencode-ai/opencode/issues/263",
+              "https://github.com/opencode-ai/opencode/issues/260"
+            ],
+            "sample_titles": [
+              "Add CLI flag to restrict allowed tools/commands for security control",
+              "Add ability to copy messages from a session to clipboard",
+              "Add model specification support for non-interactive mode (-p flag)"
+            ],
+            "demand_score": 0.10174852814882919,
+            "rising_score": 1,
+            "volume": 12,
+            "open_count": 10,
+            "closed_count": 2,
+            "avg_reactions": 1.6,
+            "avg_comments": 2.7,
+            "date_first_seen": "2025-06-24T22:21:28.000Z",
+            "date_last_seen": "2025-07-19T14:56:40.000Z",
+            "repos_affected": [
+              "opencode-ai/opencode"
+            ]
+          },
+          {
+            "cluster_id": "d3e87087b39d",
+            "title": "Provider Integration, Model Support, and Tool Improvements",
+            "summary": "Users want expanded support for AI providers (GitHub Models, Kimi k2, Ollama, Copilot) along with fixes for tool calling, shell timeouts, and install scripts. These improvements address integration gaps and configuration limitations that prevent smooth operation across different environments and use cases.",
+            "category": "Integration",
+            "representative_need": "Add TTY theme that dynamically adapts to terminal color scheme",
+            "issue_numbers": [
+              353,
+              334,
+              313,
+              293,
+              288,
+              282,
+              280,
+              276,
+              270,
+              261,
+              258,
+              254,
+              253
+            ],
+            "issue_urls": [
+              "https://github.com/opencode-ai/opencode/issues/353",
+              "https://github.com/opencode-ai/opencode/issues/334",
+              "https://github.com/opencode-ai/opencode/issues/313",
+              "https://github.com/opencode-ai/opencode/issues/293",
+              "https://github.com/opencode-ai/opencode/issues/288",
+              "https://github.com/opencode-ai/opencode/issues/282",
+              "https://github.com/opencode-ai/opencode/issues/280",
+              "https://github.com/opencode-ai/opencode/issues/276",
+              "https://github.com/opencode-ai/opencode/issues/270",
+              "https://github.com/opencode-ai/opencode/issues/261",
+              "https://github.com/opencode-ai/opencode/issues/258",
+              "https://github.com/opencode-ai/opencode/issues/254",
+              "https://github.com/opencode-ai/opencode/issues/253"
+            ],
+            "sample_titles": [
+              "Add TTY theme that dynamically adapts to terminal color scheme",
+              "Add automatic retry mechanism for failed tool calls with model self-correction prompt",
+              "Add cost control mechanisms for reasoning models that expand context windows significantly"
+            ],
+            "demand_score": 0.09587699582958788,
+            "rising_score": 1,
+            "volume": 13,
+            "open_count": 10,
+            "closed_count": 3,
+            "avg_reactions": 0.2,
+            "avg_comments": 2,
+            "date_first_seen": "2025-06-22T06:01:03.000Z",
+            "date_last_seen": "2025-07-29T12:02:50.000Z",
+            "repos_affected": [
+              "opencode-ai/opencode"
+            ]
+          },
+          {
+            "cluster_id": "14125699a832",
+            "title": "Expand AI Provider Support and Error Handling",
+            "summary": "Users are requesting expanded support for new AI models and tools (Claude WebSearch, Sonnet 4, Opus 4 in Vertex AI) while also asking for better error handling and robustness (MCP timeouts, token limit handling, Ollama validation fixes). These needs focus on improving integrations with various AI providers and preventing application failures during provider interactions.",
+            "category": "Integration",
+            "representative_need": "Add support for Claude Sonnet 4 and Claude Opus 4 models in Vertex AI provider",
+            "issue_numbers": [
+              318,
+              305,
+              300,
+              290,
+              285,
+              283
+            ],
+            "issue_urls": [
+              "https://github.com/opencode-ai/opencode/issues/318",
+              "https://github.com/opencode-ai/opencode/issues/305",
+              "https://github.com/opencode-ai/opencode/issues/300",
+              "https://github.com/opencode-ai/opencode/issues/290",
+              "https://github.com/opencode-ai/opencode/issues/285",
+              "https://github.com/opencode-ai/opencode/issues/283"
+            ],
+            "sample_titles": [
+              "Add support for Claude Sonnet 4 and Claude Opus 4 models in Vertex AI provider",
+              "Add timeout/error handling for MCP server initialization to prevent app freeze",
+              "Fix tool argument validation error when required parameters are missing from Ollama model responses"
+            ],
+            "demand_score": 0.08104655538545158,
+            "rising_score": 1,
+            "volume": 6,
+            "open_count": 6,
+            "closed_count": 0,
+            "avg_reactions": 0.2,
+            "avg_comments": 0.3,
+            "date_first_seen": "2025-07-02T06:35:19.000Z",
+            "date_last_seen": "2025-07-14T21:38:18.000Z",
+            "repos_affected": [
+              "opencode-ai/opencode"
+            ]
+          },
+          {
+            "cluster_id": "6ae3a3e905b8",
+            "title": "Ollama Local LLM Integration Support",
+            "summary": "Users want official support for using Ollama as a local LLM provider, enabling privacy-focused and cost-effective AI capabilities. They also need graceful handling when Ollama models don't support tool/function calling, rather than experiencing errors or unexpected behavior.",
+            "category": "Integration",
+            "representative_need": "Add official support for local LLM providers via Ollama",
+            "issue_numbers": [
+              326,
+              296
+            ],
+            "issue_urls": [
+              "https://github.com/opencode-ai/opencode/issues/326",
+              "https://github.com/opencode-ai/opencode/issues/296"
+            ],
+            "sample_titles": [
+              "Add official support for local LLM providers via Ollama",
+              "Handle gracefully when Ollama models don't support tool/function calling"
+            ],
+            "demand_score": 0.06077375948876827,
+            "rising_score": 1,
+            "volume": 2,
+            "open_count": 2,
+            "closed_count": 0,
+            "avg_reactions": 1,
+            "avg_comments": 1,
+            "date_first_seen": "2025-07-05T06:36:57.000Z",
+            "date_last_seen": "2025-07-15T21:29:49.000Z",
+            "repos_affected": [
+              "opencode-ai/opencode"
+            ]
+          },
+          {
+            "cluster_id": "27b9ef8d3c96",
+            "title": "Enhanced Authentication Methods and CLI Support",
+            "summary": "Users want more flexible and secure authentication options across different services. This includes supporting environment variable authentication (OPENROUTER_API_KEY), Google Auth tokens for Gemini API, and encrypting stored credentials in auth.json. Additionally, users prefer authentication commands that work directly from the terminal instead of opening a separate UI.",
+            "category": "Developer Experience",
+            "representative_need": "Encrypt authentication credentials stored in auth.json",
+            "issue_numbers": [
+              343,
+              335,
+              275,
+              265
+            ],
+            "issue_urls": [
+              "https://github.com/opencode-ai/opencode/issues/343",
+              "https://github.com/opencode-ai/opencode/issues/335",
+              "https://github.com/opencode-ai/opencode/issues/275",
+              "https://github.com/opencode-ai/opencode/issues/265"
+            ],
+            "sample_titles": [
+              "Encrypt authentication credentials stored in auth.json",
+              "Fix auth login CLI commands to work from terminal instead of opening UI",
+              "Support Google Auth token authentication for Gemini API access"
+            ],
+            "demand_score": 0.058635488264652987,
+            "rising_score": 1,
+            "volume": 4,
+            "open_count": 4,
+            "closed_count": 0,
+            "avg_reactions": 1.5,
+            "avg_comments": 2.8,
+            "date_first_seen": "2025-06-26T14:23:58.000Z",
+            "date_last_seen": "2025-07-22T13:23:25.000Z",
+            "repos_affected": [
+              "opencode-ai/opencode"
+            ]
+          },
+          {
+            "cluster_id": "bf262f2ff010",
+            "title": "Terminal Integration and Compatibility Issues",
+            "summary": "Users are experiencing rendering and keybinding issues when using opencode's terminal with popular terminal emulators (iTerm2) and multiplexers (tmux), as well as alternative shells (fish). These compatibility problems disrupt developer workflows and prevent seamless integration with existing terminal environments.",
+            "category": "Integration",
+            "representative_need": "Fix terminal rendering/display issues with iTerm2 and fish shell",
+            "issue_numbers": [
+              345,
+              331
+            ],
+            "issue_urls": [
+              "https://github.com/opencode-ai/opencode/issues/345",
+              "https://github.com/opencode-ai/opencode/issues/331"
+            ],
+            "sample_titles": [
+              "Fix terminal rendering/display issues with iTerm2 and fish shell",
+              "Fix tmux keybindings not working when running inside opencode terminal session"
+            ],
+            "demand_score": 0.05623046093630983,
+            "rising_score": 1,
+            "volume": 2,
+            "open_count": 2,
+            "closed_count": 0,
+            "avg_reactions": 0,
+            "avg_comments": 1,
+            "date_first_seen": "2025-07-15T23:43:51.000Z",
+            "date_last_seen": "2025-07-24T00:47:40.000Z",
+            "repos_affected": [
+              "opencode-ai/opencode"
+            ]
+          },
+          {
+            "cluster_id": "ec94bdf18419",
+            "title": "Fix text input and file search usability issues",
+            "summary": "Users are encountering usability issues with basic interactions in the development tool. One issue involves text input behavior where Shift+Enter should create new lines but doesn't work as expected. The second issue relates to file search functionality opening from the wrong directory (/home/ instead of the project directory), making it difficult to find relevant files. Both issues impact developer productivity and workflow efficiency.",
+            "category": "Developer Experience",
+            "representative_need": "Fix file searching to open the correct project directory instead of /home/",
+            "issue_numbers": [
+              292,
+              273
+            ],
+            "issue_urls": [
+              "https://github.com/opencode-ai/opencode/issues/292",
+              "https://github.com/opencode-ai/opencode/issues/273"
+            ],
+            "sample_titles": [
+              "Fix file searching to open the correct project directory instead of /home/",
+              "Support Shift+Enter for inserting new lines in message input"
+            ],
+            "demand_score": 0.04596715950678011,
+            "rising_score": 1,
+            "volume": 2,
+            "open_count": 1,
+            "closed_count": 1,
+            "avg_reactions": 0,
+            "avg_comments": 0.5,
+            "date_first_seen": "2025-06-30T01:41:59.000Z",
+            "date_last_seen": "2025-07-04T00:50:37.000Z",
+            "repos_affected": [
+              "opencode-ai/opencode"
+            ]
+          },
+          {
+            "cluster_id": "482445de9b1a",
+            "title": "Fix external LLM model provider integrations",
+            "summary": "Users are encountering bugs when integrating with external LLM model providers like OpenRouter and Ollama. Issues include Zod validation errors and incorrect API endpoint paths that prevent these providers from working correctly. Fixing these integration issues will allow users to successfully use their preferred model providers.",
+            "category": "Integration",
+            "representative_need": "Fix Ollama local API integration to use correct endpoint path",
+            "issue_numbers": [
+              279,
+              252
+            ],
+            "issue_urls": [
+              "https://github.com/opencode-ai/opencode/issues/279",
+              "https://github.com/opencode-ai/opencode/issues/252"
+            ],
+            "sample_titles": [
+              "Fix Ollama local API integration to use correct endpoint path",
+              "Fix Zod validation error when using OpenRouter as model provider"
+            ],
+            "demand_score": 0.04314227686895214,
+            "rising_score": 1,
+            "volume": 2,
+            "open_count": 1,
+            "closed_count": 1,
+            "avg_reactions": 1,
+            "avg_comments": 2.5,
+            "date_first_seen": "2025-06-21T02:30:54.000Z",
+            "date_last_seen": "2025-07-01T09:39:55.000Z",
+            "repos_affected": [
+              "opencode-ai/opencode"
+            ]
+          },
+          {
+            "cluster_id": "f8b469291261",
+            "title": "Windows Installation and Extraction Compatibility Fixes",
+            "summary": "Users are experiencing installation issues on Windows and need better support for bsdtar extraction by avoiding the --wildcards option. These issues stem from cross-platform compatibility problems that prevent smooth installation and extraction on Windows systems using bsdtar.",
+            "category": "Platform Support",
+            "representative_need": "Fix Windows installation",
+            "issue_numbers": [
+              320,
+              306
+            ],
+            "issue_urls": [
+              "https://github.com/opencode-ai/opencode/issues/320",
+              "https://github.com/opencode-ai/opencode/issues/306"
+            ],
+            "sample_titles": [
+              "Fix Windows installation",
+              "Support bsdtar extraction by avoiding --wildcards option"
+            ],
+            "demand_score": 0,
+            "rising_score": 1,
+            "volume": 2,
+            "open_count": 1,
+            "closed_count": 1,
+            "avg_reactions": 0,
+            "avg_comments": 0,
+            "date_first_seen": "2025-07-11T07:39:33.000Z",
+            "date_last_seen": "2025-07-15T09:53:50.000Z",
+            "repos_affected": [
+              "opencode-ai/opencode"
+            ]
+          }
+        ],
+        "category_breakdown": {
+          "Integration": 6,
+          "Configuration": 1,
+          "Developer Experience": 2,
+          "Platform Support": 1
+        }
+      }
     }
   ],
   "hottestSignals": [
@@ -2169,6 +4468,28 @@
       "reportPath": "reports/latest/anthropics-claude-code.md"
     },
     {
+      "repo": "openclaw/openclaw",
+      "slug": "openclaw-openclaw",
+      "productName": "OpenClaw",
+      "title": "Core System Stability Fixes and Platform Enhancements",
+      "category": "Platform Support",
+      "demandScore": 6.495067913687111,
+      "risingScore": 21,
+      "volume": 20,
+      "reportPath": "reports/latest/openclaw-openclaw.md"
+    },
+    {
+      "repo": "Aider-AI/aider",
+      "slug": "Aider-AI-aider",
+      "productName": "aider",
+      "title": "Resolving CLI crashes and enhancing terminal error handling",
+      "category": "Developer Experience",
+      "demandScore": 6.1678199407767265,
+      "risingScore": 1.2,
+      "volume": 20,
+      "reportPath": "reports/latest/Aider-AI-aider.md"
+    },
+    {
       "repo": "openai/codex",
       "slug": "openai-codex",
       "productName": "OpenAI Codex CLI",
@@ -2180,43 +4501,46 @@
       "reportPath": "reports/latest/openai-codex.md"
     },
     {
-      "repo": "openai/codex",
-      "slug": "openai-codex",
-      "productName": "OpenAI Codex CLI",
-      "title": "Enhance Core Stability, State Management, and Execution Reliability",
+      "repo": "cline/cline",
+      "slug": "cline-cline",
+      "productName": "Cline",
+      "title": "Fix Configuration, UI, and Extension Stability Issues",
       "category": "Reliability",
-      "demandScore": 3.739662927599286,
-      "risingScore": 9,
-      "volume": 8,
-      "reportPath": "reports/latest/openai-codex.md"
+      "demandScore": 5.244686081938549,
+      "risingScore": 5.5,
+      "volume": 11,
+      "reportPath": "reports/latest/cline-cline.md"
     },
     {
-      "repo": "openai/codex",
-      "slug": "openai-codex",
-      "productName": "OpenAI Codex CLI",
-      "title": "Fix UI Layout Overlaps and Content Rendering Bugs",
-      "category": "UI/UX",
-      "demandScore": 2.9974135704267892,
-      "risingScore": 4,
-      "volume": 3,
-      "reportPath": "reports/latest/openai-codex.md"
+      "repo": "cline/cline",
+      "slug": "cline-cline",
+      "productName": "Cline",
+      "title": "Fix CLI Rendering, State Synchronization, and Environment Stability Bugs",
+      "category": "Reliability",
+      "demandScore": 4.946810653986734,
+      "risingScore": 1.6666666666666667,
+      "volume": 14,
+      "reportPath": "reports/latest/cline-cline.md"
     }
   ],
   "sharedThemes": [
+    "configuration",
+    "developer experience",
+    "documentation",
+    "integration",
+    "performance",
+    "platform support",
     "reliability",
+    "security",
     "ui/ux"
   ],
   "uniqueThemes": {
-    "anthropics-claude-code": [
-      "configuration",
-      "developer experience",
-      "documentation",
-      "integration",
-      "performance",
-      "security"
-    ],
-    "openai-codex": [
-      "platform support"
-    ]
+    "anthropics-claude-code": [],
+    "openclaw-openclaw": [],
+    "Aider-AI-aider": [],
+    "openai-codex": [],
+    "cline-cline": [],
+    "block-goose": [],
+    "opencode-ai-opencode": []
   }
 }

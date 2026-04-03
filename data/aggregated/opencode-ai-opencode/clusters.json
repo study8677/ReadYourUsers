@@ -1,0 +1,410 @@
+{
+  "repo": "opencode-ai/opencode",
+  "display_name": "OpenCode",
+  "generated_at": "2026-04-03T13:21:31.317Z",
+  "window_start": "2026-03-04T13:21:31.317Z",
+  "window_end": "2026-04-03T13:21:31.317Z",
+  "total_issues_analyzed": 62,
+  "total_issues_included": 59,
+  "clusters": [
+    {
+      "cluster_id": "3cf60c268748",
+      "title": "Model Provider Configuration and Integration Fixes",
+      "summary": "Users want improved configuration support for various AI model providers including OpenRouter, Ollama, Kimi K2, GCP Anthropic, and Azure OpenAI. They also need fixes for issues with environment variables, endpoint configuration, and provider selection loops that prevent smooth integration with these providers.",
+      "category": "Integration",
+      "representative_need": "Add ability to configure hotkeys",
+      "issue_numbers": [
+        352,
+        351,
+        349,
+        342,
+        340,
+        333,
+        325,
+        311,
+        309,
+        304,
+        303,
+        302,
+        295,
+        274
+      ],
+      "issue_urls": [
+        "https://github.com/opencode-ai/opencode/issues/352",
+        "https://github.com/opencode-ai/opencode/issues/351",
+        "https://github.com/opencode-ai/opencode/issues/349",
+        "https://github.com/opencode-ai/opencode/issues/342",
+        "https://github.com/opencode-ai/opencode/issues/340",
+        "https://github.com/opencode-ai/opencode/issues/333",
+        "https://github.com/opencode-ai/opencode/issues/325",
+        "https://github.com/opencode-ai/opencode/issues/311",
+        "https://github.com/opencode-ai/opencode/issues/309",
+        "https://github.com/opencode-ai/opencode/issues/304",
+        "https://github.com/opencode-ai/opencode/issues/303",
+        "https://github.com/opencode-ai/opencode/issues/302",
+        "https://github.com/opencode-ai/opencode/issues/295",
+        "https://github.com/opencode-ai/opencode/issues/274"
+      ],
+      "sample_titles": [
+        "Add ability to configure hotkeys",
+        "Add configuration support for Kimi K2 and Openrouter provider",
+        "Add support for or document Kimi K2 model configuration with Groq provider"
+      ],
+      "demand_score": 0.2767756953817444,
+      "rising_score": 1,
+      "volume": 14,
+      "open_count": 10,
+      "closed_count": 4,
+      "avg_reactions": 1.3,
+      "avg_comments": 1.6,
+      "date_first_seen": "2025-06-30T12:00:06.000Z",
+      "date_last_seen": "2025-07-29T03:30:18.000Z",
+      "repos_affected": [
+        "opencode-ai/opencode"
+      ]
+    },
+    {
+      "cluster_id": "c758db70bf62",
+      "title": "Improve Installation, Configuration, and CLI Flexibility",
+      "summary": "Users are experiencing installation and setup issues across different platforms (npm, WSL/Linux) while also seeking more flexibility in how they configure and interact with the CLI. Key requests include adding alternative installation methods, fixing 'agent coder not found' errors, improving model configuration options, and enhancing input handling for special characters and multiline content.",
+      "category": "Configuration",
+      "representative_need": "Add CLI flag to restrict allowed tools/commands for security control",
+      "issue_numbers": [
+        339,
+        322,
+        319,
+        299,
+        298,
+        297,
+        291,
+        284,
+        277,
+        264,
+        263,
+        260
+      ],
+      "issue_urls": [
+        "https://github.com/opencode-ai/opencode/issues/339",
+        "https://github.com/opencode-ai/opencode/issues/322",
+        "https://github.com/opencode-ai/opencode/issues/319",
+        "https://github.com/opencode-ai/opencode/issues/299",
+        "https://github.com/opencode-ai/opencode/issues/298",
+        "https://github.com/opencode-ai/opencode/issues/297",
+        "https://github.com/opencode-ai/opencode/issues/291",
+        "https://github.com/opencode-ai/opencode/issues/284",
+        "https://github.com/opencode-ai/opencode/issues/277",
+        "https://github.com/opencode-ai/opencode/issues/264",
+        "https://github.com/opencode-ai/opencode/issues/263",
+        "https://github.com/opencode-ai/opencode/issues/260"
+      ],
+      "sample_titles": [
+        "Add CLI flag to restrict allowed tools/commands for security control",
+        "Add ability to copy messages from a session to clipboard",
+        "Add model specification support for non-interactive mode (-p flag)"
+      ],
+      "demand_score": 0.10174852814882919,
+      "rising_score": 1,
+      "volume": 12,
+      "open_count": 10,
+      "closed_count": 2,
+      "avg_reactions": 1.6,
+      "avg_comments": 2.7,
+      "date_first_seen": "2025-06-24T22:21:28.000Z",
+      "date_last_seen": "2025-07-19T14:56:40.000Z",
+      "repos_affected": [
+        "opencode-ai/opencode"
+      ]
+    },
+    {
+      "cluster_id": "d3e87087b39d",
+      "title": "Provider Integration, Model Support, and Tool Improvements",
+      "summary": "Users want expanded support for AI providers (GitHub Models, Kimi k2, Ollama, Copilot) along with fixes for tool calling, shell timeouts, and install scripts. These improvements address integration gaps and configuration limitations that prevent smooth operation across different environments and use cases.",
+      "category": "Integration",
+      "representative_need": "Add TTY theme that dynamically adapts to terminal color scheme",
+      "issue_numbers": [
+        353,
+        334,
+        313,
+        293,
+        288,
+        282,
+        280,
+        276,
+        270,
+        261,
+        258,
+        254,
+        253
+      ],
+      "issue_urls": [
+        "https://github.com/opencode-ai/opencode/issues/353",
+        "https://github.com/opencode-ai/opencode/issues/334",
+        "https://github.com/opencode-ai/opencode/issues/313",
+        "https://github.com/opencode-ai/opencode/issues/293",
+        "https://github.com/opencode-ai/opencode/issues/288",
+        "https://github.com/opencode-ai/opencode/issues/282",
+        "https://github.com/opencode-ai/opencode/issues/280",
+        "https://github.com/opencode-ai/opencode/issues/276",
+        "https://github.com/opencode-ai/opencode/issues/270",
+        "https://github.com/opencode-ai/opencode/issues/261",
+        "https://github.com/opencode-ai/opencode/issues/258",
+        "https://github.com/opencode-ai/opencode/issues/254",
+        "https://github.com/opencode-ai/opencode/issues/253"
+      ],
+      "sample_titles": [
+        "Add TTY theme that dynamically adapts to terminal color scheme",
+        "Add automatic retry mechanism for failed tool calls with model self-correction prompt",
+        "Add cost control mechanisms for reasoning models that expand context windows significantly"
+      ],
+      "demand_score": 0.09587699582958788,
+      "rising_score": 1,
+      "volume": 13,
+      "open_count": 10,
+      "closed_count": 3,
+      "avg_reactions": 0.2,
+      "avg_comments": 2,
+      "date_first_seen": "2025-06-22T06:01:03.000Z",
+      "date_last_seen": "2025-07-29T12:02:50.000Z",
+      "repos_affected": [
+        "opencode-ai/opencode"
+      ]
+    },
+    {
+      "cluster_id": "14125699a832",
+      "title": "Expand AI Provider Support and Error Handling",
+      "summary": "Users are requesting expanded support for new AI models and tools (Claude WebSearch, Sonnet 4, Opus 4 in Vertex AI) while also asking for better error handling and robustness (MCP timeouts, token limit handling, Ollama validation fixes). These needs focus on improving integrations with various AI providers and preventing application failures during provider interactions.",
+      "category": "Integration",
+      "representative_need": "Add support for Claude Sonnet 4 and Claude Opus 4 models in Vertex AI provider",
+      "issue_numbers": [
+        318,
+        305,
+        300,
+        290,
+        285,
+        283
+      ],
+      "issue_urls": [
+        "https://github.com/opencode-ai/opencode/issues/318",
+        "https://github.com/opencode-ai/opencode/issues/305",
+        "https://github.com/opencode-ai/opencode/issues/300",
+        "https://github.com/opencode-ai/opencode/issues/290",
+        "https://github.com/opencode-ai/opencode/issues/285",
+        "https://github.com/opencode-ai/opencode/issues/283"
+      ],
+      "sample_titles": [
+        "Add support for Claude Sonnet 4 and Claude Opus 4 models in Vertex AI provider",
+        "Add timeout/error handling for MCP server initialization to prevent app freeze",
+        "Fix tool argument validation error when required parameters are missing from Ollama model responses"
+      ],
+      "demand_score": 0.08104655538545158,
+      "rising_score": 1,
+      "volume": 6,
+      "open_count": 6,
+      "closed_count": 0,
+      "avg_reactions": 0.2,
+      "avg_comments": 0.3,
+      "date_first_seen": "2025-07-02T06:35:19.000Z",
+      "date_last_seen": "2025-07-14T21:38:18.000Z",
+      "repos_affected": [
+        "opencode-ai/opencode"
+      ]
+    },
+    {
+      "cluster_id": "6ae3a3e905b8",
+      "title": "Ollama Local LLM Integration Support",
+      "summary": "Users want official support for using Ollama as a local LLM provider, enabling privacy-focused and cost-effective AI capabilities. They also need graceful handling when Ollama models don't support tool/function calling, rather than experiencing errors or unexpected behavior.",
+      "category": "Integration",
+      "representative_need": "Add official support for local LLM providers via Ollama",
+      "issue_numbers": [
+        326,
+        296
+      ],
+      "issue_urls": [
+        "https://github.com/opencode-ai/opencode/issues/326",
+        "https://github.com/opencode-ai/opencode/issues/296"
+      ],
+      "sample_titles": [
+        "Add official support for local LLM providers via Ollama",
+        "Handle gracefully when Ollama models don't support tool/function calling"
+      ],
+      "demand_score": 0.06077375948876827,
+      "rising_score": 1,
+      "volume": 2,
+      "open_count": 2,
+      "closed_count": 0,
+      "avg_reactions": 1,
+      "avg_comments": 1,
+      "date_first_seen": "2025-07-05T06:36:57.000Z",
+      "date_last_seen": "2025-07-15T21:29:49.000Z",
+      "repos_affected": [
+        "opencode-ai/opencode"
+      ]
+    },
+    {
+      "cluster_id": "27b9ef8d3c96",
+      "title": "Enhanced Authentication Methods and CLI Support",
+      "summary": "Users want more flexible and secure authentication options across different services. This includes supporting environment variable authentication (OPENROUTER_API_KEY), Google Auth tokens for Gemini API, and encrypting stored credentials in auth.json. Additionally, users prefer authentication commands that work directly from the terminal instead of opening a separate UI.",
+      "category": "Developer Experience",
+      "representative_need": "Encrypt authentication credentials stored in auth.json",
+      "issue_numbers": [
+        343,
+        335,
+        275,
+        265
+      ],
+      "issue_urls": [
+        "https://github.com/opencode-ai/opencode/issues/343",
+        "https://github.com/opencode-ai/opencode/issues/335",
+        "https://github.com/opencode-ai/opencode/issues/275",
+        "https://github.com/opencode-ai/opencode/issues/265"
+      ],
+      "sample_titles": [
+        "Encrypt authentication credentials stored in auth.json",
+        "Fix auth login CLI commands to work from terminal instead of opening UI",
+        "Support Google Auth token authentication for Gemini API access"
+      ],
+      "demand_score": 0.058635488264652987,
+      "rising_score": 1,
+      "volume": 4,
+      "open_count": 4,
+      "closed_count": 0,
+      "avg_reactions": 1.5,
+      "avg_comments": 2.8,
+      "date_first_seen": "2025-06-26T14:23:58.000Z",
+      "date_last_seen": "2025-07-22T13:23:25.000Z",
+      "repos_affected": [
+        "opencode-ai/opencode"
+      ]
+    },
+    {
+      "cluster_id": "bf262f2ff010",
+      "title": "Terminal Integration and Compatibility Issues",
+      "summary": "Users are experiencing rendering and keybinding issues when using opencode's terminal with popular terminal emulators (iTerm2) and multiplexers (tmux), as well as alternative shells (fish). These compatibility problems disrupt developer workflows and prevent seamless integration with existing terminal environments.",
+      "category": "Integration",
+      "representative_need": "Fix terminal rendering/display issues with iTerm2 and fish shell",
+      "issue_numbers": [
+        345,
+        331
+      ],
+      "issue_urls": [
+        "https://github.com/opencode-ai/opencode/issues/345",
+        "https://github.com/opencode-ai/opencode/issues/331"
+      ],
+      "sample_titles": [
+        "Fix terminal rendering/display issues with iTerm2 and fish shell",
+        "Fix tmux keybindings not working when running inside opencode terminal session"
+      ],
+      "demand_score": 0.05623046093630983,
+      "rising_score": 1,
+      "volume": 2,
+      "open_count": 2,
+      "closed_count": 0,
+      "avg_reactions": 0,
+      "avg_comments": 1,
+      "date_first_seen": "2025-07-15T23:43:51.000Z",
+      "date_last_seen": "2025-07-24T00:47:40.000Z",
+      "repos_affected": [
+        "opencode-ai/opencode"
+      ]
+    },
+    {
+      "cluster_id": "ec94bdf18419",
+      "title": "Fix text input and file search usability issues",
+      "summary": "Users are encountering usability issues with basic interactions in the development tool. One issue involves text input behavior where Shift+Enter should create new lines but doesn't work as expected. The second issue relates to file search functionality opening from the wrong directory (/home/ instead of the project directory), making it difficult to find relevant files. Both issues impact developer productivity and workflow efficiency.",
+      "category": "Developer Experience",
+      "representative_need": "Fix file searching to open the correct project directory instead of /home/",
+      "issue_numbers": [
+        292,
+        273
+      ],
+      "issue_urls": [
+        "https://github.com/opencode-ai/opencode/issues/292",
+        "https://github.com/opencode-ai/opencode/issues/273"
+      ],
+      "sample_titles": [
+        "Fix file searching to open the correct project directory instead of /home/",
+        "Support Shift+Enter for inserting new lines in message input"
+      ],
+      "demand_score": 0.04596715950678011,
+      "rising_score": 1,
+      "volume": 2,
+      "open_count": 1,
+      "closed_count": 1,
+      "avg_reactions": 0,
+      "avg_comments": 0.5,
+      "date_first_seen": "2025-06-30T01:41:59.000Z",
+      "date_last_seen": "2025-07-04T00:50:37.000Z",
+      "repos_affected": [
+        "opencode-ai/opencode"
+      ]
+    },
+    {
+      "cluster_id": "482445de9b1a",
+      "title": "Fix external LLM model provider integrations",
+      "summary": "Users are encountering bugs when integrating with external LLM model providers like OpenRouter and Ollama. Issues include Zod validation errors and incorrect API endpoint paths that prevent these providers from working correctly. Fixing these integration issues will allow users to successfully use their preferred model providers.",
+      "category": "Integration",
+      "representative_need": "Fix Ollama local API integration to use correct endpoint path",
+      "issue_numbers": [
+        279,
+        252
+      ],
+      "issue_urls": [
+        "https://github.com/opencode-ai/opencode/issues/279",
+        "https://github.com/opencode-ai/opencode/issues/252"
+      ],
+      "sample_titles": [
+        "Fix Ollama local API integration to use correct endpoint path",
+        "Fix Zod validation error when using OpenRouter as model provider"
+      ],
+      "demand_score": 0.04314227686895214,
+      "rising_score": 1,
+      "volume": 2,
+      "open_count": 1,
+      "closed_count": 1,
+      "avg_reactions": 1,
+      "avg_comments": 2.5,
+      "date_first_seen": "2025-06-21T02:30:54.000Z",
+      "date_last_seen": "2025-07-01T09:39:55.000Z",
+      "repos_affected": [
+        "opencode-ai/opencode"
+      ]
+    },
+    {
+      "cluster_id": "f8b469291261",
+      "title": "Windows Installation and Extraction Compatibility Fixes",
+      "summary": "Users are experiencing installation issues on Windows and need better support for bsdtar extraction by avoiding the --wildcards option. These issues stem from cross-platform compatibility problems that prevent smooth installation and extraction on Windows systems using bsdtar.",
+      "category": "Platform Support",
+      "representative_need": "Fix Windows installation",
+      "issue_numbers": [
+        320,
+        306
+      ],
+      "issue_urls": [
+        "https://github.com/opencode-ai/opencode/issues/320",
+        "https://github.com/opencode-ai/opencode/issues/306"
+      ],
+      "sample_titles": [
+        "Fix Windows installation",
+        "Support bsdtar extraction by avoiding --wildcards option"
+      ],
+      "demand_score": 0,
+      "rising_score": 1,
+      "volume": 2,
+      "open_count": 1,
+      "closed_count": 1,
+      "avg_reactions": 0,
+      "avg_comments": 0,
+      "date_first_seen": "2025-07-11T07:39:33.000Z",
+      "date_last_seen": "2025-07-15T09:53:50.000Z",
+      "repos_affected": [
+        "opencode-ai/opencode"
+      ]
+    }
+  ],
+  "category_breakdown": {
+    "Integration": 6,
+    "Configuration": 1,
+    "Developer Experience": 2,
+    "Platform Support": 1
+  }
+}

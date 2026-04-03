@@ -17,12 +17,52 @@
       "notes": "OpenAI's coding agent CLI"
     },
     {
-      "repo": "getcursor/cursor",
+      "repo": "cursor/cursor",
       "display_name": "Cursor",
       "category": "AI Code Editor",
       "include_in_homepage": true,
       "weight": 0.8,
       "notes": "AI-first code editor — GitHub is not primary feedback channel"
+    },
+    {
+      "repo": "opencode-ai/opencode",
+      "display_name": "OpenCode",
+      "category": "AI Coding Assistant",
+      "include_in_homepage": true,
+      "weight": 1.0,
+      "notes": "Terminal-first open-source AI coding agent"
+    },
+    {
+      "repo": "cline/cline",
+      "display_name": "Cline",
+      "category": "AI Coding Assistant",
+      "include_in_homepage": true,
+      "weight": 1.0,
+      "notes": "IDE-native autonomous coding agent"
+    },
+    {
+      "repo": "Aider-AI/aider",
+      "display_name": "aider",
+      "category": "AI Coding Assistant",
+      "include_in_homepage": true,
+      "weight": 1.0,
+      "notes": "Terminal pair programming assistant"
+    },
+    {
+      "repo": "block/goose",
+      "display_name": "Goose",
+      "category": "AI Agent",
+      "include_in_homepage": true,
+      "weight": 0.9,
+      "notes": "Open-source extensible AI agent for coding and execution"
+    },
+    {
+      "repo": "openclaw/openclaw",
+      "display_name": "OpenClaw",
+      "category": "AI Agent",
+      "include_in_homepage": true,
+      "weight": 0.8,
+      "notes": "Cross-platform open-source AI assistant requested for observatory coverage"
     }
   ]
 }

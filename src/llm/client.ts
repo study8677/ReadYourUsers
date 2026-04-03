@@ -34,6 +34,10 @@ function isOpenRouterBaseUrl(baseUrl: string | undefined): boolean {
   return Boolean(baseUrl?.includes("openrouter.ai"));
 }
 
+function isTeamoRouterBaseUrl(baseUrl: string | undefined): boolean {
+  return Boolean(baseUrl?.includes("router.teamolab.com"));
+}
+
 function getOpenAIHeaders(): Record<string, string> | undefined {
   const headers: Record<string, string> = {};
 
@@ -167,6 +171,7 @@ async function callOpenAIStructured<T>(
 ): Promise<T> {
   const { model, systemPrompt, userPrompt, schema, schemaName, maxTokens = 1024 } = options;
   const client = getOpenAIClient();
+  const baseUrl = process.env.OPENAI_BASE_URL;
 
   const jsonSchema = zodToJsonSchema(schema);
   const modelsToTry = getOpenAIModelFallbacks(model);
@@ -187,6 +192,7 @@ async function callOpenAIStructured<T>(
           },
         ],
         response_format: { type: "json_object" },
+        ...(isTeamoRouterBaseUrl(baseUrl) ? { reasoning: { enabled: false } } : {}),
       });
       break;
     } catch (error) {

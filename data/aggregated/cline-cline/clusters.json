@@ -1,0 +1,261 @@
+{
+  "repo": "cline/cline",
+  "display_name": "Cline",
+  "generated_at": "2026-04-03T12:31:41.245Z",
+  "window_start": "2026-03-04T12:31:41.245Z",
+  "window_end": "2026-04-03T12:31:41.245Z",
+  "total_issues_analyzed": 39,
+  "total_issues_included": 39,
+  "clusters": [
+    {
+      "cluster_id": "2399675929bf",
+      "title": "Fix Configuration, UI, and Extension Stability Issues",
+      "summary": "Developers are encountering frequent disruptions from broken API setups, misaligned interfaces, stuck workflows, and extension crashes. Resolving these defects will restore core functionality, streamline daily coding tasks, and ensure a stable development environment.",
+      "category": "Reliability",
+      "representative_need": "Add bilingual architecture documentation for contributor onboarding",
+      "issue_numbers": [
+        10115,
+        10077,
+        10074,
+        10070,
+        10069,
+        10042,
+        10035,
+        10034,
+        10030,
+        10022,
+        10011
+      ],
+      "issue_urls": [
+        "https://github.com/cline/cline/issues/10115",
+        "https://github.com/cline/cline/issues/10077",
+        "https://github.com/cline/cline/issues/10074",
+        "https://github.com/cline/cline/issues/10070",
+        "https://github.com/cline/cline/issues/10069",
+        "https://github.com/cline/cline/issues/10042",
+        "https://github.com/cline/cline/issues/10035",
+        "https://github.com/cline/cline/issues/10034",
+        "https://github.com/cline/cline/issues/10030",
+        "https://github.com/cline/cline/issues/10022",
+        "https://github.com/cline/cline/issues/10011"
+      ],
+      "sample_titles": [
+        "Add bilingual architecture documentation for contributor onboarding",
+        "Apply file read optimization aggressively to reduce token consumption during iterative file edits",
+        "Fix Cline initialization failure when used via ACP in JetBrains IDEs"
+      ],
+      "demand_score": 5.244686081938549,
+      "rising_score": 5.5,
+      "volume": 11,
+      "open_count": 9,
+      "closed_count": 2,
+      "avg_reactions": 0.1,
+      "avg_comments": 1.5,
+      "date_first_seen": "2026-03-27T06:47:45.000Z",
+      "date_last_seen": "2026-04-03T04:07:27.000Z",
+      "repos_affected": [
+        "cline/cline"
+      ]
+    },
+    {
+      "cluster_id": "fb76bce0224f",
+      "title": "Fix CLI Rendering, State Synchronization, and Environment Stability Bugs",
+      "summary": "Users are experiencing frequent CLI/TUI rendering issues, state synchronization failures, and unhandled crashes that interrupt AI agent workflows. They need reliable session recovery, accurate configuration forwarding, and graceful error handling across different operating systems and terminal themes. Addressing these defects will significantly improve tool stability and developer productivity.",
+      "category": "Reliability",
+      "representative_need": "Enable automatic Kanban board population and task orchestration when creating new projects",
+      "issue_numbers": [
+        10086,
+        10059,
+        10053,
+        10052,
+        10046,
+        10043,
+        10041,
+        10040,
+        10016,
+        10006,
+        9999,
+        9993,
+        9991,
+        9990
+      ],
+      "issue_urls": [
+        "https://github.com/cline/cline/issues/10086",
+        "https://github.com/cline/cline/issues/10059",
+        "https://github.com/cline/cline/issues/10053",
+        "https://github.com/cline/cline/issues/10052",
+        "https://github.com/cline/cline/issues/10046",
+        "https://github.com/cline/cline/issues/10043",
+        "https://github.com/cline/cline/issues/10041",
+        "https://github.com/cline/cline/issues/10040",
+        "https://github.com/cline/cline/issues/10016",
+        "https://github.com/cline/cline/issues/10006",
+        "https://github.com/cline/cline/issues/9999",
+        "https://github.com/cline/cline/issues/9993",
+        "https://github.com/cline/cline/issues/9991",
+        "https://github.com/cline/cline/issues/9990"
+      ],
+      "sample_titles": [
+        "Enable automatic Kanban board population and task orchestration when creating new projects",
+        "Fix CLI UI visibility in light terminal themes and add theme configuration options",
+        "Fix Claude Code provider API timeout errors in Cline Kanban"
+      ],
+      "demand_score": 4.946810653986734,
+      "rising_score": 1.6666666666666667,
+      "volume": 14,
+      "open_count": 8,
+      "closed_count": 6,
+      "avg_reactions": 0.8,
+      "avg_comments": 2.4,
+      "date_first_seen": "2026-03-26T18:30:59.000Z",
+      "date_last_seen": "2026-04-01T16:32:35.000Z",
+      "repos_affected": [
+        "cline/cline"
+      ]
+    },
+    {
+      "cluster_id": "de73305688b2",
+      "title": "Resolve terminal command execution and output capture crashes",
+      "summary": "Users are experiencing extension host crashes, process hangs, and infinite loops triggered by terminal command execution and output capture failures, especially with complex shell syntax. They need robust error handling and proper cancellation support to stabilize shell interactions and prevent unresponsive states.",
+      "category": "Reliability",
+      "representative_need": "Fix HTML entity escaping in execute_command shell execution",
+      "issue_numbers": [
+        10108,
+        10066,
+        10064,
+        10063,
+        10015
+      ],
+      "issue_urls": [
+        "https://github.com/cline/cline/issues/10108",
+        "https://github.com/cline/cline/issues/10066",
+        "https://github.com/cline/cline/issues/10064",
+        "https://github.com/cline/cline/issues/10063",
+        "https://github.com/cline/cline/issues/10015"
+      ],
+      "sample_titles": [
+        "Fix HTML entity escaping in execute_command shell execution",
+        "Fix extension host crash loops caused by terminal output capture failures and Node.js compatibility issues",
+        "Fix infinite 'Thinking' loop when command execution is skipped"
+      ],
+      "demand_score": 3.658762334625118,
+      "rising_score": 6,
+      "volume": 5,
+      "open_count": 2,
+      "closed_count": 3,
+      "avg_reactions": 0.2,
+      "avg_comments": 1.8,
+      "date_first_seen": "2026-03-27T14:23:44.000Z",
+      "date_last_seen": "2026-04-02T22:37:17.000Z",
+      "repos_affected": [
+        "cline/cline"
+      ]
+    },
+    {
+      "cluster_id": "6b2b0a525f30",
+      "title": "Optimize CPU Usage and Extension Lifecycle Performance",
+      "summary": "Users are requesting improvements to the extension's CPU efficiency and deactivation or shutdown processes. These performance bottlenecks currently cause IDE unresponsiveness, delay window reloads, trigger unnecessary close prompts, and interfere with system sleep modes. Resolving these issues will ensure smoother workflow transitions and better overall system resource management.",
+      "category": "Performance",
+      "representative_need": "Fix extension preventing macOS from entering sleep mode",
+      "issue_numbers": [
+        10118,
+        10054,
+        10051,
+        10029
+      ],
+      "issue_urls": [
+        "https://github.com/cline/cline/issues/10118",
+        "https://github.com/cline/cline/issues/10054",
+        "https://github.com/cline/cline/issues/10051",
+        "https://github.com/cline/cline/issues/10029"
+      ],
+      "sample_titles": [
+        "Fix extension preventing macOS from entering sleep mode",
+        "Fix slow extension deactivation to prevent window reload delays",
+        "Fix slow extension shutdown process triggering VS Code close prompt"
+      ],
+      "demand_score": 2.182819122524866,
+      "rising_score": 5,
+      "volume": 4,
+      "open_count": 4,
+      "closed_count": 0,
+      "avg_reactions": 0.8,
+      "avg_comments": 2.8,
+      "date_first_seen": "2026-03-28T08:50:01.000Z",
+      "date_last_seen": "2026-04-03T05:59:42.000Z",
+      "repos_affected": [
+        "cline/cline"
+      ]
+    },
+    {
+      "cluster_id": "2a9a4df09d6f",
+      "title": "Fix provider configuration and environment path detection issues",
+      "summary": "Users need reliable setup options for custom AI model providers, including accurate context window detection and removal of duplicate UI entries. They also require fixes for environment-specific directory paths, like those in WSL, to ensure system hooks and integrations load correctly. Resolving these issues will streamline third-party connections and prevent cross-platform configuration errors.",
+      "category": "Integration",
+      "representative_need": "Fix global hooks directory path mismatch on WSL",
+      "issue_numbers": [
+        10094,
+        10010,
+        9994
+      ],
+      "issue_urls": [
+        "https://github.com/cline/cline/issues/10094",
+        "https://github.com/cline/cline/issues/10010",
+        "https://github.com/cline/cline/issues/9994"
+      ],
+      "sample_titles": [
+        "Fix global hooks directory path mismatch on WSL",
+        "Fix incorrect context window detection for model provider integrations",
+        "Support configuration of custom OpenAI-compatible API providers and fix duplicate provider dropdown entries"
+      ],
+      "demand_score": 1.5682722246627792,
+      "rising_score": 0.6666666666666666,
+      "volume": 3,
+      "open_count": 2,
+      "closed_count": 1,
+      "avg_reactions": 0,
+      "avg_comments": 1.7,
+      "date_first_seen": "2026-03-26T21:23:16.000Z",
+      "date_last_seen": "2026-04-01T22:52:47.000Z",
+      "repos_affected": [
+        "cline/cline"
+      ]
+    },
+    {
+      "cluster_id": "c3eb95a962d7",
+      "title": "Resolve agent execution errors and task state hangs",
+      "summary": "Users are reporting agent tasks that either fail or become unresponsive due to missing parameters during model transitions and stuck 'Thinking...' states during shell execution. Fixing these bugs will prevent workflow interruptions and ensure reliable agent task completion.",
+      "category": "Reliability",
+      "representative_need": "Fix agent task hanging on 'Thinking...' state during shell command execution",
+      "issue_numbers": [
+        10055,
+        10031
+      ],
+      "issue_urls": [
+        "https://github.com/cline/cline/issues/10055",
+        "https://github.com/cline/cline/issues/10031"
+      ],
+      "sample_titles": [
+        "Fix agent task hanging on 'Thinking...' state during shell command execution",
+        "Fix missing required parameter errors in tool calls when switching between planning and execution models"
+      ],
+      "demand_score": 1.3272628843456853,
+      "rising_score": 3,
+      "volume": 2,
+      "open_count": 1,
+      "closed_count": 1,
+      "avg_reactions": 1,
+      "avg_comments": 3,
+      "date_first_seen": "2026-03-28T18:42:52.000Z",
+      "date_last_seen": "2026-03-30T17:01:17.000Z",
+      "repos_affected": [
+        "cline/cline"
+      ]
+    }
+  ],
+  "category_breakdown": {
+    "Reliability": 4,
+    "Performance": 1,
+    "Integration": 1
+  }
+}

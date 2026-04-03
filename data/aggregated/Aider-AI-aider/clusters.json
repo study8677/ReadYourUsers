@@ -1,0 +1,390 @@
+{
+  "repo": "Aider-AI/aider",
+  "display_name": "aider",
+  "generated_at": "2026-04-03T12:42:28.284Z",
+  "window_start": "2026-03-04T12:42:28.284Z",
+  "window_end": "2026-04-03T12:42:28.284Z",
+  "total_issues_analyzed": 51,
+  "total_issues_included": 50,
+  "clusters": [
+    {
+      "cluster_id": "e35d14812205",
+      "title": "Resolving CLI crashes and enhancing terminal error handling",
+      "summary": "Users want the application to stop crashing due to Unicode encoding failures, path resolution issues, missing dependencies, and permission checks during startup and execution. They also request new CLI flags for headless automation and clearer workflow documentation to streamline their development process. Implementing these fixes will ensure consistent, uninterrupted operation across different operating systems and deployment setups.",
+      "category": "Developer Experience",
+      "representative_need": "Add CLI option to enforce single-pass LLM execution",
+      "issue_numbers": [
+        4986,
+        4985,
+        4984,
+        4966,
+        4963,
+        4958,
+        4952,
+        4950,
+        4948,
+        4943,
+        4942,
+        4939,
+        4933,
+        4911,
+        4907,
+        4906,
+        4903,
+        4890,
+        4886,
+        4885
+      ],
+      "issue_urls": [
+        "https://github.com/Aider-AI/aider/issues/4986",
+        "https://github.com/Aider-AI/aider/issues/4985",
+        "https://github.com/Aider-AI/aider/issues/4984",
+        "https://github.com/Aider-AI/aider/issues/4966",
+        "https://github.com/Aider-AI/aider/issues/4963",
+        "https://github.com/Aider-AI/aider/issues/4958",
+        "https://github.com/Aider-AI/aider/issues/4952",
+        "https://github.com/Aider-AI/aider/issues/4950",
+        "https://github.com/Aider-AI/aider/issues/4948",
+        "https://github.com/Aider-AI/aider/issues/4943",
+        "https://github.com/Aider-AI/aider/issues/4942",
+        "https://github.com/Aider-AI/aider/issues/4939",
+        "https://github.com/Aider-AI/aider/issues/4933",
+        "https://github.com/Aider-AI/aider/issues/4911",
+        "https://github.com/Aider-AI/aider/issues/4907",
+        "https://github.com/Aider-AI/aider/issues/4906",
+        "https://github.com/Aider-AI/aider/issues/4903",
+        "https://github.com/Aider-AI/aider/issues/4890",
+        "https://github.com/Aider-AI/aider/issues/4886",
+        "https://github.com/Aider-AI/aider/issues/4885"
+      ],
+      "sample_titles": [
+        "Add CLI option to enforce single-pass LLM execution",
+        "Add provider identifiers to model names in the selection list",
+        "Document the differences, trade-offs, and recommended use cases for the /architect versus /ask /code workflows"
+      ],
+      "demand_score": 6.1678199407767265,
+      "rising_score": 1.2,
+      "volume": 20,
+      "open_count": 9,
+      "closed_count": 11,
+      "avg_reactions": 0.1,
+      "avg_comments": 0.7,
+      "date_first_seen": "2026-03-05T20:51:05.000Z",
+      "date_last_seen": "2026-04-03T12:24:12.000Z",
+      "repos_affected": [
+        "Aider-AI/aider"
+      ]
+    },
+    {
+      "cluster_id": "99bcf7ea4c57",
+      "title": "Gracefully Handle Git Errors and Prevent Startup Crashes",
+      "summary": "Users want the application to manage Git permission issues, missing working trees, and configuration problems gracefully to avoid application failures during startup. They also request improved exception handling and accurate gitignore warnings to prevent auto-commit blockages and ensure underlying bugs are properly surfaced rather than masked. These enhancements will improve system stability and provide a smoother, more predictable development workflow.",
+      "category": "Integration",
+      "representative_need": "Fix exception handling to stop masking programming bugs as Git errors",
+      "issue_numbers": [
+        4971,
+        4956,
+        4947,
+        4944,
+        4932,
+        4912
+      ],
+      "issue_urls": [
+        "https://github.com/Aider-AI/aider/issues/4971",
+        "https://github.com/Aider-AI/aider/issues/4956",
+        "https://github.com/Aider-AI/aider/issues/4947",
+        "https://github.com/Aider-AI/aider/issues/4944",
+        "https://github.com/Aider-AI/aider/issues/4932",
+        "https://github.com/Aider-AI/aider/issues/4912"
+      ],
+      "sample_titles": [
+        "Fix exception handling to stop masking programming bugs as Git errors",
+        "Fix false gitignore warnings that block auto-commit after manually adding files to context",
+        "Gracefully handle git configuration permission errors during startup"
+      ],
+      "demand_score": 3.4394942382219194,
+      "rising_score": 1,
+      "volume": 6,
+      "open_count": 2,
+      "closed_count": 4,
+      "avg_reactions": 0,
+      "avg_comments": 0.7,
+      "date_first_seen": "2026-03-13T01:48:12.000Z",
+      "date_last_seen": "2026-03-30T17:07:30.000Z",
+      "repos_affected": [
+        "Aider-AI/aider"
+      ]
+    },
+    {
+      "cluster_id": "d31783cd96f3",
+      "title": "Graceful Handling Of Missing Or Incompatible Dependencies",
+      "summary": "Users want the application to manage optional or conflicting third-party packages gracefully instead of failing during initialization. They specifically request actionable error messages that guide users on how to resolve missing or incompatible library versions. Addressing these issues will prevent unexpected startup crashes and streamline the overall development experience.",
+      "category": "Reliability",
+      "representative_need": "Fix startup crash caused by incompatible pydantic_core dependency",
+      "issue_numbers": [
+        4979,
+        4961
+      ],
+      "issue_urls": [
+        "https://github.com/Aider-AI/aider/issues/4979",
+        "https://github.com/Aider-AI/aider/issues/4961"
+      ],
+      "sample_titles": [
+        "Fix startup crash caused by incompatible pydantic_core dependency",
+        "Handle missing optional dependencies gracefully with actionable error messages"
+      ],
+      "demand_score": 1.8949730041178459,
+      "rising_score": 1,
+      "volume": 2,
+      "open_count": 0,
+      "closed_count": 2,
+      "avg_reactions": 0,
+      "avg_comments": 1,
+      "date_first_seen": "2026-03-27T04:46:06.000Z",
+      "date_last_seen": "2026-04-01T03:24:29.000Z",
+      "repos_affected": [
+        "Aider-AI/aider"
+      ]
+    },
+    {
+      "cluster_id": "df6efd475d0b",
+      "title": "Resolve startup crashes caused by dependency version conflicts",
+      "summary": "Users are experiencing application startup failures triggered by missing or incompatible Python package dependencies. Resolving these library conflicts and import errors is critical to prevent crashes and guarantee a stable, reliable launch experience.",
+      "category": "Reliability",
+      "representative_need": "Fix ImportError when loading litellm due to openai package version incompatibility",
+      "issue_numbers": [
+        4983,
+        4964,
+        4962,
+        4904
+      ],
+      "issue_urls": [
+        "https://github.com/Aider-AI/aider/issues/4983",
+        "https://github.com/Aider-AI/aider/issues/4964",
+        "https://github.com/Aider-AI/aider/issues/4962",
+        "https://github.com/Aider-AI/aider/issues/4904"
+      ],
+      "sample_titles": [
+        "Fix ImportError when loading litellm due to openai package version incompatibility",
+        "Fix missing scipy dependency crash during repo map generation",
+        "Fix startup crash caused by litellm and aiohttp dependency incompatibility"
+      ],
+      "demand_score": 1.8171957034992137,
+      "rising_score": 4,
+      "volume": 4,
+      "open_count": 2,
+      "closed_count": 2,
+      "avg_reactions": 0,
+      "avg_comments": 0.5,
+      "date_first_seen": "2026-03-11T04:14:23.000Z",
+      "date_last_seen": "2026-04-02T09:21:44.000Z",
+      "repos_affected": [
+        "Aider-AI/aider"
+      ]
+    },
+    {
+      "cluster_id": "1c9075ec80ca",
+      "title": "Fix Crashes From Unmapped LiteLLM Exception Types",
+      "summary": "Users are reporting application crashes due to newly added or missing exception mappings in the LiteLLM client. They request proper handling and mapping of these errors to prevent unexpected runtime failures. Addressing this ensures stable operation and graceful error recovery when interacting with external LLM providers.",
+      "category": "Reliability",
+      "representative_need": "Fix crash caused by missing PermissionDeniedError in litellm exceptions mapping",
+      "issue_numbers": [
+        4978,
+        4897
+      ],
+      "issue_urls": [
+        "https://github.com/Aider-AI/aider/issues/4978",
+        "https://github.com/Aider-AI/aider/issues/4897"
+      ],
+      "sample_titles": [
+        "Fix crash caused by missing PermissionDeniedError in litellm exceptions mapping",
+        "Fix uncaught ValueError crashes caused by newly added LiteLLM exceptions"
+      ],
+      "demand_score": 1.723128910840313,
+      "rising_score": 2,
+      "volume": 2,
+      "open_count": 0,
+      "closed_count": 2,
+      "avg_reactions": 0,
+      "avg_comments": 1,
+      "date_first_seen": "2026-03-08T22:50:39.000Z",
+      "date_last_seen": "2026-03-31T23:22:06.000Z",
+      "repos_affected": [
+        "Aider-AI/aider"
+      ]
+    },
+    {
+      "cluster_id": "ae23c8f5e9e0",
+      "title": "Improve Core CLI Reliability, Setup, and Execution Handling",
+      "summary": "Users are requesting improvements to the application’s installation process, startup resilience, and terminal command handling to minimize setup friction and runtime errors. They also seek secure subprocess execution, flexible provider configurations, and local processing options to support safer and more customized development workflows. These enhancements collectively aim to deliver a more stable, predictable, and efficient developer tooling experience.",
+      "category": "Developer Experience",
+      "representative_need": "Acquire the 'aider' PyPI namespace to simplify package installation",
+      "issue_numbers": [
+        4980,
+        4976,
+        4955,
+        4954,
+        4949,
+        4913,
+        4900,
+        4884
+      ],
+      "issue_urls": [
+        "https://github.com/Aider-AI/aider/issues/4980",
+        "https://github.com/Aider-AI/aider/issues/4976",
+        "https://github.com/Aider-AI/aider/issues/4955",
+        "https://github.com/Aider-AI/aider/issues/4954",
+        "https://github.com/Aider-AI/aider/issues/4949",
+        "https://github.com/Aider-AI/aider/issues/4913",
+        "https://github.com/Aider-AI/aider/issues/4900",
+        "https://github.com/Aider-AI/aider/issues/4884"
+      ],
+      "sample_titles": [
+        "Acquire the 'aider' PyPI namespace to simplify package installation",
+        "Add subprocess security hardening with command validation, execution sandboxing, and audit logging",
+        "Fix forced API key validation for custom LiteLLM providers"
+      ],
+      "demand_score": 1.7121779295393167,
+      "rising_score": 0.75,
+      "volume": 8,
+      "open_count": 8,
+      "closed_count": 0,
+      "avg_reactions": 0.3,
+      "avg_comments": 0.1,
+      "date_first_seen": "2026-03-05T08:40:22.000Z",
+      "date_last_seen": "2026-04-01T04:22:58.000Z",
+      "repos_affected": [
+        "Aider-AI/aider"
+      ]
+    },
+    {
+      "cluster_id": "17412fdc61ee",
+      "title": "Graceful Handling of Symlink Loops During File Scanning",
+      "summary": "Users want the system to detect and safely bypass circular symbolic link references when traversing directories or resolving paths. This prevents infinite recursion and application crashes that currently interrupt development workflows. Proper loop handling ensures consistent and reliable file operations across complex filesystem structures.",
+      "category": "Reliability",
+      "representative_need": "Handle filesystem symlink loops gracefully during path resolution",
+      "issue_numbers": [
+        4965,
+        4892
+      ],
+      "issue_urls": [
+        "https://github.com/Aider-AI/aider/issues/4965",
+        "https://github.com/Aider-AI/aider/issues/4892"
+      ],
+      "sample_titles": [
+        "Handle filesystem symlink loops gracefully during path resolution",
+        "Handle symlink loops gracefully during repository file scanning"
+      ],
+      "demand_score": 1.6841296465232949,
+      "rising_score": 2,
+      "volume": 2,
+      "open_count": 0,
+      "closed_count": 2,
+      "avg_reactions": 0,
+      "avg_comments": 1,
+      "date_first_seen": "2026-03-07T20:55:38.000Z",
+      "date_last_seen": "2026-03-29T04:05:34.000Z",
+      "repos_affected": [
+        "Aider-AI/aider"
+      ]
+    },
+    {
+      "cluster_id": "2e93e6a9fdbb",
+      "title": "Fix startup crash from duplicate analytics module arguments",
+      "summary": "Users are reporting application failures at startup due to a duplicate parameter conflict in the analytics and telemetry module. Resolving this initialization error is critical to ensure stable application launches and prevent tracking disruptions.",
+      "category": "Reliability",
+      "representative_need": "Fix duplicate argument error in analytics telemetry module",
+      "issue_numbers": [
+        4951,
+        4905
+      ],
+      "issue_urls": [
+        "https://github.com/Aider-AI/aider/issues/4951",
+        "https://github.com/Aider-AI/aider/issues/4905"
+      ],
+      "sample_titles": [
+        "Fix duplicate argument error in analytics telemetry module",
+        "Fix startup crash caused by duplicate distinct_id argument in analytics module"
+      ],
+      "demand_score": 1.6459950873796552,
+      "rising_score": 0.5,
+      "volume": 2,
+      "open_count": 0,
+      "closed_count": 2,
+      "avg_reactions": 0,
+      "avg_comments": 1,
+      "date_first_seen": "2026-03-11T04:42:51.000Z",
+      "date_last_seen": "2026-03-22T15:32:13.000Z",
+      "repos_affected": [
+        "Aider-AI/aider"
+      ]
+    },
+    {
+      "cluster_id": "85e7a95209be",
+      "title": "Fix tree-sitter query parsing crashes during repo map generation",
+      "summary": "Users want to resolve crashes triggered by unhandled tree-sitter queries when generating repository maps. These parsing failures interrupt development workflows and block access to essential repository navigation features. Addressing these errors will ensure stable and uninterrupted codebase exploration.",
+      "category": "Reliability",
+      "representative_need": "Fix tree-sitter query error crashing repo map generation",
+      "issue_numbers": [
+        4919,
+        4888
+      ],
+      "issue_urls": [
+        "https://github.com/Aider-AI/aider/issues/4919",
+        "https://github.com/Aider-AI/aider/issues/4888"
+      ],
+      "sample_titles": [
+        "Fix tree-sitter query error crashing repo map generation",
+        "Fix tree-sitter query parsing crash during repository map generation"
+      ],
+      "demand_score": 1.1494209800437802,
+      "rising_score": 1,
+      "volume": 2,
+      "open_count": 1,
+      "closed_count": 1,
+      "avg_reactions": 0.5,
+      "avg_comments": 0.5,
+      "date_first_seen": "2026-03-06T14:06:10.000Z",
+      "date_last_seen": "2026-03-14T15:59:18.000Z",
+      "repos_affected": [
+        "Aider-AI/aider"
+      ]
+    },
+    {
+      "cluster_id": "9cf8923ada26",
+      "title": "Graceful Error Handling for Missing or Unrecognized LiteLLM Exceptions",
+      "summary": "Users are experiencing application crashes when encountering missing, renamed, or unrecognized exception types from the LiteLLM library. They are requesting more robust error handling logic to catch and manage these edge cases gracefully without interrupting execution. Implementing this will improve overall system stability when interacting with evolving third-party dependencies.",
+      "category": "Reliability",
+      "representative_need": "Fix crash caused by missing or renamed LiteLLM exception attributes",
+      "issue_numbers": [
+        4957,
+        4902
+      ],
+      "issue_urls": [
+        "https://github.com/Aider-AI/aider/issues/4957",
+        "https://github.com/Aider-AI/aider/issues/4902"
+      ],
+      "sample_titles": [
+        "Fix crash caused by missing or renamed LiteLLM exception attributes",
+        "Handle unrecognized LiteLLM exception types gracefully to prevent crashes"
+      ],
+      "demand_score": 0.8340581774940774,
+      "rising_score": 0.5,
+      "volume": 2,
+      "open_count": 1,
+      "closed_count": 1,
+      "avg_reactions": 0,
+      "avg_comments": 0.5,
+      "date_first_seen": "2026-03-10T18:32:44.000Z",
+      "date_last_seen": "2026-03-25T05:47:10.000Z",
+      "repos_affected": [
+        "Aider-AI/aider"
+      ]
+    }
+  ],
+  "category_breakdown": {
+    "Developer Experience": 2,
+    "Integration": 1,
+    "Reliability": 7
+  }
+}

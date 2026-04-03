@@ -16,36 +16,26 @@ ReadYourUsers 是一个 TypeScript 工作流和公开的多产品观测站，用
 
 <!-- READYOURUSERS:START -->
 
-## 实时快照 — Claude Code
+## 实时快照 — OpenCode
 
-> 基于 [anthropics/claude-code](https://github.com/anthropics/claude-code) 的 326 条 issue · 33 个需求簇 · 更新于 2026-04-03
+> 基于 [opencode-ai/opencode](https://github.com/opencode-ai/opencode) 的 62 条 issue · 10 个需求簇 · 更新于 2026-04-03
 
 ### 当前最强需求
 
 | 排名 | 需求 | Issue 数 | 得分 | 分类 | 示例 |
 | --- | --- | --- | --- | --- | --- |
-| 1 | MCP Server Reliability and Configuration Issues | 33 | 15.4 | Integration | [#42632](https://github.com/anthropics/claude-code/issues/42632), [#42628](https://github.com/anthropics/claude-code/issues/42628), [#42627](https://github.com/anthropics/claude-code/issues/42627) |
-| 2 | TUI Terminal State and Input Handling Fixes | 51 | 13.8 | UI/UX | [#42638](https://github.com/anthropics/claude-code/issues/42638), [#42617](https://github.com/anthropics/claude-code/issues/42617), [#42613](https://github.com/anthropics/claude-code/issues/42613) |
-| 3 | CLI Session Management and UX Improvements | 32 | 7.9 | Developer Experience | [#42637](https://github.com/anthropics/claude-code/issues/42637), [#42624](https://github.com/anthropics/claude-code/issues/42624), [#42607](https://github.com/anthropics/claude-code/issues/42607) |
-| 4 | Plugin System Management and Reliability | 12 | 6.0 | Developer Experience | [#42601](https://github.com/anthropics/claude-code/issues/42601), [#42595](https://github.com/anthropics/claude-code/issues/42595), [#42568](https://github.com/anthropics/claude-code/issues/42568) |
-| 5 | Bug Fixes and Feature Enhancements | 31 | 5.6 | Developer Experience | [#42635](https://github.com/anthropics/claude-code/issues/42635), [#42631](https://github.com/anthropics/claude-code/issues/42631), [#42623](https://github.com/anthropics/claude-code/issues/42623) |
-| 6 | Expand Hook System Functionality and Fix Hook Behaviors | 10 | 4.2 | Integration | [#42597](https://github.com/anthropics/claude-code/issues/42597), [#42581](https://github.com/anthropics/claude-code/issues/42581), [#42489](https://github.com/anthropics/claude-code/issues/42489) |
-| 7 | Authentication and subscription reliability fixes | 10 | 4.2 | Developer Experience | [#42608](https://github.com/anthropics/claude-code/issues/42608), [#42605](https://github.com/anthropics/claude-code/issues/42605), [#42603](https://github.com/anthropics/claude-code/issues/42603) |
-| 8 | Permission System Reliability and Security Fixes | 11 | 4.0 | Security | [#42611](https://github.com/anthropics/claude-code/issues/42611), [#42500](https://github.com/anthropics/claude-code/issues/42500), [#42488](https://github.com/anthropics/claude-code/issues/42488) |
-| 9 | Model Response Quality and Instruction Following | 11 | 3.8 | Reliability | [#42636](https://github.com/anthropics/claude-code/issues/42636), [#42634](https://github.com/anthropics/claude-code/issues/42634), [#42633](https://github.com/anthropics/claude-code/issues/42633) |
-| 10 | Background Agent Lifecycle and Reliability Management | 8 | 3.7 | Developer Experience | [#42621](https://github.com/anthropics/claude-code/issues/42621), [#42545](https://github.com/anthropics/claude-code/issues/42545), [#42541](https://github.com/anthropics/claude-code/issues/42541) |
+| 1 | Model Provider Configuration and Integration Fixes | 14 | 0.3 | Integration | [#352](https://github.com/opencode-ai/opencode/issues/352), [#351](https://github.com/opencode-ai/opencode/issues/351), [#349](https://github.com/opencode-ai/opencode/issues/349) |
+| 2 | Improve Installation, Configuration, and CLI Flexibility | 12 | 0.1 | Configuration | [#339](https://github.com/opencode-ai/opencode/issues/339), [#322](https://github.com/opencode-ai/opencode/issues/322), [#319](https://github.com/opencode-ai/opencode/issues/319) |
+| 3 | Provider Integration, Model Support, and Tool Improvements | 13 | 0.1 | Integration | [#353](https://github.com/opencode-ai/opencode/issues/353), [#334](https://github.com/opencode-ai/opencode/issues/334), [#313](https://github.com/opencode-ai/opencode/issues/313) |
+| 4 | Expand AI Provider Support and Error Handling | 6 | 0.1 | Integration | [#318](https://github.com/opencode-ai/opencode/issues/318), [#305](https://github.com/opencode-ai/opencode/issues/305), [#300](https://github.com/opencode-ai/opencode/issues/300) |
+| 5 | Ollama Local LLM Integration Support | 2 | 0.1 | Integration | [#326](https://github.com/opencode-ai/opencode/issues/326), [#296](https://github.com/opencode-ai/opencode/issues/296) |
+| 6 | Enhanced Authentication Methods and CLI Support | 4 | 0.1 | Developer Experience | [#343](https://github.com/opencode-ai/opencode/issues/343), [#335](https://github.com/opencode-ai/opencode/issues/335), [#275](https://github.com/opencode-ai/opencode/issues/275) |
+| 7 | Terminal Integration and Compatibility Issues | 2 | 0.1 | Integration | [#345](https://github.com/opencode-ai/opencode/issues/345), [#331](https://github.com/opencode-ai/opencode/issues/331) |
+| 8 | Fix text input and file search usability issues | 2 | 0.0 | Developer Experience | [#292](https://github.com/opencode-ai/opencode/issues/292), [#273](https://github.com/opencode-ai/opencode/issues/273) |
+| 9 | Fix external LLM model provider integrations | 2 | 0.0 | Integration | [#279](https://github.com/opencode-ai/opencode/issues/279), [#252](https://github.com/opencode-ai/opencode/issues/252) |
+| 10 | Windows Installation and Extraction Compatibility Fixes | 2 | 0.0 | Platform Support | [#320](https://github.com/opencode-ai/opencode/issues/320), [#306](https://github.com/opencode-ai/opencode/issues/306) |
 
-### 上升最快
-
-| 需求 | 上升倍率 | 本周 | 分类 |
-| --- | --- | --- | --- |
-| TUI Terminal State and Input Handling Fixes | 52.0x | 51 | UI/UX |
-| MCP Server Reliability and Configuration Issues | 34.0x | 33 | Integration |
-| CLI Session Management and UX Improvements | 33.0x | 32 | Developer Experience |
-| Bug Fixes and Feature Enhancements | 32.0x | 31 | Developer Experience |
-| Configuration and Settings Management Improvements | 18.0x | 17 | Configuration |
-
-[观测站](https://study8677.github.io/ReadYourUsers/) | [对比页](https://study8677.github.io/ReadYourUsers/zh/compare/index.html) | [产品页](https://study8677.github.io/ReadYourUsers/zh/products/anthropics-claude-code.html) | [完整报告](reports/latest/anthropics-claude-code.zh.md) | [English](README.md) | *基于公开 GitHub Issues，代表需求信号而非全部用户声音。*
+[观测站](https://study8677.github.io/ReadYourUsers/) | [对比页](https://study8677.github.io/ReadYourUsers/zh/compare/index.html) | [产品页](https://study8677.github.io/ReadYourUsers/zh/products/opencode-ai-opencode.html) | [完整报告](reports/latest/opencode-ai-opencode.zh.md) | [English](README.md) | *基于公开 GitHub Issues，代表需求信号而非全部用户声音。*
 
 <!-- READYOURUSERS:END -->
 
@@ -141,7 +131,12 @@ README.zh.md
 | --- | --- | --- |
 | [anthropics/claude-code](https://github.com/anthropics/claude-code) | Claude Code | AI 编程 CLI |
 | [openai/codex](https://github.com/openai/codex) | OpenAI Codex CLI | AI 编程 Agent |
-| [getcursor/cursor](https://github.com/getcursor/cursor) | Cursor | AI 代码编辑器 |
+| [cursor/cursor](https://github.com/cursor/cursor) | Cursor | AI 代码编辑器 |
+| [opencode-ai/opencode](https://github.com/opencode-ai/opencode) | OpenCode | AI 编程 Agent |
+| [cline/cline](https://github.com/cline/cline) | Cline | IDE 编程 Agent |
+| [Aider-AI/aider](https://github.com/Aider-AI/aider) | aider | 终端结对编程助手 |
+| [block/goose](https://github.com/block/goose) | Goose | 开源 AI Agent |
+| [openclaw/openclaw](https://github.com/openclaw/openclaw) | OpenClaw | 跨平台 AI Agent |
 
 ## 局限
 
