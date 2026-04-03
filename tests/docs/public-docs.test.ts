@@ -12,7 +12,7 @@ describe("public docs and automation", () => {
       "LLM_PROVIDER=openai",
       "OPENAI_API_KEY=your_openrouter_key",
       "OPENAI_BASE_URL=https://openrouter.ai/api/v1",
-      "OPENROUTER_HTTP_REFERER=https://github.com/fanjingwen/ReadYourUsers",
+      "OPENROUTER_HTTP_REFERER=https://github.com/study8677/ReadYourUsers",
       "OPENROUTER_APP_TITLE=ReadYourUsers",
       "ANALYSIS_MODEL=qwen/qwen3.6-plus:free",
       "AGGREGATION_MODEL=qwen/qwen3.6-plus:free",
@@ -66,7 +66,8 @@ describe("public docs and automation", () => {
     expect(generator).toContain("[Product page](${PUBLIC_SITE_URL}en/products/${slug}.html)");
     expect(generator).toContain("[对比页](${PUBLIC_SITE_COMPARE_ZH_URL})");
     expect(generator).toContain("[产品页](${PUBLIC_SITE_URL}zh/products/${slug}.html)");
-    expect(generator).toContain(openRouterSetupBlock);
+    expect(generator).toContain('const PROJECT_GITHUB_URL = "https://github.com/study8677/ReadYourUsers";');
+    expect(generator).toContain("OPENROUTER_HTTP_REFERER=${PROJECT_GITHUB_URL}");
     expect(generator).toContain("reports/latest/cross-product.json");
   });
 });

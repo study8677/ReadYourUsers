@@ -40,6 +40,7 @@ interface SitePaths {
 const DEFAULT_HOME_SLUG = "anthropics-claude-code";
 const UI_LANGS: UiLang[] = ["en", "zh"];
 const REPORT_LANGS: ReportLang[] = ["en", "zh"];
+const PROJECT_GITHUB_URL = "https://github.com/study8677/ReadYourUsers";
 
 const COPY_BY_UI_LANG: Record<UiLang, ReportLang> = {
   en: "en",
@@ -419,7 +420,7 @@ function pageTemplate(params: {
             <a href="${latestHref}">${t.navLatest}</a>
             <a href="${archiveHref}">${t.navArchive}</a>
             <a href="${compareHref}">${t.navCompare}</a>
-            <a href="https://github.com/fanjingwen/ReadYourUsers">${t.navGitHub}</a>
+            <a href="${PROJECT_GITHUB_URL}">${t.navGitHub}</a>
           </nav>
           <a class="lang-switch" href="${altHref}">${uiLang === "en" ? t.switchToChinese : t.switchToEnglish}</a>
         </div>
