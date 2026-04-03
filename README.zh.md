@@ -1,5 +1,7 @@
 # ReadYourUsers
 
+**语言切换：** [English](README.md) · 中文
+
 > 把公开 GitHub Issues 变成可读、可排序、可追溯的用户需求地图。
 
 ReadYourUsers 是一个 TypeScript CLI + 静态站点工作流，用来把嘈杂的 GitHub issue 流整理成产品团队真正能用的需求信号：
@@ -15,7 +17,7 @@ ReadYourUsers 是一个 TypeScript CLI + 静态站点工作流，用来把嘈杂
 
 ## 实时快照 — Claude Code
 
-> 基于 [anthropics/claude-code](https://github.com/anthropics/claude-code) 的 326 条 issue · 33 个需求簇 · 更新于 2026-04-02
+> 基于 [anthropics/claude-code](https://github.com/anthropics/claude-code) 的 326 条 issue · 33 个需求簇 · 更新于 2026-04-03
 
 ### 当前最强需求
 

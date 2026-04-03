@@ -321,6 +321,8 @@ function buildEnglishReadme(
 
   const fullPage = `# ReadYourUsers
 
+**Language:** English · [中文](README.zh.md)
+
 > Understand what users actually want by turning public GitHub issues into ranked demand maps.
 
 ReadYourUsers is a TypeScript CLI and static site generator for turning noisy GitHub issue streams into something product teams can actually use:
@@ -330,7 +332,7 @@ ReadYourUsers is a TypeScript CLI and static site generator for turning noisy Gi
 - traceable evidence back to the original issues
 - bilingual reports and a bilingual public site
 
-**Links:** [Live site](${PUBLIC_SITE_URL}) · [English](${PUBLIC_SITE_EN_URL}) · [中文](${PUBLIC_SITE_ZH_URL}) · [中文版 README](README.zh.md)
+**Links:** [Live site](${PUBLIC_SITE_URL}) · [English site](${PUBLIC_SITE_EN_URL}) · [中文站点](${PUBLIC_SITE_ZH_URL}) · [中文版 README](README.zh.md)
 
 ${section}
 
@@ -476,6 +478,8 @@ function buildChineseReadme(
 
   const fullPage = `# ReadYourUsers
 
+**语言切换：** [English](README.md) · 中文
+
 > 把公开 GitHub Issues 变成可读、可排序、可追溯的用户需求地图。
 
 ReadYourUsers 是一个 TypeScript CLI + 静态站点生成器，用来把嘈杂的 GitHub issue 流整理成产品团队真正能用的需求信号：
@@ -485,7 +489,7 @@ ReadYourUsers 是一个 TypeScript CLI + 静态站点生成器，用来把嘈杂
 - 可以追溯到原始 issue 的证据链
 - 中英双语报告和双语网站
 
-**链接：** [在线网页](${PUBLIC_SITE_URL}) · [English](${PUBLIC_SITE_EN_URL}) · [中文](${PUBLIC_SITE_ZH_URL}) · [English README](README.md)
+**链接：** [在线网页](${PUBLIC_SITE_URL}) · [English site](${PUBLIC_SITE_EN_URL}) · [中文站点](${PUBLIC_SITE_ZH_URL}) · [English README](README.md)
 
 ${section}
 

@@ -1,5 +1,7 @@
 # ReadYourUsers
 
+**Language:** English · [中文](README.zh.md)
+
 > Understand what users actually want by turning public GitHub issues into ranked demand maps.
 
 ReadYourUsers is a TypeScript CLI + static site workflow for turning noisy GitHub issue streams into something product teams can actually use:
@@ -15,7 +17,7 @@ ReadYourUsers is a TypeScript CLI + static site workflow for turning noisy GitHu
 
 ## Live snapshot — Claude Code
 
-> 326 issues analyzed from [anthropics/claude-code](https://github.com/anthropics/claude-code) · 33 need clusters · Updated 2026-04-02
+> 326 issues analyzed from [anthropics/claude-code](https://github.com/anthropics/claude-code) · 33 need clusters · Updated 2026-04-03
 
 ### Top needs right now
 

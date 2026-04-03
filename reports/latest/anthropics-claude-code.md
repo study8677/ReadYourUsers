@@ -1,7 +1,7 @@
 # Claude Code — User Demand Report
 
 **Week:** 2026-W14
-**Generated:** 2026-04-02
+**Generated:** 2026-04-03
 **Issues analyzed:** 326 (313 included)
 **Need clusters:** 33
 
