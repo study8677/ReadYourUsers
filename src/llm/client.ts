@@ -30,6 +30,20 @@ function getAnthropicClient(): Anthropic {
 // --- OpenAI-compatible ---
 let openaiClient: OpenAI | null = null;
 
+function getOpenAIHeaders(): Record<string, string> | undefined {
+  const headers: Record<string, string> = {};
+
+  if (process.env.OPENROUTER_HTTP_REFERER) {
+    headers["HTTP-Referer"] = process.env.OPENROUTER_HTTP_REFERER;
+  }
+
+  if (process.env.OPENROUTER_APP_TITLE) {
+    headers["X-Title"] = process.env.OPENROUTER_APP_TITLE;
+  }
+
+  return Object.keys(headers).length > 0 ? headers : undefined;
+}
+
 function getOpenAIClient(): OpenAI {
   if (!openaiClient) {
     const apiKey = process.env.OPENAI_API_KEY;
@@ -39,6 +53,7 @@ function getOpenAIClient(): OpenAI {
     openaiClient = new OpenAI({
       apiKey,
       baseURL: process.env.OPENAI_BASE_URL,
+      defaultHeaders: getOpenAIHeaders(),
     });
   }
   return openaiClient;

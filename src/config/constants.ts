@@ -16,15 +16,27 @@ export const DEFAULT_SIMILARITY_THRESHOLD = 0.4;
 /** Minimum cluster size to include in reports */
 export const DEFAULT_MIN_CLUSTER_SIZE = 2;
 
+const isOpenRouterOpenAIProvider =
+  process.env.LLM_PROVIDER === "openai" &&
+  process.env.OPENAI_BASE_URL?.includes("openrouter.ai");
+
 /** Model for per-issue analysis (fast, cheap) */
 export const ANALYSIS_MODEL =
   process.env.ANALYSIS_MODEL ??
-  (process.env.LLM_PROVIDER === "openai" ? "gpt-4o-mini" : "claude-haiku-4-5-20241022");
+  (process.env.LLM_PROVIDER === "openai"
+    ? isOpenRouterOpenAIProvider
+      ? "qwen/qwen3.6-plus:free"
+      : "gpt-4o-mini"
+    : "claude-haiku-4-5-20241022");
 
 /** Model for aggregation/summarization (stronger) */
 export const AGGREGATION_MODEL =
   process.env.AGGREGATION_MODEL ??
-  (process.env.LLM_PROVIDER === "openai" ? "gpt-4o" : "claude-sonnet-4-5-20241022");
+  (process.env.LLM_PROVIDER === "openai"
+    ? isOpenRouterOpenAIProvider
+      ? "qwen/qwen3.6-plus:free"
+      : "gpt-4o"
+    : "claude-sonnet-4-5-20241022");
 
 /** Top N clusters for reports */
 export const TOP_N_REPORT = 10;
