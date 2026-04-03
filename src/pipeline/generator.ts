@@ -2,8 +2,13 @@ import { resolve } from "node:path";
 import { readFileSync, writeFileSync, existsSync } from "node:fs";
 import { mkdirSync } from "node:fs";
 import type { RepoAggregation } from "../models/cluster.js";
-import { readJSON } from "../utils/cache.js";
-import { repoSlug, type RepoConfig } from "../config/repos.js";
+import { readJSON, writeJSON } from "../utils/cache.js";
+import {
+  repoSlug,
+  type RepoConfig,
+} from "../config/repos.js";
+import type { CrossProductSummary } from "../models/site.js";
+import { buildCrossProductSummary } from "./cross-product.js";
 import {
   generateRankingTable,
   generateRisingTable,
@@ -20,6 +25,7 @@ const PUBLIC_SITE_ZH_URL = `${PUBLIC_SITE_URL}zh/index.html`;
 export interface GenerateOptions {
   repo: string;
   repoConfig: RepoConfig;
+  repoConfigs: RepoConfig[];
   dataDir: string;
   outputDir: string;
 }
@@ -30,10 +36,37 @@ export interface GenerateResult {
   readmeUpdated: boolean;
 }
 
+export function writeCrossProductSummary(
+  configs: RepoConfig[],
+  dataDir: string,
+  outputDir: string
+): CrossProductSummary | null {
+  const inputs = configs
+    .map((config) => {
+      const aggregation = readJSON<RepoAggregation>(
+        resolve(dataDir, "aggregated", repoSlug(config.repo), "clusters.json")
+      );
+
+      return aggregation ? { config, aggregation } : null;
+    })
+    .filter(
+      (value): value is { config: RepoConfig; aggregation: RepoAggregation } =>
+        value !== null
+    );
+
+  if (inputs.length === 0) {
+    return null;
+  }
+
+  const summary = buildCrossProductSummary(inputs);
+  writeJSON(resolve(outputDir, "latest", "cross-product.json"), summary);
+  return summary;
+}
+
 export async function generateReports(
   options: GenerateOptions
 ): Promise<GenerateResult> {
-  const { repo, repoConfig, dataDir, outputDir } = options;
+  const { repo, repoConfig, repoConfigs, dataDir, outputDir } = options;
 
   const slug = repoSlug(repo);
   const clustersPath = resolve(dataDir, "aggregated", slug, "clusters.json");
@@ -81,6 +114,8 @@ export async function generateReports(
     byRising,
     now
   );
+
+  writeCrossProductSummary(repoConfigs, dataDir, outputDir);
 
   return {
     repo,

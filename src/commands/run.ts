@@ -70,6 +70,7 @@ export async function runCommand(
       const genResult = await generateReports({
         repo: r,
         repoConfig: config,
+        repoConfigs: configs,
         dataDir: options.dataDir,
         outputDir: options.outputDir,
       });

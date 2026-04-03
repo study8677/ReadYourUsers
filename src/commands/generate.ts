@@ -26,6 +26,7 @@ export async function generateCommand(
       const result = await generateReports({
         repo: r,
         repoConfig: config,
+        repoConfigs: configs,
         dataDir: options.dataDir,
         outputDir: options.outputDir,
       });
