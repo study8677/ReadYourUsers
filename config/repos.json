@@ -111,6 +111,22 @@
       "include_in_homepage": true,
       "weight": 0.8,
       "notes": "High-growth editor with active AI assistant and copilot-related issue traffic"
+    },
+    {
+      "repo": "OpenHands/OpenHands",
+      "display_name": "OpenHands",
+      "category": "AI Coding Assistant",
+      "include_in_homepage": true,
+      "weight": 0.9,
+      "notes": "High-star open-source AI-driven development platform with active public issues"
+    },
+    {
+      "repo": "TabbyML/tabby",
+      "display_name": "Tabby",
+      "category": "AI Coding Assistant",
+      "include_in_homepage": true,
+      "weight": 0.8,
+      "notes": "Self-hosted AI coding assistant with active issue-based product feedback"
     }
   ]
 }

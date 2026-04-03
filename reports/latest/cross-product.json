@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-03T18:11:20.144Z",
+  "generatedAt": "2026-04-03T19:19:18.760Z",
   "products": [
     {
       "repo": "anthropics/claude-code",
@@ -5026,6 +5026,217 @@
       }
     },
     {
+      "repo": "OpenHands/OpenHands",
+      "slug": "OpenHands-OpenHands",
+      "displayName": "OpenHands",
+      "category": "AI Coding Assistant",
+      "generatedAt": "2026-04-03T19:17:08.721Z",
+      "totalIssuesAnalyzed": 14,
+      "totalIssuesIncluded": 13,
+      "totalClusters": 2,
+      "topNeed": {
+        "cluster_id": "1c36899d5abd",
+        "title": "UI/UX Quality Improvements and Bug Fixes",
+        "summary": "Users are requesting various bug fixes and quality improvements across the application's user interface, including fixing message duplication, display issues with the think tool and repository picker, and message handling during status transitions. Additionally, users want UX enhancements like reducing comment clutter in integrations and new observability features such as per-conversation diagnostics and a scheduled automations management page.",
+        "category": "UI/UX",
+        "representative_need": "Add a UI page to view and manage scheduled automations with details, run history, and enable/disable/delete controls",
+        "issue_numbers": [
+          13771,
+          13769,
+          13740,
+          13738,
+          13737,
+          13736,
+          13716,
+          13694,
+          13690,
+          13677,
+          13674
+        ],
+        "issue_urls": [
+          "https://github.com/OpenHands/OpenHands/issues/13771",
+          "https://github.com/OpenHands/OpenHands/issues/13769",
+          "https://github.com/OpenHands/OpenHands/issues/13740",
+          "https://github.com/OpenHands/OpenHands/issues/13738",
+          "https://github.com/OpenHands/OpenHands/issues/13737",
+          "https://github.com/OpenHands/OpenHands/issues/13736",
+          "https://github.com/OpenHands/OpenHands/issues/13716",
+          "https://github.com/OpenHands/OpenHands/issues/13694",
+          "https://github.com/OpenHands/OpenHands/issues/13690",
+          "https://github.com/OpenHands/OpenHands/issues/13677",
+          "https://github.com/OpenHands/OpenHands/issues/13674"
+        ],
+        "sample_titles": [
+          "Add a UI page to view and manage scheduled automations with details, run history, and enable/disable/delete controls",
+          "Add per-conversation diagnostics and observability view for Cloud users",
+          "Align Docker frontend builder Node version with package.json engine requirements"
+        ],
+        "demand_score": 2.3004206387738853,
+        "rising_score": 12,
+        "volume": 11,
+        "open_count": 10,
+        "closed_count": 1,
+        "avg_reactions": 0,
+        "avg_comments": 2.5,
+        "date_first_seen": "2026-03-31T15:00:14.000Z",
+        "date_last_seen": "2026-04-03T16:35:22.000Z",
+        "repos_affected": [
+          "OpenHands/OpenHands"
+        ]
+      },
+      "risingNeed": {
+        "cluster_id": "1c36899d5abd",
+        "title": "UI/UX Quality Improvements and Bug Fixes",
+        "summary": "Users are requesting various bug fixes and quality improvements across the application's user interface, including fixing message duplication, display issues with the think tool and repository picker, and message handling during status transitions. Additionally, users want UX enhancements like reducing comment clutter in integrations and new observability features such as per-conversation diagnostics and a scheduled automations management page.",
+        "category": "UI/UX",
+        "representative_need": "Add a UI page to view and manage scheduled automations with details, run history, and enable/disable/delete controls",
+        "issue_numbers": [
+          13771,
+          13769,
+          13740,
+          13738,
+          13737,
+          13736,
+          13716,
+          13694,
+          13690,
+          13677,
+          13674
+        ],
+        "issue_urls": [
+          "https://github.com/OpenHands/OpenHands/issues/13771",
+          "https://github.com/OpenHands/OpenHands/issues/13769",
+          "https://github.com/OpenHands/OpenHands/issues/13740",
+          "https://github.com/OpenHands/OpenHands/issues/13738",
+          "https://github.com/OpenHands/OpenHands/issues/13737",
+          "https://github.com/OpenHands/OpenHands/issues/13736",
+          "https://github.com/OpenHands/OpenHands/issues/13716",
+          "https://github.com/OpenHands/OpenHands/issues/13694",
+          "https://github.com/OpenHands/OpenHands/issues/13690",
+          "https://github.com/OpenHands/OpenHands/issues/13677",
+          "https://github.com/OpenHands/OpenHands/issues/13674"
+        ],
+        "sample_titles": [
+          "Add a UI page to view and manage scheduled automations with details, run history, and enable/disable/delete controls",
+          "Add per-conversation diagnostics and observability view for Cloud users",
+          "Align Docker frontend builder Node version with package.json engine requirements"
+        ],
+        "demand_score": 2.3004206387738853,
+        "rising_score": 12,
+        "volume": 11,
+        "open_count": 10,
+        "closed_count": 1,
+        "avg_reactions": 0,
+        "avg_comments": 2.5,
+        "date_first_seen": "2026-03-31T15:00:14.000Z",
+        "date_last_seen": "2026-04-03T16:35:22.000Z",
+        "repos_affected": [
+          "OpenHands/OpenHands"
+        ]
+      },
+      "dominantCategory": "Security",
+      "reportPaths": {
+        "en": "reports/latest/OpenHands-OpenHands.md",
+        "zh": "reports/latest/OpenHands-OpenHands.zh.md"
+      },
+      "aggregation": {
+        "repo": "OpenHands/OpenHands",
+        "display_name": "OpenHands",
+        "generated_at": "2026-04-03T19:17:08.721Z",
+        "window_start": "2026-03-04T19:17:08.721Z",
+        "window_end": "2026-04-03T19:17:08.721Z",
+        "total_issues_analyzed": 14,
+        "total_issues_included": 13,
+        "clusters": [
+          {
+            "cluster_id": "1c36899d5abd",
+            "title": "UI/UX Quality Improvements and Bug Fixes",
+            "summary": "Users are requesting various bug fixes and quality improvements across the application's user interface, including fixing message duplication, display issues with the think tool and repository picker, and message handling during status transitions. Additionally, users want UX enhancements like reducing comment clutter in integrations and new observability features such as per-conversation diagnostics and a scheduled automations management page.",
+            "category": "UI/UX",
+            "representative_need": "Add a UI page to view and manage scheduled automations with details, run history, and enable/disable/delete controls",
+            "issue_numbers": [
+              13771,
+              13769,
+              13740,
+              13738,
+              13737,
+              13736,
+              13716,
+              13694,
+              13690,
+              13677,
+              13674
+            ],
+            "issue_urls": [
+              "https://github.com/OpenHands/OpenHands/issues/13771",
+              "https://github.com/OpenHands/OpenHands/issues/13769",
+              "https://github.com/OpenHands/OpenHands/issues/13740",
+              "https://github.com/OpenHands/OpenHands/issues/13738",
+              "https://github.com/OpenHands/OpenHands/issues/13737",
+              "https://github.com/OpenHands/OpenHands/issues/13736",
+              "https://github.com/OpenHands/OpenHands/issues/13716",
+              "https://github.com/OpenHands/OpenHands/issues/13694",
+              "https://github.com/OpenHands/OpenHands/issues/13690",
+              "https://github.com/OpenHands/OpenHands/issues/13677",
+              "https://github.com/OpenHands/OpenHands/issues/13674"
+            ],
+            "sample_titles": [
+              "Add a UI page to view and manage scheduled automations with details, run history, and enable/disable/delete controls",
+              "Add per-conversation diagnostics and observability view for Cloud users",
+              "Align Docker frontend builder Node version with package.json engine requirements"
+            ],
+            "demand_score": 2.3004206387738853,
+            "rising_score": 12,
+            "volume": 11,
+            "open_count": 10,
+            "closed_count": 1,
+            "avg_reactions": 0,
+            "avg_comments": 2.5,
+            "date_first_seen": "2026-03-31T15:00:14.000Z",
+            "date_last_seen": "2026-04-03T16:35:22.000Z",
+            "repos_affected": [
+              "OpenHands/OpenHands"
+            ]
+          },
+          {
+            "cluster_id": "6f37228a6f00",
+            "title": "Security Guardrails for Agent Actions and Dependencies",
+            "summary": "Users want built-in security guardrails to control AI agent behavior and protect against threats. This includes policy-based controls using OPA (Open Policy Agent) to govern what actions agents can execute, as well as supply chain protections like minimum dependency age checks to prevent attacks from newly published malicious packages.",
+            "category": "Security",
+            "representative_need": "Add OPA-based policy guard for agent action execution",
+            "issue_numbers": [
+              13731,
+              13697
+            ],
+            "issue_urls": [
+              "https://github.com/OpenHands/OpenHands/issues/13731",
+              "https://github.com/OpenHands/OpenHands/issues/13697"
+            ],
+            "sample_titles": [
+              "Add OPA-based policy guard for agent action execution",
+              "Add minimum dependency age guardrails for Python and npm packages to prevent supply-chain attacks from newly published malicious packages"
+            ],
+            "demand_score": 0.9863731763315956,
+            "rising_score": 3,
+            "volume": 2,
+            "open_count": 2,
+            "closed_count": 0,
+            "avg_reactions": 0,
+            "avg_comments": 0.5,
+            "date_first_seen": "2026-04-02T04:29:14.000Z",
+            "date_last_seen": "2026-04-02T23:08:07.000Z",
+            "repos_affected": [
+              "OpenHands/OpenHands"
+            ]
+          }
+        ],
+        "category_breakdown": {
+          "UI/UX": 1,
+          "Security": 1
+        }
+      }
+    },
+    {
       "repo": "block/goose",
       "slug": "block-goose",
       "displayName": "Goose",
@@ -6464,6 +6675,569 @@
       }
     },
     {
+      "repo": "TabbyML/tabby",
+      "slug": "TabbyML-tabby",
+      "displayName": "Tabby",
+      "category": "AI Coding Assistant",
+      "generatedAt": "2026-04-03T19:19:18.760Z",
+      "totalIssuesAnalyzed": 55,
+      "totalIssuesIncluded": 52,
+      "totalClusters": 11,
+      "topNeed": {
+        "cluster_id": "956b4f8a26f7",
+        "title": "Platform support and deployment flexibility enhancements",
+        "summary": "Users are requesting improvements across multiple dimensions: better plugin stability for Eclipse and IntelliJ, expanded deployment options for air-gapped/CPU-only environments, support for new model architectures (Qwen3-Coder-Next, candle backends), and fixes for infrastructure compatibility issues with Homebrew and ROCM. These changes would make Tabby more robust and usable across diverse development environments.",
+        "category": "Platform Support",
+        "representative_need": "Add CPU-only mode support to Docker image via environment variable or automatic detection",
+        "issue_numbers": [
+          4471,
+          4460,
+          4452,
+          4446,
+          4415,
+          4406,
+          4397,
+          4394,
+          4392,
+          4386,
+          4377,
+          4372,
+          4367,
+          4365,
+          4361,
+          4357,
+          4352
+        ],
+        "issue_urls": [
+          "https://github.com/TabbyML/tabby/issues/4471",
+          "https://github.com/TabbyML/tabby/issues/4460",
+          "https://github.com/TabbyML/tabby/issues/4452",
+          "https://github.com/TabbyML/tabby/issues/4446",
+          "https://github.com/TabbyML/tabby/issues/4415",
+          "https://github.com/TabbyML/tabby/issues/4406",
+          "https://github.com/TabbyML/tabby/issues/4397",
+          "https://github.com/TabbyML/tabby/issues/4394",
+          "https://github.com/TabbyML/tabby/issues/4392",
+          "https://github.com/TabbyML/tabby/issues/4386",
+          "https://github.com/TabbyML/tabby/issues/4377",
+          "https://github.com/TabbyML/tabby/issues/4372",
+          "https://github.com/TabbyML/tabby/issues/4367",
+          "https://github.com/TabbyML/tabby/issues/4365",
+          "https://github.com/TabbyML/tabby/issues/4361",
+          "https://github.com/TabbyML/tabby/issues/4357",
+          "https://github.com/TabbyML/tabby/issues/4352"
+        ],
+        "sample_titles": [
+          "Add CPU-only mode support to Docker image via environment variable or automatic detection",
+          "Add server existence check at launch with fast failure when duplicate servers are detected",
+          "Add support for Qwen3-Coder-Next model architecture"
+        ],
+        "demand_score": 1.7287613245662659,
+        "rising_score": 2,
+        "volume": 17,
+        "open_count": 11,
+        "closed_count": 6,
+        "avg_reactions": 0.6,
+        "avg_comments": 1,
+        "date_first_seen": "2025-08-28T07:47:28.000Z",
+        "date_last_seen": "2026-03-28T18:38:34.000Z",
+        "repos_affected": [
+          "TabbyML/tabby"
+        ]
+      },
+      "risingNeed": {
+        "cluster_id": "956b4f8a26f7",
+        "title": "Platform support and deployment flexibility enhancements",
+        "summary": "Users are requesting improvements across multiple dimensions: better plugin stability for Eclipse and IntelliJ, expanded deployment options for air-gapped/CPU-only environments, support for new model architectures (Qwen3-Coder-Next, candle backends), and fixes for infrastructure compatibility issues with Homebrew and ROCM. These changes would make Tabby more robust and usable across diverse development environments.",
+        "category": "Platform Support",
+        "representative_need": "Add CPU-only mode support to Docker image via environment variable or automatic detection",
+        "issue_numbers": [
+          4471,
+          4460,
+          4452,
+          4446,
+          4415,
+          4406,
+          4397,
+          4394,
+          4392,
+          4386,
+          4377,
+          4372,
+          4367,
+          4365,
+          4361,
+          4357,
+          4352
+        ],
+        "issue_urls": [
+          "https://github.com/TabbyML/tabby/issues/4471",
+          "https://github.com/TabbyML/tabby/issues/4460",
+          "https://github.com/TabbyML/tabby/issues/4452",
+          "https://github.com/TabbyML/tabby/issues/4446",
+          "https://github.com/TabbyML/tabby/issues/4415",
+          "https://github.com/TabbyML/tabby/issues/4406",
+          "https://github.com/TabbyML/tabby/issues/4397",
+          "https://github.com/TabbyML/tabby/issues/4394",
+          "https://github.com/TabbyML/tabby/issues/4392",
+          "https://github.com/TabbyML/tabby/issues/4386",
+          "https://github.com/TabbyML/tabby/issues/4377",
+          "https://github.com/TabbyML/tabby/issues/4372",
+          "https://github.com/TabbyML/tabby/issues/4367",
+          "https://github.com/TabbyML/tabby/issues/4365",
+          "https://github.com/TabbyML/tabby/issues/4361",
+          "https://github.com/TabbyML/tabby/issues/4357",
+          "https://github.com/TabbyML/tabby/issues/4352"
+        ],
+        "sample_titles": [
+          "Add CPU-only mode support to Docker image via environment variable or automatic detection",
+          "Add server existence check at launch with fast failure when duplicate servers are detected",
+          "Add support for Qwen3-Coder-Next model architecture"
+        ],
+        "demand_score": 1.7287613245662659,
+        "rising_score": 2,
+        "volume": 17,
+        "open_count": 11,
+        "closed_count": 6,
+        "avg_reactions": 0.6,
+        "avg_comments": 1,
+        "date_first_seen": "2025-08-28T07:47:28.000Z",
+        "date_last_seen": "2026-03-28T18:38:34.000Z",
+        "repos_affected": [
+          "TabbyML/tabby"
+        ]
+      },
+      "dominantCategory": "Developer Experience",
+      "reportPaths": {
+        "en": "reports/latest/TabbyML-tabby.md",
+        "zh": "reports/latest/TabbyML-tabby.zh.md"
+      },
+      "aggregation": {
+        "repo": "TabbyML/tabby",
+        "display_name": "Tabby",
+        "generated_at": "2026-04-03T19:19:18.760Z",
+        "window_start": "2026-03-04T19:19:18.760Z",
+        "window_end": "2026-04-03T19:19:18.760Z",
+        "total_issues_analyzed": 55,
+        "total_issues_included": 52,
+        "clusters": [
+          {
+            "cluster_id": "956b4f8a26f7",
+            "title": "Platform support and deployment flexibility enhancements",
+            "summary": "Users are requesting improvements across multiple dimensions: better plugin stability for Eclipse and IntelliJ, expanded deployment options for air-gapped/CPU-only environments, support for new model architectures (Qwen3-Coder-Next, candle backends), and fixes for infrastructure compatibility issues with Homebrew and ROCM. These changes would make Tabby more robust and usable across diverse development environments.",
+            "category": "Platform Support",
+            "representative_need": "Add CPU-only mode support to Docker image via environment variable or automatic detection",
+            "issue_numbers": [
+              4471,
+              4460,
+              4452,
+              4446,
+              4415,
+              4406,
+              4397,
+              4394,
+              4392,
+              4386,
+              4377,
+              4372,
+              4367,
+              4365,
+              4361,
+              4357,
+              4352
+            ],
+            "issue_urls": [
+              "https://github.com/TabbyML/tabby/issues/4471",
+              "https://github.com/TabbyML/tabby/issues/4460",
+              "https://github.com/TabbyML/tabby/issues/4452",
+              "https://github.com/TabbyML/tabby/issues/4446",
+              "https://github.com/TabbyML/tabby/issues/4415",
+              "https://github.com/TabbyML/tabby/issues/4406",
+              "https://github.com/TabbyML/tabby/issues/4397",
+              "https://github.com/TabbyML/tabby/issues/4394",
+              "https://github.com/TabbyML/tabby/issues/4392",
+              "https://github.com/TabbyML/tabby/issues/4386",
+              "https://github.com/TabbyML/tabby/issues/4377",
+              "https://github.com/TabbyML/tabby/issues/4372",
+              "https://github.com/TabbyML/tabby/issues/4367",
+              "https://github.com/TabbyML/tabby/issues/4365",
+              "https://github.com/TabbyML/tabby/issues/4361",
+              "https://github.com/TabbyML/tabby/issues/4357",
+              "https://github.com/TabbyML/tabby/issues/4352"
+            ],
+            "sample_titles": [
+              "Add CPU-only mode support to Docker image via environment variable or automatic detection",
+              "Add server existence check at launch with fast failure when duplicate servers are detected",
+              "Add support for Qwen3-Coder-Next model architecture"
+            ],
+            "demand_score": 1.7287613245662659,
+            "rising_score": 2,
+            "volume": 17,
+            "open_count": 11,
+            "closed_count": 6,
+            "avg_reactions": 0.6,
+            "avg_comments": 1,
+            "date_first_seen": "2025-08-28T07:47:28.000Z",
+            "date_last_seen": "2026-03-28T18:38:34.000Z",
+            "repos_affected": [
+              "TabbyML/tabby"
+            ]
+          },
+          {
+            "cluster_id": "d16095e89bae",
+            "title": "IDE Plugin Bug Fixes and Context Improvements",
+            "summary": "Users are experiencing various reliability issues with IDE plugins (IntelliJ IDEA, VSCode, JetBrains Rider) including stuck loading states, unresponsive autocompletion, and connection failures in remote development scenarios. Additionally, users want improved context handling to include split view files, imported dependencies, and related files in AI code completion and chat suggestions.",
+            "category": "Developer Experience",
+            "representative_need": "Add automatic context expansion to include related/dependent files in chat context based on import analysis",
+            "issue_numbers": [
+              4420,
+              4418,
+              4404,
+              4396,
+              4388,
+              4385,
+              4354
+            ],
+            "issue_urls": [
+              "https://github.com/TabbyML/tabby/issues/4420",
+              "https://github.com/TabbyML/tabby/issues/4418",
+              "https://github.com/TabbyML/tabby/issues/4404",
+              "https://github.com/TabbyML/tabby/issues/4396",
+              "https://github.com/TabbyML/tabby/issues/4388",
+              "https://github.com/TabbyML/tabby/issues/4385",
+              "https://github.com/TabbyML/tabby/issues/4354"
+            ],
+            "sample_titles": [
+              "Add automatic context expansion to include related/dependent files in chat context based on import analysis",
+              "Fix IntelliJ IDEA plugin chat panel stuck in loading state",
+              "Fix StringIndexOutOfBoundsException in InlineCompletionRenderer when processing empty strings during file editing"
+            ],
+            "demand_score": 1.3746563896560648,
+            "rising_score": 1,
+            "volume": 7,
+            "open_count": 6,
+            "closed_count": 1,
+            "avg_reactions": 0.3,
+            "avg_comments": 0.7,
+            "date_first_seen": "2025-08-28T15:02:10.000Z",
+            "date_last_seen": "2026-01-04T05:55:34.000Z",
+            "repos_affected": [
+              "TabbyML/tabby"
+            ]
+          },
+          {
+            "cluster_id": "f7324f40e42e",
+            "title": "Improve Git Integration and Repository Operations",
+            "summary": "Users want better Git integration across multiple platforms, including support for GitLab subgroups, self-hosted Gitea, and advanced Git features like SHA256 object format and semantic merge drivers. They also need improved repository operations such as incremental git pulls, branch selection for indexing, and better handling of Git LFS errors. These improvements would enhance developer workflows for teams working with complex Git repositories and branching strategies.",
+            "category": "Developer Experience",
+            "representative_need": "Add support for customizable commit message styles by learning from recent commit history",
+            "issue_numbers": [
+              4451,
+              4449,
+              4431,
+              4408,
+              4407,
+              4403,
+              4390,
+              4363
+            ],
+            "issue_urls": [
+              "https://github.com/TabbyML/tabby/issues/4451",
+              "https://github.com/TabbyML/tabby/issues/4449",
+              "https://github.com/TabbyML/tabby/issues/4431",
+              "https://github.com/TabbyML/tabby/issues/4408",
+              "https://github.com/TabbyML/tabby/issues/4407",
+              "https://github.com/TabbyML/tabby/issues/4403",
+              "https://github.com/TabbyML/tabby/issues/4390",
+              "https://github.com/TabbyML/tabby/issues/4363"
+            ],
+            "sample_titles": [
+              "Add support for customizable commit message styles by learning from recent commit history",
+              "Auto-configure semantic merge driver for parallel agent worktree branches",
+              "Fix Git LFS quota exceeded error preventing repository checkout"
+            ],
+            "demand_score": 1.1647361311408948,
+            "rising_score": 1,
+            "volume": 8,
+            "open_count": 6,
+            "closed_count": 2,
+            "avg_reactions": 0.3,
+            "avg_comments": 1.3,
+            "date_first_seen": "2025-09-18T01:37:33.000Z",
+            "date_last_seen": "2026-03-04T11:45:15.000Z",
+            "repos_affected": [
+              "TabbyML/tabby"
+            ]
+          },
+          {
+            "cluster_id": "be423fa15d69",
+            "title": "Improve Code Completion Speed and Context Awareness",
+            "summary": "Users want faster, more intelligent code completion suggestions. The first request seeks to eliminate perceived delay by precomputing accept and reject branches for instant follow-up suggestions, while the second wants to enhance completion relevance by integrating screen context from Screenpipe for better context-aware recommendations.",
+            "category": "Developer Experience",
+            "representative_need": "Integrate Screenpipe to provide screen context for enhanced code completion",
+            "issue_numbers": [
+              4472,
+              4428
+            ],
+            "issue_urls": [
+              "https://github.com/TabbyML/tabby/issues/4472",
+              "https://github.com/TabbyML/tabby/issues/4428"
+            ],
+            "sample_titles": [
+              "Integrate Screenpipe to provide screen context for enhanced code completion",
+              "Precompute accept and reject branches for follow-up code completions to enable near-instant suggestions"
+            ],
+            "demand_score": 0.9814302886995968,
+            "rising_score": 2,
+            "volume": 2,
+            "open_count": 2,
+            "closed_count": 0,
+            "avg_reactions": 2.5,
+            "avg_comments": 0.5,
+            "date_first_seen": "2026-01-25T15:48:35.000Z",
+            "date_last_seen": "2026-03-28T19:36:34.000Z",
+            "repos_affected": [
+              "TabbyML/tabby"
+            ]
+          },
+          {
+            "cluster_id": "487df816bf05",
+            "title": "Improve self-hosted deployment flexibility and configuration",
+            "summary": "These issues request greater flexibility for self-hosted and offline deployments, including alternative authentication methods like x-token-auth for Bitbucket, configurable security policies to disable password complexity requirements, and improved user registration workflows with case-insensitive email handling. Users need the ability to adapt the software to their specific infrastructure requirements rather than being forced into a one-size-fits-all approach.",
+            "category": "Configuration",
+            "representative_need": "Make email comparison case-insensitive during invited user registration",
+            "issue_numbers": [
+              4434,
+              4426,
+              4400
+            ],
+            "issue_urls": [
+              "https://github.com/TabbyML/tabby/issues/4434",
+              "https://github.com/TabbyML/tabby/issues/4426",
+              "https://github.com/TabbyML/tabby/issues/4400"
+            ],
+            "sample_titles": [
+              "Make email comparison case-insensitive during invited user registration",
+              "Remove or disable password complexity requirements for offline/self-hosted deployments",
+              "Support x-token-auth URL authentication format for Bitbucket repository cloning"
+            ],
+            "demand_score": 0.5966973074063462,
+            "rising_score": 1,
+            "volume": 3,
+            "open_count": 2,
+            "closed_count": 1,
+            "avg_reactions": 1.3,
+            "avg_comments": 2.3,
+            "date_first_seen": "2025-11-24T12:36:47.000Z",
+            "date_last_seen": "2026-02-03T09:17:47.000Z",
+            "repos_affected": [
+              "TabbyML/tabby"
+            ]
+          },
+          {
+            "cluster_id": "da00981584b5",
+            "title": "Expand model support and API integrations",
+            "summary": "Users are requesting expanded support for new AI model types and API integrations, including thinking/reasoning models and Mistral's codestral-embed API for embeddings. Additionally, users want local model loading to work without network connectivity. These enhancements would improve the platform's flexibility and enable offline functionality.",
+            "category": "Integration",
+            "representative_need": "Add support for Mistral codestral-embed API kind for embeddings",
+            "issue_numbers": [
+              4422,
+              4412,
+              4374
+            ],
+            "issue_urls": [
+              "https://github.com/TabbyML/tabby/issues/4422",
+              "https://github.com/TabbyML/tabby/issues/4412",
+              "https://github.com/TabbyML/tabby/issues/4374"
+            ],
+            "sample_titles": [
+              "Add support for Mistral codestral-embed API kind for embeddings",
+              "Add support for thinking/reasoning models in chat completion",
+              "Fix local model loading to work without network connectivity"
+            ],
+            "demand_score": 0.5004556896344562,
+            "rising_score": 1,
+            "volume": 3,
+            "open_count": 1,
+            "closed_count": 2,
+            "avg_reactions": 1.7,
+            "avg_comments": 0.7,
+            "date_first_seen": "2025-10-04T22:49:26.000Z",
+            "date_last_seen": "2026-01-07T10:54:46.000Z",
+            "repos_affected": [
+              "TabbyML/tabby"
+            ]
+          },
+          {
+            "cluster_id": "2723258d4179",
+            "title": "Tabby Agent Code Assistance Improvements",
+            "summary": "Users want to integrate the Agent Skills framework to enhance Tabby's code assistance capabilities, while also addressing a regression in code completion functionality that appeared between versions 1.7.0 and 1.8.0. These improvements would strengthen Tabby Agent's effectiveness as a code completion tool.",
+            "category": "Developer Experience",
+            "representative_need": "Fix code completion regression in Tabby Agent between 1.7.0 and 1.8.0",
+            "issue_numbers": [
+              4411,
+              4384
+            ],
+            "issue_urls": [
+              "https://github.com/TabbyML/tabby/issues/4411",
+              "https://github.com/TabbyML/tabby/issues/4384"
+            ],
+            "sample_titles": [
+              "Fix code completion regression in Tabby Agent between 1.7.0 and 1.8.0",
+              "Integrate Agent Skills framework to enhance Tabby's code assistance capabilities"
+            ],
+            "demand_score": 0.4669845383004019,
+            "rising_score": 1,
+            "volume": 2,
+            "open_count": 2,
+            "closed_count": 0,
+            "avg_reactions": 0,
+            "avg_comments": 1,
+            "date_first_seen": "2025-10-22T05:08:44.000Z",
+            "date_last_seen": "2025-12-19T00:00:16.000Z",
+            "repos_affected": [
+              "TabbyML/tabby"
+            ]
+          },
+          {
+            "cluster_id": "8443da5dbac6",
+            "title": "Enhanced configuration file and settings support",
+            "summary": "Users want improved configuration management including support for custom katana configuration files, proper control of resource settings like max_input_length and completion timeout, and cross-platform config.toml support on Windows. These enhancements would give developers more flexibility in customizing tool behavior and resource usage.",
+            "category": "Configuration",
+            "representative_need": "Fix max_input_length and max_decoding_tokens configuration settings to properly control context window and memory usage",
+            "issue_numbers": [
+              4401,
+              4358,
+              4356,
+              4351
+            ],
+            "issue_urls": [
+              "https://github.com/TabbyML/tabby/issues/4401",
+              "https://github.com/TabbyML/tabby/issues/4358",
+              "https://github.com/TabbyML/tabby/issues/4356",
+              "https://github.com/TabbyML/tabby/issues/4351"
+            ],
+            "sample_titles": [
+              "Fix max_input_length and max_decoding_tokens configuration settings to properly control context window and memory usage",
+              "Increase default completion timeout to 1 minute and document the configuration setting",
+              "Support config.toml configuration on Windows"
+            ],
+            "demand_score": 0.29931788849170654,
+            "rising_score": 1,
+            "volume": 4,
+            "open_count": 3,
+            "closed_count": 1,
+            "avg_reactions": 1,
+            "avg_comments": 1.3,
+            "date_first_seen": "2025-08-28T03:37:53.000Z",
+            "date_last_seen": "2025-11-26T22:45:52.000Z",
+            "repos_affected": [
+              "TabbyML/tabby"
+            ]
+          },
+          {
+            "cluster_id": "c9d97d377591",
+            "title": "OpenAI/LiteLLM Integration Tool Calling",
+            "summary": "Users want enhanced OpenAI and LiteLLM API integration with support for structured tool calling using Pydantic schemas. They also need fixes for compatibility with newer models like gpt-5 to ensure smooth integration with the latest AI capabilities.",
+            "category": "Integration",
+            "representative_need": "Add OpenAI/LiteLLM-compatible structured tool calling with Pydantic schema support",
+            "issue_numbers": [
+              4410,
+              4353
+            ],
+            "issue_urls": [
+              "https://github.com/TabbyML/tabby/issues/4410",
+              "https://github.com/TabbyML/tabby/issues/4353"
+            ],
+            "sample_titles": [
+              "Add OpenAI/LiteLLM-compatible structured tool calling with Pydantic schema support",
+              "Fix gpt-5 model compatibility with OpenAI API integration"
+            ],
+            "demand_score": 0.24528532218771942,
+            "rising_score": 1,
+            "volume": 2,
+            "open_count": 2,
+            "closed_count": 0,
+            "avg_reactions": 1,
+            "avg_comments": 2,
+            "date_first_seen": "2025-08-28T09:52:14.000Z",
+            "date_last_seen": "2025-12-18T17:15:33.000Z",
+            "repos_affected": [
+              "TabbyML/tabby"
+            ]
+          },
+          {
+            "cluster_id": "2cf40688d492",
+            "title": "Fix incorrect information display in CLI and endpoints",
+            "summary": "Users are encountering bugs where the system displays inaccurate information - specifically incorrect version numbers in CLI tools and Homebrew packages, as well as wrong port numbers showing the default instead of the configured value. These display errors reduce trust in the tool's accuracy and make it difficult for developers to properly understand their environment configuration.",
+            "category": "Developer Experience",
+            "representative_need": "Fix endpoint display to show the correct configured port instead of default port 8080",
+            "issue_numbers": [
+              4369,
+              4364
+            ],
+            "issue_urls": [
+              "https://github.com/TabbyML/tabby/issues/4369",
+              "https://github.com/TabbyML/tabby/issues/4364"
+            ],
+            "sample_titles": [
+              "Fix endpoint display to show the correct configured port instead of default port 8080",
+              "Fix incorrect version reporting in CLI and Homebrew package"
+            ],
+            "demand_score": 0.1688690961555479,
+            "rising_score": 1,
+            "volume": 2,
+            "open_count": 0,
+            "closed_count": 2,
+            "avg_reactions": 0,
+            "avg_comments": 1.5,
+            "date_first_seen": "2025-09-18T01:43:56.000Z",
+            "date_last_seen": "2025-09-22T18:06:32.000Z",
+            "repos_affected": [
+              "TabbyML/tabby"
+            ]
+          },
+          {
+            "cluster_id": "81afa2453362",
+            "title": "GPU Hardware Support and Acceleration",
+            "summary": "Users want broader GPU hardware support, specifically for Nvidia 10xx series GPUs like the GTX 1050 Ti, as well as proper GPU acceleration when Tabby runs inside Docker containers. GPU acceleration is critical for performance, so users need both expanded hardware compatibility and correct configuration in containerized environments.",
+            "category": "Platform Support",
+            "representative_need": "Add support for Nvidia 10xx series GPUs (GTX 1050 Ti)",
+            "issue_numbers": [
+              4368,
+              4359
+            ],
+            "issue_urls": [
+              "https://github.com/TabbyML/tabby/issues/4368",
+              "https://github.com/TabbyML/tabby/issues/4359"
+            ],
+            "sample_titles": [
+              "Add support for Nvidia 10xx series GPUs (GTX 1050 Ti)",
+              "Fix ROCM/GPU acceleration not being utilized when Tabby runs inside Docker containers"
+            ],
+            "demand_score": 0.1072849887300427,
+            "rising_score": 1,
+            "volume": 2,
+            "open_count": 1,
+            "closed_count": 1,
+            "avg_reactions": 0,
+            "avg_comments": 0.5,
+            "date_first_seen": "2025-09-09T01:21:27.000Z",
+            "date_last_seen": "2025-09-22T16:40:25.000Z",
+            "repos_affected": [
+              "TabbyML/tabby"
+            ]
+          }
+        ],
+        "category_breakdown": {
+          "Platform Support": 2,
+          "Developer Experience": 5,
+          "Configuration": 2,
+          "Integration": 2
+        }
+      }
+    },
+    {
       "repo": "voideditor/void",
       "slug": "voideditor-void",
       "displayName": "Void",
@@ -7545,9 +8319,11 @@
     "cline-cline": [],
     "google-gemini-gemini-cli": [],
     "zed-industries-zed": [],
+    "OpenHands-OpenHands": [],
     "block-goose": [],
     "continuedev-continue": [],
     "microsoft-vscode-copilot-release": [],
+    "TabbyML-tabby": [],
     "voideditor-void": [],
     "opencode-ai-opencode": []
   }

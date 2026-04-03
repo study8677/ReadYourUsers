@@ -47,14 +47,15 @@ describe("public docs and automation", () => {
     }
 
     expect(workflow).toContain(
-      "OPENAI_BASE_URL: ${{ secrets.OPENAI_BASE_URL || vars.OPENAI_BASE_URL || 'https://openrouter.ai/api/v1' }}"
+      "OPENAI_BASE_URL: ${{ secrets.OPENAI_BASE_URL || vars.OPENAI_BASE_URL || 'https://router.teamolab.com/v1' }}"
     );
     expect(workflow).toContain(
       "OPENROUTER_HTTP_REFERER: ${{ vars.OPENROUTER_HTTP_REFERER || format('{0}/{1}', github.server_url, github.repository) }}"
     );
     expect(workflow).toContain("OPENROUTER_APP_TITLE: ${{ vars.OPENROUTER_APP_TITLE || 'ReadYourUsers' }}");
-    expect(workflow).toContain("ANALYSIS_MODEL: ${{ vars.ANALYSIS_MODEL || 'qwen/qwen3.6-plus:free' }}");
-    expect(workflow).toContain("AGGREGATION_MODEL: ${{ vars.AGGREGATION_MODEL || 'qwen/qwen3.6-plus:free' }}");
+    expect(workflow).toContain("ANALYSIS_MODEL: ${{ vars.ANALYSIS_MODEL || 'TeamoRouter-free' }}");
+    expect(workflow).toContain("AGGREGATION_MODEL: ${{ vars.AGGREGATION_MODEL || 'TeamoRouter-free' }}");
+    expect(workflow).toContain("MAX_PAGES_DEFAULT=\"${{ vars.DEFAULT_FETCH_MAX_PAGES || '1' }}\"");
 
     expect(generator).toContain(
       "const PUBLIC_SITE_COMPARE_EN_URL = `${PUBLIC_SITE_URL}en/compare/index.html`;"

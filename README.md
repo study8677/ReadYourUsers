@@ -16,34 +16,33 @@ ReadYourUsers is a TypeScript workflow and public multi-product observatory for 
 
 <!-- READYOURUSERS:START -->
 
-## Live snapshot — Zed
+## Live snapshot — Tabby
 
-> 37 issues analyzed from [zed-industries/zed](https://github.com/zed-industries/zed) · 8 need clusters · Updated 2026-04-03
+> 55 issues analyzed from [TabbyML/tabby](https://github.com/TabbyML/tabby) · 11 need clusters · Updated 2026-04-03
 
 ### Top needs right now
 
 | Rank | Need | Issues | Score | Category | Examples |
 | --- | --- | --- | --- | --- | --- |
-| 1 | Bug Fixes and Edge Case Improvements | 13 | 3.6 | Developer Experience | [#53087](https://github.com/zed-industries/zed/issues/53087), [#53081](https://github.com/zed-industries/zed/issues/53081), [#53059](https://github.com/zed-industries/zed/issues/53059) |
-| 2 | Git Panel and Graph Bug Fixes | 7 | 2.8 | Reliability | [#53080](https://github.com/zed-industries/zed/issues/53080), [#53069](https://github.com/zed-industries/zed/issues/53069), [#53064](https://github.com/zed-industries/zed/issues/53064) |
-| 3 | AI Agent Integration Fixes | 3 | 2.2 | Integration | [#53034](https://github.com/zed-industries/zed/issues/53034), [#53006](https://github.com/zed-industries/zed/issues/53006), [#52983](https://github.com/zed-industries/zed/issues/52983) |
-| 4 | Agent Panel Stability and Usability Fixes | 4 | 2.0 | Developer Experience | [#53072](https://github.com/zed-industries/zed/issues/53072), [#53070](https://github.com/zed-industries/zed/issues/53070), [#53021](https://github.com/zed-industries/zed/issues/53021) |
-| 5 | Immediate Keybinding and Settings Reload | 2 | 1.8 | Configuration | [#53012](https://github.com/zed-industries/zed/issues/53012), [#53003](https://github.com/zed-industries/zed/issues/53003) |
-| 6 | Fix editor rendering and font loading bugs | 2 | 1.2 | Developer Experience | [#53051](https://github.com/zed-industries/zed/issues/53051), [#52987](https://github.com/zed-industries/zed/issues/52987) |
-| 7 | Terminal interaction and shell command fixes | 3 | 1.2 | Developer Experience | [#53056](https://github.com/zed-industries/zed/issues/53056), [#53046](https://github.com/zed-industries/zed/issues/53046), [#52985](https://github.com/zed-industries/zed/issues/52985) |
-| 8 | UI/UX Bug Fixes | 3 | 1.0 | UI/UX | [#53062](https://github.com/zed-industries/zed/issues/53062), [#53060](https://github.com/zed-industries/zed/issues/53060), [#53005](https://github.com/zed-industries/zed/issues/53005) |
+| 1 | Platform support and deployment flexibility enhancements | 17 | 1.7 | Platform Support | [#4471](https://github.com/TabbyML/tabby/issues/4471), [#4460](https://github.com/TabbyML/tabby/issues/4460), [#4452](https://github.com/TabbyML/tabby/issues/4452) |
+| 2 | IDE Plugin Bug Fixes and Context Improvements | 7 | 1.4 | Developer Experience | [#4420](https://github.com/TabbyML/tabby/issues/4420), [#4418](https://github.com/TabbyML/tabby/issues/4418), [#4404](https://github.com/TabbyML/tabby/issues/4404) |
+| 3 | Improve Git Integration and Repository Operations | 8 | 1.2 | Developer Experience | [#4451](https://github.com/TabbyML/tabby/issues/4451), [#4449](https://github.com/TabbyML/tabby/issues/4449), [#4431](https://github.com/TabbyML/tabby/issues/4431) |
+| 4 | Improve Code Completion Speed and Context Awareness | 2 | 1.0 | Developer Experience | [#4472](https://github.com/TabbyML/tabby/issues/4472), [#4428](https://github.com/TabbyML/tabby/issues/4428) |
+| 5 | Improve self-hosted deployment flexibility and configuration | 3 | 0.6 | Configuration | [#4434](https://github.com/TabbyML/tabby/issues/4434), [#4426](https://github.com/TabbyML/tabby/issues/4426), [#4400](https://github.com/TabbyML/tabby/issues/4400) |
+| 6 | Expand model support and API integrations | 3 | 0.5 | Integration | [#4422](https://github.com/TabbyML/tabby/issues/4422), [#4412](https://github.com/TabbyML/tabby/issues/4412), [#4374](https://github.com/TabbyML/tabby/issues/4374) |
+| 7 | Tabby Agent Code Assistance Improvements | 2 | 0.5 | Developer Experience | [#4411](https://github.com/TabbyML/tabby/issues/4411), [#4384](https://github.com/TabbyML/tabby/issues/4384) |
+| 8 | Enhanced configuration file and settings support | 4 | 0.3 | Configuration | [#4401](https://github.com/TabbyML/tabby/issues/4401), [#4358](https://github.com/TabbyML/tabby/issues/4358), [#4356](https://github.com/TabbyML/tabby/issues/4356) |
+| 9 | OpenAI/LiteLLM Integration Tool Calling | 2 | 0.2 | Integration | [#4410](https://github.com/TabbyML/tabby/issues/4410), [#4353](https://github.com/TabbyML/tabby/issues/4353) |
+| 10 | Fix incorrect information display in CLI and endpoints | 2 | 0.2 | Developer Experience | [#4369](https://github.com/TabbyML/tabby/issues/4369), [#4364](https://github.com/TabbyML/tabby/issues/4364) |
 
 ### Rising fastest
 
 | Need | Rising Score | This Week | Category |
 | --- | --- | --- | --- |
-| Bug Fixes and Edge Case Improvements | 14.0x | 13 | Developer Experience |
-| Git Panel and Graph Bug Fixes | 8.0x | 7 | Reliability |
-| Agent Panel Stability and Usability Fixes | 5.0x | 4 | Developer Experience |
-| AI Agent Integration Fixes | 4.0x | 3 | Integration |
-| Terminal interaction and shell command fixes | 4.0x | 3 | Developer Experience |
+| Platform support and deployment flexibility enhancements | 2.0x | 17 | Platform Support |
+| Improve Code Completion Speed and Context Awareness | 2.0x | 2 | Developer Experience |
 
-[Observatory](https://study8677.github.io/ReadYourUsers/) | [Compare](https://study8677.github.io/ReadYourUsers/en/compare/index.html) | [Product page](https://study8677.github.io/ReadYourUsers/en/products/zed-industries-zed.html) | [Full report](reports/latest/zed-industries-zed.md) | [中文版](README.zh.md) | *Based on public GitHub issues — signal, not census.*
+[Observatory](https://study8677.github.io/ReadYourUsers/) | [Compare](https://study8677.github.io/ReadYourUsers/en/compare/index.html) | [Product page](https://study8677.github.io/ReadYourUsers/en/products/TabbyML-tabby.html) | [Full report](reports/latest/TabbyML-tabby.md) | [中文版](README.zh.md) | *Based on public GitHub issues — signal, not census.*
 
 <!-- READYOURUSERS:END -->
 
@@ -151,6 +150,8 @@ README.zh.md
 | [microsoft/vscode-copilot-release](https://github.com/microsoft/vscode-copilot-release) | GitHub Copilot Chat for VS Code | AI Coding Assistant |
 | [voideditor/void](https://github.com/voideditor/void) | Void | AI Code Editor |
 | [zed-industries/zed](https://github.com/zed-industries/zed) | Zed | AI Code Editor |
+| [OpenHands/OpenHands](https://github.com/OpenHands/OpenHands) | OpenHands | AI-Driven Development |
+| [TabbyML/tabby](https://github.com/TabbyML/tabby) | Tabby | Self-hosted AI Coding Assistant |
 
 ## Limits
 

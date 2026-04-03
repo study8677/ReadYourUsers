@@ -489,6 +489,8 @@ README.zh.md
 | [microsoft/vscode-copilot-release](https://github.com/microsoft/vscode-copilot-release) | GitHub Copilot Chat for VS Code | AI Coding Assistant |
 | [voideditor/void](https://github.com/voideditor/void) | Void | AI Code Editor |
 | [zed-industries/zed](https://github.com/zed-industries/zed) | Zed | AI Code Editor |
+| [OpenHands/OpenHands](https://github.com/OpenHands/OpenHands) | OpenHands | AI-Driven Development |
+| [TabbyML/tabby](https://github.com/TabbyML/tabby) | Tabby | Self-hosted AI Coding Assistant |
 
 ## Limits
 
@@ -668,6 +670,8 @@ README.zh.md
 | [microsoft/vscode-copilot-release](https://github.com/microsoft/vscode-copilot-release) | GitHub Copilot Chat for VS Code | AI 编程助手 |
 | [voideditor/void](https://github.com/voideditor/void) | Void | AI 代码编辑器 |
 | [zed-industries/zed](https://github.com/zed-industries/zed) | Zed | AI 代码编辑器 |
+| [OpenHands/OpenHands](https://github.com/OpenHands/OpenHands) | OpenHands | AI 驱动开发平台 |
+| [TabbyML/tabby](https://github.com/TabbyML/tabby) | Tabby | 自托管 AI 编程助手 |
 
 ## 局限
 
