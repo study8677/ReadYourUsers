@@ -53,6 +53,7 @@ program
   .option("--similarity <n>", "Similarity threshold for clustering", parseFloat, 0.4)
   .option("--min-cluster-size <n>", "Minimum issues per cluster", parseInt, 2)
   .option("--model <name>", "Model for cluster summarization")
+  .option("--llm-merge", "Use LLM to merge semantically similar clusters")
   .action(aggregateCommand);
 
 program
@@ -62,6 +63,7 @@ program
   .option("--config <path>", "Path to repos.json", "./config/repos.json")
   .option("--data-dir <path>", "Data directory", "./data")
   .option("--output-dir <path>", "Reports output directory", "./reports")
+  .option("--llm-themes", "Use LLM-based semantic theme matching across products")
   .action(generateCommand);
 
 program
@@ -72,6 +74,8 @@ program
   .option("--data-dir <path>", "Data directory", "./data")
   .option("--output-dir <path>", "Reports output directory", "./reports")
   .option("--concurrency <n>", "Parallel analysis requests", parseInt, 5)
+  .option("--since-days <n>", "Analysis window in days", parseInt, 30)
+  .option("--llm-themes", "Use LLM-based semantic theme matching across products")
   .action(runCommand);
 
 program.parse();

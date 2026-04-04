@@ -9,6 +9,13 @@ import { logger } from "../utils/logger.js";
 
 const ThrottledOctokit = Octokit.plugin(throttling);
 
+function isNotModified(error: unknown): boolean {
+  if (typeof error === "object" && error !== null && "status" in error) {
+    return (error as { status: number }).status === 304;
+  }
+  return false;
+}
+
 function createOctokit(): InstanceType<typeof ThrottledOctokit> {
   const token =
     process.env.READYOURUSERS_GITHUB_TOKEN ?? process.env.GITHUB_TOKEN;
@@ -83,6 +90,40 @@ export async function fetchIssues(options: FetchOptions): Promise<FetchResult> {
     since: sinceDate ?? "beginning",
   });
 
+  // ETag freshness check: if we have a cached ETag, test if content changed
+  let currentEtag: string | null = meta?.etag ?? null;
+  if (!force && currentEtag && existingIssues.length > 0) {
+    try {
+      const probe = await octokit.issues.listForRepo({
+        owner,
+        repo: repoName,
+        state: "all",
+        sort: "created",
+        direction: "desc",
+        per_page: 1,
+        page: 1,
+        headers: { "If-None-Match": currentEtag },
+      });
+      // Update ETag from response
+      currentEtag = (probe.headers.etag as string) ?? null;
+    } catch (error: unknown) {
+      if (isNotModified(error)) {
+        logger.info(`ETag match — no changes for ${repo}, using cache`);
+        return {
+          repo,
+          totalFetched: existingIssues.length,
+          newIssues: 0,
+          updatedIssues: 0,
+          cachedPath: issuesPath,
+        };
+      }
+      // Other errors: fall through to normal fetch
+      logger.debug("ETag probe failed, proceeding with full fetch", {
+        error: error instanceof Error ? error.message : String(error),
+      });
+    }
+  }
+
   let page = 1;
   let newCount = 0;
   let updatedCount = 0;
@@ -102,6 +143,10 @@ export async function fetchIssues(options: FetchOptions): Promise<FetchResult> {
       per_page: GITHUB_PER_PAGE,
       page,
     });
+
+    if (page === 1 && response.headers.etag) {
+      currentEtag = response.headers.etag;
+    }
 
     const items = response.data;
     if (items.length === 0) break;
@@ -184,7 +229,7 @@ export async function fetchIssues(options: FetchOptions): Promise<FetchResult> {
 
   const newMeta: RepoCacheMeta = {
     repo,
-    etag: null,
+    etag: currentEtag,
     last_fetched: new Date().toISOString(),
     total_issues: allIssues.length,
     oldest_created_at: allIssues.length > 0 ? allIssues[allIssues.length - 1].created_at : null,

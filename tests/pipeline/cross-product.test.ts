@@ -215,14 +215,14 @@ describe("buildCrossProductSummary", () => {
     expect(summary.sharedThemes).toEqual(["reliability", "workflow"]);
     expect(summary.uniqueThemes).toEqual({
       "anthropics-claude-code": ["integration"],
-      "getcursor-cursor": ["ux"],
+      "getcursor-cursor": ["ui/ux"],
       "openai-codex": [],
     });
   });
 });
 
 describe("writeCrossProductSummary", () => {
-  it("skips missing repo aggregations and writes the latest summary artifact", () => {
+  it("skips missing repo aggregations and writes the latest summary artifact", async () => {
     const root = mkdtempSync(resolve(tmpdir(), "ryu-cross-product-"));
     const dataDir = resolve(root, "data");
     const outputDir = resolve(root, "reports");
@@ -232,7 +232,7 @@ describe("writeCrossProductSummary", () => {
       codexAggregation
     );
 
-    const summary = writeCrossProductSummary(configs, dataDir, outputDir);
+    const summary = await writeCrossProductSummary(configs, dataDir, outputDir);
     const artifactPath = resolve(outputDir, "latest", "cross-product.json");
     const artifact = readJSON<CrossProductSummary>(artifactPath);
 

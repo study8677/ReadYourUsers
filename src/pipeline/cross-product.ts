@@ -5,6 +5,11 @@ import type {
   GlobalSignalCard,
   ProductSummaryCard,
 } from "../models/site.js";
+import { callStructured } from "../llm/client.js";
+import { ThemeMatchSchema } from "../schemas/analysis.js";
+import { THEME_MATCH_SYSTEM_PROMPT, buildThemeMatchPrompt } from "../llm/prompts.js";
+import { AGGREGATION_MODEL } from "../config/constants.js";
+import { logger } from "../utils/logger.js";
 
 export interface CrossProductInput {
   config: RepoConfig;
@@ -33,6 +38,42 @@ function compareRisingClusters(left: NeedCluster, right: NeedCluster): number {
     compareText(left.title, right.title) ||
     compareText(left.cluster_id, right.cluster_id)
   );
+}
+
+/** Canonical aliases for LLM-generated category strings */
+const CATEGORY_ALIASES: Record<string, string> = {
+  "dx": "developer experience",
+  "devex": "developer experience",
+  "dev experience": "developer experience",
+  "devx": "developer experience",
+  "ux": "ui/ux",
+  "user experience": "ui/ux",
+  "user interface": "ui/ux",
+  "ui": "ui/ux",
+  "config": "configuration",
+  "setup": "configuration",
+  "perf": "performance",
+  "speed": "performance",
+  "docs": "documentation",
+  "doc": "documentation",
+  "auth": "security",
+  "authentication": "security",
+  "stability": "reliability",
+  "bugs": "reliability",
+  "bug fixes": "reliability",
+  "plugin": "integration",
+  "plugins": "integration",
+  "extensions": "integration",
+  "extension": "integration",
+  "api": "integration",
+  "platform": "platform support",
+  "compatibility": "platform support",
+  "cross-platform": "platform support",
+};
+
+function normalizeCategory(raw: string): string {
+  const lower = raw.toLowerCase().trim();
+  return CATEGORY_ALIASES[lower] ?? lower;
 }
 
 function dominantCategory(breakdown: Record<string, number>): string | null {
@@ -120,7 +161,7 @@ export function buildCrossProductSummary(
   const categoryOwners = new Map<string, Set<string>>();
   for (const product of products) {
     for (const cluster of product.aggregation.clusters) {
-      const theme = cluster.category.toLowerCase();
+      const theme = normalizeCategory(cluster.category);
       const owners = categoryOwners.get(theme) ?? new Set<string>();
       owners.add(product.slug);
       categoryOwners.set(theme, owners);
@@ -134,7 +175,7 @@ export function buildCrossProductSummary(
 
   const uniqueThemes = Object.fromEntries(
     products.map((product) => {
-      const themes = [...new Set(product.aggregation.clusters.map((cluster) => cluster.category.toLowerCase()))]
+      const themes = [...new Set(product.aggregation.clusters.map((cluster) => normalizeCategory(cluster.category)))]
         .filter((theme) => !sharedThemes.includes(theme))
         .sort(compareText);
 
@@ -152,4 +193,67 @@ export function buildCrossProductSummary(
     sharedThemes,
     uniqueThemes,
   };
+}
+
+export async function buildCrossProductSummaryWithLlm(
+  inputs: CrossProductInput[],
+  model: string = AGGREGATION_MODEL
+): Promise<CrossProductSummary> {
+  // First build the base summary (reuse existing logic)
+  const baseSummary = buildCrossProductSummary(inputs);
+
+  if (inputs.length < 2) return baseSummary;
+
+  // Build input for LLM theme matching
+  const productNeeds = inputs.map(({ config, aggregation }) => ({
+    name: config.display_name,
+    needs: [...aggregation.clusters]
+      .sort((a, b) => b.demand_score - a.demand_score)
+      .slice(0, 5)
+      .map((c) => c.title),
+  }));
+
+  try {
+    logger.info("Running LLM-based cross-product theme matching...");
+    const result = await callStructured({
+      model,
+      systemPrompt: THEME_MATCH_SYSTEM_PROMPT,
+      userPrompt: buildThemeMatchPrompt(productNeeds),
+      schema: ThemeMatchSchema,
+      schemaName: "theme_match",
+      maxTokens: 1024,
+      useCache: false,
+    });
+
+    // Replace the string-based shared themes with LLM results
+    const llmSharedThemes = result.shared_themes.map((t) => t.theme.toLowerCase());
+    logger.info(`LLM found ${llmSharedThemes.length} shared themes`, {
+      themes: llmSharedThemes.join(", "),
+    });
+
+    // Rebuild unique themes based on LLM shared themes
+    const sharedThemeSet = new Set(llmSharedThemes);
+
+    // For unique themes, keep the category-based approach but exclude LLM-identified shared themes
+    const uniqueThemes = Object.fromEntries(
+      baseSummary.products.map((product) => {
+        const productThemes = [...new Set(
+          product.aggregation.clusters.map((c) => normalizeCategory(c.category))
+        )];
+        const unique = productThemes.filter((t) => !sharedThemeSet.has(t));
+        return [product.slug, unique.sort(compareText)];
+      })
+    );
+
+    return {
+      ...baseSummary,
+      sharedThemes: llmSharedThemes.sort(compareText),
+      uniqueThemes,
+    };
+  } catch (error) {
+    logger.warn("LLM theme matching failed, falling back to string-based matching", {
+      error: error instanceof Error ? error.message : String(error),
+    });
+    return baseSummary;
+  }
 }

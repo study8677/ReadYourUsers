@@ -24,6 +24,8 @@ export interface DemandScoreInput {
   analyses: IssueAnalysis[];
   reposAffected: number;
   now?: Date;
+  /** If provided, use this for engagement normalization instead of per-cluster max */
+  globalMaxEngagement?: number;
 }
 
 export function computeDemandScore(input: DemandScoreInput): number {
@@ -34,7 +36,7 @@ export function computeDemandScore(input: DemandScoreInput): number {
   const volume = analyses.length;
 
   // Find max engagement for normalization
-  const maxEngagement = Math.max(
+  const maxEngagement = input.globalMaxEngagement ?? Math.max(
     ...analyses.map((a) => a.reactions_total + a.comments_count * 2),
     1
   );

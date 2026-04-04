@@ -10,6 +10,8 @@ interface RunCommandOptions {
   dataDir: string;
   outputDir: string;
   concurrency: number;
+  sinceDays: number;
+  llmThemes?: boolean;
 }
 
 export async function runCommand(
@@ -26,13 +28,15 @@ export async function runCommand(
       continue;
     }
 
+    const repoIndex = repos.indexOf(r) + 1;
+    const repoTotal = repos.length;
     logger.info(`\n${"=".repeat(60)}`);
-    logger.info(`Running full pipeline for ${config.display_name} (${r})`);
+    logger.info(`[${repoIndex}/${repoTotal}] Running full pipeline for ${config.display_name} (${r})`);
     logger.info(`${"=".repeat(60)}\n`);
 
     try {
       // Step 1: Fetch
-      logger.info("Step 1/4: Fetching issues...");
+      logger.info(`[${repoIndex}/${repoTotal}] Step 1/4: Fetching issues...`);
       const fetchResult = await fetchIssues({
         repo: r,
         dataDir: options.dataDir,
@@ -41,9 +45,9 @@ export async function runCommand(
         `Fetched ${fetchResult.totalFetched} issues (${fetchResult.newIssues} new)`
       );
 
-      // Step 2: Analyze (last 30 days by default for performance)
-      const sinceDate = new Date(Date.now() - 30 * 24 * 60 * 60 * 1000).toISOString();
-      logger.info(`\nStep 2/4: Analyzing issues (since ${sinceDate.slice(0, 10)})...`);
+      // Step 2: Analyze (configurable window, default 30 days)
+      const sinceDate = new Date(Date.now() - options.sinceDays * 24 * 60 * 60 * 1000).toISOString();
+      logger.info(`\n[${repoIndex}/${repoTotal}] Step 2/4: Analyzing issues (last ${options.sinceDays} days, since ${sinceDate.slice(0, 10)})...`);
       const analyzeResult = await analyzeIssues({
         repo: r,
         dataDir: options.dataDir,
@@ -53,9 +57,14 @@ export async function runCommand(
       logger.info(
         `Analyzed ${analyzeResult.totalAnalyzed} issues (${analyzeResult.newAnalyses} new, ${analyzeResult.errors} errors)`
       );
+      if (analyzeResult.errors > 0 && analyzeResult.errors > analyzeResult.newAnalyses) {
+        logger.warn(
+          `More errors than successes during analysis — results may be incomplete`
+        );
+      }
 
       // Step 3: Aggregate
-      logger.info("\nStep 3/4: Aggregating clusters...");
+      logger.info(`\n[${repoIndex}/${repoTotal}] Step 3/4: Aggregating clusters...`);
       const aggregation = await aggregateIssues({
         repo: r,
         repoConfig: config,
@@ -66,17 +75,18 @@ export async function runCommand(
       );
 
       // Step 4: Generate
-      logger.info("\nStep 4/4: Generating reports...");
+      logger.info(`\n[${repoIndex}/${repoTotal}] Step 4/4: Generating reports...`);
       const genResult = await generateReports({
         repo: r,
         repoConfig: config,
         repoConfigs: configs,
         dataDir: options.dataDir,
         outputDir: options.outputDir,
+        useLlmThemes: options.llmThemes,
       });
       logger.info(`Report: ${genResult.reportPath}`);
 
-      logger.info(`\n✓ Pipeline complete for ${r}\n`);
+      logger.info(`\n✓ [${repoIndex}/${repoTotal}] Pipeline complete for ${r}\n`);
     } catch (error) {
       logger.error(`Pipeline failed for ${r}`, {
         error: error instanceof Error ? error.message : String(error),

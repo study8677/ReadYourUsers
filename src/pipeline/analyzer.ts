@@ -98,6 +98,8 @@ export async function analyzeIssues(options: AnalyzeOptions): Promise<AnalyzeRes
 
   let errorCount = 0;
   let newCount = 0;
+  let completedCount = 0;
+  const progressInterval = Math.max(1, Math.floor(toAnalyze.length / 20)); // Log every ~5%
 
   const results = await mapWithConcurrency(
     toAnalyze,
@@ -146,6 +148,15 @@ export async function analyzeIssues(options: AnalyzeOptions): Promise<AnalyzeRes
         });
         // Return existing analysis if available, otherwise null
         return existingMap.get(issue.number) ?? null;
+      } finally {
+        completedCount++;
+        if (completedCount % progressInterval === 0 || completedCount === toAnalyze.length) {
+          const pct = Math.round((completedCount / toAnalyze.length) * 100);
+          logger.info(`Analysis progress: ${completedCount}/${toAnalyze.length} (${pct}%)`, {
+            new: newCount,
+            errors: errorCount,
+          });
+        }
       }
     }
   );
@@ -179,6 +190,20 @@ export async function analyzeIssues(options: AnalyzeOptions): Promise<AnalyzeRes
     new: newCount,
     errors: errorCount,
   });
+
+  // Warn prominently if error rate is high
+  const errorRate = toAnalyze.length > 0 ? errorCount / toAnalyze.length : 0;
+  if (errorCount > 0) {
+    logger.warn(
+      `⚠ ${errorCount}/${toAnalyze.length} analyses failed (${(errorRate * 100).toFixed(1)}% error rate)`,
+      { repo, errors: errorCount, attempted: toAnalyze.length }
+    );
+  }
+  if (errorRate > 0.5) {
+    logger.error(
+      `High error rate for ${repo}: ${(errorRate * 100).toFixed(0)}% of analyses failed. Check LLM provider status.`
+    );
+  }
 
   return {
     repo,

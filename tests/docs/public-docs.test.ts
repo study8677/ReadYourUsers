@@ -7,6 +7,8 @@ describe("public docs and automation", () => {
     const readmeZh = readFileSync("README.zh.md", "utf-8");
     const workflow = readFileSync(".github/workflows/weekly-report.yml", "utf-8");
     const generator = readFileSync("src/pipeline/generator.ts", "utf-8");
+    const constants = readFileSync("src/config/constants.ts", "utf-8");
+    const readmeTemplates = readFileSync("src/pipeline/readme-templates.ts", "utf-8");
 
     const openRouterSetupBlock = [
       "LLM_PROVIDER=openai",
@@ -57,18 +59,23 @@ describe("public docs and automation", () => {
     expect(workflow).toContain("AGGREGATION_MODEL: ${{ vars.AGGREGATION_MODEL || 'TeamoRouter-free' }}");
     expect(workflow).toContain("MAX_PAGES_DEFAULT=\"${{ vars.DEFAULT_FETCH_MAX_PAGES || '1' }}\"");
 
-    expect(generator).toContain(
+    // URL constants are now centralized in config/constants.ts
+    expect(constants).toContain(
       "const PUBLIC_SITE_COMPARE_EN_URL = `${PUBLIC_SITE_URL}en/compare/index.html`;"
     );
-    expect(generator).toContain(
+    expect(constants).toContain(
       "const PUBLIC_SITE_COMPARE_ZH_URL = `${PUBLIC_SITE_URL}zh/compare/index.html`;"
     );
-    expect(generator).toContain("[Compare](${PUBLIC_SITE_COMPARE_EN_URL})");
-    expect(generator).toContain("[Product page](${PUBLIC_SITE_URL}en/products/${slug}.html)");
-    expect(generator).toContain("[对比页](${PUBLIC_SITE_COMPARE_ZH_URL})");
-    expect(generator).toContain("[产品页](${PUBLIC_SITE_URL}zh/products/${slug}.html)");
-    expect(generator).toContain('const PROJECT_GITHUB_URL = "https://github.com/study8677/ReadYourUsers";');
-    expect(generator).toContain("OPENROUTER_HTTP_REFERER=${PROJECT_GITHUB_URL}");
-    expect(generator).toContain("reports/latest/cross-product.json");
+    expect(constants).toContain('const PROJECT_GITHUB_URL = "https://github.com/study8677/ReadYourUsers";');
+
+    // README templates moved to readme-templates.ts
+    expect(readmeTemplates).toContain("[Compare](${PUBLIC_SITE_COMPARE_EN_URL})");
+    expect(readmeTemplates).toContain("[Product page](${PUBLIC_SITE_URL}en/products/${slug}.html)");
+    expect(readmeTemplates).toContain("[对比页](${PUBLIC_SITE_COMPARE_ZH_URL})");
+    expect(readmeTemplates).toContain("[产品页](${PUBLIC_SITE_URL}zh/products/${slug}.html)");
+    expect(readmeTemplates).toContain("OPENROUTER_HTTP_REFERER=${PROJECT_GITHUB_URL}");
+
+    // Cross-product output path referenced in README templates
+    expect(readmeTemplates).toContain("reports/latest/cross-product.json");
   });
 });

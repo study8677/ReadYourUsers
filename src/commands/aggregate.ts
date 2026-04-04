@@ -8,6 +8,7 @@ interface AggregateCommandOptions {
   similarity: number;
   minClusterSize: number;
   model?: string;
+  llmMerge?: boolean;
 }
 
 export async function aggregateCommand(
@@ -32,6 +33,7 @@ export async function aggregateCommand(
         similarityThreshold: options.similarity,
         minClusterSize: options.minClusterSize,
         model: options.model,
+        useLlmMerge: options.llmMerge,
       });
       logger.info(
         `✓ ${r}: ${result.clusters.length} clusters from ${result.total_issues_included} issues`

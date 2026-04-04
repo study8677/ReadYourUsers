@@ -60,6 +60,24 @@ ${titlesList}
 Generate a cluster title, summary, and category for this group.`;
 }
 
+export const THEME_MATCH_SYSTEM_PROMPT = `You are a product analyst identifying shared themes across AI coding products. Given each product's top user needs, identify themes that appear in 2+ products even if worded differently.
+
+Guidelines:
+- A "shared theme" means users of different products are asking for the same core capability or fix
+- Focus on the underlying need, not surface wording
+- Use concise, canonical theme names (e.g., "MCP reliability", "code completion speed", "terminal integration")
+- Only include themes present in at least 2 products`;
+
+export function buildThemeMatchPrompt(
+  products: Array<{ name: string; needs: string[] }>
+): string {
+  const productBlocks = products
+    .map((p) => `### ${p.name}\n${p.needs.map((n) => `- ${n}`).join("\n")}`)
+    .join("\n\n");
+
+  return `Here are the top user needs for ${products.length} AI coding products:\n\n${productBlocks}\n\nIdentify shared themes that appear across 2 or more products.`;
+}
+
 export const CLUSTER_MERGE_SYSTEM_PROMPT = `You are a product analyst deciding whether two user needs describe the same underlying request. Two needs should merge if they describe the same core functionality or fix, even if worded differently. They should NOT merge if they're in the same general area but address different specific problems.`;
 
 export function buildClusterMergePrompt(need1: string, need2: string): string {

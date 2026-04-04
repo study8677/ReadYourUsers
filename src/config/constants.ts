@@ -43,3 +43,15 @@ export const TOP_N_REPORT = 10;
 
 /** Recency decay half-life in days */
 export const RECENCY_HALF_LIFE_DAYS = 62;
+
+/** GitHub repository URL for the project */
+export const PROJECT_GITHUB_URL = "https://github.com/study8677/ReadYourUsers";
+
+/** Public site base URL */
+export const PUBLIC_SITE_URL = "https://study8677.github.io/ReadYourUsers/";
+
+/** Derived URLs */
+export const PUBLIC_SITE_EN_URL = `${PUBLIC_SITE_URL}en/index.html`;
+export const PUBLIC_SITE_ZH_URL = `${PUBLIC_SITE_URL}zh/index.html`;
+export const PUBLIC_SITE_COMPARE_EN_URL = `${PUBLIC_SITE_URL}en/compare/index.html`;
+export const PUBLIC_SITE_COMPARE_ZH_URL = `${PUBLIC_SITE_URL}zh/compare/index.html`;

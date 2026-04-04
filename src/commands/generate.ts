@@ -6,6 +6,7 @@ interface GenerateCommandOptions {
   config: string;
   dataDir: string;
   outputDir: string;
+  llmThemes?: boolean;
 }
 
 export async function generateCommand(
@@ -29,6 +30,7 @@ export async function generateCommand(
         repoConfigs: configs,
         dataDir: options.dataDir,
         outputDir: options.outputDir,
+        useLlmThemes: options.llmThemes,
       });
       logger.info(`✓ ${r}: Report at ${result.reportPath}`, {
         readmeUpdated: result.readmeUpdated,

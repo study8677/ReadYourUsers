@@ -1,6 +1,7 @@
 import Anthropic from "@anthropic-ai/sdk";
 import OpenAI from "openai";
 import type { ZodType } from "zod";
+import { zodToJsonSchema } from "zod-to-json-schema";
 import { logger } from "../utils/logger.js";
 
 type Provider = "anthropic" | "openai";
@@ -22,7 +23,7 @@ function getAnthropicClient(): Anthropic {
     if (!apiKey) {
       throw new Error("ANTHROPIC_API_KEY not set.");
     }
-    anthropicClient = new Anthropic({ apiKey });
+    anthropicClient = createAnthropicClient(apiKey);
   }
   return anthropicClient;
 }
@@ -85,13 +86,33 @@ function getOpenAIClient(): OpenAI {
     if (!apiKey) {
       throw new Error("OPENAI_API_KEY not set.");
     }
-    openaiClient = new OpenAI({
+    openaiClient = createOpenAIClient({
       apiKey,
       baseURL: process.env.OPENAI_BASE_URL,
       defaultHeaders: getOpenAIHeaders(),
     });
   }
   return openaiClient;
+}
+
+/** Create a new Anthropic client instance. */
+export function createAnthropicClient(apiKey: string): Anthropic {
+  return new Anthropic({ apiKey });
+}
+
+/** Create a new OpenAI-compatible client instance. */
+export function createOpenAIClient(config: {
+  apiKey: string;
+  baseURL?: string;
+  defaultHeaders?: Record<string, string>;
+}): OpenAI {
+  return new OpenAI(config);
+}
+
+/** Reset cached clients. Exported for testing. */
+export function resetClients(): void {
+  anthropicClient = null;
+  openaiClient = null;
 }
 
 export interface StructuredCallOptions<T> {
@@ -135,7 +156,8 @@ async function callAnthropicStructured<T>(
     },
   ];
 
-  const jsonSchema = zodToJsonSchema(schema);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const jsonSchema = zodToJsonSchema(schema as ZodType<any>, { target: "openApi3" });
 
   const response = await client.messages.create({
     model,
@@ -173,7 +195,8 @@ async function callOpenAIStructured<T>(
   const client = getOpenAIClient();
   const baseUrl = process.env.OPENAI_BASE_URL;
 
-  const jsonSchema = zodToJsonSchema(schema);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const jsonSchema = zodToJsonSchema(schema as ZodType<any>, { target: "openApi3" });
   const modelsToTry = getOpenAIModelFallbacks(model);
   let response: Awaited<ReturnType<typeof client.chat.completions.create>> | null = null;
   let lastError: unknown;
@@ -246,81 +269,3 @@ async function callOpenAIStructured<T>(
   return schema.parse(parsed);
 }
 
-// =====================================================
-// Zod → JSON Schema converter
-// =====================================================
-function zodToJsonSchema(schema: ZodType<unknown>): Record<string, unknown> {
-  const def = (schema as unknown as { _def: Record<string, unknown> })._def;
-  return zodDefToJsonSchema(def);
-}
-
-function zodDefToJsonSchema(def: Record<string, unknown>): Record<string, unknown> {
-  const typeName = def.typeName as string;
-
-  switch (typeName) {
-    case "ZodObject": {
-      const shape = def.shape as () => Record<string, { _def: Record<string, unknown>; description?: string }>;
-      const shapeObj = shape();
-      const properties: Record<string, unknown> = {};
-      const required: string[] = [];
-
-      for (const [key, value] of Object.entries(shapeObj)) {
-        const propSchema = zodDefToJsonSchema(value._def);
-        const desc = value.description ?? (value._def.description as string | undefined);
-        if (desc) {
-          (propSchema as Record<string, unknown>).description = desc;
-        }
-        properties[key] = propSchema;
-        if ((value._def.typeName as string) !== "ZodOptional") {
-          required.push(key);
-        }
-      }
-
-      return { type: "object", properties, required };
-    }
-    case "ZodString":
-      return { type: "string" };
-    case "ZodNumber": {
-      const result: Record<string, unknown> = { type: "number" };
-      const checks = def.checks as Array<{ kind: string; value: number }> | undefined;
-      if (checks) {
-        for (const check of checks) {
-          if (check.kind === "min") result.minimum = check.value;
-          if (check.kind === "max") result.maximum = check.value;
-        }
-      }
-      return result;
-    }
-    case "ZodBoolean":
-      return { type: "boolean" };
-    case "ZodEnum": {
-      const values = def.values as string[];
-      return { type: "string", enum: values };
-    }
-    case "ZodArray": {
-      const innerType = def.type as { _def: Record<string, unknown> };
-      const items = zodDefToJsonSchema(innerType._def);
-      const result: Record<string, unknown> = { type: "array", items };
-      const minLength = def.minLength as { value: number } | null;
-      const maxLength = def.maxLength as { value: number } | null;
-      if (minLength) result.minItems = minLength.value;
-      if (maxLength) result.maxItems = maxLength.value;
-      return result;
-    }
-    case "ZodEffects": {
-      const inner = def.schema as { _def: Record<string, unknown> };
-      return zodDefToJsonSchema(inner._def);
-    }
-    case "ZodOptional": {
-      const inner = def.innerType as { _def: Record<string, unknown> };
-      return zodDefToJsonSchema(inner._def);
-    }
-    case "ZodDefault": {
-      const inner = def.innerType as { _def: Record<string, unknown> };
-      return zodDefToJsonSchema(inner._def);
-    }
-    default:
-      logger.warn(`Unknown Zod type: ${typeName}, falling back to any`);
-      return {};
-  }
-}

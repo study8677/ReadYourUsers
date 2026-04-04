@@ -47,6 +47,13 @@ export const ClusterMergeSchema = z.object({
   reason: z.string().describe("Brief explanation of why they should or should not merge"),
 });
 
+export const ThemeMatchSchema = z.object({
+  shared_themes: z.array(z.object({
+    theme: z.string().describe("A canonical theme name shared across products"),
+    products: z.array(z.string()).describe("Product names that share this theme"),
+  })).describe("Themes that appear in multiple products"),
+});
+
 export const ClusterSummarySchema = z.object({
   title: z
     .string()
