@@ -127,6 +127,190 @@
       "include_in_homepage": true,
       "weight": 0.8,
       "notes": "Self-hosted AI coding assistant with active issue-based product feedback"
+    },
+    {
+      "repo": "ollama/ollama",
+      "display_name": "Ollama",
+      "category": "Local LLM Runtime",
+      "include_in_homepage": true,
+      "weight": 1.0,
+      "notes": "167k stars — the most popular way to run local LLMs"
+    },
+    {
+      "repo": "open-webui/open-webui",
+      "display_name": "Open WebUI",
+      "category": "AI Chat Interface",
+      "include_in_homepage": true,
+      "weight": 1.0,
+      "notes": "130k stars — most popular self-hosted AI chat UI"
+    },
+    {
+      "repo": "langgenius/dify",
+      "display_name": "Dify",
+      "category": "AI Agent Platform",
+      "include_in_homepage": true,
+      "weight": 1.0,
+      "notes": "136k stars — production-ready agentic workflow development platform"
+    },
+    {
+      "repo": "n8n-io/n8n",
+      "display_name": "n8n",
+      "category": "AI Workflow Automation",
+      "include_in_homepage": true,
+      "weight": 0.9,
+      "notes": "182k stars — workflow automation with native AI capabilities"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "display_name": "LangChain",
+      "category": "AI Framework",
+      "include_in_homepage": true,
+      "weight": 1.0,
+      "notes": "132k stars — the leading agent engineering platform"
+    },
+    {
+      "repo": "Comfy-Org/ComfyUI",
+      "display_name": "ComfyUI",
+      "category": "AI Image Generation",
+      "include_in_homepage": true,
+      "weight": 1.0,
+      "notes": "108k stars — modular diffusion model GUI with 3900+ open issues"
+    },
+    {
+      "repo": "AUTOMATIC1111/stable-diffusion-webui",
+      "display_name": "Stable Diffusion WebUI",
+      "category": "AI Image Generation",
+      "include_in_homepage": true,
+      "weight": 0.9,
+      "notes": "162k stars — the original SD web interface"
+    },
+    {
+      "repo": "vllm-project/vllm",
+      "display_name": "vLLM",
+      "category": "LLM Inference Engine",
+      "include_in_homepage": true,
+      "weight": 1.0,
+      "notes": "75k stars — high-throughput LLM serving with 4000+ open issues"
+    },
+    {
+      "repo": "ggml-org/llama.cpp",
+      "display_name": "llama.cpp",
+      "category": "Local LLM Runtime",
+      "include_in_homepage": true,
+      "weight": 1.0,
+      "notes": "101k stars — LLM inference in C/C++ with 1300+ open issues"
+    },
+    {
+      "repo": "infiniflow/ragflow",
+      "display_name": "RAGFlow",
+      "category": "RAG Engine",
+      "include_in_homepage": true,
+      "weight": 1.0,
+      "notes": "77k stars — open-source RAG engine with 3200+ open issues"
+    },
+    {
+      "repo": "hiyouga/LlamaFactory",
+      "display_name": "LLaMA Factory",
+      "category": "LLM Fine-tuning",
+      "include_in_homepage": true,
+      "weight": 0.9,
+      "notes": "70k stars — unified fine-tuning of 100+ LLMs"
+    },
+    {
+      "repo": "Significant-Gravitas/AutoGPT",
+      "display_name": "AutoGPT",
+      "category": "AI Agent",
+      "include_in_homepage": true,
+      "weight": 0.9,
+      "notes": "183k stars — autonomous AI agent platform"
+    },
+    {
+      "repo": "microsoft/autogen",
+      "display_name": "AutoGen",
+      "category": "AI Agent Framework",
+      "include_in_homepage": true,
+      "weight": 1.0,
+      "notes": "57k stars — Microsoft's multi-agent programming framework"
+    },
+    {
+      "repo": "crewAIInc/crewAI",
+      "display_name": "CrewAI",
+      "category": "AI Agent Framework",
+      "include_in_homepage": true,
+      "weight": 0.9,
+      "notes": "48k stars — orchestrating role-playing autonomous AI agents"
+    },
+    {
+      "repo": "BerriAI/litellm",
+      "display_name": "LiteLLM",
+      "category": "LLM Gateway",
+      "include_in_homepage": true,
+      "weight": 0.9,
+      "notes": "42k stars — LLM proxy for 100+ APIs with 2200+ open issues"
+    },
+    {
+      "repo": "FlowiseAI/Flowise",
+      "display_name": "Flowise",
+      "category": "AI Agent Platform",
+      "include_in_homepage": true,
+      "weight": 0.9,
+      "notes": "51k stars — visual AI agent builder with 800+ open issues"
+    },
+    {
+      "repo": "danny-avila/LibreChat",
+      "display_name": "LibreChat",
+      "category": "AI Chat Interface",
+      "include_in_homepage": true,
+      "weight": 0.9,
+      "notes": "35k stars — enhanced ChatGPT clone with agents and MCP"
+    },
+    {
+      "repo": "ChatGPTNextWeb/NextChat",
+      "display_name": "NextChat",
+      "category": "AI Chat Interface",
+      "include_in_homepage": true,
+      "weight": 0.8,
+      "notes": "88k stars — cross-platform lightweight AI assistant"
+    },
+    {
+      "repo": "RVC-Boss/GPT-SoVITS",
+      "display_name": "GPT-SoVITS",
+      "category": "AI Voice/TTS",
+      "include_in_homepage": true,
+      "weight": 0.9,
+      "notes": "56k stars — few-shot voice cloning and TTS with 870+ open issues"
+    },
+    {
+      "repo": "browser-use/browser-use",
+      "display_name": "Browser Use",
+      "category": "AI Agent",
+      "include_in_homepage": true,
+      "weight": 1.0,
+      "notes": "86k stars — make websites accessible for AI agents"
+    },
+    {
+      "repo": "toeverything/AFFiNE",
+      "display_name": "AFFiNE",
+      "category": "AI Knowledge Base",
+      "include_in_homepage": true,
+      "weight": 0.9,
+      "notes": "67k stars — next-gen knowledge base (Notion+Miro alternative) with AI"
+    },
+    {
+      "repo": "unslothai/unsloth",
+      "display_name": "Unsloth",
+      "category": "LLM Fine-tuning",
+      "include_in_homepage": true,
+      "weight": 0.9,
+      "notes": "59k stars — fast local model training with 1000+ open issues"
+    },
+    {
+      "repo": "langfuse/langfuse",
+      "display_name": "Langfuse",
+      "category": "LLM Observability",
+      "include_in_homepage": true,
+      "weight": 0.9,
+      "notes": "24k stars — open-source LLM engineering platform"
     }
   ]
 }
