@@ -3,7 +3,7 @@ import type { ProductSummaryCard } from "../../models/site.js";
 import type { UiLang } from "../i18n.js";
 import { ui } from "../i18n.js";
 import { escapeHtml, formatDate, markdownToHtml, type SiteReportEntry } from "../html.js";
-import { PUBLIC_SITE_URL } from "../../config/constants.js";
+import { PROJECT_GITHUB_URL, PUBLIC_SITE_URL } from "../../config/constants.js";
 
 // =====================================================
 // Print CSS
@@ -276,7 +276,7 @@ function printPageShell(lang: UiLang, title: string, bodyHtml: string): string {
   ${bodyHtml}
   <footer class="print-footer">
     <p>${t.printPoweredBy}</p>
-    <p>${PUBLIC_SITE_URL}</p>
+    <p><a href="${PROJECT_GITHUB_URL}">${PROJECT_GITHUB_URL}</a></p>
   </footer>
   <script>
     if (window.matchMedia("print").matches || /[?&]print=1/.test(location.search)) {
