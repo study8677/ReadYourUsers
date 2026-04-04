@@ -94,7 +94,9 @@ export function buildReportPage(uiLang: UiLang, entry: SiteReportEntry): string 
   const currentRoutePath = entry.week
     ? routeFor(uiLang, `archive/${entry.week}/${entry.slug}.html`)
     : routeFor(uiLang, `latest/${entry.slug}.html`);
-  const body = `<section class="page-intro narrow"><p class="eyebrow">${entry.week ? t.reportPageArchive : t.reportPageLatest}</p><h1>${escapeHtml(reportLabel)}</h1><div class="report-links"><a href="${rawHref}">${t.rawMarkdown}</a><a href="${alternateHref}">${uiLang === "en" ? t.switchToChinese : t.switchToEnglish}</a></div></section><article class="markdown-body">${html}</article>`;
+  const printHref = entry.week ? "" : `${base}/${routeFor(uiLang, `print/${entry.slug}.html`)}`;
+  const pdfLink = printHref ? `<a href="${printHref}" target="_blank">${t.downloadPdf}</a>` : "";
+  const body = `<section class="page-intro narrow"><p class="eyebrow">${entry.week ? t.reportPageArchive : t.reportPageLatest}</p><h1>${escapeHtml(reportLabel)}</h1><div class="report-links">${pdfLink}<a href="${rawHref}">${t.rawMarkdown}</a><a href="${alternateHref}">${uiLang === "en" ? t.switchToChinese : t.switchToEnglish}</a></div></section><article class="markdown-body">${html}</article>`;
 
   return pageTemplate({
     uiLang,

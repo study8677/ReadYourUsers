@@ -24,6 +24,7 @@ export function buildProductPage(uiLang: UiLang, product: ProductSummaryCard): s
         <h1>${escapeHtml(product.displayName)}</h1>
         <p class="hero-copy">${escapeHtml(topNeed?.summary ?? "")}</p>
         <div class="report-links">
+          <a href="${base}/${routeFor(uiLang, `print/product-${product.slug}.html`)}" target="_blank">${t.downloadPdf}</a>
           <a href="${base}/${routeFor("en", `latest/${product.slug}.html`)}">${t.reportEn}</a>
           <a href="${base}/${routeFor("zh", `latest/${product.slug}.html`)}">${t.reportZh}</a>
           <a href="${base}/${product.reportPaths[uiLang]}">${t.rawMarkdown}</a>

@@ -19,6 +19,7 @@ import { buildObservatoryHomePage } from "./pages/observatory.js";
 import { buildComparePage, getVisibleProducts } from "./pages/compare.js";
 import { buildToolsPage } from "./pages/tools.js";
 import { buildProductPage } from "./pages/product.js";
+import { buildReportPrintPage, buildProductPrintPage } from "./pages/print.js";
 import { buildLatestIndex, buildArchiveIndex, buildReportPage } from "./pages/reports.js";
 
 const DEFAULT_HOME_SLUG = "anthropics-claude-code";
@@ -282,9 +283,15 @@ export function buildSite(rootDir = process.cwd()): void {
   writeText(resolve(paths.siteDir, "index.html"), rootRedirectPage());
 
   for (const entry of latestEntries) {
-    writeText(entry.outputHtmlPath, buildReportPage(entry.routePath.startsWith("en/") ? "en" : "zh", entry));
+    const entryLang: UiLang = entry.routePath.startsWith("en/") ? "en" : "zh";
+    writeText(entry.outputHtmlPath, buildReportPage(entryLang, entry));
     ensureDir(resolve(entry.outputRawPath, ".."));
     copyFileSync(entry.sourcePath, entry.outputRawPath);
+    // Generate print-optimized page for PDF download
+    writeText(
+      absoluteSitePath(paths.siteDir, routeFor(entryLang, `print/${entry.slug}.html`)),
+      buildReportPrintPage(entryLang, entry)
+    );
   }
 
   for (const entries of archiveEntries.values()) {
@@ -332,6 +339,11 @@ export function buildSite(rootDir = process.cwd()): void {
       writeText(
         absoluteSitePath(paths.siteDir, routeFor(uiLang, `products/${product.slug}.html`)),
         buildProductPage(uiLang, product)
+      );
+      // Generate print-optimized page for PDF download
+      writeText(
+        absoluteSitePath(paths.siteDir, routeFor(uiLang, `print/product-${product.slug}.html`)),
+        buildProductPrintPage(uiLang, product)
       );
     }
   }
