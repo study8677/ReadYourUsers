@@ -311,6 +311,14 @@
       "include_in_homepage": true,
       "weight": 0.9,
       "notes": "24k stars — open-source LLM engineering platform"
+    },
+    {
+      "repo": "ruanyf/weekly",
+      "display_name": "科技爱好者周刊",
+      "category": "Tech Community",
+      "include_in_homepage": true,
+      "weight": 0.8,
+      "notes": "87k stars — Ruanyf tech weekly with 7400+ open issues for reader submissions"
     }
   ]
 }
