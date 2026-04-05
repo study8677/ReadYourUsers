@@ -45,7 +45,7 @@ export function buildObservatoryHomePage(
           <span>${escapeHtml(product.dominantCategory ?? "—")}</span>
         </div>
         <div class="report-links">
-          <a href="./products/${product.slug}.html">${escapeHtml(product.displayName)}</a>
+          <a href="./products/${product.slug}.html">${t.homeProductViewDetail}</a>
           <a href="./latest/${product.slug}.html">${t.productLatestReport}</a>
           ${
             risingNeed
