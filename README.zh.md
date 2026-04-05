@@ -158,6 +158,10 @@ npm run site:build
 npm test
 ```
 
+## 友链
+
+- [LINUX DO](https://linux.do/) — 真正的技术社区
+
 ## License
 
 MIT
