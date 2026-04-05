@@ -59,11 +59,11 @@ jobs:
             MAX_PAGES="$MAX_PAGES_DEFAULT"
           fi
           if [ -n "$MAX_PAGES" ]; then
-            # For fetch step, use max_pages; for full run we do steps separately
-            npx tsx src/cli.ts fetch $ARGS --max-pages "$MAX_PAGES" --verbose
-            npx tsx src/cli.ts analyze $ARGS --verbose
-            npx tsx src/cli.ts aggregate $ARGS --verbose
-            npx tsx src/cli.ts generate $ARGS --verbose
+            # Each step may have partial failures (e.g. empty repos) — continue to next step
+            npx tsx src/cli.ts fetch $ARGS --max-pages "$MAX_PAGES" --verbose || true
+            npx tsx src/cli.ts analyze $ARGS --verbose || true
+            npx tsx src/cli.ts aggregate $ARGS --verbose || true
+            npx tsx src/cli.ts generate $ARGS --verbose || true
           else
             npx tsx src/cli.ts run $ARGS --verbose
           fi
