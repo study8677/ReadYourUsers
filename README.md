@@ -16,23 +16,36 @@ ReadYourUsers is a TypeScript workflow and public multi-product observatory for 
 
 <!-- READYOURUSERS:START -->
 
-## Live snapshot — 科技爱好者周刊
+## Live snapshot — Claude Code
 
-> 94 issues analyzed from [ruanyf/weekly](https://github.com/ruanyf/weekly) · 1 need clusters · Updated 2026-04-05
+> 2122 issues analyzed from [anthropics/claude-code](https://github.com/anthropics/claude-code) · 25 need clusters · Updated 2026-04-05
 
 ### Top needs right now
 
 | Rank | Need | Issues | Score | Category | Examples |
 | --- | --- | --- | --- | --- | --- |
-| 1 | AI-Powered Developer Tools and Workflow Integration | 37 | 2.4 | Developer Experience | [#9517](https://github.com/ruanyf/weekly/issues/9517), [#9505](https://github.com/ruanyf/weekly/issues/9505), [#9482](https://github.com/ruanyf/weekly/issues/9482) |
+| 1 | CLI Session Management and Stability Improvements | 2023 | 20.3 | Developer Experience | [#42637](https://github.com/anthropics/claude-code/issues/42637), [#42624](https://github.com/anthropics/claude-code/issues/42624), [#42607](https://github.com/anthropics/claude-code/issues/42607) |
+| 2 | Custom commands in .claude/commands/ not recognized | 2 | 0.1 | Developer Experience | [#41832](https://github.com/anthropics/claude-code/issues/41832), [#41243](https://github.com/anthropics/claude-code/issues/41243) |
+| 3 | Reduce excessive token consumption | 2 | 0.1 | Performance | [#41035](https://github.com/anthropics/claude-code/issues/41035), [#40997](https://github.com/anthropics/claude-code/issues/40997) |
+| 4 | Fix excessive token consumption | 2 | 0.0 | Performance | [#42181](https://github.com/anthropics/claude-code/issues/42181), [#40790](https://github.com/anthropics/claude-code/issues/40790) |
+| 5 | Preserve transcript and history during subagent execution | 2 | 0.0 | Reliability | [#42283](https://github.com/anthropics/claude-code/issues/42283), [#40892](https://github.com/anthropics/claude-code/issues/40892) |
+| 6 | Companion UI visibility toggle setting | 2 | 0.0 | Configuration | [#42287](https://github.com/anthropics/claude-code/issues/42287), [#41942](https://github.com/anthropics/claude-code/issues/41942) |
+| 7 | Fix Unexpected High Resource Consumption | 3 | 0.0 | Performance | [#41425](https://github.com/anthropics/claude-code/issues/41425), [#41385](https://github.com/anthropics/claude-code/issues/41385), [#41200](https://github.com/anthropics/claude-code/issues/41200) |
+| 8 | Fix MCP connectors not loading in Remote Trigger | 2 | 0.0 | Reliability | [#42599](https://github.com/anthropics/claude-code/issues/42599), [#41934](https://github.com/anthropics/claude-code/issues/41934) |
+| 9 | Add settings to disable companion features | 3 | 0.0 | Configuration | [#42506](https://github.com/anthropics/claude-code/issues/42506), [#42212](https://github.com/anthropics/claude-code/issues/42212), [#41091](https://github.com/anthropics/claude-code/issues/41091) |
+| 10 | Fix rate limit false positive errors | 2 | 0.0 | Reliability | [#40748](https://github.com/anthropics/claude-code/issues/40748), [#40536](https://github.com/anthropics/claude-code/issues/40536) |
 
 ### Rising fastest
 
 | Need | Rising Score | This Week | Category |
 | --- | --- | --- | --- |
-| AI-Powered Developer Tools and Workflow Integration | 6.8x | 37 | Developer Experience |
+| CLI Session Management and Stability Improvements | 13.9x | 2023 | Developer Experience |
+| Fix Unexpected High Resource Consumption | 4.0x | 3 | Performance |
+| Add settings to disable companion features | 4.0x | 3 | Configuration |
+| MCP connector tools availability in sessions | 4.0x | 3 | Integration |
+| Custom commands in .claude/commands/ not recognized | 3.0x | 2 | Developer Experience |
 
-[Observatory](https://study8677.github.io/ReadYourUsers/) | [Compare](https://study8677.github.io/ReadYourUsers/en/compare/index.html) | [Product page](https://study8677.github.io/ReadYourUsers/en/products/ruanyf-weekly.html) | [Full report](reports/latest/ruanyf-weekly.md) | [中文版](README.zh.md) | *Based on public GitHub issues — signal, not census.*
+[Observatory](https://study8677.github.io/ReadYourUsers/) | [Compare](https://study8677.github.io/ReadYourUsers/en/compare/index.html) | [Product page](https://study8677.github.io/ReadYourUsers/en/products/anthropics-claude-code.html) | [Full report](reports/latest/anthropics-claude-code.md) | [中文版](README.zh.md) | *Based on public GitHub issues — signal, not census.*
 
 <!-- READYOURUSERS:END -->
 
