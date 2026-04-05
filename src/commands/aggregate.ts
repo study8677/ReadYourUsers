@@ -1,5 +1,6 @@
 import { loadRepoConfigs } from "../config/repos.js";
 import { aggregateIssues } from "../pipeline/aggregator.js";
+import { mapWithConcurrency } from "../utils/concurrency.js";
 import { logger } from "../utils/logger.js";
 
 interface AggregateCommandOptions {
@@ -9,6 +10,7 @@ interface AggregateCommandOptions {
   minClusterSize: number;
   model?: string;
   llmMerge?: boolean;
+  parallel: number;
 }
 
 export async function aggregateCommand(
@@ -17,14 +19,16 @@ export async function aggregateCommand(
 ): Promise<void> {
   const configs = loadRepoConfigs(options.config);
   const repos = repo ? [repo] : configs.map((c) => c.repo);
-
-  for (const r of repos) {
-    const config = configs.find((c) => c.repo === r);
-    if (!config) {
+  const validRepos = repos.filter((r) => {
+    if (!configs.find((c) => c.repo === r)) {
       logger.warn(`Repository ${r} not found in config, skipping`);
-      continue;
+      return false;
     }
+    return true;
+  });
 
+  await mapWithConcurrency(validRepos, options.parallel, async (r, index) => {
+    const config = configs.find((c) => c.repo === r)!;
     try {
       const result = await aggregateIssues({
         repo: r,
@@ -36,13 +40,12 @@ export async function aggregateCommand(
         useLlmMerge: options.llmMerge,
       });
       logger.info(
-        `✓ ${r}: ${result.clusters.length} clusters from ${result.total_issues_included} issues`
+        `✓ [${index + 1}/${validRepos.length}] ${r}: ${result.clusters.length} clusters from ${result.total_issues_included} issues`
       );
     } catch (error) {
       logger.error(`Failed to aggregate ${r}`, {
         error: error instanceof Error ? error.message : String(error),
       });
-      process.exitCode = 1;
     }
-  }
+  });
 }

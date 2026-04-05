@@ -30,6 +30,7 @@ program
   .option("--since <date>", "Only fetch issues created after this date (ISO 8601)")
   .option("--max-pages <n>", "Maximum pages to fetch", parseInt)
   .option("--force", "Ignore cache, re-fetch everything")
+  .option("--parallel <n>", "Number of repos to process in parallel", parseInt, 1)
   .action(fetchCommand);
 
 program
@@ -42,6 +43,7 @@ program
   .option("--concurrency <n>", "Parallel analysis requests", parseInt, 5)
   .option("--re-analyze", "Re-analyze all issues, not just new ones")
   .option("--since <date>", "Only analyze issues created after this date (ISO 8601)")
+  .option("--parallel <n>", "Number of repos to analyze in parallel", parseInt, 1)
   .action(analyzeCommand);
 
 program
@@ -54,6 +56,7 @@ program
   .option("--min-cluster-size <n>", "Minimum issues per cluster", parseInt, 2)
   .option("--model <name>", "Model for cluster summarization")
   .option("--llm-merge", "Use LLM to merge semantically similar clusters")
+  .option("--parallel <n>", "Number of repos to aggregate in parallel", parseInt, 1)
   .action(aggregateCommand);
 
 program

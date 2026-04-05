@@ -60,9 +60,10 @@ jobs:
           fi
           if [ -n "$MAX_PAGES" ]; then
             # Each step may have partial failures (e.g. empty repos) — continue to next step
-            npx tsx src/cli.ts fetch $ARGS --max-pages "$MAX_PAGES" --verbose || true
-            npx tsx src/cli.ts analyze $ARGS --verbose || true
-            npx tsx src/cli.ts aggregate $ARGS --verbose || true
+            # --parallel: process multiple repos concurrently for speed
+            npx tsx src/cli.ts fetch $ARGS --max-pages "$MAX_PAGES" --parallel 5 --verbose || true
+            npx tsx src/cli.ts analyze $ARGS --parallel 5 --verbose || true
+            npx tsx src/cli.ts aggregate $ARGS --parallel 5 --verbose || true
             npx tsx src/cli.ts generate $ARGS --verbose || true
           else
             npx tsx src/cli.ts run $ARGS --verbose

@@ -1,5 +1,6 @@
 import { loadRepoConfigs } from "../config/repos.js";
 import { fetchIssues } from "../pipeline/fetcher.js";
+import { mapWithConcurrency } from "../utils/concurrency.js";
 import { logger } from "../utils/logger.js";
 
 interface FetchCommandOptions {
@@ -8,6 +9,7 @@ interface FetchCommandOptions {
   since?: string;
   maxPages?: number;
   force?: boolean;
+  parallel: number;
 }
 
 export async function fetchCommand(
@@ -16,14 +18,15 @@ export async function fetchCommand(
 ): Promise<void> {
   const configs = loadRepoConfigs(options.config);
   const repos = repo ? [repo] : configs.map((c) => c.repo);
-
-  for (const r of repos) {
-    const config = configs.find((c) => c.repo === r);
-    if (!config) {
+  const validRepos = repos.filter((r) => {
+    if (!configs.find((c) => c.repo === r)) {
       logger.warn(`Repository ${r} not found in config, skipping`);
-      continue;
+      return false;
     }
+    return true;
+  });
 
+  await mapWithConcurrency(validRepos, options.parallel, async (r, index) => {
     try {
       const result = await fetchIssues({
         repo: r,
@@ -32,12 +35,11 @@ export async function fetchCommand(
         maxPages: options.maxPages,
         force: options.force,
       });
-      logger.info(`✓ ${r}: ${result.totalFetched} issues (${result.newIssues} new, ${result.updatedIssues} updated)`);
+      logger.info(`✓ [${index + 1}/${validRepos.length}] ${r}: ${result.totalFetched} issues (${result.newIssues} new, ${result.updatedIssues} updated)`);
     } catch (error) {
       logger.error(`Failed to fetch ${r}`, {
         error: error instanceof Error ? error.message : String(error),
       });
-      process.exitCode = 1;
     }
-  }
+  });
 }
