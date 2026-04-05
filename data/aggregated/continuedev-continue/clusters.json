@@ -1,280 +1,143 @@
 {
   "repo": "continuedev/continue",
   "display_name": "Continue",
-  "generated_at": "2026-04-03T14:05:32.072Z",
-  "window_start": "2026-03-04T14:05:32.072Z",
-  "window_end": "2026-04-03T14:05:32.072Z",
-  "total_issues_analyzed": 38,
-  "total_issues_included": 34,
+  "generated_at": "2026-04-05T07:15:04.129Z",
+  "window_start": "2026-03-06T07:15:04.129Z",
+  "window_end": "2026-04-05T07:15:04.129Z",
+  "total_issues_analyzed": 41,
+  "total_issues_included": 36,
   "clusters": [
     {
-      "cluster_id": "cc8ffec07ace",
-      "title": "Bug Fixes and Documentation for Multi-Provider Integration",
-      "summary": "Users are requesting various bug fixes to improve reliability across different LLM providers (OpenAI, Ollama, LM Studio, OpenRouter) and IDE integrations (IntelliJ/JetBrains). These issues affect core functionality like streaming, tool calls, file editing, and process management. Additionally, users need documentation for CLI commands and provider-specific API headers.",
-      "category": "Developer Experience",
-      "representative_need": "Add documentation for the cn review CLI command",
+      "cluster_id": "d25fccc69227",
+      "title": "LLM Provider Integration and Error Handling",
+      "summary": "Users are experiencing various issues with LLM provider integration including authentication failures, unclear error messages, API quota handling, and connection problems. They want more robust API error handling with clearer messaging, proper API key usage (preferring user-provided keys over Continue credits), and fixes for reasoning model compatibility issues with tool calling and streaming.",
+      "category": "Integration",
+      "representative_need": "Add documentation for the `cn review` CLI command covering check file discovery from both .continue/agents/ and .continue/checks/ directories",
       "issue_numbers": [
+        12008,
+        12004,
+        11963,
+        11933,
+        11962,
+        11956,
+        11952,
+        11934,
+        11921,
+        12030,
+        11994,
+        11976,
+        11983,
+        11926,
+        11925,
+        12032,
+        11923,
         11999,
+        11977,
+        11964,
+        11929,
+        11959,
+        11919,
         11985,
         11978,
-        11962,
+        11966,
         11960,
         11954,
         11953,
-        11924,
-        11923,
-        11918,
-        11917
-      ],
-      "issue_urls": [
-        "https://github.com/continuedev/continue/issues/11999",
-        "https://github.com/continuedev/continue/issues/11985",
-        "https://github.com/continuedev/continue/issues/11978",
-        "https://github.com/continuedev/continue/issues/11962",
-        "https://github.com/continuedev/continue/issues/11960",
-        "https://github.com/continuedev/continue/issues/11954",
-        "https://github.com/continuedev/continue/issues/11953",
-        "https://github.com/continuedev/continue/issues/11924",
-        "https://github.com/continuedev/continue/issues/11923",
-        "https://github.com/continuedev/continue/issues/11918",
-        "https://github.com/continuedev/continue/issues/11917"
-      ],
-      "sample_titles": [
-        "Add documentation for the cn review CLI command",
-        "Continue supporting and updating JetBrains IDE integration",
-        "Document OpenRouter HTTP-Referer and X-Title headers for app identification"
-      ],
-      "demand_score": 2.1218906400453807,
-      "rising_score": 1.6,
-      "volume": 11,
-      "open_count": 7,
-      "closed_count": 4,
-      "avg_reactions": 0.3,
-      "avg_comments": 0.3,
-      "date_first_seen": "2026-03-27T02:11:27.000Z",
-      "date_last_seen": "2026-04-02T07:43:23.000Z",
-      "repos_affected": [
-        "continuedev/continue"
-      ]
-    },
-    {
-      "cluster_id": "b38b1a42a178",
-      "title": "Document config profiles and improve API error handling",
-      "summary": "Users need comprehensive documentation for the `.continue/configs/` directory feature that supports local configuration profiles, making it easier to discover and use this functionality. Additionally, users want better error handling and visibility for API-related issues including maxTokens edge cases near context limits, API usage limits, and proxy connection failures so they are warned rather than experiencing silent failures.",
-      "category": "Developer Experience",
-      "representative_need": "Add API usage and limit visibility within the extension",
-      "issue_numbers": [
-        12026,
-        12004,
-        11968,
-        11963,
-        11944,
-        11934,
-        11933
-      ],
-      "issue_urls": [
-        "https://github.com/continuedev/continue/issues/12026",
-        "https://github.com/continuedev/continue/issues/12004",
-        "https://github.com/continuedev/continue/issues/11968",
-        "https://github.com/continuedev/continue/issues/11963",
-        "https://github.com/continuedev/continue/issues/11944",
-        "https://github.com/continuedev/continue/issues/11934",
-        "https://github.com/continuedev/continue/issues/11933"
-      ],
-      "sample_titles": [
-        "Add API usage and limit visibility within the extension",
-        "Add documentation for .continue/configs/ directory support for loading local config profiles",
-        "Add documentation for .continue/configs/ directory support for local config profiles"
-      ],
-      "demand_score": 1.9074716196046975,
-      "rising_score": 8,
-      "volume": 7,
-      "open_count": 6,
-      "closed_count": 1,
-      "avg_reactions": 0,
-      "avg_comments": 0.3,
-      "date_first_seen": "2026-03-27T16:07:18.000Z",
-      "date_last_seen": "2026-04-03T09:01:55.000Z",
-      "repos_affected": [
-        "continuedev/continue"
-      ]
-    },
-    {
-      "cluster_id": "20a635315a5f",
-      "title": "Fix API Provider Authentication and Key Configuration",
-      "summary": "Users are experiencing issues with API authentication across multiple providers (Gemini, Anthropic, continue-proxy). Issues include authentication errors, API key configuration lookup failures, and the system not properly using user-provided keys over proxy credits. Users need reliable API key handling and support for custom request headers to successfully connect to external AI providers.",
-      "category": "Configuration",
-      "representative_need": "Fix API key configuration lookup failure for continue-proxy provider",
-      "issue_numbers": [
-        12008,
-        11961,
-        11956,
-        11952
+        11951,
+        11932,
+        11924
       ],
       "issue_urls": [
         "https://github.com/continuedev/continue/issues/12008",
-        "https://github.com/continuedev/continue/issues/11961",
+        "https://github.com/continuedev/continue/issues/12004",
+        "https://github.com/continuedev/continue/issues/11963",
+        "https://github.com/continuedev/continue/issues/11933",
+        "https://github.com/continuedev/continue/issues/11962",
         "https://github.com/continuedev/continue/issues/11956",
-        "https://github.com/continuedev/continue/issues/11952"
+        "https://github.com/continuedev/continue/issues/11952",
+        "https://github.com/continuedev/continue/issues/11934",
+        "https://github.com/continuedev/continue/issues/11921",
+        "https://github.com/continuedev/continue/issues/12030",
+        "https://github.com/continuedev/continue/issues/11994",
+        "https://github.com/continuedev/continue/issues/11976",
+        "https://github.com/continuedev/continue/issues/11983",
+        "https://github.com/continuedev/continue/issues/11926",
+        "https://github.com/continuedev/continue/issues/11925",
+        "https://github.com/continuedev/continue/issues/12032",
+        "https://github.com/continuedev/continue/issues/11923",
+        "https://github.com/continuedev/continue/issues/11999",
+        "https://github.com/continuedev/continue/issues/11977",
+        "https://github.com/continuedev/continue/issues/11964",
+        "https://github.com/continuedev/continue/issues/11929",
+        "https://github.com/continuedev/continue/issues/11959",
+        "https://github.com/continuedev/continue/issues/11919",
+        "https://github.com/continuedev/continue/issues/11985",
+        "https://github.com/continuedev/continue/issues/11978",
+        "https://github.com/continuedev/continue/issues/11966",
+        "https://github.com/continuedev/continue/issues/11960",
+        "https://github.com/continuedev/continue/issues/11954",
+        "https://github.com/continuedev/continue/issues/11953",
+        "https://github.com/continuedev/continue/issues/11951",
+        "https://github.com/continuedev/continue/issues/11932",
+        "https://github.com/continuedev/continue/issues/11924"
       ],
       "sample_titles": [
-        "Fix API key configuration lookup failure for continue-proxy provider",
-        "Fix API key configuration so user-provided keys are properly used instead of Continue proxy credits",
-        "Fix authentication errors when connecting to Anthropic API"
+        "Add documentation for the `cn review` CLI command covering check file discovery from both .continue/agents/ and .continue/checks/ directories",
+        "Allow credits to be used with hosted models without requiring external API keys",
+        "Document automatic HTTP-Referer and X-Title headers sent to OpenRouter API requests"
       ],
-      "demand_score": 1.906796413791594,
-      "rising_score": 5,
+      "demand_score": 3.2618850975904263,
+      "rising_score": 1.2666666666666666,
+      "volume": 32,
+      "open_count": 24,
+      "closed_count": 8,
+      "avg_reactions": 0.2,
+      "avg_comments": 0.5,
+      "date_first_seen": "2026-03-27T02:55:21.000Z",
+      "date_last_seen": "2026-04-03T17:22:06.000Z",
+      "repos_affected": [
+        "continuedev/continue"
+      ]
+    },
+    {
+      "cluster_id": "86dac41aee55",
+      "title": "Document .continue/configs/ directory support",
+      "summary": "Users need documentation for the .continue/configs/ directory feature that enables local configuration profiles. Clear documentation would help users understand how to organize and manage their local configuration settings effectively.",
+      "category": "Documentation",
+      "representative_need": "Add documentation for .continue/configs/ directory support",
+      "issue_numbers": [
+        12036,
+        12026,
+        11968,
+        11944
+      ],
+      "issue_urls": [
+        "https://github.com/continuedev/continue/issues/12036",
+        "https://github.com/continuedev/continue/issues/12026",
+        "https://github.com/continuedev/continue/issues/11968",
+        "https://github.com/continuedev/continue/issues/11944"
+      ],
+      "sample_titles": [
+        "Add documentation for .continue/configs/ directory support",
+        "Add documentation for .continue/configs/ directory support for local config profiles",
+        "Document .continue/configs/ directory for local config profiles"
+      ],
+      "demand_score": 0,
+      "rising_score": 2,
       "volume": 4,
       "open_count": 4,
       "closed_count": 0,
       "avg_reactions": 0,
-      "avg_comments": 1,
-      "date_first_seen": "2026-03-28T17:44:01.000Z",
-      "date_last_seen": "2026-04-02T14:20:13.000Z",
-      "repos_affected": [
-        "continuedev/continue"
-      ]
-    },
-    {
-      "cluster_id": "e108e2e923c0",
-      "title": "Fix Response Streaming and Error Handling Bugs",
-      "summary": "Users are encountering multiple bugs that affect the reliability of the application: incorrect item emission ordering when using reasoning-enabled models, premature close errors during streaming, unhelpful 'Unknown error' messages for API quota issues, and 404 errors with certain Claude models. These issues cause unexpected failures and poor user experience during normal operation.",
-      "category": "Reliability",
-      "representative_need": "Fix 'Unknown error' display for API quota exceeded errors",
-      "issue_numbers": [
-        11994,
-        11983,
-        11926,
-        11925
-      ],
-      "issue_urls": [
-        "https://github.com/continuedev/continue/issues/11994",
-        "https://github.com/continuedev/continue/issues/11983",
-        "https://github.com/continuedev/continue/issues/11926",
-        "https://github.com/continuedev/continue/issues/11925"
-      ],
-      "sample_titles": [
-        "Fix 'Unknown error' display for API quota exceeded errors",
-        "Fix 404 error when using Claude 3.5 Sonnet model",
-        "Fix item emission order in toResponsesInput to place text messages before function_call items when using reasoning-enabled models"
-      ],
-      "demand_score": 1.8984914276615537,
-      "rising_score": 1,
-      "volume": 4,
-      "open_count": 2,
-      "closed_count": 2,
-      "avg_reactions": 0,
-      "avg_comments": 0.5,
-      "date_first_seen": "2026-03-27T09:35:50.000Z",
-      "date_last_seen": "2026-04-02T06:21:08.000Z",
-      "repos_affected": [
-        "continuedev/continue"
-      ]
-    },
-    {
-      "cluster_id": "0945b18f931d",
-      "title": "Fix IDE stability and reliability issues",
-      "summary": "Users are experiencing critical reliability issues when using the IDE including crashes while editing files, rendering problems in Firefox with code-server, and document tracking errors when switching between text editors. These bugs prevent users from effectively using the IDE in various environments and workflows.",
-      "category": "Reliability",
-      "representative_need": "Fix Continue window rendering in Firefox desktop with code-server",
-      "issue_numbers": [
-        11959,
-        11932,
-        11919
-      ],
-      "issue_urls": [
-        "https://github.com/continuedev/continue/issues/11959",
-        "https://github.com/continuedev/continue/issues/11932",
-        "https://github.com/continuedev/continue/issues/11919"
-      ],
-      "sample_titles": [
-        "Fix Continue window rendering in Firefox desktop with code-server",
-        "Fix IDE crash when editing files",
-        "Fix document not found error in AST tracker when switching between text editors"
-      ],
-      "demand_score": 1.3942969948146875,
-      "rising_score": 1.5,
-      "volume": 3,
-      "open_count": 3,
-      "closed_count": 0,
-      "avg_reactions": 0.3,
-      "avg_comments": 0.3,
-      "date_first_seen": "2026-03-27T02:55:21.000Z",
-      "date_last_seen": "2026-03-29T09:08:23.000Z",
-      "repos_affected": [
-        "continuedev/continue"
-      ]
-    },
-    {
-      "cluster_id": "dadbd2ff8ebb",
-      "title": "Fix Tool Calling Reliability Across AI Providers",
-      "summary": "Users are experiencing critical failures when using tool calling features across different AI providers (OpenAI o1/o3-mini, Claude Opus 4.6) and environments (JetBrains IDEs, Android Studio). Issues include 500 API errors, execution hangs, and message sequencing problems that prevent tools from working properly. These reliability issues block developers from using essential functionality in their workflows.",
-      "category": "Reliability",
-      "representative_need": "Fix 500 errors when using OpenAI o1/o3-mini reasoning models with tool calling",
-      "issue_numbers": [
-        11976,
-        11964,
-        11929
-      ],
-      "issue_urls": [
-        "https://github.com/continuedev/continue/issues/11976",
-        "https://github.com/continuedev/continue/issues/11964",
-        "https://github.com/continuedev/continue/issues/11929"
-      ],
-      "sample_titles": [
-        "Fix 500 errors when using OpenAI o1/o3-mini reasoning models with tool calling",
-        "Fix tool_call execution hanging in Android Studio/JetBrains IDEs",
-        "Fix tool_use/tool_result message sequencing for Claude Opus 4.6 (1M Beta) to ensure tool_result blocks immediately follow tool_use blocks"
-      ],
-      "demand_score": 0,
-      "rising_score": 1.5,
-      "volume": 3,
-      "open_count": 2,
-      "closed_count": 1,
-      "avg_reactions": 0,
       "avg_comments": 0,
-      "date_first_seen": "2026-03-27T12:15:58.000Z",
-      "date_last_seen": "2026-03-31T08:10:57.000Z",
-      "repos_affected": [
-        "continuedev/continue"
-      ]
-    },
-    {
-      "cluster_id": "9803612e43f2",
-      "title": "Fix IntelliJ extension resource limits and CPU usage",
-      "summary": "Users are experiencing the IntelliJ extension becoming unresponsive due to high CPU usage and unbounded file search results causing token overflow. These resource consumption issues make the extension unreliable and unusable during development. Users want fixes to prevent resource exhaustion and maintain stable extension performance.",
-      "category": "Performance",
-      "representative_need": "Fix file search result limits in IntelliJ to prevent token overflow",
-      "issue_numbers": [
-        11977,
-        11966
-      ],
-      "issue_urls": [
-        "https://github.com/continuedev/continue/issues/11977",
-        "https://github.com/continuedev/continue/issues/11966"
-      ],
-      "sample_titles": [
-        "Fix file search result limits in IntelliJ to prevent token overflow",
-        "Fix high CPU usage causing extension to become unresponsive"
-      ],
-      "demand_score": 0,
-      "rising_score": 3,
-      "volume": 2,
-      "open_count": 2,
-      "closed_count": 0,
-      "avg_reactions": 0,
-      "avg_comments": 0,
-      "date_first_seen": "2026-03-30T08:38:40.000Z",
-      "date_last_seen": "2026-03-31T08:10:59.000Z",
+      "date_first_seen": "2026-03-28T09:01:31.000Z",
+      "date_last_seen": "2026-04-04T09:02:19.000Z",
       "repos_affected": [
         "continuedev/continue"
       ]
     }
   ],
   "category_breakdown": {
-    "Developer Experience": 2,
-    "Configuration": 1,
-    "Reliability": 3,
-    "Performance": 1
+    "Integration": 1,
+    "Documentation": 1
   }
 }

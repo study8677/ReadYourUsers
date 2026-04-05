@@ -1,0 +1,80 @@
+{
+  "repo": "infiniflow/ragflow",
+  "display_name": "RAGFlow",
+  "generated_at": "2026-04-05T07:19:45.586Z",
+  "window_start": "2026-03-06T07:19:45.586Z",
+  "window_end": "2026-04-05T07:19:45.586Z",
+  "total_issues_analyzed": 22,
+  "total_issues_included": 19,
+  "clusters": [
+    {
+      "cluster_id": "a1d46268fc98",
+      "title": "Bug fixes and new features for platform stability",
+      "summary": "Users are requesting fixes for critical bugs across multiple components including workflow editor node reconnection, Docker container startup failures, task queue processing, batch file upload, and API integrations. Additionally, users want new features such as HTTP node support for ingestion pipelines, EU AI Act compliance checks, and LLM models with native web search capabilities to enhance platform functionality and regulatory compliance.",
+      "category": "Reliability",
+      "representative_need": "Add EU AI Act compliance checks for RAG pipelines including PII detection/redaction, data lineage tracking, documentation generation, structured logging, confidence thresholds with human review, and security measures",
+      "issue_numbers": [
+        13907,
+        13840,
+        13889,
+        13868,
+        13884,
+        13878,
+        13918,
+        13905,
+        13902,
+        13894,
+        13879,
+        13867,
+        13866,
+        13864,
+        13863,
+        13857,
+        13851,
+        13845,
+        13844
+      ],
+      "issue_urls": [
+        "https://github.com/infiniflow/ragflow/issues/13907",
+        "https://github.com/infiniflow/ragflow/issues/13840",
+        "https://github.com/infiniflow/ragflow/issues/13889",
+        "https://github.com/infiniflow/ragflow/issues/13868",
+        "https://github.com/infiniflow/ragflow/issues/13884",
+        "https://github.com/infiniflow/ragflow/issues/13878",
+        "https://github.com/infiniflow/ragflow/issues/13918",
+        "https://github.com/infiniflow/ragflow/issues/13905",
+        "https://github.com/infiniflow/ragflow/issues/13902",
+        "https://github.com/infiniflow/ragflow/issues/13894",
+        "https://github.com/infiniflow/ragflow/issues/13879",
+        "https://github.com/infiniflow/ragflow/issues/13867",
+        "https://github.com/infiniflow/ragflow/issues/13866",
+        "https://github.com/infiniflow/ragflow/issues/13864",
+        "https://github.com/infiniflow/ragflow/issues/13863",
+        "https://github.com/infiniflow/ragflow/issues/13857",
+        "https://github.com/infiniflow/ragflow/issues/13851",
+        "https://github.com/infiniflow/ragflow/issues/13845",
+        "https://github.com/infiniflow/ragflow/issues/13844"
+      ],
+      "sample_titles": [
+        "Add EU AI Act compliance checks for RAG pipelines including PII detection/redaction, data lineage tracking, documentation generation, structured logging, confidence thresholds with human review, and security measures",
+        "Add an HTTP Node to the ingestion pipeline to support custom secondary chunk processing",
+        "Expose parent-child chunking configuration through HTTP API and Python SDK"
+      ],
+      "demand_score": 5.015782577756786,
+      "rising_score": 9.5,
+      "volume": 19,
+      "open_count": 16,
+      "closed_count": 3,
+      "avg_reactions": 1.1,
+      "avg_comments": 2.9,
+      "date_first_seen": "2026-03-28T20:56:50.000Z",
+      "date_last_seen": "2026-04-03T06:26:27.000Z",
+      "repos_affected": [
+        "infiniflow/ragflow"
+      ]
+    }
+  ],
+  "category_breakdown": {
+    "Reliability": 1
+  }
+}

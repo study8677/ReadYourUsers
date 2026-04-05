@@ -1,0 +1,60 @@
+{
+  "repo": "RVC-Boss/GPT-SoVITS",
+  "display_name": "GPT-SoVITS",
+  "generated_at": "2026-04-05T07:22:00.028Z",
+  "window_start": "2026-03-06T07:22:00.028Z",
+  "window_end": "2026-04-05T07:22:00.028Z",
+  "total_issues_analyzed": 9,
+  "total_issues_included": 9,
+  "clusters": [
+    {
+      "cluster_id": "a1e87422da3e",
+      "title": "Bug Fixes, Compatibility Updates, and Feature Extensions",
+      "summary": "Users want various bugs fixed including audio truncation during training, incomplete audio at low speech speeds, ONNX export issues with PyTorch 2.6, and crashes on RTX 50-series GPUs. Additionally, users request new features like native Spanish phonetic support, a plugin system for external tool integration, and documentation improvements for fine-tuning capabilities. These issues span both critical bug fixes and feature enhancements to improve the project's robustness and usability.",
+      "category": "Developer Experience",
+      "representative_need": "Add native Spanish phonetic support to GPT-SoVITS with proper handling of RR, Ñ, silent H, accentuation, CH, LL, and intervocalic D",
+      "issue_numbers": [
+        2760,
+        2759,
+        2757,
+        2756,
+        2752,
+        2751,
+        2750,
+        2748,
+        2747
+      ],
+      "issue_urls": [
+        "https://github.com/RVC-Boss/GPT-SoVITS/issues/2760",
+        "https://github.com/RVC-Boss/GPT-SoVITS/issues/2759",
+        "https://github.com/RVC-Boss/GPT-SoVITS/issues/2757",
+        "https://github.com/RVC-Boss/GPT-SoVITS/issues/2756",
+        "https://github.com/RVC-Boss/GPT-SoVITS/issues/2752",
+        "https://github.com/RVC-Boss/GPT-SoVITS/issues/2751",
+        "https://github.com/RVC-Boss/GPT-SoVITS/issues/2750",
+        "https://github.com/RVC-Boss/GPT-SoVITS/issues/2748",
+        "https://github.com/RVC-Boss/GPT-SoVITS/issues/2747"
+      ],
+      "sample_titles": [
+        "Add native Spanish phonetic support to GPT-SoVITS with proper handling of RR, Ñ, silent H, accentuation, CH, LL, and intervocalic D",
+        "Add skill/plugin system for integrating GPT-SoVITS models with external tools like openclaw",
+        "Document fine-tuning capabilities for custom tokens/tone control, clarify LoRA/adapter support, and provide guidance on multi-speaker fine-tuning strategies"
+      ],
+      "demand_score": 0.9569212166418252,
+      "rising_score": 1,
+      "volume": 9,
+      "open_count": 8,
+      "closed_count": 1,
+      "avg_reactions": 0,
+      "avg_comments": 0.8,
+      "date_first_seen": "2026-03-10T16:42:07.000Z",
+      "date_last_seen": "2026-04-03T14:34:11.000Z",
+      "repos_affected": [
+        "RVC-Boss/GPT-SoVITS"
+      ]
+    }
+  ],
+  "category_breakdown": {
+    "Developer Experience": 1
+  }
+}

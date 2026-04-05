@@ -1,0 +1,78 @@
+{
+  "repo": "BerriAI/litellm",
+  "display_name": "LiteLLM",
+  "generated_at": "2026-04-05T07:21:09.570Z",
+  "window_start": "2026-03-06T07:21:09.570Z",
+  "window_end": "2026-04-05T07:21:09.570Z",
+  "total_issues_analyzed": 18,
+  "total_issues_included": 18,
+  "clusters": [
+    {
+      "cluster_id": "9f14967d718b",
+      "title": "Proxy stability and provider integration bug fixes",
+      "summary": "Users are reporting various bugs affecting LiteLLM proxy reliability, including SSL/TLS certificate handling, routing errors with specific providers (Modal, Vertex AI), data integrity issues in constants, and missing parameter mappings for reasoning_effort. These fixes address crashes, incorrect behavior, and integration issues that prevent the proxy from functioning correctly with different AI providers and configurations.",
+      "category": "Reliability",
+      "representative_need": "Add agent identity verification and trust-based access control to LiteLLM proxy",
+      "issue_numbers": [
+        25149,
+        25116,
+        25081,
+        25132,
+        25129,
+        25079,
+        25173,
+        25104,
+        25165,
+        25096,
+        25140,
+        25080,
+        25172,
+        25157,
+        25143,
+        25134,
+        25128,
+        25082
+      ],
+      "issue_urls": [
+        "https://github.com/BerriAI/litellm/issues/25149",
+        "https://github.com/BerriAI/litellm/issues/25116",
+        "https://github.com/BerriAI/litellm/issues/25081",
+        "https://github.com/BerriAI/litellm/issues/25132",
+        "https://github.com/BerriAI/litellm/issues/25129",
+        "https://github.com/BerriAI/litellm/issues/25079",
+        "https://github.com/BerriAI/litellm/issues/25173",
+        "https://github.com/BerriAI/litellm/issues/25104",
+        "https://github.com/BerriAI/litellm/issues/25165",
+        "https://github.com/BerriAI/litellm/issues/25096",
+        "https://github.com/BerriAI/litellm/issues/25140",
+        "https://github.com/BerriAI/litellm/issues/25080",
+        "https://github.com/BerriAI/litellm/issues/25172",
+        "https://github.com/BerriAI/litellm/issues/25157",
+        "https://github.com/BerriAI/litellm/issues/25143",
+        "https://github.com/BerriAI/litellm/issues/25134",
+        "https://github.com/BerriAI/litellm/issues/25128",
+        "https://github.com/BerriAI/litellm/issues/25082"
+      ],
+      "sample_titles": [
+        "Add agent identity verification and trust-based access control to LiteLLM proxy",
+        "Add model group fallback support for rate limit resilience",
+        "Fix 404 errors when routing requests to Modal OpenAI-compatible endpoints through LiteLLM proxy"
+      ],
+      "demand_score": 1.9797065330088033,
+      "rising_score": 19,
+      "volume": 18,
+      "open_count": 18,
+      "closed_count": 0,
+      "avg_reactions": 0,
+      "avg_comments": 0.1,
+      "date_first_seen": "2026-04-03T13:31:56.000Z",
+      "date_last_seen": "2026-04-05T03:49:45.000Z",
+      "repos_affected": [
+        "BerriAI/litellm"
+      ]
+    }
+  ],
+  "category_breakdown": {
+    "Reliability": 1
+  }
+}

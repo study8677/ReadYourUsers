@@ -1,0 +1,45 @@
+{
+  "repo": "ChatGPTNextWeb/NextChat",
+  "display_name": "NextChat",
+  "generated_at": "2026-04-05T07:21:50.319Z",
+  "window_start": "2026-03-06T07:21:50.319Z",
+  "window_end": "2026-04-05T07:21:50.319Z",
+  "total_issues_analyzed": 4,
+  "total_issues_included": 2,
+  "clusters": [
+    {
+      "cluster_id": "34b9278ea08c",
+      "title": "Expand AI Model Support and Flexibility",
+      "summary": "Users want support for newer AI models like Gemini 3.1 Pro, Claude Sonnet 4.6, GPT 5.3, and Grok 4.20, as well as the ability to manually add custom AI models in Docker deployments. This flexibility would allow users to leverage the latest AI capabilities and use models that better fit their specific use cases.",
+      "category": "Integration",
+      "representative_need": "Add support for new AI models (Gemini 3.1 Pro, Claude Sonnet 4.6, GPT 5.3, Grok 4.20)",
+      "issue_numbers": [
+        6736,
+        6725
+      ],
+      "issue_urls": [
+        "https://github.com/ChatGPTNextWeb/NextChat/issues/6736",
+        "https://github.com/ChatGPTNextWeb/NextChat/issues/6725"
+      ],
+      "sample_titles": [
+        "Add support for new AI models (Gemini 3.1 Pro, Claude Sonnet 4.6, GPT 5.3, Grok 4.20)",
+        "Support manually adding new AI models in Docker deployment"
+      ],
+      "demand_score": 0.8667363484860995,
+      "rising_score": 2,
+      "volume": 2,
+      "open_count": 2,
+      "closed_count": 0,
+      "avg_reactions": 0,
+      "avg_comments": 0.5,
+      "date_first_seen": "2026-03-15T08:38:26.000Z",
+      "date_last_seen": "2026-03-30T23:40:33.000Z",
+      "repos_affected": [
+        "ChatGPTNextWeb/NextChat"
+      ]
+    }
+  ],
+  "category_breakdown": {
+    "Integration": 1
+  }
+}

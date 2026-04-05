@@ -1,649 +1,86 @@
 {
   "repo": "microsoft/vscode-copilot-release",
   "display_name": "GitHub Copilot Chat for VS Code",
-  "generated_at": "2026-04-03T18:02:32.697Z",
-  "window_start": "2026-03-04T18:02:32.697Z",
-  "window_end": "2026-04-03T18:02:32.697Z",
-  "total_issues_analyzed": 100,
-  "total_issues_included": 93,
+  "generated_at": "2026-04-05T07:15:32.035Z",
+  "window_start": "2026-03-06T07:15:32.035Z",
+  "window_end": "2026-04-05T07:15:32.035Z",
+  "total_issues_analyzed": 23,
+  "total_issues_included": 22,
   "clusters": [
     {
-      "cluster_id": "22910916b94f",
-      "title": "Enhanced Configuration Settings and UI Fixes",
-      "summary": "Users are requesting more granular control over agent behavior through configuration options, including export capabilities for Copilot plans, timeout settings for MCP server execution, and independent control over ask_questions auto-approval. Additionally, a bug in the Configure Tools UI that writes incorrect prefix notation to agent configuration files needs to be fixed.",
-      "category": "Configuration",
-      "representative_need": "Add granular settings option to control ask_questions auto-approve behavior independently from other tools",
-      "issue_numbers": [
-        14151,
-        14130,
-        14123,
-        14104
-      ],
-      "issue_urls": [
-        "https://github.com/microsoft/vscode-copilot-release/issues/14151",
-        "https://github.com/microsoft/vscode-copilot-release/issues/14130",
-        "https://github.com/microsoft/vscode-copilot-release/issues/14123",
-        "https://github.com/microsoft/vscode-copilot-release/issues/14104"
-      ],
-      "sample_titles": [
-        "Add granular settings option to control ask_questions auto-approve behavior independently from other tools",
-        "Add settings to automatically export Copilot plans to local markdown files for version control",
-        "Add timeout configuration options for MCP server tool execution"
-      ],
-      "demand_score": 1.792071413551691,
-      "rising_score": 1,
-      "volume": 4,
-      "open_count": 4,
-      "closed_count": 0,
-      "avg_reactions": 1,
-      "avg_comments": 1,
-      "date_first_seen": "2026-01-30T06:10:50.000Z",
-      "date_last_seen": "2026-03-06T06:03:33.000Z",
-      "repos_affected": [
-        "microsoft/vscode-copilot-release"
-      ]
-    },
-    {
-      "cluster_id": "7ccabfdf174f",
-      "title": "Fix Agent Mode reliability and tool integration issues",
-      "summary": "Users are experiencing multiple reliability issues in Agent Mode including hanging behavior, MCP server failures, and tool crashes. Key problems include MCP servers not auto-starting, tools being disabled with Claude models, the ask_questions tool not returning selections, and #codebase search failures. Additionally, users want enhanced multi-agent capabilities with model parameter support for subagents and fresh session handoffs.",
-      "category": "Developer Experience",
-      "representative_need": "Add optional model parameter to runSubagent tool for specifying subagent models",
-      "issue_numbers": [
-        14166,
-        14161,
-        14153,
-        14138,
-        14107,
-        14105,
-        14097
-      ],
-      "issue_urls": [
-        "https://github.com/microsoft/vscode-copilot-release/issues/14166",
-        "https://github.com/microsoft/vscode-copilot-release/issues/14161",
-        "https://github.com/microsoft/vscode-copilot-release/issues/14153",
-        "https://github.com/microsoft/vscode-copilot-release/issues/14138",
-        "https://github.com/microsoft/vscode-copilot-release/issues/14107",
-        "https://github.com/microsoft/vscode-copilot-release/issues/14105",
-        "https://github.com/microsoft/vscode-copilot-release/issues/14097"
-      ],
-      "sample_titles": [
-        "Add optional model parameter to runSubagent tool for specifying subagent models",
-        "Fix #codebase search functionality that crashes or fails with 'request failed' error after initiating codebase search",
-        "Fix MCP servers with autoStart:true not starting automatically on VS Code launch or chat session begin"
-      ],
-      "demand_score": 1.2967904744135104,
-      "rising_score": 1,
-      "volume": 7,
-      "open_count": 7,
-      "closed_count": 0,
-      "avg_reactions": 4.1,
-      "avg_comments": 0.9,
-      "date_first_seen": "2026-01-23T09:08:45.000Z",
-      "date_last_seen": "2026-03-16T09:55:21.000Z",
-      "repos_affected": [
-        "microsoft/vscode-copilot-release"
-      ]
-    },
-    {
-      "cluster_id": "216798813420",
-      "title": "AI and Copilot Integration Fixes",
-      "summary": "Users are experiencing multiple issues with AI/Copilot functionality including model availability, connectivity errors, tool computation failures, and quota consumption problems. These issues prevent reliable use of AI features and require fixes to error handling, model access, and resource management.",
-      "category": "Integration",
-      "representative_need": "Enable AI to automatically read workspace files for review without manual context attachment",
-      "issue_numbers": [
-        14172,
-        14163,
-        14162,
-        14141,
-        14116,
-        14114,
-        14101,
-        14096,
-        14091
-      ],
-      "issue_urls": [
-        "https://github.com/microsoft/vscode-copilot-release/issues/14172",
-        "https://github.com/microsoft/vscode-copilot-release/issues/14163",
-        "https://github.com/microsoft/vscode-copilot-release/issues/14162",
-        "https://github.com/microsoft/vscode-copilot-release/issues/14141",
-        "https://github.com/microsoft/vscode-copilot-release/issues/14116",
-        "https://github.com/microsoft/vscode-copilot-release/issues/14114",
-        "https://github.com/microsoft/vscode-copilot-release/issues/14101",
-        "https://github.com/microsoft/vscode-copilot-release/issues/14096",
-        "https://github.com/microsoft/vscode-copilot-release/issues/14091"
-      ],
-      "sample_titles": [
-        "Enable AI to automatically read workspace files for review without manual context attachment",
-        "Fix 'Failed to compute args for tool: semantic_search' error",
-        "Fix 504 Gateway Timeout errors in Copilot extension"
-      ],
-      "demand_score": 1.2254699087847885,
-      "rising_score": 0.5,
-      "volume": 9,
-      "open_count": 9,
-      "closed_count": 0,
-      "avg_reactions": 0.4,
-      "avg_comments": 0.7,
-      "date_first_seen": "2026-01-16T01:39:40.000Z",
-      "date_last_seen": "2026-03-21T08:31:30.000Z",
-      "repos_affected": [
-        "microsoft/vscode-copilot-release"
-      ]
-    },
-    {
-      "cluster_id": "c7068293b580",
-      "title": "Improve Copilot Chat UI status visibility and feedback",
-      "summary": "Users want improved visual feedback and status visibility in the Copilot Chat interface. This includes visible rate limit indicators showing quota usage and reset timing, source location transparency for custom prompts and skills, graceful handling of large responses, and fixing broken UI elements like stuck spinners that block interaction. These improvements would help users understand system state and work more effectively without being blocked by unresponsive UI.",
-      "category": "UI/UX",
-      "representative_need": "Add source location visibility to custom prompts and skills in the prompt picker",
-      "issue_numbers": [
-        14168,
-        14159,
-        14134,
-        14092
-      ],
-      "issue_urls": [
-        "https://github.com/microsoft/vscode-copilot-release/issues/14168",
-        "https://github.com/microsoft/vscode-copilot-release/issues/14159",
-        "https://github.com/microsoft/vscode-copilot-release/issues/14134",
-        "https://github.com/microsoft/vscode-copilot-release/issues/14092"
-      ],
-      "sample_titles": [
-        "Add source location visibility to custom prompts and skills in the prompt picker",
-        "Add visible rate limit status indicators showing usage quota, reset countdown, and scope in Copilot Chat UI",
-        "Fix stuck spinner that blocks stop button and persists after VSCode restart"
-      ],
-      "demand_score": 1.1517106955955767,
-      "rising_score": 1,
-      "volume": 4,
-      "open_count": 3,
-      "closed_count": 1,
-      "avg_reactions": 1,
-      "avg_comments": 1.3,
-      "date_first_seen": "2026-01-17T11:45:20.000Z",
-      "date_last_seen": "2026-03-18T06:55:19.000Z",
-      "repos_affected": [
-        "microsoft/vscode-copilot-release"
-      ]
-    },
-    {
-      "cluster_id": "acedf8a5a545",
-      "title": "Improve custom prompts and skills management in CLI picker",
-      "summary": "Users want better organization and visibility of custom prompts and skills in the command picker, including separating prompt files from skills with clear grouping, showing source locations, and fixing YAML validation for attributes like 'allowed-tools'. These improvements would help developers better manage, organize, and debug their custom extensions.",
-      "category": "Developer Experience",
-      "representative_need": "Add source location visibility for custom prompts and skills in the prompt picker",
-      "issue_numbers": [
-        14147,
-        14135,
-        14131
-      ],
-      "issue_urls": [
-        "https://github.com/microsoft/vscode-copilot-release/issues/14147",
-        "https://github.com/microsoft/vscode-copilot-release/issues/14135",
-        "https://github.com/microsoft/vscode-copilot-release/issues/14131"
-      ],
-      "sample_titles": [
-        "Add source location visibility for custom prompts and skills in the prompt picker",
-        "Fix SKILL.md YAML validator to recognize 'allowed-tools' as a valid frontmatter attribute",
-        "Separate prompt files from skills/commands in the slash picker with grouping or distinct prefixes"
-      ],
-      "demand_score": 1.0092730316255658,
-      "rising_score": 1,
-      "volume": 3,
-      "open_count": 1,
-      "closed_count": 2,
-      "avg_reactions": 2.3,
-      "avg_comments": 2,
-      "date_first_seen": "2026-02-16T22:46:08.000Z",
-      "date_last_seen": "2026-03-03T16:17:21.000Z",
-      "repos_affected": [
-        "microsoft/vscode-copilot-release"
-      ]
-    },
-    {
-      "cluster_id": "a1eb21d2ddc0",
-      "title": "Fix VS Code Extension Errors and Failures",
-      "summary": "Users are experiencing various extension-related issues including initialization timeouts, unhandled promise rejections during shutdown, and compatibility problems with VS Code Insiders. They want these extension errors investigated and fixed to ensure extensions work reliably without crashing or failing to initialize.",
-      "category": "Developer Experience",
-      "representative_need": "Fix GitHub Copilot Chat extension not working with VS Code Insiders",
-      "issue_numbers": [
-        14173,
-        14156,
-        14154,
-        14093
-      ],
-      "issue_urls": [
-        "https://github.com/microsoft/vscode-copilot-release/issues/14173",
-        "https://github.com/microsoft/vscode-copilot-release/issues/14156",
-        "https://github.com/microsoft/vscode-copilot-release/issues/14154",
-        "https://github.com/microsoft/vscode-copilot-release/issues/14093"
-      ],
-      "sample_titles": [
-        "Fix GitHub Copilot Chat extension not working with VS Code Insiders",
-        "Fix extension initialization timeout failure",
-        "Handle closed debug channel gracefully during extension host shutdown to prevent unhandled promise rejections"
-      ],
-      "demand_score": 0.9448898052343174,
-      "rising_score": 0.5,
-      "volume": 4,
-      "open_count": 3,
-      "closed_count": 1,
-      "avg_reactions": 0.5,
-      "avg_comments": 0.3,
-      "date_first_seen": "2026-01-19T06:56:36.000Z",
-      "date_last_seen": "2026-03-22T21:03:52.000Z",
-      "repos_affected": [
-        "microsoft/vscode-copilot-release"
-      ]
-    },
-    {
-      "cluster_id": "e33622a32b76",
-      "title": "Improve Copilot Chat reliability and session management",
-      "summary": "Users are experiencing multiple reliability issues with Copilot Chat including slow initialization, session persistence problems, context truncation causing lost message access, and accidental message deletion without confirmation. These issues frustrate users and impact productivity when the chat feature becomes unresponsive or loses important conversation history.",
+      "cluster_id": "d5b38e73562a",
+      "title": "Copilot Chat Extension Reliability and Compatibility",
+      "summary": "Users are experiencing issues with Copilot Chat extension functionality including chat session management, model API compatibility, and platform support. These problems prevent reliable use of chat features, cause unexpected failures, and limit compatibility with certain environments like Apple Silicon devcontainers and enterprise authentication. Users need a more robust and consistent chat experience across different configurations and model versions.",
       "category": "Reliability",
-      "representative_need": "Add confirmation or modifier key requirement to prevent accidental deletion of chat messages via Delete key",
+      "representative_need": "Add GitHub Copilot Enterprise authentication option to Codex extension",
       "issue_numbers": [
         14169,
         14165,
+        14161,
         14160,
-        14158,
         14157,
-        14145,
-        14143,
-        14127,
-        14126,
-        14125,
-        14115,
-        14108,
-        14090,
-        14089,
-        14086,
-        14085,
-        14084,
-        14083,
-        14081,
-        14080,
-        14079,
-        14078,
-        14077,
-        14076,
-        14075,
-        14074
+        14174,
+        14158,
+        14171,
+        14170,
+        14168,
+        14159,
+        14173,
+        14172,
+        14167,
+        14166,
+        14164,
+        14163,
+        14162,
+        14156,
+        14154,
+        14153,
+        14152
       ],
       "issue_urls": [
         "https://github.com/microsoft/vscode-copilot-release/issues/14169",
         "https://github.com/microsoft/vscode-copilot-release/issues/14165",
+        "https://github.com/microsoft/vscode-copilot-release/issues/14161",
         "https://github.com/microsoft/vscode-copilot-release/issues/14160",
-        "https://github.com/microsoft/vscode-copilot-release/issues/14158",
         "https://github.com/microsoft/vscode-copilot-release/issues/14157",
-        "https://github.com/microsoft/vscode-copilot-release/issues/14145",
-        "https://github.com/microsoft/vscode-copilot-release/issues/14143",
-        "https://github.com/microsoft/vscode-copilot-release/issues/14127",
-        "https://github.com/microsoft/vscode-copilot-release/issues/14126",
-        "https://github.com/microsoft/vscode-copilot-release/issues/14125",
-        "https://github.com/microsoft/vscode-copilot-release/issues/14115",
-        "https://github.com/microsoft/vscode-copilot-release/issues/14108",
-        "https://github.com/microsoft/vscode-copilot-release/issues/14090",
-        "https://github.com/microsoft/vscode-copilot-release/issues/14089",
-        "https://github.com/microsoft/vscode-copilot-release/issues/14086",
-        "https://github.com/microsoft/vscode-copilot-release/issues/14085",
-        "https://github.com/microsoft/vscode-copilot-release/issues/14084",
-        "https://github.com/microsoft/vscode-copilot-release/issues/14083",
-        "https://github.com/microsoft/vscode-copilot-release/issues/14081",
-        "https://github.com/microsoft/vscode-copilot-release/issues/14080",
-        "https://github.com/microsoft/vscode-copilot-release/issues/14079",
-        "https://github.com/microsoft/vscode-copilot-release/issues/14078",
-        "https://github.com/microsoft/vscode-copilot-release/issues/14077",
-        "https://github.com/microsoft/vscode-copilot-release/issues/14076",
-        "https://github.com/microsoft/vscode-copilot-release/issues/14075",
-        "https://github.com/microsoft/vscode-copilot-release/issues/14074"
-      ],
-      "sample_titles": [
-        "Add confirmation or modifier key requirement to prevent accidental deletion of chat messages via Delete key",
-        "Add display style setting for auto-approved terminal commands independent of approval status",
-        "Fix API version mismatch causing Chat extension activation failure when VS Code APIs are unavailable"
-      ],
-      "demand_score": 0.9226361719521756,
-      "rising_score": 1,
-      "volume": 26,
-      "open_count": 21,
-      "closed_count": 5,
-      "avg_reactions": 0.5,
-      "avg_comments": 0.5,
-      "date_first_seen": "2026-01-14T10:12:37.000Z",
-      "date_last_seen": "2026-03-19T01:27:52.000Z",
-      "repos_affected": [
-        "microsoft/vscode-copilot-release"
-      ]
-    },
-    {
-      "cluster_id": "bb6e6dadac7d",
-      "title": "API Request Error Handling and Model Compatibility",
-      "summary": "Users encounter various API errors including server errors (500, 413), unsupported endpoint combinations, and serialization issues when making API requests. They want the system to either prevent these errors through better model/endpoint compatibility checks or handle them gracefully with clear, informative error messages. This includes fixing issues like malformed function_response serialization and preventing extension load failures when models aren't accessible via certain endpoints.",
-      "category": "Developer Experience",
-      "representative_need": "Fix extension load failure when model is not accessible via /chat/completions endpoint",
-      "issue_numbers": [
-        14170,
-        14148,
-        14144,
-        14142,
-        14113,
-        14088,
-        14087
-      ],
-      "issue_urls": [
-        "https://github.com/microsoft/vscode-copilot-release/issues/14170",
-        "https://github.com/microsoft/vscode-copilot-release/issues/14148",
-        "https://github.com/microsoft/vscode-copilot-release/issues/14144",
-        "https://github.com/microsoft/vscode-copilot-release/issues/14142",
-        "https://github.com/microsoft/vscode-copilot-release/issues/14113",
-        "https://github.com/microsoft/vscode-copilot-release/issues/14088",
-        "https://github.com/microsoft/vscode-copilot-release/issues/14087"
-      ],
-      "sample_titles": [
-        "Fix extension load failure when model is not accessible via /chat/completions endpoint",
-        "Fix malformed function_response serialization when sending MCP tool responses to Gemini API",
-        "Fix model API endpoint compatibility to prevent errors when requesting unsupported model/endpoint combinations"
-      ],
-      "demand_score": 0.8125949359803247,
-      "rising_score": 1,
-      "volume": 7,
-      "open_count": 7,
-      "closed_count": 0,
-      "avg_reactions": 0.3,
-      "avg_comments": 0.4,
-      "date_first_seen": "2026-01-14T18:44:21.000Z",
-      "date_last_seen": "2026-03-19T12:00:09.000Z",
-      "repos_affected": [
-        "microsoft/vscode-copilot-release"
-      ]
-    },
-    {
-      "cluster_id": "dee9e7b716f7",
-      "title": "Excessive Rate Limit Wait Times",
-      "summary": "Users are experiencing unreasonably long rate limit wait times (455+ hours), making it impractical to continue using the platform. They are requesting either reduced rate limit thresholds or improved communication about when limits will reset so they can plan accordingly.",
-      "category": "Platform Support",
-      "representative_need": "Fix excessively long rate limit wait time (455+ hours is impractical for users)",
-      "issue_numbers": [
-        14137,
-        14099
-      ],
-      "issue_urls": [
-        "https://github.com/microsoft/vscode-copilot-release/issues/14137",
-        "https://github.com/microsoft/vscode-copilot-release/issues/14099"
-      ],
-      "sample_titles": [
-        "Fix excessively long rate limit wait time (455+ hours is impractical for users)",
-        "Reduce rate limit duration thresholds or provide better user communication about rate limits"
-      ],
-      "demand_score": 0.7179822347675509,
-      "rising_score": 1,
-      "volume": 2,
-      "open_count": 2,
-      "closed_count": 0,
-      "avg_reactions": 0,
-      "avg_comments": 2,
-      "date_first_seen": "2026-01-25T00:46:49.000Z",
-      "date_last_seen": "2026-02-19T00:00:14.000Z",
-      "repos_affected": [
-        "microsoft/vscode-copilot-release"
-      ]
-    },
-    {
-      "cluster_id": "9d20041e526c",
-      "title": "Platform Support Expansion and Installation Bug Fixes",
-      "summary": "Users want expanded platform support for the Copilot SDK (specifically linux-arm64 architecture) as well as fixes for installation-related bugs. The infinite loop issue when multiple VS Code installations are present causes reliability problems that prevent smooth usage of the SDK in complex development environments.",
-      "category": "Platform Support",
-      "representative_need": "Add linux-arm64 prebuild for pty.node in @github/copilot/sdk",
-      "issue_numbers": [
-        14174,
-        14117
-      ],
-      "issue_urls": [
         "https://github.com/microsoft/vscode-copilot-release/issues/14174",
-        "https://github.com/microsoft/vscode-copilot-release/issues/14117"
-      ],
-      "sample_titles": [
-        "Add linux-arm64 prebuild for pty.node in @github/copilot/sdk",
-        "Fix infinite loop in Find-RealCopilot when multiple VS Code installations are present"
-      ],
-      "demand_score": 0.7176636844120259,
-      "rising_score": 0.5,
-      "volume": 2,
-      "open_count": 1,
-      "closed_count": 1,
-      "avg_reactions": 0,
-      "avg_comments": 0.5,
-      "date_first_seen": "2026-02-09T07:45:05.000Z",
-      "date_last_seen": "2026-03-23T19:53:22.000Z",
-      "repos_affected": [
-        "microsoft/vscode-copilot-release"
-      ]
-    },
-    {
-      "cluster_id": "3d9c55fbbb0d",
-      "title": "Fix AI Model Availability and Behavior Issues",
-      "summary": "Users are experiencing critical issues with AI models not being accessible, available, or functioning correctly. They report problems with model endpoints, Copilot extensions, and AI assistants that delete code without providing alternatives. Users need these AI functionality issues resolved to maintain productive workflows.",
-      "category": "Developer Experience",
-      "representative_need": "Fix AI assistant behavior that deletes user code without providing replacement content",
-      "issue_numbers": [
-        14171,
-        14119,
-        14112
-      ],
-      "issue_urls": [
+        "https://github.com/microsoft/vscode-copilot-release/issues/14158",
         "https://github.com/microsoft/vscode-copilot-release/issues/14171",
-        "https://github.com/microsoft/vscode-copilot-release/issues/14119",
-        "https://github.com/microsoft/vscode-copilot-release/issues/14112"
-      ],
-      "sample_titles": [
-        "Fix AI assistant behavior that deletes user code without providing replacement content",
-        "Fix GPT-5.4 model accessibility via /chat/completions endpoint",
-        "Fix language model unavailability in Copilot extension"
-      ],
-      "demand_score": 0.6384272351048486,
-      "rising_score": 1,
-      "volume": 3,
-      "open_count": 3,
-      "closed_count": 0,
-      "avg_reactions": 0.3,
-      "avg_comments": 0.3,
-      "date_first_seen": "2026-02-03T11:02:35.000Z",
-      "date_last_seen": "2026-03-19T12:18:25.000Z",
-      "repos_affected": [
-        "microsoft/vscode-copilot-release"
-      ]
-    },
-    {
-      "cluster_id": "f62fe30aec31",
-      "title": "Terminal task interruption and command parsing fixes",
-      "summary": "Users are experiencing unexpected task interruptions without any warning or notification, which disrupts workflow. Additionally, command parsing fails when heredoc terminators are followed by additional commands, causing terminal tool execution errors. These issues affect the reliability and predictability of terminal operations.",
-      "category": "Reliability",
-      "representative_need": "Fix command parsing to properly handle heredoc terminators followed by additional commands in terminal tool execution",
-      "issue_numbers": [
-        14140,
-        14124
-      ],
-      "issue_urls": [
-        "https://github.com/microsoft/vscode-copilot-release/issues/14140",
-        "https://github.com/microsoft/vscode-copilot-release/issues/14124"
-      ],
-      "sample_titles": [
-        "Fix command parsing to properly handle heredoc terminators followed by additional commands in terminal tool execution",
-        "Fix tasks being interrupted without warning or notification"
-      ],
-      "demand_score": 0.6115596822382832,
-      "rising_score": 1,
-      "volume": 2,
-      "open_count": 2,
-      "closed_count": 0,
-      "avg_reactions": 5,
-      "avg_comments": 0.5,
-      "date_first_seen": "2026-02-13T12:03:43.000Z",
-      "date_last_seen": "2026-02-23T17:43:15.000Z",
-      "repos_affected": [
-        "microsoft/vscode-copilot-release"
-      ]
-    },
-    {
-      "cluster_id": "696f8bd71807",
-      "title": "Fix subscription authentication and access issues",
-      "summary": "Users with active Copilot Pro subscriptions are encountering authentication failures, subscription recognition errors, and access restrictions that prevent them from using AI features they've paid for. These issues include quota enforcement failures, rate limiting without clear messaging, and upgrade flow problems that block paying users from accessing the service.",
-      "category": "Reliability",
-      "representative_need": "Add GitHub Copilot Enterprise authentication option to Codex extension, or display clear messaging when this subscription type is unsupported",
-      "issue_numbers": [
-        14167,
-        14164,
-        14146,
-        14122,
-        14120,
-        14109,
-        14100,
-        14098,
-        14094
-      ],
-      "issue_urls": [
+        "https://github.com/microsoft/vscode-copilot-release/issues/14170",
+        "https://github.com/microsoft/vscode-copilot-release/issues/14168",
+        "https://github.com/microsoft/vscode-copilot-release/issues/14159",
+        "https://github.com/microsoft/vscode-copilot-release/issues/14173",
+        "https://github.com/microsoft/vscode-copilot-release/issues/14172",
         "https://github.com/microsoft/vscode-copilot-release/issues/14167",
+        "https://github.com/microsoft/vscode-copilot-release/issues/14166",
         "https://github.com/microsoft/vscode-copilot-release/issues/14164",
-        "https://github.com/microsoft/vscode-copilot-release/issues/14146",
-        "https://github.com/microsoft/vscode-copilot-release/issues/14122",
-        "https://github.com/microsoft/vscode-copilot-release/issues/14120",
-        "https://github.com/microsoft/vscode-copilot-release/issues/14109",
-        "https://github.com/microsoft/vscode-copilot-release/issues/14100",
-        "https://github.com/microsoft/vscode-copilot-release/issues/14098",
-        "https://github.com/microsoft/vscode-copilot-release/issues/14094"
+        "https://github.com/microsoft/vscode-copilot-release/issues/14163",
+        "https://github.com/microsoft/vscode-copilot-release/issues/14162",
+        "https://github.com/microsoft/vscode-copilot-release/issues/14156",
+        "https://github.com/microsoft/vscode-copilot-release/issues/14154",
+        "https://github.com/microsoft/vscode-copilot-release/issues/14153",
+        "https://github.com/microsoft/vscode-copilot-release/issues/14152"
       ],
       "sample_titles": [
-        "Add GitHub Copilot Enterprise authentication option to Codex extension, or display clear messaging when this subscription type is unsupported",
-        "Fix API parameter compatibility for BYOK with newer OpenAI models by using 'max_completion_tokens' instead of 'max_tokens'",
-        "Fix Copilot Pro subscription not being recognized in VS Code despite having an active paid subscription"
+        "Add GitHub Copilot Enterprise authentication option to Codex extension",
+        "Add linux-arm64 pty.node prebuild to @github/copilot/sdk for Apple Silicon devcontainer support",
+        "Add support for fresh chat sessions in multi-agent handoffs and command to invoke prompt files programmatically"
       ],
-      "demand_score": 0.5938072839864397,
-      "rising_score": 1,
-      "volume": 9,
-      "open_count": 8,
-      "closed_count": 1,
-      "avg_reactions": 0.4,
-      "avg_comments": 0.1,
-      "date_first_seen": "2026-01-20T09:56:24.000Z",
-      "date_last_seen": "2026-03-18T05:46:39.000Z",
-      "repos_affected": [
-        "microsoft/vscode-copilot-release"
-      ]
-    },
-    {
-      "cluster_id": "4d7b6a2fc476",
-      "title": "Improve Network Reliability and Error Recovery",
-      "summary": "Users are experiencing frequent gateway timeout errors (504, 502) and false connectivity reports that disrupt their workflow. They want more stable connections during high-load periods and graceful handling of network failures with improved error recovery mechanisms.",
-      "category": "Reliability",
-      "representative_need": "Fix constant 504 Gateway Timeout errors preventing Copilot usage",
-      "issue_numbers": [
-        14149,
-        14136,
-        14133,
-        14111,
-        14106
-      ],
-      "issue_urls": [
-        "https://github.com/microsoft/vscode-copilot-release/issues/14149",
-        "https://github.com/microsoft/vscode-copilot-release/issues/14136",
-        "https://github.com/microsoft/vscode-copilot-release/issues/14133",
-        "https://github.com/microsoft/vscode-copilot-release/issues/14111",
-        "https://github.com/microsoft/vscode-copilot-release/issues/14106"
-      ],
-      "sample_titles": [
-        "Fix constant 504 Gateway Timeout errors preventing Copilot usage",
-        "Fix false positive 'not connected to internet' errors when user has active connectivity",
-        "Handle network connectivity failures gracefully with better error recovery"
-      ],
-      "demand_score": 0.5902443581392384,
-      "rising_score": 1,
-      "volume": 5,
-      "open_count": 5,
-      "closed_count": 0,
-      "avg_reactions": 0,
-      "avg_comments": 1.4,
-      "date_first_seen": "2026-02-02T06:06:17.000Z",
-      "date_last_seen": "2026-03-04T22:59:19.000Z",
-      "repos_affected": [
-        "microsoft/vscode-copilot-release"
-      ]
-    },
-    {
-      "cluster_id": "e6a857bccb7e",
-      "title": "Copilot Chat Rate Limits and Session Sync",
-      "summary": "Users experience premature rate limiting that blocks paid users after minimal Copilot Chat usage, and they also want session history to sync between VS Code Stable and Insiders. These issues disrupt workflow continuity and reduce the value of Copilot Chat for paying customers who expect reliable, uninterrupted access to their conversations.",
-      "category": "Developer Experience",
-      "representative_need": "Fix premature rate limiting that blocks paid users after minimal Copilot Chat usage",
-      "issue_numbers": [
-        14128,
-        14118
-      ],
-      "issue_urls": [
-        "https://github.com/microsoft/vscode-copilot-release/issues/14128",
-        "https://github.com/microsoft/vscode-copilot-release/issues/14118"
-      ],
-      "sample_titles": [
-        "Fix premature rate limiting that blocks paid users after minimal Copilot Chat usage",
-        "Sync Copilot Chat session history between VS Code Stable and Insiders"
-      ],
-      "demand_score": 0.5682747239655364,
-      "rising_score": 1,
-      "volume": 2,
-      "open_count": 1,
-      "closed_count": 1,
-      "avg_reactions": 4.5,
-      "avg_comments": 0,
-      "date_first_seen": "2026-02-09T15:10:48.000Z",
-      "date_last_seen": "2026-02-14T16:44:02.000Z",
-      "repos_affected": [
-        "microsoft/vscode-copilot-release"
-      ]
-    },
-    {
-      "cluster_id": "ee77deb5967e",
-      "title": "Improve Copilot Chat reliability and initialization",
-      "summary": "Users are experiencing reliability issues with Copilot Chat, including renderer crashes during heavy usage in Remote-SSH workspaces on macOS, slow initialization times, and infinite retry loops from unhandled HTTP 404 errors. They want a more stable and responsive Chat experience with faster startup times and proper error handling.",
-      "category": "Reliability",
-      "representative_need": "Fix renderer crash during heavy Copilot Chat usage in Remote-SSH workspaces on macOS",
-      "issue_numbers": [
-        14139,
-        14132,
-        14082,
-        14073
-      ],
-      "issue_urls": [
-        "https://github.com/microsoft/vscode-copilot-release/issues/14139",
-        "https://github.com/microsoft/vscode-copilot-release/issues/14132",
-        "https://github.com/microsoft/vscode-copilot-release/issues/14082",
-        "https://github.com/microsoft/vscode-copilot-release/issues/14073"
-      ],
-      "sample_titles": [
-        "Fix renderer crash during heavy Copilot Chat usage in Remote-SSH workspaces on macOS",
-        "Fix slow Chat initialization time",
-        "Handle HTTP 404 responses from org custom instructions API as non-retryable errors to prevent infinite retry loops"
-      ],
-      "demand_score": 0.5118905230758227,
-      "rising_score": 1,
-      "volume": 4,
-      "open_count": 4,
-      "closed_count": 0,
-      "avg_reactions": 0,
-      "avg_comments": 0.8,
-      "date_first_seen": "2026-01-14T10:12:01.000Z",
-      "date_last_seen": "2026-02-19T23:17:50.000Z",
+      "demand_score": 5.64656832514379,
+      "rising_score": 0.3333333333333333,
+      "volume": 22,
+      "open_count": 20,
+      "closed_count": 2,
+      "avg_reactions": 0.7,
+      "avg_comments": 0.6,
+      "date_first_seen": "2026-03-06T09:43:31.000Z",
+      "date_last_seen": "2026-03-23T19:53:22.000Z",
       "repos_affected": [
         "microsoft/vscode-copilot-release"
       ]
     }
   ],
   "category_breakdown": {
-    "Configuration": 1,
-    "Developer Experience": 6,
-    "Integration": 1,
-    "UI/UX": 1,
-    "Reliability": 5,
-    "Platform Support": 2
+    "Reliability": 1
   }
 }

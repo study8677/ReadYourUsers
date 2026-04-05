@@ -1,0 +1,90 @@
+{
+  "repo": "FlowiseAI/Flowise",
+  "display_name": "Flowise",
+  "generated_at": "2026-04-05T07:21:22.632Z",
+  "window_start": "2026-03-06T07:21:22.632Z",
+  "window_end": "2026-04-05T07:21:22.632Z",
+  "total_issues_analyzed": 24,
+  "total_issues_included": 24,
+  "clusters": [
+    {
+      "cluster_id": "a1eb96837be7",
+      "title": "Security Governance and Trust for Agent Workflows",
+      "summary": "Users want enhanced security and governance features for agent workflows, including cryptographic identity verification to prevent compromised nodes from injecting data, audit trails with quantum-safe signing, policy enforcement nodes, and spending controls for financial transactions. These features address concerns about trust, accountability, and compliance in multi-agent and production environments.",
+      "category": "Security",
+      "representative_need": "Add Row Text Splitter node for precise line-based splitting of database table data",
+      "issue_numbers": [
+        6105,
+        6097,
+        6056,
+        6103,
+        6064,
+        6040,
+        6091,
+        6060,
+        6090,
+        6049,
+        6132,
+        6112,
+        6111,
+        6108,
+        6102,
+        6085,
+        6077,
+        6076,
+        6071,
+        6070,
+        6055,
+        6047,
+        6038,
+        6035
+      ],
+      "issue_urls": [
+        "https://github.com/FlowiseAI/Flowise/issues/6105",
+        "https://github.com/FlowiseAI/Flowise/issues/6097",
+        "https://github.com/FlowiseAI/Flowise/issues/6056",
+        "https://github.com/FlowiseAI/Flowise/issues/6103",
+        "https://github.com/FlowiseAI/Flowise/issues/6064",
+        "https://github.com/FlowiseAI/Flowise/issues/6040",
+        "https://github.com/FlowiseAI/Flowise/issues/6091",
+        "https://github.com/FlowiseAI/Flowise/issues/6060",
+        "https://github.com/FlowiseAI/Flowise/issues/6090",
+        "https://github.com/FlowiseAI/Flowise/issues/6049",
+        "https://github.com/FlowiseAI/Flowise/issues/6132",
+        "https://github.com/FlowiseAI/Flowise/issues/6112",
+        "https://github.com/FlowiseAI/Flowise/issues/6111",
+        "https://github.com/FlowiseAI/Flowise/issues/6108",
+        "https://github.com/FlowiseAI/Flowise/issues/6102",
+        "https://github.com/FlowiseAI/Flowise/issues/6085",
+        "https://github.com/FlowiseAI/Flowise/issues/6077",
+        "https://github.com/FlowiseAI/Flowise/issues/6076",
+        "https://github.com/FlowiseAI/Flowise/issues/6071",
+        "https://github.com/FlowiseAI/Flowise/issues/6070",
+        "https://github.com/FlowiseAI/Flowise/issues/6055",
+        "https://github.com/FlowiseAI/Flowise/issues/6047",
+        "https://github.com/FlowiseAI/Flowise/issues/6038",
+        "https://github.com/FlowiseAI/Flowise/issues/6035"
+      ],
+      "sample_titles": [
+        "Add Row Text Splitter node for precise line-based splitting of database table data",
+        "Add community Helm chart for Kubernetes deployment to official documentation",
+        "Add cryptographic agent identity verification for multi-agent flows to prevent compromised nodes from injecting data"
+      ],
+      "demand_score": 4.794158781801853,
+      "rising_score": 0.8571428571428571,
+      "volume": 24,
+      "open_count": 15,
+      "closed_count": 9,
+      "avg_reactions": 0,
+      "avg_comments": 2,
+      "date_first_seen": "2026-03-22T12:13:04.000Z",
+      "date_last_seen": "2026-04-03T03:14:46.000Z",
+      "repos_affected": [
+        "FlowiseAI/Flowise"
+      ]
+    }
+  ],
+  "category_breakdown": {
+    "Security": 1
+  }
+}

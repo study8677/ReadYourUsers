@@ -1,96 +1,66 @@
 {
   "repo": "OpenHands/OpenHands",
   "display_name": "OpenHands",
-  "generated_at": "2026-04-03T19:17:08.721Z",
-  "window_start": "2026-03-04T19:17:08.721Z",
-  "window_end": "2026-04-03T19:17:08.721Z",
-  "total_issues_analyzed": 14,
-  "total_issues_included": 13,
+  "generated_at": "2026-04-05T07:16:14.720Z",
+  "window_start": "2026-03-06T07:16:14.720Z",
+  "window_end": "2026-04-05T07:16:14.720Z",
+  "total_issues_analyzed": 13,
+  "total_issues_included": 12,
   "clusters": [
     {
-      "cluster_id": "1c36899d5abd",
-      "title": "UI/UX Quality Improvements and Bug Fixes",
-      "summary": "Users are requesting various bug fixes and quality improvements across the application's user interface, including fixing message duplication, display issues with the think tool and repository picker, and message handling during status transitions. Additionally, users want UX enhancements like reducing comment clutter in integrations and new observability features such as per-conversation diagnostics and a scheduled automations management page.",
-      "category": "UI/UX",
-      "representative_need": "Add a UI page to view and manage scheduled automations with details, run history, and enable/disable/delete controls",
+      "cluster_id": "ed67a589a733",
+      "title": "Core platform enhancements and bug fixes",
+      "summary": "Users are requesting a mix of security enhancements (trust verification, policy governance, dependency age guardrails), UI/UX bug fixes (duplicate messages, display formatting, message consolidation), and new capabilities (diagnostics view, model discovery). These improvements aim to strengthen platform reliability, governance, and developer experience across multiple interaction surfaces.",
+      "category": "Platform Support",
+      "representative_need": "Add OPA-based policy guard to enforce fine-grained governance policies on agent actions before execution",
       "issue_numbers": [
+        13781,
+        13731,
+        13697,
         13771,
+        13690,
+        13737,
+        13736,
         13769,
         13740,
         13738,
-        13737,
-        13736,
         13716,
-        13694,
-        13690,
-        13677,
-        13674
+        13694
       ],
       "issue_urls": [
+        "https://github.com/OpenHands/OpenHands/issues/13781",
+        "https://github.com/OpenHands/OpenHands/issues/13731",
+        "https://github.com/OpenHands/OpenHands/issues/13697",
         "https://github.com/OpenHands/OpenHands/issues/13771",
+        "https://github.com/OpenHands/OpenHands/issues/13690",
+        "https://github.com/OpenHands/OpenHands/issues/13737",
+        "https://github.com/OpenHands/OpenHands/issues/13736",
         "https://github.com/OpenHands/OpenHands/issues/13769",
         "https://github.com/OpenHands/OpenHands/issues/13740",
         "https://github.com/OpenHands/OpenHands/issues/13738",
-        "https://github.com/OpenHands/OpenHands/issues/13737",
-        "https://github.com/OpenHands/OpenHands/issues/13736",
         "https://github.com/OpenHands/OpenHands/issues/13716",
-        "https://github.com/OpenHands/OpenHands/issues/13694",
-        "https://github.com/OpenHands/OpenHands/issues/13690",
-        "https://github.com/OpenHands/OpenHands/issues/13677",
-        "https://github.com/OpenHands/OpenHands/issues/13674"
+        "https://github.com/OpenHands/OpenHands/issues/13694"
       ],
       "sample_titles": [
-        "Add a UI page to view and manage scheduled automations with details, run history, and enable/disable/delete controls",
-        "Add per-conversation diagnostics and observability view for Cloud users",
-        "Align Docker frontend builder Node version with package.json engine requirements"
+        "Add OPA-based policy guard to enforce fine-grained governance policies on agent actions before execution",
+        "Add minimum dependency age guardrails for Python and npm packages to mitigate supply-chain attacks",
+        "Add model discovery for OpenAI API compatible providers and document required model name format"
       ],
-      "demand_score": 2.3004206387738853,
-      "rising_score": 12,
-      "volume": 11,
-      "open_count": 10,
+      "demand_score": 2.4360237875183772,
+      "rising_score": 13,
+      "volume": 12,
+      "open_count": 11,
       "closed_count": 1,
       "avg_reactions": 0,
       "avg_comments": 2.5,
-      "date_first_seen": "2026-03-31T15:00:14.000Z",
-      "date_last_seen": "2026-04-03T16:35:22.000Z",
-      "repos_affected": [
-        "OpenHands/OpenHands"
-      ]
-    },
-    {
-      "cluster_id": "6f37228a6f00",
-      "title": "Security Guardrails for Agent Actions and Dependencies",
-      "summary": "Users want built-in security guardrails to control AI agent behavior and protect against threats. This includes policy-based controls using OPA (Open Policy Agent) to govern what actions agents can execute, as well as supply chain protections like minimum dependency age checks to prevent attacks from newly published malicious packages.",
-      "category": "Security",
-      "representative_need": "Add OPA-based policy guard for agent action execution",
-      "issue_numbers": [
-        13731,
-        13697
-      ],
-      "issue_urls": [
-        "https://github.com/OpenHands/OpenHands/issues/13731",
-        "https://github.com/OpenHands/OpenHands/issues/13697"
-      ],
-      "sample_titles": [
-        "Add OPA-based policy guard for agent action execution",
-        "Add minimum dependency age guardrails for Python and npm packages to prevent supply-chain attacks from newly published malicious packages"
-      ],
-      "demand_score": 0.9863731763315956,
-      "rising_score": 3,
-      "volume": 2,
-      "open_count": 2,
-      "closed_count": 0,
-      "avg_reactions": 0,
-      "avg_comments": 0.5,
-      "date_first_seen": "2026-04-02T04:29:14.000Z",
-      "date_last_seen": "2026-04-02T23:08:07.000Z",
+      "date_first_seen": "2026-04-01T21:06:34.000Z",
+      "date_last_seen": "2026-04-04T08:01:17.000Z",
       "repos_affected": [
         "OpenHands/OpenHands"
       ]
     }
   ],
   "category_breakdown": {
-    "UI/UX": 1,
-    "Security": 1
+    "Platform Support": 1
   }
 }

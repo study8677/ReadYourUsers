@@ -1,239 +1,98 @@
 {
   "repo": "block/goose",
   "display_name": "Goose",
-  "generated_at": "2026-04-03T12:52:02.740Z",
-  "window_start": "2026-03-04T12:52:02.740Z",
-  "window_end": "2026-04-03T12:52:02.740Z",
-  "total_issues_analyzed": 32,
+  "generated_at": "2026-04-05T07:13:33.030Z",
+  "window_start": "2026-03-06T07:13:33.030Z",
+  "window_end": "2026-04-05T07:13:33.030Z",
+  "total_issues_analyzed": 30,
   "total_issues_included": 28,
   "clusters": [
     {
-      "cluster_id": "3d5b51366c94",
-      "title": "Improve CLI stability, usability, and local model management",
-      "summary": "Users want enhancements to the command-line interface, including better model management, crash fixes, log cleanup, and improved interactive session features. These changes aim to create a more reliable, user-friendly terminal experience that minimizes friction and clarifies output during local AI workflows.",
-      "category": "Developer Experience",
-      "representative_need": "Add CLI commands to download and manage local inference models without starting the goosed server",
+      "cluster_id": "d1a1d5d66718",
+      "title": "CLI and Desktop UI Improvements",
+      "summary": "Users are requesting various improvements to both the CLI and desktop interfaces, including new model management commands, markdown rendering, visual styling enhancements, and critical bug fixes for segmentation faults and false-positive screens. Additionally, there are multiple desktop UI fixes needed for proper macOS integration, tool call expansion, and markdown code block rendering.",
+      "category": "UI/UX",
+      "representative_need": "Add /md command to render markdown files in CLI",
       "issue_numbers": [
         8282,
-        8275,
-        8274,
-        8273,
-        8272,
         8249,
         8223,
         8221,
-        8198,
-        8192
-      ],
-      "issue_urls": [
-        "https://github.com/block/goose/issues/8282",
-        "https://github.com/block/goose/issues/8275",
-        "https://github.com/block/goose/issues/8274",
-        "https://github.com/block/goose/issues/8273",
-        "https://github.com/block/goose/issues/8272",
-        "https://github.com/block/goose/issues/8249",
-        "https://github.com/block/goose/issues/8223",
-        "https://github.com/block/goose/issues/8221",
-        "https://github.com/block/goose/issues/8198",
-        "https://github.com/block/goose/issues/8192"
-      ],
-      "sample_titles": [
-        "Add CLI commands to download and manage local inference models without starting the goosed server",
-        "Add `-i` short flag and visible `--id` alias for session ID CLI argument",
-        "Buffer streaming tool call fragments before sending them to the local interpreter model"
-      ],
-      "demand_score": 2.2050651436541147,
-      "rising_score": 11,
-      "volume": 10,
-      "open_count": 8,
-      "closed_count": 2,
-      "avg_reactions": 0.1,
-      "avg_comments": 0.4,
-      "date_first_seen": "2026-03-29T18:53:56.000Z",
-      "date_last_seen": "2026-04-03T10:22:44.000Z",
-      "repos_affected": [
-        "block/goose"
-      ]
-    },
-    {
-      "cluster_id": "79fc8f005ec6",
-      "title": "Improving AI Agent Reliability, Configuration, and Extensibility",
-      "summary": "Users need critical bug fixes for runtime crashes, authentication issues, and model regressions to maintain reliable AI agent performance. They also require enhanced configuration controls, automated maintenance workflows, and custom security hooks to better adapt the extension to complex development environments.",
-      "category": "Developer Experience",
-      "representative_need": "Add automated cleanup for merged branches and stale issues",
-      "issue_numbers": [
+        8311,
+        8299,
+        8213,
+        8292,
+        8290,
+        8273,
         8270,
+        8269,
+        8226,
+        8308,
+        8298,
+        8293,
+        8288,
+        8277,
+        8275,
+        8274,
+        8272,
+        8266,
         8265,
         8264,
         8262,
         8248,
-        8213,
-        8201,
-        8193,
-        8184
+        8236,
+        8229
       ],
       "issue_urls": [
+        "https://github.com/block/goose/issues/8282",
+        "https://github.com/block/goose/issues/8249",
+        "https://github.com/block/goose/issues/8223",
+        "https://github.com/block/goose/issues/8221",
+        "https://github.com/block/goose/issues/8311",
+        "https://github.com/block/goose/issues/8299",
+        "https://github.com/block/goose/issues/8213",
+        "https://github.com/block/goose/issues/8292",
+        "https://github.com/block/goose/issues/8290",
+        "https://github.com/block/goose/issues/8273",
         "https://github.com/block/goose/issues/8270",
+        "https://github.com/block/goose/issues/8269",
+        "https://github.com/block/goose/issues/8226",
+        "https://github.com/block/goose/issues/8308",
+        "https://github.com/block/goose/issues/8298",
+        "https://github.com/block/goose/issues/8293",
+        "https://github.com/block/goose/issues/8288",
+        "https://github.com/block/goose/issues/8277",
+        "https://github.com/block/goose/issues/8275",
+        "https://github.com/block/goose/issues/8274",
+        "https://github.com/block/goose/issues/8272",
+        "https://github.com/block/goose/issues/8266",
         "https://github.com/block/goose/issues/8265",
         "https://github.com/block/goose/issues/8264",
         "https://github.com/block/goose/issues/8262",
         "https://github.com/block/goose/issues/8248",
-        "https://github.com/block/goose/issues/8213",
-        "https://github.com/block/goose/issues/8201",
-        "https://github.com/block/goose/issues/8193",
-        "https://github.com/block/goose/issues/8184"
-      ],
-      "sample_titles": [
-        "Add automated cleanup for merged branches and stale issues",
-        "Add pre-tool-execution hooks for custom security scanning and validation",
-        "Fix OAuth authentication failure for Tetrate Agent Router"
-      ],
-      "demand_score": 1.9461599591221501,
-      "rising_score": 10,
-      "volume": 9,
-      "open_count": 8,
-      "closed_count": 1,
-      "avg_reactions": 0,
-      "avg_comments": 0.2,
-      "date_first_seen": "2026-03-29T03:02:30.000Z",
-      "date_last_seen": "2026-04-03T05:58:18.000Z",
-      "repos_affected": [
-        "block/goose"
-      ]
-    },
-    {
-      "cluster_id": "e7223d9d72c1",
-      "title": "Comprehensive Documentation Updates, Fixes, and Quickstart Enhancements",
-      "summary": "Users are requesting comprehensive updates to the project documentation to cover new features, correct outdated references, and fix copy-paste errors. Accurate and current documentation is crucial to prevent configuration mistakes and streamline the onboarding process for new developers.",
-      "category": "Documentation",
-      "representative_need": "Document toolshim usage, configuration, and model compatibility",
-      "issue_numbers": [
-        8269,
-        8226,
-        8195
-      ],
-      "issue_urls": [
-        "https://github.com/block/goose/issues/8269",
-        "https://github.com/block/goose/issues/8226",
-        "https://github.com/block/goose/issues/8195"
-      ],
-      "sample_titles": [
-        "Document toolshim usage, configuration, and model compatibility",
-        "Fix documentation copy-paste errors and outdated references",
-        "Update quickstart documentation to reflect current persistent personality configuration methods"
-      ],
-      "demand_score": 0.9708538086996932,
-      "rising_score": 4,
-      "volume": 3,
-      "open_count": 3,
-      "closed_count": 0,
-      "avg_reactions": 0,
-      "avg_comments": 0.7,
-      "date_first_seen": "2026-03-29T23:16:30.000Z",
-      "date_last_seen": "2026-04-03T05:32:34.000Z",
-      "repos_affected": [
-        "block/goose"
-      ]
-    },
-    {
-      "cluster_id": "3b041c82a545",
-      "title": "Improve Cloud AI API Version Routing Compatibility",
-      "summary": "Users need the system to correctly route API requests and handle version query parameters for external cloud AI providers like GCP and Azure. Implementing conditional parameter exclusion and fixing global endpoint routing will resolve compatibility issues across different API versions. This ensures reliable integration with multiple cloud-hosted AI services.",
-      "category": "Integration",
-      "representative_need": "Conditionally exclude api-version query parameter for Azure OpenAI API v1 compatibility",
-      "issue_numbers": [
-        8277,
-        8236
-      ],
-      "issue_urls": [
-        "https://github.com/block/goose/issues/8277",
-        "https://github.com/block/goose/issues/8236"
-      ],
-      "sample_titles": [
-        "Conditionally exclude api-version query parameter for Azure OpenAI API v1 compatibility",
-        "Fix API version routing for GCP Vertex AI global endpoint"
-      ],
-      "demand_score": 0,
-      "rising_score": 3,
-      "volume": 2,
-      "open_count": 2,
-      "closed_count": 0,
-      "avg_reactions": 0,
-      "avg_comments": 0,
-      "date_first_seen": "2026-04-01T12:32:45.000Z",
-      "date_last_seen": "2026-04-03T08:50:22.000Z",
-      "repos_affected": [
-        "block/goose"
-      ]
-    },
-    {
-      "cluster_id": "f476f18d090e",
-      "title": "Resource Monitoring and Process Lifecycle Management",
-      "summary": "Users want integrated tools to track LLM token usage and costs while ensuring system resources are properly cleaned up. They are requesting automatic process termination at the end of sessions to eliminate memory leaks and prevent resource exhaustion. These improvements aim to enhance application stability and provide clear visibility into operational expenses.",
-      "category": "Performance",
-      "representative_need": "Add built-in token usage tracking and cost monitoring for LLM providers",
-      "issue_numbers": [
-        8266,
-        8229
-      ],
-      "issue_urls": [
-        "https://github.com/block/goose/issues/8266",
+        "https://github.com/block/goose/issues/8236",
         "https://github.com/block/goose/issues/8229"
       ],
       "sample_titles": [
-        "Add built-in token usage tracking and cost monitoring for LLM providers",
-        "Terminate MCP extension processes when Goose sessions end to prevent memory leaks"
+        "Add /md command to render markdown files in CLI",
+        "Add CLI commands for local-inference model management (list, download, status, remove)",
+        "Add accessibility font scaling and UI customization options for low-vision users in Desktop application"
       ],
-      "demand_score": 0,
-      "rising_score": 3,
-      "volume": 2,
-      "open_count": 1,
-      "closed_count": 1,
-      "avg_reactions": 0,
-      "avg_comments": 0,
-      "date_first_seen": "2026-03-31T16:38:25.000Z",
-      "date_last_seen": "2026-04-02T21:57:59.000Z",
-      "repos_affected": [
-        "block/goose"
-      ]
-    },
-    {
-      "cluster_id": "44c1776f3ae0",
-      "title": "Flexible LLM Provider Settings and Per-Agent Assignments",
-      "summary": "Users want the ability to assign specific LLM models and API keys to individual agents within a single provider setup. They also need the flexibility to override base URLs for built-in providers to support custom deployments or proxy routing. These enhancements would improve environment isolation, cost tracking, and infrastructure adaptability.",
-      "category": "Configuration",
-      "representative_need": "Allow overriding the base URL for built-in LLM providers",
-      "issue_numbers": [
-        8203,
-        8187
-      ],
-      "issue_urls": [
-        "https://github.com/block/goose/issues/8203",
-        "https://github.com/block/goose/issues/8187"
-      ],
-      "sample_titles": [
-        "Allow overriding the base URL for built-in LLM providers",
-        "Support per-agent model and API key assignment under a single provider"
-      ],
-      "demand_score": 0,
-      "rising_score": 3,
-      "volume": 2,
-      "open_count": 1,
-      "closed_count": 1,
-      "avg_reactions": 0,
-      "avg_comments": 0,
-      "date_first_seen": "2026-03-29T11:55:08.000Z",
-      "date_last_seen": "2026-03-30T08:13:27.000Z",
+      "demand_score": 6.073183546684809,
+      "rising_score": 29,
+      "volume": 28,
+      "open_count": 24,
+      "closed_count": 4,
+      "avg_reactions": 0.1,
+      "avg_comments": 0.4,
+      "date_first_seen": "2026-03-30T20:00:32.000Z",
+      "date_last_seen": "2026-04-04T07:45:02.000Z",
       "repos_affected": [
         "block/goose"
       ]
     }
   ],
   "category_breakdown": {
-    "Developer Experience": 2,
-    "Documentation": 1,
-    "Integration": 1,
-    "Performance": 1,
-    "Configuration": 1
+    "UI/UX": 1
   }
 }

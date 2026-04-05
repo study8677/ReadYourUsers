@@ -16,33 +16,23 @@ ReadYourUsers 是一个 TypeScript 工作流和公开的多产品观测站，用
 
 <!-- READYOURUSERS:START -->
 
-## 实时快照 — Tabby
+## 实时快照 — 科技爱好者周刊
 
-> 基于 [TabbyML/tabby](https://github.com/TabbyML/tabby) 的 55 条 issue · 11 个需求簇 · 更新于 2026-04-03
+> 基于 [ruanyf/weekly](https://github.com/ruanyf/weekly) 的 94 条 issue · 1 个需求簇 · 更新于 2026-04-05
 
 ### 当前最强需求
 
 | 排名 | 需求 | Issue 数 | 得分 | 分类 | 示例 |
 | --- | --- | --- | --- | --- | --- |
-| 1 | Platform support and deployment flexibility enhancements | 17 | 1.7 | Platform Support | [#4471](https://github.com/TabbyML/tabby/issues/4471), [#4460](https://github.com/TabbyML/tabby/issues/4460), [#4452](https://github.com/TabbyML/tabby/issues/4452) |
-| 2 | IDE Plugin Bug Fixes and Context Improvements | 7 | 1.4 | Developer Experience | [#4420](https://github.com/TabbyML/tabby/issues/4420), [#4418](https://github.com/TabbyML/tabby/issues/4418), [#4404](https://github.com/TabbyML/tabby/issues/4404) |
-| 3 | Improve Git Integration and Repository Operations | 8 | 1.2 | Developer Experience | [#4451](https://github.com/TabbyML/tabby/issues/4451), [#4449](https://github.com/TabbyML/tabby/issues/4449), [#4431](https://github.com/TabbyML/tabby/issues/4431) |
-| 4 | Improve Code Completion Speed and Context Awareness | 2 | 1.0 | Developer Experience | [#4472](https://github.com/TabbyML/tabby/issues/4472), [#4428](https://github.com/TabbyML/tabby/issues/4428) |
-| 5 | Improve self-hosted deployment flexibility and configuration | 3 | 0.6 | Configuration | [#4434](https://github.com/TabbyML/tabby/issues/4434), [#4426](https://github.com/TabbyML/tabby/issues/4426), [#4400](https://github.com/TabbyML/tabby/issues/4400) |
-| 6 | Expand model support and API integrations | 3 | 0.5 | Integration | [#4422](https://github.com/TabbyML/tabby/issues/4422), [#4412](https://github.com/TabbyML/tabby/issues/4412), [#4374](https://github.com/TabbyML/tabby/issues/4374) |
-| 7 | Tabby Agent Code Assistance Improvements | 2 | 0.5 | Developer Experience | [#4411](https://github.com/TabbyML/tabby/issues/4411), [#4384](https://github.com/TabbyML/tabby/issues/4384) |
-| 8 | Enhanced configuration file and settings support | 4 | 0.3 | Configuration | [#4401](https://github.com/TabbyML/tabby/issues/4401), [#4358](https://github.com/TabbyML/tabby/issues/4358), [#4356](https://github.com/TabbyML/tabby/issues/4356) |
-| 9 | OpenAI/LiteLLM Integration Tool Calling | 2 | 0.2 | Integration | [#4410](https://github.com/TabbyML/tabby/issues/4410), [#4353](https://github.com/TabbyML/tabby/issues/4353) |
-| 10 | Fix incorrect information display in CLI and endpoints | 2 | 0.2 | Developer Experience | [#4369](https://github.com/TabbyML/tabby/issues/4369), [#4364](https://github.com/TabbyML/tabby/issues/4364) |
+| 1 | AI-Powered Developer Tools and Workflow Integration | 37 | 2.4 | Developer Experience | [#9517](https://github.com/ruanyf/weekly/issues/9517), [#9505](https://github.com/ruanyf/weekly/issues/9505), [#9482](https://github.com/ruanyf/weekly/issues/9482) |
 
 ### 上升最快
 
 | 需求 | 上升倍率 | 本周 | 分类 |
 | --- | --- | --- | --- |
-| Platform support and deployment flexibility enhancements | 2.0x | 17 | Platform Support |
-| Improve Code Completion Speed and Context Awareness | 2.0x | 2 | Developer Experience |
+| AI-Powered Developer Tools and Workflow Integration | 6.8x | 37 | Developer Experience |
 
-[观测站](https://study8677.github.io/ReadYourUsers/) | [对比页](https://study8677.github.io/ReadYourUsers/zh/compare/index.html) | [产品页](https://study8677.github.io/ReadYourUsers/zh/products/TabbyML-tabby.html) | [完整报告](reports/latest/TabbyML-tabby.zh.md) | [English](README.md) | *基于公开 GitHub Issues，代表需求信号而非全部用户声音。*
+[观测站](https://study8677.github.io/ReadYourUsers/) | [对比页](https://study8677.github.io/ReadYourUsers/zh/compare/index.html) | [产品页](https://study8677.github.io/ReadYourUsers/zh/products/ruanyf-weekly.html) | [完整报告](reports/latest/ruanyf-weekly.zh.md) | [English](README.md) | *基于公开 GitHub Issues，代表需求信号而非全部用户声音。*
 
 <!-- READYOURUSERS:END -->
 

@@ -1,0 +1,54 @@
+{
+  "repo": "Significant-Gravitas/AutoGPT",
+  "display_name": "AutoGPT",
+  "generated_at": "2026-04-05T07:20:22.266Z",
+  "window_start": "2026-03-06T07:20:22.266Z",
+  "window_end": "2026-04-05T07:20:22.266Z",
+  "total_issues_analyzed": 8,
+  "total_issues_included": 6,
+  "clusters": [
+    {
+      "cluster_id": "871120911485",
+      "title": "Improve block error handling and add agent capabilities",
+      "summary": "Users want improved error handling in various AI blocks to gracefully manage edge cases like non-JSON responses, empty responses, and missing arguments. Additionally, they want new capabilities including optional external memory providers for durable agent memory, a pre-execution verification layer with audit logging, and a new onboarding experience to make the framework more robust and easier to adopt.",
+      "category": "Developer Experience",
+      "representative_need": "Add pre-execution verification layer for LLM outputs with audit logging",
+      "issue_numbers": [
+        12675,
+        12648,
+        12645,
+        12644,
+        12589,
+        12576
+      ],
+      "issue_urls": [
+        "https://github.com/Significant-Gravitas/AutoGPT/issues/12675",
+        "https://github.com/Significant-Gravitas/AutoGPT/issues/12648",
+        "https://github.com/Significant-Gravitas/AutoGPT/issues/12645",
+        "https://github.com/Significant-Gravitas/AutoGPT/issues/12644",
+        "https://github.com/Significant-Gravitas/AutoGPT/issues/12589",
+        "https://github.com/Significant-Gravitas/AutoGPT/issues/12576"
+      ],
+      "sample_titles": [
+        "Add pre-execution verification layer for LLM outputs with audit logging",
+        "Add support for optional external memory providers as backends for durable, auditable agent memory",
+        "Fix BlockUnknownError in GetCurrentDateBlock caused by missing required 'execution_context' argument"
+      ],
+      "demand_score": 0.948095579454513,
+      "rising_score": 1.6666666666666667,
+      "volume": 6,
+      "open_count": 3,
+      "closed_count": 3,
+      "avg_reactions": 0,
+      "avg_comments": 0.2,
+      "date_first_seen": "2026-03-26T10:11:06.000Z",
+      "date_last_seen": "2026-04-04T14:04:45.000Z",
+      "repos_affected": [
+        "Significant-Gravitas/AutoGPT"
+      ]
+    }
+  ],
+  "category_breakdown": {
+    "Developer Experience": 1
+  }
+}

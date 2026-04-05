@@ -1,0 +1,80 @@
+{
+  "repo": "n8n-io/n8n",
+  "display_name": "n8n",
+  "generated_at": "2026-04-05T07:17:57.189Z",
+  "window_start": "2026-03-06T07:17:57.189Z",
+  "window_end": "2026-04-05T07:17:57.189Z",
+  "total_issues_analyzed": 23,
+  "total_issues_included": 19,
+  "clusters": [
+    {
+      "cluster_id": "85f963562986",
+      "title": "Bug Fixes for Nodes, Workflows, and Core Platform",
+      "summary": "Users are reporting various bugs across the platform including node authentication and API issues (Dropbox, Anthropic, Ollama, WooCommerce, CoinGecko), workflow navigation and editor loading failures, and platform-level issues like webhook registration errors and workflow termination problems. These issues affect platform reliability and need to be addressed to ensure smooth operation.",
+      "category": "Reliability",
+      "representative_need": "Add 'to' field support when creating email tickets in Zammad Create Ticket node",
+      "issue_numbers": [
+        28022,
+        27950,
+        27949,
+        28043,
+        28002,
+        28041,
+        27976,
+        28031,
+        27961,
+        28040,
+        28039,
+        28035,
+        28029,
+        28025,
+        28005,
+        27994,
+        27991,
+        27980,
+        27952
+      ],
+      "issue_urls": [
+        "https://github.com/n8n-io/n8n/issues/28022",
+        "https://github.com/n8n-io/n8n/issues/27950",
+        "https://github.com/n8n-io/n8n/issues/27949",
+        "https://github.com/n8n-io/n8n/issues/28043",
+        "https://github.com/n8n-io/n8n/issues/28002",
+        "https://github.com/n8n-io/n8n/issues/28041",
+        "https://github.com/n8n-io/n8n/issues/27976",
+        "https://github.com/n8n-io/n8n/issues/28031",
+        "https://github.com/n8n-io/n8n/issues/27961",
+        "https://github.com/n8n-io/n8n/issues/28040",
+        "https://github.com/n8n-io/n8n/issues/28039",
+        "https://github.com/n8n-io/n8n/issues/28035",
+        "https://github.com/n8n-io/n8n/issues/28029",
+        "https://github.com/n8n-io/n8n/issues/28025",
+        "https://github.com/n8n-io/n8n/issues/28005",
+        "https://github.com/n8n-io/n8n/issues/27994",
+        "https://github.com/n8n-io/n8n/issues/27991",
+        "https://github.com/n8n-io/n8n/issues/27980",
+        "https://github.com/n8n-io/n8n/issues/27952"
+      ],
+      "sample_titles": [
+        "Add 'to' field support when creating email tickets in Zammad Create Ticket node",
+        "Conditionally hide API Key input for local Ollama connections",
+        "Enable SSRF protection by default for secure out-of-the-box behavior"
+      ],
+      "demand_score": 9.14743964796231,
+      "rising_score": 20,
+      "volume": 19,
+      "open_count": 15,
+      "closed_count": 4,
+      "avg_reactions": 0,
+      "avg_comments": 1.5,
+      "date_first_seen": "2026-04-02T09:17:02.000Z",
+      "date_last_seen": "2026-04-04T19:44:59.000Z",
+      "repos_affected": [
+        "n8n-io/n8n"
+      ]
+    }
+  ],
+  "category_breakdown": {
+    "Reliability": 1
+  }
+}
