@@ -11,7 +11,7 @@ export const GITHUB_PER_PAGE = 100;
 export const DEFAULT_ANALYSIS_CONCURRENCY = 5;
 
 /** Default similarity threshold for clustering */
-export const DEFAULT_SIMILARITY_THRESHOLD = 0.4;
+export const DEFAULT_SIMILARITY_THRESHOLD = 0.5;
 
 /** Minimum cluster size to include in reports */
 export const DEFAULT_MIN_CLUSTER_SIZE = 2;

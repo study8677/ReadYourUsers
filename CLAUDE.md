@@ -26,7 +26,11 @@ ryu generate [repo]      # Produce reports + site data
 ryu run [repo]           # Full pipeline (all four stages)
   --since-days <n>       # Analysis window (default 30)
   --llm-themes           # Use LLM for cross-product theme matching
-ryu aggregate [repo]
+
+# fetch/analyze/aggregate all accept:
+  --parallel <n>         # Repos to process concurrently (default 1)
+
+# aggregate also accepts:
   --llm-merge            # Use LLM to merge semantically similar clusters
 ```
 
@@ -43,7 +47,7 @@ Each stage reads the previous stage's output from disk. Stages can be run indepe
 - **Fetch** (`pipeline/fetcher.ts`): Octokit with throttling, ETag-based HTTP caching, incremental updates.
 - **Analyze** (`pipeline/analyzer.ts`): Sends each issue to an LLM, extracts structured fields (type, normalized_need, module_tags, severity, confidence) validated by Zod schemas (`schemas/analysis.ts`). Skips already-analyzed issues. Runs LLM calls in parallel via `mapWithConcurrency` (default 5).
 - **Aggregate** (`pipeline/aggregator.ts`): Groups by module_tags, then sub-clusters within each group by text similarity (`utils/similarity.ts`, threshold in `config/constants.ts`). Optional `--llm-merge` pass uses `ClusterMergeSchema` to merge borderline-similar clusters via LLM. Demand scores use global engagement normalization for fair cross-cluster comparison. Cluster IDs are deterministic (SHA256 of sorted needs).
-- **Generate** (`pipeline/generator.ts` + `pipeline/readme-templates.ts`): Produces Markdown reports (en + zh), cross-product JSON (`pipeline/cross-product.ts`), and updates README snapshots. Optional `--llm-themes` uses LLM to semantically match shared themes across products. Site is rendered by `site/build.ts` (orchestrator) with page builders in `site/pages/`, i18n in `site/i18n.ts`, HTML utilities in `site/html.ts`.
+- **Generate** (`pipeline/generator.ts` + `pipeline/readme-templates.ts`): Produces Markdown reports (en + zh), cross-product JSON (`pipeline/cross-product.ts`), and updates README snapshots. Optional `--llm-themes` uses LLM to semantically match shared themes across products. Site is rendered by `site/build.ts` (orchestrator) with page builders in `site/pages/` (`home`, `product`, `compare`, `observatory`, `reports`, `tools`, `print`), i18n in `site/i18n.ts`, HTML utilities in `site/html.ts`.
 
 ### Data Directory Layout
 

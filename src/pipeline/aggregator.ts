@@ -196,7 +196,8 @@ export async function aggregateIssues(
     (c) => c.analyses.length >= minClusterSize
   );
 
-  // Also collect singleton issues into an "Other" bucket
+  // Also collect singleton issues into an "Other" bucket,
+  // but only if it won't dominate the results (≤ 30% of total).
   const singletons = finalClusters.filter((c) => c.analyses.length < minClusterSize);
   if (singletons.length > 0) {
     const otherCluster: PreCluster = {
@@ -204,8 +205,13 @@ export async function aggregateIssues(
       needs: singletons.flatMap((s) => s.needs),
       analyses: singletons.flatMap((s) => s.analyses),
     };
-    if (otherCluster.analyses.length >= minClusterSize) {
+    const otherRatio = otherCluster.analyses.length / analyses.length;
+    if (otherCluster.analyses.length >= minClusterSize && otherRatio <= 0.3) {
       significantClusters.push(otherCluster);
+    } else if (otherRatio > 0.3) {
+      logger.info(
+        `Skipping "other" bucket: ${otherCluster.analyses.length} singletons (${Math.round(otherRatio * 100)}% of total) — too large to be meaningful`
+      );
     }
   }
 
