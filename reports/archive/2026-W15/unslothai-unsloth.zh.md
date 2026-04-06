@@ -1,36 +1,36 @@
 # Unsloth — 用户需求报告
 
 **周:** 2026-W15
-**生成日期:** 2026-04-05
-**分析 Issue 数:** 30 (30 纳入分析)
+**生成日期:** 2026-04-06
+**分析 Issue 数:** 35 (34 纳入分析)
 **需求簇:** 1
 
 ## Top 10 用户需求
 
 | 排名 | 需求 | Issue 数 | 得分 | 分类 | 示例 |
 | --- | --- | --- | --- | --- | --- |
-| 1 | Cross-platform compatibility and installation reliability fixes | 30 | 6.5 | Reliability | [#4856](https://github.com/unslothai/unsloth/issues/4856), [#4848](https://github.com/unslothai/unsloth/issues/4848), [#4843](https://github.com/unslothai/unsloth/issues/4843) |
+| 1 | Cross-Platform Installation and GPU Compatibility | 34 | 8.3 | Developer Experience | [#4848](https://github.com/unslothai/unsloth/issues/4848), [#4843](https://github.com/unslothai/unsloth/issues/4843), [#4830](https://github.com/unslothai/unsloth/issues/4830) |
 
 ## 上升最快的需求
 
 | 需求 | 上升倍率 | 本周 | 分类 |
 | --- | --- | --- | --- |
-| Cross-platform compatibility and installation reliability fixes | 31.0x | 30 | Reliability |
+| Cross-Platform Installation and GPU Compatibility | 35.0x | 34 | Developer Experience |
 
 ## 分类分布
 
-- **Reliability**: 1 个簇
+- **Developer Experience**: 1 个簇
 
 ## 所有需求簇
 
-### 1. Cross-platform compatibility and installation reliability fixes
+### 1. Cross-Platform Installation and GPU Compatibility
 
-Users are experiencing installation failures and compatibility issues across various platforms including ARM64 (NVIDIA Jetson), Pascal GPUs, Windows 11, and Google Colab, as well as with newer software versions like Ubuntu 24.04 and CUDA 13.1. Additionally, there are model loading and export issues with llama.cpp, GGUF formats, and specific models like Gemma and DevStral that need resolution for reliable fine-tuning workflows.
+Users are encountering multiple installation failures and compatibility issues across Windows, Apple Silicon, ARM64, and various GPU architectures (Pascal, Blackwell, Jetson Orin). These include PyTorch installation failures in restricted network environments, environment conflicts with Anaconda/Google Colab, missing GPU support for specialized hardware, and platform-specific issues like Windows ACL inheritance and CUDA library path conflicts. Users need resilient installation options with configurable sources and better fault tolerance.
 
-- **数量:** 30 条 issue (22 未关闭, 8 已关闭)
-- **需求得分:** 6.5
-- **平均反应:** 0.1 | **平均评论:** 2.2
-- **示例 Issue:** [#4856](https://github.com/unslothai/unsloth/issues/4856), [#4848](https://github.com/unslothai/unsloth/issues/4848), [#4843](https://github.com/unslothai/unsloth/issues/4843), [#4834](https://github.com/unslothai/unsloth/issues/4834), [#4830](https://github.com/unslothai/unsloth/issues/4830)
+- **数量:** 34 条 issue (27 未关闭, 7 已关闭)
+- **需求得分:** 8.3
+- **平均反应:** 0.1 | **平均评论:** 2.4
+- **示例 Issue:** [#4848](https://github.com/unslothai/unsloth/issues/4848), [#4843](https://github.com/unslothai/unsloth/issues/4843), [#4830](https://github.com/unslothai/unsloth/issues/4830), [#4829](https://github.com/unslothai/unsloth/issues/4829), [#4811](https://github.com/unslothai/unsloth/issues/4811)
 
 ---
 

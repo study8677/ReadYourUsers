@@ -1,52 +1,52 @@
 {
   "repo": "OpenHands/OpenHands",
   "display_name": "OpenHands",
-  "generated_at": "2026-04-05T07:16:14.720Z",
-  "window_start": "2026-03-06T07:16:14.720Z",
-  "window_end": "2026-04-05T07:16:14.720Z",
+  "generated_at": "2026-04-06T10:20:11.641Z",
+  "window_start": "2026-03-07T10:20:11.641Z",
+  "window_end": "2026-04-06T10:20:11.641Z",
   "total_issues_analyzed": 13,
   "total_issues_included": 12,
   "clusters": [
     {
-      "cluster_id": "ed67a589a733",
-      "title": "Core platform enhancements and bug fixes",
-      "summary": "Users are requesting a mix of security enhancements (trust verification, policy governance, dependency age guardrails), UI/UX bug fixes (duplicate messages, display formatting, message consolidation), and new capabilities (diagnostics view, model discovery). These improvements aim to strengthen platform reliability, governance, and developer experience across multiple interaction surfaces.",
-      "category": "Platform Support",
-      "representative_need": "Add OPA-based policy guard to enforce fine-grained governance policies on agent actions before execution",
+      "cluster_id": "db4c8a4c083d",
+      "title": "Security hardening and UX polish fixes",
+      "summary": "This cluster covers multiple areas of improvement: adding policy-based security measures for agent delegation and dependency age verification, fixing bugs in messaging and UI components, and enhancing observability and configuration options for developers. Users want better trust verification, fewer redundant messages, and improved developer tooling.",
+      "category": "Reliability",
+      "representative_need": "Add OPA-based policy guard for agent action execution",
       "issue_numbers": [
         13781,
         13731,
         13697,
         13771,
-        13690,
-        13737,
-        13736,
         13769,
         13740,
         13738,
+        13737,
+        13736,
         13716,
-        13694
+        13694,
+        13690
       ],
       "issue_urls": [
         "https://github.com/OpenHands/OpenHands/issues/13781",
         "https://github.com/OpenHands/OpenHands/issues/13731",
         "https://github.com/OpenHands/OpenHands/issues/13697",
         "https://github.com/OpenHands/OpenHands/issues/13771",
-        "https://github.com/OpenHands/OpenHands/issues/13690",
-        "https://github.com/OpenHands/OpenHands/issues/13737",
-        "https://github.com/OpenHands/OpenHands/issues/13736",
         "https://github.com/OpenHands/OpenHands/issues/13769",
         "https://github.com/OpenHands/OpenHands/issues/13740",
         "https://github.com/OpenHands/OpenHands/issues/13738",
+        "https://github.com/OpenHands/OpenHands/issues/13737",
+        "https://github.com/OpenHands/OpenHands/issues/13736",
         "https://github.com/OpenHands/OpenHands/issues/13716",
-        "https://github.com/OpenHands/OpenHands/issues/13694"
+        "https://github.com/OpenHands/OpenHands/issues/13694",
+        "https://github.com/OpenHands/OpenHands/issues/13690"
       ],
       "sample_titles": [
-        "Add OPA-based policy guard to enforce fine-grained governance policies on agent actions before execution",
-        "Add minimum dependency age guardrails for Python and npm packages to mitigate supply-chain attacks",
-        "Add model discovery for OpenAI API compatible providers and document required model name format"
+        "Add OPA-based policy guard for agent action execution",
+        "Add minimum age guardrails for Python and npm dependencies to mitigate supply-chain attacks via recently published packages",
+        "Add per-conversation diagnostics and observability view for Cloud users to inspect Laminar/LiteLLM tracing data"
       ],
-      "demand_score": 2.4360237875183772,
+      "demand_score": 2.405503388564939,
       "rising_score": 13,
       "volume": 12,
       "open_count": 11,
@@ -61,6 +61,6 @@
     }
   ],
   "category_breakdown": {
-    "Platform Support": 1
+    "Reliability": 1
   }
 }

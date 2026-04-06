@@ -1,7 +1,7 @@
 # Langfuse — User Demand Report
 
 **Week:** 2026-W15
-**Generated:** 2026-04-05
+**Generated:** 2026-04-06
 **Issues analyzed:** 28 (28 included)
 **Need clusters:** 1
 
@@ -9,28 +9,28 @@
 
 | Rank | Need | Issues | Score | Category | Examples |
 | --- | --- | --- | --- | --- | --- |
-| 1 | Critical bug fixes and reliability improvements | 28 | 7.1 | Reliability | [#12984](https://github.com/langfuse/langfuse/issues/12984), [#12974](https://github.com/langfuse/langfuse/issues/12974), [#12958](https://github.com/langfuse/langfuse/issues/12958) |
+| 1 | Tracing reliability, integrations, and UI polish | 28 | 7.0 | Observability & Integrations | [#12984](https://github.com/langfuse/langfuse/issues/12984), [#12958](https://github.com/langfuse/langfuse/issues/12958), [#12933](https://github.com/langfuse/langfuse/issues/12933) |
 
 ## Rising Needs
 
 | Need | Rising Score | This Week | Category |
 | --- | --- | --- | --- |
-| Critical bug fixes and reliability improvements | 3.3x | 28 | Reliability |
+| Tracing reliability, integrations, and UI polish | 2.8x | 28 | Observability & Integrations |
 
 ## Category Breakdown
 
-- **Reliability**: 1 clusters
+- **Observability & Integrations**: 1 clusters
 
 ## All Need Clusters
 
-### 1. Critical bug fixes and reliability improvements
+### 1. Tracing reliability, integrations, and UI polish
 
-This cluster addresses multiple critical bug fixes across tracing, authentication, infrastructure, and integration components. Users need fixes to distributed tracing mechanisms, SDK behavior, authentication endpoints, and infrastructure components like Redis and ClickHouse to ensure reliable operation. The issues include phantom parent observations, auth regressions, queue worker failures, and duplicate trace prevention.
+Users need fixes for tracing accuracy issues including recursive trace loops, phantom parent observations, and span flushing problems. They also want improved integrations with tools like Kiro CLI and LangChain, plus UI refinements for time display, markdown rendering, and internationalization support. These improvements address core observability reliability and developer experience gaps in the Langfuse platform.
 
 - **Volume:** 28 issues (25 open, 3 closed)
-- **Demand Score:** 7.1
+- **Demand Score:** 7.0
 - **Avg Reactions:** 1.4 | **Avg Comments:** 1.5
-- **Example issues:** [#12984](https://github.com/langfuse/langfuse/issues/12984), [#12974](https://github.com/langfuse/langfuse/issues/12974), [#12958](https://github.com/langfuse/langfuse/issues/12958), [#12933](https://github.com/langfuse/langfuse/issues/12933), [#12950](https://github.com/langfuse/langfuse/issues/12950)
+- **Example issues:** [#12984](https://github.com/langfuse/langfuse/issues/12984), [#12958](https://github.com/langfuse/langfuse/issues/12958), [#12933](https://github.com/langfuse/langfuse/issues/12933), [#12899](https://github.com/langfuse/langfuse/issues/12899), [#12877](https://github.com/langfuse/langfuse/issues/12877)
 
 ---
 

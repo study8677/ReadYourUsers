@@ -1,21 +1,21 @@
 # 科技爱好者周刊 — User Demand Report
 
 **Week:** 2026-W15
-**Generated:** 2026-04-05
-**Issues analyzed:** 94 (37 included)
+**Generated:** 2026-04-06
+**Issues analyzed:** 95 (31 included)
 **Need clusters:** 1
 
 ## Top 10 User Needs
 
 | Rank | Need | Issues | Score | Category | Examples |
 | --- | --- | --- | --- | --- | --- |
-| 1 | AI-Powered Developer Tools and Workflow Integration | 37 | 2.4 | Developer Experience | [#9517](https://github.com/ruanyf/weekly/issues/9517), [#9505](https://github.com/ruanyf/weekly/issues/9505), [#9482](https://github.com/ruanyf/weekly/issues/9482) |
+| 1 | AI Development Assistance and CLI Tooling | 31 | 1.6 | Developer Experience | [#9519](https://github.com/ruanyf/weekly/issues/9519), [#9511](https://github.com/ruanyf/weekly/issues/9511), [#9507](https://github.com/ruanyf/weekly/issues/9507) |
 
 ## Rising Needs
 
 | Need | Rising Score | This Week | Category |
 | --- | --- | --- | --- |
-| AI-Powered Developer Tools and Workflow Integration | 6.8x | 37 | Developer Experience |
+| AI Development Assistance and CLI Tooling | 5.6x | 31 | Developer Experience |
 
 ## Category Breakdown
 
@@ -23,14 +23,14 @@
 
 ## All Need Clusters
 
-### 1. AI-Powered Developer Tools and Workflow Integration
+### 1. AI Development Assistance and CLI Tooling
 
-Users are requesting improvements to AI-assisted development through enhanced code reliability, better agent orchestration, and cross-platform integration. This includes better AI code generation and validation, MCP server management, multi-agent collaboration frameworks, and automated publishing workflows between different platforms like Feishu and WeChat.
+Users are requesting advanced AI-powered development tools including better knowledge routing for code understanding, multi-agent collaboration, hallucination detection, and improved code generation reliability. They also want enhanced CLI tooling for git management, technology detection, and workflow automation to improve overall developer productivity.
 
-- **Volume:** 37 issues (36 open, 1 closed)
-- **Demand Score:** 2.4
-- **Avg Reactions:** 0.1 | **Avg Comments:** 0.2
-- **Example issues:** [#9517](https://github.com/ruanyf/weekly/issues/9517), [#9505](https://github.com/ruanyf/weekly/issues/9505), [#9482](https://github.com/ruanyf/weekly/issues/9482), [#9459](https://github.com/ruanyf/weekly/issues/9459), [#9445](https://github.com/ruanyf/weekly/issues/9445)
+- **Volume:** 31 issues (30 open, 1 closed)
+- **Demand Score:** 1.6
+- **Avg Reactions:** 0.2 | **Avg Comments:** 0.2
+- **Example issues:** [#9519](https://github.com/ruanyf/weekly/issues/9519), [#9511](https://github.com/ruanyf/weekly/issues/9511), [#9507](https://github.com/ruanyf/weekly/issues/9507), [#9505](https://github.com/ruanyf/weekly/issues/9505), [#9493](https://github.com/ruanyf/weekly/issues/9493)
 
 ---
 

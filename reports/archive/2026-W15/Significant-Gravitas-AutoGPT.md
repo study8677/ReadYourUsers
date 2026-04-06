@@ -1,36 +1,36 @@
 # AutoGPT — User Demand Report
 
 **Week:** 2026-W15
-**Generated:** 2026-04-05
-**Issues analyzed:** 8 (6 included)
+**Generated:** 2026-04-06
+**Issues analyzed:** 11 (9 included)
 **Need clusters:** 1
 
 ## Top 10 User Needs
 
 | Rank | Need | Issues | Score | Category | Examples |
 | --- | --- | --- | --- | --- | --- |
-| 1 | Improve block error handling and add agent capabilities | 6 | 0.9 | Developer Experience | [#12675](https://github.com/Significant-Gravitas/AutoGPT/issues/12675), [#12648](https://github.com/Significant-Gravitas/AutoGPT/issues/12648), [#12645](https://github.com/Significant-Gravitas/AutoGPT/issues/12645) |
+| 1 | Improve Agent Reliability and Error Handling | 9 | 1.9 | Reliability | [#12684](https://github.com/Significant-Gravitas/AutoGPT/issues/12684), [#12683](https://github.com/Significant-Gravitas/AutoGPT/issues/12683), [#12680](https://github.com/Significant-Gravitas/AutoGPT/issues/12680) |
 
 ## Rising Needs
 
 | Need | Rising Score | This Week | Category |
 | --- | --- | --- | --- |
-| Improve block error handling and add agent capabilities | 1.7x | 6 | Developer Experience |
+| Improve Agent Reliability and Error Handling | 4.5x | 9 | Reliability |
 
 ## Category Breakdown
 
-- **Developer Experience**: 1 clusters
+- **Reliability**: 1 clusters
 
 ## All Need Clusters
 
-### 1. Improve block error handling and add agent capabilities
+### 1. Improve Agent Reliability and Error Handling
 
-Users want improved error handling in various AI blocks to gracefully manage edge cases like non-JSON responses, empty responses, and missing arguments. Additionally, they want new capabilities including optional external memory providers for durable agent memory, a pre-execution verification layer with audit logging, and a new onboarding experience to make the framework more robust and easier to adopt.
+Users want the AutoGPT platform to be more reliable and robust through better error handling and graceful degradation when external services fail or unexpected inputs occur. This includes fixing bugs in block execution, JSON parsing, and UI rendering, as well as adding verification layers and cost estimation to make agents more production-ready.
 
-- **Volume:** 6 issues (3 open, 3 closed)
-- **Demand Score:** 0.9
+- **Volume:** 9 issues (6 open, 3 closed)
+- **Demand Score:** 1.9
 - **Avg Reactions:** 0 | **Avg Comments:** 0.2
-- **Example issues:** [#12675](https://github.com/Significant-Gravitas/AutoGPT/issues/12675), [#12648](https://github.com/Significant-Gravitas/AutoGPT/issues/12648), [#12645](https://github.com/Significant-Gravitas/AutoGPT/issues/12645), [#12644](https://github.com/Significant-Gravitas/AutoGPT/issues/12644), [#12589](https://github.com/Significant-Gravitas/AutoGPT/issues/12589)
+- **Example issues:** [#12684](https://github.com/Significant-Gravitas/AutoGPT/issues/12684), [#12683](https://github.com/Significant-Gravitas/AutoGPT/issues/12683), [#12680](https://github.com/Significant-Gravitas/AutoGPT/issues/12680), [#12678](https://github.com/Significant-Gravitas/AutoGPT/issues/12678), [#12675](https://github.com/Significant-Gravitas/AutoGPT/issues/12675)
 
 ---
 

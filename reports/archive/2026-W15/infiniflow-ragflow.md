@@ -1,36 +1,36 @@
 # RAGFlow — User Demand Report
 
 **Week:** 2026-W15
-**Generated:** 2026-04-05
-**Issues analyzed:** 22 (19 included)
+**Generated:** 2026-04-06
+**Issues analyzed:** 24 (21 included)
 **Need clusters:** 1
 
 ## Top 10 User Needs
 
 | Rank | Need | Issues | Score | Category | Examples |
 | --- | --- | --- | --- | --- | --- |
-| 1 | Bug fixes and new features for platform stability | 19 | 5.0 | Reliability | [#13907](https://github.com/infiniflow/ragflow/issues/13907), [#13840](https://github.com/infiniflow/ragflow/issues/13840), [#13889](https://github.com/infiniflow/ragflow/issues/13889) |
+| 1 | Bug fixes and feature improvements across platform components | 21 | 5.6 | Platform Support | [#13884](https://github.com/infiniflow/ragflow/issues/13884), [#13878](https://github.com/infiniflow/ragflow/issues/13878), [#13845](https://github.com/infiniflow/ragflow/issues/13845) |
 
 ## Rising Needs
 
 | Need | Rising Score | This Week | Category |
 | --- | --- | --- | --- |
-| Bug fixes and new features for platform stability | 9.5x | 19 | Reliability |
+| Bug fixes and feature improvements across platform components | 3.6x | 21 | Platform Support |
 
 ## Category Breakdown
 
-- **Reliability**: 1 clusters
+- **Platform Support**: 1 clusters
 
 ## All Need Clusters
 
-### 1. Bug fixes and new features for platform stability
+### 1. Bug fixes and feature improvements across platform components
 
-Users are requesting fixes for critical bugs across multiple components including workflow editor node reconnection, Docker container startup failures, task queue processing, batch file upload, and API integrations. Additionally, users want new features such as HTTP node support for ingestion pipelines, EU AI Act compliance checks, and LLM models with native web search capabilities to enhance platform functionality and regulatory compliance.
+Users are reporting various bug fixes and enhancements needed across deployment, integration, and core platform functionality. Issues include missing Docker configuration files, broken workflow editor interactions, incomplete external connector syncing, and gaps in API/SDK configuration exposure. Addressing these would improve system reliability, deployment flexibility, and user experience across multiple areas.
 
-- **Volume:** 19 issues (16 open, 3 closed)
-- **Demand Score:** 5.0
-- **Avg Reactions:** 1.1 | **Avg Comments:** 2.9
-- **Example issues:** [#13907](https://github.com/infiniflow/ragflow/issues/13907), [#13840](https://github.com/infiniflow/ragflow/issues/13840), [#13889](https://github.com/infiniflow/ragflow/issues/13889), [#13868](https://github.com/infiniflow/ragflow/issues/13868), [#13884](https://github.com/infiniflow/ragflow/issues/13884)
+- **Volume:** 21 issues (18 open, 3 closed)
+- **Demand Score:** 5.6
+- **Avg Reactions:** 1.1 | **Avg Comments:** 3
+- **Example issues:** [#13884](https://github.com/infiniflow/ragflow/issues/13884), [#13878](https://github.com/infiniflow/ragflow/issues/13878), [#13845](https://github.com/infiniflow/ragflow/issues/13845), [#13944](https://github.com/infiniflow/ragflow/issues/13944), [#13863](https://github.com/infiniflow/ragflow/issues/13863)
 
 ---
 

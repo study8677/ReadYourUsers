@@ -1,7 +1,7 @@
 # Langfuse — 用户需求报告
 
 **周:** 2026-W15
-**生成日期:** 2026-04-05
+**生成日期:** 2026-04-06
 **分析 Issue 数:** 28 (28 纳入分析)
 **需求簇:** 1
 
@@ -9,28 +9,28 @@
 
 | 排名 | 需求 | Issue 数 | 得分 | 分类 | 示例 |
 | --- | --- | --- | --- | --- | --- |
-| 1 | Critical bug fixes and reliability improvements | 28 | 7.1 | Reliability | [#12984](https://github.com/langfuse/langfuse/issues/12984), [#12974](https://github.com/langfuse/langfuse/issues/12974), [#12958](https://github.com/langfuse/langfuse/issues/12958) |
+| 1 | Tracing reliability, integrations, and UI polish | 28 | 7.0 | Observability & Integrations | [#12984](https://github.com/langfuse/langfuse/issues/12984), [#12958](https://github.com/langfuse/langfuse/issues/12958), [#12933](https://github.com/langfuse/langfuse/issues/12933) |
 
 ## 上升最快的需求
 
 | 需求 | 上升倍率 | 本周 | 分类 |
 | --- | --- | --- | --- |
-| Critical bug fixes and reliability improvements | 3.3x | 28 | Reliability |
+| Tracing reliability, integrations, and UI polish | 2.8x | 28 | Observability & Integrations |
 
 ## 分类分布
 
-- **Reliability**: 1 个簇
+- **Observability & Integrations**: 1 个簇
 
 ## 所有需求簇
 
-### 1. Critical bug fixes and reliability improvements
+### 1. Tracing reliability, integrations, and UI polish
 
-This cluster addresses multiple critical bug fixes across tracing, authentication, infrastructure, and integration components. Users need fixes to distributed tracing mechanisms, SDK behavior, authentication endpoints, and infrastructure components like Redis and ClickHouse to ensure reliable operation. The issues include phantom parent observations, auth regressions, queue worker failures, and duplicate trace prevention.
+Users need fixes for tracing accuracy issues including recursive trace loops, phantom parent observations, and span flushing problems. They also want improved integrations with tools like Kiro CLI and LangChain, plus UI refinements for time display, markdown rendering, and internationalization support. These improvements address core observability reliability and developer experience gaps in the Langfuse platform.
 
 - **数量:** 28 条 issue (25 未关闭, 3 已关闭)
-- **需求得分:** 7.1
+- **需求得分:** 7.0
 - **平均反应:** 1.4 | **平均评论:** 1.5
-- **示例 Issue:** [#12984](https://github.com/langfuse/langfuse/issues/12984), [#12974](https://github.com/langfuse/langfuse/issues/12974), [#12958](https://github.com/langfuse/langfuse/issues/12958), [#12933](https://github.com/langfuse/langfuse/issues/12933), [#12950](https://github.com/langfuse/langfuse/issues/12950)
+- **示例 Issue:** [#12984](https://github.com/langfuse/langfuse/issues/12984), [#12958](https://github.com/langfuse/langfuse/issues/12958), [#12933](https://github.com/langfuse/langfuse/issues/12933), [#12899](https://github.com/langfuse/langfuse/issues/12899), [#12877](https://github.com/langfuse/langfuse/issues/12877)
 
 ---
 

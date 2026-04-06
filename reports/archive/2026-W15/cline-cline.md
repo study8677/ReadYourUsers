@@ -1,36 +1,36 @@
 # Cline — User Demand Report
 
 **Week:** 2026-W15
-**Generated:** 2026-04-05
-**Issues analyzed:** 42 (42 included)
+**Generated:** 2026-04-06
+**Issues analyzed:** 43 (43 included)
 **Need clusters:** 1
 
 ## Top 10 User Needs
 
 | Rank | Need | Issues | Score | Category | Examples |
 | --- | --- | --- | --- | --- | --- |
-| 1 | Kanban Mode and CLI UI Reliability Fixes | 42 | 12.4 | UI/UX | [#10133](https://github.com/cline/cline/issues/10133), [#10128](https://github.com/cline/cline/issues/10128), [#10123](https://github.com/cline/cline/issues/10123) |
+| 1 | CLI/TUI Bug Fixes and Cross-Platform Stability | 43 | 12.4 | Developer Experience | [#10145](https://github.com/cline/cline/issues/10145), [#10133](https://github.com/cline/cline/issues/10133), [#10128](https://github.com/cline/cline/issues/10128) |
 
 ## Rising Needs
 
 | Need | Rising Score | This Week | Category |
 | --- | --- | --- | --- |
-| Kanban Mode and CLI UI Reliability Fixes | 2.7x | 42 | UI/UX |
+| CLI/TUI Bug Fixes and Cross-Platform Stability | 2.2x | 43 | Developer Experience |
 
 ## Category Breakdown
 
-- **UI/UX**: 1 clusters
+- **Developer Experience**: 1 clusters
 
 ## All Need Clusters
 
-### 1. Kanban Mode and CLI UI Reliability Fixes
+### 1. CLI/TUI Bug Fixes and Cross-Platform Stability
 
-Users are experiencing multiple reliability issues in Kanban mode including JSON parsing failures with embedded quotes/newlines, mode switching synchronization problems, UI freezes during command processing, and poor light theme visibility. These bugs cause the interface to become unresponsive, get stuck in intermediate states, or display information incorrectly, significantly impacting workflow continuity. Fixes are needed to ensure stable tool execution, proper state recovery, and consistent UI rendering across different terminal environments.
+Users are reporting multiple bugs affecting the command-line and terminal user interface experience, including platform-specific issues (particularly on Windows), UI state synchronization problems when switching between modes, tool execution hangs and parsing failures, and display/rendering issues in terminal environments. These issues collectively degrade the reliability and usability of the CLI/TUI for daily development workflows.
 
-- **Volume:** 42 issues (31 open, 11 closed)
+- **Volume:** 43 issues (32 open, 11 closed)
 - **Demand Score:** 12.4
-- **Avg Reactions:** 0.3 | **Avg Comments:** 1.7
-- **Example issues:** [#10133](https://github.com/cline/cline/issues/10133), [#10128](https://github.com/cline/cline/issues/10128), [#10123](https://github.com/cline/cline/issues/10123), [#10086](https://github.com/cline/cline/issues/10086), [#10064](https://github.com/cline/cline/issues/10064)
+- **Avg Reactions:** 0.2 | **Avg Comments:** 1.7
+- **Example issues:** [#10145](https://github.com/cline/cline/issues/10145), [#10133](https://github.com/cline/cline/issues/10133), [#10128](https://github.com/cline/cline/issues/10128), [#10123](https://github.com/cline/cline/issues/10123), [#10086](https://github.com/cline/cline/issues/10086)
 
 ---
 

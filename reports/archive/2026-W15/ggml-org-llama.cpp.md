@@ -1,36 +1,36 @@
 # llama.cpp — User Demand Report
 
 **Week:** 2026-W15
-**Generated:** 2026-04-05
-**Issues analyzed:** 47 (47 included)
+**Generated:** 2026-04-06
+**Issues analyzed:** 50 (50 included)
 **Need clusters:** 1
 
 ## Top 10 User Needs
 
 | Rank | Need | Issues | Score | Category | Examples |
 | --- | --- | --- | --- | --- | --- |
-| 1 | Gemma 4 CUDA Backend Stability and Performance Fixes | 47 | 8.8 | Performance | [#21457](https://github.com/ggml-org/llama.cpp/issues/21457), [#21420](https://github.com/ggml-org/llama.cpp/issues/21420), [#21414](https://github.com/ggml-org/llama.cpp/issues/21414) |
+| 1 | Vulkan backend stability and Gemma 4 model fixes | 50 | 7.4 | Reliability | [#21483](https://github.com/ggml-org/llama.cpp/issues/21483), [#21473](https://github.com/ggml-org/llama.cpp/issues/21473), [#21446](https://github.com/ggml-org/llama.cpp/issues/21446) |
 
 ## Rising Needs
 
 | Need | Rising Score | This Week | Category |
 | --- | --- | --- | --- |
-| Gemma 4 CUDA Backend Stability and Performance Fixes | 48.0x | 47 | Performance |
+| Vulkan backend stability and Gemma 4 model fixes | 51.0x | 50 | Reliability |
 
 ## Category Breakdown
 
-- **Performance**: 1 clusters
+- **Reliability**: 1 clusters
 
 ## All Need Clusters
 
-### 1. Gemma 4 CUDA Backend Stability and Performance Fixes
+### 1. Vulkan backend stability and Gemma 4 model fixes
 
-Users are experiencing multiple crashes, memory allocation failures, and segmentation faults when loading and running Gemma 4 models on the CUDA backend, particularly with vision/multimodal models and large context windows. Additionally, users request performance optimizations including speculative decoding, adaptive KV cache quantization, and Fast Walsh Hadamard Transform for KV-cache rotation to improve inference throughput and reduce generation latency. These issues significantly impact reliability and usability for production deployments.
+Users are experiencing multiple crashes and stability issues with the Vulkan backend, particularly when running Gemma 4 models, multimodal vision pipelines, and handling large prompts. These issues include assertion failures, invalid pointer crashes, memory leaks, and incorrect memory estimation that prevent reliable inference. Additionally, users need better documentation for multimodal model configuration and expanded audio modality support.
 
-- **Volume:** 47 issues (35 open, 12 closed)
-- **Demand Score:** 8.8
-- **Avg Reactions:** 0.5 | **Avg Comments:** 3
-- **Example issues:** [#21457](https://github.com/ggml-org/llama.cpp/issues/21457), [#21420](https://github.com/ggml-org/llama.cpp/issues/21420), [#21414](https://github.com/ggml-org/llama.cpp/issues/21414), [#21404](https://github.com/ggml-org/llama.cpp/issues/21404), [#21402](https://github.com/ggml-org/llama.cpp/issues/21402)
+- **Volume:** 50 issues (39 open, 11 closed)
+- **Demand Score:** 7.4
+- **Avg Reactions:** 0.4 | **Avg Comments:** 2.6
+- **Example issues:** [#21483](https://github.com/ggml-org/llama.cpp/issues/21483), [#21473](https://github.com/ggml-org/llama.cpp/issues/21473), [#21446](https://github.com/ggml-org/llama.cpp/issues/21446), [#21440](https://github.com/ggml-org/llama.cpp/issues/21440), [#21400](https://github.com/ggml-org/llama.cpp/issues/21400)
 
 ---
 

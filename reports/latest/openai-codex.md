@@ -1,36 +1,48 @@
 # OpenAI Codex CLI — User Demand Report
 
 **Week:** 2026-W15
-**Generated:** 2026-04-05
-**Issues analyzed:** 59 (58 included)
-**Need clusters:** 1
+**Generated:** 2026-04-06
+**Issues analyzed:** 71 (71 included)
+**Need clusters:** 2
 
 ## Top 10 User Needs
 
 | Rank | Need | Issues | Score | Category | Examples |
 | --- | --- | --- | --- | --- | --- |
-| 1 | CLI reliability and developer experience improvements | 58 | 20.1 | Developer Experience | [#16828](https://github.com/openai/codex/issues/16828), [#16818](https://github.com/openai/codex/issues/16818), [#16816](https://github.com/openai/codex/issues/16816) |
+| 1 | CLI stability, data loss prevention, and session reliability | 69 | 15.8 | Reliability | [#16898](https://github.com/openai/codex/issues/16898), [#16897](https://github.com/openai/codex/issues/16897), [#16893](https://github.com/openai/codex/issues/16893) |
+| 2 | Fix CLI model response display issues | 2 | 0.5 | Developer Experience | [#16856](https://github.com/openai/codex/issues/16856), [#16836](https://github.com/openai/codex/issues/16836) |
 
 ## Rising Needs
 
 | Need | Rising Score | This Week | Category |
 | --- | --- | --- | --- |
-| CLI reliability and developer experience improvements | 59.0x | 58 | Developer Experience |
+| CLI stability, data loss prevention, and session reliability | 70.0x | 69 | Reliability |
+| Fix CLI model response display issues | 3.0x | 2 | Developer Experience |
 
 ## Category Breakdown
 
+- **Reliability**: 1 clusters
 - **Developer Experience**: 1 clusters
 
 ## All Need Clusters
 
-### 1. CLI reliability and developer experience improvements
+### 1. CLI stability, data loss prevention, and session reliability
 
-Users are reporting various issues with the Codex CLI including memory growth, rendering problems, crashes from edge cases, and git/sandbox operations on Windows. They also want improved developer experience features like undo/redo, configurable output formats, health checks for CI, and more user-friendly error messages. These improvements would make the CLI more reliable and pleasant to use in production environments.
+Users are experiencing critical stability issues with long-lived CLI sessions, including data loss on exit, memory leaks causing system freezes, orphaned child processes, and crashes when handling long chat histories. These issues undermine trust in the tool for important work, as users risk losing progress and context when sessions become unstable.
 
-- **Volume:** 58 issues (32 open, 26 closed)
-- **Demand Score:** 20.1
-- **Avg Reactions:** 0 | **Avg Comments:** 1.7
-- **Example issues:** [#16828](https://github.com/openai/codex/issues/16828), [#16818](https://github.com/openai/codex/issues/16818), [#16816](https://github.com/openai/codex/issues/16816), [#16801](https://github.com/openai/codex/issues/16801), [#16797](https://github.com/openai/codex/issues/16797)
+- **Volume:** 69 issues (51 open, 18 closed)
+- **Demand Score:** 15.8
+- **Avg Reactions:** 0.1 | **Avg Comments:** 1.9
+- **Example issues:** [#16898](https://github.com/openai/codex/issues/16898), [#16897](https://github.com/openai/codex/issues/16897), [#16893](https://github.com/openai/codex/issues/16893), [#16874](https://github.com/openai/codex/issues/16874), [#16862](https://github.com/openai/codex/issues/16862)
+
+### 2. Fix CLI model response display issues
+
+Users are experiencing problems with model responses in the CLI where outputs are either unexpected or garbled/incomprehensible, making them difficult to interpret. This degrades the CLI experience and undermines trust in the tool's reliability. Users need clear, accurate, and readable responses from model queries in the command-line interface.
+
+- **Volume:** 2 issues (0 open, 2 closed)
+- **Demand Score:** 0.5
+- **Avg Reactions:** 0 | **Avg Comments:** 2
+- **Example issues:** [#16856](https://github.com/openai/codex/issues/16856), [#16836](https://github.com/openai/codex/issues/16836)
 
 ---
 

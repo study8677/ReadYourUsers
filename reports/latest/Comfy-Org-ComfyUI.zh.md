@@ -1,36 +1,36 @@
 # ComfyUI — 用户需求报告
 
 **周:** 2026-W15
-**生成日期:** 2026-04-05
-**分析 Issue 数:** 52 (48 纳入分析)
+**生成日期:** 2026-04-06
+**分析 Issue 数:** 50 (48 纳入分析)
 **需求簇:** 1
 
 ## Top 10 用户需求
 
 | 排名 | 需求 | Issue 数 | 得分 | 分类 | 示例 |
 | --- | --- | --- | --- | --- | --- |
-| 1 | Fix VRAM and Memory Management Issues | 48 | 6.6 | Performance | [#13240](https://github.com/Comfy-Org/ComfyUI/issues/13240), [#13234](https://github.com/Comfy-Org/ComfyUI/issues/13234), [#13223](https://github.com/Comfy-Org/ComfyUI/issues/13223) |
+| 1 | Workflow UI/UX and Performance Improvements | 48 | 7.1 | UI/UX | [#13284](https://github.com/Comfy-Org/ComfyUI/issues/13284), [#13260](https://github.com/Comfy-Org/ComfyUI/issues/13260), [#13253](https://github.com/Comfy-Org/ComfyUI/issues/13253) |
 
 ## 上升最快的需求
 
 | 需求 | 上升倍率 | 本周 | 分类 |
 | --- | --- | --- | --- |
-| Fix VRAM and Memory Management Issues | 1.5x | 48 | Performance |
+| Workflow UI/UX and Performance Improvements | 1.8x | 48 | UI/UX |
 
 ## 分类分布
 
-- **Performance**: 1 个簇
+- **UI/UX**: 1 个簇
 
 ## 所有需求簇
 
-### 1. Fix VRAM and Memory Management Issues
+### 1. Workflow UI/UX and Performance Improvements
 
-Users are experiencing critical VRAM and memory management problems including Dynamic VRAM conflicting with quantization, memory corruption on Windows, precision flags not reducing memory as documented, and regressions breaking video generation. They want these memory management issues resolved, along with better control over Dynamic VRAM features and improved KV cache quantization options.
+Users are requesting various workflow management enhancements including improved UI interactions (node dropdown filtering, preset colors, parameter locking, tab restoration) and fixes for critical performance issues (WebP/VAE decode speed, VRAM management, memory exhaustion, search lag). They also want bugs fixed for workflow persistence and auto-save to ensure their work is reliably saved.
 
 - **数量:** 48 条 issue (36 未关闭, 12 已关闭)
-- **需求得分:** 6.6
-- **平均反应:** 0.3 | **平均评论:** 1.9
-- **示例 Issue:** [#13240](https://github.com/Comfy-Org/ComfyUI/issues/13240), [#13234](https://github.com/Comfy-Org/ComfyUI/issues/13234), [#13223](https://github.com/Comfy-Org/ComfyUI/issues/13223), [#13217](https://github.com/Comfy-Org/ComfyUI/issues/13217), [#13210](https://github.com/Comfy-Org/ComfyUI/issues/13210)
+- **需求得分:** 7.1
+- **平均反应:** 0.4 | **平均评论:** 2
+- **示例 Issue:** [#13284](https://github.com/Comfy-Org/ComfyUI/issues/13284), [#13260](https://github.com/Comfy-Org/ComfyUI/issues/13260), [#13253](https://github.com/Comfy-Org/ComfyUI/issues/13253), [#13237](https://github.com/Comfy-Org/ComfyUI/issues/13237), [#13230](https://github.com/Comfy-Org/ComfyUI/issues/13230)
 
 ---
 

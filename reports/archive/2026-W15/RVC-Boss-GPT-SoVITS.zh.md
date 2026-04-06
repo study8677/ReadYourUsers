@@ -1,7 +1,7 @@
 # GPT-SoVITS — 用户需求报告
 
 **周:** 2026-W15
-**生成日期:** 2026-04-05
+**生成日期:** 2026-04-06
 **分析 Issue 数:** 9 (9 纳入分析)
 **需求簇:** 1
 
@@ -9,7 +9,7 @@
 
 | 排名 | 需求 | Issue 数 | 得分 | 分类 | 示例 |
 | --- | --- | --- | --- | --- | --- |
-| 1 | Bug Fixes, Compatibility Updates, and Feature Extensions | 9 | 1.0 | Developer Experience | [#2760](https://github.com/RVC-Boss/GPT-SoVITS/issues/2760), [#2759](https://github.com/RVC-Boss/GPT-SoVITS/issues/2759), [#2757](https://github.com/RVC-Boss/GPT-SoVITS/issues/2757) |
+| 1 | Compatibility fixes, bug resolution, and extensibility | 9 | 0.9 | Developer Experience | [#2760](https://github.com/RVC-Boss/GPT-SoVITS/issues/2760), [#2759](https://github.com/RVC-Boss/GPT-SoVITS/issues/2759), [#2757](https://github.com/RVC-Boss/GPT-SoVITS/issues/2757) |
 
 ## 分类分布
 
@@ -17,12 +17,12 @@
 
 ## 所有需求簇
 
-### 1. Bug Fixes, Compatibility Updates, and Feature Extensions
+### 1. Compatibility fixes, bug resolution, and extensibility
 
-Users want various bugs fixed including audio truncation during training, incomplete audio at low speech speeds, ONNX export issues with PyTorch 2.6, and crashes on RTX 50-series GPUs. Additionally, users request new features like native Spanish phonetic support, a plugin system for external tool integration, and documentation improvements for fine-tuning capabilities. These issues span both critical bug fixes and feature enhancements to improve the project's robustness and usability.
+Users are requesting fixes for compatibility issues with PyTorch 2.6, new GPU architectures, and ONNX export, along with resolution of audio generation bugs (truncation, incomplete output). Additionally, they want enhanced language support through native Spanish phonetic handling and a plugin integration system for extensibility.
 
 - **数量:** 9 条 issue (8 未关闭, 1 已关闭)
-- **需求得分:** 1.0
+- **需求得分:** 0.9
 - **平均反应:** 0 | **平均评论:** 0.8
 - **示例 Issue:** [#2760](https://github.com/RVC-Boss/GPT-SoVITS/issues/2760), [#2759](https://github.com/RVC-Boss/GPT-SoVITS/issues/2759), [#2757](https://github.com/RVC-Boss/GPT-SoVITS/issues/2757), [#2756](https://github.com/RVC-Boss/GPT-SoVITS/issues/2756), [#2752](https://github.com/RVC-Boss/GPT-SoVITS/issues/2752)
 

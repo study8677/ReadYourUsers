@@ -1,18 +1,18 @@
 {
   "repo": "RVC-Boss/GPT-SoVITS",
   "display_name": "GPT-SoVITS",
-  "generated_at": "2026-04-05T07:22:00.028Z",
-  "window_start": "2026-03-06T07:22:00.028Z",
-  "window_end": "2026-04-05T07:22:00.028Z",
+  "generated_at": "2026-04-06T10:21:14.418Z",
+  "window_start": "2026-03-07T10:21:14.418Z",
+  "window_end": "2026-04-06T10:21:14.418Z",
   "total_issues_analyzed": 9,
   "total_issues_included": 9,
   "clusters": [
     {
-      "cluster_id": "a1e87422da3e",
-      "title": "Bug Fixes, Compatibility Updates, and Feature Extensions",
-      "summary": "Users want various bugs fixed including audio truncation during training, incomplete audio at low speech speeds, ONNX export issues with PyTorch 2.6, and crashes on RTX 50-series GPUs. Additionally, users request new features like native Spanish phonetic support, a plugin system for external tool integration, and documentation improvements for fine-tuning capabilities. These issues span both critical bug fixes and feature enhancements to improve the project's robustness and usability.",
+      "cluster_id": "9068cd4e5e04",
+      "title": "Compatibility fixes, bug resolution, and extensibility",
+      "summary": "Users are requesting fixes for compatibility issues with PyTorch 2.6, new GPU architectures, and ONNX export, along with resolution of audio generation bugs (truncation, incomplete output). Additionally, they want enhanced language support through native Spanish phonetic handling and a plugin integration system for extensibility.",
       "category": "Developer Experience",
-      "representative_need": "Add native Spanish phonetic support to GPT-SoVITS with proper handling of RR, Ñ, silent H, accentuation, CH, LL, and intervocalic D",
+      "representative_need": "Add native Spanish phonetic support with proper handling of RR, Ñ, CH, LL, silent H, and accentuation rules",
       "issue_numbers": [
         2760,
         2759,
@@ -36,11 +36,11 @@
         "https://github.com/RVC-Boss/GPT-SoVITS/issues/2747"
       ],
       "sample_titles": [
-        "Add native Spanish phonetic support to GPT-SoVITS with proper handling of RR, Ñ, silent H, accentuation, CH, LL, and intervocalic D",
-        "Add skill/plugin system for integrating GPT-SoVITS models with external tools like openclaw",
-        "Document fine-tuning capabilities for custom tokens/tone control, clarify LoRA/adapter support, and provide guidance on multi-speaker fine-tuning strategies"
+        "Add native Spanish phonetic support with proper handling of RR, Ñ, CH, LL, silent H, and accentuation rules",
+        "Add skill/plugin integration system for external tools",
+        "Clarify fine-tuning capabilities for custom tokens, LoRA support, and multi-speaker training best practices"
       ],
-      "demand_score": 0.9569212166418252,
+      "demand_score": 0.9449667098082761,
       "rising_score": 1,
       "volume": 9,
       "open_count": 8,

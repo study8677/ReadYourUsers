@@ -1,47 +1,36 @@
 # Gemini CLI — User Demand Report
 
 **Week:** 2026-W15
-**Generated:** 2026-04-05
-**Issues analyzed:** 57 (54 included)
-**Need clusters:** 2
+**Generated:** 2026-04-06
+**Issues analyzed:** 62 (59 included)
+**Need clusters:** 1
 
 ## Top 10 User Needs
 
 | Rank | Need | Issues | Score | Category | Examples |
 | --- | --- | --- | --- | --- | --- |
-| 1 | CLI Reliability and Session Management Fixes | 52 | 6.6 | Developer Experience | [#24695](https://github.com/google-gemini/gemini-cli/issues/24695), [#24692](https://github.com/google-gemini/gemini-cli/issues/24692), [#24691](https://github.com/google-gemini/gemini-cli/issues/24691) |
-| 2 | Fix Nightly Release Workflow Failures | 2 | 0.4 | Developer Experience | [#24657](https://github.com/google-gemini/gemini-cli/issues/24657), [#24618](https://github.com/google-gemini/gemini-cli/issues/24618) |
+| 1 | CLI Stability, Session Management, and UI Improvements | 59 | 8.7 | Developer Experience | [#24729](https://github.com/google-gemini/gemini-cli/issues/24729), [#24726](https://github.com/google-gemini/gemini-cli/issues/24726), [#24719](https://github.com/google-gemini/gemini-cli/issues/24719) |
 
 ## Rising Needs
 
 | Need | Rising Score | This Week | Category |
 | --- | --- | --- | --- |
-| CLI Reliability and Session Management Fixes | 53.0x | 52 | Developer Experience |
-| Fix Nightly Release Workflow Failures | 3.0x | 2 | Developer Experience |
+| CLI Stability, Session Management, and UI Improvements | 60.0x | 59 | Developer Experience |
 
 ## Category Breakdown
 
-- **Developer Experience**: 2 clusters
+- **Developer Experience**: 1 clusters
 
 ## All Need Clusters
 
-### 1. CLI Reliability and Session Management Fixes
+### 1. CLI Stability, Session Management, and UI Improvements
 
-Users are reporting multiple CLI stability issues including infinite loops, hanging in 'Thinking' state, unexpected session termination, and chat history corruption. Additionally, users want improved session management with faster --list-sessions execution, JSON output format, and cross-directory session listing. These issues collectively degrade the CLI user experience and require fixes for error handling, state management, and output formatting.
+Users are experiencing multiple reliability issues with the CLI including indefinite hangs during network blocks, processing errors, and external editor integration. They also need improved session management features like resume prompts, optimized session listing with JSON output, and better preservation of chat history. These issues affect developer productivity and trust in the tool's reliability.
 
-- **Volume:** 52 issues (47 open, 5 closed)
-- **Demand Score:** 6.6
-- **Avg Reactions:** 0.2 | **Avg Comments:** 0.8
-- **Example issues:** [#24695](https://github.com/google-gemini/gemini-cli/issues/24695), [#24692](https://github.com/google-gemini/gemini-cli/issues/24692), [#24691](https://github.com/google-gemini/gemini-cli/issues/24691), [#24690](https://github.com/google-gemini/gemini-cli/issues/24690), [#24689](https://github.com/google-gemini/gemini-cli/issues/24689)
-
-### 2. Fix Nightly Release Workflow Failures
-
-Users are experiencing failures in the nightly release workflow for specific nightly versions. These workflow failures prevent proper release of nightly builds, disrupting the development and testing pipeline. The issues need to be investigated and resolved to ensure reliable nightly releases.
-
-- **Volume:** 2 issues (2 open, 0 closed)
-- **Demand Score:** 0.4
-- **Avg Reactions:** 0 | **Avg Comments:** 1.5
-- **Example issues:** [#24657](https://github.com/google-gemini/gemini-cli/issues/24657), [#24618](https://github.com/google-gemini/gemini-cli/issues/24618)
+- **Volume:** 59 issues (54 open, 5 closed)
+- **Demand Score:** 8.7
+- **Avg Reactions:** 0.3 | **Avg Comments:** 0.9
+- **Example issues:** [#24729](https://github.com/google-gemini/gemini-cli/issues/24729), [#24726](https://github.com/google-gemini/gemini-cli/issues/24726), [#24719](https://github.com/google-gemini/gemini-cli/issues/24719), [#24705](https://github.com/google-gemini/gemini-cli/issues/24705), [#24692](https://github.com/google-gemini/gemini-cli/issues/24692)
 
 ---
 

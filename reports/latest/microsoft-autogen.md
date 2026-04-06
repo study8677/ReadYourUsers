@@ -1,21 +1,21 @@
 # AutoGen — User Demand Report
 
 **Week:** 2026-W15
-**Generated:** 2026-04-05
-**Issues analyzed:** 35 (27 included)
+**Generated:** 2026-04-06
+**Issues analyzed:** 34 (27 included)
 **Need clusters:** 1
 
 ## Top 10 User Needs
 
 | Rank | Need | Issues | Score | Category | Examples |
 | --- | --- | --- | --- | --- | --- |
-| 1 | Multi-agent security and trust enforcement | 27 | 3.8 | Security | [#7528](https://github.com/microsoft/autogen/issues/7528), [#7475](https://github.com/microsoft/autogen/issues/7475), [#7473](https://github.com/microsoft/autogen/issues/7473) |
+| 1 | Security and Trust Framework for Multi-Agent Systems | 27 | 3.1 | Security | [#7475](https://github.com/microsoft/autogen/issues/7475), [#7473](https://github.com/microsoft/autogen/issues/7473), [#7457](https://github.com/microsoft/autogen/issues/7457) |
 
 ## Rising Needs
 
 | Need | Rising Score | This Week | Category |
 | --- | --- | --- | --- |
-| Multi-agent security and trust enforcement | 1.1x | 27 | Security |
+| Security and Trust Framework for Multi-Agent Systems | 1.3x | 27 | Security |
 
 ## Category Breakdown
 
@@ -23,14 +23,14 @@
 
 ## All Need Clusters
 
-### 1. Multi-agent security and trust enforcement
+### 1. Security and Trust Framework for Multi-Agent Systems
 
-Users want comprehensive security controls for multi-agent systems, including sandboxed code execution, prompt injection prevention, cryptographic identity/authorization, and capability-scoped tool delegation to prevent privilege escalation and unauthorized access in distributed agent runtimes.
+Users are requesting comprehensive security features to protect multi-agent systems from various threats including prompt injection attacks, credential leakage, agent spoofing, and malicious MCP servers. These include OS-level sandboxing, cryptographic authentication, identity verification, trust verification for delegation chains, and standardized guardrail protocols for policy enforcement and audit logging.
 
-- **Volume:** 27 issues (27 open, 0 closed)
-- **Demand Score:** 3.8
-- **Avg Reactions:** 0 | **Avg Comments:** 4.3
-- **Example issues:** [#7528](https://github.com/microsoft/autogen/issues/7528), [#7475](https://github.com/microsoft/autogen/issues/7475), [#7473](https://github.com/microsoft/autogen/issues/7473), [#7462](https://github.com/microsoft/autogen/issues/7462), [#7457](https://github.com/microsoft/autogen/issues/7457)
+- **Volume:** 27 issues (26 open, 1 closed)
+- **Demand Score:** 3.1
+- **Avg Reactions:** 0 | **Avg Comments:** 3.9
+- **Example issues:** [#7475](https://github.com/microsoft/autogen/issues/7475), [#7473](https://github.com/microsoft/autogen/issues/7473), [#7457](https://github.com/microsoft/autogen/issues/7457), [#7440](https://github.com/microsoft/autogen/issues/7440), [#7407](https://github.com/microsoft/autogen/issues/7407)
 
 ---
 

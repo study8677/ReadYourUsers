@@ -1,7 +1,7 @@
 # Goose — 用户需求报告
 
 **周:** 2026-W15
-**生成日期:** 2026-04-05
+**生成日期:** 2026-04-06
 **分析 Issue 数:** 30 (28 纳入分析)
 **需求簇:** 1
 
@@ -9,28 +9,28 @@
 
 | 排名 | 需求 | Issue 数 | 得分 | 分类 | 示例 |
 | --- | --- | --- | --- | --- | --- |
-| 1 | CLI and Desktop UI Improvements | 28 | 6.1 | UI/UX | [#8282](https://github.com/block/goose/issues/8282), [#8249](https://github.com/block/goose/issues/8249), [#8223](https://github.com/block/goose/issues/8223) |
+| 1 | Bug fixes and CLI feature improvements | 28 | 6.1 | Developer Experience | [#8339](https://github.com/block/goose/issues/8339), [#8293](https://github.com/block/goose/issues/8293), [#8275](https://github.com/block/goose/issues/8275) |
 
 ## 上升最快的需求
 
 | 需求 | 上升倍率 | 本周 | 分类 |
 | --- | --- | --- | --- |
-| CLI and Desktop UI Improvements | 29.0x | 28 | UI/UX |
+| Bug fixes and CLI feature improvements | 29.0x | 28 | Developer Experience |
 
 ## 分类分布
 
-- **UI/UX**: 1 个簇
+- **Developer Experience**: 1 个簇
 
 ## 所有需求簇
 
-### 1. CLI and Desktop UI Improvements
+### 1. Bug fixes and CLI feature improvements
 
-Users are requesting various improvements to both the CLI and desktop interfaces, including new model management commands, markdown rendering, visual styling enhancements, and critical bug fixes for segmentation faults and false-positive screens. Additionally, there are multiple desktop UI fixes needed for proper macOS integration, tool call expansion, and markdown code block rendering.
+Users are reporting various bugs across API providers (StepFun 404 errors), extensions (Filesystem loading failures, summon frontmatter warnings), and UI components (macOS menu alignment, code block rendering). Additionally, they want new CLI capabilities including model management commands, markdown rendering, and platform-specific configuration paths. These improvements enhance reliability and developer experience across the Desktop and CLI interfaces.
 
-- **数量:** 28 条 issue (24 未关闭, 4 已关闭)
+- **数量:** 28 条 issue (25 未关闭, 3 已关闭)
 - **需求得分:** 6.1
 - **平均反应:** 0.1 | **平均评论:** 0.4
-- **示例 Issue:** [#8282](https://github.com/block/goose/issues/8282), [#8249](https://github.com/block/goose/issues/8249), [#8223](https://github.com/block/goose/issues/8223), [#8221](https://github.com/block/goose/issues/8221), [#8311](https://github.com/block/goose/issues/8311)
+- **示例 Issue:** [#8339](https://github.com/block/goose/issues/8339), [#8293](https://github.com/block/goose/issues/8293), [#8275](https://github.com/block/goose/issues/8275), [#8326](https://github.com/block/goose/issues/8326), [#8282](https://github.com/block/goose/issues/8282)
 
 ---
 

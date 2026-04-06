@@ -1,54 +1,60 @@
 {
   "repo": "Significant-Gravitas/AutoGPT",
   "display_name": "AutoGPT",
-  "generated_at": "2026-04-05T07:20:22.266Z",
-  "window_start": "2026-03-06T07:20:22.266Z",
-  "window_end": "2026-04-05T07:20:22.266Z",
-  "total_issues_analyzed": 8,
-  "total_issues_included": 6,
+  "generated_at": "2026-04-06T10:20:54.804Z",
+  "window_start": "2026-03-07T10:20:54.804Z",
+  "window_end": "2026-04-06T10:20:54.804Z",
+  "total_issues_analyzed": 11,
+  "total_issues_included": 9,
   "clusters": [
     {
-      "cluster_id": "871120911485",
-      "title": "Improve block error handling and add agent capabilities",
-      "summary": "Users want improved error handling in various AI blocks to gracefully manage edge cases like non-JSON responses, empty responses, and missing arguments. Additionally, they want new capabilities including optional external memory providers for durable agent memory, a pre-execution verification layer with audit logging, and a new onboarding experience to make the framework more robust and easier to adopt.",
-      "category": "Developer Experience",
-      "representative_need": "Add pre-execution verification layer for LLM outputs with audit logging",
+      "cluster_id": "3d92cd65b962",
+      "title": "Improve Agent Reliability and Error Handling",
+      "summary": "Users want the AutoGPT platform to be more reliable and robust through better error handling and graceful degradation when external services fail or unexpected inputs occur. This includes fixing bugs in block execution, JSON parsing, and UI rendering, as well as adding verification layers and cost estimation to make agents more production-ready.",
+      "category": "Reliability",
+      "representative_need": "Add Chinese novel writing agent as a use case or reference implementation",
       "issue_numbers": [
+        12684,
+        12683,
+        12680,
+        12678,
         12675,
         12648,
         12645,
         12644,
-        12589,
-        12576
+        12589
       ],
       "issue_urls": [
+        "https://github.com/Significant-Gravitas/AutoGPT/issues/12684",
+        "https://github.com/Significant-Gravitas/AutoGPT/issues/12683",
+        "https://github.com/Significant-Gravitas/AutoGPT/issues/12680",
+        "https://github.com/Significant-Gravitas/AutoGPT/issues/12678",
         "https://github.com/Significant-Gravitas/AutoGPT/issues/12675",
         "https://github.com/Significant-Gravitas/AutoGPT/issues/12648",
         "https://github.com/Significant-Gravitas/AutoGPT/issues/12645",
         "https://github.com/Significant-Gravitas/AutoGPT/issues/12644",
-        "https://github.com/Significant-Gravitas/AutoGPT/issues/12589",
-        "https://github.com/Significant-Gravitas/AutoGPT/issues/12576"
+        "https://github.com/Significant-Gravitas/AutoGPT/issues/12589"
       ],
       "sample_titles": [
-        "Add pre-execution verification layer for LLM outputs with audit logging",
-        "Add support for optional external memory providers as backends for durable, auditable agent memory",
-        "Fix BlockUnknownError in GetCurrentDateBlock caused by missing required 'execution_context' argument"
+        "Add Chinese novel writing agent as a use case or reference implementation",
+        "Add agent output verification layer with hallucination filtering and audit logging",
+        "Add cost estimation before task execution"
       ],
-      "demand_score": 0.948095579454513,
-      "rising_score": 1.6666666666666667,
-      "volume": 6,
-      "open_count": 3,
+      "demand_score": 1.9359647858278741,
+      "rising_score": 4.5,
+      "volume": 9,
+      "open_count": 6,
       "closed_count": 3,
       "avg_reactions": 0,
       "avg_comments": 0.2,
-      "date_first_seen": "2026-03-26T10:11:06.000Z",
-      "date_last_seen": "2026-04-04T14:04:45.000Z",
+      "date_first_seen": "2026-03-26T23:28:06.000Z",
+      "date_last_seen": "2026-04-06T09:36:47.000Z",
       "repos_affected": [
         "Significant-Gravitas/AutoGPT"
       ]
     }
   ],
   "category_breakdown": {
-    "Developer Experience": 1
+    "Reliability": 1
   }
 }

@@ -1,30 +1,30 @@
 # Flowise — 用户需求报告
 
 **周:** 2026-W15
-**生成日期:** 2026-04-05
-**分析 Issue 数:** 24 (24 纳入分析)
+**生成日期:** 2026-04-06
+**分析 Issue 数:** 23 (20 纳入分析)
 **需求簇:** 1
 
 ## Top 10 用户需求
 
 | 排名 | 需求 | Issue 数 | 得分 | 分类 | 示例 |
 | --- | --- | --- | --- | --- | --- |
-| 1 | Security Governance and Trust for Agent Workflows | 24 | 4.8 | Security | [#6105](https://github.com/FlowiseAI/Flowise/issues/6105), [#6097](https://github.com/FlowiseAI/Flowise/issues/6097), [#6056](https://github.com/FlowiseAI/Flowise/issues/6056) |
+| 1 | Issues related to other | 20 | 3.9 | Other | [#6105](https://github.com/FlowiseAI/Flowise/issues/6105), [#6097](https://github.com/FlowiseAI/Flowise/issues/6097), [#6085](https://github.com/FlowiseAI/Flowise/issues/6085) |
 
 ## 分类分布
 
-- **Security**: 1 个簇
+- **Other**: 1 个簇
 
 ## 所有需求簇
 
-### 1. Security Governance and Trust for Agent Workflows
+### 1. Issues related to other
 
-Users want enhanced security and governance features for agent workflows, including cryptographic identity verification to prevent compromised nodes from injecting data, audit trails with quantum-safe signing, policy enforcement nodes, and spending controls for financial transactions. These features address concerns about trust, accountability, and compliance in multi-agent and production environments.
+20 issues: Fix auth resolve endpoint to handle missing organization/user data gracefully instead of returning 500 error; Add password visibility toggle to sign-in page password field; Add organization-level default chatflow configuration support via OrganizationConfig
 
-- **数量:** 24 条 issue (15 未关闭, 9 已关闭)
-- **需求得分:** 4.8
-- **平均反应:** 0 | **平均评论:** 2
-- **示例 Issue:** [#6105](https://github.com/FlowiseAI/Flowise/issues/6105), [#6097](https://github.com/FlowiseAI/Flowise/issues/6097), [#6056](https://github.com/FlowiseAI/Flowise/issues/6056), [#6103](https://github.com/FlowiseAI/Flowise/issues/6103), [#6064](https://github.com/FlowiseAI/Flowise/issues/6064)
+- **数量:** 20 条 issue (12 未关闭, 8 已关闭)
+- **需求得分:** 3.9
+- **平均反应:** 0 | **平均评论:** 1.9
+- **示例 Issue:** [#6105](https://github.com/FlowiseAI/Flowise/issues/6105), [#6097](https://github.com/FlowiseAI/Flowise/issues/6097), [#6085](https://github.com/FlowiseAI/Flowise/issues/6085), [#6056](https://github.com/FlowiseAI/Flowise/issues/6056), [#6112](https://github.com/FlowiseAI/Flowise/issues/6112)
 
 ---
 

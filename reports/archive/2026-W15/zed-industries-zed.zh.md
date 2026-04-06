@@ -1,36 +1,36 @@
 # Zed — 用户需求报告
 
 **周:** 2026-W15
-**生成日期:** 2026-04-05
-**分析 Issue 数:** 34 (33 纳入分析)
+**生成日期:** 2026-04-06
+**分析 Issue 数:** 41 (40 纳入分析)
 **需求簇:** 1
 
 ## Top 10 用户需求
 
 | 排名 | 需求 | Issue 数 | 得分 | 分类 | 示例 |
 | --- | --- | --- | --- | --- | --- |
-| 1 | Fix Crashes, UI Glitches, and Integration Bugs | 33 | 5.7 | Reliability | [#53159](https://github.com/zed-industries/zed/issues/53159), [#53145](https://github.com/zed-industries/zed/issues/53145), [#53135](https://github.com/zed-industries/zed/issues/53135) |
+| 1 | Fix Various IDE Bug Fixes and Stability Issues | 40 | 10.9 | Developer Experience | [#53205](https://github.com/zed-industries/zed/issues/53205), [#53187](https://github.com/zed-industries/zed/issues/53187), [#53182](https://github.com/zed-industries/zed/issues/53182) |
 
 ## 上升最快的需求
 
 | 需求 | 上升倍率 | 本周 | 分类 |
 | --- | --- | --- | --- |
-| Fix Crashes, UI Glitches, and Integration Bugs | 34.0x | 33 | Reliability |
+| Fix Various IDE Bug Fixes and Stability Issues | 41.0x | 40 | Developer Experience |
 
 ## 分类分布
 
-- **Reliability**: 1 个簇
+- **Developer Experience**: 1 个簇
 
 ## 所有需求簇
 
-### 1. Fix Crashes, UI Glitches, and Integration Bugs
+### 1. Fix Various IDE Bug Fixes and Stability Issues
 
-Users are experiencing crashes, broken UI interactions, and inconsistent behavior across AI features, Git operations, and terminal functionality. These reliability issues disrupt developer workflows and cause friction when using core editor features. Users want these bugs fixed to restore expected behavior and stability.
+Users are experiencing bugs across multiple IDE features including language tooling, UI interactions, and AI integrations. These issues range from crashes and incorrect behavior to performance degradation, all of which degrade the overall development experience. Addressing these bugs would significantly improve the reliability and usability of the IDE.
 
-- **数量:** 33 条 issue (26 未关闭, 7 已关闭)
-- **需求得分:** 5.7
-- **平均反应:** 0 | **平均评论:** 2.3
-- **示例 Issue:** [#53159](https://github.com/zed-industries/zed/issues/53159), [#53145](https://github.com/zed-industries/zed/issues/53145), [#53135](https://github.com/zed-industries/zed/issues/53135), [#53095](https://github.com/zed-industries/zed/issues/53095), [#53072](https://github.com/zed-industries/zed/issues/53072)
+- **数量:** 40 条 issue (34 未关闭, 6 已关闭)
+- **需求得分:** 10.9
+- **平均反应:** 0.2 | **平均评论:** 1.8
+- **示例 Issue:** [#53205](https://github.com/zed-industries/zed/issues/53205), [#53187](https://github.com/zed-industries/zed/issues/53187), [#53182](https://github.com/zed-industries/zed/issues/53182), [#53175](https://github.com/zed-industries/zed/issues/53175), [#53163](https://github.com/zed-industries/zed/issues/53163)
 
 ---
 

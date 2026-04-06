@@ -1,7 +1,7 @@
 # Tabby — User Demand Report
 
 **Week:** 2026-W15
-**Generated:** 2026-04-05
+**Generated:** 2026-04-06
 **Issues analyzed:** 3 (3 included)
 **Need clusters:** 1
 
@@ -9,20 +9,20 @@
 
 | Rank | Need | Issues | Score | Category | Examples |
 | --- | --- | --- | --- | --- | --- |
-| 1 | Improve Tabby completions and IDE integration | 3 | 1.6 | Product Improvement | [#4472](https://github.com/TabbyML/tabby/issues/4472), [#4471](https://github.com/TabbyML/tabby/issues/4471), [#4460](https://github.com/TabbyML/tabby/issues/4460) |
+| 1 | Product Improvements and Bug Fixes | 3 | 1.5 | Developer Experience | [#4472](https://github.com/TabbyML/tabby/issues/4472), [#4471](https://github.com/TabbyML/tabby/issues/4471), [#4460](https://github.com/TabbyML/tabby/issues/4460) |
 
 ## Category Breakdown
 
-- **Product Improvement**: 1 clusters
+- **Developer Experience**: 1 clusters
 
 ## All Need Clusters
 
-### 1. Improve Tabby completions and IDE integration
+### 1. Product Improvements and Bug Fixes
 
-Users want faster code completion experiences through precomputed branch suggestions, accurate documentation about recommended models, and reliable connectivity between their IDE and tabby-agent. These improvements would enhance overall productivity by reducing wait times, providing clearer guidance, and fixing integration issues.
+This cluster groups three distinct user requests for the Tabby AI code completion tool: enhancing completion functionality with branched suggestions for different user actions, keeping documentation current with updated model recommendations, and resolving a connection issue in the Eclipse plugin. Each request addresses a different aspect of the product ecosystem.
 
 - **Volume:** 3 issues (3 open, 0 closed)
-- **Demand Score:** 1.6
+- **Demand Score:** 1.5
 - **Avg Reactions:** 3 | **Avg Comments:** 0
 - **Example issues:** [#4472](https://github.com/TabbyML/tabby/issues/4472), [#4471](https://github.com/TabbyML/tabby/issues/4471), [#4460](https://github.com/TabbyML/tabby/issues/4460)
 

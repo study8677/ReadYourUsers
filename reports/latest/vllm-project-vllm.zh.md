@@ -1,36 +1,36 @@
 # vLLM — 用户需求报告
 
 **周:** 2026-W15
-**生成日期:** 2026-04-05
-**分析 Issue 数:** 30 (30 纳入分析)
+**生成日期:** 2026-04-06
+**分析 Issue 数:** 35 (35 纳入分析)
 **需求簇:** 1
 
 ## Top 10 用户需求
 
 | 排名 | 需求 | Issue 数 | 得分 | 分类 | 示例 |
 | --- | --- | --- | --- | --- | --- |
-| 1 | Multi-backend LLM inference reliability and correctness fixes | 30 | 7.4 | Reliability | [#39010](https://github.com/vllm-project/vllm/issues/39010), [#39004](https://github.com/vllm-project/vllm/issues/39004), [#38988](https://github.com/vllm-project/vllm/issues/38988) |
+| 1 | MoE Performance, Quantization, and Backend Stability Fixes | 35 | 4.5 | Performance | [#39060](https://github.com/vllm-project/vllm/issues/39060), [#39030](https://github.com/vllm-project/vllm/issues/39030), [#39025](https://github.com/vllm-project/vllm/issues/39025) |
 
 ## 上升最快的需求
 
 | 需求 | 上升倍率 | 本周 | 分类 |
 | --- | --- | --- | --- |
-| Multi-backend LLM inference reliability and correctness fixes | 31.0x | 30 | Reliability |
+| MoE Performance, Quantization, and Backend Stability Fixes | 36.0x | 35 | Performance |
 
 ## 分类分布
 
-- **Reliability**: 1 个簇
+- **Performance**: 1 个簇
 
 ## 所有需求簇
 
-### 1. Multi-backend LLM inference reliability and correctness fixes
+### 1. MoE Performance, Quantization, and Backend Stability Fixes
 
-Users are experiencing critical stability issues when running large language models across different hardware backends including ROCm, XPU, Intel, and NVIDIA. The issues span model loading crashes, parallel execution problems (tensor, pipeline, expert, and data parallelism), output generation bugs, and quantization-related crashes, particularly affecting MoE architectures. These reliability problems prevent users from successfully deploying and running models like Gemma4, Qwen3.5, DeepSeek-R1, and others in production environments.
+Users are reporting critical issues with Mixture of Experts (MoE) model performance including significant decode throughput regressions, quantization-related accuracy problems with new models like Gemma 4 and Qwen3, and CUDA/ROCm backend stability issues causing crashes and hangs. These fixes are essential for running large-scale MoE deployments reliably and efficiently.
 
-- **数量:** 30 条 issue (29 未关闭, 1 已关闭)
-- **需求得分:** 7.4
-- **平均反应:** 0.3 | **平均评论:** 0.9
-- **示例 Issue:** [#39010](https://github.com/vllm-project/vllm/issues/39010), [#39004](https://github.com/vllm-project/vllm/issues/39004), [#38988](https://github.com/vllm-project/vllm/issues/38988), [#38982](https://github.com/vllm-project/vllm/issues/38982), [#38971](https://github.com/vllm-project/vllm/issues/38971)
+- **数量:** 35 条 issue (31 未关闭, 4 已关闭)
+- **需求得分:** 4.5
+- **平均反应:** 0.1 | **平均评论:** 1.3
+- **示例 Issue:** [#39060](https://github.com/vllm-project/vllm/issues/39060), [#39030](https://github.com/vllm-project/vllm/issues/39030), [#39025](https://github.com/vllm-project/vllm/issues/39025), [#39010](https://github.com/vllm-project/vllm/issues/39010), [#39004](https://github.com/vllm-project/vllm/issues/39004)
 
 ---
 

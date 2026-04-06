@@ -1,21 +1,21 @@
 # Browser Use — User Demand Report
 
 **Week:** 2026-W15
-**Generated:** 2026-04-05
-**Issues analyzed:** 21 (21 included)
+**Generated:** 2026-04-06
+**Issues analyzed:** 22 (22 included)
 **Need clusters:** 1
 
 ## Top 10 User Needs
 
 | Rank | Need | Issues | Score | Category | Examples |
 | --- | --- | --- | --- | --- | --- |
-| 1 | Browser session reliability and security hardening | 21 | 3.7 | Reliability | [#4580](https://github.com/browser-use/browser-use/issues/4580), [#4548](https://github.com/browser-use/browser-use/issues/4548), [#4538](https://github.com/browser-use/browser-use/issues/4538) |
+| 1 | Cross-Platform Browser Automation Stability and Security | 22 | 2.5 | Reliability | [#4580](https://github.com/browser-use/browser-use/issues/4580), [#4579](https://github.com/browser-use/browser-use/issues/4579), [#4571](https://github.com/browser-use/browser-use/issues/4571) |
 
 ## Rising Needs
 
 | Need | Rising Score | This Week | Category |
 | --- | --- | --- | --- |
-| Browser session reliability and security hardening | 1.1x | 21 | Reliability |
+| Cross-Platform Browser Automation Stability and Security | 1.4x | 22 | Reliability |
 
 ## Category Breakdown
 
@@ -23,14 +23,14 @@
 
 ## All Need Clusters
 
-### 1. Browser session reliability and security hardening
+### 1. Cross-Platform Browser Automation Stability and Security
 
-Users are experiencing critical issues with browser automation including session initialization failures on Windows and macOS, improper process termination causing resource locks (WinError 32, SingletonLock), and element targeting failures during execution. Additionally, there are security concerns about ungoverned function calls and the need for verifiable agent identity infrastructure to ensure safe browser automation in production environments.
+Users are reporting multiple issues with browser automation reliability across platforms, including initialization timeouts, permission failures, process isolation conflicts, and coordinate calculation errors on high-DPI displays. Additionally, there are requests to enhance security through sensitive data redaction, JWT-based trust verification, and MCP tool schema compatibility improvements for the Claude API.
 
-- **Volume:** 21 issues (16 open, 5 closed)
-- **Demand Score:** 3.7
-- **Avg Reactions:** 0.4 | **Avg Comments:** 1.9
-- **Example issues:** [#4580](https://github.com/browser-use/browser-use/issues/4580), [#4548](https://github.com/browser-use/browser-use/issues/4548), [#4538](https://github.com/browser-use/browser-use/issues/4538), [#4518](https://github.com/browser-use/browser-use/issues/4518), [#4546](https://github.com/browser-use/browser-use/issues/4546)
+- **Volume:** 22 issues (13 open, 9 closed)
+- **Demand Score:** 2.5
+- **Avg Reactions:** 0 | **Avg Comments:** 1.7
+- **Example issues:** [#4580](https://github.com/browser-use/browser-use/issues/4580), [#4579](https://github.com/browser-use/browser-use/issues/4579), [#4571](https://github.com/browser-use/browser-use/issues/4571), [#4548](https://github.com/browser-use/browser-use/issues/4548), [#4538](https://github.com/browser-use/browser-use/issues/4538)
 
 ---
 

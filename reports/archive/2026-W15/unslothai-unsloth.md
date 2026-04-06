@@ -1,36 +1,36 @@
 # Unsloth — User Demand Report
 
 **Week:** 2026-W15
-**Generated:** 2026-04-05
-**Issues analyzed:** 30 (30 included)
+**Generated:** 2026-04-06
+**Issues analyzed:** 35 (34 included)
 **Need clusters:** 1
 
 ## Top 10 User Needs
 
 | Rank | Need | Issues | Score | Category | Examples |
 | --- | --- | --- | --- | --- | --- |
-| 1 | Cross-platform compatibility and installation reliability fixes | 30 | 6.5 | Reliability | [#4856](https://github.com/unslothai/unsloth/issues/4856), [#4848](https://github.com/unslothai/unsloth/issues/4848), [#4843](https://github.com/unslothai/unsloth/issues/4843) |
+| 1 | Cross-Platform Installation and GPU Compatibility | 34 | 8.3 | Developer Experience | [#4848](https://github.com/unslothai/unsloth/issues/4848), [#4843](https://github.com/unslothai/unsloth/issues/4843), [#4830](https://github.com/unslothai/unsloth/issues/4830) |
 
 ## Rising Needs
 
 | Need | Rising Score | This Week | Category |
 | --- | --- | --- | --- |
-| Cross-platform compatibility and installation reliability fixes | 31.0x | 30 | Reliability |
+| Cross-Platform Installation and GPU Compatibility | 35.0x | 34 | Developer Experience |
 
 ## Category Breakdown
 
-- **Reliability**: 1 clusters
+- **Developer Experience**: 1 clusters
 
 ## All Need Clusters
 
-### 1. Cross-platform compatibility and installation reliability fixes
+### 1. Cross-Platform Installation and GPU Compatibility
 
-Users are experiencing installation failures and compatibility issues across various platforms including ARM64 (NVIDIA Jetson), Pascal GPUs, Windows 11, and Google Colab, as well as with newer software versions like Ubuntu 24.04 and CUDA 13.1. Additionally, there are model loading and export issues with llama.cpp, GGUF formats, and specific models like Gemma and DevStral that need resolution for reliable fine-tuning workflows.
+Users are encountering multiple installation failures and compatibility issues across Windows, Apple Silicon, ARM64, and various GPU architectures (Pascal, Blackwell, Jetson Orin). These include PyTorch installation failures in restricted network environments, environment conflicts with Anaconda/Google Colab, missing GPU support for specialized hardware, and platform-specific issues like Windows ACL inheritance and CUDA library path conflicts. Users need resilient installation options with configurable sources and better fault tolerance.
 
-- **Volume:** 30 issues (22 open, 8 closed)
-- **Demand Score:** 6.5
-- **Avg Reactions:** 0.1 | **Avg Comments:** 2.2
-- **Example issues:** [#4856](https://github.com/unslothai/unsloth/issues/4856), [#4848](https://github.com/unslothai/unsloth/issues/4848), [#4843](https://github.com/unslothai/unsloth/issues/4843), [#4834](https://github.com/unslothai/unsloth/issues/4834), [#4830](https://github.com/unslothai/unsloth/issues/4830)
+- **Volume:** 34 issues (27 open, 7 closed)
+- **Demand Score:** 8.3
+- **Avg Reactions:** 0.1 | **Avg Comments:** 2.4
+- **Example issues:** [#4848](https://github.com/unslothai/unsloth/issues/4848), [#4843](https://github.com/unslothai/unsloth/issues/4843), [#4830](https://github.com/unslothai/unsloth/issues/4830), [#4829](https://github.com/unslothai/unsloth/issues/4829), [#4811](https://github.com/unslothai/unsloth/issues/4811)
 
 ---
 

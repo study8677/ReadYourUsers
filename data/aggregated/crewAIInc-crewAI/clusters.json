@@ -1,28 +1,30 @@
 {
   "repo": "crewAIInc/crewAI",
   "display_name": "CrewAI",
-  "generated_at": "2026-04-05T07:20:48.680Z",
-  "window_start": "2026-03-06T07:20:48.680Z",
-  "window_end": "2026-04-05T07:20:48.680Z",
-  "total_issues_analyzed": 15,
-  "total_issues_included": 15,
+  "generated_at": "2026-04-06T10:21:00.015Z",
+  "window_start": "2026-03-07T10:21:00.015Z",
+  "window_end": "2026-04-06T10:21:00.015Z",
+  "total_issues_analyzed": 17,
+  "total_issues_included": 17,
   "clusters": [
     {
-      "cluster_id": "575b3c0a9f80",
-      "title": "Tool Ecosystem Reliability and Integrations",
-      "summary": "Users report critical issues with the tool ecosystem including broken name extraction functionality, dropped tool call arguments, and JavaScript syntax errors that break tool execution. Additionally, they want new integrations with external services (AIGEN MCP, MAXIA AI, Umarise Bitcoin anchoring) to expand capabilities. These issues directly impact developers' ability to build reliable agent workflows.",
-      "category": "Developer Experience",
-      "representative_need": "Add Responses API support for Azure OpenAI provider",
+      "cluster_id": "72139fbeb362",
+      "title": "Security, Tool Integrations, and Platform Extensions",
+      "summary": "Users are requesting a comprehensive set of enhancements including cryptographic audit trails and governance controls for secure agent execution, new tool integrations (AIGEN, MAXIA AI Marketplace, Umarise Bitcoin API), multi-stage pipeline workflows with RAG verification, and various bug fixes for LLM providers and existing tools. These features would expand platform security, ecosystem breadth, and workflow flexibility.",
+      "category": "Platform Support",
+      "representative_need": "Add AIGEN integration tool for CrewAI agents",
       "issue_numbers": [
-        5278,
-        5269,
-        5244,
-        5206,
+        5283,
         5280,
         5262,
+        5278,
+        5269,
+        5206,
+        5297,
         5275,
         5270,
         5253,
+        5244,
         5234,
         5230,
         5225,
@@ -31,15 +33,17 @@
         5202
       ],
       "issue_urls": [
-        "https://github.com/crewAIInc/crewAI/issues/5278",
-        "https://github.com/crewAIInc/crewAI/issues/5269",
-        "https://github.com/crewAIInc/crewAI/issues/5244",
-        "https://github.com/crewAIInc/crewAI/issues/5206",
+        "https://github.com/crewAIInc/crewAI/issues/5283",
         "https://github.com/crewAIInc/crewAI/issues/5280",
         "https://github.com/crewAIInc/crewAI/issues/5262",
+        "https://github.com/crewAIInc/crewAI/issues/5278",
+        "https://github.com/crewAIInc/crewAI/issues/5269",
+        "https://github.com/crewAIInc/crewAI/issues/5206",
+        "https://github.com/crewAIInc/crewAI/issues/5297",
         "https://github.com/crewAIInc/crewAI/issues/5275",
         "https://github.com/crewAIInc/crewAI/issues/5270",
         "https://github.com/crewAIInc/crewAI/issues/5253",
+        "https://github.com/crewAIInc/crewAI/issues/5244",
         "https://github.com/crewAIInc/crewAI/issues/5234",
         "https://github.com/crewAIInc/crewAI/issues/5230",
         "https://github.com/crewAIInc/crewAI/issues/5225",
@@ -48,25 +52,25 @@
         "https://github.com/crewAIInc/crewAI/issues/5202"
       ],
       "sample_titles": [
-        "Add Responses API support for Azure OpenAI provider",
-        "Add SafeAgentTool integration for AIGEN MCP ecosystem",
-        "Add Sensitivity Ratchet security hook for preventing data exfiltration by irreversibly narrowing agent permissions at runtime"
+        "Add AIGEN integration tool for CrewAI agents",
+        "Add MAXIA AI Marketplace community tool package with 10 tool integrations",
+        "Add Sensitivity Ratchet hook for security against data exfiltration via irreversible permission narrowing"
       ],
-      "demand_score": 4.883835328134921,
-      "rising_score": 16,
-      "volume": 15,
-      "open_count": 14,
+      "demand_score": 7.163761170347679,
+      "rising_score": 18,
+      "volume": 17,
+      "open_count": 16,
       "closed_count": 1,
       "avg_reactions": 0.1,
-      "avg_comments": 0.8,
+      "avg_comments": 1.1,
       "date_first_seen": "2026-04-01T08:54:24.000Z",
-      "date_last_seen": "2026-04-05T05:52:03.000Z",
+      "date_last_seen": "2026-04-06T09:37:35.000Z",
       "repos_affected": [
         "crewAIInc/crewAI"
       ]
     }
   ],
   "category_breakdown": {
-    "Developer Experience": 1
+    "Platform Support": 1
   }
 }

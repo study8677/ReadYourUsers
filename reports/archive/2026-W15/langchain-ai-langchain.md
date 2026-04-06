@@ -1,48 +1,36 @@
 # LangChain — User Demand Report
 
 **Week:** 2026-W15
-**Generated:** 2026-04-05
+**Generated:** 2026-04-06
 **Issues analyzed:** 31 (29 included)
-**Need clusters:** 2
+**Need clusters:** 1
 
 ## Top 10 User Needs
 
 | Rank | Need | Issues | Score | Category | Examples |
 | --- | --- | --- | --- | --- | --- |
-| 1 | Agent Orchestration, Security Auditing, and Partner Integrations | 27 | 3.2 | Developer Experience | [#36523](https://github.com/langchain-ai/langchain/issues/36523), [#36503](https://github.com/langchain-ai/langchain/issues/36503), [#36460](https://github.com/langchain-ai/langchain/issues/36460) |
-| 2 | Fix symlink bypass vulnerability CWE-22 | 2 | 0.2 | Security | [#36485](https://github.com/langchain-ai/langchain/issues/36485), [#36484](https://github.com/langchain-ai/langchain/issues/36484) |
+| 1 | Add LLM Provider Integrations and Agent Capabilities | 29 | 3.2 | Integration | [#36525](https://github.com/langchain-ai/langchain/issues/36525), [#36457](https://github.com/langchain-ai/langchain/issues/36457), [#36451](https://github.com/langchain-ai/langchain/issues/36451) |
 
 ## Rising Needs
 
 | Need | Rising Score | This Week | Category |
 | --- | --- | --- | --- |
-| Agent Orchestration, Security Auditing, and Partner Integrations | 28.0x | 27 | Developer Experience |
-| Fix symlink bypass vulnerability CWE-22 | 3.0x | 2 | Security |
+| Add LLM Provider Integrations and Agent Capabilities | 30.0x | 29 | Integration |
 
 ## Category Breakdown
 
-- **Developer Experience**: 1 clusters
-- **Security**: 1 clusters
+- **Integration**: 1 clusters
 
 ## All Need Clusters
 
-### 1. Agent Orchestration, Security Auditing, and Partner Integrations
+### 1. Add LLM Provider Integrations and Agent Capabilities
 
-Users are requesting enhanced agent coordination capabilities including multi-agent orchestrators, dependency management utilities, and output verification gates. Additionally, there are requests for security features like MCP tool call auditing with cryptographic receipts and access control mechanisms. The cluster also includes partner package integrations for new AI providers and various bug fixes for documentation consistency.
+Users are requesting new LLM provider integrations (Avian, Moonshot AI, Kimi Code) and enhanced agent capabilities including multi-agent swarm orchestration, persistent memory, output verification gates, and security-focused permission controls. They also want tooling improvements like runtime precondition gating for tool dependencies and bug detection during development.
 
-- **Volume:** 27 issues (13 open, 14 closed)
+- **Volume:** 29 issues (14 open, 15 closed)
 - **Demand Score:** 3.2
-- **Avg Reactions:** 0 | **Avg Comments:** 1.9
-- **Example issues:** [#36523](https://github.com/langchain-ai/langchain/issues/36523), [#36503](https://github.com/langchain-ai/langchain/issues/36503), [#36460](https://github.com/langchain-ai/langchain/issues/36460), [#36447](https://github.com/langchain-ai/langchain/issues/36447), [#36461](https://github.com/langchain-ai/langchain/issues/36461)
-
-### 2. Fix symlink bypass vulnerability CWE-22
-
-Users want to fix a path traversal vulnerability (CWE-22) in the _load_examples and _load_prompt_from_file functions by adding .resolve() before suffix checks. This prevents attackers from bypassing security checks using symlinks to access files outside the intended directory.
-
-- **Volume:** 2 issues (0 open, 2 closed)
-- **Demand Score:** 0.2
-- **Avg Reactions:** 0 | **Avg Comments:** 1.5
-- **Example issues:** [#36485](https://github.com/langchain-ai/langchain/issues/36485), [#36484](https://github.com/langchain-ai/langchain/issues/36484)
+- **Avg Reactions:** 0 | **Avg Comments:** 2.2
+- **Example issues:** [#36525](https://github.com/langchain-ai/langchain/issues/36525), [#36457](https://github.com/langchain-ai/langchain/issues/36457), [#36451](https://github.com/langchain-ai/langchain/issues/36451), [#36477](https://github.com/langchain-ai/langchain/issues/36477), [#36460](https://github.com/langchain-ai/langchain/issues/36460)
 
 ---
 

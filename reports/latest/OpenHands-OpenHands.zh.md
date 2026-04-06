@@ -1,7 +1,7 @@
 # OpenHands — 用户需求报告
 
 **周:** 2026-W15
-**生成日期:** 2026-04-05
+**生成日期:** 2026-04-06
 **分析 Issue 数:** 13 (12 纳入分析)
 **需求簇:** 1
 
@@ -9,28 +9,28 @@
 
 | 排名 | 需求 | Issue 数 | 得分 | 分类 | 示例 |
 | --- | --- | --- | --- | --- | --- |
-| 1 | Core platform enhancements and bug fixes | 12 | 2.4 | Platform Support | [#13781](https://github.com/OpenHands/OpenHands/issues/13781), [#13731](https://github.com/OpenHands/OpenHands/issues/13731), [#13697](https://github.com/OpenHands/OpenHands/issues/13697) |
+| 1 | Security hardening and UX polish fixes | 12 | 2.4 | Reliability | [#13781](https://github.com/OpenHands/OpenHands/issues/13781), [#13731](https://github.com/OpenHands/OpenHands/issues/13731), [#13697](https://github.com/OpenHands/OpenHands/issues/13697) |
 
 ## 上升最快的需求
 
 | 需求 | 上升倍率 | 本周 | 分类 |
 | --- | --- | --- | --- |
-| Core platform enhancements and bug fixes | 13.0x | 12 | Platform Support |
+| Security hardening and UX polish fixes | 13.0x | 12 | Reliability |
 
 ## 分类分布
 
-- **Platform Support**: 1 个簇
+- **Reliability**: 1 个簇
 
 ## 所有需求簇
 
-### 1. Core platform enhancements and bug fixes
+### 1. Security hardening and UX polish fixes
 
-Users are requesting a mix of security enhancements (trust verification, policy governance, dependency age guardrails), UI/UX bug fixes (duplicate messages, display formatting, message consolidation), and new capabilities (diagnostics view, model discovery). These improvements aim to strengthen platform reliability, governance, and developer experience across multiple interaction surfaces.
+This cluster covers multiple areas of improvement: adding policy-based security measures for agent delegation and dependency age verification, fixing bugs in messaging and UI components, and enhancing observability and configuration options for developers. Users want better trust verification, fewer redundant messages, and improved developer tooling.
 
 - **数量:** 12 条 issue (11 未关闭, 1 已关闭)
 - **需求得分:** 2.4
 - **平均反应:** 0 | **平均评论:** 2.5
-- **示例 Issue:** [#13781](https://github.com/OpenHands/OpenHands/issues/13781), [#13731](https://github.com/OpenHands/OpenHands/issues/13731), [#13697](https://github.com/OpenHands/OpenHands/issues/13697), [#13771](https://github.com/OpenHands/OpenHands/issues/13771), [#13690](https://github.com/OpenHands/OpenHands/issues/13690)
+- **示例 Issue:** [#13781](https://github.com/OpenHands/OpenHands/issues/13781), [#13731](https://github.com/OpenHands/OpenHands/issues/13731), [#13697](https://github.com/OpenHands/OpenHands/issues/13697), [#13771](https://github.com/OpenHands/OpenHands/issues/13771), [#13769](https://github.com/OpenHands/OpenHands/issues/13769)
 
 ---
 

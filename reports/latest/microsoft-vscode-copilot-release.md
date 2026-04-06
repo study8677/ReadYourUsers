@@ -1,15 +1,15 @@
 # GitHub Copilot Chat for VS Code — User Demand Report
 
 **Week:** 2026-W15
-**Generated:** 2026-04-05
-**Issues analyzed:** 23 (22 included)
+**Generated:** 2026-04-06
+**Issues analyzed:** 22 (20 included)
 **Need clusters:** 1
 
 ## Top 10 User Needs
 
 | Rank | Need | Issues | Score | Category | Examples |
 | --- | --- | --- | --- | --- | --- |
-| 1 | Copilot Chat Extension Reliability and Compatibility | 22 | 5.6 | Reliability | [#14169](https://github.com/microsoft/vscode-copilot-release/issues/14169), [#14165](https://github.com/microsoft/vscode-copilot-release/issues/14165), [#14161](https://github.com/microsoft/vscode-copilot-release/issues/14161) |
+| 1 | Fix Copilot Chat reliability and model compatibility issues | 20 | 5.2 | Reliability | [#14169](https://github.com/microsoft/vscode-copilot-release/issues/14169), [#14168](https://github.com/microsoft/vscode-copilot-release/issues/14168), [#14165](https://github.com/microsoft/vscode-copilot-release/issues/14165) |
 
 ## Category Breakdown
 
@@ -17,14 +17,14 @@
 
 ## All Need Clusters
 
-### 1. Copilot Chat Extension Reliability and Compatibility
+### 1. Fix Copilot Chat reliability and model compatibility issues
 
-Users are experiencing issues with Copilot Chat extension functionality including chat session management, model API compatibility, and platform support. These problems prevent reliable use of chat features, cause unexpected failures, and limit compatibility with certain environments like Apple Silicon devcontainers and enterprise authentication. Users need a more robust and consistent chat experience across different configurations and model versions.
+Users are experiencing various reliability issues with GitHub Copilot Chat, including sudden unresponsiveness, hangs, and freezes during operation. Additionally, there are compatibility problems between different models (especially Codex) and the /chat/completions API endpoint, as well as issues with VS Code Insiders compatibility and MCP server functionality. These problems prevent users from having a stable, productive AI-assisted development experience.
 
-- **Volume:** 22 issues (20 open, 2 closed)
-- **Demand Score:** 5.6
-- **Avg Reactions:** 0.7 | **Avg Comments:** 0.6
-- **Example issues:** [#14169](https://github.com/microsoft/vscode-copilot-release/issues/14169), [#14165](https://github.com/microsoft/vscode-copilot-release/issues/14165), [#14161](https://github.com/microsoft/vscode-copilot-release/issues/14161), [#14160](https://github.com/microsoft/vscode-copilot-release/issues/14160), [#14157](https://github.com/microsoft/vscode-copilot-release/issues/14157)
+- **Volume:** 20 issues (18 open, 2 closed)
+- **Demand Score:** 5.2
+- **Avg Reactions:** 0.7 | **Avg Comments:** 0.7
+- **Example issues:** [#14169](https://github.com/microsoft/vscode-copilot-release/issues/14169), [#14168](https://github.com/microsoft/vscode-copilot-release/issues/14168), [#14165](https://github.com/microsoft/vscode-copilot-release/issues/14165), [#14161](https://github.com/microsoft/vscode-copilot-release/issues/14161), [#14160](https://github.com/microsoft/vscode-copilot-release/issues/14160)
 
 ---
 

@@ -1,48 +1,36 @@
 # OpenClaw — User Demand Report
 
 **Week:** 2026-W15
-**Generated:** 2026-04-05
-**Issues analyzed:** 45 (45 included)
-**Need clusters:** 2
+**Generated:** 2026-04-06
+**Issues analyzed:** 55 (54 included)
+**Need clusters:** 1
 
 ## Top 10 User Needs
 
 | Rank | Need | Issues | Score | Category | Examples |
 | --- | --- | --- | --- | --- | --- |
-| 1 | Fix Commands Hanging and Integration Bugs | 43 | 4.3 | Reliability | [#61209](https://github.com/openclaw/openclaw/issues/61209), [#61188](https://github.com/openclaw/openclaw/issues/61188), [#61185](https://github.com/openclaw/openclaw/issues/61185) |
-| 2 | Multi-tenant support for isolated agent profiles | 2 | 0.0 | Platform Support | [#61125](https://github.com/openclaw/openclaw/issues/61125), [#61123](https://github.com/openclaw/openclaw/issues/61123) |
+| 1 | Bug fixes and CLI enhancements for agents and plugins | 54 | 5.2 | Developer Experience | [#61787](https://github.com/openclaw/openclaw/issues/61787), [#61771](https://github.com/openclaw/openclaw/issues/61771), [#61767](https://github.com/openclaw/openclaw/issues/61767) |
 
 ## Rising Needs
 
 | Need | Rising Score | This Week | Category |
 | --- | --- | --- | --- |
-| Fix Commands Hanging and Integration Bugs | 44.0x | 43 | Reliability |
-| Multi-tenant support for isolated agent profiles | 3.0x | 2 | Platform Support |
+| Bug fixes and CLI enhancements for agents and plugins | 55.0x | 54 | Developer Experience |
 
 ## Category Breakdown
 
-- **Reliability**: 1 clusters
-- **Platform Support**: 1 clusters
+- **Developer Experience**: 1 clusters
 
 ## All Need Clusters
 
-### 1. Fix Commands Hanging and Integration Bugs
+### 1. Bug fixes and CLI enhancements for agents and plugins
 
-Users are experiencing multiple CLI commands hanging indefinitely (sessions, cron rm, memory search, tool execution) and various integration issues including provider registration, API routing, and path resolution problems. These bugs prevent core workflows from completing reliably and suggest underlying async/timeout handling and platform integration issues.
+This cluster addresses multiple reliability issues across the CLI, agent runtime, and plugin system. Users need fixes for npm installation hoisting, network connectivity on macOS, spawn timeouts, plugin registration visibility, and video generation callbacks, along with new CLI capabilities for interactive model parameter prompts and auth profile migration. These improvements ensure more predictable behavior when developing and deploying agent-based workflows.
 
-- **Volume:** 43 issues (42 open, 1 closed)
-- **Demand Score:** 4.3
-- **Avg Reactions:** 0 | **Avg Comments:** 0.3
-- **Example issues:** [#61209](https://github.com/openclaw/openclaw/issues/61209), [#61188](https://github.com/openclaw/openclaw/issues/61188), [#61185](https://github.com/openclaw/openclaw/issues/61185), [#61131](https://github.com/openclaw/openclaw/issues/61131), [#61198](https://github.com/openclaw/openclaw/issues/61198)
-
-### 2. Multi-tenant support for isolated agent profiles
-
-Users want to run multiple isolated agent profiles on a single gateway, enabling separate workspaces, channel bindings, and configurations for different tenants. This allows organizations to efficiently share infrastructure while maintaining strict isolation between different agent deployments, eliminating the need for separate gateway instances per tenant.
-
-- **Volume:** 2 issues (2 open, 0 closed)
-- **Demand Score:** 0.0
-- **Avg Reactions:** 0 | **Avg Comments:** 0
-- **Example issues:** [#61125](https://github.com/openclaw/openclaw/issues/61125), [#61123](https://github.com/openclaw/openclaw/issues/61123)
+- **Volume:** 54 issues (51 open, 3 closed)
+- **Demand Score:** 5.2
+- **Avg Reactions:** 0.1 | **Avg Comments:** 0.3
+- **Example issues:** [#61787](https://github.com/openclaw/openclaw/issues/61787), [#61771](https://github.com/openclaw/openclaw/issues/61771), [#61767](https://github.com/openclaw/openclaw/issues/61767), [#61727](https://github.com/openclaw/openclaw/issues/61727), [#61716](https://github.com/openclaw/openclaw/issues/61716)
 
 ---
 

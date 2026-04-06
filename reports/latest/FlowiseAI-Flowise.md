@@ -1,30 +1,30 @@
 # Flowise — User Demand Report
 
 **Week:** 2026-W15
-**Generated:** 2026-04-05
-**Issues analyzed:** 24 (24 included)
+**Generated:** 2026-04-06
+**Issues analyzed:** 23 (20 included)
 **Need clusters:** 1
 
 ## Top 10 User Needs
 
 | Rank | Need | Issues | Score | Category | Examples |
 | --- | --- | --- | --- | --- | --- |
-| 1 | Security Governance and Trust for Agent Workflows | 24 | 4.8 | Security | [#6105](https://github.com/FlowiseAI/Flowise/issues/6105), [#6097](https://github.com/FlowiseAI/Flowise/issues/6097), [#6056](https://github.com/FlowiseAI/Flowise/issues/6056) |
+| 1 | Issues related to other | 20 | 3.9 | Other | [#6105](https://github.com/FlowiseAI/Flowise/issues/6105), [#6097](https://github.com/FlowiseAI/Flowise/issues/6097), [#6085](https://github.com/FlowiseAI/Flowise/issues/6085) |
 
 ## Category Breakdown
 
-- **Security**: 1 clusters
+- **Other**: 1 clusters
 
 ## All Need Clusters
 
-### 1. Security Governance and Trust for Agent Workflows
+### 1. Issues related to other
 
-Users want enhanced security and governance features for agent workflows, including cryptographic identity verification to prevent compromised nodes from injecting data, audit trails with quantum-safe signing, policy enforcement nodes, and spending controls for financial transactions. These features address concerns about trust, accountability, and compliance in multi-agent and production environments.
+20 issues: Fix auth resolve endpoint to handle missing organization/user data gracefully instead of returning 500 error; Add password visibility toggle to sign-in page password field; Add organization-level default chatflow configuration support via OrganizationConfig
 
-- **Volume:** 24 issues (15 open, 9 closed)
-- **Demand Score:** 4.8
-- **Avg Reactions:** 0 | **Avg Comments:** 2
-- **Example issues:** [#6105](https://github.com/FlowiseAI/Flowise/issues/6105), [#6097](https://github.com/FlowiseAI/Flowise/issues/6097), [#6056](https://github.com/FlowiseAI/Flowise/issues/6056), [#6103](https://github.com/FlowiseAI/Flowise/issues/6103), [#6064](https://github.com/FlowiseAI/Flowise/issues/6064)
+- **Volume:** 20 issues (12 open, 8 closed)
+- **Demand Score:** 3.9
+- **Avg Reactions:** 0 | **Avg Comments:** 1.9
+- **Example issues:** [#6105](https://github.com/FlowiseAI/Flowise/issues/6105), [#6097](https://github.com/FlowiseAI/Flowise/issues/6097), [#6085](https://github.com/FlowiseAI/Flowise/issues/6085), [#6056](https://github.com/FlowiseAI/Flowise/issues/6056), [#6112](https://github.com/FlowiseAI/Flowise/issues/6112)
 
 ---
 

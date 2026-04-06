@@ -1,36 +1,36 @@
 # Open WebUI — 用户需求报告
 
 **周:** 2026-W15
-**生成日期:** 2026-04-05
-**分析 Issue 数:** 37 (37 纳入分析)
+**生成日期:** 2026-04-06
+**分析 Issue 数:** 43 (41 纳入分析)
 **需求簇:** 1
 
 ## Top 10 用户需求
 
 | 排名 | 需求 | Issue 数 | 得分 | 分类 | 示例 |
 | --- | --- | --- | --- | --- | --- |
-| 1 | Security fixes, OAuth improvements, and UI refinements | 37 | 5.1 | Reliability | [#23409](https://github.com/open-webui/open-webui/issues/23409), [#23406](https://github.com/open-webui/open-webui/issues/23406), [#23373](https://github.com/open-webui/open-webui/issues/23373) |
+| 1 | Chat UX Fixes, Model Configuration, and Analytics Features | 41 | 5.5 | Platform Support | [#23422](https://github.com/open-webui/open-webui/issues/23422), [#23363](https://github.com/open-webui/open-webui/issues/23363), [#23339](https://github.com/open-webui/open-webui/issues/23339) |
 
 ## 上升最快的需求
 
 | 需求 | 上升倍率 | 本周 | 分类 |
 | --- | --- | --- | --- |
-| Security fixes, OAuth improvements, and UI refinements | 38.0x | 37 | Reliability |
+| Chat UX Fixes, Model Configuration, and Analytics Features | 42.0x | 41 | Platform Support |
 
 ## 分类分布
 
-- **Reliability**: 1 个簇
+- **Platform Support**: 1 个簇
 
 ## 所有需求簇
 
-### 1. Security fixes, OAuth improvements, and UI refinements
+### 1. Chat UX Fixes, Model Configuration, and Analytics Features
 
-This cluster addresses critical security vulnerabilities including privilege escalation and access control issues, while also fixing OAuth integration problems and UI/UX inconsistencies in chat and messaging interfaces. Users want a more secure, reliable, and polished experience with proper authentication flows and intuitive interface behavior.
+Users are requesting various improvements including fixes to chat message handling and UI consistency, model configuration options for better control, and new analytics capabilities to track usage patterns and metrics across the platform. These enhancements aim to improve both the developer experience when working with AI models and provide better visibility into system usage.
 
-- **数量:** 37 条 issue (16 未关闭, 21 已关闭)
-- **需求得分:** 5.1
+- **数量:** 41 条 issue (21 未关闭, 20 已关闭)
+- **需求得分:** 5.5
 - **平均反应:** 0.1 | **平均评论:** 1.2
-- **示例 Issue:** [#23409](https://github.com/open-webui/open-webui/issues/23409), [#23406](https://github.com/open-webui/open-webui/issues/23406), [#23373](https://github.com/open-webui/open-webui/issues/23373), [#23344](https://github.com/open-webui/open-webui/issues/23344), [#23319](https://github.com/open-webui/open-webui/issues/23319)
+- **示例 Issue:** [#23422](https://github.com/open-webui/open-webui/issues/23422), [#23363](https://github.com/open-webui/open-webui/issues/23363), [#23339](https://github.com/open-webui/open-webui/issues/23339), [#23332](https://github.com/open-webui/open-webui/issues/23332), [#23404](https://github.com/open-webui/open-webui/issues/23404)
 
 ---
 

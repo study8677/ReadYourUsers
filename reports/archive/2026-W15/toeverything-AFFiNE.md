@@ -1,15 +1,15 @@
 # AFFiNE — User Demand Report
 
 **Week:** 2026-W15
-**Generated:** 2026-04-05
-**Issues analyzed:** 46 (43 included)
+**Generated:** 2026-04-06
+**Issues analyzed:** 45 (42 included)
 **Need clusters:** 1
 
 ## Top 10 User Needs
 
 | Rank | Need | Issues | Score | Category | Examples |
 | --- | --- | --- | --- | --- | --- |
-| 1 | Editor Core and Table Functionality Fixes | 43 | 8.1 | UI/UX | [#14776](https://github.com/toeverything/AFFiNE/issues/14776), [#14774](https://github.com/toeverything/AFFiNE/issues/14774), [#14750](https://github.com/toeverything/AFFiNE/issues/14750) |
+| 1 | Editor UI refinements and table editing fixes | 42 | 8.1 | UI/UX | [#14755](https://github.com/toeverything/AFFiNE/issues/14755), [#14750](https://github.com/toeverything/AFFiNE/issues/14750), [#14747](https://github.com/toeverything/AFFiNE/issues/14747) |
 
 ## Category Breakdown
 
@@ -17,14 +17,14 @@
 
 ## All Need Clusters
 
-### 1. Editor Core and Table Functionality Fixes
+### 1. Editor UI refinements and table editing fixes
 
-Users want improvements to the editor's core functionality including better clipboard handling, canvas navigation tools like zoom and mini-maps, and LaTeX support. A significant portion of issues relate to table interactions, addressing context menu positioning, column resize handling, insertion in nested lists, and math rendering. These fixes will improve the editing experience for documents with complex content structures.
+Users are requesting various improvements to the editor experience, including better viewing controls like zoom and mini-maps, fixes to table manipulation in both editor and edgeless modes (context menus, nested lists, column resizing, markdown export), and clarifications to UI labels. These improvements address both functional bugs and user experience concerns to make the application more intuitive.
 
-- **Volume:** 43 issues (24 open, 19 closed)
+- **Volume:** 42 issues (24 open, 18 closed)
 - **Demand Score:** 8.1
-- **Avg Reactions:** 0.1 | **Avg Comments:** 1.8
-- **Example issues:** [#14776](https://github.com/toeverything/AFFiNE/issues/14776), [#14774](https://github.com/toeverything/AFFiNE/issues/14774), [#14750](https://github.com/toeverything/AFFiNE/issues/14750), [#14747](https://github.com/toeverything/AFFiNE/issues/14747), [#14745](https://github.com/toeverything/AFFiNE/issues/14745)
+- **Avg Reactions:** 0.1 | **Avg Comments:** 1.9
+- **Example issues:** [#14755](https://github.com/toeverything/AFFiNE/issues/14755), [#14750](https://github.com/toeverything/AFFiNE/issues/14750), [#14747](https://github.com/toeverything/AFFiNE/issues/14747), [#14745](https://github.com/toeverything/AFFiNE/issues/14745), [#14743](https://github.com/toeverything/AFFiNE/issues/14743)
 
 ---
 

@@ -1,21 +1,21 @@
 # LLaMA Factory — 用户需求报告
 
 **周:** 2026-W15
-**生成日期:** 2026-04-05
-**分析 Issue 数:** 43 (40 纳入分析)
+**生成日期:** 2026-04-06
+**分析 Issue 数:** 43 (41 纳入分析)
 **需求簇:** 1
 
 ## Top 10 用户需求
 
 | 排名 | 需求 | Issue 数 | 得分 | 分类 | 示例 |
 | --- | --- | --- | --- | --- | --- |
-| 1 | Training Infrastructure and Configuration Fixes | 40 | 7.1 | Performance | [#10351](https://github.com/hiyouga/LlamaFactory/issues/10351), [#10345](https://github.com/hiyouga/LlamaFactory/issues/10345), [#10339](https://github.com/hiyouga/LlamaFactory/issues/10339) |
+| 1 | Distributed Training Infrastructure and Model Compatibility Fixes | 41 | 7.2 | Performance | [#10355](https://github.com/hiyouga/LlamaFactory/issues/10355), [#10351](https://github.com/hiyouga/LlamaFactory/issues/10351), [#10337](https://github.com/hiyouga/LlamaFactory/issues/10337) |
 
 ## 上升最快的需求
 
 | 需求 | 上升倍率 | 本周 | 分类 |
 | --- | --- | --- | --- |
-| Training Infrastructure and Configuration Fixes | 1.3x | 40 | Performance |
+| Distributed Training Infrastructure and Model Compatibility Fixes | 1.3x | 41 | Performance |
 
 ## 分类分布
 
@@ -23,14 +23,14 @@
 
 ## 所有需求簇
 
-### 1. Training Infrastructure and Configuration Fixes
+### 1. Distributed Training Infrastructure and Model Compatibility Fixes
 
-Users are experiencing various bugs and feature gaps in the training pipeline, including distributed training issues across multiple backends (MPS, MindSpore, Ray/NCCL), model-specific problems with Qwen3.5 and vision-language models, and configuration mismatches in fine-tuning workflows. These issues affect training reliability, accuracy consistency, and proper model configuration.
+Users are experiencing multiple training infrastructure issues when fine-tuning large language and vision-language models, including distributed training errors (FSDP2, Ray, NCCL), data processing bugs, and model-specific compatibility problems with Qwen3.5 and Gemma4. These issues prevent reliable training across multi-GPU and specialized hardware (Apple Silicon MPS, Ascend NPUs) setups, requiring fixes to resource allocation, parameter offloading, and model loading to ensure stable fine-tuning workflows.
 
-- **数量:** 40 条 issue (22 未关闭, 18 已关闭)
-- **需求得分:** 7.1
+- **数量:** 41 条 issue (23 未关闭, 18 已关闭)
+- **需求得分:** 7.2
 - **平均反应:** 0 | **平均评论:** 1.2
-- **示例 Issue:** [#10351](https://github.com/hiyouga/LlamaFactory/issues/10351), [#10345](https://github.com/hiyouga/LlamaFactory/issues/10345), [#10339](https://github.com/hiyouga/LlamaFactory/issues/10339), [#10317](https://github.com/hiyouga/LlamaFactory/issues/10317), [#10299](https://github.com/hiyouga/LlamaFactory/issues/10299)
+- **示例 Issue:** [#10355](https://github.com/hiyouga/LlamaFactory/issues/10355), [#10351](https://github.com/hiyouga/LlamaFactory/issues/10351), [#10337](https://github.com/hiyouga/LlamaFactory/issues/10337), [#10317](https://github.com/hiyouga/LlamaFactory/issues/10317), [#10314](https://github.com/hiyouga/LlamaFactory/issues/10314)
 
 ---
 

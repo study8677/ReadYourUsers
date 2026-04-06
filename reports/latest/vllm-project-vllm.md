@@ -1,36 +1,36 @@
 # vLLM — User Demand Report
 
 **Week:** 2026-W15
-**Generated:** 2026-04-05
-**Issues analyzed:** 30 (30 included)
+**Generated:** 2026-04-06
+**Issues analyzed:** 35 (35 included)
 **Need clusters:** 1
 
 ## Top 10 User Needs
 
 | Rank | Need | Issues | Score | Category | Examples |
 | --- | --- | --- | --- | --- | --- |
-| 1 | Multi-backend LLM inference reliability and correctness fixes | 30 | 7.4 | Reliability | [#39010](https://github.com/vllm-project/vllm/issues/39010), [#39004](https://github.com/vllm-project/vllm/issues/39004), [#38988](https://github.com/vllm-project/vllm/issues/38988) |
+| 1 | MoE Performance, Quantization, and Backend Stability Fixes | 35 | 4.5 | Performance | [#39060](https://github.com/vllm-project/vllm/issues/39060), [#39030](https://github.com/vllm-project/vllm/issues/39030), [#39025](https://github.com/vllm-project/vllm/issues/39025) |
 
 ## Rising Needs
 
 | Need | Rising Score | This Week | Category |
 | --- | --- | --- | --- |
-| Multi-backend LLM inference reliability and correctness fixes | 31.0x | 30 | Reliability |
+| MoE Performance, Quantization, and Backend Stability Fixes | 36.0x | 35 | Performance |
 
 ## Category Breakdown
 
-- **Reliability**: 1 clusters
+- **Performance**: 1 clusters
 
 ## All Need Clusters
 
-### 1. Multi-backend LLM inference reliability and correctness fixes
+### 1. MoE Performance, Quantization, and Backend Stability Fixes
 
-Users are experiencing critical stability issues when running large language models across different hardware backends including ROCm, XPU, Intel, and NVIDIA. The issues span model loading crashes, parallel execution problems (tensor, pipeline, expert, and data parallelism), output generation bugs, and quantization-related crashes, particularly affecting MoE architectures. These reliability problems prevent users from successfully deploying and running models like Gemma4, Qwen3.5, DeepSeek-R1, and others in production environments.
+Users are reporting critical issues with Mixture of Experts (MoE) model performance including significant decode throughput regressions, quantization-related accuracy problems with new models like Gemma 4 and Qwen3, and CUDA/ROCm backend stability issues causing crashes and hangs. These fixes are essential for running large-scale MoE deployments reliably and efficiently.
 
-- **Volume:** 30 issues (29 open, 1 closed)
-- **Demand Score:** 7.4
-- **Avg Reactions:** 0.3 | **Avg Comments:** 0.9
-- **Example issues:** [#39010](https://github.com/vllm-project/vllm/issues/39010), [#39004](https://github.com/vllm-project/vllm/issues/39004), [#38988](https://github.com/vllm-project/vllm/issues/38988), [#38982](https://github.com/vllm-project/vllm/issues/38982), [#38971](https://github.com/vllm-project/vllm/issues/38971)
+- **Volume:** 35 issues (31 open, 4 closed)
+- **Demand Score:** 4.5
+- **Avg Reactions:** 0.1 | **Avg Comments:** 1.3
+- **Example issues:** [#39060](https://github.com/vllm-project/vllm/issues/39060), [#39030](https://github.com/vllm-project/vllm/issues/39030), [#39025](https://github.com/vllm-project/vllm/issues/39025), [#39010](https://github.com/vllm-project/vllm/issues/39010), [#39004](https://github.com/vllm-project/vllm/issues/39004)
 
 ---
 

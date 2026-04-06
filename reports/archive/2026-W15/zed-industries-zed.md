@@ -1,36 +1,36 @@
 # Zed — User Demand Report
 
 **Week:** 2026-W15
-**Generated:** 2026-04-05
-**Issues analyzed:** 34 (33 included)
+**Generated:** 2026-04-06
+**Issues analyzed:** 41 (40 included)
 **Need clusters:** 1
 
 ## Top 10 User Needs
 
 | Rank | Need | Issues | Score | Category | Examples |
 | --- | --- | --- | --- | --- | --- |
-| 1 | Fix Crashes, UI Glitches, and Integration Bugs | 33 | 5.7 | Reliability | [#53159](https://github.com/zed-industries/zed/issues/53159), [#53145](https://github.com/zed-industries/zed/issues/53145), [#53135](https://github.com/zed-industries/zed/issues/53135) |
+| 1 | Fix Various IDE Bug Fixes and Stability Issues | 40 | 10.9 | Developer Experience | [#53205](https://github.com/zed-industries/zed/issues/53205), [#53187](https://github.com/zed-industries/zed/issues/53187), [#53182](https://github.com/zed-industries/zed/issues/53182) |
 
 ## Rising Needs
 
 | Need | Rising Score | This Week | Category |
 | --- | --- | --- | --- |
-| Fix Crashes, UI Glitches, and Integration Bugs | 34.0x | 33 | Reliability |
+| Fix Various IDE Bug Fixes and Stability Issues | 41.0x | 40 | Developer Experience |
 
 ## Category Breakdown
 
-- **Reliability**: 1 clusters
+- **Developer Experience**: 1 clusters
 
 ## All Need Clusters
 
-### 1. Fix Crashes, UI Glitches, and Integration Bugs
+### 1. Fix Various IDE Bug Fixes and Stability Issues
 
-Users are experiencing crashes, broken UI interactions, and inconsistent behavior across AI features, Git operations, and terminal functionality. These reliability issues disrupt developer workflows and cause friction when using core editor features. Users want these bugs fixed to restore expected behavior and stability.
+Users are experiencing bugs across multiple IDE features including language tooling, UI interactions, and AI integrations. These issues range from crashes and incorrect behavior to performance degradation, all of which degrade the overall development experience. Addressing these bugs would significantly improve the reliability and usability of the IDE.
 
-- **Volume:** 33 issues (26 open, 7 closed)
-- **Demand Score:** 5.7
-- **Avg Reactions:** 0 | **Avg Comments:** 2.3
-- **Example issues:** [#53159](https://github.com/zed-industries/zed/issues/53159), [#53145](https://github.com/zed-industries/zed/issues/53145), [#53135](https://github.com/zed-industries/zed/issues/53135), [#53095](https://github.com/zed-industries/zed/issues/53095), [#53072](https://github.com/zed-industries/zed/issues/53072)
+- **Volume:** 40 issues (34 open, 6 closed)
+- **Demand Score:** 10.9
+- **Avg Reactions:** 0.2 | **Avg Comments:** 1.8
+- **Example issues:** [#53205](https://github.com/zed-industries/zed/issues/53205), [#53187](https://github.com/zed-industries/zed/issues/53187), [#53182](https://github.com/zed-industries/zed/issues/53182), [#53175](https://github.com/zed-industries/zed/issues/53175), [#53163](https://github.com/zed-industries/zed/issues/53163)
 
 ---
 

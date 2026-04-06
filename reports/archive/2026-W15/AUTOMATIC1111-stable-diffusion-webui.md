@@ -1,15 +1,15 @@
 # Stable Diffusion WebUI — User Demand Report
 
 **Week:** 2026-W15
-**Generated:** 2026-04-05
-**Issues analyzed:** 9 (7 included)
+**Generated:** 2026-04-06
+**Issues analyzed:** 8 (7 included)
 **Need clusters:** 1
 
 ## Top 10 User Needs
 
 | Rank | Need | Issues | Score | Category | Examples |
 | --- | --- | --- | --- | --- | --- |
-| 1 | Fix Installation Failures and Security Issues | 7 | 2.0 | Developer Experience | [#17345](https://github.com/AUTOMATIC1111/stable-diffusion-webui/issues/17345), [#17335](https://github.com/AUTOMATIC1111/stable-diffusion-webui/issues/17335), [#17323](https://github.com/AUTOMATIC1111/stable-diffusion-webui/issues/17323) |
+| 1 | Installation failures and dependency fixes | 7 | 2.0 | Developer Experience | [#17362](https://github.com/AUTOMATIC1111/stable-diffusion-webui/issues/17362), [#17345](https://github.com/AUTOMATIC1111/stable-diffusion-webui/issues/17345), [#17325](https://github.com/AUTOMATIC1111/stable-diffusion-webui/issues/17325) |
 
 ## Category Breakdown
 
@@ -17,14 +17,14 @@
 
 ## All Need Clusters
 
-### 1. Fix Installation Failures and Security Issues
+### 1. Installation failures and dependency fixes
 
-Users are encountering multiple dependency installation failures including undefined variables, package import errors, and CLIP installation issues that block initial setup. Additionally, security vulnerabilities in the installation pipeline create risks of credential harvesting, supply chain attacks, and shell injection. Users also want configuration flexibility to override forced torch versions for GPU compatibility.
+Users are encountering multiple installation-related issues including missing module imports, failed dependency installations for core packages like PyTorch and CLIP, and startup errors. Additionally, security vulnerabilities in the dependency cloning process pose supply chain risks. These problems prevent users from successfully setting up the development environment.
 
 - **Volume:** 7 issues (5 open, 2 closed)
 - **Demand Score:** 2.0
 - **Avg Reactions:** 0.9 | **Avg Comments:** 1.9
-- **Example issues:** [#17345](https://github.com/AUTOMATIC1111/stable-diffusion-webui/issues/17345), [#17335](https://github.com/AUTOMATIC1111/stable-diffusion-webui/issues/17335), [#17323](https://github.com/AUTOMATIC1111/stable-diffusion-webui/issues/17323), [#17343](https://github.com/AUTOMATIC1111/stable-diffusion-webui/issues/17343), [#17339](https://github.com/AUTOMATIC1111/stable-diffusion-webui/issues/17339)
+- **Example issues:** [#17362](https://github.com/AUTOMATIC1111/stable-diffusion-webui/issues/17362), [#17345](https://github.com/AUTOMATIC1111/stable-diffusion-webui/issues/17345), [#17325](https://github.com/AUTOMATIC1111/stable-diffusion-webui/issues/17325), [#17343](https://github.com/AUTOMATIC1111/stable-diffusion-webui/issues/17343), [#17339](https://github.com/AUTOMATIC1111/stable-diffusion-webui/issues/17339)
 
 ---
 

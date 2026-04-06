@@ -16,36 +16,23 @@ ReadYourUsers 是一个 TypeScript 工作流和公开的多产品观测站，用
 
 <!-- READYOURUSERS:START -->
 
-## 实时快照 — Claude Code
+## 实时快照 — 科技爱好者周刊
 
-> 基于 [anthropics/claude-code](https://github.com/anthropics/claude-code) 的 2122 条 issue · 25 个需求簇 · 更新于 2026-04-05
+> 基于 [ruanyf/weekly](https://github.com/ruanyf/weekly) 的 95 条 issue · 1 个需求簇 · 更新于 2026-04-06
 
 ### 当前最强需求
 
 | 排名 | 需求 | Issue 数 | 得分 | 分类 | 示例 |
 | --- | --- | --- | --- | --- | --- |
-| 1 | CLI Session Management and Stability Improvements | 2023 | 20.3 | Developer Experience | [#42637](https://github.com/anthropics/claude-code/issues/42637), [#42624](https://github.com/anthropics/claude-code/issues/42624), [#42607](https://github.com/anthropics/claude-code/issues/42607) |
-| 2 | Custom commands in .claude/commands/ not recognized | 2 | 0.1 | Developer Experience | [#41832](https://github.com/anthropics/claude-code/issues/41832), [#41243](https://github.com/anthropics/claude-code/issues/41243) |
-| 3 | Reduce excessive token consumption | 2 | 0.1 | Performance | [#41035](https://github.com/anthropics/claude-code/issues/41035), [#40997](https://github.com/anthropics/claude-code/issues/40997) |
-| 4 | Fix excessive token consumption | 2 | 0.0 | Performance | [#42181](https://github.com/anthropics/claude-code/issues/42181), [#40790](https://github.com/anthropics/claude-code/issues/40790) |
-| 5 | Preserve transcript and history during subagent execution | 2 | 0.0 | Reliability | [#42283](https://github.com/anthropics/claude-code/issues/42283), [#40892](https://github.com/anthropics/claude-code/issues/40892) |
-| 6 | Companion UI visibility toggle setting | 2 | 0.0 | Configuration | [#42287](https://github.com/anthropics/claude-code/issues/42287), [#41942](https://github.com/anthropics/claude-code/issues/41942) |
-| 7 | Fix Unexpected High Resource Consumption | 3 | 0.0 | Performance | [#41425](https://github.com/anthropics/claude-code/issues/41425), [#41385](https://github.com/anthropics/claude-code/issues/41385), [#41200](https://github.com/anthropics/claude-code/issues/41200) |
-| 8 | Fix MCP connectors not loading in Remote Trigger | 2 | 0.0 | Reliability | [#42599](https://github.com/anthropics/claude-code/issues/42599), [#41934](https://github.com/anthropics/claude-code/issues/41934) |
-| 9 | Add settings to disable companion features | 3 | 0.0 | Configuration | [#42506](https://github.com/anthropics/claude-code/issues/42506), [#42212](https://github.com/anthropics/claude-code/issues/42212), [#41091](https://github.com/anthropics/claude-code/issues/41091) |
-| 10 | Fix rate limit false positive errors | 2 | 0.0 | Reliability | [#40748](https://github.com/anthropics/claude-code/issues/40748), [#40536](https://github.com/anthropics/claude-code/issues/40536) |
+| 1 | AI Development Assistance and CLI Tooling | 31 | 1.6 | Developer Experience | [#9519](https://github.com/ruanyf/weekly/issues/9519), [#9511](https://github.com/ruanyf/weekly/issues/9511), [#9507](https://github.com/ruanyf/weekly/issues/9507) |
 
 ### 上升最快
 
 | 需求 | 上升倍率 | 本周 | 分类 |
 | --- | --- | --- | --- |
-| CLI Session Management and Stability Improvements | 13.9x | 2023 | Developer Experience |
-| Fix Unexpected High Resource Consumption | 4.0x | 3 | Performance |
-| Add settings to disable companion features | 4.0x | 3 | Configuration |
-| MCP connector tools availability in sessions | 4.0x | 3 | Integration |
-| Custom commands in .claude/commands/ not recognized | 3.0x | 2 | Developer Experience |
+| AI Development Assistance and CLI Tooling | 5.6x | 31 | Developer Experience |
 
-[观测站](https://study8677.github.io/ReadYourUsers/) | [对比页](https://study8677.github.io/ReadYourUsers/zh/compare/index.html) | [产品页](https://study8677.github.io/ReadYourUsers/zh/products/anthropics-claude-code.html) | [完整报告](reports/latest/anthropics-claude-code.zh.md) | [English](README.md) | *基于公开 GitHub Issues，代表需求信号而非全部用户声音。*
+[观测站](https://study8677.github.io/ReadYourUsers/) | [对比页](https://study8677.github.io/ReadYourUsers/zh/compare/index.html) | [产品页](https://study8677.github.io/ReadYourUsers/zh/products/ruanyf-weekly.html) | [完整报告](reports/latest/ruanyf-weekly.zh.md) | [English](README.md) | *基于公开 GitHub Issues，代表需求信号而非全部用户声音。*
 
 <!-- READYOURUSERS:END -->
 

@@ -1,36 +1,36 @@
 # Open WebUI — User Demand Report
 
 **Week:** 2026-W15
-**Generated:** 2026-04-05
-**Issues analyzed:** 37 (37 included)
+**Generated:** 2026-04-06
+**Issues analyzed:** 43 (41 included)
 **Need clusters:** 1
 
 ## Top 10 User Needs
 
 | Rank | Need | Issues | Score | Category | Examples |
 | --- | --- | --- | --- | --- | --- |
-| 1 | Security fixes, OAuth improvements, and UI refinements | 37 | 5.1 | Reliability | [#23409](https://github.com/open-webui/open-webui/issues/23409), [#23406](https://github.com/open-webui/open-webui/issues/23406), [#23373](https://github.com/open-webui/open-webui/issues/23373) |
+| 1 | Chat UX Fixes, Model Configuration, and Analytics Features | 41 | 5.5 | Platform Support | [#23422](https://github.com/open-webui/open-webui/issues/23422), [#23363](https://github.com/open-webui/open-webui/issues/23363), [#23339](https://github.com/open-webui/open-webui/issues/23339) |
 
 ## Rising Needs
 
 | Need | Rising Score | This Week | Category |
 | --- | --- | --- | --- |
-| Security fixes, OAuth improvements, and UI refinements | 38.0x | 37 | Reliability |
+| Chat UX Fixes, Model Configuration, and Analytics Features | 42.0x | 41 | Platform Support |
 
 ## Category Breakdown
 
-- **Reliability**: 1 clusters
+- **Platform Support**: 1 clusters
 
 ## All Need Clusters
 
-### 1. Security fixes, OAuth improvements, and UI refinements
+### 1. Chat UX Fixes, Model Configuration, and Analytics Features
 
-This cluster addresses critical security vulnerabilities including privilege escalation and access control issues, while also fixing OAuth integration problems and UI/UX inconsistencies in chat and messaging interfaces. Users want a more secure, reliable, and polished experience with proper authentication flows and intuitive interface behavior.
+Users are requesting various improvements including fixes to chat message handling and UI consistency, model configuration options for better control, and new analytics capabilities to track usage patterns and metrics across the platform. These enhancements aim to improve both the developer experience when working with AI models and provide better visibility into system usage.
 
-- **Volume:** 37 issues (16 open, 21 closed)
-- **Demand Score:** 5.1
+- **Volume:** 41 issues (21 open, 20 closed)
+- **Demand Score:** 5.5
 - **Avg Reactions:** 0.1 | **Avg Comments:** 1.2
-- **Example issues:** [#23409](https://github.com/open-webui/open-webui/issues/23409), [#23406](https://github.com/open-webui/open-webui/issues/23406), [#23373](https://github.com/open-webui/open-webui/issues/23373), [#23344](https://github.com/open-webui/open-webui/issues/23344), [#23319](https://github.com/open-webui/open-webui/issues/23319)
+- **Example issues:** [#23422](https://github.com/open-webui/open-webui/issues/23422), [#23363](https://github.com/open-webui/open-webui/issues/23363), [#23339](https://github.com/open-webui/open-webui/issues/23339), [#23332](https://github.com/open-webui/open-webui/issues/23332), [#23404](https://github.com/open-webui/open-webui/issues/23404)
 
 ---
 

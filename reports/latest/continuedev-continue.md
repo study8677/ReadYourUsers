@@ -1,23 +1,22 @@
 # Continue — User Demand Report
 
 **Week:** 2026-W15
-**Generated:** 2026-04-05
-**Issues analyzed:** 41 (36 included)
+**Generated:** 2026-04-06
+**Issues analyzed:** 37 (33 included)
 **Need clusters:** 2
 
 ## Top 10 User Needs
 
 | Rank | Need | Issues | Score | Category | Examples |
 | --- | --- | --- | --- | --- | --- |
-| 1 | LLM Provider Integration and Error Handling | 32 | 3.3 | Integration | [#12008](https://github.com/continuedev/continue/issues/12008), [#12004](https://github.com/continuedev/continue/issues/12004), [#11963](https://github.com/continuedev/continue/issues/11963) |
-| 2 | Document .continue/configs/ directory support | 4 | 0.0 | Documentation | [#12036](https://github.com/continuedev/continue/issues/12036), [#12026](https://github.com/continuedev/continue/issues/12026), [#11968](https://github.com/continuedev/continue/issues/11968) |
+| 1 | API Integration and Authentication Fixes | 28 | 4.7 | Integration | [#12004](https://github.com/continuedev/continue/issues/12004), [#11963](https://github.com/continuedev/continue/issues/11963), [#11934](https://github.com/continuedev/continue/issues/11934) |
+| 2 | Document .continue/configs/ directory support | 5 | 0.0 | Documentation | [#12040](https://github.com/continuedev/continue/issues/12040), [#12036](https://github.com/continuedev/continue/issues/12036), [#12026](https://github.com/continuedev/continue/issues/12026) |
 
 ## Rising Needs
 
 | Need | Rising Score | This Week | Category |
 | --- | --- | --- | --- |
-| Document .continue/configs/ directory support | 2.0x | 4 | Documentation |
-| LLM Provider Integration and Error Handling | 1.3x | 32 | Integration |
+| Document .continue/configs/ directory support | 1.3x | 5 | Documentation |
 
 ## Category Breakdown
 
@@ -26,23 +25,23 @@
 
 ## All Need Clusters
 
-### 1. LLM Provider Integration and Error Handling
+### 1. API Integration and Authentication Fixes
 
-Users are experiencing various issues with LLM provider integration including authentication failures, unclear error messages, API quota handling, and connection problems. They want more robust API error handling with clearer messaging, proper API key usage (preferring user-provided keys over Continue credits), and fixes for reasoning model compatibility issues with tool calling and streaming.
+Users are experiencing multiple API integration issues including authentication failures with Anthropic and OpenAI keys, proxy connection problems, and custom headers not being passed correctly. These issues prevent proper communication with model providers and affect both the Continue proxy and direct API connections. Fixing these will ensure reliable API access and proper error handling for edge cases like context length limits.
 
-- **Volume:** 32 issues (24 open, 8 closed)
-- **Demand Score:** 3.3
-- **Avg Reactions:** 0.2 | **Avg Comments:** 0.5
-- **Example issues:** [#12008](https://github.com/continuedev/continue/issues/12008), [#12004](https://github.com/continuedev/continue/issues/12004), [#11963](https://github.com/continuedev/continue/issues/11963), [#11933](https://github.com/continuedev/continue/issues/11933), [#11962](https://github.com/continuedev/continue/issues/11962)
+- **Volume:** 28 issues (25 open, 3 closed)
+- **Demand Score:** 4.7
+- **Avg Reactions:** 0.1 | **Avg Comments:** 0.3
+- **Example issues:** [#12004](https://github.com/continuedev/continue/issues/12004), [#11963](https://github.com/continuedev/continue/issues/11963), [#11934](https://github.com/continuedev/continue/issues/11934), [#11933](https://github.com/continuedev/continue/issues/11933), [#11978](https://github.com/continuedev/continue/issues/11978)
 
 ### 2. Document .continue/configs/ directory support
 
-Users need documentation for the .continue/configs/ directory feature that enables local configuration profiles. Clear documentation would help users understand how to organize and manage their local configuration settings effectively.
+Users want documentation for the .continue/configs/ directory feature that supports local config profiles. This documentation is needed so users can understand how to organize and manage multiple configuration profiles locally. Without clear documentation, users may struggle to discover or properly utilize this configuration capability.
 
-- **Volume:** 4 issues (4 open, 0 closed)
+- **Volume:** 5 issues (5 open, 0 closed)
 - **Demand Score:** 0.0
 - **Avg Reactions:** 0 | **Avg Comments:** 0
-- **Example issues:** [#12036](https://github.com/continuedev/continue/issues/12036), [#12026](https://github.com/continuedev/continue/issues/12026), [#11968](https://github.com/continuedev/continue/issues/11968), [#11944](https://github.com/continuedev/continue/issues/11944)
+- **Example issues:** [#12040](https://github.com/continuedev/continue/issues/12040), [#12036](https://github.com/continuedev/continue/issues/12036), [#12026](https://github.com/continuedev/continue/issues/12026), [#11968](https://github.com/continuedev/continue/issues/11968), [#11944](https://github.com/continuedev/continue/issues/11944)
 
 ---
 

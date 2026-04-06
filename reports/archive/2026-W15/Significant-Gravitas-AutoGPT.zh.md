@@ -1,36 +1,36 @@
 # AutoGPT — 用户需求报告
 
 **周:** 2026-W15
-**生成日期:** 2026-04-05
-**分析 Issue 数:** 8 (6 纳入分析)
+**生成日期:** 2026-04-06
+**分析 Issue 数:** 11 (9 纳入分析)
 **需求簇:** 1
 
 ## Top 10 用户需求
 
 | 排名 | 需求 | Issue 数 | 得分 | 分类 | 示例 |
 | --- | --- | --- | --- | --- | --- |
-| 1 | Improve block error handling and add agent capabilities | 6 | 0.9 | Developer Experience | [#12675](https://github.com/Significant-Gravitas/AutoGPT/issues/12675), [#12648](https://github.com/Significant-Gravitas/AutoGPT/issues/12648), [#12645](https://github.com/Significant-Gravitas/AutoGPT/issues/12645) |
+| 1 | Improve Agent Reliability and Error Handling | 9 | 1.9 | Reliability | [#12684](https://github.com/Significant-Gravitas/AutoGPT/issues/12684), [#12683](https://github.com/Significant-Gravitas/AutoGPT/issues/12683), [#12680](https://github.com/Significant-Gravitas/AutoGPT/issues/12680) |
 
 ## 上升最快的需求
 
 | 需求 | 上升倍率 | 本周 | 分类 |
 | --- | --- | --- | --- |
-| Improve block error handling and add agent capabilities | 1.7x | 6 | Developer Experience |
+| Improve Agent Reliability and Error Handling | 4.5x | 9 | Reliability |
 
 ## 分类分布
 
-- **Developer Experience**: 1 个簇
+- **Reliability**: 1 个簇
 
 ## 所有需求簇
 
-### 1. Improve block error handling and add agent capabilities
+### 1. Improve Agent Reliability and Error Handling
 
-Users want improved error handling in various AI blocks to gracefully manage edge cases like non-JSON responses, empty responses, and missing arguments. Additionally, they want new capabilities including optional external memory providers for durable agent memory, a pre-execution verification layer with audit logging, and a new onboarding experience to make the framework more robust and easier to adopt.
+Users want the AutoGPT platform to be more reliable and robust through better error handling and graceful degradation when external services fail or unexpected inputs occur. This includes fixing bugs in block execution, JSON parsing, and UI rendering, as well as adding verification layers and cost estimation to make agents more production-ready.
 
-- **数量:** 6 条 issue (3 未关闭, 3 已关闭)
-- **需求得分:** 0.9
+- **数量:** 9 条 issue (6 未关闭, 3 已关闭)
+- **需求得分:** 1.9
 - **平均反应:** 0 | **平均评论:** 0.2
-- **示例 Issue:** [#12675](https://github.com/Significant-Gravitas/AutoGPT/issues/12675), [#12648](https://github.com/Significant-Gravitas/AutoGPT/issues/12648), [#12645](https://github.com/Significant-Gravitas/AutoGPT/issues/12645), [#12644](https://github.com/Significant-Gravitas/AutoGPT/issues/12644), [#12589](https://github.com/Significant-Gravitas/AutoGPT/issues/12589)
+- **示例 Issue:** [#12684](https://github.com/Significant-Gravitas/AutoGPT/issues/12684), [#12683](https://github.com/Significant-Gravitas/AutoGPT/issues/12683), [#12680](https://github.com/Significant-Gravitas/AutoGPT/issues/12680), [#12678](https://github.com/Significant-Gravitas/AutoGPT/issues/12678), [#12675](https://github.com/Significant-Gravitas/AutoGPT/issues/12675)
 
 ---
 

@@ -1,21 +1,21 @@
 # n8n — User Demand Report
 
 **Week:** 2026-W15
-**Generated:** 2026-04-05
-**Issues analyzed:** 23 (19 included)
+**Generated:** 2026-04-06
+**Issues analyzed:** 26 (22 included)
 **Need clusters:** 1
 
 ## Top 10 User Needs
 
 | Rank | Need | Issues | Score | Category | Examples |
 | --- | --- | --- | --- | --- | --- |
-| 1 | Bug Fixes for Nodes, Workflows, and Core Platform | 19 | 9.1 | Reliability | [#28022](https://github.com/n8n-io/n8n/issues/28022), [#27950](https://github.com/n8n-io/n8n/issues/27950), [#27949](https://github.com/n8n-io/n8n/issues/27949) |
+| 1 | Bug Fixes Across Nodes and Core Workflow | 22 | 9.3 | Reliability | [#28051](https://github.com/n8n-io/n8n/issues/28051), [#28046](https://github.com/n8n-io/n8n/issues/28046), [#28025](https://github.com/n8n-io/n8n/issues/28025) |
 
 ## Rising Needs
 
 | Need | Rising Score | This Week | Category |
 | --- | --- | --- | --- |
-| Bug Fixes for Nodes, Workflows, and Core Platform | 20.0x | 19 | Reliability |
+| Bug Fixes Across Nodes and Core Workflow | 23.0x | 22 | Reliability |
 
 ## Category Breakdown
 
@@ -23,14 +23,14 @@
 
 ## All Need Clusters
 
-### 1. Bug Fixes for Nodes, Workflows, and Core Platform
+### 1. Bug Fixes Across Nodes and Core Workflow
 
-Users are reporting various bugs across the platform including node authentication and API issues (Dropbox, Anthropic, Ollama, WooCommerce, CoinGecko), workflow navigation and editor loading failures, and platform-level issues like webhook registration errors and workflow termination problems. These issues affect platform reliability and need to be addressed to ensure smooth operation.
+Users are reporting various bugs affecting workflow stability, node integrations, and core functionality. Issues range from MCP SDK parsing errors and integration node crashes (WooCommerce, Dropbox, CoinGecko) to workflow loading failures and intermittent credential timeouts. These bugs cause crashes, infinite loading states, and incorrect API behavior, degrading the reliability of workflow execution.
 
-- **Volume:** 19 issues (15 open, 4 closed)
-- **Demand Score:** 9.1
-- **Avg Reactions:** 0 | **Avg Comments:** 1.5
-- **Example issues:** [#28022](https://github.com/n8n-io/n8n/issues/28022), [#27950](https://github.com/n8n-io/n8n/issues/27950), [#27949](https://github.com/n8n-io/n8n/issues/27949), [#28043](https://github.com/n8n-io/n8n/issues/28043), [#28002](https://github.com/n8n-io/n8n/issues/28002)
+- **Volume:** 22 issues (18 open, 4 closed)
+- **Demand Score:** 9.3
+- **Avg Reactions:** 0 | **Avg Comments:** 1.7
+- **Example issues:** [#28051](https://github.com/n8n-io/n8n/issues/28051), [#28046](https://github.com/n8n-io/n8n/issues/28046), [#28025](https://github.com/n8n-io/n8n/issues/28025), [#28058](https://github.com/n8n-io/n8n/issues/28058), [#28055](https://github.com/n8n-io/n8n/issues/28055)
 
 ---
 

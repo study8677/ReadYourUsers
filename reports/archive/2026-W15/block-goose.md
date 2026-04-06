@@ -1,7 +1,7 @@
 # Goose — User Demand Report
 
 **Week:** 2026-W15
-**Generated:** 2026-04-05
+**Generated:** 2026-04-06
 **Issues analyzed:** 30 (28 included)
 **Need clusters:** 1
 
@@ -9,28 +9,28 @@
 
 | Rank | Need | Issues | Score | Category | Examples |
 | --- | --- | --- | --- | --- | --- |
-| 1 | CLI and Desktop UI Improvements | 28 | 6.1 | UI/UX | [#8282](https://github.com/block/goose/issues/8282), [#8249](https://github.com/block/goose/issues/8249), [#8223](https://github.com/block/goose/issues/8223) |
+| 1 | Bug fixes and CLI feature improvements | 28 | 6.1 | Developer Experience | [#8339](https://github.com/block/goose/issues/8339), [#8293](https://github.com/block/goose/issues/8293), [#8275](https://github.com/block/goose/issues/8275) |
 
 ## Rising Needs
 
 | Need | Rising Score | This Week | Category |
 | --- | --- | --- | --- |
-| CLI and Desktop UI Improvements | 29.0x | 28 | UI/UX |
+| Bug fixes and CLI feature improvements | 29.0x | 28 | Developer Experience |
 
 ## Category Breakdown
 
-- **UI/UX**: 1 clusters
+- **Developer Experience**: 1 clusters
 
 ## All Need Clusters
 
-### 1. CLI and Desktop UI Improvements
+### 1. Bug fixes and CLI feature improvements
 
-Users are requesting various improvements to both the CLI and desktop interfaces, including new model management commands, markdown rendering, visual styling enhancements, and critical bug fixes for segmentation faults and false-positive screens. Additionally, there are multiple desktop UI fixes needed for proper macOS integration, tool call expansion, and markdown code block rendering.
+Users are reporting various bugs across API providers (StepFun 404 errors), extensions (Filesystem loading failures, summon frontmatter warnings), and UI components (macOS menu alignment, code block rendering). Additionally, they want new CLI capabilities including model management commands, markdown rendering, and platform-specific configuration paths. These improvements enhance reliability and developer experience across the Desktop and CLI interfaces.
 
-- **Volume:** 28 issues (24 open, 4 closed)
+- **Volume:** 28 issues (25 open, 3 closed)
 - **Demand Score:** 6.1
 - **Avg Reactions:** 0.1 | **Avg Comments:** 0.4
-- **Example issues:** [#8282](https://github.com/block/goose/issues/8282), [#8249](https://github.com/block/goose/issues/8249), [#8223](https://github.com/block/goose/issues/8223), [#8221](https://github.com/block/goose/issues/8221), [#8311](https://github.com/block/goose/issues/8311)
+- **Example issues:** [#8339](https://github.com/block/goose/issues/8339), [#8293](https://github.com/block/goose/issues/8293), [#8275](https://github.com/block/goose/issues/8275), [#8326](https://github.com/block/goose/issues/8326), [#8282](https://github.com/block/goose/issues/8282)
 
 ---
 

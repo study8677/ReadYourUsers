@@ -1,7 +1,7 @@
 # NextChat — 用户需求报告
 
 **周:** 2026-W15
-**生成日期:** 2026-04-05
+**生成日期:** 2026-04-06
 **分析 Issue 数:** 4 (2 纳入分析)
 **需求簇:** 1
 
@@ -9,13 +9,13 @@
 
 | 排名 | 需求 | Issue 数 | 得分 | 分类 | 示例 |
 | --- | --- | --- | --- | --- | --- |
-| 1 | Expand AI Model Support and Flexibility | 2 | 0.9 | Integration | [#6736](https://github.com/ChatGPTNextWeb/NextChat/issues/6736), [#6725](https://github.com/ChatGPTNextWeb/NextChat/issues/6725) |
+| 1 | Expand AI Model Support and Management | 2 | 0.9 | Integration | [#6736](https://github.com/ChatGPTNextWeb/NextChat/issues/6736), [#6725](https://github.com/ChatGPTNextWeb/NextChat/issues/6725) |
 
 ## 上升最快的需求
 
 | 需求 | 上升倍率 | 本周 | 分类 |
 | --- | --- | --- | --- |
-| Expand AI Model Support and Flexibility | 2.0x | 2 | Integration |
+| Expand AI Model Support and Management | 2.0x | 2 | Integration |
 
 ## 分类分布
 
@@ -23,9 +23,9 @@
 
 ## 所有需求簇
 
-### 1. Expand AI Model Support and Flexibility
+### 1. Expand AI Model Support and Management
 
-Users want support for newer AI models like Gemini 3.1 Pro, Claude Sonnet 4.6, GPT 5.3, and Grok 4.20, as well as the ability to manually add custom AI models in Docker deployments. This flexibility would allow users to leverage the latest AI capabilities and use models that better fit their specific use cases.
+Users want support for additional AI models including Gemini, Claude, GPT, and Grok series, indicating the current model selection is limited. Additionally, they want more control over model updates in Docker deployments, suggesting the current update mechanism lacks flexibility for their deployment needs.
 
 - **数量:** 2 条 issue (2 未关闭, 0 已关闭)
 - **需求得分:** 0.9

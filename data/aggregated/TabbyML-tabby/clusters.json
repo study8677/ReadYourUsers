@@ -1,17 +1,17 @@
 {
   "repo": "TabbyML/tabby",
   "display_name": "Tabby",
-  "generated_at": "2026-04-05T07:16:29.656Z",
-  "window_start": "2026-03-06T07:16:29.656Z",
-  "window_end": "2026-04-05T07:16:29.656Z",
+  "generated_at": "2026-04-06T10:20:18.041Z",
+  "window_start": "2026-03-07T10:20:18.041Z",
+  "window_end": "2026-04-06T10:20:18.041Z",
   "total_issues_analyzed": 3,
   "total_issues_included": 3,
   "clusters": [
     {
-      "cluster_id": "d7096f0fca4c",
-      "title": "Improve Tabby completions and IDE integration",
-      "summary": "Users want faster code completion experiences through precomputed branch suggestions, accurate documentation about recommended models, and reliable connectivity between their IDE and tabby-agent. These improvements would enhance overall productivity by reducing wait times, providing clearer guidance, and fixing integration issues.",
-      "category": "Product Improvement",
+      "cluster_id": "eff3181c48b5",
+      "title": "Product Improvements and Bug Fixes",
+      "summary": "This cluster groups three distinct user requests for the Tabby AI code completion tool: enhancing completion functionality with branched suggestions for different user actions, keeping documentation current with updated model recommendations, and resolving a connection issue in the Eclipse plugin. Each request addresses a different aspect of the product ecosystem.",
+      "category": "Developer Experience",
       "representative_need": "Fix Eclipse plugin connection to tabby-agent",
       "issue_numbers": [
         4472,
@@ -25,10 +25,10 @@
       ],
       "sample_titles": [
         "Fix Eclipse plugin connection to tabby-agent",
-        "Precompute accept and reject branch suggestions for instant follow-up completions",
-        "Update the recommended models documentation with current model recommendations"
+        "Precompute branched follow-up completion suggestions for accept and reject paths",
+        "Update recommended models documentation with current information"
       ],
-      "demand_score": 1.55485396286289,
+      "demand_score": 1.535375240052054,
       "rising_score": 0.3333333333333333,
       "volume": 3,
       "open_count": 3,
@@ -43,6 +43,6 @@
     }
   ],
   "category_breakdown": {
-    "Product Improvement": 1
+    "Developer Experience": 1
   }
 }

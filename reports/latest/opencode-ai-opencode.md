@@ -1,7 +1,7 @@
 # OpenCode — User Demand Report
 
 **Week:** 2026-W15
-**Generated:** 2026-04-05
+**Generated:** 2026-04-06
 **Issues analyzed:** 62 (59 included)
 **Need clusters:** 10
 

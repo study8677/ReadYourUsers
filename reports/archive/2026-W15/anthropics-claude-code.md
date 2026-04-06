@@ -1,60 +1,36 @@
 # Claude Code — User Demand Report
 
 **Week:** 2026-W15
-**Generated:** 2026-04-05
-**Issues analyzed:** 99 (98 included)
-**Need clusters:** 3
+**Generated:** 2026-04-06
+**Issues analyzed:** 92 (84 included)
+**Need clusters:** 1
 
 ## Top 10 User Needs
 
 | Rank | Need | Issues | Score | Category | Examples |
 | --- | --- | --- | --- | --- | --- |
-| 1 | Issues related to other | 94 | 14.7 | Other | [#43765](https://github.com/anthropics/claude-code/issues/43765), [#43753](https://github.com/anthropics/claude-code/issues/43753), [#43747](https://github.com/anthropics/claude-code/issues/43747) |
-| 2 | Third-party app detection via Info.plist fallback | 2 | 0.5 | Platform Support | [#43760](https://github.com/anthropics/claude-code/issues/43760), [#43759](https://github.com/anthropics/claude-code/issues/43759) |
-| 3 | Fix multi-line skill descriptions splitting in autocomplete | 2 | 0.3 | UI/UX | [#43702](https://github.com/anthropics/claude-code/issues/43702), [#43699](https://github.com/anthropics/claude-code/issues/43699) |
+| 1 | Issues related to other | 84 | 23.3 | Other | [#44117](https://github.com/anthropics/claude-code/issues/44117), [#44116](https://github.com/anthropics/claude-code/issues/44116), [#44108](https://github.com/anthropics/claude-code/issues/44108) |
 
 ## Rising Needs
 
 | Need | Rising Score | This Week | Category |
 | --- | --- | --- | --- |
-| Issues related to other | 95.0x | 94 | Other |
-| Third-party app detection via Info.plist fallback | 3.0x | 2 | Platform Support |
-| Fix multi-line skill descriptions splitting in autocomplete | 3.0x | 2 | UI/UX |
+| Issues related to other | 85.0x | 84 | Other |
 
 ## Category Breakdown
 
 - **Other**: 1 clusters
-- **Platform Support**: 1 clusters
-- **UI/UX**: 1 clusters
 
 ## All Need Clusters
 
 ### 1. Issues related to other
 
-94 issues: Fix terminal scrolling and content rendering issues in TUI; Fix intermittent TUI freezes on Windows during input transitions; Fix deterministic companion species generation to produce consistent species for the same userId across sessions
+84 issues: Fix 1M context features (WebSearch, subagents) to work on Max plan without requiring extra usage toggle; Fix continue command to respect workflow phases and resume from the correct step rather than skipping ahead; Fix disproportionate session budget consumption for CLI shell executions and sub-tasks
 
-- **Volume:** 94 issues (87 open, 7 closed)
-- **Demand Score:** 14.7
-- **Avg Reactions:** 0.1 | **Avg Comments:** 1
-- **Example issues:** [#43765](https://github.com/anthropics/claude-code/issues/43765), [#43753](https://github.com/anthropics/claude-code/issues/43753), [#43747](https://github.com/anthropics/claude-code/issues/43747), [#43735](https://github.com/anthropics/claude-code/issues/43735), [#43731](https://github.com/anthropics/claude-code/issues/43731)
-
-### 2. Third-party app detection via Info.plist fallback
-
-Users need the system to detect third-party macOS applications when Spotlight metadata is unavailable. Both request_access and computer-use MCP are currently failing to identify third-party apps because they rely solely on Spotlight, which lacks metadata for apps outside the App Store. Adding an Info.plist fallback mechanism will ensure reliable app detection across all macOS applications.
-
-- **Volume:** 2 issues (1 open, 1 closed)
-- **Demand Score:** 0.5
-- **Avg Reactions:** 0 | **Avg Comments:** 1.5
-- **Example issues:** [#43760](https://github.com/anthropics/claude-code/issues/43760), [#43759](https://github.com/anthropics/claude-code/issues/43759)
-
-### 3. Fix multi-line skill descriptions splitting in autocomplete
-
-Users with multi-line skill descriptions are experiencing issues where each line renders as a separate autocomplete entry in the slash command menu. This breaks the intended presentation and makes it difficult to select the correct skill. Users need their multi-line descriptions to display as a single coherent entry.
-
-- **Volume:** 2 issues (1 open, 1 closed)
-- **Demand Score:** 0.3
-- **Avg Reactions:** 0 | **Avg Comments:** 1
-- **Example issues:** [#43702](https://github.com/anthropics/claude-code/issues/43702), [#43699](https://github.com/anthropics/claude-code/issues/43699)
+- **Volume:** 84 issues (77 open, 7 closed)
+- **Demand Score:** 23.3
+- **Avg Reactions:** 0 | **Avg Comments:** 0.8
+- **Example issues:** [#44117](https://github.com/anthropics/claude-code/issues/44117), [#44116](https://github.com/anthropics/claude-code/issues/44116), [#44108](https://github.com/anthropics/claude-code/issues/44108), [#44097](https://github.com/anthropics/claude-code/issues/44097), [#44087](https://github.com/anthropics/claude-code/issues/44087)
 
 ---
 

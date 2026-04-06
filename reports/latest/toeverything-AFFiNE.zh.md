@@ -1,15 +1,15 @@
 # AFFiNE — 用户需求报告
 
 **周:** 2026-W15
-**生成日期:** 2026-04-05
-**分析 Issue 数:** 46 (43 纳入分析)
+**生成日期:** 2026-04-06
+**分析 Issue 数:** 45 (42 纳入分析)
 **需求簇:** 1
 
 ## Top 10 用户需求
 
 | 排名 | 需求 | Issue 数 | 得分 | 分类 | 示例 |
 | --- | --- | --- | --- | --- | --- |
-| 1 | Editor Core and Table Functionality Fixes | 43 | 8.1 | UI/UX | [#14776](https://github.com/toeverything/AFFiNE/issues/14776), [#14774](https://github.com/toeverything/AFFiNE/issues/14774), [#14750](https://github.com/toeverything/AFFiNE/issues/14750) |
+| 1 | Editor UI refinements and table editing fixes | 42 | 8.1 | UI/UX | [#14755](https://github.com/toeverything/AFFiNE/issues/14755), [#14750](https://github.com/toeverything/AFFiNE/issues/14750), [#14747](https://github.com/toeverything/AFFiNE/issues/14747) |
 
 ## 分类分布
 
@@ -17,14 +17,14 @@
 
 ## 所有需求簇
 
-### 1. Editor Core and Table Functionality Fixes
+### 1. Editor UI refinements and table editing fixes
 
-Users want improvements to the editor's core functionality including better clipboard handling, canvas navigation tools like zoom and mini-maps, and LaTeX support. A significant portion of issues relate to table interactions, addressing context menu positioning, column resize handling, insertion in nested lists, and math rendering. These fixes will improve the editing experience for documents with complex content structures.
+Users are requesting various improvements to the editor experience, including better viewing controls like zoom and mini-maps, fixes to table manipulation in both editor and edgeless modes (context menus, nested lists, column resizing, markdown export), and clarifications to UI labels. These improvements address both functional bugs and user experience concerns to make the application more intuitive.
 
-- **数量:** 43 条 issue (24 未关闭, 19 已关闭)
+- **数量:** 42 条 issue (24 未关闭, 18 已关闭)
 - **需求得分:** 8.1
-- **平均反应:** 0.1 | **平均评论:** 1.8
-- **示例 Issue:** [#14776](https://github.com/toeverything/AFFiNE/issues/14776), [#14774](https://github.com/toeverything/AFFiNE/issues/14774), [#14750](https://github.com/toeverything/AFFiNE/issues/14750), [#14747](https://github.com/toeverything/AFFiNE/issues/14747), [#14745](https://github.com/toeverything/AFFiNE/issues/14745)
+- **平均反应:** 0.1 | **平均评论:** 1.9
+- **示例 Issue:** [#14755](https://github.com/toeverything/AFFiNE/issues/14755), [#14750](https://github.com/toeverything/AFFiNE/issues/14750), [#14747](https://github.com/toeverything/AFFiNE/issues/14747), [#14745](https://github.com/toeverything/AFFiNE/issues/14745), [#14743](https://github.com/toeverything/AFFiNE/issues/14743)
 
 ---
 

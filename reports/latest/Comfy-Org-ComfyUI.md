@@ -1,36 +1,36 @@
 # ComfyUI — User Demand Report
 
 **Week:** 2026-W15
-**Generated:** 2026-04-05
-**Issues analyzed:** 52 (48 included)
+**Generated:** 2026-04-06
+**Issues analyzed:** 50 (48 included)
 **Need clusters:** 1
 
 ## Top 10 User Needs
 
 | Rank | Need | Issues | Score | Category | Examples |
 | --- | --- | --- | --- | --- | --- |
-| 1 | Fix VRAM and Memory Management Issues | 48 | 6.6 | Performance | [#13240](https://github.com/Comfy-Org/ComfyUI/issues/13240), [#13234](https://github.com/Comfy-Org/ComfyUI/issues/13234), [#13223](https://github.com/Comfy-Org/ComfyUI/issues/13223) |
+| 1 | Workflow UI/UX and Performance Improvements | 48 | 7.1 | UI/UX | [#13284](https://github.com/Comfy-Org/ComfyUI/issues/13284), [#13260](https://github.com/Comfy-Org/ComfyUI/issues/13260), [#13253](https://github.com/Comfy-Org/ComfyUI/issues/13253) |
 
 ## Rising Needs
 
 | Need | Rising Score | This Week | Category |
 | --- | --- | --- | --- |
-| Fix VRAM and Memory Management Issues | 1.5x | 48 | Performance |
+| Workflow UI/UX and Performance Improvements | 1.8x | 48 | UI/UX |
 
 ## Category Breakdown
 
-- **Performance**: 1 clusters
+- **UI/UX**: 1 clusters
 
 ## All Need Clusters
 
-### 1. Fix VRAM and Memory Management Issues
+### 1. Workflow UI/UX and Performance Improvements
 
-Users are experiencing critical VRAM and memory management problems including Dynamic VRAM conflicting with quantization, memory corruption on Windows, precision flags not reducing memory as documented, and regressions breaking video generation. They want these memory management issues resolved, along with better control over Dynamic VRAM features and improved KV cache quantization options.
+Users are requesting various workflow management enhancements including improved UI interactions (node dropdown filtering, preset colors, parameter locking, tab restoration) and fixes for critical performance issues (WebP/VAE decode speed, VRAM management, memory exhaustion, search lag). They also want bugs fixed for workflow persistence and auto-save to ensure their work is reliably saved.
 
 - **Volume:** 48 issues (36 open, 12 closed)
-- **Demand Score:** 6.6
-- **Avg Reactions:** 0.3 | **Avg Comments:** 1.9
-- **Example issues:** [#13240](https://github.com/Comfy-Org/ComfyUI/issues/13240), [#13234](https://github.com/Comfy-Org/ComfyUI/issues/13234), [#13223](https://github.com/Comfy-Org/ComfyUI/issues/13223), [#13217](https://github.com/Comfy-Org/ComfyUI/issues/13217), [#13210](https://github.com/Comfy-Org/ComfyUI/issues/13210)
+- **Demand Score:** 7.1
+- **Avg Reactions:** 0.4 | **Avg Comments:** 2
+- **Example issues:** [#13284](https://github.com/Comfy-Org/ComfyUI/issues/13284), [#13260](https://github.com/Comfy-Org/ComfyUI/issues/13260), [#13253](https://github.com/Comfy-Org/ComfyUI/issues/13253), [#13237](https://github.com/Comfy-Org/ComfyUI/issues/13237), [#13230](https://github.com/Comfy-Org/ComfyUI/issues/13230)
 
 ---
 
