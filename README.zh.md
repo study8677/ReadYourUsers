@@ -18,7 +18,7 @@ ReadYourUsers 是一个 TypeScript 工作流和公开的多产品观测站，用
 
 ## 实时快照 — 科技爱好者周刊
 
-> 基于 [ruanyf/weekly](https://github.com/ruanyf/weekly) 的 95 条 issue · 1 个需求簇 · 更新于 2026-04-20
+> 基于 [ruanyf/weekly](https://github.com/ruanyf/weekly) 的 95 条 issue · 1 个需求簇 · 更新于 2026-04-27
 
 ### 当前最强需求
 
