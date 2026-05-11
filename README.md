@@ -18,7 +18,7 @@ ReadYourUsers is a TypeScript workflow and public multi-product observatory for 
 
 ## Live snapshot — 科技爱好者周刊
 
-> 95 issues analyzed from [ruanyf/weekly](https://github.com/ruanyf/weekly) · 1 need clusters · Updated 2026-05-04
+> 95 issues analyzed from [ruanyf/weekly](https://github.com/ruanyf/weekly) · 1 need clusters · Updated 2026-05-11
 
 ### Top needs right now
 
