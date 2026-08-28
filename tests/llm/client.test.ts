@@ -160,7 +160,7 @@ describe("getOpenAIClient", () => {
 
     await callStructuredWithMock({
       assertClientConfig: (config) => {
-        expect(config.baseURL).toBe("https://teamorouter.cn/v1");
+        expect(config.baseURL).toBe("https://api.teamorouter.cn/v1");
       },
       createImplementation: (request) => {
         expect(request).toMatchObject({
@@ -175,11 +175,11 @@ describe("getOpenAIClient", () => {
   });
 
   it("disables reasoning for the current Teamo host", async () => {
-    vi.stubEnv("OPENAI_BASE_URL", "https://teamorouter.cn/v1");
+    vi.stubEnv("OPENAI_BASE_URL", "https://api.teamorouter.cn/v1");
 
     await callStructuredWithMock({
       assertClientConfig: (config) => {
-        expect(config.baseURL).toBe("https://teamorouter.cn/v1");
+        expect(config.baseURL).toBe("https://api.teamorouter.cn/v1");
       },
       createImplementation: (request) => {
         expect(request).toMatchObject({
@@ -200,7 +200,13 @@ describe("resolveOpenAIBaseUrl", () => {
   it("rewrites the retired Teamo host and trims whitespace", async () => {
     const { resolveOpenAIBaseUrl } = await import("../../src/llm/client.js");
     expect(resolveOpenAIBaseUrl("  https://router.teamolab.com/v1/  ")).toBe(
-      "https://teamorouter.cn/v1"
+      "https://api.teamorouter.cn/v1"
+    );
+    expect(resolveOpenAIBaseUrl("https://teamorouter.cn/v1")).toBe(
+      "https://api.teamorouter.cn/v1"
+    );
+    expect(resolveOpenAIBaseUrl("https://api.teamorouter.cn/v1")).toBe(
+      "https://api.teamorouter.cn/v1"
     );
   });
 

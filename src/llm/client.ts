@@ -33,6 +33,8 @@ let openaiClient: OpenAI | null = null;
 
 const TEAMOLAB_HOST = "router.teamolab.com";
 const TEAMOROUTER_HOST = "teamorouter.cn";
+const TEAMOROUTER_API_HOST = "api.teamorouter.cn";
+const TEAMOROUTER_EXAMPLE_URL = `https://${TEAMOROUTER_API_HOST}/v1`;
 
 function isOpenRouterBaseUrl(baseUrl: string | undefined): boolean {
   return Boolean(baseUrl?.includes("openrouter.ai"));
@@ -40,11 +42,23 @@ function isOpenRouterBaseUrl(baseUrl: string | undefined): boolean {
 
 function isTeamoRouterBaseUrl(baseUrl: string | undefined): boolean {
   if (!baseUrl) return false;
-  return baseUrl.includes(TEAMOLAB_HOST) || baseUrl.includes(TEAMOROUTER_HOST);
+  return (
+    baseUrl.includes(TEAMOLAB_HOST) ||
+    baseUrl.includes(TEAMOROUTER_HOST) ||
+    baseUrl.includes(TEAMOROUTER_API_HOST)
+  );
+}
+
+function rewriteTeamoBaseUrl(url: string): string {
+  return url
+    .replace(`://www.${TEAMOLAB_HOST}`, `://${TEAMOROUTER_API_HOST}`)
+    .replace(`://${TEAMOLAB_HOST}`, `://${TEAMOROUTER_API_HOST}`)
+    .replace(`://www.${TEAMOROUTER_HOST}`, `://${TEAMOROUTER_API_HOST}`)
+    .replace(/:\/\/(?!api\.)teamorouter\.cn/, `://${TEAMOROUTER_API_HOST}`);
 }
 
 /**
- * Trim, migrate the retired Teamo host, and reject values that would make
+ * Trim, migrate retired Teamo hosts, and reject values that would make
  * the OpenAI SDK throw a generic `Invalid URL` TypeError.
  */
 export function resolveOpenAIBaseUrl(raw: string | undefined): string | undefined {
@@ -53,9 +67,7 @@ export function resolveOpenAIBaseUrl(raw: string | undefined): string | undefine
     return undefined;
   }
 
-  const rewritten = trimmed
-    .replace(`://${TEAMOLAB_HOST}`, `://${TEAMOROUTER_HOST}`)
-    .replace(`://www.${TEAMOLAB_HOST}`, `://${TEAMOROUTER_HOST}`);
+  const rewritten = rewriteTeamoBaseUrl(trimmed);
 
   let parsed: URL;
   try {
@@ -64,7 +76,7 @@ export function resolveOpenAIBaseUrl(raw: string | undefined): string | undefine
     throw new Error(
       "OPENAI_BASE_URL is not a valid http(s) URL. " +
         "Set the GitHub Actions secret or variable OPENAI_BASE_URL to " +
-        "https://openrouter.ai/api/v1 or https://teamorouter.cn/v1 " +
+        `https://openrouter.ai/api/v1 or ${TEAMOROUTER_EXAMPLE_URL} ` +
         "(do not put the API key in OPENAI_BASE_URL)."
     );
   }
