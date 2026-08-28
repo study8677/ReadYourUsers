@@ -31,12 +31,52 @@ function getAnthropicClient(): Anthropic {
 // --- OpenAI-compatible ---
 let openaiClient: OpenAI | null = null;
 
+const TEAMOLAB_HOST = "router.teamolab.com";
+const TEAMOROUTER_HOST = "teamorouter.cn";
+
 function isOpenRouterBaseUrl(baseUrl: string | undefined): boolean {
   return Boolean(baseUrl?.includes("openrouter.ai"));
 }
 
 function isTeamoRouterBaseUrl(baseUrl: string | undefined): boolean {
-  return Boolean(baseUrl?.includes("router.teamolab.com"));
+  if (!baseUrl) return false;
+  return baseUrl.includes(TEAMOLAB_HOST) || baseUrl.includes(TEAMOROUTER_HOST);
+}
+
+/**
+ * Trim, migrate the retired Teamo host, and reject values that would make
+ * the OpenAI SDK throw a generic `Invalid URL` TypeError.
+ */
+export function resolveOpenAIBaseUrl(raw: string | undefined): string | undefined {
+  const trimmed = raw?.trim();
+  if (!trimmed) {
+    return undefined;
+  }
+
+  const rewritten = trimmed
+    .replace(`://${TEAMOLAB_HOST}`, `://${TEAMOROUTER_HOST}`)
+    .replace(`://www.${TEAMOLAB_HOST}`, `://${TEAMOROUTER_HOST}`);
+
+  let parsed: URL;
+  try {
+    parsed = new URL(rewritten);
+  } catch {
+    throw new Error(
+      "OPENAI_BASE_URL is not a valid http(s) URL. " +
+        "Set the GitHub Actions secret or variable OPENAI_BASE_URL to " +
+        "https://openrouter.ai/api/v1 or https://teamorouter.cn/v1 " +
+        "(do not put the API key in OPENAI_BASE_URL)."
+    );
+  }
+
+  if (parsed.protocol !== "http:" && parsed.protocol !== "https:") {
+    throw new Error(
+      `OPENAI_BASE_URL must start with http:// or https:// (got ${parsed.protocol}). ` +
+        "Example: https://openrouter.ai/api/v1"
+    );
+  }
+
+  return rewritten.replace(/\/+$/, "");
 }
 
 function getOpenAIHeaders(): Record<string, string> | undefined {
@@ -54,7 +94,7 @@ function getOpenAIHeaders(): Record<string, string> | undefined {
 }
 
 function getOpenAIModelFallbacks(primaryModel: string): string[] {
-  if (!isOpenRouterBaseUrl(process.env.OPENAI_BASE_URL)) {
+  if (!isOpenRouterBaseUrl(resolveOpenAIBaseUrl(process.env.OPENAI_BASE_URL))) {
     return [primaryModel];
   }
 
@@ -88,7 +128,7 @@ function getOpenAIClient(): OpenAI {
     }
     openaiClient = createOpenAIClient({
       apiKey,
-      baseURL: process.env.OPENAI_BASE_URL,
+      baseURL: resolveOpenAIBaseUrl(process.env.OPENAI_BASE_URL),
       defaultHeaders: getOpenAIHeaders(),
     });
   }
@@ -193,7 +233,7 @@ async function callOpenAIStructured<T>(
 ): Promise<T> {
   const { model, systemPrompt, userPrompt, schema, schemaName, maxTokens = 1024 } = options;
   const client = getOpenAIClient();
-  const baseUrl = process.env.OPENAI_BASE_URL;
+  const baseUrl = resolveOpenAIBaseUrl(process.env.OPENAI_BASE_URL);
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const jsonSchema = zodToJsonSchema(schema as ZodType<any>, { target: "openApi3" });

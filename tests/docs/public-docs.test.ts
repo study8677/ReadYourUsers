@@ -49,7 +49,7 @@ describe("public docs and automation", () => {
     }
 
     expect(workflow).toContain(
-      "OPENAI_BASE_URL: ${{ secrets.OPENAI_BASE_URL || vars.OPENAI_BASE_URL || 'https://router.teamolab.com/v1' }}"
+      "OPENAI_BASE_URL: ${{ secrets.OPENAI_BASE_URL || vars.OPENAI_BASE_URL || 'https://teamorouter.cn/v1' }}"
     );
     expect(workflow).toContain(
       "OPENROUTER_HTTP_REFERER: ${{ vars.OPENROUTER_HTTP_REFERER || format('{0}/{1}', github.server_url, github.repository) }}"
