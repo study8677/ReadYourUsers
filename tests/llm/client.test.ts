@@ -160,7 +160,7 @@ describe("getOpenAIClient", () => {
 
     await callStructuredWithMock({
       assertClientConfig: (config) => {
-        expect(config.baseURL).toBe("https://router.teamolab.com/v1");
+        expect(config.baseURL).toBe("https://api.teamorouter.cn/v1");
       },
       createImplementation: (request) => {
         expect(request).toMatchObject({
@@ -172,5 +172,61 @@ describe("getOpenAIClient", () => {
         });
       },
     });
+  });
+
+  it("disables reasoning for the current Teamo host", async () => {
+    vi.stubEnv("OPENAI_BASE_URL", "https://api.teamorouter.cn/v1");
+
+    await callStructuredWithMock({
+      assertClientConfig: (config) => {
+        expect(config.baseURL).toBe("https://api.teamorouter.cn/v1");
+      },
+      createImplementation: (request) => {
+        expect(request).toMatchObject({
+          reasoning: { enabled: false },
+        });
+        return Promise.resolve({
+          choices: [{ message: { content: "{\"value\":1}" } }],
+        });
+      },
+    });
+  });
+});
+
+describe("resolveOpenAIBaseUrl", () => {
+  beforeEach(() => {
+    vi.resetModules();
+  });
+  it("rewrites the retired Teamo host and trims whitespace", async () => {
+    const { resolveOpenAIBaseUrl } = await import("../../src/llm/client.js");
+    expect(resolveOpenAIBaseUrl("  https://router.teamolab.com/v1/  ")).toBe(
+      "https://api.teamorouter.cn/v1"
+    );
+    expect(resolveOpenAIBaseUrl("https://teamorouter.cn/v1")).toBe(
+      "https://api.teamorouter.cn/v1"
+    );
+    expect(resolveOpenAIBaseUrl("https://api.teamorouter.cn/v1")).toBe(
+      "https://api.teamorouter.cn/v1"
+    );
+  });
+
+  it("returns undefined for empty values", async () => {
+    const { resolveOpenAIBaseUrl } = await import("../../src/llm/client.js");
+    expect(resolveOpenAIBaseUrl(undefined)).toBeUndefined();
+    expect(resolveOpenAIBaseUrl("   ")).toBeUndefined();
+  });
+
+  it("rejects API keys and other non-URL values with a clear error", async () => {
+    const { resolveOpenAIBaseUrl } = await import("../../src/llm/client.js");
+    expect(() => resolveOpenAIBaseUrl("sk-or-v1-not-a-url")).toThrow(
+      /OPENAI_BASE_URL is not a valid http\(s\) URL/
+    );
+  });
+
+  it("rejects non-http protocols", async () => {
+    const { resolveOpenAIBaseUrl } = await import("../../src/llm/client.js");
+    expect(() => resolveOpenAIBaseUrl("ftp://example.com/v1")).toThrow(
+      /must start with http:\/\/ or https:\/\//
+    );
   });
 });

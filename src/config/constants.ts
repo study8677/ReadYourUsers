@@ -20,13 +20,22 @@ const isOpenRouterOpenAIProvider =
   process.env.LLM_PROVIDER === "openai" &&
   process.env.OPENAI_BASE_URL?.includes("openrouter.ai");
 
+const isTeamoOpenAIProvider =
+  process.env.LLM_PROVIDER === "openai" &&
+  Boolean(
+    process.env.OPENAI_BASE_URL?.includes("teamorouter.cn") ||
+      process.env.OPENAI_BASE_URL?.includes("teamolab.com")
+  );
+
 /** Model for per-issue analysis (fast, cheap) */
 export const ANALYSIS_MODEL =
   process.env.ANALYSIS_MODEL ??
   (process.env.LLM_PROVIDER === "openai"
     ? isOpenRouterOpenAIProvider
       ? "qwen/qwen3.6-plus:free"
-      : "gpt-4o-mini"
+      : isTeamoOpenAIProvider
+        ? "gpt-5.6-sol"
+        : "gpt-4o-mini"
     : "claude-haiku-4-5-20241022");
 
 /** Model for aggregation/summarization (stronger) */
@@ -35,7 +44,9 @@ export const AGGREGATION_MODEL =
   (process.env.LLM_PROVIDER === "openai"
     ? isOpenRouterOpenAIProvider
       ? "qwen/qwen3.6-plus:free"
-      : "gpt-4o"
+      : isTeamoOpenAIProvider
+        ? "gpt-5.6-sol"
+        : "gpt-4o"
     : "claude-sonnet-4-5-20241022");
 
 /** Top N clusters for reports */

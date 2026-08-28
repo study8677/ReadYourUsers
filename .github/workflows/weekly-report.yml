@@ -40,16 +40,17 @@ jobs:
 
       - name: Run pipeline
         if: ${{ github.event.inputs.deploy_only != 'true' }}
+        continue-on-error: true
         env:
           GITHUB_TOKEN: ${{ secrets.READYOURUSERS_GITHUB_TOKEN }}
           READYOURUSERS_GITHUB_TOKEN: ${{ secrets.READYOURUSERS_GITHUB_TOKEN }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          OPENAI_BASE_URL: ${{ secrets.OPENAI_BASE_URL || vars.OPENAI_BASE_URL || 'https://router.teamolab.com/v1' }}
+          OPENAI_BASE_URL: ${{ vars.OPENAI_BASE_URL || 'https://api.teamorouter.cn/v1' }}
           OPENROUTER_HTTP_REFERER: ${{ vars.OPENROUTER_HTTP_REFERER || format('{0}/{1}', github.server_url, github.repository) }}
           OPENROUTER_APP_TITLE: ${{ vars.OPENROUTER_APP_TITLE || 'ReadYourUsers' }}
           LLM_PROVIDER: openai
-          ANALYSIS_MODEL: ${{ vars.ANALYSIS_MODEL || 'TeamoRouter-free' }}
-          AGGREGATION_MODEL: ${{ vars.AGGREGATION_MODEL || 'TeamoRouter-free' }}
+          ANALYSIS_MODEL: ${{ vars.ANALYSIS_MODEL || 'gpt-5.6-sol' }}
+          AGGREGATION_MODEL: ${{ vars.AGGREGATION_MODEL || 'gpt-5.6-sol' }}
         run: |
           ARGS="${{ github.event.inputs.repo }}"
           MAX_PAGES_INPUT="${{ github.event.inputs.max_pages }}"
@@ -58,13 +59,27 @@ jobs:
           if [ -z "$MAX_PAGES" ]; then
             MAX_PAGES="$MAX_PAGES_DEFAULT"
           fi
+
+          node -e '
+            const raw = (process.env.OPENAI_BASE_URL || "").trim();
+            try {
+              const parsed = new URL(raw);
+              if (parsed.protocol !== "http:" && parsed.protocol !== "https:") {
+                throw new Error("protocol");
+              }
+              console.log("OPENAI_BASE_URL is a valid http(s) URL");
+            } catch {
+              console.error("::error::OPENAI_BASE_URL is missing or not a valid http(s) URL. Set the Actions variable OPENAI_BASE_URL to https://api.teamorouter.cn/v1 — do not put the API key in this field.");
+              process.exit(1);
+            }
+          '
+
           if [ -n "$MAX_PAGES" ]; then
-            # Each step may have partial failures (e.g. empty repos) — continue to next step
-            # --parallel: process multiple repos concurrently for speed
+            # Fetch may have partial failures (e.g. empty public issue lists) — continue to analyze
             npx tsx src/cli.ts fetch $ARGS --max-pages "$MAX_PAGES" --parallel 5 --verbose || true
-            npx tsx src/cli.ts analyze $ARGS --parallel 5 --verbose || true
-            npx tsx src/cli.ts aggregate $ARGS --parallel 5 --verbose || true
-            npx tsx src/cli.ts generate $ARGS --verbose || true
+            npx tsx src/cli.ts analyze $ARGS --parallel 5 --verbose
+            npx tsx src/cli.ts aggregate $ARGS --parallel 5 --verbose
+            npx tsx src/cli.ts generate $ARGS --verbose
           else
             npx tsx src/cli.ts run $ARGS --verbose
           fi
